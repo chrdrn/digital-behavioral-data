@@ -1,5 +1,5 @@
 ---
-title: "Showcase: YouTube"
+title: "Showcase"
 subtitle: "Focus on YouTube Data Tools"
 format: 
   html:
@@ -17,74 +17,104 @@ editor_options:
   chunk_output_type: console
 ---
 
+```{r}
+#| echo: false
+library(here)
+```
+
 ## Background
 
 Practical application of the YouTube Data Tool (YTDT) using the example of Mai Thi Nguyen-Kim ( [{{< fa brands twitter >}}](https://twitter.com/maithi_nk) \| [{{< fa brands instagram >}}](https://www.instagram.com/maithink/) ) and her [{{< fa brands youtube >}}](https://www.youtube.com/c/maiLab)-Channel [maiLab](https://www.youtube.com/c/maiLab).
 
-#### Assignments
+## Exercise 1
 
-1.  Use the Channel Search Function of the YTDT to find the correct `channel ID` for [{{< fa brands youtube >}}](https://www.youtube.com/c/maiLab)-Channel [maiLab](https://www.youtube.com/c/maiLab). Therefore, enter "*mailab*" in the field `search query` and download the results as `.csv`. Open the file and search extract the correct channel ID.\
-    If in doubt, use `Channel Info` function to check if the selected ID matches the channel description.
-
-## Preparation
-
-### Load necessary packages
-
-```{r load packages}
-library(tidyverse) # Preparation of the data
-library(quanteda) # Text mining
-library(quanteda.textstats) # Text statistics
-library(quanteda.textplots) # Visualisation of text data
-library(readr) # Data import
-library(here)
-library(sjmisc)
-library(lubridate)
-library(ggthemes)
-library(ggpubr)
-```
-
-## Identify `Channel ID`
-
-### Import data
-
-From `Channel Search` results from YTDT
+* Use the [`Channel Search`](https://tools.digitalmethods.net/netvizz/youtube/mod_channels_search.php) site/function of the `YTDT` to find the (correct) `channel ID` for the <img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/brands/youtube.svg" width="15" height="15"> Channel [maiLab](https://www.youtube.com/c/maiLab). 
+* Therefore, enter "*maiLab*" in the field `Search query` and download the results as `.csv`. 
+* Open the file and search extract the correct channel ID.\
+  *Hint:*  If in doubt, use [`Channel Info`](https://tools.digitalmethods.net/netvizz/youtube/mod_channel_info.php) function to check if the selected ID matches the channel description.
 
 ```{r}
-channel_search <- read_csv(
-  here(
-    "content/05-api_access-youtube/data/channelsearch_channels50_2022_11_16-19_45_44.csv"))
+# Load packages
+library(readr)
+library(tidyverse)
 
-# Preview
-channel_search %>% glimpse
+# Import data
+channel_list <- read_csv(
+  here("content/05-api_access-youtube/data/channelsearch_channels50_2022_11_17-09_54_22.csv"))
+
+# Preview data 
+channel_list %>% glimpse()
 ```
 
-### Explorative analysis
-
-#### Identify correct ID
-
 ```{r}
-# Overview
-channel_search %>%
-  select(position , id, title)
+# Get channel description with R
+channel_list %>%
+  filter(title == "maiLab") %>%
+  select(id, title, description)
 ```
 
-## Get channel video list
+## Exercise 2
 
-### Import data
+-   With help of the [`Video List`](https://tools.digitalmethods.net/netvizz/youtube/mod_videos_list.php) site/function of the `YTDT`, get a list of all published videos of the channel `maiLab`.
+-   Therefore, use the extracted `channel id` and download the results as `.csv`.
+-   Import/preview the data.
 
 ```{r}
+# Import data: video list
 video_list <- read_csv(
-  here(
-    "content/05-api_access-youtube/data/videolist_channel186_2022_11_16-20_50_14.csv"))
+  here("content/05-api_access-youtube/data/videolist_channel186_2022_11_17-10_20_11.csv"))
 
-# Preview
-video_list %>% glimpse
+# Preview data 
+video_list %>% glimpse()
 ```
 
-### Explorative analysis
+# Exercise 3
 
-#### Video uploads over time
+-   Perform different explorative data analysis
+
+
+## Different location parameters
+```{r}
+# Load additional packages
+library(sjmisc) 
+
+# Get distribution parameters for selected variables
+video_list %>% 
+  select(durationSec, viewCount, likeCount, favoriteCount, commentCount) %>% 
+  descr()
+
+```
+
+### More detailed distribution for each variable
 
 ```{r}
-
+video_list %>% 
+  plot_frq(durationSec, viewCount, likeCount, commentCount, type = "density")
 ```
+
+
+## In-depth analysis
+Based on the findings of the previous section, let us take a closer look. Interestingly, although most of the varialbes have a left-sloping distribution, there are isolated outliers on the "right" edge. 
+
+Therefore, the next goal is to find out which video(s) they are. 
+
+
+### Top 5 videos with the **highest view count**
+```{r}
+video_list %>% 
+  arrange(-viewCount) %>% 
+  select(videoTitle, publishedAt, viewCount, likeCount, commentCount) %>% 
+  head()
+```
+
+
+### Top 5 videos with the **highest comment count**
+```{r}
+video_list %>% 
+  arrange(-commentCount) %>% 
+  select(videoTitle, publishedAt, viewCount, likeCount, commentCount) %>% 
+  head()
+```
+
+
+

@@ -102,8 +102,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -229,44 +227,170 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">API Access: YouTube</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  content/05-api_access-youtube/04-exercise.05-notebook.ipynb
+  </li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
+  <li><a href="#excercise-1" id="toc-excercise-1" class="nav-link" data-scroll-target="#excercise-1">Excercise 1</a></li>
+  <li><a href="#exercise-2" id="toc-exercise-2" class="nav-link" data-scroll-target="#exercise-2">Exercise 2</a></li>
+  <li><a href="#excercise-3" id="toc-excercise-3" class="nav-link" data-scroll-target="#excercise-3">Excercise 3</a>
+  <ul class="collapse">
+  <li><a href="#video-uploads-over-time" id="toc-video-uploads-over-time" class="nav-link" data-scroll-target="#video-uploads-over-time">Video uploads over time</a></li>
+  <li><a href="#different-location-parameters" id="toc-different-location-parameters" class="nav-link" data-scroll-target="#different-location-parameters">Different location parameters</a>
+  <ul class="collapse">
+  <li><a href="#basic-descriptive-statistics" id="toc-basic-descriptive-statistics" class="nav-link" data-scroll-target="#basic-descriptive-statistics">Basic descriptive statistics</a></li>
+  <li><a href="#more-detailed-distribution-for-each-variable" id="toc-more-detailed-distribution-for-each-variable" class="nav-link" data-scroll-target="#more-detailed-distribution-for-each-variable">More detailed distribution for each variable</a></li>
+  </ul></li>
+  <li><a href="#in-depth-analysis" id="toc-in-depth-analysis" class="nav-link" data-scroll-target="#in-depth-analysis">In-depth analysis</a>
+  <ul class="collapse">
+  <li><a href="#top-5-videos-with-the-highest-view-count" id="toc-top-5-videos-with-the-highest-view-count" class="nav-link" data-scroll-target="#top-5-videos-with-the-highest-view-count">Top 5 videos with the <strong>highest view count</strong></a></li>
+  <li><a href="#top-5-videos-with-the-highest-comment-count" id="toc-top-5-videos-with-the-highest-comment-count" class="nav-link" data-scroll-target="#top-5-videos-with-the-highest-comment-count">Top 5 videos with the <strong>highest comment count</strong></a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
 
-<p>Background</p>
-<p>Practical application of the YouTube Data Tool (YTDT) using the example of Mai Thi Nguyen-Kim ( <i class="fa-brands fa-twitter" aria-label="twitter"></i> | <i class="fa-brands fa-instagram" aria-label="instagram"></i> ) and her <i class="fa-brands fa-youtube" aria-label="youtube"></i>-Channel maiLab.</p>
-<p>Assignments</p>
-<p>Use the Channel Search Function of the YTDT to find the correct channel ID for <i class="fa-brands fa-youtube" aria-label="youtube"></i>-Channel maiLab. Therefore, enter “mailab” in the field search query and download the results as .csv. Open the file and search extract the correct channel ID. If in doubt, use Channel Info function to check if the selected ID matches the channel description.</p>
+<p><a href="https://colab.research.google.com/github/chrdrn/digital-behavioral-data/blob/main/session_05-youtube_showcase.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a></p>
+<section id="background" class="level1">
+<h1>Background</h1>
+<p>Practical application of the <a href="https://tools.digitalmethods.net/netvizz/youtube/">YouTube Data Tool (YTDT)</a> using the example of Mai Thi Nguyen-Kim ( <a href="https://twitter.com/maithi_nk"><img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/brands/twitter.svg" width="15" height="15"></a> | <a href="https://twitter.com/maithi_nk"><img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/brands/instagram.svg" width="15" height="15"></a> ) and her <img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/brands/youtube.svg" width="15" height="15"> Channel <a href="https://www.youtube.com/c/maiLab">maiLab</a>.</p>
+</section>
+<section id="excercise-1" class="level1">
+<h1>Excercise 1</h1>
+<ul>
+<li>Use the <a href="https://tools.digitalmethods.net/netvizz/youtube/mod_channels_search.php"><code>Channel Search</code></a> site/function of the <code>YTDT</code> to find the (correct) <code>channel ID</code> for the <img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/brands/youtube.svg" width="15" height="15"> Channel <a href="https://www.youtube.com/c/maiLab">maiLab</a>.</li>
+<li>Therefore, enter “<em>maiLab</em>” in the field <code>Search query</code> and download the results as <code>.csv</code>.</li>
+<li>Open the file and search extract the correct channel ID.<br>
+<em>Hint:</em> If in doubt, use <a href="https://tools.digitalmethods.net/netvizz/youtube/mod_channel_info.php"><code>Channel Info</code></a> function to check if the selected ID matches the channel description.</li>
+</ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>library(tidyverse) <span class="co"># Preparation of the data</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>library(quanteda) <span class="co"># Text mining</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>library(quanteda.textstats) <span class="co"># Text statistics</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>library(quanteda.textplots) <span class="co"># Visualisation of text data</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>library(readr) <span class="co"># Data import</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>library(here)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>library(sjmisc)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>library(lubridate)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>library(ggthemes)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>library(ggpubr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load packages</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Import data</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>channel_list <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/channelsearch_channels50_2022_11_17-09_54_22.csv"</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Preview data </span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>channel_list <span class="sc">%&gt;%</span> <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>channel_search <span class="op">&lt;-</span> read_csv(</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  here(</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"content/05-api_access-youtube/data/channelsearch_channels50_2022_11_16-19_45_44.csv"</span>))</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Preview</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>channel_search <span class="op">%&gt;%</span> glimpse</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get channel description with R</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>channel_list <span class="sc">%&gt;%</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(title <span class="sc">==</span> <span class="st">"maiLab"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(id, title, description)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="exercise-2" class="level1">
+<h1>Exercise 2</h1>
+<ul>
+<li>With help of the <a href="https://tools.digitalmethods.net/netvizz/youtube/mod_videos_list.php"><code>Video List</code></a> site/function of the <code>YTDT</code>, get a list of all published videos of the channel <code>maiLab</code>.<br>
+</li>
+<li>Therefore, use the extracted <code>channel id</code> and download the results as <code>.csv</code>.</li>
+<li>Import and preview the data.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import data: video list</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>video_list <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/videolist_channel186_2022_11_17-10_20_11.csv"</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Preview data </span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>video_list <span class="sc">%&gt;%</span> <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="excercise-3" class="level1">
+<h1>Excercise 3</h1>
+<ul>
+<li>Perform an explorative data analysis</li>
+</ul>
+<section id="video-uploads-over-time" class="level2">
+<h2 class="anchored" data-anchor-id="video-uploads-over-time">Video uploads over time</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load additional packages</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sjPlot)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Display </span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>video_list <span class="sc">%&gt;%</span> </span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">year  =</span> <span class="fu">as.factor</span>(<span class="fu">year</span>(publishedAt))) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot_frq</span>(</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    year,</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Video uploads on `maiLab` by year"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="different-location-parameters" class="level2">
+<h2 class="anchored" data-anchor-id="different-location-parameters">Different location parameters</h2>
+<section id="basic-descriptive-statistics" class="level3">
+<h3 class="anchored" data-anchor-id="basic-descriptive-statistics">Basic descriptive statistics</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load additional packages</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sjmisc) </span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Get distribution parameters for selected variables</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>video_list <span class="sc">%&gt;%</span> </span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(durationSec, viewCount, likeCount, favoriteCount, commentCount) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">descr</span>()</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="more-detailed-distribution-for-each-variable" class="level3">
+<h3 class="anchored" data-anchor-id="more-detailed-distribution-for-each-variable">More detailed distribution for each variable</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>video_list <span class="sc">%&gt;%</span> </span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot_frq</span>(durationSec, viewCount, likeCount, commentCount, <span class="at">type =</span> <span class="st">"density"</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="in-depth-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="in-depth-analysis">In-depth analysis</h2>
+<p>Based on the findings of the previous section, let us take a closer look. Interestingly, although most of the varialbes have a left-sloping distribution, there are isolated outliers on the “right” edge.</p>
+<p>Therefore, the next goal is to find out which video(s) they are.</p>
+<section id="top-5-videos-with-the-highest-view-count" class="level3">
+<h3 class="anchored" data-anchor-id="top-5-videos-with-the-highest-view-count">Top 5 videos with the <strong>highest view count</strong></h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>video_list <span class="sc">%&gt;%</span> </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="sc">-</span>viewCount) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(videoTitle, publishedAt, viewCount<span class="sc">:</span>commentCount) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="top-5-videos-with-the-highest-comment-count" class="level3">
+<h3 class="anchored" data-anchor-id="top-5-videos-with-the-highest-comment-count">Top 5 videos with the <strong>highest comment count</strong></h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>video_list <span class="sc">%&gt;%</span> </span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="sc">-</span>commentCount) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(videoTitle, publishedAt, viewCount<span class="sc">:</span>commentCount) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

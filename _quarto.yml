@@ -30,6 +30,8 @@ website:
         contents:
           - "content/04-api_access-twitter/04-slides.qmd"
           - "content/04-api_access-twitter/04-exercise.qmd"
+      - section: "API Access: YouTube"
+      
 
 format:
   html:

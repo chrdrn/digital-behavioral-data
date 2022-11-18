@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Showcase: YouTube</title>
+<title>Showcase</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -134,7 +134,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Showcase: YouTube</h1>
+      <h1 class="quarto-secondary-nav-title">Showcase</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -229,6 +229,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">API Access: YouTube</span>
+  </li>
     </ul>
     </div>
 </nav>
@@ -238,28 +241,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a>
+  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
+  <li><a href="#exercise-1" id="toc-exercise-1" class="nav-link" data-scroll-target="#exercise-1">Exercise 1</a></li>
+  <li><a href="#exercise-2" id="toc-exercise-2" class="nav-link" data-scroll-target="#exercise-2">Exercise 2</a></li>
+  <li><a href="#exercise-3" id="toc-exercise-3" class="nav-link" data-scroll-target="#exercise-3">Exercise 3</a>
   <ul>
-  <li><a href="#assignments" id="toc-assignments" class="nav-link" data-scroll-target="#assignments">Assignments</a></li>
-  </ul></li>
-  <li><a href="#preparation" id="toc-preparation" class="nav-link" data-scroll-target="#preparation">Preparation</a>
-  <ul>
-  <li><a href="#load-necessary-packages" id="toc-load-necessary-packages" class="nav-link" data-scroll-target="#load-necessary-packages">Load necessary packages</a></li>
-  </ul></li>
-  <li><a href="#identify-channel-id" id="toc-identify-channel-id" class="nav-link" data-scroll-target="#identify-channel-id">Identify <code>Channel ID</code></a>
-  <ul>
-  <li><a href="#import-data" id="toc-import-data" class="nav-link" data-scroll-target="#import-data">Import data</a></li>
-  <li><a href="#explorative-analysis" id="toc-explorative-analysis" class="nav-link" data-scroll-target="#explorative-analysis">Explorative analysis</a>
+  <li><a href="#different-location-parameters" id="toc-different-location-parameters" class="nav-link" data-scroll-target="#different-location-parameters">Different location parameters</a>
   <ul class="collapse">
-  <li><a href="#identify-correct-id" id="toc-identify-correct-id" class="nav-link" data-scroll-target="#identify-correct-id">Identify correct ID</a></li>
+  <li><a href="#more-detailed-distribution-for-each-variable" id="toc-more-detailed-distribution-for-each-variable" class="nav-link" data-scroll-target="#more-detailed-distribution-for-each-variable">More detailed distribution for each variable</a></li>
   </ul></li>
-  </ul></li>
-  <li><a href="#get-channel-video-list" id="toc-get-channel-video-list" class="nav-link" data-scroll-target="#get-channel-video-list">Get channel video list</a>
-  <ul>
-  <li><a href="#import-data-1" id="toc-import-data-1" class="nav-link" data-scroll-target="#import-data-1">Import data</a></li>
-  <li><a href="#explorative-analysis-1" id="toc-explorative-analysis-1" class="nav-link" data-scroll-target="#explorative-analysis-1">Explorative analysis</a>
+  <li><a href="#in-depth-analysis" id="toc-in-depth-analysis" class="nav-link" data-scroll-target="#in-depth-analysis">In-depth analysis</a>
   <ul class="collapse">
-  <li><a href="#video-uploads-over-time" id="toc-video-uploads-over-time" class="nav-link" data-scroll-target="#video-uploads-over-time">Video uploads over time</a></li>
+  <li><a href="#top-5-videos-with-the-highest-view-count" id="toc-top-5-videos-with-the-highest-view-count" class="nav-link" data-scroll-target="#top-5-videos-with-the-highest-view-count">Top 5 videos with the <strong>highest view count</strong></a></li>
+  <li><a href="#top-5-videos-with-the-highest-comment-count" id="toc-top-5-videos-with-the-highest-comment-count" class="nav-link" data-scroll-target="#top-5-videos-with-the-highest-comment-count">Top 5 videos with the <strong>highest comment count</strong></a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -270,7 +264,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Showcase: YouTube</h1>
+<h1 class="title d-none d-lg-block">Showcase</h1>
 <p class="subtitle lead">Focus on YouTube Data Tools</p>
 </div>
 
@@ -286,102 +280,74 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
+<div class="cell" data-hash="05-exercise_cache/html/unnamed-chunk-1_14166bbf59dd4c22f1807b4c5ed67af5">
+
+</div>
 <section id="background" class="level2">
 <h2 class="anchored" data-anchor-id="background">Background</h2>
 <p>Practical application of the YouTube Data Tool (YTDT) using the example of Mai Thi Nguyen-Kim ( <a href="https://twitter.com/maithi_nk"><i class="fa-brands fa-twitter" aria-label="twitter"></i></a> | <a href="https://www.instagram.com/maithink/"><i class="fa-brands fa-instagram" aria-label="instagram"></i></a> ) and her <a href="https://www.youtube.com/c/maiLab"><i class="fa-brands fa-youtube" aria-label="youtube"></i></a>-Channel <a href="https://www.youtube.com/c/maiLab">maiLab</a>.</p>
-<section id="assignments" class="level4">
-<h4 class="anchored" data-anchor-id="assignments">Assignments</h4>
-<ol type="1">
-<li>Use the Channel Search Function of the YTDT to find the correct <code>channel ID</code> for <a href="https://www.youtube.com/c/maiLab"><i class="fa-brands fa-youtube" aria-label="youtube"></i></a>-Channel <a href="https://www.youtube.com/c/maiLab">maiLab</a>. Therefore, enter “<em>mailab</em>” in the field <code>search query</code> and download the results as <code>.csv</code>. Open the file and search extract the correct channel ID.<br>
-If in doubt, use <code>Channel Info</code> function to check if the selected ID matches the channel description.</li>
-</ol>
 </section>
-</section>
-<section id="preparation" class="level2">
-<h2 class="anchored" data-anchor-id="preparation">Preparation</h2>
-<section id="load-necessary-packages" class="level3">
-<h3 class="anchored" data-anchor-id="load-necessary-packages">Load necessary packages</h3>
-<div class="cell" data-hash="05-exercise_cache/html/load packages_ff138622c836ed5a4e4661fedd8c71b4">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse) <span class="co"># Preparation of the data</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(quanteda) <span class="co"># Text mining</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(quanteda.textstats) <span class="co"># Text statistics</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(quanteda.textplots) <span class="co"># Visualisation of text data</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr) <span class="co"># Data import</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sjmisc)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggthemes)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggpubr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-</section>
-<section id="identify-channel-id" class="level2">
-<h2 class="anchored" data-anchor-id="identify-channel-id">Identify <code>Channel ID</code></h2>
-<section id="import-data" class="level3">
-<h3 class="anchored" data-anchor-id="import-data">Import data</h3>
-<p>From <code>Channel Search</code> results from YTDT</p>
-<div class="cell" data-hash="05-exercise_cache/html/unnamed-chunk-1_440dace4f610057146aea9268e9a3847">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>channel_search <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">here</span>(</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"content/05-api_access-youtube/data/channelsearch_channels50_2022_11_16-19_45_44.csv"</span>))</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Preview</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>channel_search <span class="sc">%&gt;%</span> glimpse</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="exercise-1" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-1">Exercise 1</h2>
+<ul>
+<li>Use the <a href="https://tools.digitalmethods.net/netvizz/youtube/mod_channels_search.php"><code>Channel Search</code></a> site/function of the <code>YTDT</code> to find the (correct) <code>channel ID</code> for the <img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/brands/youtube.svg" width="15" height="15"> Channel <a href="https://www.youtube.com/c/maiLab">maiLab</a>.</li>
+<li>Therefore, enter “<em>maiLab</em>” in the field <code>Search query</code> and download the results as <code>.csv</code>.</li>
+<li>Open the file and search extract the correct channel ID.<br>
+<em>Hint:</em> If in doubt, use <a href="https://tools.digitalmethods.net/netvizz/youtube/mod_channel_info.php"><code>Channel Info</code></a> function to check if the selected ID matches the channel description.</li>
+</ul>
+<div class="cell" data-hash="05-exercise_cache/html/unnamed-chunk-2_917e9b394e1d2989ce469bf215a79a39">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load packages</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Import data</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>channel_list <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">here</span>(<span class="st">"content/05-api_access-youtube/data/channelsearch_channels50_2022_11_17-09_54_22.csv"</span>))</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Preview data </span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>channel_list <span class="sc">%&gt;%</span> <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 50
 Columns: 10
 $ position        &lt;dbl&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,…
 $ id              &lt;chr&gt; "UCyHDQ5C6z1NDmJ4g6SerW8g", "UC146qqkUMTrn4nfSSOTNwiA"…
-$ title           &lt;chr&gt; "maiLab", "musstewissen Chemie", "mailab", "Mailab cha…
+$ title           &lt;chr&gt; "maiLab", "musstewissen Chemie", "mailab", "MAILab_메…
 $ description     &lt;chr&gt; "Holt euch einen Tee, Freunde der Sonne, macht es euch…
 $ publishedAt     &lt;dttm&gt; 2016-09-08 14:13:08, 2016-09-23 09:24:14, 2020-03-19 …
 $ defaultLanguage &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA…
-$ country         &lt;chr&gt; "DE", "DE", "DE", NA, "KR", NA, NA, NA, NA, "DE", NA, …
-$ viewCount       &lt;dbl&gt; 127861685, 18019233, 20980, 11, 5094, 2, 5003, 230, 2,…
-$ subscriberCount &lt;dbl&gt; 1480000, 190000, 146, 0, 26, 1, 9, 9, 1, 66200, 0, 2, …
-$ videoCount      &lt;dbl&gt; 186, 45, 9, 3, 104, 1, 24, 12, 1, 51, 1, 6, 31, 1, 2, …</code></pre>
+$ country         &lt;chr&gt; "DE", "DE", "DE", "KR", NA, NA, NA, NA, NA, "DE", NA, …
+$ viewCount       &lt;dbl&gt; 127882489, 18039348, 21013, 5101, 11, 2, 2, 5004, 230,…
+$ subscriberCount &lt;dbl&gt; 1480000, 190000, 146, 26, 0, 1, 1, 9, 9, 66300, 0, 2, …
+$ videoCount      &lt;dbl&gt; 186, 45, 9, 104, 3, 1, 1, 24, 12, 51, 1, 6, 31, 1, 2, …</code></pre>
 </div>
 </div>
-</section>
-<section id="explorative-analysis" class="level3">
-<h3 class="anchored" data-anchor-id="explorative-analysis">Explorative analysis</h3>
-<section id="identify-correct-id" class="level4">
-<h4 class="anchored" data-anchor-id="identify-correct-id">Identify correct ID</h4>
-<div class="cell" data-hash="05-exercise_cache/html/unnamed-chunk-2_c029778d8dfe36d7df6e1e6f7e18b2e5">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Overview</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>channel_search <span class="sc">%&gt;%</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(position , id, title)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="05-exercise_cache/html/unnamed-chunk-3_cd3f3596698d35858382835f58d81f5b">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get channel description with R</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>channel_list <span class="sc">%&gt;%</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(title <span class="sc">==</span> <span class="st">"maiLab"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(id, title, description)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 50 × 3
-   position id                       title                        
-      &lt;dbl&gt; &lt;chr&gt;                    &lt;chr&gt;                        
- 1        1 UCyHDQ5C6z1NDmJ4g6SerW8g maiLab                       
- 2        2 UC146qqkUMTrn4nfSSOTNwiA musstewissen Chemie          
- 3        3 UCoHodUr9NAaifHqJRgMwY4g mailab                       
- 4        4 UCQHZ9D6ZWZPCcO-fL4evc8A Mailab channel               
- 5        5 UCM_omPq1D9zW2KgiuZCC2SA MAILab_메일랩                
- 6        6 UCDrzb2QiHRTQdUUmkDcfWUg Mailab Khan                  
- 7        7 UChwL2zraRR_BaDS5JcFMbmQ Software MaiLab              
- 8        8 UCTobdb_mdgB39xMu2DyzOSA Mailab MEB                   
- 9        9 UCSuPexPvmai-NYR_1aVPg5A Mailab                       
-10       10 UCqSllZ7UUq0giIkkPfVYujg The Secret Life Of Scientists
-# … with 40 more rows</code></pre>
+<pre><code># A tibble: 1 × 3
+  id                       title  description                                   
+  &lt;chr&gt;                    &lt;chr&gt;  &lt;chr&gt;                                         
+1 UCyHDQ5C6z1NDmJ4g6SerW8g maiLab Holt euch einen Tee, Freunde der Sonne, macht…</code></pre>
 </div>
 </div>
 </section>
-</section>
-</section>
-<section id="get-channel-video-list" class="level2">
-<h2 class="anchored" data-anchor-id="get-channel-video-list">Get channel video list</h2>
-<section id="import-data-1" class="level3">
-<h3 class="anchored" data-anchor-id="import-data-1">Import data</h3>
-<div class="cell" data-hash="05-exercise_cache/html/unnamed-chunk-3_0a997f1655abc7421657fb6d5ade9a41">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>video_list <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">here</span>(</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"content/05-api_access-youtube/data/videolist_channel186_2022_11_16-20_50_14.csv"</span>))</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Preview</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>video_list <span class="sc">%&gt;%</span> glimpse</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="exercise-2" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-2">Exercise 2</h2>
+<ul>
+<li>With help of the <a href="https://tools.digitalmethods.net/netvizz/youtube/mod_videos_list.php"><code>Video List</code></a> site/function of the <code>YTDT</code>, get a list of all published videos of the channel <code>maiLab</code>.</li>
+<li>Therefore, use the extracted <code>channel id</code> and download the results as <code>.csv</code>.</li>
+<li>Import/preview the data.</li>
+</ul>
+<div class="cell" data-hash="05-exercise_cache/html/unnamed-chunk-4_892d17c854e3da60170cbf7e493f1549">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import data: video list</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>video_list <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">here</span>(<span class="st">"content/05-api_access-youtube/data/videolist_channel186_2022_11_17-10_20_11.csv"</span>))</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Preview data </span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>video_list <span class="sc">%&gt;%</span> <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 186
 Columns: 23
@@ -403,20 +369,126 @@ $ definition         &lt;chr&gt; "hd", "hd", "hd", "hd", "hd", "hd", "hd", "hd",
 $ caption            &lt;lgl&gt; FALSE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, T…
 $ thumbnail_maxres   &lt;chr&gt; "https://i.ytimg.com/vi/IK5BZdnqMDU/maxresdefault.j…
 $ licensedContent    &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, …
-$ viewCount          &lt;dbl&gt; 1728826, 993760, 929196, 2125534, 3021365, 894954, …
-$ likeCount          &lt;dbl&gt; 83331, 56794, 64303, 123195, 236389, 77980, 73251, …
+$ viewCount          &lt;dbl&gt; 1729562, 993841, 929302, 2125579, 3021542, 895038, …
+$ likeCount          &lt;dbl&gt; 83334, 56794, 64304, 123191, 236388, 77980, 73251, …
 $ dislikeCount       &lt;lgl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
 $ favoriteCount      &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
-$ commentCount       &lt;dbl&gt; 18685, 9139, 8204, 38828, 111206, 7904, 3831, 5723,…</code></pre>
+$ commentCount       &lt;dbl&gt; 18716, 9141, 8204, 38823, 111200, 7905, 3831, 5723,…</code></pre>
 </div>
 </div>
 </section>
-<section id="explorative-analysis-1" class="level3">
-<h3 class="anchored" data-anchor-id="explorative-analysis-1">Explorative analysis</h3>
-<section id="video-uploads-over-time" class="level4">
-<h4 class="anchored" data-anchor-id="video-uploads-over-time">Video uploads over time</h4>
-<div class="cell" data-hash="05-exercise_cache/html/unnamed-chunk-4_73a428b6a817b33207a0e1dcbb86e2fb">
+<section id="exercise-3" class="level1">
+<h1>Exercise 3</h1>
+<ul>
+<li>Perform different explorative data analysis</li>
+</ul>
+<section id="different-location-parameters" class="level2">
+<h2 class="anchored" data-anchor-id="different-location-parameters">Different location parameters</h2>
+<div class="cell" data-hash="05-exercise_cache/html/unnamed-chunk-5_db1e707ce622a3d8b69be3991a713942">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load additional packages</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sjmisc) </span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Get distribution parameters for selected variables</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>video_list <span class="sc">%&gt;%</span> </span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(durationSec, viewCount, likeCount, favoriteCount, commentCount) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">descr</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+## Basic descriptive statistics
 
+           var    type         label   n NA.prc      mean        sd       se
+   durationSec numeric   durationSec 186      0    612.92    402.74    29.53
+     viewCount numeric     viewCount 186      0 687563.73 763588.15 55989.00
+     likeCount numeric     likeCount 186      0  31172.50  36815.40  2699.44
+ favoriteCount numeric favoriteCount 186      0      0.00      0.00     0.00
+  commentCount numeric  commentCount 186      0   5598.28  11238.77   824.07
+       md   trimmed                   range       iqr skew
+    530.5    579.42          1825 (92-1917)    633.25 0.64
+ 467371.5 562670.19 6671382 (21298-6692680) 782761.75 3.36
+  20970.5  24734.81    267376 (1063-268439)  37023.75 3.10
+      0.0      0.00                 0 (0-0)      0.00  NaN
+   2068.0   3106.24      111166 (34-111200)   5718.00 5.54</code></pre>
+</div>
+</div>
+<section id="more-detailed-distribution-for-each-variable" class="level3">
+<h3 class="anchored" data-anchor-id="more-detailed-distribution-for-each-variable">More detailed distribution for each variable</h3>
+<div class="cell" data-hash="05-exercise_cache/html/unnamed-chunk-6_13505fe3adb4b55f7e8b8ed982275bff">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>video_list <span class="sc">%&gt;%</span> </span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot_frq</span>(durationSec, viewCount, likeCount, commentCount, <span class="at">type =</span> <span class="st">"density"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[1]]</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="05-exercise_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+[[2]]</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="05-exercise_files/figure-html/unnamed-chunk-6-2.png" class="img-fluid" width="672"></p>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+[[3]]</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="05-exercise_files/figure-html/unnamed-chunk-6-3.png" class="img-fluid" width="672"></p>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+[[4]]</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="05-exercise_files/figure-html/unnamed-chunk-6-4.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+</section>
+<section id="in-depth-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="in-depth-analysis">In-depth analysis</h2>
+<p>Based on the findings of the previous section, let us take a closer look. Interestingly, although most of the varialbes have a left-sloping distribution, there are isolated outliers on the “right” edge.</p>
+<p>Therefore, the next goal is to find out which video(s) they are.</p>
+<section id="top-5-videos-with-the-highest-view-count" class="level3">
+<h3 class="anchored" data-anchor-id="top-5-videos-with-the-highest-view-count">Top 5 videos with the <strong>highest view count</strong></h3>
+<div class="cell" data-hash="05-exercise_cache/html/unnamed-chunk-7_eabcc9bf2d2369746c9417200643015c">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>video_list <span class="sc">%&gt;%</span> </span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="sc">-</span>viewCount) <span class="sc">%&gt;%</span> </span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(videoTitle, publishedAt, viewCount, likeCount, commentCount) <span class="sc">%&gt;%</span> </span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 5
+  videoTitle                     publishedAt         viewCount likeCount comme…¹
+  &lt;chr&gt;                          &lt;dttm&gt;                  &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;
+1 Corona geht gerade erst los    2020-04-02 07:00:00   6692680    268439   48174
+2 Impfpflicht ist OK             2021-11-14 07:00:11   3021542    236388  111200
+3 So endet Corona                2021-01-28 06:15:04   3020999    170219   28363
+4 Virologen-Vergleich            2020-04-19 07:00:22   2654200     92957   33773
+5 Rezo wissenschaftlich geprüft  2019-05-24 04:30:25   2605822    142990   16995
+6 Was ist jetzt mit dem Kokosöl? 2018-08-30 04:30:01   2362469     63198    6833
+# … with abbreviated variable name ¹​commentCount</code></pre>
+</div>
+</div>
+</section>
+<section id="top-5-videos-with-the-highest-comment-count" class="level3">
+<h3 class="anchored" data-anchor-id="top-5-videos-with-the-highest-comment-count">Top 5 videos with the <strong>highest comment count</strong></h3>
+<div class="cell" data-hash="05-exercise_cache/html/unnamed-chunk-8_7b1b47cf81b4d4a1d4d4359061cd0d06">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>video_list <span class="sc">%&gt;%</span> </span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="sc">-</span>commentCount) <span class="sc">%&gt;%</span> </span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(videoTitle, publishedAt, viewCount, likeCount, commentCount) <span class="sc">%&gt;%</span> </span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 5
+  videoTitle                         publishedAt         viewC…¹ likeC…² comme…³
+  &lt;chr&gt;                              &lt;dttm&gt;                &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
+1 Impfpflicht ist OK                 2021-11-14 07:00:11 3021542  236388  111200
+2 Corona geht gerade erst los        2020-04-02 07:00:00 6692680  268439   48174
+3 7 kritische Fragen zur Impfung     2021-02-11 06:15:02 2068956   80075   38982
+4 Corona-Endlosschleife | Kommen wi… 2021-11-25 07:48:24 2125579  123191   38823
+5 Corona hat meine Meinung geändert  2020-10-08 04:30:01 1602957   74811   36543
+6 Virologen-Vergleich                2020-04-19 07:00:22 2654200   92957   33773
+# … with abbreviated variable names ¹​viewCount, ²​likeCount, ³​commentCount</code></pre>
+</div>
 </div>
 
 
