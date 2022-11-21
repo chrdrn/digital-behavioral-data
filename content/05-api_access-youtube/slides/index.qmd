@@ -38,7 +38,7 @@ editor_options:
 ## Seminarplan {.smaller}
 
 | Sitzung                                              | Datum                                                         | Thema                                                                            | Referent\*Innen                                                     |
-|------------------------------------------------------|---------------------------------------------------------------|----------------------------------------------------------------------------------|---------------------------------------------------------------------|
+|------------------|------------------|-------------------|------------------|
 | [1]{.rn rn-type="strike-through" rn-color="#E6002E"} | [26.10.2022]{.rn rn-type="strike-through" rn-color="#E6002E"} | [Kick-Off Session]{.rn rn-type="strike-through" rn-color="#E6002E"}              | [Christoph Adrian]{.rn rn-type="strike-through" rn-color="#E6002E"} |
 | [2]{.rn rn-type="strike-through" rn-color="#E6002E"} | [02.11.2022]{.rn rn-type="strike-through" rn-color="#E6002E"} | [DBD: Einführung und Überblick]{.rn rn-type="strike-through" rn-color="#E6002E"} | [Christoph Adrian]{.rn rn-type="strike-through" rn-color="#E6002E"} |
 | [3]{.rn rn-type="strike-through" rn-color="#E6002E"} | [09.11.2022]{.rn rn-type="strike-through" rn-color="#E6002E"} | [DBD: Datenerhebung]{.rn rn-type="strike-through" rn-color="#E6002E"}            | [Christoph Adrian]{.rn rn-type="strike-through" rn-color="#E6002E"} |
@@ -60,9 +60,158 @@ editor_options:
 
 # Agenda
 
-1.  **Verständnis- und Diskussionsfragen**
-2.  **Group Activity**
-3.  **Beispielhafte Anwendungen**
+1.  **Group Activity**
+2.  **Beispielhafte Anwendungen**
+3.  **Verständnis- und Diskussionsfragen**
+
+# Group Activity {background-color="#E6002E" background-image="../../00-images/background_group_activity.svg"}
+
+Gruppenarbeit zu `YouTube Data Tools`
+
+## What is it an who made it
+
+#### Hintergrundinformationen [`YouTube Data Tools`](https://tools.digitalmethods.net/netvizz/youtube/index.php)
+
+-   Sammlung von einfachen Modulen zur Extraktion von Daten aus der YouTube-Plattform über die YouTube-API v3.
+
+-   Keine voll entwickelte Analysesoftware, sondern ein Mittel für Forschende, um Daten in Standarddateiformaten zu sammeln und in anderen Softwarepaketen weiter zu analysieren.
+
+-   geschrieben, entwickelt und gepflegt von [Bernhard Rieder](https://www.uva.nl/en/profile/r/i/b.rieder/b.rieder.html) (Universität Amsterdam)
+
+## And now ... you!
+
+#### Beispielhafte Nutzung
+
+1.  **Suchen** Sie sich einen **YouTube-Kanal** aus, auf dem die folgenden Analysen basieren sollen
+2.  Nutzen Sie die [`Channel Search`](https://tools.digitalmethods.net/netvizz/youtube/mod_channels_search.php) des [YTDT](https://tools.digitalmethods.net/netvizz/youtube/index.php) um die "korrekte" `chanel ID` zu identifizieren.
+3.  Laden Sie mit Hilfe der [`Video List`](https://tools.digitalmethods.net/netvizz/youtube/mod_videos_list.php) Seite/Funktion des [YTDT](https://tools.digitalmethods.net/netvizz/youtube/index.php) eine Liste aller veröffentlichten Videos Ihres ausgewählten YouTube-Kanals
+
+*Optional:*
+
+4.  *Suchen Sie mit Hilfe der heruntergeladenen Liste der veröffentlichten Videos das Video mit den meisten Likes/Comments.*
+
+5.  *Downloaden Sie die Kommentare des Videos mit Hilfe der [`Video Info`](https://tools.digitalmethods.net/netvizz/youtube/mod_video_info.php) des [YTDT](https://tools.digitalmethods.net/netvizz/youtube/index.php).*
+
+# Beispielhafte Auswertungen {background-color="#E6002E"}
+
+Im Fokus: [{{< fa brands youtube >}} maiLab](https://www.youtube.com/c/maiLab)
+
+```{r}
+#| echo: false
+
+# Load packages
+library(knitr)
+library(kableExtra)
+library(tidyverse) # Preparation of the data
+library(quanteda) # Text mining
+library(quanteda.textstats) # Text statistics
+library(quanteda.textplots) # Visualisation of text data
+library(here)
+library(sjmisc)
+library(sjPlot)
+library(lubridate)
+library(ggthemes)
+library(ggpubr)
+```
+
+## Wissenschaftsjournalismus auf YouTube
+
+HIntergrund zu [{{< fa brands youtube >}} maiLab](https://www.youtube.com/c/maiLab)
+
+::: columns
+::: {.column width="50%"}
+-   seit 2016 bestehende YouTube-Kanal (früher schönschlau) von Mai Thi Nguyen-Kim
+-   ist Teil des funk-Netzwerks
+-   behandelt diverse Themen au sden Bereichen Natur- und Gesellschaftswissenschaften
+:::
+
+::: {.column width="50%"}
+![](images/mailab.png){fig-align="center"}
+:::
+:::
+
+## Zusammenspiel von YTDT & R
+
+#### [{{< fa brands youtube >}} maiLab](https://www.youtube.com/c/maiLab) im Fokus: Datenverarbeitung mit R (1)
+
+```{r}
+# Load packages
+library(readr)
+library(tidyverse)
+
+# Import data
+channel_list <- read_csv(
+  here("content/05-api_access-youtube/data/channelsearch_channels50_2022_11_17-09_54_22.csv"))
+
+# Preview data 
+channel_list %>% glimpse()
+```
+
+## Mit [Channel ID]{.smallcaps} zur [Video List]{.smallcaps}
+
+#### [{{< fa brands youtube >}} maiLab](https://www.youtube.com/c/maiLab) im Fokus: Datenverarbeitung mit R (2)
+
+```{r}
+# Import data: video list
+video_list <- read_csv(
+  here("content/05-api_access-youtube/data/videolist_channel186_2022_11_17-10_20_11.csv"))
+
+# Preview data 
+video_list %>% glimpse()
+```
+
+## Explorative Analyse der [Video List]{.smallcaps}
+
+#### [{{< fa brands youtube >}} maiLab](https://www.youtube.com/c/maiLab) im Fokus: Datenauswertung mit R (1)
+
+```{r}
+# Load additional packages
+library(sjmisc) 
+
+# Get distribution parameters for selected variables
+video_list %>% 
+  select(durationSec, viewCount, likeCount, favoriteCount, commentCount) %>% 
+  descr() %>%
+  select(!c(var, type)) 
+```
+
+## Videoveröffentlichungen im Zeitverlauf
+
+#### [{{< fa brands youtube >}} maiLab](https://www.youtube.com/c/maiLab) im Fokus: Datenauswertung mit R (2)
+
+```{r}
+# Load additional packages
+library(sjPlot) 
+
+# Create plot
+video_list %>% 
+  mutate(year  = as.factor(year(publishedAt))) %>% 
+  plot_frq(
+    year,
+    title = "Video uploads on `maiLab` by year")
+```
+
+##  Top 5 Videos mit den *meisten Aufrufen*
+
+#### [{{< fa brands youtube >}} maiLab](https://www.youtube.com/c/maiLab) im Fokus: Datenauswertung mit R (2)
+
+```{r}
+video_list %>% 
+  arrange(-viewCount) %>% 
+  select(videoTitle, publishedAt, viewCount, likeCount, commentCount) %>% 
+  head()
+```
+
+##  Top 5 Videos mit den *meisten Kommentaren*
+
+#### [{{< fa brands youtube >}} maiLab](https://www.youtube.com/c/maiLab) im Fokus: Datenauswertung mit R (2)
+
+```{r}
+video_list %>% 
+  arrange(-commentCount) %>% 
+  select(videoTitle, publishedAt, viewCount, likeCount, commentCount) %>% 
+  head()
+```
 
 # **Verständnis- und Diskussionsfragen** {background-color="#E6002E" background-image="../../00-images/background_participation.svg"}
 
@@ -104,234 +253,6 @@ Ihre Fragen aus MS Teams
 
 ::: {.fragment .fade-in-then-semi-out fragment-index="8"}
 > Was sind die Gründe für den Rückgang der Forschung mit Twitter-Daten rund um das Thema Marketing?
-:::
-
-# Group Activity {background-color="#E6002E" background-image="../../00-images/background_group_activity.svg"}
-
-Gruppenarbeit `YouTube Data Tools`
-
-## What is it an who made it
-
-#### Hintergrundinformationen [`YouTube Data Tools`](https://tools.digitalmethods.net/netvizz/youtube/index.php)
-
--   Sammlung von einfachen Modulen zur Extraktion von Daten aus der YouTube-Plattform über die YouTube-API v3.
-
--   Keine voll entwickelte Analysesoftware, sondern ein Mittel für Forschende, um Daten in Standarddateiformaten zu sammeln und in anderen Softwarepaketen weiter zu analysieren.
-
--   geschrieben, entwickelt und gepflegt von [Bernhard Rieder](https://www.uva.nl/en/profile/r/i/b.rieder/b.rieder.html) (Universität Amsterdam)
-
-## And now ... you!
-
-#### Beispielhafte Nutzung
-
-1.  Channel Search nach `maiLab`
-
-#### 
-
-## Suchanfrage erstellen & Daten sammeln
-
-#### Twitter case study - Teil 1: Suchen & Sammeln
-
-::: {.callout-important appearance="simple"}
-Für die Nutzung des [Tweet Downloader](https://developer.twitter.com/apitools/downloader) benötigen Sie einen `Bearer Token`. Diesen finden Sie auf MS Teams.
-:::
-
-Wäheln Sie eine der folgenden Szenarien aus und erstellen Sie eine Suchanfrage mit Hilfe des [Twitter Query Builder](https://developer.twitter.com/apitools/query?query=):
-
--   Alle Tweets eines **bestimmten Accounts** seit dem **01.10.2022**
-
--   Alle Tweets ([ohne Retweets]{.underline}) **mit dem Hashtag** `#karneval` oder `#wokwm` am **letzten Wochenende**
-
-... und ziehen sich die Tweets **als .csv & .json** mit Hilfe des [Tweet Downloader](https://developer.twitter.com/apitools/downloader) (*benötigt Chrome, Edge oder Opera*)
-
-## Format der Daten & potentielle Analyse(n)
-
-#### Twitter case study - Teil 2: Sichten & Konzipieren
-
-1.  Inspizieren Sie anschließend die Datensätze und schauen Sie, welche Informationen Ihnen geliefert werden.
-
-    -   Wie unterscheiden sich die Datenformate?
-
-<br>
-
-2.  Auf Basis der gesichteten Daten ...
-
-    -   Wie würden Sie die Daten analyiseren bzw. welche Aspekte würden Sie sich anschauen?
-
-    -   Welche potentielle Fragestellungen könnten Sie spontan entwickeln?
-
-# Beispielhafte Auswertungen {background-color="#E6002E"}
-
-Im Fokus: `#Karneval`
-
-```{r}
-#| echo: false
-
-# Load packages
-library(academictwitteR) # Collecting the data
-library(tidyverse) # Preparation of the data
-library(quanteda) # Text mining
-library(quanteda.textstats) # Text statistics
-library(quanteda.textplots) # Visualisation of text data
-library(here)
-library(sjmisc)
-library(lubridate)
-library(ggthemes)
-library(ggpubr)
-
-# Load data 
-tweets_karneval <- bind_tweets(
-  data_path = here("content/04-api_access-twitter/data/raw_karneval"),
-  # data_path = "data/raw_karneval",
-  output_format = "tidy") %>% 
-    mutate(
-    datetime = ymd_hms(created_at),
-    date = date(datetime),
-    hour = hour(datetime),
-    min  = minute(datetime),
-    hms  = hms::as_hms(datetime),
-    hm   = hms::parse_hm(hms)
-  )
-  
-```
-
-## Setup und Datensammlung mit R
-
-#### `#Karneval` im Fokus: Hintergrund und Datensammelung
-
-::: columns
-::: {.column width="50%"}
-Alle Tweets herunterladen, die
-
--   **`#Karneval`** enthalten
-
--   zwischen **00:00 am 11.11.2022** und **12:00 am 13.12.2022** erschienen sind
-
-Weiterverarbeitung und Auswertung der Daten mit R, Fokus auf Paket `academictwitteR` [@barrie2021]
-:::
-
-::: {.column width="50%"}
-Sammlung der Daten mit `academictwitteR`:
-
-```{r}
-#| code-line-numbers: "|2|3|4|7"
-#| eval: false
-
-get_all_tweets(
-  query = "#Karneval", 
-  start_tweets = "2022-11-11T00:00:00Z",
-  end_tweets = "2022-11-13T12:00:00Z",
-  file = "karneval",
-  data_path = "data/raw_karneval/",
-  n = 100000
-  )
-```
-:::
-:::
-
-## Kurzer Blick in die Daten
-
-#### `#Karneval` im Fokus: Datenübersicht
-
-```{r}
-tweets_karneval %>% glimpse()
-
-```
-
-## Deutsch, Hashtags, Englisch ...
-
-#### `#Karneval` im Fokus: Sprache der Tweets
-
-::: columns
-::: {.column width="50%"}
-```{r}
-table(tweets_karneval$lang)
-```
-:::
-
-::: {.column width="50%"}
-```{r}
-frq(tweets_karneval$lang, sort.frq = "desc")
-```
-:::
-:::
-
-::: notes
-qme = only hashtags
-
-und = unidentified
-:::
-
-## Am 11.11. um 10:11?
-
-#### `#Karneval` im Fokus: Tweets im Zeitverlauf
-
-```{r}
-#| fig-dpi: 600
-#| fig-align: center
-
-tweets_karneval %>% 
-  ggplot(aes(hour)) +
-  geom_bar() +
-  facet_grid(cols = vars(date)) +
-  theme_pubr()
-```
-
-## UTC statt UTC+1
-
-#### `#Karneval` im Fokus: Stärkste Konzentration von Tweets
-
-```{r}
-tweets_karneval %>%
-  frq(hm,
-      sort.frq = "desc", 
-      min.frq = 10)
-```
-
-## Ein Blick auf die Sender:Innen
-
-#### `#Karneval` im Fokus: User mit den meisten Tweets
-
-::: columns
-::: {.column width="50%"}
-```{r}
-#| layout-align: center
-
-tweets_karneval$user_username %>% 
-  frq(sort.frq = "desc", 
-      min.frq = 10)
-```
-:::
-
-::: {.column width="50%"}
-::: r-stack
-```{r}
-
-tweets_karneval %>% 
-  filter(user_username == "Gun17170309") %$% 
-  glue::glue(
-    "Tweet-ID: {tweet_id} 
-    Inhalt:
-    {text}\n\n") %>% 
-  head()
-
-```
-
-::: {.fragment fragment-index="1"}
-```{r}
-
-tweets_karneval %>% 
-  filter(user_username == "berlinaffaires") %$% 
-  glue::glue(
-    "Tweet-ID: {tweet_id} 
-    Inhalt:
-    {text}\n\n") %>% 
-  head()
-
-```
-:::
-:::
-:::
 :::
 
 # Time for questions {background-color="#E6002E" background-image="../../00-images/background_questions.svg"}
