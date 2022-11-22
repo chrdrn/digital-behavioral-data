@@ -31,6 +31,9 @@ website:
           - "content/04-api_access-twitter/04-slides.qmd"
           - "content/04-api_access-twitter/04-exercise.qmd"
       - section: "API Access: YouTube"
+        contents:
+          - "content/05-api_access-youtube/05-slides.qmd"
+          - "content/05-api_access-youtube/05-exercise.qmd"
       
 
 format:

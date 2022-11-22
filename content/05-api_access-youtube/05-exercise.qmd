@@ -26,12 +26,16 @@ library(here)
 
 Practical application of the YouTube Data Tool (YTDT) using the example of Mai Thi Nguyen-Kim ( [{{< fa brands twitter >}}](https://twitter.com/maithi_nk) \| [{{< fa brands instagram >}}](https://www.instagram.com/maithink/) ) and her [{{< fa brands youtube >}}](https://www.youtube.com/c/maiLab)-Channel [maiLab](https://www.youtube.com/c/maiLab).
 
+You can also open this showcase in other interactive and executable environments:
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/chrdrn/dbd_binder/HEAD)
+[![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chrdrn/dbd_binder/blob/main/session_05-showcase_youtube.ipynb)
+
 ## Exercise 1
 
-* Use the [`Channel Search`](https://tools.digitalmethods.net/netvizz/youtube/mod_channels_search.php) site/function of the `YTDT` to find the (correct) `channel ID` for the <img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/brands/youtube.svg" width="15" height="15"> Channel [maiLab](https://www.youtube.com/c/maiLab). 
-* Therefore, enter "*maiLab*" in the field `Search query` and download the results as `.csv`. 
-* Open the file and search extract the correct channel ID.\
-  *Hint:*  If in doubt, use [`Channel Info`](https://tools.digitalmethods.net/netvizz/youtube/mod_channel_info.php) function to check if the selected ID matches the channel description.
+-   Use the [`Channel Search`](https://tools.digitalmethods.net/netvizz/youtube/mod_channels_search.php) site/function of the `YTDT` to find the (correct) `channel ID` for the <img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/brands/youtube.svg" width="15" height="15"/> Channel [maiLab](https://www.youtube.com/c/maiLab).
+-   Therefore, enter "*maiLab*" in the field `Search query` and download the results as `.csv`.
+-   Open the file and search extract the correct channel ID.\
+    *Hint:* If in doubt, use [`Channel Info`](https://tools.digitalmethods.net/netvizz/youtube/mod_channel_info.php) function to check if the selected ID matches the channel description.
 
 ```{r}
 # Load packages
@@ -72,8 +76,8 @@ video_list %>% glimpse()
 
 -   Perform different explorative data analysis
 
-
 ## Different location parameters
+
 ```{r}
 # Load additional packages
 library(sjmisc) 
@@ -92,14 +96,14 @@ video_list %>%
   plot_frq(durationSec, viewCount, likeCount, commentCount, type = "density")
 ```
 
-
 ## In-depth analysis
-Based on the findings of the previous section, let us take a closer look. Interestingly, although most of the varialbes have a left-sloping distribution, there are isolated outliers on the "right" edge. 
 
-Therefore, the next goal is to find out which video(s) they are. 
+Based on the findings of the previous section, let us take a closer look. Interestingly, although most of the varialbes have a left-sloping distribution, there are isolated outliers on the "right" edge.
 
+Therefore, the next goal is to find out which video(s) they are.
 
 ### Top 5 videos with the **highest view count**
+
 ```{r}
 video_list %>% 
   arrange(-viewCount) %>% 
@@ -107,14 +111,11 @@ video_list %>%
   head()
 ```
 
-
 ### Top 5 videos with the **highest comment count**
+
 ```{r}
 video_list %>% 
   arrange(-commentCount) %>% 
   select(videoTitle, publishedAt, viewCount, likeCount, commentCount) %>% 
   head()
 ```
-
-
-

@@ -561,14 +561,14 @@
 <section>
 <section id="group-activity" class="title-slide slide level1 center" data-background-color="#E6002E" data-background-image="../../00-images/background_group_activity.svg">
 <h1>Group Activity</h1>
-<p>Gruppenarbeit <code>YouTube Data Tools</code></p>
+<p>Gruppenarbeit zu <code>YouTube Data Tools</code></p>
 </section>
 <section id="what-is-it-an-who-made-it" class="slide level2">
 <h2>What is it an who made it</h2>
-<h4 id="hintergrundinformationen-youtube-data-tools">Hintergrundinformationen <a href="https://tools.digitalmethods.net/netvizz/youtube/index.php"><code>YouTube Data Tools</code></a></h4>
+<h4 id="hintergrundinformationen-youtube-data-tools-rieder2015">Hintergrundinformationen <a href="https://tools.digitalmethods.net/netvizz/youtube/index.php"><code>YouTube Data Tools</code></a> <span class="citation" data-cites="rieder2015">(<a href="#/literatur" role="doc-biblioref" onclick="">Rieder, 2015</a>)</span></h4>
 <ul>
-<li><p>Sammlung von einfachen Modulen zur Extraktion von Daten aus der YouTube-Plattform über die YouTube-API v3.</p></li>
-<li><p>Keine voll entwickelte Analysesoftware, sondern ein Mittel für Forschende, um Daten in Standarddateiformaten zu sammeln und in anderen Softwarepaketen weiter zu analysieren.</p></li>
+<li><p>Sammlung von <strong>einfachen Modulen zur Extraktion</strong> von Daten aus der YouTube-Plattform über die <strong>YouTube-API v3.</strong></p></li>
+<li><p>Keine voll entwickelte Analysesoftware, sondern ein <strong>Mittel für Forschende</strong>, um Daten in Standarddateiformaten zu sammeln und in anderen Softwarepaketen weiter zu analysieren.</p></li>
 <li><p>geschrieben, entwickelt und gepflegt von <a href="https://www.uva.nl/en/profile/r/i/b.rieder/b.rieder.html">Bernhard Rieder</a> (Universität Amsterdam)</p></li>
 </ul>
 </section>
@@ -577,8 +577,8 @@
 <h4 id="beispielhafte-nutzung">Beispielhafte Nutzung</h4>
 <ol type="1">
 <li><strong>Suchen</strong> Sie sich einen <strong>YouTube-Kanal</strong> aus, auf dem die folgenden Analysen basieren sollen</li>
-<li>Nutzen Sie die <a href="https://tools.digitalmethods.net/netvizz/youtube/mod_channels_search.php"><code>Channel Search</code></a> des <a href="https://tools.digitalmethods.net/netvizz/youtube/index.php">YTDT</a> um die “korrekte” <code>chanel ID</code> zu identifizieren.</li>
-<li>Laden Sie mit Hilfe der <a href="https://tools.digitalmethods.net/netvizz/youtube/mod_videos_list.php"><code>Video List</code></a> Seite/Funktion des <a href="https://tools.digitalmethods.net/netvizz/youtube/index.php">YTDT</a> eine Liste aller veröffentlichten Videos Ihres ausgewählten YouTube-Kanals</li>
+<li><strong>Nutzen</strong> Sie die <a href="https://tools.digitalmethods.net/netvizz/youtube/mod_channels_search.php"><code>Channel Search</code></a> des <a href="https://tools.digitalmethods.net/netvizz/youtube/index.php">YTDT</a> um die “korrekte” <code>chanel ID</code> zu <strong>identifizieren</strong>.</li>
+<li><strong>Laden</strong> Sie mit Hilfe der <a href="https://tools.digitalmethods.net/netvizz/youtube/mod_videos_list.php"><code>Video List</code></a> Seite/Funktion des <a href="https://tools.digitalmethods.net/netvizz/youtube/index.php">YTDT</a> eine Liste <strong>aller veröffentlichten Videos</strong> Ihres ausgewählten YouTube-Kanals herunter.</li>
 </ol>
 <p><em>Optional:</em></p>
 <ol start="4" type="1">
@@ -600,9 +600,9 @@
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
-<li>seit 2016 bestehende YouTube-Kanal (früher schönschlau) von Mai Thi Nguyen-Kim</li>
-<li>ist Teil des funk-Netzwerks</li>
-<li>behandelt diverse Themen au sden Bereichen Natur- und Gesellschaftswissenschaften</li>
+<li>seit 2016 bestehende YouTube-Kanal (früher <em>schönschlau</em>) von <strong>Mai Thi Nguyen-Kim</strong></li>
+<li>ist Teil des <strong>funk</strong>-Netzwerks</li>
+<li>behandelt diverse Themen aus den Bereichen Natur- und Gesellschaftswissenschaften</li>
 </ul>
 </div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
@@ -615,7 +615,7 @@
 </section>
 <section id="zusammenspiel-von-ytdt-r" class="slide level2">
 <h2>Zusammenspiel von YTDT &amp; R</h2>
-<h4 id="fa-brands-youtube-mailab-im-fokus-datenverarbeitung-mit-r-1"><a href="https://www.youtube.com/c/maiLab"><i class="fa-brands fa-youtube" aria-label="youtube"></i> maiLab</a> im Fokus: Datenverarbeitung mit R (1)</h4>
+<h4 id="fa-brands-youtube-mailab-im-fokus-datenimport-mit-r-1"><a href="https://www.youtube.com/c/maiLab"><i class="fa-brands fa-youtube" aria-label="youtube"></i> maiLab</a> im Fokus: Datenimport mit R (1)</h4>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Load packages</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(readr)</span>
@@ -623,7 +623,7 @@
 <span id="cb1-4"><a href="#cb1-4"></a></span>
 <span id="cb1-5"><a href="#cb1-5"></a><span class="co"># Import data</span></span>
 <span id="cb1-6"><a href="#cb1-6"></a>channel_list <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
-<span id="cb1-7"><a href="#cb1-7"></a>  <span class="fu">here</span>(<span class="st">"content/05-api_access-youtube/data/channelsearch_channels50_2022_11_17-09_54_22.csv"</span>))</span>
+<span id="cb1-7"><a href="#cb1-7"></a>  <span class="st">"https://raw.githubusercontent.com/chrdrn/dbd_binder/main/data/05-youtube/channelsearch_channels50_2022_11_17-09_54_22.csv"</span>)</span>
 <span id="cb1-8"><a href="#cb1-8"></a></span>
 <span id="cb1-9"><a href="#cb1-9"></a><span class="co"># Preview data </span></span>
 <span id="cb1-10"><a href="#cb1-10"></a>channel_list <span class="sc">%&gt;%</span> <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -645,14 +645,15 @@ $ videoCount      &lt;dbl&gt; 186, 45, 9, 104, 3, 1, 1, 24, 12, 51, 1, 6, 31, 1,
 </section>
 <section id="mit-channel-id-zur-video-list" class="slide level2">
 <h2>Mit <span class="smallcaps">Channel ID</span> zur <span class="smallcaps">Video List</span></h2>
-<h4 id="fa-brands-youtube-mailab-im-fokus-datenverarbeitung-mit-r-2"><a href="https://www.youtube.com/c/maiLab"><i class="fa-brands fa-youtube" aria-label="youtube"></i> maiLab</a> im Fokus: Datenverarbeitung mit R (2)</h4>
+<h4 id="fa-brands-youtube-mailab-im-fokus-datenimport-mit-r-2"><a href="https://www.youtube.com/c/maiLab"><i class="fa-brands fa-youtube" aria-label="youtube"></i> maiLab</a> im Fokus: Datenimport mit R (2)</h4>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># Import data: video list</span></span>
 <span id="cb3-2"><a href="#cb3-2"></a>video_list <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
-<span id="cb3-3"><a href="#cb3-3"></a>  <span class="fu">here</span>(<span class="st">"content/05-api_access-youtube/data/videolist_channel186_2022_11_17-10_20_11.csv"</span>))</span>
-<span id="cb3-4"><a href="#cb3-4"></a></span>
-<span id="cb3-5"><a href="#cb3-5"></a><span class="co"># Preview data </span></span>
-<span id="cb3-6"><a href="#cb3-6"></a>video_list <span class="sc">%&gt;%</span> <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-3"><a href="#cb3-3"></a>  <span class="st">"https://raw.githubusercontent.com/chrdrn/dbd_binder/main/data/05-youtube/videolist_channel186_2022_11_17-10_20_11.csv"</span></span>
+<span id="cb3-4"><a href="#cb3-4"></a>)</span>
+<span id="cb3-5"><a href="#cb3-5"></a></span>
+<span id="cb3-6"><a href="#cb3-6"></a><span class="co"># Preview data </span></span>
+<span id="cb3-7"><a href="#cb3-7"></a>video_list <span class="sc">%&gt;%</span> <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 186
 Columns: 23
@@ -731,7 +732,7 @@ $ commentCount       &lt;dbl&gt; 18716, 9141, 8204, 38823, 111200, 7905, 3831, 5
 <img data-src="index_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section>
 <section id="top-5-videos-mit-den-meisten-aufrufen" class="slide level2">
 <h2>Top 5 Videos mit den <em>meisten Aufrufen</em></h2>
-<h4 id="fa-brands-youtube-mailab-im-fokus-datenauswertung-mit-r-2-1"><a href="https://www.youtube.com/c/maiLab"><i class="fa-brands fa-youtube" aria-label="youtube"></i> maiLab</a> im Fokus: Datenauswertung mit R (2)</h4>
+<h4 id="fa-brands-youtube-mailab-im-fokus-datenauswertung-mit-r-3"><a href="https://www.youtube.com/c/maiLab"><i class="fa-brands fa-youtube" aria-label="youtube"></i> maiLab</a> im Fokus: Datenauswertung mit R (3)</h4>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>video_list <span class="sc">%&gt;%</span> </span>
 <span id="cb8-2"><a href="#cb8-2"></a>  <span class="fu">arrange</span>(<span class="sc">-</span>viewCount) <span class="sc">%&gt;%</span> </span>
@@ -753,7 +754,7 @@ $ commentCount       &lt;dbl&gt; 18716, 9141, 8204, 38823, 111200, 7905, 3831, 5
 </section>
 <section id="top-5-videos-mit-den-meisten-kommentaren" class="slide level2">
 <h2>Top 5 Videos mit den <em>meisten Kommentaren</em></h2>
-<h4 id="fa-brands-youtube-mailab-im-fokus-datenauswertung-mit-r-2-2"><a href="https://www.youtube.com/c/maiLab"><i class="fa-brands fa-youtube" aria-label="youtube"></i> maiLab</a> im Fokus: Datenauswertung mit R (2)</h4>
+<h4 id="fa-brands-youtube-mailab-im-fokus-datenauswertung-mit-r-4"><a href="https://www.youtube.com/c/maiLab"><i class="fa-brands fa-youtube" aria-label="youtube"></i> maiLab</a> im Fokus: Datenauswertung mit R (4)</h4>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>video_list <span class="sc">%&gt;%</span> </span>
 <span id="cb10-2"><a href="#cb10-2"></a>  <span class="fu">arrange</span>(<span class="sc">-</span>commentCount) <span class="sc">%&gt;%</span> </span>
@@ -772,6 +773,18 @@ $ commentCount       &lt;dbl&gt; 18716, 9141, 8204, 38823, 111200, 7905, 3831, 5
 # … with abbreviated variable names ¹​viewCount, ²​likeCount, ³​commentCount</code></pre>
 </div>
 </div>
+</section>
+<section id="interactive-and-executable-environments" class="slide level2">
+<h2>Interactive and executable environments</h2>
+<h4 id="quarto-binder-google-colab">Quarto, Binder &amp; Google Colab</h4>
+<p>Verschiedene Möglichkeiten, um den Code bzw. das heutige Beispiel (“live”) zu reproduzieren:</p>
+<ol type="1">
+<li><p><a href="https://chrdrn.github.io/digital-behavioral-data/content/05-api_access-youtube/05-exercise.html">Quarto-Dokument</a> auf <a href="https://chrdrn.github.io/digital-behavioral-data/">Kurs-Homepage</a></p></li>
+<li><p><a href="https://mybinder.org/"><span class="smallcaps">Binder</span></a>: Repositories mit Jupyter-Notebooks in ausführbaren Umgebungen öffnen und bearbeiten<br>
+<a href="https://mybinder.org/v2/gh/chrdrn/dbd_binder/HEAD"><img data-src="https://mybinder.org/badge_logo.svg" alt="Binder"></a></p></li>
+<li><p><a href="https://colab.research.google.com/"><span class="smallcaps">Google Colab</span></a>: gehosteter Jupyter-Notebook-Dienst, der keine EInrichtung erfordertund gleichzeitig kostenlosen Zugang zu Rechenressourcen einschließlich GPUs bietet<br>
+<a href="https://colab.research.google.com/github/chrdrn/dbd_binder/blob/main/session_05-showcase_youtube.ipyn"><img data-src="https://colab.research.google.com/assets/colab-badge.svg" alt="Google Colab"></a></p></li>
+</ol>
 </section></section>
 <section>
 <section id="verständnis--und-diskussionsfragen" class="title-slide slide level1 center" data-background-color="#E6002E" data-background-image="../../00-images/background_participation.svg">
@@ -782,47 +795,40 @@ $ commentCount       &lt;dbl&gt; 18716, 9141, 8204, 38823, 111200, 7905, 3831, 5
 <h2>Vielen Dank für Ihre Fragen!</h2>
 <div class="fragment semi-fade-out" data-fragment-index="1">
 <blockquote>
-<p>Was genau kann unter “N-gram analysis” verstanden werden?</p>
+<p>Ist es denkbar, dass YouTube eines Tages von anderen sozialen Plattformen wie Instagram oder Spotify überholt wird, an Bekanntheit verliert oder sogar ganz von der Bildfläche verschwindet?</p>
 </blockquote>
 </div>
 <div class="fragment fade-in-then-semi-out" data-fragment-index="1">
 <blockquote>
-<p>Um semantische Muster der Daten bei der Twitter-Forschung zu erkennen, wendet man häufig Text-Mining-Methoden an. Wie wird dabei mit ironischen Aussagen oder Umgangssprache umgegangen? Sind solche Analysemethoden somit überhaupt verlässlich oder kann man diesbezüglich mit einer hohen Fehleranfälligkeit rechnen?</p>
+<p>Youtube-Influencer verdienen etwa das Doppelte mit Werbeanzeigen auf YouTube, als wenn sie Werbeanzeigen auf Facebook oder Instagram schalten würden (2016). Kann das im Jahr 2022 immer noch bestätigt werden? Sind Werbeanzeigen auf YouTube erfolgreicher und haben eine weitere Reichweite im Vergleich mit Instagram?</p>
 </blockquote>
 </div>
 <div class="fragment fade-in-then-semi-out" data-fragment-index="2">
 <blockquote>
-<p>Viele Studien verwenden Twitter in der Forschung. Dabei werden verschiedene Methoden eingesetzt. Welche Methode (aus Table 4 des Pflichtpapers) würden Sie am meisten empfehlen? Welche ist am aussagekräftigsten? Oder ist das Kontext-bezogen und eine allgemeine Aussage kann nicht getätigt werden?</p>
+<p>Es wird das Tool <strong>Webometric</strong> erwähnt, ein automatisiertes Instrument für die Sammlung von Social Media Daten über die API der Plattform YouTube. Wie sieht Webometric genau aus und wie werden die Daten über dieses Tool extrahiert?</p>
 </blockquote>
 </div>
 <div class="fragment fade-in-then-semi-out" data-fragment-index="3">
 <blockquote>
-<p>Interessant wäre es in diesem Kontext vielleicht nicht nur Twitter, sondern eine andere Social-Media-Plattform zu betrachten, zum Bsp. Facebook. Würden die dominierenden Themen der Facebook-basierten Forschung ähnlich wie bei Twitter ausfallen? Wie sieht wohl die Entwicklung der Themen in den letzten Jahren aus?</p>
+<p>Es wird oft darüber geredet, dass das „Recommendation System” fehlerhaft sei und bestimmte Videos trotz mangelnde Performance trotzdem empfohlen werden oder in den Trends landen (z.B Amerikanische Late Night Shows). Wie kann in der Forschung verhindert werden, dass Resultate entstehen die nicht den tatsächlichen Verhaltensdaten der Konsumenten entstehen.</p>
 </blockquote>
 </div>
-<div class="fragment fade-in-then-semi-out" data-fragment-index="4">
+</section>
+<section id="lets-discuss" class="slide level2">
+<h2>Let’s discuss</h2>
+<div class="fragment semi-fade-out" data-fragment-index="1">
 <blockquote>
-<p>Interessant wäre es in diesem Kontext vielleicht nicht nur Twitter, sondern eine andere Social-Media-Plattform zu betrachten, zum Bsp. Facebook. Würden die dominierenden Themen der Facebook-basierten Forschung ähnlich wie bei Twitter ausfallen? Wie sieht wohl die Entwicklung der Themen in den letzten Jahren aus?</p>
+<p>Sophie Bishop meint es wäre interessant die Forschung zum Algorithmus von YouTube dahingehend zu erweitern, dass man untersucht was Nutzer denken, wie der Algorithmus funktioniert. Wie würde man bei dieser Fragestellung vorgehen bzw. wie könnte man das untersuchen?</p>
 </blockquote>
 </div>
-<div class="fragment fade-in-then-semi-out" data-fragment-index="5">
+<div class="fragment fade-in-then-semi-out" data-fragment-index="1">
 <blockquote>
-<p>Twitter wird unter anderem für „Opinion Mining” verwendet. Jedoch kann es gerade bei polarisierenden Themen vorkommen, dass sich vor allem Personen mit extremer Meinung äußern und die Personen mittig im Spektrum zurückhalten. Wie kann man einen solchen Bias ausgleichen?</p>
+<p>Inwiefern kann YouTube als Soziales Netzwerk verstanden werden, wenn nur ein kleiner Bruchteil seiner User sich durch Upload von Content am Informationsaustausch beteiligt und der Großteil “nur” konsumiert?</p>
 </blockquote>
 </div>
-<div class="fragment fade-in-then-semi-out" data-fragment-index="6">
+<div class="fragment fade-in-then-semi-out" data-fragment-index="3">
 <blockquote>
-<p>Es kann nur ein kleiner Bruchteil der Twitter-Kommunikation per API abgefragt werden, der zudem noch veraltet ist. Inwieweit sind Trend-Analysen überhaupt möglich? Gibt es Möglichkeiten Twitter-Kommunikation zu “streamen”?</p>
-</blockquote>
-</div>
-<div class="fragment fade-in-then-semi-out" data-fragment-index="7">
-<blockquote>
-<p>Eine gute Studie lebt von den Kriterien der Validität, Objektivität und Reliabilität. Inwieweit können diese Kriterien bei einer Twitter-Analyse erfüllt werden?</p>
-</blockquote>
-</div>
-<div class="fragment fade-in-then-semi-out" data-fragment-index="8">
-<blockquote>
-<p>Was sind die Gründe für den Rückgang der Forschung mit Twitter-Daten rund um das Thema Marketing?</p>
+<p>YouTube besteht als Social Media Platform länger als die meisten anderen Plattformen (Twitter, Instagram, TikTok, etc.) und besitzt so gut wie weltweite Bekanntheit. Warum ist die Forschung in Richtung YouTube trotzdem so gering?</p>
 </blockquote>
 </div>
 </section></section>
@@ -838,8 +844,10 @@ $ commentCount       &lt;dbl&gt; 18716, 9141, 8204, 38823, 111200, 7905, 3831, 5
 </section>
 <section id="literatur" class="slide level2 smaller scrollable">
 <h2>Literatur</h2>
-<div id="refs" role="doc-bibliography">
-
+<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="doc-bibliography">
+<div id="ref-rieder2015" class="csl-entry" role="doc-biblioentry">
+Rieder, B. (2015). <em>YouTube data tools</em>. <a href="https://tools.digitalmethods.net/netvizz/youtube/index.php">https://tools.digitalmethods.net/netvizz/youtube/index.php</a>
+</div>
 </div>
 
 
