@@ -84,7 +84,7 @@ Gruppenarbeit zu `YouTube Data Tools`
 #### Beispielhafte Nutzung
 
 1.  **Suchen** Sie sich einen **YouTube-Kanal** aus, auf dem die folgenden Analysen basieren sollen
-2.  **Nutzen** Sie die [`Channel Search`](https://tools.digitalmethods.net/netvizz/youtube/mod_channels_search.php) des [YTDT](https://tools.digitalmethods.net/netvizz/youtube/index.php) um die "korrekte" `chanel ID` zu **identifizieren**.
+2.  **Nutzen** Sie die [`Channel Search`](https://tools.digitalmethods.net/netvizz/youtube/mod_channels_search.php) des [YTDT](https://tools.digitalmethods.net/netvizz/youtube/index.php) um die "korrekte" `Channel ID` zu **identifizieren**.
 3.  **Laden** Sie mit Hilfe der [`Video List`](https://tools.digitalmethods.net/netvizz/youtube/mod_videos_list.php) Seite/Funktion des [YTDT](https://tools.digitalmethods.net/netvizz/youtube/index.php) eine Liste **aller veröffentlichten Videos** Ihres ausgewählten YouTube-Kanals herunter.
 
 *Optional:*
@@ -227,7 +227,7 @@ Verschiedene Möglichkeiten, um den Code bzw. das heutige Beispiel ("live") zu r
     [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/chrdrn/dbd_binder/HEAD)
 
 3.  [[Google Colab]{.smallcaps}](https://colab.research.google.com/): gehosteter Jupyter-Notebook-Dienst, der keine EInrichtung erfordertund gleichzeitig kostenlosen Zugang zu Rechenressourcen einschließlich GPUs bietet\
-    [![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chrdrn/dbd_binder/blob/main/session_05-showcase_youtube.ipyn)
+    [![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chrdrn/dbd_binder/blob/main/session_05-showcase_youtube.ipynb)
 
 # **Verständnis- und Diskussionsfragen** {background-color="#E6002E" background-image="../../00-images/background_participation.svg"}
 
