@@ -1131,7 +1131,7 @@
     "href": "content/05-api_access-youtube/slides/index.html#and-now-you",
     "title": "API-Access – YouTube",
     "section": "And now … you!",
-    "text": "And now … you!\nBeispielhafte Nutzung\n\nSuchen Sie sich einen YouTube-Kanal aus, auf dem die folgenden Analysen basieren sollen\nNutzen Sie die Channel Search des YTDT um die “korrekte” chanel ID zu identifizieren.\nLaden Sie mit Hilfe der Video List Seite/Funktion des YTDT eine Liste aller veröffentlichten Videos Ihres ausgewählten YouTube-Kanals herunter.\n\nOptional:\n\nSuchen Sie mit Hilfe der heruntergeladenen Liste der veröffentlichten Videos das Video mit den meisten Likes/Comments.\nDownloaden Sie die Kommentare des Videos mit Hilfe der Video Info des YTDT."
+    "text": "And now … you!\nBeispielhafte Nutzung\n\nSuchen Sie sich einen YouTube-Kanal aus, auf dem die folgenden Analysen basieren sollen\nNutzen Sie die Channel Search des YTDT um die “korrekte” Channel ID zu identifizieren.\nLaden Sie mit Hilfe der Video List Seite/Funktion des YTDT eine Liste aller veröffentlichten Videos Ihres ausgewählten YouTube-Kanals herunter.\n\nOptional:\n\nSuchen Sie mit Hilfe der heruntergeladenen Liste der veröffentlichten Videos das Video mit den meisten Likes/Comments.\nDownloaden Sie die Kommentare des Videos mit Hilfe der Video Info des YTDT."
   },
   {
     "objectID": "content/05-api_access-youtube/05-exercise.html#fa-brands-youtube-mailab-analysis",
