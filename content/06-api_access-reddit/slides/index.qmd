@@ -1,0 +1,285 @@
+---
+title: "API-Access – Reddit" 
+title-slide-attributes:
+  data-background-image: ../../00-images/background_title.svg
+  data-background-color: "#04316a"
+subtitle: "Digital behavioral data - Session 06"
+author: 
+  - name: Christoph Adrian 
+    url: https://twitter.com/chrdrn
+    affiliation: Lehrstuhl für Kommunikationswissenschaft
+    affiliation-url: https://www.kowi.rw.fau.de/person/christoph-adrian/
+date: 30 11 2022
+date-format: "DD.MM.YYYY"
+format:
+  revealjs:
+    theme: ../../slidetheme.scss
+    template-partials:
+      - title-slide.html
+    slide-number: true
+    chalkboard:
+      buttons: false
+    preview-links: auto
+    logo: ../../logo.png
+    footer: "[Digital Behavioral Data](https://chrdrn.github.io/digital-behavioral-data/)"
+highlight-style: atom-one
+comments:
+  hypothesis: 
+    theme: clean
+filters:
+  - roughnotation
+execute:
+  echo: true
+csl: ../../apa.csl
+editor_options: 
+  chunk_output_type: console
+bibliography: references.bib
+---
+
+## Seminarplan {.smaller}
+
+| Sitzung                                                | Datum                                                           | Thema                                                                              | Referent\*Innen                                                       |
+|------------------|------------------|-------------------|------------------|
+| [*1*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*26.10.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*Kick-Off Session*]{.rn rn-type="strike-through" rn-color="#E6002E"}              | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
+| [*2*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*02.11.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*DBD: Einführung und Überblick*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
+| [*3*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*09.11.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*DBD: Datenerhebung*]{.rn rn-type="strike-through" rn-color="#E6002E"}            | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
+| [*4*]{.rn rn-type="highlight"}                         | [*16.11.2022*]{.rn rn-type="highlight"}                         | [*API-Access (I): Twitter*]{.rn rn-type="highlight"}                               | [*Falk*]{.rn rn-type="highlight"}                                     |
+| *5*                                                    | *23.11.2022*                                                    | *API-Access (II): YouTube*                                                         | *Denisov*                                                             |
+| **6**                                                  | **30.11.2022**                                                  | **API-Access (II): *Reddit***                                                      | **Landauer**                                                          |
+| 7                                                      | 07.12.2022                                                      | Webscraping: *TikTok*                                                              | Brand & Kocher                                                        |
+| 8                                                      | 14.12.2022                                                      | Exkurs: DBD Analyse mit R                                                          | Christoph Adrian                                                      |
+|                                                        |                                                                 | *WEIHNACHTSPAUSE*                                                                  |                                                                       |
+| 9                                                      | 12.01.2023                                                      | ESM: *m-path*                                                                      | Dörr                                                                  |
+| 10                                                     | 19.01.2023                                                      | Data Donations                                                                     | Hofmann & Wierzbicki                                                  |
+| 11                                                     | 26.01.2023                                                      | *PUFFER*                                                                           |                                                                       |
+| 12                                                     | 02.02.2023                                                      | *Guest Lecture: Linking DBD & Survey data*                                         | [Johannes Breuer](https://www.johannesbreuer.com/)                    |
+| 13                                                     | 09.02.2023                                                      | Semesterabschluss & Evaluation                                                     | Christoph Adrian                                                      |
+
+::: notes
+▶️
+:::
+
+# Agenda
+
+1.  **Group Activity**
+2.  **Beispielhafte Anwendungen**
+3.  **Verständnis- und Diskussionsfragen**
+
+# Group Activity {background-color="#E6002E" background-image="../../00-images/background_group_activity.svg"}
+
+Gruppenarbeit zu `4CAT: Capture and Analysis Toolkit`
+
+## What is it an who made it
+
+#### Hintergrundinformationen [`4CAT`](https://github.com/digitalmethodsinitiative/4cat)[@peeters2022]
+
+::: columns
+::: {.column width="50%"}
+-   Tool zur Analyse und Verarbeitung von Daten aus sozialen Online-Plattformen
+
+-   Ziel ist es, die Erfassung und Analyse von Daten aus diesen Plattformen über eine Webschnittstelle zugänglich zu machen, ohne dass Programmier- oder Web-Scraping-Kenntnisse erforderlich sind.
+:::
+
+::: {.column width="50%"}
+![](images/screenshot1.png){fig-align="center"}
+:::
+:::
+
+## Reddit als Nachrichtenquelle
+
+#### And now ... you! 
+
+## And now ... you!
+
+#### Beispielhafte Nutzung
+
+1.  **Suchen** Sie sich einen **YouTube-Kanal** aus, auf dem die folgenden Analysen basieren sollen
+2.  **Nutzen** Sie die [`Channel Search`](https://tools.digitalmethods.net/netvizz/youtube/mod_channels_search.php) des [YTDT](https://tools.digitalmethods.net/netvizz/youtube/index.php) um die "korrekte" `chanel ID` zu **identifizieren**.
+3.  **Laden** Sie mit Hilfe der [`Video List`](https://tools.digitalmethods.net/netvizz/youtube/mod_videos_list.php) Seite/Funktion des [YTDT](https://tools.digitalmethods.net/netvizz/youtube/index.php) eine Liste **aller veröffentlichten Videos** Ihres ausgewählten YouTube-Kanals herunter.
+
+*Optional:*
+
+4.  *Suchen Sie mit Hilfe der heruntergeladenen Liste der veröffentlichten Videos das Video mit den meisten Likes/Comments.*
+
+5.  *Downloaden Sie die Kommentare des Videos mit Hilfe der [`Video Info`](https://tools.digitalmethods.net/netvizz/youtube/mod_video_info.php) des [YTDT](https://tools.digitalmethods.net/netvizz/youtube/index.php).*
+
+# Beispielhafte Auswertungen {background-color="#E6002E"}
+
+Im Fokus: [{{< fa brands youtube >}} maiLab](https://www.youtube.com/c/maiLab)
+
+```{r}
+#| echo: false
+
+# Load packages
+library(knitr)
+library(kableExtra)
+library(tidyverse) # Preparation of the data
+library(quanteda) # Text mining
+library(quanteda.textstats) # Text statistics
+library(quanteda.textplots) # Visualisation of text data
+library(here)
+library(sjmisc)
+library(sjPlot)
+library(lubridate)
+library(ggthemes)
+library(ggpubr)
+```
+
+## Wissenschaftsjournalismus auf YouTube
+
+HIntergrund zu [{{< fa brands youtube >}} maiLab](https://www.youtube.com/c/maiLab)
+
+::: columns
+::: {.column width="50%"}
+-   seit 2016 bestehende YouTube-Kanal (früher *schönschlau*) von **Mai Thi Nguyen-Kim**
+-   ist Teil des **funk**-Netzwerks
+-   behandelt diverse Themen aus den Bereichen Natur- und Gesellschaftswissenschaften
+:::
+
+::: {.column width="50%"}
+![](images/mailab.png){fig-align="center"}
+:::
+:::
+
+## Zusammenspiel von YTDT & R
+
+#### [{{< fa brands youtube >}} maiLab](https://www.youtube.com/c/maiLab) im Fokus: Datenimport mit R (1)
+
+```{r}
+# Load packages
+library(readr)
+library(tidyverse)
+
+# Import data
+channel_list <- read_csv(
+  "https://raw.githubusercontent.com/chrdrn/dbd_binder/main/data/05-youtube/channelsearch_channels50_2022_11_17-09_54_22.csv")
+
+# Preview data 
+channel_list %>% glimpse()
+```
+
+## Mit [Channel ID]{.smallcaps} zur [Video List]{.smallcaps}
+
+#### [{{< fa brands youtube >}} maiLab](https://www.youtube.com/c/maiLab) im Fokus: Datenimport mit R (2)
+
+```{r}
+# Import data: video list
+video_list <- read_csv(
+  "https://raw.githubusercontent.com/chrdrn/dbd_binder/main/data/05-youtube/videolist_channel186_2022_11_17-10_20_11.csv"
+)
+
+# Preview data 
+video_list %>% glimpse()
+```
+
+## Explorative Analyse der [Video List]{.smallcaps}
+
+#### [{{< fa brands youtube >}} maiLab](https://www.youtube.com/c/maiLab) im Fokus: Datenauswertung mit R (1)
+
+```{r}
+# Load additional packages
+library(sjmisc) 
+
+# Get distribution parameters for selected variables
+video_list %>% 
+  select(durationSec, viewCount, likeCount, favoriteCount, commentCount) %>% 
+  descr() %>%
+  select(!c(var, type)) 
+```
+
+## Videoveröffentlichungen im Zeitverlauf
+
+#### [{{< fa brands youtube >}} maiLab](https://www.youtube.com/c/maiLab) im Fokus: Datenauswertung mit R (2)
+
+```{r}
+# Load additional packages
+library(sjPlot) 
+
+# Create plot
+video_list %>% 
+  mutate(year  = as.factor(year(publishedAt))) %>% 
+  plot_frq(
+    year,
+    title = "Video uploads on `maiLab` by year")
+```
+
+## Top 5 Videos mit den *meisten Aufrufen*
+
+#### [{{< fa brands youtube >}} maiLab](https://www.youtube.com/c/maiLab) im Fokus: Datenauswertung mit R (3)
+
+```{r}
+video_list %>% 
+  arrange(-viewCount) %>% 
+  select(videoTitle, publishedAt, viewCount, likeCount, commentCount) %>% 
+  head()
+```
+
+## Top 5 Videos mit den *meisten Kommentaren*
+
+#### [{{< fa brands youtube >}} maiLab](https://www.youtube.com/c/maiLab) im Fokus: Datenauswertung mit R (4)
+
+```{r}
+video_list %>% 
+  arrange(-commentCount) %>% 
+  select(videoTitle, publishedAt, viewCount, likeCount, commentCount) %>% 
+  head()
+```
+
+## Interactive and executable environments
+
+#### Quarto, Binder & Google Colab
+
+Verschiedene Möglichkeiten, um den Code bzw. das heutige Beispiel ("live") zu reproduzieren:
+
+1.  [Quarto-Dokument](https://chrdrn.github.io/digital-behavioral-data/content/05-api_access-youtube/05-exercise.html) auf [Kurs-Homepage](https://chrdrn.github.io/digital-behavioral-data/)
+
+2.  [[Binder]{.smallcaps}](https://mybinder.org/): Repositories mit Jupyter-Notebooks in ausführbaren Umgebungen öffnen und bearbeiten\
+    [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/chrdrn/dbd_binder/HEAD)
+
+3.  [[Google Colab]{.smallcaps}](https://colab.research.google.com/): gehosteter Jupyter-Notebook-Dienst, der keine EInrichtung erfordertund gleichzeitig kostenlosen Zugang zu Rechenressourcen einschließlich GPUs bietet\
+    [![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chrdrn/dbd_binder/blob/main/session_05-showcase_youtube.ipyn)
+
+# **Verständnis- und Diskussionsfragen** {background-color="#E6002E" background-image="../../00-images/background_participation.svg"}
+
+Ihre Fragen aus MS Teams
+
+## Vielen Dank für Ihre Fragen! {.scrollable .smaller}
+
+::: {.fragment .semi-fade-out fragment-index="1"}
+> Ist es denkbar, dass YouTube eines Tages von anderen sozialen Plattformen wie Instagram oder Spotify überholt wird, an Bekanntheit verliert oder sogar ganz von der Bildfläche verschwindet?
+:::
+
+::: {.fragment .fade-in-then-semi-out fragment-index="1"}
+> Youtube-Influencer verdienen etwa das Doppelte mit Werbeanzeigen auf YouTube, als wenn sie Werbeanzeigen auf Facebook oder Instagram schalten würden (2016). Kann das im Jahr 2022 immer noch bestätigt werden? Sind Werbeanzeigen auf YouTube erfolgreicher und haben eine weitere Reichweite im Vergleich mit Instagram?
+:::
+
+::: {.fragment .fade-in-then-semi-out fragment-index="2"}
+> Es wird das Tool **Webometric** erwähnt, ein automatisiertes Instrument für die Sammlung von Social Media Daten über die API der Plattform YouTube. Wie sieht Webometric genau aus und wie werden die Daten über dieses Tool extrahiert?
+:::
+
+::: {.fragment .fade-in-then-semi-out fragment-index="3"}
+> Es wird oft darüber geredet, dass das „Recommendation System" fehlerhaft sei und bestimmte Videos trotz mangelnde Performance trotzdem empfohlen werden oder in den Trends landen (z.B Amerikanische Late Night Shows). Wie kann in der Forschung verhindert werden, dass Resultate entstehen die nicht den tatsächlichen Verhaltensdaten der Konsumenten entstehen.
+:::
+
+## Let's discuss
+
+::: {.fragment .semi-fade-out fragment-index="1"}
+> Sophie Bishop meint es wäre interessant die Forschung zum Algorithmus von YouTube dahingehend zu erweitern, dass man untersucht was Nutzer denken, wie der Algorithmus funktioniert. Wie würde man bei dieser Fragestellung vorgehen bzw. wie könnte man das untersuchen?
+:::
+
+::: {.fragment .fade-in-then-semi-out fragment-index="1"}
+> Inwiefern kann YouTube als Soziales Netzwerk verstanden werden, wenn nur ein kleiner Bruchteil seiner User sich durch Upload von Content am Informationsaustausch beteiligt und der Großteil "nur" konsumiert?
+:::
+
+::: {.fragment .fade-in-then-semi-out fragment-index="3"}
+> YouTube besteht als Social Media Platform länger als die meisten anderen Plattformen (Twitter, Instagram, TikTok, etc.) und besitzt so gut wie weltweite Bekanntheit. Warum ist die Forschung in Richtung YouTube trotzdem so gering?
+:::
+
+# Time for questions {background-color="#E6002E" background-image="../../00-images/background_questions.svg"}
+
+# Bis zur nächsten Sitzung! {background-color="#E6002E" background-image="../../00-images/background_end_of_session.svg"}
+
+## Literatur
+
+::: {#refs}
+:::

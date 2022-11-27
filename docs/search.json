@@ -1300,5 +1300,131 @@
     "title": "API-Access – YouTube",
     "section": "Interactive and executable environments",
     "text": "Interactive and executable environments\nQuarto, Binder & Google Colab\nVerschiedene Möglichkeiten, um den Code bzw. das heutige Beispiel (“live”) zu reproduzieren:\n\nQuarto-Dokument auf Kurs-Homepage\nBinder: Repositories mit Jupyter-Notebooks in ausführbaren Umgebungen öffnen und bearbeiten\n\nGoogle Colab: gehosteter Jupyter-Notebook-Dienst, der keine EInrichtung erfordertund gleichzeitig kostenlosen Zugang zu Rechenressourcen einschließlich GPUs bietet"
+  },
+  {
+    "objectID": "content/00-docs/dbd-4cat_information.html",
+    "href": "content/00-docs/dbd-4cat_information.html",
+    "title": "4CAT - Information & Logins",
+    "section": "",
+    "text": "For the upcoming sessions, we are going to use the 4CAT Tool (Peeters and Hagen 2022).\n“4CAT is a tool that can be used to analyse and process data from online social platforms. Its goal is to make the capture and analysis of data from these platforms accessible to people through a web interface, without requiring any programming or web scraping skills.” (Peeters, Hagen, and Wahl 2022)"
+  },
+  {
+    "objectID": "content/00-docs/dbd-4cat_information.html#instructions",
+    "href": "content/00-docs/dbd-4cat_information.html#instructions",
+    "title": "4CAT - Information & Logins",
+    "section": "Instructions",
+    "text": "Instructions\n\n\n\n\n\n\nAccess via VPN\n\n\n\nTo access the 4CAT server, you need to login via VPN (using the W-LAN of the university is unfortunately not enough).\nVisit this website of the RRZE you will find all the necessary information for logging in with VPN.\n\n\n\nAfter you have successfully logged into the VPN netwrok, you should be able to access the server via the following URL: http://131.188.248.179:8787/\nUse the information (login details) provided below to log in."
+  },
+  {
+    "objectID": "content/00-docs/dbd-4cat_information.html#login-details",
+    "href": "content/00-docs/dbd-4cat_information.html#login-details",
+    "title": "4CAT - Information & Logins",
+    "section": "Login details",
+    "text": "Login details\n\n\n\nSurname\nName\nUsername\nPassword\n\n\n\n\nBrand\nCatharina\nuser01\n7qg5bWZ5\n\n\nDenisov\nKristina\nuser02\nm1Syk8Sw\n\n\nDörr\nMarvin\nuser03\nV0DJE7TD\n\n\nFalk\nMichel\nuser04\nvsJCxRUZ\n\n\nHofmann\nMarcia-Sue\nuser05\nLJbpU19M\n\n\nKocher\nElena\nuser06\n39RoIsBK\n\n\nLandauer\nVictoria\nuser07\nxhSxR3Ib\n\n\nWierzbicki\nJohanna\nuser08\nIMYcLDwV"
+  },
+  {
+    "objectID": "content/06-api_access-reddit/slides/index.html#seminarplan",
+    "href": "content/06-api_access-reddit/slides/index.html#seminarplan",
+    "title": "API-Access – Reddit",
+    "section": "Seminarplan",
+    "text": "Seminarplan\n\n\n\nSitzung\nDatum\nThema\nReferent*Innen\n\n\n\n\n1\n26.10.2022\nKick-Off Session\nChristoph Adrian\n\n\n2\n02.11.2022\nDBD: Einführung und Überblick\nChristoph Adrian\n\n\n3\n09.11.2022\nDBD: Datenerhebung\nChristoph Adrian\n\n\n4\n16.11.2022\nAPI-Access (I): Twitter\nFalk\n\n\n5\n23.11.2022\nAPI-Access (II): YouTube\nDenisov\n\n\n6\n30.11.2022\nAPI-Access (II): Reddit\nLandauer\n\n\n7\n07.12.2022\nWebscraping: TikTok\nBrand & Kocher\n\n\n8\n14.12.2022\nExkurs: DBD Analyse mit R\nChristoph Adrian\n\n\n\n\nWEIHNACHTSPAUSE\n\n\n\n9\n12.01.2023\nESM: m-path\nDörr\n\n\n10\n19.01.2023\nData Donations\nHofmann & Wierzbicki\n\n\n11\n26.01.2023\nPUFFER\n\n\n\n12\n02.02.2023\nGuest Lecture: Linking DBD & Survey data\nJohannes Breuer\n\n\n13\n09.02.2023\nSemesterabschluss & Evaluation\nChristoph Adrian\n\n\n\n\n▶️"
+  },
+  {
+    "objectID": "content/06-api_access-reddit/slides/index.html#what-is-it-an-who-made-it",
+    "href": "content/06-api_access-reddit/slides/index.html#what-is-it-an-who-made-it",
+    "title": "API-Access – Reddit",
+    "section": "What is it an who made it",
+    "text": "What is it an who made it\nHintergrundinformationen 4CAT(Peeters & Hagen, 2022)\n\n\n\nTool zur Analyse und Verarbeitung von Daten aus sozialen Online-Plattformen\nZiel ist es, die Erfassung und Analyse von Daten aus diesen Plattformen über eine Webschnittstelle zugänglich zu machen, ohne dass Programmier- oder Web-Scraping-Kenntnisse erforderlich sind."
+  },
+  {
+    "objectID": "content/06-api_access-reddit/slides/index.html#and-now-you",
+    "href": "content/06-api_access-reddit/slides/index.html#and-now-you",
+    "title": "API-Access – Reddit",
+    "section": "And now … you!",
+    "text": "And now … you!\nBeispielhafte Nutzung\n\nSuchen Sie sich einen YouTube-Kanal aus, auf dem die folgenden Analysen basieren sollen\nNutzen Sie die Channel Search des YTDT um die “korrekte” chanel ID zu identifizieren.\nLaden Sie mit Hilfe der Video List Seite/Funktion des YTDT eine Liste aller veröffentlichten Videos Ihres ausgewählten YouTube-Kanals herunter.\n\nOptional:\n\nSuchen Sie mit Hilfe der heruntergeladenen Liste der veröffentlichten Videos das Video mit den meisten Likes/Comments.\nDownloaden Sie die Kommentare des Videos mit Hilfe der Video Info des YTDT."
+  },
+  {
+    "objectID": "content/06-api_access-reddit/slides/index.html#wissenschaftsjournalismus-auf-youtube",
+    "href": "content/06-api_access-reddit/slides/index.html#wissenschaftsjournalismus-auf-youtube",
+    "title": "API-Access – Reddit",
+    "section": "Wissenschaftsjournalismus auf YouTube",
+    "text": "Wissenschaftsjournalismus auf YouTube\nHIntergrund zu  maiLab\n\n\n\nseit 2016 bestehende YouTube-Kanal (früher schönschlau) von Mai Thi Nguyen-Kim\nist Teil des funk-Netzwerks\nbehandelt diverse Themen aus den Bereichen Natur- und Gesellschaftswissenschaften"
+  },
+  {
+    "objectID": "content/06-api_access-reddit/slides/index.html#zusammenspiel-von-ytdt-r",
+    "href": "content/06-api_access-reddit/slides/index.html#zusammenspiel-von-ytdt-r",
+    "title": "API-Access – Reddit",
+    "section": "Zusammenspiel von YTDT & R",
+    "text": "Zusammenspiel von YTDT & R\n maiLab im Fokus: Datenimport mit R (1)\n\n# Load packages\nlibrary(readr)\nlibrary(tidyverse)\n\n# Import data\nchannel_list <- read_csv(\n  \"https://raw.githubusercontent.com/chrdrn/dbd_binder/main/data/05-youtube/channelsearch_channels50_2022_11_17-09_54_22.csv\")\n\n# Preview data \nchannel_list %>% glimpse()\n\nRows: 50\nColumns: 10\n$ position        <dbl> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,…\n$ id              <chr> \"UCyHDQ5C6z1NDmJ4g6SerW8g\", \"UC146qqkUMTrn4nfSSOTNwiA\"…\n$ title           <chr> \"maiLab\", \"musstewissen Chemie\", \"mailab\", \"MAILab_메…\n$ description     <chr> \"Holt euch einen Tee, Freunde der Sonne, macht es euch…\n$ publishedAt     <dttm> 2016-09-08 14:13:08, 2016-09-23 09:24:14, 2020-03-19 …\n$ defaultLanguage <chr> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA…\n$ country         <chr> \"DE\", \"DE\", \"DE\", \"KR\", NA, NA, NA, NA, NA, \"DE\", NA, …\n$ viewCount       <dbl> 127882489, 18039348, 21013, 5101, 11, 2, 2, 5004, 230,…\n$ subscriberCount <dbl> 1480000, 190000, 146, 26, 0, 1, 1, 9, 9, 66300, 0, 2, …\n$ videoCount      <dbl> 186, 45, 9, 104, 3, 1, 1, 24, 12, 51, 1, 6, 31, 1, 2, …"
+  },
+  {
+    "objectID": "content/06-api_access-reddit/slides/index.html#mit-channel-id-zur-video-list",
+    "href": "content/06-api_access-reddit/slides/index.html#mit-channel-id-zur-video-list",
+    "title": "API-Access – Reddit",
+    "section": "Mit Channel ID zur Video List",
+    "text": "Mit Channel ID zur Video List\n maiLab im Fokus: Datenimport mit R (2)\n\n# Import data: video list\nvideo_list <- read_csv(\n  \"https://raw.githubusercontent.com/chrdrn/dbd_binder/main/data/05-youtube/videolist_channel186_2022_11_17-10_20_11.csv\"\n)\n\n# Preview data \nvideo_list %>% glimpse()\n\nRows: 186\nColumns: 23\n$ position           <dbl> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, …\n$ channelId          <chr> \"UCyHDQ5C6z1NDmJ4g6SerW8g\", \"UCyHDQ5C6z1NDmJ4g6SerW…\n$ channelTitle       <chr> \"maiLab\", \"maiLab\", \"maiLab\", \"maiLab\", \"maiLab\", \"…\n$ videoId            <chr> \"IK5BZdnqMDU\", \"Mt50U4_ueR0\", \"-NMs56pQ9EE\", \"-9OvN…\n$ publishedAt        <dttm> 2022-09-18 16:00:18, 2022-06-09 04:30:04, 2022-05-…\n$ publishedAtSQL     <dttm> 2022-09-18 16:00:18, 2022-06-09 04:30:04, 2022-05-…\n$ videoTitle         <chr> \"Das Ende der Homöopathie | MAITHINK X\", \"Affenpock…\n$ videoDescription   <chr> \"Der vielleicht größte Abwasserskandal aller Zeiten…\n$ tags               <chr> \"Mai Thi Nguyen-Kim,Mai Thi,mai,nguyen,mailab,lab,m…\n$ videoCategoryId    <dbl> 28, 28, 28, 28, 22, 28, 22, 22, 22, 27, 22, 22, 28,…\n$ videoCategoryLabel <chr> \"Science & Technology\", \"Science & Technology\", \"Sc…\n$ duration           <chr> \"PT31M57S\", \"PT13M39S\", \"PT15M21S\", \"PT12M6S\", \"PT1…\n$ durationSec        <dbl> 1917, 819, 921, 726, 832, 1664, 306, 1065, 1325, 12…\n$ dimension          <dbl> 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, …\n$ definition         <chr> \"hd\", \"hd\", \"hd\", \"hd\", \"hd\", \"hd\", \"hd\", \"hd\", \"hd…\n$ caption            <lgl> FALSE, TRUE, TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, T…\n$ thumbnail_maxres   <chr> \"https://i.ytimg.com/vi/IK5BZdnqMDU/maxresdefault.j…\n$ licensedContent    <dbl> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, …\n$ viewCount          <dbl> 1729562, 993841, 929302, 2125579, 3021542, 895038, …\n$ likeCount          <dbl> 83334, 56794, 64304, 123191, 236388, 77980, 73251, …\n$ dislikeCount       <lgl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…\n$ favoriteCount      <dbl> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ commentCount       <dbl> 18716, 9141, 8204, 38823, 111200, 7905, 3831, 5723,…"
+  },
+  {
+    "objectID": "content/06-api_access-reddit/slides/index.html#explorative-analyse-der-video-list",
+    "href": "content/06-api_access-reddit/slides/index.html#explorative-analyse-der-video-list",
+    "title": "API-Access – Reddit",
+    "section": "Explorative Analyse der Video List",
+    "text": "Explorative Analyse der Video List\n maiLab im Fokus: Datenauswertung mit R (1)\n\n# Load additional packages\nlibrary(sjmisc) \n\n# Get distribution parameters for selected variables\nvideo_list %>% \n  select(durationSec, viewCount, likeCount, favoriteCount, commentCount) %>% \n  descr() %>%\n  select(!c(var, type)) \n\n\n## Basic descriptive statistics\n\n         label   n NA.prc      mean        sd       se       md   trimmed\n   durationSec 186      0    612.92    402.74    29.53    530.5    579.42\n     viewCount 186      0 687563.73 763588.15 55989.00 467371.5 562670.19\n     likeCount 186      0  31172.50  36815.40  2699.44  20970.5  24734.81\n favoriteCount 186      0      0.00      0.00     0.00      0.0      0.00\n  commentCount 186      0   5598.28  11238.77   824.07   2068.0   3106.24\n                   range       iqr skew\n          1825 (92-1917)    633.25 0.64\n 6671382 (21298-6692680) 782761.75 3.36\n    267376 (1063-268439)  37023.75 3.10\n                 0 (0-0)      0.00  NaN\n      111166 (34-111200)   5718.00 5.54"
+  },
+  {
+    "objectID": "content/06-api_access-reddit/slides/index.html#videoveröffentlichungen-im-zeitverlauf",
+    "href": "content/06-api_access-reddit/slides/index.html#videoveröffentlichungen-im-zeitverlauf",
+    "title": "API-Access – Reddit",
+    "section": "Videoveröffentlichungen im Zeitverlauf",
+    "text": "Videoveröffentlichungen im Zeitverlauf\n maiLab im Fokus: Datenauswertung mit R (2)\n\n# Load additional packages\nlibrary(sjPlot) \n\n# Create plot\nvideo_list %>% \n  mutate(year  = as.factor(year(publishedAt))) %>% \n  plot_frq(\n    year,\n    title = \"Video uploads on `maiLab` by year\")"
+  },
+  {
+    "objectID": "content/06-api_access-reddit/slides/index.html#top-5-videos-mit-den-meisten-aufrufen",
+    "href": "content/06-api_access-reddit/slides/index.html#top-5-videos-mit-den-meisten-aufrufen",
+    "title": "API-Access – Reddit",
+    "section": "Top 5 Videos mit den meisten Aufrufen",
+    "text": "Top 5 Videos mit den meisten Aufrufen\n maiLab im Fokus: Datenauswertung mit R (3)\n\nvideo_list %>% \n  arrange(-viewCount) %>% \n  select(videoTitle, publishedAt, viewCount, likeCount, commentCount) %>% \n  head()\n\n# A tibble: 6 × 5\n  videoTitle                     publishedAt         viewCount likeCount comme…¹\n  <chr>                          <dttm>                  <dbl>     <dbl>   <dbl>\n1 Corona geht gerade erst los    2020-04-02 07:00:00   6692680    268439   48174\n2 Impfpflicht ist OK             2021-11-14 07:00:11   3021542    236388  111200\n3 So endet Corona                2021-01-28 06:15:04   3020999    170219   28363\n4 Virologen-Vergleich            2020-04-19 07:00:22   2654200     92957   33773\n5 Rezo wissenschaftlich geprüft  2019-05-24 04:30:25   2605822    142990   16995\n6 Was ist jetzt mit dem Kokosöl? 2018-08-30 04:30:01   2362469     63198    6833\n# … with abbreviated variable name ¹​commentCount"
+  },
+  {
+    "objectID": "content/06-api_access-reddit/slides/index.html#top-5-videos-mit-den-meisten-kommentaren",
+    "href": "content/06-api_access-reddit/slides/index.html#top-5-videos-mit-den-meisten-kommentaren",
+    "title": "API-Access – Reddit",
+    "section": "Top 5 Videos mit den meisten Kommentaren",
+    "text": "Top 5 Videos mit den meisten Kommentaren\n maiLab im Fokus: Datenauswertung mit R (4)\n\nvideo_list %>% \n  arrange(-commentCount) %>% \n  select(videoTitle, publishedAt, viewCount, likeCount, commentCount) %>% \n  head()\n\n# A tibble: 6 × 5\n  videoTitle                         publishedAt         viewC…¹ likeC…² comme…³\n  <chr>                              <dttm>                <dbl>   <dbl>   <dbl>\n1 Impfpflicht ist OK                 2021-11-14 07:00:11 3021542  236388  111200\n2 Corona geht gerade erst los        2020-04-02 07:00:00 6692680  268439   48174\n3 7 kritische Fragen zur Impfung     2021-02-11 06:15:02 2068956   80075   38982\n4 Corona-Endlosschleife | Kommen wi… 2021-11-25 07:48:24 2125579  123191   38823\n5 Corona hat meine Meinung geändert  2020-10-08 04:30:01 1602957   74811   36543\n6 Virologen-Vergleich                2020-04-19 07:00:22 2654200   92957   33773\n# … with abbreviated variable names ¹​viewCount, ²​likeCount, ³​commentCount"
+  },
+  {
+    "objectID": "content/06-api_access-reddit/slides/index.html#interactive-and-executable-environments",
+    "href": "content/06-api_access-reddit/slides/index.html#interactive-and-executable-environments",
+    "title": "API-Access – Reddit",
+    "section": "Interactive and executable environments",
+    "text": "Interactive and executable environments\nQuarto, Binder & Google Colab\nVerschiedene Möglichkeiten, um den Code bzw. das heutige Beispiel (“live”) zu reproduzieren:\n\nQuarto-Dokument auf Kurs-Homepage\nBinder: Repositories mit Jupyter-Notebooks in ausführbaren Umgebungen öffnen und bearbeiten\n\nGoogle Colab: gehosteter Jupyter-Notebook-Dienst, der keine EInrichtung erfordertund gleichzeitig kostenlosen Zugang zu Rechenressourcen einschließlich GPUs bietet"
+  },
+  {
+    "objectID": "content/06-api_access-reddit/slides/index.html#vielen-dank-für-ihre-fragen",
+    "href": "content/06-api_access-reddit/slides/index.html#vielen-dank-für-ihre-fragen",
+    "title": "API-Access – Reddit",
+    "section": "Vielen Dank für Ihre Fragen!",
+    "text": "Vielen Dank für Ihre Fragen!\n\n\nIst es denkbar, dass YouTube eines Tages von anderen sozialen Plattformen wie Instagram oder Spotify überholt wird, an Bekanntheit verliert oder sogar ganz von der Bildfläche verschwindet?\n\n\n\n\nYoutube-Influencer verdienen etwa das Doppelte mit Werbeanzeigen auf YouTube, als wenn sie Werbeanzeigen auf Facebook oder Instagram schalten würden (2016). Kann das im Jahr 2022 immer noch bestätigt werden? Sind Werbeanzeigen auf YouTube erfolgreicher und haben eine weitere Reichweite im Vergleich mit Instagram?\n\n\n\n\nEs wird das Tool Webometric erwähnt, ein automatisiertes Instrument für die Sammlung von Social Media Daten über die API der Plattform YouTube. Wie sieht Webometric genau aus und wie werden die Daten über dieses Tool extrahiert?\n\n\n\n\nEs wird oft darüber geredet, dass das „Recommendation System” fehlerhaft sei und bestimmte Videos trotz mangelnde Performance trotzdem empfohlen werden oder in den Trends landen (z.B Amerikanische Late Night Shows). Wie kann in der Forschung verhindert werden, dass Resultate entstehen die nicht den tatsächlichen Verhaltensdaten der Konsumenten entstehen."
+  },
+  {
+    "objectID": "content/06-api_access-reddit/slides/index.html#lets-discuss",
+    "href": "content/06-api_access-reddit/slides/index.html#lets-discuss",
+    "title": "API-Access – Reddit",
+    "section": "Let’s discuss",
+    "text": "Let’s discuss\n\n\nSophie Bishop meint es wäre interessant die Forschung zum Algorithmus von YouTube dahingehend zu erweitern, dass man untersucht was Nutzer denken, wie der Algorithmus funktioniert. Wie würde man bei dieser Fragestellung vorgehen bzw. wie könnte man das untersuchen?\n\n\n\n\nInwiefern kann YouTube als Soziales Netzwerk verstanden werden, wenn nur ein kleiner Bruchteil seiner User sich durch Upload von Content am Informationsaustausch beteiligt und der Großteil “nur” konsumiert?\n\n\n\n\nYouTube besteht als Social Media Platform länger als die meisten anderen Plattformen (Twitter, Instagram, TikTok, etc.) und besitzt so gut wie weltweite Bekanntheit. Warum ist die Forschung in Richtung YouTube trotzdem so gering?"
+  },
+  {
+    "objectID": "content/06-api_access-reddit/slides/index.html#literatur",
+    "href": "content/06-api_access-reddit/slides/index.html#literatur",
+    "title": "API-Access – Reddit",
+    "section": "Literatur",
+    "text": "Literatur\n\n\nPeeters, S., & Hagen, S. (2022). The 4CAT Capture and Analysis Toolkit: A Modular Tool for Transparent and Traceable Social Media Research. Computational Communication Research, 4(2), 571–589. https://doi.org/10.5117/ccr2022.2.007.hage\n\n\n\n\n\nDigital Behavioral Data"
+  },
+  {
+    "objectID": "content/06-api_access-reddit/slides/index.html#test",
+    "href": "content/06-api_access-reddit/slides/index.html#test",
+    "title": "API-Access – Reddit",
+    "section": "Test",
+    "text": "Test\nTest test"
   }
 ]

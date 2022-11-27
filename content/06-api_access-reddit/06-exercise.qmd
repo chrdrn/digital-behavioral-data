@@ -1,0 +1,148 @@
+---
+title: "Showcase"
+subtitle: "Focus on 4CAT"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+callout-appearance: simple
+execute: 
+  cache: true
+  eval: true
+  echo: true
+  message: false
+  warning: false
+highlight-style: atom-one
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+#| echo: false
+install.packages("RedditExtractoR")
+
+library(here)
+library(tidyverse)
+library(RedditExtractoR)
+library(easystats)
+library(sjmisc)
+```
+
+## Background
+
+Practical application of the 4CAT
+
+```{r}
+news <- find_subreddits("news")
+
+news %>% glimpse()
+
+news %>% 
+  arrange(-subscribers) %>% 
+  tibble() %>% head()
+```
+
+```{r}
+crypto_top_urls <- find_thread_urls(
+  subreddit="CryptoCurrency",
+  sort_by="top")
+
+crypto_top_urls %>% glimpse()
+crypto_top_urls %>% tibble()
+```
+
+## 
+
+YouTube Data Tool (YTDT) using the example of Mai Thi Nguyen-Kim ( [{{< fa brands twitter >}}](https://twitter.com/maithi_nk) \| [{{< fa brands instagram >}}](https://www.instagram.com/maithink/) ) and her [{{< fa brands youtube >}}](https://www.youtube.com/c/maiLab)-Channel [maiLab](https://www.youtube.com/c/maiLab).
+
+You can also open this showcase in other interactive and executable environments: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/chrdrn/dbd_binder/HEAD) [![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chrdrn/dbd_binder/blob/main/session_05-showcase_youtube.ipynb)
+
+## Exercise 1
+
+-   Use the [`Channel Search`](https://tools.digitalmethods.net/netvizz/youtube/mod_channels_search.php) site/function of the `YTDT` to find the (correct) `channel ID` for the <img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/brands/youtube.svg" width="15" height="15"/> Channel [maiLab](https://www.youtube.com/c/maiLab).
+-   Therefore, enter "*maiLab*" in the field `Search query` and download the results as `.csv`.
+-   Open the file and search extract the correct channel ID.\
+    *Hint:* If in doubt, use [`Channel Info`](https://tools.digitalmethods.net/netvizz/youtube/mod_channel_info.php) function to check if the selected ID matches the channel description.
+
+```{r}
+# Load packages
+library(readr)
+library(tidyverse)
+
+# Import data
+channel_list <- read_csv(
+  here("content/05-api_access-youtube/data/channelsearch_channels50_2022_11_17-09_54_22.csv"))
+
+# Preview data 
+channel_list %>% glimpse()
+```
+
+```{r}
+# Get channel description with R
+channel_list %>%
+  filter(title == "maiLab") %>%
+  select(id, title, description)
+```
+
+## Exercise 2
+
+-   With help of the [`Video List`](https://tools.digitalmethods.net/netvizz/youtube/mod_videos_list.php) site/function of the `YTDT`, get a list of all published videos of the channel `maiLab`.
+-   Therefore, use the extracted `channel id` and download the results as `.csv`.
+-   Import/preview the data.
+
+```{r}
+# Import data: video list
+video_list <- read_csv(
+  here("content/05-api_access-youtube/data/videolist_channel186_2022_11_17-10_20_11.csv"))
+
+# Preview data 
+video_list %>% glimpse()
+```
+
+# Exercise 3
+
+-   Perform different explorative data analysis
+
+## Different location parameters
+
+```{r}
+# Load additional packages
+library(sjmisc) 
+
+# Get distribution parameters for selected variables
+video_list %>% 
+  select(durationSec, viewCount, likeCount, favoriteCount, commentCount) %>% 
+  descr()
+
+```
+
+### More detailed distribution for each variable
+
+```{r}
+video_list %>% 
+  plot_frq(durationSec, viewCount, likeCount, commentCount, type = "density")
+```
+
+## In-depth analysis
+
+Based on the findings of the previous section, let us take a closer look. Interestingly, although most of the varialbes have a left-sloping distribution, there are isolated outliers on the "right" edge.
+
+Therefore, the next goal is to find out which video(s) they are.
+
+### Top 5 videos with the **highest view count**
+
+```{r}
+video_list %>% 
+  arrange(-viewCount) %>% 
+  select(videoTitle, publishedAt, viewCount, likeCount, commentCount) %>% 
+  head()
+```
+
+### Top 5 videos with the **highest comment count**
+
+```{r}
+video_list %>% 
+  arrange(-commentCount) %>% 
+  select(videoTitle, publishedAt, viewCount, likeCount, commentCount) %>% 
+  head()
+```
