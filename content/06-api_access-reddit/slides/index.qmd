@@ -130,7 +130,7 @@ Gruppenarbeit zu `4CAT: Capture and Analysis Toolkit`
 
 ## And now ... you: Reddit als Newsfeed
 
-#### Group activity: Scrape Reddit mit 4CAT 
+#### Group activity: Scrape Reddit mit 4CAT
 
 ::: {.callout-note appearance="minimal"}
 ## Ziel der Group Activity
@@ -138,12 +138,21 @@ Gruppenarbeit zu `4CAT: Capture and Analysis Toolkit`
 Durchsuchen Sie die Subreddits r/news und r/worldnews nach Posts zu einem bestimmten Thema/Begriff und analysieren Sie diese mit Hilfe von 4CAT
 :::
 
+::: {style="font-size: smaller"}
 1.  Überlegen Sie (in Gruppen), welches Thema Sie untersuchen wollen und mit welchen Begriffen Sie Beiträge zu diesem Thema identifizieren könnten.
+
 2.  Öffnen Sie 4CAT ➡️Create dataset ➡️ Data source: `Reddit`
+
 3.  Geben Sie `news, worldness` an beim Feld `Subreddit(s)`
+
 4.  Geben Sie Ihre(n) Suchbegriff(e) im Feld `Message search` ein.
+
 5.  Wählen Sie die letzten zwei Wochen als `Date range`
+
 6.  Benennen Sie ihrem Datensatz im Feld `Dataset name`
+
+7.  *Optional: Probieren Sie die verschiedenen Analysemöglichkeiten aus*
+:::
 
 # Beispielhafte Auswertungen {background-color="#E6002E"}
 
@@ -168,25 +177,83 @@ library(ggthemes)
 library(ggpubr)
 ```
 
-## First 4CAT, dann R
+## Same, same, but different
 
-#### Kurze Vorstellung der Basisfunktionen von 4CAT
-
-1.  Visualisierung der Anzahl der Beiträge im Zeitverlauf
-
-2.  Erstellen Sie eine Wortwolke mit den meistgenannten Namen
-
-## Darstellung im Zeitverlauf
-
-#### mit 4CAT
+#### Unterschiedliche praktische Beispiele
 
 ::: columns
 ::: {.column width="50%"}
+**Grundsätzlich zwei kleine Analysen:**
+
+1.  **Visualisierung** der Anzahl der Beiträge im **Zeitverlauf**
+
+2.  Erstellung einer **Wordcloud** mit den meistgenannten **Named Entities**
 :::
 
 ::: {.column width="50%"}
+*Aber*: Beispiele für
+
+-   🐈🐈[4CAT]{.smallcaps}🐈🐈
+
+-   {{< fa brands r-project >}} RStudio
 :::
 :::
+
+## Beiträge im Zeitverlauf
+
+#### Visualisierung mit 🐈🐈[4CAT]{.smallcaps}🐈🐈
+
+::: columns
+::: {.column width="50%"}
+::: r-stack
+![](images/analysis_01-01.png){fig-align="center"}
+
+![](images/analysis_01-02.png){.fragment fragment-index="1" fig-align="center"}
+
+![](images/analysis_01-03.png){.fragment fragment-index="2" fig-align="center"}
+
+![](images/analysis_01-04.png){.fragment fragment-index="3" fig-align="center"}
+
+![](images/analysis_01-05.png){.fragment fragment-index="4" fig-align="center"}
+:::
+:::
+
+::: {.column width="50%"}
+![](images/result_01.svg){fig-align="center"}
+:::
+:::
+
+## Beiträge im Zeitverlauf *nach Subreddit*
+
+#### Visualisierung mit 🐈🐈[4CAT]{.smallcaps}🐈🐈
+
+::: columns
+::: {.column width="50%"}
+Datenerhebung
+:::
+
+::: {.column width="50%"}
+Visualisierung
+:::
+:::
+
+## Wordcloud mit Named Entities
+
+#### Visualisierung mit 🐈🐈[4CAT]{.smallcaps}🐈🐈
+
+::: columns
+::: {.column width="50%"}
+Datenerhebung
+:::
+
+::: {.column width="50%"}
+Visualisierung
+:::
+:::
+
+## Back to {{< fa brands r-project >}}
+
+#### 
 
 ## Interactive and executable environments
 

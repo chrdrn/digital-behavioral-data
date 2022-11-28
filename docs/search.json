@@ -1453,7 +1453,7 @@
     "href": "content/06-api_access-reddit/slides/index.html#and-now-you-reddit-als-newsfeed",
     "title": "API-Access – Reddit",
     "section": "And now … you: Reddit als Newsfeed",
-    "text": "And now … you: Reddit als Newsfeed\nGroup activity: Scrape Reddit mit 4CAT\n\n\n\nZiel der Group Activity\n\n\nDurchsuchen Sie die Subreddits r/news und r/worldnews nach Posts zu einem bestimmten Thema/Begriff und analysieren Sie diese mit Hilfe von 4CAT\n\n\n\n\nÜberlegen Sie (in Gruppen), welches Thema Sie untersuchen wollen und mit welchen Begriffen Sie Beiträge zu diesem Thema identifizieren könnten.\nÖffnen Sie 4CAT ➡️Create dataset ➡️ Data source: Reddit\nGeben Sie news, worldness an beim Feld Subreddit(s)\nGeben Sie Ihre(n) Suchbegriff(e) im Feld Message search ein.\nWählen Sie die letzten zwei Wochen als Date range\nBenennen Sie ihrem Datensatz im Feld Dataset name"
+    "text": "And now … you: Reddit als Newsfeed\nGroup activity: Scrape Reddit mit 4CAT\n\n\n\nZiel der Group Activity\n\n\nDurchsuchen Sie die Subreddits r/news und r/worldnews nach Posts zu einem bestimmten Thema/Begriff und analysieren Sie diese mit Hilfe von 4CAT\n\n\n\n\n\nÜberlegen Sie (in Gruppen), welches Thema Sie untersuchen wollen und mit welchen Begriffen Sie Beiträge zu diesem Thema identifizieren könnten.\nÖffnen Sie 4CAT ➡️Create dataset ➡️ Data source: Reddit\nGeben Sie news, worldness an beim Feld Subreddit(s)\nGeben Sie Ihre(n) Suchbegriff(e) im Feld Message search ein.\nWählen Sie die letzten zwei Wochen als Date range\nBenennen Sie ihrem Datensatz im Feld Dataset name\nOptional: Probieren Sie die verschiedenen Analysemöglichkeiten aus"
   },
   {
     "objectID": "content/06-api_access-reddit/slides/index.html#first-4cat-dann-r",
@@ -1468,5 +1468,12 @@
     "title": "API-Access – Reddit",
     "section": "Darstellung im Zeitverlauf",
     "text": "Darstellung im Zeitverlauf\nmit 4CAT"
+  },
+  {
+    "objectID": "content/06-api_access-reddit/slides/index.html#same-same-but-different",
+    "href": "content/06-api_access-reddit/slides/index.html#same-same-but-different",
+    "title": "API-Access – Reddit",
+    "section": "Same, same, but different",
+    "text": "Same, same, but different\nUnterschiedliche praktische Beispiele\n\n\nGrundsätzlich zwei kleine Analysen:\n\nVisualisierung der Anzahl der Beiträge im Zeitverlauf\nErstellung einer Wortwolke mit den meistgenannten Named Entities\n\n\nAber: Beispiele für\n\n🐈🐈4CAT🐈🐈\n RStudio"
   }
 ]
