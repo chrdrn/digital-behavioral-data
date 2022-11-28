@@ -1426,5 +1426,47 @@
     "title": "API-Access – Reddit",
     "section": "Test",
     "text": "Test\nTest test"
+  },
+  {
+    "objectID": "content/06-api_access-reddit/slides/index.html#reddit-als-nachrichtenquelle",
+    "href": "content/06-api_access-reddit/slides/index.html#reddit-als-nachrichtenquelle",
+    "title": "API-Access – Reddit",
+    "section": "Reddit als Nachrichtenquelle … ?",
+    "text": "Reddit als Nachrichtenquelle … ?\nHintergrund: Soziale Medien als Nachrichtenquelle\n\n\n\n\n\n\n Aber: Wie prominent ist  Reddit\n\nin Deutschland?\nbei Ihnen?"
+  },
+  {
+    "objectID": "content/06-api_access-reddit/slides/index.html#noch-nicht-in-deutschland",
+    "href": "content/06-api_access-reddit/slides/index.html#noch-nicht-in-deutschland",
+    "title": "API-Access – Reddit",
+    "section": "… (noch) Nicht in Deutschland!",
+    "text": "… (noch) Nicht in Deutschland!\nSoziale Medien als Nachrichten in DE/USA"
+  },
+  {
+    "objectID": "content/06-api_access-reddit/slides/index.html#fa-brands-reddit-alien-reddit-als-nachrichtenquelle",
+    "href": "content/06-api_access-reddit/slides/index.html#fa-brands-reddit-alien-reddit-als-nachrichtenquelle",
+    "title": "API-Access – Reddit",
+    "section": " Reddit als Nachrichtenquelle … ?",
+    "text": "Reddit als Nachrichtenquelle … ?\nHintergrund: Soziale Medien als Nachrichtenquelle\n\n\n\n\nAber: Wie prominent ist Reddit (als Nachrichtenquelle) bei Ihnen/in DE?\n\n:::"
+  },
+  {
+    "objectID": "content/06-api_access-reddit/slides/index.html#and-now-you-reddit-als-newsfeed",
+    "href": "content/06-api_access-reddit/slides/index.html#and-now-you-reddit-als-newsfeed",
+    "title": "API-Access – Reddit",
+    "section": "And now … you: Reddit als Newsfeed",
+    "text": "And now … you: Reddit als Newsfeed\nGroup activity: Scrape Reddit mit 4CAT\n\n\n\nZiel der Group Activity\n\n\nDurchsuchen Sie die Subreddits r/news und r/worldnews nach Posts zu einem bestimmten Thema/Begriff und analysieren Sie diese mit Hilfe von 4CAT\n\n\n\n\nÜberlegen Sie (in Gruppen), welches Thema Sie untersuchen wollen und mit welchen Begriffen Sie Beiträge zu diesem Thema identifizieren könnten.\nÖffnen Sie 4CAT ➡️Create dataset ➡️ Data source: Reddit\nGeben Sie news, worldness an beim Feld Subreddit(s)\nGeben Sie Ihre(n) Suchbegriff(e) im Feld Message search ein.\nWählen Sie die letzten zwei Wochen als Date range\nBenennen Sie ihrem Datensatz im Feld Dataset name"
+  },
+  {
+    "objectID": "content/06-api_access-reddit/slides/index.html#first-4cat-dann-r",
+    "href": "content/06-api_access-reddit/slides/index.html#first-4cat-dann-r",
+    "title": "API-Access – Reddit",
+    "section": "First 4CAT, dann R",
+    "text": "First 4CAT, dann R\nKurze Vorstellung der Basisfunktionen von 4CAT\n\nVisualisierung der Anzahl der Beiträge im Zeitverlauf\nErstellen Sie eine Wortwolke mit den meistgenannten Namen"
+  },
+  {
+    "objectID": "content/06-api_access-reddit/slides/index.html#darstellung-im-zeitverlauf",
+    "href": "content/06-api_access-reddit/slides/index.html#darstellung-im-zeitverlauf",
+    "title": "API-Access – Reddit",
+    "section": "Darstellung im Zeitverlauf",
+    "text": "Darstellung im Zeitverlauf\nmit 4CAT"
   }
 ]

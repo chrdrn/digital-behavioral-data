@@ -85,27 +85,69 @@ Gruppenarbeit zu `4CAT: Capture and Analysis Toolkit`
 :::
 :::
 
-## Reddit als Nachrichtenquelle
+## {{< fa brands reddit-alien >}} Reddit als Nachrichtenquelle ... ?
 
-#### And now ... you! 
+#### Hintergrund: Soziale Medien als Nachrichtenquelle
 
-## And now ... you!
+<iframe title="Proportion that used each source of news in the last week" aria-label="Interactive line chart" id="datawrapper-chart-GrRao" src="https://datawrapper.dwcdn.net/GrRao/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="550">
 
-#### Beispielhafte Nutzung
+</iframe>
 
-1.  **Suchen** Sie sich einen **YouTube-Kanal** aus, auf dem die folgenden Analysen basieren sollen
-2.  **Nutzen** Sie die [`Channel Search`](https://tools.digitalmethods.net/netvizz/youtube/mod_channels_search.php) des [YTDT](https://tools.digitalmethods.net/netvizz/youtube/index.php) um die "korrekte" `chanel ID` zu **identifizieren**.
-3.  **Laden** Sie mit Hilfe der [`Video List`](https://tools.digitalmethods.net/netvizz/youtube/mod_videos_list.php) Seite/Funktion des [YTDT](https://tools.digitalmethods.net/netvizz/youtube/index.php) eine Liste **aller veröffentlichten Videos** Ihres ausgewählten YouTube-Kanals herunter.
+```{=html}
+<script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();</script>
+```
+::: notes
+*Aber:* Wie prominent ist Reddit (als Nachrichtenquelle) bei Ihnen/in DE?
+:::
 
-*Optional:*
+:::
 
-4.  *Suchen Sie mit Hilfe der heruntergeladenen Liste der veröffentlichten Videos das Video mit den meisten Likes/Comments.*
+## ... (noch) Nicht in Deutschland!
 
-5.  *Downloaden Sie die Kommentare des Videos mit Hilfe der [`Video Info`](https://tools.digitalmethods.net/netvizz/youtube/mod_video_info.php) des [YTDT](https://tools.digitalmethods.net/netvizz/youtube/index.php).*
+#### Soziale Medien als Nachrichten in DE/USA
+
+::: columns
+::: {.column width="50%"}
+<iframe title="Top social media and messaging" aria-label="Table" id="datawrapper-chart-Klv3N" src="https://datawrapper.dwcdn.net/Klv3N/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="340">
+
+</iframe>
+
+```{=html}
+<script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();</script>
+```
+:::
+
+::: {.column width="50%"}
+<iframe title="Top social media and messaging" aria-label="Table" id="datawrapper-chart-4zGW9" src="https://datawrapper.dwcdn.net/4zGW9/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="340">
+
+</iframe>
+
+```{=html}
+<script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();</script>
+```
+:::
+:::
+
+## And now ... you: Reddit als Newsfeed
+
+#### Group activity: Scrape Reddit mit 4CAT 
+
+::: {.callout-note appearance="minimal"}
+## Ziel der Group Activity
+
+Durchsuchen Sie die Subreddits r/news und r/worldnews nach Posts zu einem bestimmten Thema/Begriff und analysieren Sie diese mit Hilfe von 4CAT
+:::
+
+1.  Überlegen Sie (in Gruppen), welches Thema Sie untersuchen wollen und mit welchen Begriffen Sie Beiträge zu diesem Thema identifizieren könnten.
+2.  Öffnen Sie 4CAT ➡️Create dataset ➡️ Data source: `Reddit`
+3.  Geben Sie `news, worldness` an beim Feld `Subreddit(s)`
+4.  Geben Sie Ihre(n) Suchbegriff(e) im Feld `Message search` ein.
+5.  Wählen Sie die letzten zwei Wochen als `Date range`
+6.  Benennen Sie ihrem Datensatz im Feld `Dataset name`
 
 # Beispielhafte Auswertungen {background-color="#E6002E"}
 
-Im Fokus: [{{< fa brands youtube >}} maiLab](https://www.youtube.com/c/maiLab)
+Im Fokus: News über 🤡Elon Musk
 
 ```{r}
 #| echo: false
@@ -119,111 +161,32 @@ library(quanteda.textstats) # Text statistics
 library(quanteda.textplots) # Visualisation of text data
 library(here)
 library(sjmisc)
+library(parameters)
 library(sjPlot)
 library(lubridate)
 library(ggthemes)
 library(ggpubr)
 ```
 
-## Wissenschaftsjournalismus auf YouTube
+## First 4CAT, dann R
 
-HIntergrund zu [{{< fa brands youtube >}} maiLab](https://www.youtube.com/c/maiLab)
+#### Kurze Vorstellung der Basisfunktionen von 4CAT
+
+1.  Visualisierung der Anzahl der Beiträge im Zeitverlauf
+
+2.  Erstellen Sie eine Wortwolke mit den meistgenannten Namen
+
+## Darstellung im Zeitverlauf
+
+#### mit 4CAT
 
 ::: columns
 ::: {.column width="50%"}
--   seit 2016 bestehende YouTube-Kanal (früher *schönschlau*) von **Mai Thi Nguyen-Kim**
--   ist Teil des **funk**-Netzwerks
--   behandelt diverse Themen aus den Bereichen Natur- und Gesellschaftswissenschaften
 :::
 
 ::: {.column width="50%"}
-![](images/mailab.png){fig-align="center"}
 :::
 :::
-
-## Zusammenspiel von YTDT & R
-
-#### [{{< fa brands youtube >}} maiLab](https://www.youtube.com/c/maiLab) im Fokus: Datenimport mit R (1)
-
-```{r}
-# Load packages
-library(readr)
-library(tidyverse)
-
-# Import data
-channel_list <- read_csv(
-  "https://raw.githubusercontent.com/chrdrn/dbd_binder/main/data/05-youtube/channelsearch_channels50_2022_11_17-09_54_22.csv")
-
-# Preview data 
-channel_list %>% glimpse()
-```
-
-## Mit [Channel ID]{.smallcaps} zur [Video List]{.smallcaps}
-
-#### [{{< fa brands youtube >}} maiLab](https://www.youtube.com/c/maiLab) im Fokus: Datenimport mit R (2)
-
-```{r}
-# Import data: video list
-video_list <- read_csv(
-  "https://raw.githubusercontent.com/chrdrn/dbd_binder/main/data/05-youtube/videolist_channel186_2022_11_17-10_20_11.csv"
-)
-
-# Preview data 
-video_list %>% glimpse()
-```
-
-## Explorative Analyse der [Video List]{.smallcaps}
-
-#### [{{< fa brands youtube >}} maiLab](https://www.youtube.com/c/maiLab) im Fokus: Datenauswertung mit R (1)
-
-```{r}
-# Load additional packages
-library(sjmisc) 
-
-# Get distribution parameters for selected variables
-video_list %>% 
-  select(durationSec, viewCount, likeCount, favoriteCount, commentCount) %>% 
-  descr() %>%
-  select(!c(var, type)) 
-```
-
-## Videoveröffentlichungen im Zeitverlauf
-
-#### [{{< fa brands youtube >}} maiLab](https://www.youtube.com/c/maiLab) im Fokus: Datenauswertung mit R (2)
-
-```{r}
-# Load additional packages
-library(sjPlot) 
-
-# Create plot
-video_list %>% 
-  mutate(year  = as.factor(year(publishedAt))) %>% 
-  plot_frq(
-    year,
-    title = "Video uploads on `maiLab` by year")
-```
-
-## Top 5 Videos mit den *meisten Aufrufen*
-
-#### [{{< fa brands youtube >}} maiLab](https://www.youtube.com/c/maiLab) im Fokus: Datenauswertung mit R (3)
-
-```{r}
-video_list %>% 
-  arrange(-viewCount) %>% 
-  select(videoTitle, publishedAt, viewCount, likeCount, commentCount) %>% 
-  head()
-```
-
-## Top 5 Videos mit den *meisten Kommentaren*
-
-#### [{{< fa brands youtube >}} maiLab](https://www.youtube.com/c/maiLab) im Fokus: Datenauswertung mit R (4)
-
-```{r}
-video_list %>% 
-  arrange(-commentCount) %>% 
-  select(videoTitle, publishedAt, viewCount, likeCount, commentCount) %>% 
-  head()
-```
 
 ## Interactive and executable environments
 
