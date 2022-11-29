@@ -158,6 +158,8 @@ Durchsuchen Sie die Subreddits r/news und r/worldnews nach Posts zu einem bestim
 
 Im Fokus: News über 🤡Elon Musk
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/chrdrn/dbd_binder/HEAD) [![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chrdrn/dbd_binder/blob/main/session_06-showcase_reddit.ipynb) [![RStudio Quarto](https://img.shields.io/badge/RStudio-4285F4?style=for-the-badge&logo=rstudio&logoColor=white)](https://chrdrn.github.io/digital-behavioral-data/content/06-api_access-reddit/06-exercise.html)
+
 ```{r}
 #| echo: false
 
@@ -175,6 +177,14 @@ library(sjPlot)
 library(lubridate)
 library(ggthemes)
 library(ggpubr)
+
+# get data from github
+musk <- read_csv(
+  "https://raw.githubusercontent.com/chrdrn/dbd_binder/main/data/06-reddit/4cat-reddit_news-musk_complete.csv")
+
+musk_entities <- read_csv(
+  "https://raw.githubusercontent.com/chrdrn/dbd_binder/main/data/06-reddit/4cat-reddit_news-musk-named_entities.csv")
+
 ```
 
 ## Same, same, but different
@@ -195,7 +205,9 @@ library(ggpubr)
 
 -   🐈🐈[4CAT]{.smallcaps}🐈🐈
 
--   {{< fa brands r-project >}} RStudio
+-   
+
+    {{< fa brands r-project >}} RStudio
 :::
 :::
 
@@ -219,7 +231,13 @@ library(ggpubr)
 :::
 
 ::: {.column width="50%"}
-![](images/result_01.svg){fig-align="center"}
+::: r-stack
+![](images/result_01-00.png){.fragment .semi-fade-out fragment-index="1" fig-align="center"}
+
+![](images/result_01-01.png){.fragment fragment-index="1" fig-align="center"}
+
+![](images/result_01-02.svg){.fragment fragment-index="4" fig-align="center"}
+:::
 :::
 :::
 
@@ -229,11 +247,19 @@ library(ggpubr)
 
 ::: columns
 ::: {.column width="50%"}
-Datenerhebung
+::: r-stack
+![](images/analysis_02-01.png){.fragment .semi-fade-out fragment-index="1" fig-align="center"}
+
+![](images/analysis_02-03.png){.fragment fragment-index="1" fig-align="center"}
+:::
 :::
 
 ::: {.column width="50%"}
-Visualisierung
+::: r-stack
+![](images/result_02-01.png){.fragment .semi-fade-out fragment-index="2" fig-align="center"}
+
+![](images/result_02-02.svg){.fragment fragment-index="2" fig-align="center"}
+:::
 :::
 :::
 
@@ -243,31 +269,70 @@ Visualisierung
 
 ::: columns
 ::: {.column width="50%"}
-Datenerhebung
+::: r-stack
+![](images/analysis_03-01.png){.fragment .semi-fade-out fragment-index="1" fig-align="center"}
+
+![](images/analysis_03-02.png){.fragment fragment-index="1" fig-align="center"}
+
+![](images/analysis_03-03.png){.fragment .fade-in-then-semi-out fragment-index="2" fig-align="center"}
+
+![](images/analysis_03-04.png){.fragment fragment-index="3" fig-align="center"}
+:::
 :::
 
 ::: {.column width="50%"}
-Visualisierung
+::: r-stack
+![](images/result_03-01.png){.fragment .fade-in-then-out fragment-index="2" fig-align="center"}
+
+![](images/result_03-02.svg){.fragment fragment-index="3" fig-align="center"}
 :::
 :::
+:::
 
-## Back to {{< fa brands r-project >}}
+## Back to {{< fa brands r-project >}} RStudio
 
-#### 
+#### Kurzer Überblick über die eingelesenen Datensätze
 
-## Interactive and executable environments
+```{r}
+musk %>% glimpse()
+musk_entities %>% glimpse()
+```
 
-#### Quarto, Binder & Google Colab
+## Messages im Zeitverlauf (1) {auto-animate="true"}
 
-Verschiedene Möglichkeiten, um den Code bzw. das heutige Beispiel ("live") zu reproduzieren:
+#### Betrachtung von beiden Subreddits (`news` & `worldnews` )
 
-1.  [Quarto-Dokument](https://chrdrn.github.io/digital-behavioral-data/content/05-api_access-youtube/05-exercise.html) auf [Kurs-Homepage](https://chrdrn.github.io/digital-behavioral-data/)
+```{r}
+#| fig-align: center
 
-2.  [[Binder]{.smallcaps}](https://mybinder.org/): Repositories mit Jupyter-Notebooks in ausführbaren Umgebungen öffnen und bearbeiten\
-    [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/chrdrn/dbd_binder/HEAD)
+musk %>% 
+  mutate(date  = as.factor(date(timestamp))) %>%
+  plot_frq(date,
+           title = "Post including 'musk' on Reddit") +
+  labs(subtitle = "Subreddits 'news' & 'worldnews' between 14-11 and 26-11-2022")
+```
 
-3.  [[Google Colab]{.smallcaps}](https://colab.research.google.com/): gehosteter Jupyter-Notebook-Dienst, der keine EInrichtung erfordertund gleichzeitig kostenlosen Zugang zu Rechenressourcen einschließlich GPUs bietet\
-    [![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chrdrn/dbd_binder/blob/main/session_05-showcase_youtube.ipyn)
+## Messages im Zeitverlauf (2) {auto-animate="true"}
+
+#### Unterschieden nach Subreddits (`news` & `worldnews` )
+```{r}
+#| echo: false
+library(magrittr)
+```
+
+
+```{r}
+#| fig-align: center
+#| fig-height: 6
+#| fig-width: 16
+
+musk %>%
+  mutate(date  = as.factor(date(timestamp)),
+         across(subreddit, as.factor)) %$% 
+  plot_grpfrq(date, subreddit,
+              title = "Post including 'musk' on Reddit") +
+  labs(subtitle = "Between 14-11 and 26-11-2022")
+```
 
 # **Verständnis- und Diskussionsfragen** {background-color="#E6002E" background-image="../../00-images/background_participation.svg"}
 

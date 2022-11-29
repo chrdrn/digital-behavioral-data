@@ -92,11 +92,49 @@ crypto_top_urls %>% tibble()
 ### Datenimport
 
 ```{r}
+# load packages
+library(readr)
 
+# get data from github
+musk <- read_csv(
+  "https://raw.githubusercontent.com/chrdrn/dbd_binder/main/data/06-reddit/4cat-reddit_news-musk_complete.csv")
+
+musk_entities <- read_csv(
+  "https://raw.githubusercontent.com/chrdrn/dbd_binder/main/data/06-reddit/4cat-reddit_news-musk-named_entities.csv")
+
+# quick preview
+musk %>% glimpse()
+musk_entities %>% glimpse()
 ```
 
-### Beiträge im Zeitverlauf
+### Messages including 'musk' over time
+#### Total 
+```{r}
+library(lubridate)
+library(sjPlot)
 
-### Wordcloud der Top Entities
+# Display 
+musk %>% 
+  mutate(date  = as.factor(date(timestamp))) %>% 
+  plot_frq(
+    date,
+    title = "Post including 'musk' on Reddit") +
+  labs(subtitle = "Subreddits 'news' & 'worldnews' between 14-11 and 26-11-2022")
+```
 
-## 
+#### By subreddit
+```{r}
+library(magrittr)
+
+musk %>% 
+  mutate(
+    date  = as.factor(date(timestamp)),
+    across(subreddit, as.factor)
+    ) %$% 
+  plot_grpfrq(
+    date,
+    subreddit,
+    title = "Post including 'musk' on Reddit") +
+  labs(subtitle = "Between 14-11 and 26-11-2022")
+```
+

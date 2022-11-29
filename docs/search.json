@@ -1474,6 +1474,90 @@
     "href": "content/06-api_access-reddit/slides/index.html#same-same-but-different",
     "title": "API-Access – Reddit",
     "section": "Same, same, but different",
-    "text": "Same, same, but different\nUnterschiedliche praktische Beispiele\n\n\nGrundsätzlich zwei kleine Analysen:\n\nVisualisierung der Anzahl der Beiträge im Zeitverlauf\nErstellung einer Wortwolke mit den meistgenannten Named Entities\n\n\nAber: Beispiele für\n\n🐈🐈4CAT🐈🐈\n RStudio"
+    "text": "Same, same, but different\nUnterschiedliche praktische Beispiele\n\n\nGrundsätzlich zwei kleine Analysen:\n\nVisualisierung der Anzahl der Beiträge im Zeitverlauf\nErstellung einer Wordcloud mit den meistgenannten Named Entities\n\n\nAber: Beispiele für\n\n🐈🐈4CAT🐈🐈\n RStudio"
+  },
+  {
+    "objectID": "content/06-api_access-reddit/slides/index.html#beiträge-im-zeitverlauf",
+    "href": "content/06-api_access-reddit/slides/index.html#beiträge-im-zeitverlauf",
+    "title": "API-Access – Reddit",
+    "section": "Beiträge im Zeitverlauf",
+    "text": "Beiträge im Zeitverlauf\nVisualisierung mit 🐈🐈4CAT🐈🐈"
+  },
+  {
+    "objectID": "content/06-api_access-reddit/slides/index.html#beiträge-im-zeitverlauf-nach-subreddit",
+    "href": "content/06-api_access-reddit/slides/index.html#beiträge-im-zeitverlauf-nach-subreddit",
+    "title": "API-Access – Reddit",
+    "section": "Beiträge im Zeitverlauf nach Subreddit",
+    "text": "Beiträge im Zeitverlauf nach Subreddit\nVisualisierung mit 🐈🐈4CAT🐈🐈"
+  },
+  {
+    "objectID": "content/06-api_access-reddit/slides/index.html#wordcloud-mit-named-entities",
+    "href": "content/06-api_access-reddit/slides/index.html#wordcloud-mit-named-entities",
+    "title": "API-Access – Reddit",
+    "section": "Wordcloud mit Named Entities",
+    "text": "Wordcloud mit Named Entities\nVisualisierung mit 🐈🐈4CAT🐈🐈"
+  },
+  {
+    "objectID": "content/06-api_access-reddit/slides/index.html#back-to-fa-brands-r-project",
+    "href": "content/06-api_access-reddit/slides/index.html#back-to-fa-brands-r-project",
+    "title": "API-Access – Reddit",
+    "section": "Back to ",
+    "text": "Back to"
+  },
+  {
+    "objectID": "content/06-api_access-reddit/slides/index.html#beiträge-im-zeitverlauf-nach-subreddit-ii",
+    "href": "content/06-api_access-reddit/slides/index.html#beiträge-im-zeitverlauf-nach-subreddit-ii",
+    "title": "API-Access – Reddit",
+    "section": "Beiträge im Zeitverlauf nach Subreddit II",
+    "text": "Beiträge im Zeitverlauf nach Subreddit II\nVisualisierung mit 🐈🐈4CAT🐈🐈"
+  },
+  {
+    "objectID": "content/06-api_access-reddit/slides/index.html#back-to-fa-brands-r-project-rstudio",
+    "href": "content/06-api_access-reddit/slides/index.html#back-to-fa-brands-r-project-rstudio",
+    "title": "API-Access – Reddit",
+    "section": "Back to  RStudio",
+    "text": "Back to  RStudio\nKurzer Überblick über die eingelesenen Datensätze\n\nmusk %>% glimpse()\n\nRows: 4,838\nColumns: 16\n$ thread_id      <chr> \"yugsz0\", \"yt59ku\", \"yulq2v\", \"yulq2v\", \"yulq2v\", \"yulq…\n$ id             <chr> \"iw9mhr7\", \"iw9tzrz\", \"iwa0egr\", \"iwa10h3\", \"iwa1gry\", …\n$ timestamp      <dttm> 2022-11-14 00:13:59, 2022-11-14 01:11:53, 2022-11-14 0…\n$ body           <chr> \"Nick Cannon and Elon Musk need to put a damn condom on…\n$ subject        <lgl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…\n$ author         <chr> \"fbe0d753750a9f008871e6e829b727bf26cc2bdcdc71f340\", \"89…\n$ author_flair   <chr> \"aadb59c4da75af6c9fb8d5cb4c310ce59888aab7f96ffc15\", \"aa…\n$ post_flair     <lgl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…\n$ domain         <lgl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…\n$ url            <lgl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…\n$ image_file     <lgl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…\n$ image_md5      <lgl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…\n$ subreddit      <chr> \"worldnews\", \"news\", \"news\", \"news\", \"news\", \"news\", \"n…\n$ parent         <chr> \"t3_yugsz0\", \"t1_iw4y0aj\", \"t3_yulq2v\", \"t3_yulq2v\", \"t…\n$ score          <dbl> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1…\n$ unix_timestamp <dbl> 1668384839, 1668388313, 1668391383, 1668391676, 1668391…\n\nmusk_entities %>% glimpse()\n\nRows: 3,633\nColumns: 3\n$ word   <chr> \"musk\", \"twitter\", \"twitter\", \"elon musk\", \"tesla\", \"trump\", \"t…\n$ entity <chr> \"PERSON\", \"PERSON\", \"PRODUCT\", \"PRODUCT\", \"ORG\", \"ORG\", \"GPE\", …\n$ count  <dbl> 1147, 861, 479, 404, 345, 273, 222, 218, 205, 187, 154, 132, 13…"
+  },
+  {
+    "objectID": "content/06-api_access-reddit/slides/index.html#reddit-messages-im-zeitverlauf",
+    "href": "content/06-api_access-reddit/slides/index.html#reddit-messages-im-zeitverlauf",
+    "title": "API-Access – Reddit",
+    "section": "Reddit Messages im Zeitverlauf",
+    "text": "Reddit Messages im Zeitverlauf\nTest\n\nmusk %>% \n  mutate(date  = as.factor(date(timestamp))) %>% \n  plot_frq(\n    date,\n    title = \"Post including 'musk' on Reddit\") +\n  labs(subtitle = \"Subreddits 'news' & 'worldnews' between 14-11 and 26-11-2022\")"
+  },
+  {
+    "objectID": "content/06-api_access-reddit/slides/index.html#messages-im-zeitverlauf",
+    "href": "content/06-api_access-reddit/slides/index.html#messages-im-zeitverlauf",
+    "title": "API-Access – Reddit",
+    "section": "Messages im Zeitverlauf",
+    "text": "Messages im Zeitverlauf\nBetrachtung von beiden Subreddits (news & worldnews )\n\nmusk %>% \n  mutate(date  = as.factor(date(timestamp))) %>% \n  plot_frq(\n    date,\n    title = \"Post including 'musk' on Reddit\") +\n  labs(subtitle = \"Subreddits 'news' & 'worldnews' between 14-11 and 26-11-2022\")"
+  },
+  {
+    "objectID": "content/06-api_access-reddit/slides/index.html#messages-im-zeitverlauf-1",
+    "href": "content/06-api_access-reddit/slides/index.html#messages-im-zeitverlauf-1",
+    "title": "API-Access – Reddit",
+    "section": "Messages im Zeitverlauf (1)",
+    "text": "Messages im Zeitverlauf (1)\nBetrachtung von beiden Subreddits (news & worldnews )\n\nmusk %>% \n  mutate(date  = as.factor(date(timestamp))) %>%\n  plot_frq(date,\n           title = \"Post including 'musk' on Reddit\") +\n  labs(subtitle = \"Subreddits 'news' & 'worldnews' between 14-11 and 26-11-2022\")"
+  },
+  {
+    "objectID": "content/06-api_access-reddit/slides/index.html#messages-im-zeitverlauf-2",
+    "href": "content/06-api_access-reddit/slides/index.html#messages-im-zeitverlauf-2",
+    "title": "API-Access – Reddit",
+    "section": "Messages im Zeitverlauf (2)",
+    "text": "Messages im Zeitverlauf (2)\nUnterschieden nach Subreddits (news & worldnews )\n\n\n\n\nmusk %>%\n  mutate(date  = as.factor(date(timestamp)),\n         across(subreddit, as.factor)) %$% \n  plot_grpfrq(date, subreddit,\n              title = \"Post including 'musk' on Reddit\") +\n  labs(subtitle = \"Between 14-11 and 26-11-2022\")"
+  },
+  {
+    "objectID": "content/06-api_access-reddit/slides/index.html#messages-im-zeitverlauf-1-auto-animate-true",
+    "href": "content/06-api_access-reddit/slides/index.html#messages-im-zeitverlauf-1-auto-animate-true",
+    "title": "API-Access – Reddit",
+    "section": "Messages im Zeitverlauf (1) {auto-animate = “true”}",
+    "text": "Messages im Zeitverlauf (1) {auto-animate = “true”}\nBetrachtung von beiden Subreddits (news & worldnews )\n\n\nmusk %>% \n  mutate(date  = as.factor(date(timestamp))) %>% \n  plot_frq(\n    date,\n    title = \"Post including 'musk' on Reddit\") +\n  labs(subtitle = \"Subreddits 'news' & 'worldnews' between 14-11 and 26-11-2022\")"
+  },
+  {
+    "objectID": "content/06-api_access-reddit/slides/index.html#messages-im-zeitverlauf-2-auto-animate-true",
+    "href": "content/06-api_access-reddit/slides/index.html#messages-im-zeitverlauf-2-auto-animate-true",
+    "title": "API-Access – Reddit",
+    "section": "Messages im Zeitverlauf (2) {auto-animate = “true”}",
+    "text": "Messages im Zeitverlauf (2) {auto-animate = “true”}\nUnterschieden nach Subreddits (news & worldnews )\n\n\nlibrary(magrittr)\n\nmusk %>%\n  mutate(\n    date  = as.factor(date(timestamp)),\n    across(subreddit, as.factor)\n    ) %$% \n  plot_grpfrq(\n    date,\n    subreddit,\n    title = \"Post including 'musk' on Reddit\") +\n  labs(subtitle = \"Between 14-11 and 26-11-2022\")"
   }
 ]
