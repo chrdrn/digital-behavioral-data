@@ -69,15 +69,15 @@ bibliography: references.bib
 
 Gruppenarbeit zu `4CAT: Capture and Analysis Toolkit`
 
-## What is it an who made it
+## What is it & who made it?
 
-#### Hintergrundinformationen [`4CAT`](https://github.com/digitalmethodsinitiative/4cat)[@peeters2022]
+#### Hintergrundinformationen [`4CAT`](https://github.com/digitalmethodsinitiative/4cat) [@peeters2022]
 
 ::: columns
 ::: {.column width="50%"}
--   Tool zur Analyse und Verarbeitung von Daten aus sozialen Online-Plattformen
+-   Tool zur Analyse und Verarbeitung von **Daten aus sozialen Online-Plattformen**
 
--   Ziel ist es, die Erfassung und Analyse von Daten aus diesen Plattformen über eine Webschnittstelle zugänglich zu machen, ohne dass Programmier- oder Web-Scraping-Kenntnisse erforderlich sind.
+-   Ziel ist es, die Erfassung und Analyse von Daten aus diesen Plattformen über eine Webschnittstelle zugänglich zu machen, **ohne dass Programmier- oder Web-Scraping-Kenntnisse erforderlich** sind.
 :::
 
 ::: {.column width="50%"}
@@ -85,9 +85,9 @@ Gruppenarbeit zu `4CAT: Capture and Analysis Toolkit`
 :::
 :::
 
-## {{< fa brands reddit-alien >}} Reddit als Nachrichtenquelle ... ?
+## Soziale Medien sind Quelle für Nachrichten
 
-#### Hintergrund: Soziale Medien als Nachrichtenquelle
+#### Medienkonsum in Wandel
 
 <iframe title="Proportion that used each source of news in the last week" aria-label="Interactive line chart" id="datawrapper-chart-GrRao" src="https://datawrapper.dwcdn.net/GrRao/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="550">
 
@@ -100,11 +100,9 @@ Gruppenarbeit zu `4CAT: Capture and Analysis Toolkit`
 *Aber:* Wie prominent ist Reddit (als Nachrichtenquelle) bei Ihnen/in DE?
 :::
 
-:::
+## Und {{< fa brands reddit-alien >}}? (Noch) Nicht in Deutschland!
 
-## ... (noch) Nicht in Deutschland!
-
-#### Soziale Medien als Nachrichten in DE/USA
+#### Nutzung sozialer Medien als Nachrichtenquelle in Deutschland & USA
 
 ::: columns
 ::: {.column width="50%"}
@@ -128,30 +126,44 @@ Gruppenarbeit zu `4CAT: Capture and Analysis Toolkit`
 :::
 :::
 
-## And now ... you: Reddit als Newsfeed
+## And now ... you: Reddit als Newsfeed {.smaller}
 
 #### Group activity: Scrape Reddit mit 4CAT
 
 ::: {.callout-note appearance="minimal"}
 ## Ziel der Group Activity
 
-Durchsuchen Sie die Subreddits r/news und r/worldnews nach Posts zu einem bestimmten Thema/Begriff und analysieren Sie diese mit Hilfe von 4CAT
+Durchsuchen Sie die Subreddits `r/news` und `r/worldnews` nach Posts zu einem bestimmten Thema/Begriff und analysieren Sie diese mit Hilfe von 4CAT
 :::
 
-::: {style="font-size: smaller"}
-1.  Überlegen Sie (in Gruppen), welches Thema Sie untersuchen wollen und mit welchen Begriffen Sie Beiträge zu diesem Thema identifizieren könnten.
+::: {.fragment .highlight-current-red fragment-index="1"}
+1.  Überlegen Sie (in Gruppen), **welches Thema** Sie untersuchen wollen und mit **welchen Begriffen** Sie Beiträge zu diesem Thema identifizieren könnten.
+:::
 
+::: {.fragment .highlight-current-red fragment-index="2"}
 2.  Öffnen Sie 4CAT ➡️Create dataset ➡️ Data source: `Reddit`
+:::
 
+::: {.fragment .highlight-current-red fragment-index="3"}
 3.  Geben Sie `news, worldness` an beim Feld `Subreddit(s)`
+:::
 
-4.  Geben Sie Ihre(n) Suchbegriff(e) im Feld `Message search` ein.
+::: {.fragment .highlight-current-red fragment-index="4"}
+4.  Geben Sie **Ihre(n) Suchbegriff(e)** im Feld `Message search` ein.
+:::
 
-5.  Wählen Sie die letzten zwei Wochen als `Date range`
+::: {.fragment .highlight-current-red fragment-index="5"}
+5.  Wählen Sie ([maximal]{.underline}) die **letzten zwei Wochen** als `Date range`
+:::
 
+::: {.fragment .highlight-current-red fragment-index="6"}
 6.  Benennen Sie ihrem Datensatz im Feld `Dataset name`
+:::
 
-7.  *Optional: Probieren Sie die verschiedenen Analysemöglichkeiten aus*
+::: {.fragment .fade-in fragment-index="7"}
+::: {.fragment .highlight-red}
+7.  *Optional: Probieren Sie verschiedenen Analysemöglichkeiten aus*
+:::
 :::
 
 # Beispielhafte Auswertungen {background-color="#E6002E"}
@@ -187,44 +199,30 @@ musk_entities <- read_csv(
 
 ```
 
-## Same, same, but different
+## 2 Tools, 2 Analysen
 
-#### Unterschiedliche praktische Beispiele
+#### Beispiele für Auswertung mit 🐈🐈[4CAT]{.smallcaps}🐈🐈 & {{< fa brands r-project >}} RStudio
 
-::: columns
-::: {.column width="50%"}
-**Grundsätzlich zwei kleine Analysen:**
+Zwei (einfache) Szenarien:
 
 1.  **Visualisierung** der Anzahl der Beiträge im **Zeitverlauf**
 
 2.  Erstellung einer **Wordcloud** mit den meistgenannten **Named Entities**
-:::
 
-::: {.column width="50%"}
-*Aber*: Beispiele für
-
--   🐈🐈[4CAT]{.smallcaps}🐈🐈
-
--   
-
-    {{< fa brands r-project >}} RStudio
-:::
-:::
-
-## Beiträge im Zeitverlauf
+## Beiträge mit Keyword ["musk"]{.smallcaps} im Zeitverlauf
 
 #### Visualisierung mit 🐈🐈[4CAT]{.smallcaps}🐈🐈
 
 ::: columns
 ::: {.column width="50%"}
 ::: r-stack
-![](images/analysis_01-01.png){fig-align="center"}
+![](images/analysis_01-01.png){.fragment .fade-out fragment-index="1" fig-align="center"}
 
-![](images/analysis_01-02.png){.fragment fragment-index="1" fig-align="center"}
+![](images/analysis_01-02.png){.fragment .fade-in-then-semi-out fragment-index="1" fig-align="center"}
 
-![](images/analysis_01-03.png){.fragment fragment-index="2" fig-align="center"}
+![](images/analysis_01-03.png){.fragment .fade-in-then-semi-out fragment-index="2" fig-align="center"}
 
-![](images/analysis_01-04.png){.fragment fragment-index="3" fig-align="center"}
+![](images/analysis_01-04.png){.fragment .fade-in-then-semi-out fragment-index="3" fig-align="center"}
 
 ![](images/analysis_01-05.png){.fragment fragment-index="4" fig-align="center"}
 :::
@@ -232,9 +230,9 @@ musk_entities <- read_csv(
 
 ::: {.column width="50%"}
 ::: r-stack
-![](images/result_01-00.png){.fragment .semi-fade-out fragment-index="1" fig-align="center"}
+![](images/result_01-00.png){.fragment .fade-out fragment-index="1" fig-align="center"}
 
-![](images/result_01-01.png){.fragment fragment-index="1" fig-align="center"}
+![](images/result_01-01.png){.fragment .fade-in-then-semi-out fragment-index="1" fig-align="center"}
 
 ![](images/result_01-02.svg){.fragment fragment-index="4" fig-align="center"}
 :::
@@ -274,7 +272,7 @@ musk_entities <- read_csv(
 
 ![](images/analysis_03-02.png){.fragment fragment-index="1" fig-align="center"}
 
-![](images/analysis_03-03.png){.fragment .fade-in-then-semi-out fragment-index="2" fig-align="center"}
+![](images/analysis_03-03b.png){.fragment .fade-in-then-semi-out fragment-index="2" fig-align="center"}
 
 ![](images/analysis_03-04.png){.fragment fragment-index="3" fig-align="center"}
 :::
@@ -298,7 +296,7 @@ musk %>% glimpse()
 musk_entities %>% glimpse()
 ```
 
-## Messages im Zeitverlauf (1) {auto-animate="true"}
+## Beiträge mit Keyword ["musk"]{.smallcaps} im Zeitverlauf
 
 #### Betrachtung von beiden Subreddits (`news` & `worldnews` )
 
@@ -312,14 +310,14 @@ musk %>%
   labs(subtitle = "Subreddits 'news' & 'worldnews' between 14-11 and 26-11-2022")
 ```
 
-## Messages im Zeitverlauf (2) {auto-animate="true"}
+## Beiträge mit Keyword ["musk"]{.smallcaps} im Zeitverlauf
 
 #### Unterschieden nach Subreddits (`news` & `worldnews` )
+
 ```{r}
 #| echo: false
 library(magrittr)
 ```
-
 
 ```{r}
 #| fig-align: center
@@ -341,33 +339,31 @@ Ihre Fragen aus MS Teams
 ## Vielen Dank für Ihre Fragen! {.scrollable .smaller}
 
 ::: {.fragment .semi-fade-out fragment-index="1"}
-> Ist es denkbar, dass YouTube eines Tages von anderen sozialen Plattformen wie Instagram oder Spotify überholt wird, an Bekanntheit verliert oder sogar ganz von der Bildfläche verschwindet?
+> Die Reddit **API erlaubt nur bis 500 Kommentare pro Post** über ein automatisches Tool zu 'extrahieren'. Manuell ist es jedoch möglich über diese Grenze hinaus zu gehen. Wie kann das sein? Das würde ja bedeuten, dass man die **Regeln der Reddit API manuell umgehen kann**?
 :::
 
 ::: {.fragment .fade-in-then-semi-out fragment-index="1"}
-> Youtube-Influencer verdienen etwa das Doppelte mit Werbeanzeigen auf YouTube, als wenn sie Werbeanzeigen auf Facebook oder Instagram schalten würden (2016). Kann das im Jahr 2022 immer noch bestätigt werden? Sind Werbeanzeigen auf YouTube erfolgreicher und haben eine weitere Reichweite im Vergleich mit Instagram?
-:::
+> In dem Paper wird darauf hingewiesen, dass die **Verwendung der API** von Reddit ein möglicher **Verstoß** gegen die **Nutzungsvereinbarungen** ist. **Wann** würde so ein **Fall eintreten** bzw. wann spricht man von einem Verstoß und was wäre dann die **Bestrafung**?
 
-::: {.fragment .fade-in-then-semi-out fragment-index="2"}
-> Es wird das Tool **Webometric** erwähnt, ein automatisiertes Instrument für die Sammlung von Social Media Daten über die API der Plattform YouTube. Wie sieht Webometric genau aus und wie werden die Daten über dieses Tool extrahiert?
+> Wie kann es sein, dass Reddit eine **kostenlose API** zur verfügung stellt, die Nutzung dieser dann aber **teilweise nicht legal** sein kann?
 :::
 
 ::: {.fragment .fade-in-then-semi-out fragment-index="3"}
-> Es wird oft darüber geredet, dass das „Recommendation System" fehlerhaft sei und bestimmte Videos trotz mangelnde Performance trotzdem empfohlen werden oder in den Trends landen (z.B Amerikanische Late Night Shows). Wie kann in der Forschung verhindert werden, dass Resultate entstehen die nicht den tatsächlichen Verhaltensdaten der Konsumenten entstehen.
+> Es wird erwähnt, dass viele Nutzer mehrere Accounts haben und dementsprechend Diskussionen in bestimmten Subreddits stärker beeinflussen können. Besteht die **Möglichkeit solche Accounts zu erkennen** und angemessen in der Studie zu berücksichtigen **ohne** die **Datenschutzrichtlinien** **zu verletzen**?
 :::
 
 ## Let's discuss
 
 ::: {.fragment .semi-fade-out fragment-index="1"}
-> Sophie Bishop meint es wäre interessant die Forschung zum Algorithmus von YouTube dahingehend zu erweitern, dass man untersucht was Nutzer denken, wie der Algorithmus funktioniert. Wie würde man bei dieser Fragestellung vorgehen bzw. wie könnte man das untersuchen?
+> Viele Social Media Plattformen, wie Instagram, Facebook und Twitter beschränken ihren API Zugang. **Weshalb** legt **Reddit** den **API** Zugang im Gegensatz zu den anderen Plattformen so **offen** dar?
 :::
 
 ::: {.fragment .fade-in-then-semi-out fragment-index="1"}
-> Inwiefern kann YouTube als Soziales Netzwerk verstanden werden, wenn nur ein kleiner Bruchteil seiner User sich durch Upload von Content am Informationsaustausch beteiligt und der Großteil "nur" konsumiert?
+> Viele der Reddit-Daten basierenden Publikationen enthielten **nur unvollständige oder zweideutige Beschreibungen ihrer Datensätze**. Auch die Methoden der Datenerhebung bleiben teilweise verschleiert. Warum ist das so und welche ethischen Gründe liegen hier möglicherweise zu Grunde?
 :::
 
 ::: {.fragment .fade-in-then-semi-out fragment-index="3"}
-> YouTube besteht als Social Media Platform länger als die meisten anderen Plattformen (Twitter, Instagram, TikTok, etc.) und besitzt so gut wie weltweite Bekanntheit. Warum ist die Forschung in Richtung YouTube trotzdem so gering?
+> Wie stark sind **Reddit-Date**n (evtl. auch im Vergleich zu Twitter) **generalisierbar**, wenn die Struktur von Reddit doch Diskussionen und Gespräche in gewisser Weise leitet (z.B. durch Sichtbarkeit von Themen)?
 :::
 
 # Time for questions {background-color="#E6002E" background-image="../../00-images/background_questions.svg"}

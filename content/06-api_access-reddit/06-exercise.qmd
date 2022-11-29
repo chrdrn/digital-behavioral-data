@@ -5,7 +5,6 @@ format:
   html:
     toc: true
     toc-depth: 4
-callout-appearance: simple
 execute: 
   cache: true
   eval: true
@@ -13,47 +12,43 @@ execute:
   message: false
   warning: false
 highlight-style: atom-one
-editor_options: 
-  chunk_output_type: console
 ---
 
 ```{r}
 #| echo: false
-install.packages("RedditExtractoR")
-
-library(here)
 library(tidyverse)
-library(RedditExtractoR)
-library(easystats)
-library(sjmisc)
 ```
 
 ## Background
 
-Grundsätzlich hat dieses Showcase zwei verschiedene Ziele:
+Ths showcase has two different goals:
 
-1.  Beispielhafte Vorstellung der Erhebung von {{< fa brands reddit >}} Reddit-Daten mit Hilfe verschiedener R-Pakete
-2.  Import und Auswertung der mit dem 4CAT Tool erhobenen Daten.
+1.  Exemplary presentation of the collection of [<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/brands/reddit.svg" width="15" height="15"/>](https://www.reddit.com/) [Reddit](https://www.reddit.com/) data using the [RedditExtractoR](https://github.com/ivan-rivera/RedditExtractor) package
+2.  Importing and analyzing the data collected with the 🐈🐈 [**4CAT**](https://github.com/digitalmethodsinitiative/4cat) 🐈🐈 tool.
 
-YouTube Data Tool (YTDT) using the example of Mai Thi Nguyen-Kim ( [{{< fa brands twitter >}}](https://twitter.com/maithi_nk) \| [{{< fa brands instagram >}}](https://www.instagram.com/maithink/) ) and her [{{< fa brands youtube >}}](https://www.youtube.com/c/maiLab)-Channel [maiLab](https://www.youtube.com/c/maiLab).
+## Data collection with `RedditExtractor`
 
-You can also open this showcase in other interactive and executable environments: [![Binder](https://mybinder.org/badge_logo.svg){alt="Binder"}](https://mybinder.org/v2/gh/chrdrn/dbd_binder/HEAD) [![Google Colab](https://colab.research.google.com/assets/colab-badge.svg){alt="Google Colab"}](https://colab.research.google.com/github/chrdrn/dbd_binder/blob/main/session_05-showcase_youtube.ipynb)
+[Reddit Extractor](https://github.com/ivan-rivera/RedditExtractor) is an R package for extracting data out of [Reddit](https://www.reddit.com/). It allows you to:
 
-## Datenerhebung mit `RedditExtractoR`
+-   find subreddits based on a search query
+-   find a user and their Reddit history
+-   find URLs to threads of interest and retrieve comments out of these threads
 
-Reddit Extractor is an R package for extracting data out of Reddit. It allows you to:
+::: {.callout-important}
+## Disclaimer
 
-1.  find subreddits based on a search query
+Unfortunately, the functions of the `RedditExtractoR` package can NOT be executed during the Markdown creation process and must be reproduced "live".
 
-2.  find a user and their Reddit history
-
-3.  find URLs to threads of interest and retrieve comments out of these threads
+Therefore, there will be no output for the next two paragraphs.
+:::
 
 ### Example: Find subreddits
 
-Analog zu dem Beispiel aus dem Seminar, werden mit HIlfe der Funktion `find_subreddits` alle subreddits identifiziert, die entweder in Ihrem Namen oder Ihren Attributen das Keyword `news` enthalten
+Similar to the example from the seminar, the function `find_subreddits` identifies all subreddits that contain the keyword news either in their name or in their attributes.
 
 ```{r}
+#| eval: false
+
 library(tidyverse)
 library(RedditExtractoR)
 
@@ -69,9 +64,12 @@ news %>%
   tibble() %>% head()
 ```
 
-### Example: Find thread urls
+### Example: Find thread URLs
 
 ```{r}
+#| eval: false
+
+
 # Get list of top thread urls
 news_top_urls <- find_thread_urls(
   subreddit = "news", 
@@ -82,14 +80,11 @@ news_top_urls <- find_thread_urls(
 # Quick preview of dataset
 news_top_urls %>% glimpse()
 news_top_urls %>% tibble()
-
-
-crypto_top_urls %>% tibble()
 ```
 
-## Analyse der 4CAT Daten
+## Analysis of collected 🐈🐈 4CAT 🐈🐈 data
 
-### Datenimport
+### Data import from {{< fa brands github >}}
 
 ```{r}
 # load packages
@@ -108,8 +103,19 @@ musk_entities %>% glimpse()
 ```
 
 ### Messages including 'musk' over time
-#### Total 
+
+::: callout-important
+## Tip
+
+The following graphics (and especially their labels) may appear very small. To view the graphics in their original size, right-click on the images and select "Open image/graphic in new tab".
+:::
+
+#### Total
+
 ```{r}
+#| fig-width: 16
+#| fig-height: 9
+
 library(lubridate)
 library(sjPlot)
 
@@ -123,7 +129,11 @@ musk %>%
 ```
 
 #### By subreddit
+
 ```{r}
+#| fig-width: 16
+#| fig-height: 9
+
 library(magrittr)
 
 musk %>% 
@@ -137,4 +147,3 @@ musk %>%
     title = "Post including 'musk' on Reddit") +
   labs(subtitle = "Between 14-11 and 26-11-2022")
 ```
-

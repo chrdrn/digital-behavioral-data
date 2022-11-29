@@ -1404,14 +1404,14 @@
     "href": "content/06-api_access-reddit/slides/index.html#vielen-dank-für-ihre-fragen",
     "title": "API-Access – Reddit",
     "section": "Vielen Dank für Ihre Fragen!",
-    "text": "Vielen Dank für Ihre Fragen!\n\n\nIst es denkbar, dass YouTube eines Tages von anderen sozialen Plattformen wie Instagram oder Spotify überholt wird, an Bekanntheit verliert oder sogar ganz von der Bildfläche verschwindet?\n\n\n\n\nYoutube-Influencer verdienen etwa das Doppelte mit Werbeanzeigen auf YouTube, als wenn sie Werbeanzeigen auf Facebook oder Instagram schalten würden (2016). Kann das im Jahr 2022 immer noch bestätigt werden? Sind Werbeanzeigen auf YouTube erfolgreicher und haben eine weitere Reichweite im Vergleich mit Instagram?\n\n\n\n\nEs wird das Tool Webometric erwähnt, ein automatisiertes Instrument für die Sammlung von Social Media Daten über die API der Plattform YouTube. Wie sieht Webometric genau aus und wie werden die Daten über dieses Tool extrahiert?\n\n\n\n\nEs wird oft darüber geredet, dass das „Recommendation System” fehlerhaft sei und bestimmte Videos trotz mangelnde Performance trotzdem empfohlen werden oder in den Trends landen (z.B Amerikanische Late Night Shows). Wie kann in der Forschung verhindert werden, dass Resultate entstehen die nicht den tatsächlichen Verhaltensdaten der Konsumenten entstehen."
+    "text": "Vielen Dank für Ihre Fragen!\n\n\nDie Reddit API erlaubt nur bis 500 Kommentare pro Post über ein automatisches Tool zu ‘extrahieren’. Manuell ist es jedoch möglich über diese Grenze hinaus zu gehen. Wie kann das sein? Das würde ja bedeuten, dass man die Regeln der Reddit API manuell umgehen kann?\n\n\n\n\nIn dem Paper wird darauf hingewiesen, dass die Verwendung der API von Reddit ein möglicher Verstoß gegen die Nutzungsvereinbarungen ist. Wann würde so ein Fall eintreten bzw. wann spricht man von einem Verstoß und was wäre dann die Bestrafung?\n\n\nWie kann es sein, dass Reddit eine kostenlose API zur verfügung stellt, die Nutzung dieser dann aber teilweise nicht legal sein kann?\n\n\n\n\nEs wird erwähnt, dass viele Nutzer mehrere Accounts haben und dementsprechend Diskussionen in bestimmten Subreddits stärker beeinflussen können. Besteht die Möglichkeit solche Accounts zu erkennen und angemessen in der Studie zu berücksichtigen ohne die Datenschutzrichtlinien zu verletzen?"
   },
   {
     "objectID": "content/06-api_access-reddit/slides/index.html#lets-discuss",
     "href": "content/06-api_access-reddit/slides/index.html#lets-discuss",
     "title": "API-Access – Reddit",
     "section": "Let’s discuss",
-    "text": "Let’s discuss\n\n\nSophie Bishop meint es wäre interessant die Forschung zum Algorithmus von YouTube dahingehend zu erweitern, dass man untersucht was Nutzer denken, wie der Algorithmus funktioniert. Wie würde man bei dieser Fragestellung vorgehen bzw. wie könnte man das untersuchen?\n\n\n\n\nInwiefern kann YouTube als Soziales Netzwerk verstanden werden, wenn nur ein kleiner Bruchteil seiner User sich durch Upload von Content am Informationsaustausch beteiligt und der Großteil “nur” konsumiert?\n\n\n\n\nYouTube besteht als Social Media Platform länger als die meisten anderen Plattformen (Twitter, Instagram, TikTok, etc.) und besitzt so gut wie weltweite Bekanntheit. Warum ist die Forschung in Richtung YouTube trotzdem so gering?"
+    "text": "Let’s discuss\n\n\nViele Social Media Plattformen, wie Instagram, Facebook und Twitter beschränken ihren API Zugang. Weshalb legt Reddit den API Zugang im Gegensatz zu den anderen Plattformen so offen dar?\n\n\n\n\nViele der Reddit-Daten basierenden Publikationen enthielten nur unvollständige oder zweideutige Beschreibungen ihrer Datensätze. Auch die Methoden der Datenerhebung bleiben teilweise verschleiert. Warum ist das so und welche ethischen Gründe liegen hier möglicherweise zu Grunde?\n\n\n\n\nWie stark sind Reddit-Daten (evtl. auch im Vergleich zu Twitter) generalisierbar, wenn die Struktur von Reddit doch Diskussionen und Gespräche in gewisser Weise leitet (z.B. durch Sichtbarkeit von Themen)?"
   },
   {
     "objectID": "content/06-api_access-reddit/slides/index.html#literatur",
@@ -1453,7 +1453,7 @@
     "href": "content/06-api_access-reddit/slides/index.html#and-now-you-reddit-als-newsfeed",
     "title": "API-Access – Reddit",
     "section": "And now … you: Reddit als Newsfeed",
-    "text": "And now … you: Reddit als Newsfeed\nGroup activity: Scrape Reddit mit 4CAT\n\n\n\nZiel der Group Activity\n\n\nDurchsuchen Sie die Subreddits r/news und r/worldnews nach Posts zu einem bestimmten Thema/Begriff und analysieren Sie diese mit Hilfe von 4CAT\n\n\n\n\n\nÜberlegen Sie (in Gruppen), welches Thema Sie untersuchen wollen und mit welchen Begriffen Sie Beiträge zu diesem Thema identifizieren könnten.\nÖffnen Sie 4CAT ➡️Create dataset ➡️ Data source: Reddit\nGeben Sie news, worldness an beim Feld Subreddit(s)\nGeben Sie Ihre(n) Suchbegriff(e) im Feld Message search ein.\nWählen Sie die letzten zwei Wochen als Date range\nBenennen Sie ihrem Datensatz im Feld Dataset name\nOptional: Probieren Sie die verschiedenen Analysemöglichkeiten aus"
+    "text": "And now … you: Reddit als Newsfeed\nGroup activity: Scrape Reddit mit 4CAT\n\n\n\nZiel der Group Activity\n\n\nDurchsuchen Sie die Subreddits r/news und r/worldnews nach Posts zu einem bestimmten Thema/Begriff und analysieren Sie diese mit Hilfe von 4CAT\n\n\n\n\n\nÜberlegen Sie (in Gruppen), welches Thema Sie untersuchen wollen und mit welchen Begriffen Sie Beiträge zu diesem Thema identifizieren könnten.\n\n\n\n\nÖffnen Sie 4CAT ➡️Create dataset ➡️ Data source: Reddit\n\n\n\n\nGeben Sie news, worldness an beim Feld Subreddit(s)\n\n\n\n\nGeben Sie Ihre(n) Suchbegriff(e) im Feld Message search ein.\n\n\n\n\nWählen Sie (maximal) die letzten zwei Wochen als Date range\n\n\n\n\nBenennen Sie ihrem Datensatz im Feld Dataset name\n\n\n\n\n\nOptional: Probieren Sie verschiedenen Analysemöglichkeiten aus"
   },
   {
     "objectID": "content/06-api_access-reddit/slides/index.html#first-4cat-dann-r",
@@ -1559,5 +1559,96 @@
     "title": "API-Access – Reddit",
     "section": "Messages im Zeitverlauf (2) {auto-animate = “true”}",
     "text": "Messages im Zeitverlauf (2) {auto-animate = “true”}\nUnterschieden nach Subreddits (news & worldnews )\n\n\nlibrary(magrittr)\n\nmusk %>%\n  mutate(\n    date  = as.factor(date(timestamp)),\n    across(subreddit, as.factor)\n    ) %$% \n  plot_grpfrq(\n    date,\n    subreddit,\n    title = \"Post including 'musk' on Reddit\") +\n  labs(subtitle = \"Between 14-11 and 26-11-2022\")"
+  },
+  {
+    "objectID": "content/06-api_access-reddit/slides/index.html#what-is-it-who-made-it",
+    "href": "content/06-api_access-reddit/slides/index.html#what-is-it-who-made-it",
+    "title": "API-Access – Reddit",
+    "section": "What is it & who made it?",
+    "text": "What is it & who made it?\nHintergrundinformationen 4CAT (Peeters & Hagen, 2022)\n\n\n\nTool zur Analyse und Verarbeitung von Daten aus sozialen Online-Plattformen\nZiel ist es, die Erfassung und Analyse von Daten aus diesen Plattformen über eine Webschnittstelle zugänglich zu machen, ohne dass Programmier- oder Web-Scraping-Kenntnisse erforderlich sind."
+  },
+  {
+    "objectID": "content/06-api_access-reddit/slides/index.html#soziale-medien-sind-quelle-für-nachrichten",
+    "href": "content/06-api_access-reddit/slides/index.html#soziale-medien-sind-quelle-für-nachrichten",
+    "title": "API-Access – Reddit",
+    "section": "Soziale Medien sind Quelle für Nachrichten",
+    "text": "Soziale Medien sind Quelle für Nachrichten\nMedienkonsum in Wandel\n\n\n\n\nAber: Wie prominent ist Reddit (als Nachrichtenquelle) bei Ihnen/in DE?"
+  },
+  {
+    "objectID": "content/06-api_access-reddit/slides/index.html#fa-brands-reddit-alien-noch-nicht-in-deutschland",
+    "href": "content/06-api_access-reddit/slides/index.html#fa-brands-reddit-alien-noch-nicht-in-deutschland",
+    "title": "API-Access – Reddit",
+    "section": "? (Noch) Nicht in Deutschland!",
+    "text": "? (Noch) Nicht in Deutschland!\nVergleich der Nutzung sozialer Medien als Nachrichtenquellen zwischen DE & USA"
+  },
+  {
+    "objectID": "content/06-api_access-reddit/slides/index.html#und-fa-brands-reddit-alien-noch-nicht-in-deutschland",
+    "href": "content/06-api_access-reddit/slides/index.html#und-fa-brands-reddit-alien-noch-nicht-in-deutschland",
+    "title": "API-Access – Reddit",
+    "section": "Und ? (Noch) Nicht in Deutschland!",
+    "text": "Und ? (Noch) Nicht in Deutschland!\nNutzung sozialer Medien als Nachrichtenquelle in Deutschland & USA"
+  },
+  {
+    "objectID": "content/06-api_access-reddit/slides/index.html#tools-2-analysen",
+    "href": "content/06-api_access-reddit/slides/index.html#tools-2-analysen",
+    "title": "API-Access – Reddit",
+    "section": "2 Tools, 2 Analysen",
+    "text": "2 Tools, 2 Analysen\nBeispiele für Auswertung mit 🐈🐈4CAT🐈🐈 &  RStudio\nZwei (einfache) Szenarien:\n\nVisualisierung der Anzahl der Beiträge im Zeitverlauf\nErstellung einer Wordcloud mit den meistgenannten Named Entities"
+  },
+  {
+    "objectID": "content/06-api_access-reddit/slides/index.html#beiträge-mit-keyword-musk-im-zeitverlauf",
+    "href": "content/06-api_access-reddit/slides/index.html#beiträge-mit-keyword-musk-im-zeitverlauf",
+    "title": "API-Access – Reddit",
+    "section": "Beiträge mit Keyword “musk” im Zeitverlauf",
+    "text": "Beiträge mit Keyword “musk” im Zeitverlauf\nVisualisierung mit 🐈🐈4CAT🐈🐈"
+  },
+  {
+    "objectID": "content/06-api_access-reddit/slides/index.html#beiträge-mit-keyword-musk-im-zeitverlauf-nach-subreddit",
+    "href": "content/06-api_access-reddit/slides/index.html#beiträge-mit-keyword-musk-im-zeitverlauf-nach-subreddit",
+    "title": "API-Access – Reddit",
+    "section": "Beiträge mit Keyword “musk” im Zeitverlauf nach Subreddit",
+    "text": "Beiträge mit Keyword “musk” im Zeitverlauf nach Subreddit\nVisualisierung mit 🐈🐈4CAT🐈🐈"
+  },
+  {
+    "objectID": "content/06-api_access-reddit/slides/index.html#beiträge-mit-keyword-musk-im-zeitverlauf-1",
+    "href": "content/06-api_access-reddit/slides/index.html#beiträge-mit-keyword-musk-im-zeitverlauf-1",
+    "title": "API-Access – Reddit",
+    "section": "Beiträge mit Keyword “musk” im Zeitverlauf",
+    "text": "Beiträge mit Keyword “musk” im Zeitverlauf\nBetrachtung von beiden Subreddits (news & worldnews )\n\nmusk %>% \n  mutate(date  = as.factor(date(timestamp))) %>%\n  plot_frq(date,\n           title = \"Post including 'musk' on Reddit\") +\n  labs(subtitle = \"Subreddits 'news' & 'worldnews' between 14-11 and 26-11-2022\")"
+  },
+  {
+    "objectID": "content/06-api_access-reddit/slides/index.html#beiträge-mit-keyword-musk-im-zeitverlauf-2",
+    "href": "content/06-api_access-reddit/slides/index.html#beiträge-mit-keyword-musk-im-zeitverlauf-2",
+    "title": "API-Access – Reddit",
+    "section": "Beiträge mit Keyword “musk” im Zeitverlauf",
+    "text": "Beiträge mit Keyword “musk” im Zeitverlauf\nUnterschieden nach Subreddits (news & worldnews )\n\n\n\n\nmusk %>%\n  mutate(date  = as.factor(date(timestamp)),\n         across(subreddit, as.factor)) %$% \n  plot_grpfrq(date, subreddit,\n              title = \"Post including 'musk' on Reddit\") +\n  labs(subtitle = \"Between 14-11 and 26-11-2022\")"
+  },
+  {
+    "objectID": "content/06-api_access-reddit/06-exercise.html#background",
+    "href": "content/06-api_access-reddit/06-exercise.html#background",
+    "title": "Showcase",
+    "section": "Background",
+    "text": "Background\nThs showcase has two different goals:\n\nExemplary presentation of the collection of  Reddit data using the RedditExtractoR package\nImporting and analyzing the data collected with the 🐈🐈 4CAT 🐈🐈 tool."
+  },
+  {
+    "objectID": "content/06-api_access-reddit/06-exercise.html#data-collection-with-redditextractor",
+    "href": "content/06-api_access-reddit/06-exercise.html#data-collection-with-redditextractor",
+    "title": "Showcase",
+    "section": "Data collection with RedditExtractor",
+    "text": "Data collection with RedditExtractor\nReddit Extractor is an R package for extracting data out of Reddit. It allows you to:\n\nfind subreddits based on a search query\nfind a user and their Reddit history\nfind URLs to threads of interest and retrieve comments out of these threads\n\n\n\n\n\n\n\nDisclaimer\n\n\n\nUnfortunately, the functions of the RedditExtractoR package can NOT be executed during the Markdown creation process and must be reproduced “live”.\nTherefore, there will be no output for the next two paragraphs.\n\n\n\nExample: Find subreddits\nSimilar to the example from the seminar, the function find_subreddits identifies all subreddits that contain the keyword news either in their name or in their attributes.\n\nlibrary(tidyverse)\nlibrary(RedditExtractoR)\n\n# Get list of subreddits\nnews <- find_subreddits(\"news\")\n\n# Quick preview of the dataset\nnews %>% glimpse()\n\n# Arrange subreddits by subscribers\nnews %>% \n  arrange(-subscribers) %>% \n  tibble() %>% head()\n\n\n\nExample: Find thread URLs\n\n# Get list of top thread urls\nnews_top_urls <- find_thread_urls(\n  subreddit = \"news\", \n  sort_by = \"top\", \n  period = \"month\"\n)\n\n# Quick preview of dataset\nnews_top_urls %>% glimpse()\nnews_top_urls %>% tibble()"
+  },
+  {
+    "objectID": "content/06-api_access-reddit/06-exercise.html#analysis-of-collected-4cat-data",
+    "href": "content/06-api_access-reddit/06-exercise.html#analysis-of-collected-4cat-data",
+    "title": "Showcase",
+    "section": "Analysis of collected 🐈🐈 4CAT 🐈🐈 data",
+    "text": "Analysis of collected 🐈🐈 4CAT 🐈🐈 data\n\nData import from \n\n# load packages\nlibrary(readr)\n\n# get data from github\nmusk <- read_csv(\n  \"https://raw.githubusercontent.com/chrdrn/dbd_binder/main/data/06-reddit/4cat-reddit_news-musk_complete.csv\")\n\nmusk_entities <- read_csv(\n  \"https://raw.githubusercontent.com/chrdrn/dbd_binder/main/data/06-reddit/4cat-reddit_news-musk-named_entities.csv\")\n\n# quick preview\nmusk %>% glimpse()\n\nRows: 4,838\nColumns: 16\n$ thread_id      <chr> \"yugsz0\", \"yt59ku\", \"yulq2v\", \"yulq2v\", \"yulq2v\", \"yulq…\n$ id             <chr> \"iw9mhr7\", \"iw9tzrz\", \"iwa0egr\", \"iwa10h3\", \"iwa1gry\", …\n$ timestamp      <dttm> 2022-11-14 00:13:59, 2022-11-14 01:11:53, 2022-11-14 0…\n$ body           <chr> \"Nick Cannon and Elon Musk need to put a damn condom on…\n$ subject        <lgl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…\n$ author         <chr> \"fbe0d753750a9f008871e6e829b727bf26cc2bdcdc71f340\", \"89…\n$ author_flair   <chr> \"aadb59c4da75af6c9fb8d5cb4c310ce59888aab7f96ffc15\", \"aa…\n$ post_flair     <lgl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…\n$ domain         <lgl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…\n$ url            <lgl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…\n$ image_file     <lgl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…\n$ image_md5      <lgl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…\n$ subreddit      <chr> \"worldnews\", \"news\", \"news\", \"news\", \"news\", \"news\", \"n…\n$ parent         <chr> \"t3_yugsz0\", \"t1_iw4y0aj\", \"t3_yulq2v\", \"t3_yulq2v\", \"t…\n$ score          <dbl> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1…\n$ unix_timestamp <dbl> 1668384839, 1668388313, 1668391383, 1668391676, 1668391…\n\nmusk_entities %>% glimpse()\n\nRows: 3,633\nColumns: 3\n$ word   <chr> \"musk\", \"twitter\", \"twitter\", \"elon musk\", \"tesla\", \"trump\", \"t…\n$ entity <chr> \"PERSON\", \"PERSON\", \"PRODUCT\", \"PRODUCT\", \"ORG\", \"ORG\", \"GPE\", …\n$ count  <dbl> 1147, 861, 479, 404, 345, 273, 222, 218, 205, 187, 154, 132, 13…\n\n\n\n\nMessages including ‘musk’ over time\n\n\n\n\n\n\nTip\n\n\n\nThe following graphics (and especially their labels) may appear very small. To view the graphics in their original size, right-click on the images and select “Open image/graphic in new tab”.\n\n\n\nTotal\n\nlibrary(lubridate)\nlibrary(sjPlot)\n\n# Display \nmusk %>% \n  mutate(date  = as.factor(date(timestamp))) %>% \n  plot_frq(\n    date,\n    title = \"Post including 'musk' on Reddit\") +\n  labs(subtitle = \"Subreddits 'news' & 'worldnews' between 14-11 and 26-11-2022\")\n\n\n\n\n\n\nBy subreddit\n\nlibrary(magrittr)\n\nmusk %>% \n  mutate(\n    date  = as.factor(date(timestamp)),\n    across(subreddit, as.factor)\n    ) %$% \n  plot_grpfrq(\n    date,\n    subreddit,\n    title = \"Post including 'musk' on Reddit\") +\n  labs(subtitle = \"Between 14-11 and 26-11-2022\")"
+  },
+  {
+    "objectID": "content/06-api_access-reddit/06-slides.html",
+    "href": "content/06-api_access-reddit/06-slides.html",
+    "title": "Slides",
+    "section": "",
+    "text": "Below you find the slides for the sixth session:\n\n\n\nIf you want to see the slides in full screen, you can click here. To download them as PDFs, hit the ‘e’ button when you got the presentation open and then Ctrl+P print to PDF. This will work best in Chrome."
   }
 ]

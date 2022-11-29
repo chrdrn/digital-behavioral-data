@@ -563,14 +563,14 @@
 <h1>Group Activity</h1>
 <p>Gruppenarbeit zu <code>4CAT: Capture and Analysis Toolkit</code></p>
 </section>
-<section id="what-is-it-an-who-made-it" class="slide level2">
-<h2>What is it an who made it</h2>
-<h4 id="hintergrundinformationen-4catpeeters2022">Hintergrundinformationen <a href="https://github.com/digitalmethodsinitiative/4cat"><code>4CAT</code></a><span class="citation" data-cites="peeters2022">(<a href="#/literatur" role="doc-biblioref" onclick="">Peeters &amp; Hagen, 2022</a>)</span></h4>
+<section id="what-is-it-who-made-it" class="slide level2">
+<h2>What is it &amp; who made it?</h2>
+<h4 id="hintergrundinformationen-4cat-peeters2022">Hintergrundinformationen <a href="https://github.com/digitalmethodsinitiative/4cat"><code>4CAT</code></a> <span class="citation" data-cites="peeters2022">(<a href="#/literatur" role="doc-biblioref" onclick="">Peeters &amp; Hagen, 2022</a>)</span></h4>
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
-<li><p>Tool zur Analyse und Verarbeitung von Daten aus sozialen Online-Plattformen</p></li>
-<li><p>Ziel ist es, die Erfassung und Analyse von Daten aus diesen Plattformen über eine Webschnittstelle zugänglich zu machen, ohne dass Programmier- oder Web-Scraping-Kenntnisse erforderlich sind.</p></li>
+<li><p>Tool zur Analyse und Verarbeitung von <strong>Daten aus sozialen Online-Plattformen</strong></p></li>
+<li><p>Ziel ist es, die Erfassung und Analyse von Daten aus diesen Plattformen über eine Webschnittstelle zugänglich zu machen, <strong>ohne dass Programmier- oder Web-Scraping-Kenntnisse erforderlich</strong> sind.</p></li>
 </ul>
 </div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
@@ -581,9 +581,9 @@
 </div>
 </div>
 </section>
-<section id="fa-brands-reddit-alien-reddit-als-nachrichtenquelle" class="slide level2">
-<h2><i class="fa-brands fa-reddit-alien" aria-label="reddit-alien"></i> Reddit als Nachrichtenquelle … ?</h2>
-<h4 id="hintergrund-soziale-medien-als-nachrichtenquelle">Hintergrund: Soziale Medien als Nachrichtenquelle</h4>
+<section id="soziale-medien-sind-quelle-für-nachrichten" class="slide level2">
+<h2>Soziale Medien sind Quelle für Nachrichten</h2>
+<h4 id="medienkonsum-in-wandel">Medienkonsum in Wandel</h4>
 <iframe title="Proportion that used each source of news in the last week" aria-label="Interactive line chart" id="datawrapper-chart-GrRao" src="https://datawrapper.dwcdn.net/GrRao/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="550">
 </iframe>
 <script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();</script>
@@ -600,11 +600,10 @@
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-<p>:::</p>
 </section>
-<section id="noch-nicht-in-deutschland" class="slide level2">
-<h2>… (noch) Nicht in Deutschland!</h2>
-<h4 id="soziale-medien-als-nachrichten-in-deusa">Soziale Medien als Nachrichten in DE/USA</h4>
+<section id="und-fa-brands-reddit-alien-noch-nicht-in-deutschland" class="slide level2">
+<h2>Und <i class="fa-brands fa-reddit-alien" aria-label="reddit-alien"></i>? (Noch) Nicht in Deutschland!</h2>
+<h4 id="nutzung-sozialer-medien-als-nachrichtenquelle-in-deutschland-usa">Nutzung sozialer Medien als Nachrichtenquelle in Deutschland &amp; USA</h4>
 <div class="columns">
 <div class="column" style="width:50%;">
 
@@ -619,7 +618,7 @@
 </div>
 </div>
 </section>
-<section id="and-now-you-reddit-als-newsfeed" class="slide level2">
+<section id="and-now-you-reddit-als-newsfeed" class="slide level2 smaller">
 <h2>And now … you: Reddit als Newsfeed</h2>
 <h4 id="group-activity-scrape-reddit-mit-4cat">Group activity: Scrape Reddit mit 4CAT</h4>
 <div class="callout callout-note no-icon callout-captioned callout-style-simple">
@@ -628,20 +627,46 @@
 <p><strong>Ziel der Group Activity</strong></p>
 </div>
 <div class="callout-content">
-<p>Durchsuchen Sie die Subreddits r/news und r/worldnews nach Posts zu einem bestimmten Thema/Begriff und analysieren Sie diese mit Hilfe von 4CAT</p>
+<p>Durchsuchen Sie die Subreddits <code>r/news</code> und <code>r/worldnews</code> nach Posts zu einem bestimmten Thema/Begriff und analysieren Sie diese mit Hilfe von 4CAT</p>
 </div>
 </div>
 </div>
-<div style="font-size: smaller">
+<div class="fragment highlight-current-red" data-fragment-index="1">
 <ol type="1">
-<li><p>Überlegen Sie (in Gruppen), welches Thema Sie untersuchen wollen und mit welchen Begriffen Sie Beiträge zu diesem Thema identifizieren könnten.</p></li>
-<li><p>Öffnen Sie 4CAT ➡️Create dataset ➡️ Data source: <code>Reddit</code></p></li>
-<li><p>Geben Sie <code>news, worldness</code> an beim Feld <code>Subreddit(s)</code></p></li>
-<li><p>Geben Sie Ihre(n) Suchbegriff(e) im Feld <code>Message search</code> ein.</p></li>
-<li><p>Wählen Sie die letzten zwei Wochen als <code>Date range</code></p></li>
-<li><p>Benennen Sie ihrem Datensatz im Feld <code>Dataset name</code></p></li>
-<li><p><em>Optional: Probieren Sie die verschiedenen Analysemöglichkeiten aus</em></p></li>
+<li>Überlegen Sie (in Gruppen), <strong>welches Thema</strong> Sie untersuchen wollen und mit <strong>welchen Begriffen</strong> Sie Beiträge zu diesem Thema identifizieren könnten.</li>
 </ol>
+</div>
+<div class="fragment highlight-current-red" data-fragment-index="2">
+<ol start="2" type="1">
+<li>Öffnen Sie 4CAT ➡️Create dataset ➡️ Data source: <code>Reddit</code></li>
+</ol>
+</div>
+<div class="fragment highlight-current-red" data-fragment-index="3">
+<ol start="3" type="1">
+<li>Geben Sie <code>news, worldness</code> an beim Feld <code>Subreddit(s)</code></li>
+</ol>
+</div>
+<div class="fragment highlight-current-red" data-fragment-index="4">
+<ol start="4" type="1">
+<li>Geben Sie <strong>Ihre(n) Suchbegriff(e)</strong> im Feld <code>Message search</code> ein.</li>
+</ol>
+</div>
+<div class="fragment highlight-current-red" data-fragment-index="5">
+<ol start="5" type="1">
+<li>Wählen Sie (<u>maximal</u>) die <strong>letzten zwei Wochen</strong> als <code>Date range</code></li>
+</ol>
+</div>
+<div class="fragment highlight-current-red" data-fragment-index="6">
+<ol start="6" type="1">
+<li>Benennen Sie ihrem Datensatz im Feld <code>Dataset name</code></li>
+</ol>
+</div>
+<div class="fragment fade-in" data-fragment-index="7">
+<div class="fragment highlight-red">
+<ol start="7" type="1">
+<li><em>Optional: Probieren Sie verschiedenen Analysemöglichkeiten aus</em></li>
+</ol>
+</div>
 </div>
 </section></section>
 <section>
@@ -653,49 +678,39 @@
 
 </div>
 </section>
-<section id="same-same-but-different" class="slide level2">
-<h2>Same, same, but different</h2>
-<h4 id="unterschiedliche-praktische-beispiele">Unterschiedliche praktische Beispiele</h4>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><strong>Grundsätzlich zwei kleine Analysen:</strong></p>
+<section id="tools-2-analysen" class="slide level2">
+<h2>2 Tools, 2 Analysen</h2>
+<h4 id="beispiele-für-auswertung-mit-4cat-fa-brands-r-project-rstudio">Beispiele für Auswertung mit 🐈🐈<span class="smallcaps">4CAT</span>🐈🐈 &amp; <i class="fa-brands fa-r-project" aria-label="r-project"></i> RStudio</h4>
+<p>Zwei (einfache) Szenarien:</p>
 <ol type="1">
 <li><p><strong>Visualisierung</strong> der Anzahl der Beiträge im <strong>Zeitverlauf</strong></p></li>
 <li><p>Erstellung einer <strong>Wordcloud</strong> mit den meistgenannten <strong>Named Entities</strong></p></li>
 </ol>
-</div><div class="column" style="width:50%;">
-<p><em>Aber</em>: Beispiele für</p>
-<ul>
-<li><p>🐈🐈<span class="smallcaps">4CAT</span>🐈🐈</p></li>
-<li><p><i class="fa-brands fa-r-project" aria-label="r-project"></i> RStudio</p></li>
-</ul>
-</div>
-</div>
 </section>
-<section id="beiträge-im-zeitverlauf" class="slide level2">
-<h2>Beiträge im Zeitverlauf</h2>
+<section id="beiträge-mit-keyword-musk-im-zeitverlauf" class="slide level2">
+<h2>Beiträge mit Keyword <span class="smallcaps">“musk”</span> im Zeitverlauf</h2>
 <h4 id="visualisierung-mit-4cat">Visualisierung mit 🐈🐈<span class="smallcaps">4CAT</span>🐈🐈</h4>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="r-stack">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/analysis_01-01.png"></p>
+<p><img data-src="images/analysis_01-01.png" class="fragment fade-out" data-fragment-index="1"></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/analysis_01-02.png" class="fragment" data-fragment-index="1"></p>
+<p><img data-src="images/analysis_01-02.png" class="fragment fade-in-then-semi-out" data-fragment-index="1"></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/analysis_01-03.png" class="fragment" data-fragment-index="2"></p>
+<p><img data-src="images/analysis_01-03.png" class="fragment fade-in-then-semi-out" data-fragment-index="2"></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/analysis_01-04.png" class="fragment" data-fragment-index="3"></p>
+<p><img data-src="images/analysis_01-04.png" class="fragment fade-in-then-semi-out" data-fragment-index="3"></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
@@ -708,12 +723,12 @@
 <div class="r-stack">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/result_01-00.png" class="fragment semi-fade-out" data-fragment-index="1"></p>
+<p><img data-src="images/result_01-00.png" class="fragment fade-out" data-fragment-index="1"></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/result_01-01.png" class="fragment" data-fragment-index="1"></p>
+<p><img data-src="images/result_01-01.png" class="fragment fade-in-then-semi-out" data-fragment-index="1"></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
@@ -776,7 +791,7 @@
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/analysis_03-03.png" class="fragment fade-in-then-semi-out" data-fragment-index="2"></p>
+<p><img data-src="images/analysis_03-03b.png" class="fragment fade-in-then-semi-out" data-fragment-index="2"></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
@@ -836,31 +851,31 @@ $ count  &lt;dbl&gt; 1147, 861, 479, 404, 345, 273, 222, 218, 205, 187, 154, 132
 </div>
 </div>
 </section>
-<section id="messages-im-zeitverlauf-1" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Messages im Zeitverlauf (1)</h2>
+<section id="beiträge-mit-keyword-musk-im-zeitverlauf-1" class="slide level2">
+<h2>Beiträge mit Keyword <span class="smallcaps">“musk”</span> im Zeitverlauf</h2>
 <h4 id="betrachtung-von-beiden-subreddits-news-worldnews">Betrachtung von beiden Subreddits (<code>news</code> &amp; <code>worldnews</code> )</h4>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb5-1" class="hljs-ln-code"><a href="#cb5-1"></a>musk <span class="sc">%&gt;%</span> </span>
-<span id="cb5-2" class="hljs-ln-code"><a href="#cb5-2"></a>  <span class="fu">mutate</span>(<span class="at">date  =</span> <span class="fu">as.factor</span>(<span class="fu">date</span>(timestamp))) <span class="sc">%&gt;%</span></span>
-<span id="cb5-3" class="hljs-ln-code"><a href="#cb5-3"></a>  <span class="fu">plot_frq</span>(date,</span>
-<span id="cb5-4" class="hljs-ln-code"><a href="#cb5-4"></a>           <span class="at">title =</span> <span class="st">"Post including 'musk' on Reddit"</span>) <span class="sc">+</span></span>
-<span id="cb5-5" class="hljs-ln-code"><a href="#cb5-5"></a>  <span class="fu">labs</span>(<span class="at">subtitle =</span> <span class="st">"Subreddits 'news' &amp; 'worldnews' between 14-11 and 26-11-2022"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>musk <span class="sc">%&gt;%</span> </span>
+<span id="cb5-2"><a href="#cb5-2"></a>  <span class="fu">mutate</span>(<span class="at">date  =</span> <span class="fu">as.factor</span>(<span class="fu">date</span>(timestamp))) <span class="sc">%&gt;%</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a>  <span class="fu">plot_frq</span>(date,</span>
+<span id="cb5-4"><a href="#cb5-4"></a>           <span class="at">title =</span> <span class="st">"Post including 'musk' on Reddit"</span>) <span class="sc">+</span></span>
+<span id="cb5-5"><a href="#cb5-5"></a>  <span class="fu">labs</span>(<span class="at">subtitle =</span> <span class="st">"Subreddits 'news' &amp; 'worldnews' between 14-11 and 26-11-2022"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="index_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch quarto-figure-center"></section>
-<section id="messages-im-zeitverlauf-2" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Messages im Zeitverlauf (2)</h2>
+<section id="beiträge-mit-keyword-musk-im-zeitverlauf-2" class="slide level2">
+<h2>Beiträge mit Keyword <span class="smallcaps">“musk”</span> im Zeitverlauf</h2>
 <h4 id="unterschieden-nach-subreddits-news-worldnews">Unterschieden nach Subreddits (<code>news</code> &amp; <code>worldnews</code> )</h4>
 <div class="cell">
 
 </div>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb6-1" class="hljs-ln-code"><a href="#cb6-1"></a>musk <span class="sc">%&gt;%</span></span>
-<span id="cb6-2" class="hljs-ln-code"><a href="#cb6-2"></a>  <span class="fu">mutate</span>(<span class="at">date  =</span> <span class="fu">as.factor</span>(<span class="fu">date</span>(timestamp)),</span>
-<span id="cb6-3" class="hljs-ln-code"><a href="#cb6-3"></a>         <span class="fu">across</span>(subreddit, as.factor)) <span class="sc">%$%</span> </span>
-<span id="cb6-4" class="hljs-ln-code"><a href="#cb6-4"></a>  <span class="fu">plot_grpfrq</span>(date, subreddit,</span>
-<span id="cb6-5" class="hljs-ln-code"><a href="#cb6-5"></a>              <span class="at">title =</span> <span class="st">"Post including 'musk' on Reddit"</span>) <span class="sc">+</span></span>
-<span id="cb6-6" class="hljs-ln-code"><a href="#cb6-6"></a>  <span class="fu">labs</span>(<span class="at">subtitle =</span> <span class="st">"Between 14-11 and 26-11-2022"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>musk <span class="sc">%&gt;%</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a>  <span class="fu">mutate</span>(<span class="at">date  =</span> <span class="fu">as.factor</span>(<span class="fu">date</span>(timestamp)),</span>
+<span id="cb6-3"><a href="#cb6-3"></a>         <span class="fu">across</span>(subreddit, as.factor)) <span class="sc">%$%</span> </span>
+<span id="cb6-4"><a href="#cb6-4"></a>  <span class="fu">plot_grpfrq</span>(date, subreddit,</span>
+<span id="cb6-5"><a href="#cb6-5"></a>              <span class="at">title =</span> <span class="st">"Post including 'musk' on Reddit"</span>) <span class="sc">+</span></span>
+<span id="cb6-6"><a href="#cb6-6"></a>  <span class="fu">labs</span>(<span class="at">subtitle =</span> <span class="st">"Between 14-11 and 26-11-2022"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="index_files/figure-revealjs/unnamed-chunk-5-1.png" width="1536" class="r-stretch quarto-figure-center"></section></section>
@@ -873,22 +888,20 @@ $ count  &lt;dbl&gt; 1147, 861, 479, 404, 345, 273, 222, 218, 205, 187, 154, 132
 <h2>Vielen Dank für Ihre Fragen!</h2>
 <div class="fragment semi-fade-out" data-fragment-index="1">
 <blockquote>
-<p>Ist es denkbar, dass YouTube eines Tages von anderen sozialen Plattformen wie Instagram oder Spotify überholt wird, an Bekanntheit verliert oder sogar ganz von der Bildfläche verschwindet?</p>
+<p>Die Reddit <strong>API erlaubt nur bis 500 Kommentare pro Post</strong> über ein automatisches Tool zu ‘extrahieren’. Manuell ist es jedoch möglich über diese Grenze hinaus zu gehen. Wie kann das sein? Das würde ja bedeuten, dass man die <strong>Regeln der Reddit API manuell umgehen kann</strong>?</p>
 </blockquote>
 </div>
 <div class="fragment fade-in-then-semi-out" data-fragment-index="1">
 <blockquote>
-<p>Youtube-Influencer verdienen etwa das Doppelte mit Werbeanzeigen auf YouTube, als wenn sie Werbeanzeigen auf Facebook oder Instagram schalten würden (2016). Kann das im Jahr 2022 immer noch bestätigt werden? Sind Werbeanzeigen auf YouTube erfolgreicher und haben eine weitere Reichweite im Vergleich mit Instagram?</p>
+<p>In dem Paper wird darauf hingewiesen, dass die <strong>Verwendung der API</strong> von Reddit ein möglicher <strong>Verstoß</strong> gegen die <strong>Nutzungsvereinbarungen</strong> ist. <strong>Wann</strong> würde so ein <strong>Fall eintreten</strong> bzw. wann spricht man von einem Verstoß und was wäre dann die <strong>Bestrafung</strong>?</p>
 </blockquote>
-</div>
-<div class="fragment fade-in-then-semi-out" data-fragment-index="2">
 <blockquote>
-<p>Es wird das Tool <strong>Webometric</strong> erwähnt, ein automatisiertes Instrument für die Sammlung von Social Media Daten über die API der Plattform YouTube. Wie sieht Webometric genau aus und wie werden die Daten über dieses Tool extrahiert?</p>
+<p>Wie kann es sein, dass Reddit eine <strong>kostenlose API</strong> zur verfügung stellt, die Nutzung dieser dann aber <strong>teilweise nicht legal</strong> sein kann?</p>
 </blockquote>
 </div>
 <div class="fragment fade-in-then-semi-out" data-fragment-index="3">
 <blockquote>
-<p>Es wird oft darüber geredet, dass das „Recommendation System” fehlerhaft sei und bestimmte Videos trotz mangelnde Performance trotzdem empfohlen werden oder in den Trends landen (z.B Amerikanische Late Night Shows). Wie kann in der Forschung verhindert werden, dass Resultate entstehen die nicht den tatsächlichen Verhaltensdaten der Konsumenten entstehen.</p>
+<p>Es wird erwähnt, dass viele Nutzer mehrere Accounts haben und dementsprechend Diskussionen in bestimmten Subreddits stärker beeinflussen können. Besteht die <strong>Möglichkeit solche Accounts zu erkennen</strong> und angemessen in der Studie zu berücksichtigen <strong>ohne</strong> die <strong>Datenschutzrichtlinien</strong> <strong>zu verletzen</strong>?</p>
 </blockquote>
 </div>
 </section>
@@ -896,17 +909,17 @@ $ count  &lt;dbl&gt; 1147, 861, 479, 404, 345, 273, 222, 218, 205, 187, 154, 132
 <h2>Let’s discuss</h2>
 <div class="fragment semi-fade-out" data-fragment-index="1">
 <blockquote>
-<p>Sophie Bishop meint es wäre interessant die Forschung zum Algorithmus von YouTube dahingehend zu erweitern, dass man untersucht was Nutzer denken, wie der Algorithmus funktioniert. Wie würde man bei dieser Fragestellung vorgehen bzw. wie könnte man das untersuchen?</p>
+<p>Viele Social Media Plattformen, wie Instagram, Facebook und Twitter beschränken ihren API Zugang. <strong>Weshalb</strong> legt <strong>Reddit</strong> den <strong>API</strong> Zugang im Gegensatz zu den anderen Plattformen so <strong>offen</strong> dar?</p>
 </blockquote>
 </div>
 <div class="fragment fade-in-then-semi-out" data-fragment-index="1">
 <blockquote>
-<p>Inwiefern kann YouTube als Soziales Netzwerk verstanden werden, wenn nur ein kleiner Bruchteil seiner User sich durch Upload von Content am Informationsaustausch beteiligt und der Großteil “nur” konsumiert?</p>
+<p>Viele der Reddit-Daten basierenden Publikationen enthielten <strong>nur unvollständige oder zweideutige Beschreibungen ihrer Datensätze</strong>. Auch die Methoden der Datenerhebung bleiben teilweise verschleiert. Warum ist das so und welche ethischen Gründe liegen hier möglicherweise zu Grunde?</p>
 </blockquote>
 </div>
 <div class="fragment fade-in-then-semi-out" data-fragment-index="3">
 <blockquote>
-<p>YouTube besteht als Social Media Platform länger als die meisten anderen Plattformen (Twitter, Instagram, TikTok, etc.) und besitzt so gut wie weltweite Bekanntheit. Warum ist die Forschung in Richtung YouTube trotzdem so gering?</p>
+<p>Wie stark sind <strong>Reddit-Date</strong>n (evtl. auch im Vergleich zu Twitter) <strong>generalisierbar</strong>, wenn die Struktur von Reddit doch Diskussionen und Gespräche in gewisser Weise leitet (z.B. durch Sichtbarkeit von Themen)?</p>
 </blockquote>
 </div>
 </section></section>

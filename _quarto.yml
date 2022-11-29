@@ -34,6 +34,10 @@ website:
         contents:
           - "content/05-api_access-youtube/05-slides.qmd"
           - "content/05-api_access-youtube/05-exercise.qmd"
+      - section: "API Access: Reddit"
+        contents:
+          - "content/06-api_access-reddit/06-slides.qmd"
+          - "content/06-api_access-reddit/06-exercise.qmd"
       
 
 format:
