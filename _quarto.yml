@@ -3,6 +3,7 @@ project:
   output-dir: docs
 
 website:
+  favicon: "images/logo_fau.svg"
   reader-mode: true
   page-footer: 
    left: "Copyright 2022, Christoph Adrian"
