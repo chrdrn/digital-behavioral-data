@@ -1,0 +1,173 @@
+---
+title: "Showcase"
+subtitle: "Focus on Zeeschuimer"
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+execute: 
+  cache: true
+  eval: true
+  echo: true
+  message: false
+  warning: false
+highlight-style: atom-one
+---
+
+```{r}
+#| echo: false
+options(scipen = 999)
+
+pacman::p_load(
+  here, fs, # file management
+  sjmisc, magrittr, lubridate, janitor, # data processing
+  sjPlot, # analysis
+  quanteda, quanteda.textplots, # text processing
+  tidyverse  # last to resolve masking issues
+)
+```
+
+## Background
+
+This showcase is intended to illustrate different analysis possibilities of {{< fa brands tiktok >}} TikTok data downloaded with the [`Zeeschuimer`](https://github.com/digitalmethodsinitiative/zeeschuimer) browser extension.
+
+You can also open this showcase in other interactive and executable environments:
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/chrdrn/dbd_binder/HEAD)
+[![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chrdrn/dbd_binder/blob/main/session_07-showcase_tiktok.ipynb)
+
+## Data analysis
+
+-   TikToks that are tagged with the hashtag `statistics`
+
+-   collected via [`Zeeschuimer`](https://github.com/digitalmethodsinitiative/zeeschuimer) with .csv export via 🐈🐈 [**4CAT**](https://github.com/digitalmethodsinitiative/4cat)  🐈🐈
+
+### Data import from {{< fa brands github >}}
+
+```{r}
+# load packages
+library(readr)
+
+statistics <- read_csv(
+  here("content/07-webscraping-tiktok/data/tiktok-search-statistics.csv"), 
+  col_types = cols(author_followers = col_number()))
+
+# quick preview
+statistics %>% glimpse()
+```
+
+### Exploration
+
+::: callout-important
+## Tip
+
+The following graphics (and especially their labels) may appear very small. To view the graphics in their original size, right-click on the images and select "Open image/graphic in new tab".
+:::
+
+#### Periode in which the TikToks were posted
+
+```{r}
+#| fig-width: 16
+#| fig-height: 9
+
+# Load packages
+library(lubridate)
+library(sjPlot)
+library(ggpubr)
+
+# Display 
+statistics %>% 
+  mutate(date  = as.factor(year(timestamp))) %>% 
+  plot_frq(date) +
+  theme_pubr()
+```
+
+#### Location parameters of different statistics
+
+```{r}
+statistics %>% 
+  select(likes:plays) %>% 
+  descr()
+```
+
+#### Distribution of likes
+
+```{r}
+statistics %>% 
+  plot_frq(likes, type = "density")
+```
+
+#### Warning messages displayed
+
+```{r}
+library(sjmisc)
+
+statistics %>% 
+  frq(warning)
+```
+
+### Text analysis
+
+#### Corpus creation
+
+```{r}
+# Create corpus based on variable hashtags
+crp <- corpus(
+  statistics, 
+  docid_field = "id",
+  text_field = "hashtags")
+
+# Display
+crp 
+```
+
+#### Tokenization
+
+```{r}
+# Create tokens based on corpus
+tkn <- crp %>% 
+  tokens(
+    remove_punct = TRUE,
+    remove_symbols = TRUE,
+    remove_url = TRUE,
+    remove_separators = TRUE)
+
+# Display
+tkn
+```
+
+#### Create Document-Feature-Matrix (DFM)
+
+```{r}
+# Create dfm based on tokens
+dfm <- tkn %>% 
+  dfm()
+
+# Display
+dfm
+```
+
+#### Wordcloud
+
+```{r}
+dfm %>% 
+  textplot_wordcloud(
+    min_size = 1,
+    max_size = 8,
+    max_words = 50,
+    rotation = 0
+  )
+```
+
+##### without the searchterm `statistics`
+
+```{r}
+dfm %>% 
+  dfm_remove(pattern = "statistics") %>% 
+  textplot_wordcloud(
+    min_size = 1,
+    max_size = 8,
+    max_words = 50,
+    rotation = 0,
+    color = "dodgerblue3"
+  )
+```

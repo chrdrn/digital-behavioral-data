@@ -1,0 +1,278 @@
+---
+title: "Web-Scraping – TikTok" 
+title-slide-attributes:
+  data-background-image: ../../00-images/background_title.svg
+  data-background-color: "#04316a"
+subtitle: "Digital behavioral data - Session 07"
+author: 
+  - name: Christoph Adrian 
+    url: https://twitter.com/chrdrn
+    affiliation: Lehrstuhl für Kommunikationswissenschaft
+    affiliation-url: https://www.kowi.rw.fau.de/person/christoph-adrian/
+date: 07 12 2022
+date-format: "DD.MM.YYYY"
+format:
+  revealjs:
+    theme: ../../slidetheme.scss
+    template-partials:
+      - title-slide.html
+    slide-number: true
+    chalkboard:
+      buttons: false
+    preview-links: auto
+    logo: ../../logo.png
+    footer: "[Digital Behavioral Data](https://chrdrn.github.io/digital-behavioral-data/)"
+highlight-style: atom-one
+comments:
+  hypothesis: 
+    theme: clean
+filters:
+  - roughnotation
+execute:
+  echo: true
+csl: ../../apa.csl
+editor_options: 
+  chunk_output_type: console
+bibliography: references.bib
+---
+
+## Seminarplan {.smaller}
+
+| Sitzung                                                | Datum                                                           | Thema                                                                              | Referent\*Innen                                                       |
+|------------------|------------------|-------------------|------------------|
+| [*1*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*26.10.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*Kick-Off Session*]{.rn rn-type="strike-through" rn-color="#E6002E"}              | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
+| [*2*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*02.11.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*DBD: Einführung und Überblick*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
+| [*3*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*09.11.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*DBD: Datenerhebung*]{.rn rn-type="strike-through" rn-color="#E6002E"}            | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
+| [*4*]{.rn rn-type="highlight"}                         | [*16.11.2022*]{.rn rn-type="highlight"}                         | [*API-Access (I): Twitter*]{.rn rn-type="highlight"}                               | [*Falk*]{.rn rn-type="highlight"}                                     |
+| *5*                                                    | *23.11.2022*                                                    | *API-Access (II): YouTube*                                                         | *Denisov*                                                             |
+| 6                                                      | 30.11.2022                                                      | API-Access (II): *Reddit*                                                          | Landauer                                                              |
+| **7**                                                  | **07.12.2022**                                                  | **Webscraping: *TikTok***                                                          | **Brand & Kocher**                                                    |
+| 8                                                      | 14.12.2022                                                      | Exkurs: DBD Analyse mit R                                                          | Christoph Adrian                                                      |
+|                                                        |                                                                 | *WEIHNACHTSPAUSE*                                                                  |                                                                       |
+| 9                                                      | 11.01.2023                                                      | ESM: *m-path*                                                                      | Dörr                                                                  |
+| 10                                                     | 18.01.2023                                                      | Data Donations                                                                     | Hofmann & Wierzbicki                                                  |
+| 11                                                     | 25.01.2023                                                      | *PUFFER*                                                                           |                                                                       |
+| 12                                                     | 02.02.2023                                                      | *Guest Lecture: Linking DBD & Survey data*                                         | [Johannes Breuer](https://www.johannesbreuer.com/)                    |
+| 13                                                     | 08.02.2023                                                      | Semesterabschluss & Evaluation                                                     | Christoph Adrian                                                      |
+
+::: notes
+▶️
+:::
+
+# Agenda
+
+1.  **Group Activity**
+2.  **Beispielhafte Anwendungen**
+3.  **Verständnis- und Diskussionsfragen**
+
+# Group Activity {background-color="#E6002E" background-image="../../00-images/background_group_activity.svg"}
+
+Gruppenarbeit zu `Zeeschuimer`
+
+## What is it & who made it?
+
+#### Hintergrundinformationen `Zeeschuimer` [@peeters2022a]
+
+::: columns
+::: {.column width="60%"}
+-   Browsererweiterung, die während des Besuchs einer Social-Media-Website Daten über die Elemente sammelt, die in der Weboberfläche einer Plattform zu sehen sind
+
+-   Derzeit werden die folgenden Plattformen unterstützt:
+
+    -   
+
+        {{< fa brands tiktok >}} über https://www.tiktok.com
+
+    -   
+
+        {{< fa brands instagram >}} über https://www.instagram.com
+
+-   Ergänzung zu [`4CAT`](https://github.com/digitalmethodsinitiative/4cat) [@peeters2022]\
+:::
+
+::: {.column width="40%"}
+![](https://raw.githubusercontent.com/digitalmethodsinitiative/zeeschuimer/master/images/example_screenshot.png){fig-align="center"}
+:::
+:::
+
+::: notes
+Die Zielgruppe sind Forscher, die systematisch Inhalte auf Social-Media-Plattformen untersuchen wollen, die sich dem herkömmlichen Scraping oder der API-basierten Datenerfassung widersetzen.\
+\
+Sie können z. B. TikTok durchsuchen und später eine Liste aller Beiträge in der Reihenfolge exportieren, in der Sie sie gesehen haben. Die Daten können als JSON-Datei exportiert oder zur Analyse und Speicherung in eine 4CAT-Instanz exportiert werden. Zeeschuimer ist in erster Linie als Ergänzung zu 4CAT gedacht, aber Sie können seine Ausgabe auch in Ihre eigene Analysepipeline integrieren.
+
+Die Plattformunterstützung erfordert regelmäßige Wartung, um mit den Änderungen auf den Plattformen Schritt zu halten. Wenn etwas nicht funktioniert, freuen wir uns über Probleme und Pull Request
+
+Die Erweiterung stört Sie nicht beim normalen Surfen und lädt niemals automatisch Daten hoch, sondern nur, wenn Sie sie ausdrücklich dazu auffordern.
+:::
+
+## And now ... you: Design your own {{< fa brands tiktok >}} research {.smaller}
+
+#### Group activity: Fragestellung ➡️ Datenerhebung ➡️Vergleich
+
+::: {.callout-note appearance="minimal"}
+## Ziel der Group Activity
+
+-   Führen Sie in **Zweiergruppen** eine **kleine Case Study** durch
+
+-   Überlegen Sie sich eine **Fragestellung**, für die Sie mit Hilfe von [`Zeeschuimer`](https://github.com/digitalmethodsinitiative/zeeschuimer)`-`Daten erheben und (potentiell) auswerten können
+
+-   **Präsentieren** Sie kurz Ihr Projekt mit Hilfe von **maximal 2 Powerpoint-Slides**
+:::
+
+::: {.fragment .highlight-current-red fragment-index="1"}
+1.  Überlegen Sie (in Gruppen), **welches Thema** Sie untersuchen wollen, d.h.
+    -   **welchen Begriffen** bzw. Hashtags Sie Beiträge zu diesem Thema identifizieren könnten
+
+    -   oder von **welchem Account** Sie sich die Beiträge anschauen wollen
+:::
+
+::: {.fragment .highlight-current-red fragment-index="2"}
+2.  Nutzen Sie die [`Zeeschuimer`-](https://github.com/digitalmethodsinitiative/zeeschuimer)**Browsererweiterung** und **laden** Sie **(jede Person** in der Gruppe) die für Ihre case study relevanten **Daten** herunter.
+:::
+
+::: {.fragment .highlight-current-red fragment-index="3"}
+3.  **Erkunden** Sie Ihren **Datensatz** und überlegen Sie sich potentielle **Auswertungsstrategien**.
+:::
+
+::: {.fragment .highlight-current-red fragment-index="4"}
+4.  Erstellen Sie eine **maximal 2 Folien umfassende Powerpoint-Präsentation**, mit
+    -   Ihrer **Fragestellung**
+
+    -   einer kurzen **Beschreibung Ihrer Erhebung**
+
+    -   die **nächsten (Analyse-)Schritte**
+:::
+
+::: notes
+*Optional: Vergleichen Sie die von Ihnen heruntergeladenen Datensätze.*
+
+-   *Sind die gleichen Beiträge enthalten?*
+
+-   *Wie hoch ist die Übereinstimmung (ungefähr)?*
+:::
+
+# Beispielhafte Auswertungen {background-color="#E6002E"}
+
+Im Fokus: {{< fa brands tiktok >}} Hashtag `#statistics`
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/chrdrn/dbd_binder/HEAD) [![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chrdrn/dbd_binder/blob/main/session_07-showcase_tiktok.ipynb) [![RStudio Quarto](https://img.shields.io/badge/RStudio-4285F4?style=for-the-badge&logo=rstudio&logoColor=white)](https://chrdrn.github.io/digital-behavioral-data/content/07-webscraping-tiktok/07-exercise.html)
+
+```{r}
+#| echo: false
+
+# Load packages
+library(knitr)
+library(kableExtra)
+library(tidyverse) # Preparation of the data
+library(quanteda) # Text mining
+library(quanteda.textstats) # Text statistics
+library(quanteda.textplots) # Visualisation of text data
+library(here)
+library(sjmisc)
+library(parameters)
+library(sjPlot)
+library(lubridate)
+library(ggthemes)
+library(ggpubr)
+
+# get data from github
+statistics <- read_csv(
+  here("content/07-webscraping-tiktok/data/tiktok-search-statistics.csv"), 
+  col_types = cols(author_followers = col_number()))
+
+```
+
+## Ein kurzer Überblick
+
+#### Struktur des {{< fa brands tiktok >}} TikTok-Datensatzes
+
+```{r}
+statistics %>% glimpse()
+```
+
+## Erstellung eines Korpus
+
+#### Textverarbeitung mit [`quanteda`](http://quanteda.io/) [@benoit2018]
+
+```{r}
+crp <- corpus(statistics, 
+              docid_field = "id",
+              text_field = "hashtags")
+crp
+```
+
+## Tokenisierung
+
+#### Textverarbeitung mit [`quanteda`](http://quanteda.io/) [@benoit2018]
+
+```{r}
+tkn <- crp %>% 
+  tokens(remove_punct = TRUE,
+         remove_symbols = TRUE,
+         remove_url = TRUE,
+         remove_separators = TRUE)
+tkn
+```
+
+## Erstellung einer Document-Feature-Matrix \[DFM\]
+
+#### Textverarbeitung mit [`quanteda`](http://quanteda.io/) [@benoit2018]
+
+```{r}
+dfm <- tkn %>%  dfm()
+dfm
+```
+
+## Welche Hashtags werden genutzt?
+
+#### Textvisualisierung mit [`quanteda.textplots`](https://github.com/quanteda/quanteda.textplots)
+
+```{r}
+library(quanteda.textplots)
+dfm %>% textplot_wordcloud(
+  min_size = 1, max_size = 8, max_words = 50,
+  rotation = 0)
+```
+
+# **Verständnis- und Diskussionsfragen** {background-color="#E6002E" background-image="../../00-images/background_participation.svg"}
+
+Ihre Fragen aus MS Teams
+
+## Vielen Dank für Ihre Fragen! {.scrollable .smaller}
+
+::: {.fragment .semi-fade-out fragment-index="1"}
+> Die Reddit **API erlaubt nur bis 500 Kommentare pro Post** über ein automatisches Tool zu 'extrahieren'. Manuell ist es jedoch möglich über diese Grenze hinaus zu gehen. Wie kann das sein? Das würde ja bedeuten, dass man die **Regeln der Reddit API manuell umgehen kann**?
+:::
+
+::: {.fragment .fade-in-then-semi-out fragment-index="1"}
+> In dem Paper wird darauf hingewiesen, dass die **Verwendung der API** von Reddit ein möglicher **Verstoß** gegen die **Nutzungsvereinbarungen** ist. **Wann** würde so ein **Fall eintreten** bzw. wann spricht man von einem Verstoß und was wäre dann die **Bestrafung**?
+
+> Wie kann es sein, dass Reddit eine **kostenlose API** zur verfügung stellt, die Nutzung dieser dann aber **teilweise nicht legal** sein kann?
+:::
+
+::: {.fragment .fade-in-then-semi-out fragment-index="3"}
+> Es wird erwähnt, dass viele Nutzer mehrere Accounts haben und dementsprechend Diskussionen in bestimmten Subreddits stärker beeinflussen können. Besteht die **Möglichkeit solche Accounts zu erkennen** und angemessen in der Studie zu berücksichtigen **ohne** die **Datenschutzrichtlinien** **zu verletzen**?
+:::
+
+## Let's discuss
+
+::: {.fragment .semi-fade-out fragment-index="1"}
+> Viele Social Media Plattformen, wie Instagram, Facebook und Twitter beschränken ihren API Zugang. **Weshalb** legt **Reddit** den **API** Zugang im Gegensatz zu den anderen Plattformen so **offen** dar?
+:::
+
+::: {.fragment .fade-in-then-semi-out fragment-index="1"}
+> Viele der Reddit-Daten basierenden Publikationen enthielten **nur unvollständige oder zweideutige Beschreibungen ihrer Datensätze**. Auch die Methoden der Datenerhebung bleiben teilweise verschleiert. Warum ist das so und welche ethischen Gründe liegen hier möglicherweise zu Grunde?
+:::
+
+::: {.fragment .fade-in-then-semi-out fragment-index="3"}
+> Wie stark sind **Reddit-Date**n (evtl. auch im Vergleich zu Twitter) **generalisierbar**, wenn die Struktur von Reddit doch Diskussionen und Gespräche in gewisser Weise leitet (z.B. durch Sichtbarkeit von Themen)?
+:::
+
+# Time for questions {background-color="#E6002E" background-image="../../00-images/background_questions.svg"}
+
+# Bis zur nächsten Sitzung! {background-color="#E6002E" background-image="../../00-images/background_end_of_session.svg"}
+
+## Literatur
+
+::: {#refs}
+:::

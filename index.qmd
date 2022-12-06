@@ -4,7 +4,7 @@ subtitle: "Winter semester 2022/23"
 author: 
   - name: Christoph Adrian 
     url: https://twitter.com/chrdrn
-    affiliation: Lehrstuhl für Kommunikationswissenschaft
+    affiliation: Chair of Communication Science
     affiliation-url: https://www.kowi.rw.fau.de/person/christoph-adrian/
 bibliography: references.bib
 csl: content/apa.csl
@@ -51,11 +51,11 @@ Below is the scheudle for the current semester.
 | 7               | 07.12.2022               | Webscraping: *TikTok*                           |
 | 8               | 14.12.2022               | ESM: *m-path*                                   |
 | \-              | \-                       | *CHRISTMAS BREAK*                               |
-| 9               | 12.01.2023               | Data Donations                                  |
-| 10              | 19.01.2023               | Mock-Up-Virtual Environments                    |
-| 11              | 26.01.2023               | Open Science                                    |
+| 9               | 11.01.2023               | Data Donations                                  |
+| 10              | 18.01.2023               | Mock-Up-Virtual Environments                    |
+| 11              | 25.01.2023               | Open Science                                    |
 | 12              | 02.02.2023               | ***Guest Lecture: Linking DBD & Survey data***  |
-| 13              | 09.02.2023               | Closing Session: Recap, Evaluation & Discussion |
+| 13              | 08.02.2023               | Closing Session: Recap, Evaluation & Discussion |
 
 ## Copyright
 

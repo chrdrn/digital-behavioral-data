@@ -25,7 +25,7 @@
     "href": "index.html#schedule",
     "title": "Digital Behavioral Data",
     "section": "Schedule",
-    "text": "Schedule\nBelow is the scheudle for the current semester.\n\n\n\n\n\n\n\n\nSession\nDatum\nTopic\n\n\n\n\n1\n26.10.2022\nKick-Off Session\n\n\n2\n02.11.2022\nDBD: Introduction & Overview\n\n\n3\n09.11.2022\nDBD: Data collection process in focus\n\n\n4\n16.11.2022\nAPI-Access (I): Twitter\n\n\n5\n23.11.2022\nAPI-Access (II): YouTube\n\n\n6\n30.11.2022\nAPI-Access (III): Reddit\n\n\n7\n07.12.2022\nWebscraping: TikTok\n\n\n8\n14.12.2022\nESM: m-path\n\n\n-\n-\nCHRISTMAS BREAK\n\n\n9\n12.01.2023\nData Donations\n\n\n10\n19.01.2023\nMock-Up-Virtual Environments\n\n\n11\n26.01.2023\nOpen Science\n\n\n12\n02.02.2023\nGuest Lecture: Linking DBD & Survey data\n\n\n13\n09.02.2023\nClosing Session: Recap, Evaluation & Discussion"
+    "text": "Schedule\nBelow is the scheudle for the current semester.\n\n\n\n\n\n\n\n\nSession\nDatum\nTopic\n\n\n\n\n1\n26.10.2022\nKick-Off Session\n\n\n2\n02.11.2022\nDBD: Introduction & Overview\n\n\n3\n09.11.2022\nDBD: Data collection process in focus\n\n\n4\n16.11.2022\nAPI-Access (I): Twitter\n\n\n5\n23.11.2022\nAPI-Access (II): YouTube\n\n\n6\n30.11.2022\nAPI-Access (III): Reddit\n\n\n7\n07.12.2022\nWebscraping: TikTok\n\n\n8\n14.12.2022\nESM: m-path\n\n\n-\n-\nCHRISTMAS BREAK\n\n\n9\n11.01.2023\nData Donations\n\n\n10\n18.01.2023\nMock-Up-Virtual Environments\n\n\n11\n25.01.2023\nOpen Science\n\n\n12\n02.02.2023\nGuest Lecture: Linking DBD & Survey data\n\n\n13\n08.02.2023\nClosing Session: Recap, Evaluation & Discussion"
   },
   {
     "objectID": "index.html#copyright",
@@ -1628,7 +1628,7 @@
     "href": "content/06-api_access-reddit/06-exercise.html#background",
     "title": "Showcase",
     "section": "Background",
-    "text": "Background\nThs showcase has two different goals:\n\nExemplary presentation of the collection of  Reddit data using the RedditExtractoR package\nImporting and analyzing the data collected with the 🐈🐈 4CAT 🐈🐈 tool."
+    "text": "Background\nThs showcase has two different goals:\n\nExemplary presentation of the collection of  Reddit data using the RedditExtractoR package\nImporting and analyzing the data collected with the 🐈🐈 4CAT 🐈🐈 tool.\n\nYou can also open this showcase in other interactive and executable environments:"
   },
   {
     "objectID": "content/06-api_access-reddit/06-exercise.html#data-collection-with-redditextractor",
@@ -1650,5 +1650,166 @@
     "title": "Slides",
     "section": "",
     "text": "Below you find the slides for the sixth session:\n\n\n\nIf you want to see the slides in full screen, you can click here. To download them as PDFs, hit the ‘e’ button when you got the presentation open and then Ctrl+P print to PDF. This will work best in Chrome."
+  },
+  {
+    "objectID": "content/07-webscraping-tiktok/slides/index.html#seminarplan",
+    "href": "content/07-webscraping-tiktok/slides/index.html#seminarplan",
+    "title": "Web-Scraping – TikTok",
+    "section": "Seminarplan",
+    "text": "Seminarplan\n\n\n\nSitzung\nDatum\nThema\nReferent*Innen\n\n\n\n\n1\n26.10.2022\nKick-Off Session\nChristoph Adrian\n\n\n2\n02.11.2022\nDBD: Einführung und Überblick\nChristoph Adrian\n\n\n3\n09.11.2022\nDBD: Datenerhebung\nChristoph Adrian\n\n\n4\n16.11.2022\nAPI-Access (I): Twitter\nFalk\n\n\n5\n23.11.2022\nAPI-Access (II): YouTube\nDenisov\n\n\n6\n30.11.2022\nAPI-Access (II): Reddit\nLandauer\n\n\n7\n07.12.2022\nWebscraping: TikTok\nBrand & Kocher\n\n\n8\n14.12.2022\nExkurs: DBD Analyse mit R\nChristoph Adrian\n\n\n\n\nWEIHNACHTSPAUSE\n\n\n\n9\n11.01.2023\nESM: m-path\nDörr\n\n\n10\n18.01.2023\nData Donations\nHofmann & Wierzbicki\n\n\n11\n25.01.2023\nPUFFER\n\n\n\n12\n02.02.2023\nGuest Lecture: Linking DBD & Survey data\nJohannes Breuer\n\n\n13\n08.02.2023\nSemesterabschluss & Evaluation\nChristoph Adrian\n\n\n\n\n▶️"
+  },
+  {
+    "objectID": "content/07-webscraping-tiktok/slides/index.html#what-is-it-who-made-it",
+    "href": "content/07-webscraping-tiktok/slides/index.html#what-is-it-who-made-it",
+    "title": "Web-Scraping – TikTok",
+    "section": "What is it & who made it?",
+    "text": "What is it & who made it?\nHintergrundinformationen Zeeschuimer (Peeters, 2022)\n\n\n\nBrowsererweiterung, die während des Besuchs einer Social-Media-Website Daten über die Elemente sammelt, die in der Weboberfläche einer Plattform zu sehen sind\nDerzeit werden die folgenden Plattformen unterstützt:\n\n über https://www.tiktok.com\n über https://www.instagram.com\n\nErgänzung zu 4CAT (Peeters & Hagen, 2022)\n\n\n\n\n\n\n\n\n\n\n\nDie Zielgruppe sind Forscher, die systematisch Inhalte auf Social-Media-Plattformen untersuchen wollen, die sich dem herkömmlichen Scraping oder der API-basierten Datenerfassung widersetzen.\n\nSie können z. B. TikTok durchsuchen und später eine Liste aller Beiträge in der Reihenfolge exportieren, in der Sie sie gesehen haben. Die Daten können als JSON-Datei exportiert oder zur Analyse und Speicherung in eine 4CAT-Instanz exportiert werden. Zeeschuimer ist in erster Linie als Ergänzung zu 4CAT gedacht, aber Sie können seine Ausgabe auch in Ihre eigene Analysepipeline integrieren.\nDie Plattformunterstützung erfordert regelmäßige Wartung, um mit den Änderungen auf den Plattformen Schritt zu halten. Wenn etwas nicht funktioniert, freuen wir uns über Probleme und Pull Request\nDie Erweiterung stört Sie nicht beim normalen Surfen und lädt niemals automatisch Daten hoch, sondern nur, wenn Sie sie ausdrücklich dazu auffordern."
+  },
+  {
+    "objectID": "content/07-webscraping-tiktok/slides/index.html#and-now-you-design-your-own-fa-brands-tiktok-research",
+    "href": "content/07-webscraping-tiktok/slides/index.html#and-now-you-design-your-own-fa-brands-tiktok-research",
+    "title": "Web-Scraping – TikTok",
+    "section": "And now … you: Design your own  research",
+    "text": "And now … you: Design your own  research\nGroup activity: Fragestellung ➡️ Datenerhebung ➡️Vergleich\n\n\n\nZiel der Group Activity\n\n\n\nFühren Sie in Zweiergruppen eine kleine Case Study durch\nÜberlegen Sie sich eine Fragestellung, für die Sie mit Hilfe von Zeeschuimer-Daten erheben und (potentiell) auswerten können\nPräsentieren Sie kurz Ihr Projekt mit Hilfe von maximal 2 Powerpoint-Slides\n\n\n\n\n\n\nÜberlegen Sie (in Gruppen), welches Thema Sie untersuchen wollen, d.h.\n\nwelchen Begriffen bzw. Hashtags Sie Beiträge zu diesem Thema identifizieren könnten\noder von welchem Account Sie sich die Beiträge anschauen wollen\n\n\n\n\n\nNutzen Sie die Zeeschuimer-Browsererweiterung und laden Sie (jede Person in der Gruppe) die für Ihre case study relevanten Daten herunter.\n\n\n\n\nErkunden Sie Ihren Datensatz und überlegen Sie sich potentielle Auswertungsstrategien.\n\n\n\n\nErstellen Sie eine maximal 2 Folien umfassende Powerpoint-Präsentation, mit\n\nIhrer Fragestellung\neiner kurzen Beschreibung Ihrer Erhebung\ndie nächsten (Analyse-)Schritte\n\n\n\n\nOptional: Vergleichen Sie die von Ihnen heruntergeladenen Datensätze.\n\nSind die gleichen Beiträge enthalten?\nWie hoch ist die Übereinstimmung (ungefähr)?"
+  },
+  {
+    "objectID": "content/07-webscraping-tiktok/slides/index.html#tools-2-analysen",
+    "href": "content/07-webscraping-tiktok/slides/index.html#tools-2-analysen",
+    "title": "Web-Scraping – TikTok",
+    "section": "2 Tools, 2 Analysen",
+    "text": "2 Tools, 2 Analysen\n\nBeispiele für Auswertung mit 🐈🐈4CAT🐈🐈 &  RStudio\nZwei (einfache) Szenarien:\n\nVisualisierung der Anzahl der Beiträge im Zeitverlauf\nErstellung einer Wordcloud mit den meistgenannten Named Entities"
+  },
+  {
+    "objectID": "content/07-webscraping-tiktok/slides/index.html#beiträge-mit-keyword-musk-im-zeitverlauf",
+    "href": "content/07-webscraping-tiktok/slides/index.html#beiträge-mit-keyword-musk-im-zeitverlauf",
+    "title": "Web-Scraping – TikTok",
+    "section": "Beiträge mit Keyword “musk” im Zeitverlauf",
+    "text": "Beiträge mit Keyword “musk” im Zeitverlauf\n\nVisualisierung mit 🐈🐈4CAT🐈🐈"
+  },
+  {
+    "objectID": "content/07-webscraping-tiktok/slides/index.html#beiträge-im-zeitverlauf-nach-subreddit",
+    "href": "content/07-webscraping-tiktok/slides/index.html#beiträge-im-zeitverlauf-nach-subreddit",
+    "title": "Web-Scraping – TikTok",
+    "section": "Beiträge im Zeitverlauf nach Subreddit",
+    "text": "Beiträge im Zeitverlauf nach Subreddit\n\nVisualisierung mit 🐈🐈4CAT🐈🐈"
+  },
+  {
+    "objectID": "content/07-webscraping-tiktok/slides/index.html#wordcloud-mit-named-entities",
+    "href": "content/07-webscraping-tiktok/slides/index.html#wordcloud-mit-named-entities",
+    "title": "Web-Scraping – TikTok",
+    "section": "Wordcloud mit Named Entities",
+    "text": "Wordcloud mit Named Entities\n\nVisualisierung mit 🐈🐈4CAT🐈🐈"
+  },
+  {
+    "objectID": "content/07-webscraping-tiktok/slides/index.html#back-to-fa-brands-r-project-rstudio",
+    "href": "content/07-webscraping-tiktok/slides/index.html#back-to-fa-brands-r-project-rstudio",
+    "title": "Web-Scraping – TikTok",
+    "section": "Back to  RStudio",
+    "text": "Back to  RStudio\n\nKurzer Überblick über die eingelesenen Datensätze\n\nmusk %>% glimpse()\n\nRows: 4,838\nColumns: 16\n$ thread_id      <chr> \"yugsz0\", \"yt59ku\", \"yulq2v\", \"yulq2v\", \"yulq2v\", \"yulq…\n$ id             <chr> \"iw9mhr7\", \"iw9tzrz\", \"iwa0egr\", \"iwa10h3\", \"iwa1gry\", …\n$ timestamp      <dttm> 2022-11-14 00:13:59, 2022-11-14 01:11:53, 2022-11-14 0…\n$ body           <chr> \"Nick Cannon and Elon Musk need to put a damn condom on…\n$ subject        <lgl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…\n$ author         <chr> \"fbe0d753750a9f008871e6e829b727bf26cc2bdcdc71f340\", \"89…\n$ author_flair   <chr> \"aadb59c4da75af6c9fb8d5cb4c310ce59888aab7f96ffc15\", \"aa…\n$ post_flair     <lgl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…\n$ domain         <lgl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…\n$ url            <lgl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…\n$ image_file     <lgl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…\n$ image_md5      <lgl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…\n$ subreddit      <chr> \"worldnews\", \"news\", \"news\", \"news\", \"news\", \"news\", \"n…\n$ parent         <chr> \"t3_yugsz0\", \"t1_iw4y0aj\", \"t3_yulq2v\", \"t3_yulq2v\", \"t…\n$ score          <dbl> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1…\n$ unix_timestamp <dbl> 1668384839, 1668388313, 1668391383, 1668391676, 1668391…\n\nmusk_entities %>% glimpse()\n\nRows: 3,633\nColumns: 3\n$ word   <chr> \"musk\", \"twitter\", \"twitter\", \"elon musk\", \"tesla\", \"trump\", \"t…\n$ entity <chr> \"PERSON\", \"PERSON\", \"PRODUCT\", \"PRODUCT\", \"ORG\", \"ORG\", \"GPE\", …\n$ count  <dbl> 1147, 861, 479, 404, 345, 273, 222, 218, 205, 187, 154, 132, 13…"
+  },
+  {
+    "objectID": "content/07-webscraping-tiktok/slides/index.html#beiträge-mit-keyword-musk-im-zeitverlauf-1",
+    "href": "content/07-webscraping-tiktok/slides/index.html#beiträge-mit-keyword-musk-im-zeitverlauf-1",
+    "title": "Web-Scraping – TikTok",
+    "section": "Beiträge mit Keyword “musk” im Zeitverlauf",
+    "text": "Beiträge mit Keyword “musk” im Zeitverlauf\n\nBetrachtung von beiden Subreddits (news & worldnews )\n\nmusk %>% \n  mutate(date  = as.factor(date(timestamp))) %>%\n  plot_frq(date,\n           title = \"Post including 'musk' on Reddit\") +\n  labs(subtitle = \"Subreddits 'news' & 'worldnews' between 14-11 and 26-11-2022\")"
+  },
+  {
+    "objectID": "content/07-webscraping-tiktok/slides/index.html#beiträge-mit-keyword-musk-im-zeitverlauf-2",
+    "href": "content/07-webscraping-tiktok/slides/index.html#beiträge-mit-keyword-musk-im-zeitverlauf-2",
+    "title": "Web-Scraping – TikTok",
+    "section": "Beiträge mit Keyword “musk” im Zeitverlauf",
+    "text": "Beiträge mit Keyword “musk” im Zeitverlauf\n\nUnterschieden nach Subreddits (news & worldnews )\n\n\n\nAttaching package: 'magrittr'\n\n\nThe following object is masked from 'package:purrr':\n\n    set_names\n\n\nThe following object is masked from 'package:tidyr':\n\n    extract\n\n\n\nmusk %>%\n  mutate(date  = as.factor(date(timestamp)),\n         across(subreddit, as.factor)) %$% \n  plot_grpfrq(date, subreddit,\n              title = \"Post including 'musk' on Reddit\") +\n  labs(subtitle = \"Between 14-11 and 26-11-2022\")"
+  },
+  {
+    "objectID": "content/07-webscraping-tiktok/slides/index.html#vielen-dank-für-ihre-fragen",
+    "href": "content/07-webscraping-tiktok/slides/index.html#vielen-dank-für-ihre-fragen",
+    "title": "Web-Scraping – TikTok",
+    "section": "Vielen Dank für Ihre Fragen!",
+    "text": "Vielen Dank für Ihre Fragen!\n\n\nDie Reddit API erlaubt nur bis 500 Kommentare pro Post über ein automatisches Tool zu ‘extrahieren’. Manuell ist es jedoch möglich über diese Grenze hinaus zu gehen. Wie kann das sein? Das würde ja bedeuten, dass man die Regeln der Reddit API manuell umgehen kann?\n\n\n\n\nIn dem Paper wird darauf hingewiesen, dass die Verwendung der API von Reddit ein möglicher Verstoß gegen die Nutzungsvereinbarungen ist. Wann würde so ein Fall eintreten bzw. wann spricht man von einem Verstoß und was wäre dann die Bestrafung?\n\n\nWie kann es sein, dass Reddit eine kostenlose API zur verfügung stellt, die Nutzung dieser dann aber teilweise nicht legal sein kann?\n\n\n\n\nEs wird erwähnt, dass viele Nutzer mehrere Accounts haben und dementsprechend Diskussionen in bestimmten Subreddits stärker beeinflussen können. Besteht die Möglichkeit solche Accounts zu erkennen und angemessen in der Studie zu berücksichtigen ohne die Datenschutzrichtlinien zu verletzen?"
+  },
+  {
+    "objectID": "content/07-webscraping-tiktok/slides/index.html#lets-discuss",
+    "href": "content/07-webscraping-tiktok/slides/index.html#lets-discuss",
+    "title": "Web-Scraping – TikTok",
+    "section": "Let’s discuss",
+    "text": "Let’s discuss\n\n\nViele Social Media Plattformen, wie Instagram, Facebook und Twitter beschränken ihren API Zugang. Weshalb legt Reddit den API Zugang im Gegensatz zu den anderen Plattformen so offen dar?\n\n\n\n\nViele der Reddit-Daten basierenden Publikationen enthielten nur unvollständige oder zweideutige Beschreibungen ihrer Datensätze. Auch die Methoden der Datenerhebung bleiben teilweise verschleiert. Warum ist das so und welche ethischen Gründe liegen hier möglicherweise zu Grunde?\n\n\n\n\nWie stark sind Reddit-Daten (evtl. auch im Vergleich zu Twitter) generalisierbar, wenn die Struktur von Reddit doch Diskussionen und Gespräche in gewisser Weise leitet (z.B. durch Sichtbarkeit von Themen)?"
+  },
+  {
+    "objectID": "content/07-webscraping-tiktok/slides/index.html#literatur",
+    "href": "content/07-webscraping-tiktok/slides/index.html#literatur",
+    "title": "Web-Scraping – TikTok",
+    "section": "Literatur",
+    "text": "Literatur\n\n\nBenoit, K., Watanabe, K., Wang, H., Nulty, P., Obeng, A., Müller, S., & Matsuo, A. (2018). Quanteda: An r package for the quantitative analysis of textual data. Journal of Open Source Software, 3(30), 774. https://doi.org/10.21105/joss.00774\n\n\nPeeters, S. (2022). Zeeschuimer. Zenodo. https://doi.org/10.5281/ZENODO.7016797\n\n\nPeeters, S., & Hagen, S. (2022). The 4CAT Capture and Analysis Toolkit: A Modular Tool for Transparent and Traceable Social Media Research. Computational Communication Research, 4(2), 571–589. https://doi.org/10.5117/ccr2022.2.007.hage\n\n\n\n\n\nDigital Behavioral Data"
+  },
+  {
+    "objectID": "content/07-webscraping-tiktok/07-exercise.html#background",
+    "href": "content/07-webscraping-tiktok/07-exercise.html#background",
+    "title": "Showcase",
+    "section": "Background",
+    "text": "Background\nThis showcase is intended to illustrate different analysis possibilities of  TikTok data downloaded with the Zeeschuimer browser extension.\nYou can also open this showcase in other interactive and executable environments:"
+  },
+  {
+    "objectID": "content/07-webscraping-tiktok/07-exercise.html#data-collection-with-redditextractor",
+    "href": "content/07-webscraping-tiktok/07-exercise.html#data-collection-with-redditextractor",
+    "title": "Showcase",
+    "section": "Data collection with RedditExtractor",
+    "text": "Data collection with RedditExtractor\nReddit Extractor is an R package for extracting data out of Reddit. It allows you to:\n\nfind subreddits based on a search query\nfind a user and their Reddit history\nfind URLs to threads of interest and retrieve comments out of these threads"
+  },
+  {
+    "objectID": "content/07-webscraping-tiktok/07-exercise.html#data-analysis",
+    "href": "content/07-webscraping-tiktok/07-exercise.html#data-analysis",
+    "title": "Showcase",
+    "section": "Data analysis",
+    "text": "Data analysis\n\nTikToks that are tagged with the hashtag statistics\ncollected via Zeeschuimer with .csv export via 🐈🐈 4CAT 🐈🐈\n\n\nData import from \n\n# load packages\nlibrary(readr)\n\nstatistics <- read_csv(\n  here(\"content/07-webscraping-tiktok/data/tiktok-search-statistics.csv\"), \n  col_types = cols(author_followers = col_number()))\n\n# quick preview\nstatistics %>% glimpse()\n\nRows: 941\nColumns: 24\n$ id               <dbl> 6.813800e+18, 6.832737e+18, 6.845368e+18, 6.927122e+1…\n$ thread_id        <dbl> 6.813800e+18, 6.832737e+18, 6.845368e+18, 6.927122e+1…\n$ author           <chr> \"onlyjayus\", \"onlyjayus\", \"ryguy238\", \"mason.whaley\",…\n$ author_full      <chr> \"actuallyitsbella\", \"actuallyitsbella\", \"ryan p\", \"Ma…\n$ author_id        <dbl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N…\n$ author_followers <dbl> 18500000, 18500000, 28500, 151500, 15700, 319500, 693…\n$ body             <chr> \"You’re sexy. The math proves it #fyp #love #dating #…\n$ timestamp        <dttm> 2020-04-09 19:44:39, 2020-05-30 20:28:05, 2020-07-03…\n$ unix_timestamp   <dbl> 1586461479, 1590870485, 1593811442, 1612846242, 16420…\n$ is_duet          <lgl> FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALS…\n$ music_name       <chr> \"SexyBack\", \"original sound\", \"original sound\", \"orig…\n$ music_id         <dbl> 6.696418e+18, 6.832737e+18, 6.845368e+18, 6.927122e+1…\n$ music_url        <chr> \"https://sf16-ies-music-va.tiktokcdn.com/obj/tos-usea…\n$ video_url        <chr> \"https://v16-webapp.tiktok.com/eac3d9cb4566d4ac017e3f…\n$ tiktok_url       <chr> \"https://tiktok.com/@onlyjayus/video/6813800162259897…\n$ thumbnail_url    <chr> \"https://p16-sign-va.tiktokcdn.com/tos-maliva-p-0068/…\n$ likes            <dbl> 1200000, 910000, 901000, 794300, 740300, 701400, 6490…\n$ comments         <dbl> 7746, 11900, 3020, 36900, 8179, 8150, 34800, 7592, 28…\n$ shares           <dbl> 23000, 16600, 1755, 64000, 6397, 1685, 93800, 51300, …\n$ plays            <dbl> 6700000, 3300000, 5100000, 3800000, 2900000, 2500000,…\n$ hashtags         <chr> \"fyp,love,dating,romance,relationship,crush,people,po…\n$ stickers         <chr> NA, NA, NA, \"that one guy\", \"Ok…but I guess Timmy is …\n$ effects          <chr> NA, NA, NA, NA, \"Greenscreen\", NA, \"Disco\", NA, \"TapT…\n$ warning          <chr> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N…\n\n\n\n\nExploration\n\n\n\n\n\n\nTip\n\n\n\nThe following graphics (and especially their labels) may appear very small. To view the graphics in their original size, right-click on the images and select “Open image/graphic in new tab”.\n\n\n\nPeriode in which the TikToks were posted\n\n# Load packages\nlibrary(lubridate)\nlibrary(sjPlot)\nlibrary(ggpubr)\n\n# Display \nstatistics %>% \n  mutate(date  = as.factor(year(timestamp))) %>% \n  plot_frq(date) +\n  theme_pubr()\n\n\n\n\n\n\nLocation parameters of different statistics\n\nstatistics %>% \n  select(likes:plays) %>% \n  descr()\n\n\n## Basic descriptive statistics\n\n      var    type    label   n NA.prc      mean        sd       se     md\n    likes numeric    likes 941      0  50412.33 110696.23  3608.59  16600\n comments numeric comments 941      0    980.51   2380.29    77.60    351\n   shares numeric   shares 941      0   1349.89   4755.66   155.03    262\n    plays numeric    plays 941      0 384388.52 750096.58 24452.45 153700\n   trimmed                   range    iqr  skew\n  26511.33  1395280 (4720-1400000)  37830  6.14\n    537.56         36900 (0-36900)    791  8.94\n    527.19         93796 (4-93800)    820 12.24\n 220367.46 7985100 (14900-8000000) 309300  5.44\n\n\n\n\nDistribution of likes\n\nstatistics %>% \n  plot_frq(likes, type = \"density\")\n\n\n\n\n\n\nWarning messages displayed\n\nlibrary(sjmisc)\n\nstatistics %>% \n  frq(warning)\n\nwarning <character> \n# total N=941 valid N=24 mean=1.88 sd=0.80\n\nValue                                                                                                    |   N | Raw % | Valid % | Cum. %\n-----------------------------------------------------------------------------------------------------------------------------------------\nLearn more about COVID-19 vaccines                                                                       |   9 |  0.96 |   37.50 |  37.50\nLearn the facts about COVID-19                                                                           |   9 |  0.96 |   37.50 |  75.00\nThe actions in this video are performed by professionals or supervised by professionals. Do not attempt. |   6 |  0.64 |   25.00 | 100.00\n<NA>                                                                                                     | 917 | 97.45 |    <NA> |   <NA>\n\n\n\n\n\nText analysis\n\nCorpus creation\n\n# Create corpus based on variable hashtags\ncrp <- corpus(\n  statistics, \n  docid_field = \"id\",\n  text_field = \"hashtags\")\n\n# Display\ncrp \n\nCorpus consisting of 941 documents and 22 docvars.\n6813800162259897344 :\n\"fyp,love,dating,romance,relationship,crush,people,population...\"\n\n6832736698938576896 :\n\"fyp,blacklivesmatter,tiktokpartner,learnontiktok,police,fact...\"\n\n6845368010048408576 :\n\"skittles,statistics,education,fyp,foryou\"\n\n6927121729257098240 :\n\"hotguy,itwasntme,turbotaxlivepick6,doritosflatlife,foryou,wa...\"\n\n7052705912317840384 :\n\"timotheechalamet,fyp,foryou,timothee,peach,callmebyyourname,...\"\n\n6909087873081905152 :\n\"stitch,statistics,staticstics,fyp,foryoupage,trending\"\n\n[ reached max_ndoc ... 935 more documents ]\n\n\n\n\nTokenization\n\n# Create tokens based on corpus\ntkn <- crp %>% \n  tokens(\n    remove_punct = TRUE,\n    remove_symbols = TRUE,\n    remove_url = TRUE,\n    remove_separators = TRUE)\n\n# Display\ntkn\n\nTokens consisting of 941 documents and 22 docvars.\n6813800162259897344 :\n [1] \"fyp\"          \"love\"         \"dating\"       \"romance\"      \"relationship\"\n [6] \"crush\"        \"people\"       \"population\"   \"world\"        \"math\"        \n[11] \"stats\"        \"statistics\"  \n\n6832736698938576896 :\n[1] \"fyp\"              \"blacklivesmatter\" \"tiktokpartner\"    \"learnontiktok\"   \n[5] \"police\"           \"facts\"            \"fact\"             \"statistics\"      \n[9] \"usa\"             \n\n6845368010048408576 :\n[1] \"skittles\"   \"statistics\" \"education\"  \"fyp\"        \"foryou\"    \n\n6927121729257098240 :\n [1] \"hotguy\"            \"itwasntme\"         \"turbotaxlivepick6\"\n [4] \"doritosflatlife\"   \"foryou\"            \"wap\"              \n [7] \"statistics\"        \"fyp\"               \"foryoupage\"       \n[10] \"wap\"              \n\n7052705912317840384 :\n[1] \"timotheechalamet\" \"fyp\"              \"foryou\"           \"timothee\"        \n[5] \"peach\"            \"callmebyyourname\" \"statistics\"      \n\n6909087873081905152 :\n[1] \"stitch\"      \"statistics\"  \"staticstics\" \"fyp\"         \"foryoupage\" \n[6] \"trending\"   \n\n[ reached max_ndoc ... 935 more documents ]\n\n\n\n\nCreate Document-Feature-Matrix (DFM)\n\n# Create dfm based on tokens\ndfm <- tkn %>% \n  dfm()\n\n# Display\ndfm\n\nDocument-feature matrix of: 941 documents, 2,941 features (99.71% sparse) and 22 docvars.\n                     features\ndocs                  fyp love dating romance relationship crush people\n  6813800162259897344   1    1      1       1            1     1      1\n  6832736698938576896   1    0      0       0            0     0      0\n  6845368010048408576   1    0      0       0            0     0      0\n  6927121729257098240   1    0      0       0            0     0      0\n  7052705912317840384   1    0      0       0            0     0      0\n  6909087873081905152   1    0      0       0            0     0      0\n                     features\ndocs                  population world math\n  6813800162259897344          1     1    1\n  6832736698938576896          0     0    0\n  6845368010048408576          0     0    0\n  6927121729257098240          0     0    0\n  7052705912317840384          0     0    0\n  6909087873081905152          0     0    0\n[ reached max_ndoc ... 935 more documents, reached max_nfeat ... 2,931 more features ]\n\n\n\n\nWordcloud\n\ndfm %>% \n  textplot_wordcloud(\n    min_size = 1,\n    max_size = 8,\n    max_words = 50,\n    rotation = 0\n  )\n\n\n\n\n\nwithout the searchterm statistics\n\ndfm %>% \n  dfm_remove(pattern = \"statistics\") %>% \n  textplot_wordcloud(\n    min_size = 1,\n    max_size = 8,\n    max_words = 50,\n    rotation = 0,\n    color = \"dodgerblue3\"\n  )"
+  },
+  {
+    "objectID": "content/07-webscraping-tiktok/07-slides.html",
+    "href": "content/07-webscraping-tiktok/07-slides.html",
+    "title": "Slides",
+    "section": "",
+    "text": "Below you find the slides for the seventh session:\n\n\n\nIf you want to see the slides in full screen, you can click here. To download them as PDFs, hit the ‘e’ button when you got the presentation open and then Ctrl+P print to PDF. This will work best in Chrome."
+  },
+  {
+    "objectID": "content/07-webscraping-tiktok/slides/index.html",
+    "href": "content/07-webscraping-tiktok/slides/index.html",
+    "title": "Web-Scraping – TikTok",
+    "section": "",
+    "text": "Sitzung\nDatum\nThema\nReferent*Innen\n\n\n\n\n1\n26.10.2022\nKick-Off Session\nChristoph Adrian\n\n\n2\n02.11.2022\nDBD: Einführung und Überblick\nChristoph Adrian\n\n\n3\n09.11.2022\nDBD: Datenerhebung\nChristoph Adrian\n\n\n4\n16.11.2022\nAPI-Access (I): Twitter\nFalk\n\n\n5\n23.11.2022\nAPI-Access (II): YouTube\nDenisov\n\n\n6\n30.11.2022\nAPI-Access (II): Reddit\nLandauer\n\n\n7\n07.12.2022\nWebscraping: TikTok\nBrand & Kocher\n\n\n8\n14.12.2022\nExkurs: DBD Analyse mit R\nChristoph Adrian\n\n\n\n\nWEIHNACHTSPAUSE\n\n\n\n9\n11.01.2023\nESM: m-path\nDörr\n\n\n10\n18.01.2023\nData Donations\nHofmann & Wierzbicki\n\n\n11\n25.01.2023\nPUFFER\n\n\n\n12\n02.02.2023\nGuest Lecture: Linking DBD & Survey data\nJohannes Breuer\n\n\n13\n08.02.2023\nSemesterabschluss & Evaluation\nChristoph Adrian\n\n\n\n\n▶️"
+  },
+  {
+    "objectID": "content/07-webscraping-tiktok/slides/index.html#ein-kurzer-überblick",
+    "href": "content/07-webscraping-tiktok/slides/index.html#ein-kurzer-überblick",
+    "title": "Web-Scraping – TikTok",
+    "section": "Ein kurzer Überblick",
+    "text": "Ein kurzer Überblick\nStruktur des  TikTok-Datensatzes\n\nstatistics %>% glimpse()\n\nRows: 941\nColumns: 24\n$ id               <dbl> 6.813800e+18, 6.832737e+18, 6.845368e+18, 6.927122e+1…\n$ thread_id        <dbl> 6.813800e+18, 6.832737e+18, 6.845368e+18, 6.927122e+1…\n$ author           <chr> \"onlyjayus\", \"onlyjayus\", \"ryguy238\", \"mason.whaley\",…\n$ author_full      <chr> \"actuallyitsbella\", \"actuallyitsbella\", \"ryan p\", \"Ma…\n$ author_id        <dbl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N…\n$ author_followers <dbl> 18500000, 18500000, 28500, 151500, 15700, 319500, 693…\n$ body             <chr> \"You’re sexy. The math proves it #fyp #love #dating #…\n$ timestamp        <dttm> 2020-04-09 19:44:39, 2020-05-30 20:28:05, 2020-07-03…\n$ unix_timestamp   <dbl> 1586461479, 1590870485, 1593811442, 1612846242, 16420…\n$ is_duet          <lgl> FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALS…\n$ music_name       <chr> \"SexyBack\", \"original sound\", \"original sound\", \"orig…\n$ music_id         <dbl> 6.696418e+18, 6.832737e+18, 6.845368e+18, 6.927122e+1…\n$ music_url        <chr> \"https://sf16-ies-music-va.tiktokcdn.com/obj/tos-usea…\n$ video_url        <chr> \"https://v16-webapp.tiktok.com/eac3d9cb4566d4ac017e3f…\n$ tiktok_url       <chr> \"https://tiktok.com/@onlyjayus/video/6813800162259897…\n$ thumbnail_url    <chr> \"https://p16-sign-va.tiktokcdn.com/tos-maliva-p-0068/…\n$ likes            <dbl> 1200000, 910000, 901000, 794300, 740300, 701400, 6490…\n$ comments         <dbl> 7746, 11900, 3020, 36900, 8179, 8150, 34800, 7592, 28…\n$ shares           <dbl> 23000, 16600, 1755, 64000, 6397, 1685, 93800, 51300, …\n$ plays            <dbl> 6700000, 3300000, 5100000, 3800000, 2900000, 2500000,…\n$ hashtags         <chr> \"fyp,love,dating,romance,relationship,crush,people,po…\n$ stickers         <chr> NA, NA, NA, \"that one guy\", \"Ok…but I guess Timmy is …\n$ effects          <chr> NA, NA, NA, NA, \"Greenscreen\", NA, \"Disco\", NA, \"TapT…\n$ warning          <chr> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N…"
+  },
+  {
+    "objectID": "content/07-webscraping-tiktok/slides/index.html#erstellung-eines-korpus",
+    "href": "content/07-webscraping-tiktok/slides/index.html#erstellung-eines-korpus",
+    "title": "Web-Scraping – TikTok",
+    "section": "Erstellung eines Korpus",
+    "text": "Erstellung eines Korpus\nTextverarbeitung mit quanteda (Benoit et al., 2018)\n\ncrp <- corpus(statistics, \n              docid_field = \"id\",\n              text_field = \"hashtags\")\ncrp\n\nCorpus consisting of 941 documents and 22 docvars.\n6813800162259897344 :\n\"fyp,love,dating,romance,relationship,crush,people,population...\"\n\n6832736698938576896 :\n\"fyp,blacklivesmatter,tiktokpartner,learnontiktok,police,fact...\"\n\n6845368010048408576 :\n\"skittles,statistics,education,fyp,foryou\"\n\n6927121729257098240 :\n\"hotguy,itwasntme,turbotaxlivepick6,doritosflatlife,foryou,wa...\"\n\n7052705912317840384 :\n\"timotheechalamet,fyp,foryou,timothee,peach,callmebyyourname,...\"\n\n6909087873081905152 :\n\"stitch,statistics,staticstics,fyp,foryoupage,trending\"\n\n[ reached max_ndoc ... 935 more documents ]"
+  },
+  {
+    "objectID": "content/07-webscraping-tiktok/slides/index.html#tokenisierung",
+    "href": "content/07-webscraping-tiktok/slides/index.html#tokenisierung",
+    "title": "Web-Scraping – TikTok",
+    "section": "Tokenisierung",
+    "text": "Tokenisierung\nTextverarbeitung mit quanteda (Benoit et al., 2018)\n\ntkn <- crp %>% \n  tokens(remove_punct = TRUE,\n         remove_symbols = TRUE,\n         remove_url = TRUE,\n         remove_separators = TRUE)\ntkn\n\nTokens consisting of 941 documents and 22 docvars.\n6813800162259897344 :\n [1] \"fyp\"          \"love\"         \"dating\"       \"romance\"      \"relationship\"\n [6] \"crush\"        \"people\"       \"population\"   \"world\"        \"math\"        \n[11] \"stats\"        \"statistics\"  \n\n6832736698938576896 :\n[1] \"fyp\"              \"blacklivesmatter\" \"tiktokpartner\"    \"learnontiktok\"   \n[5] \"police\"           \"facts\"            \"fact\"             \"statistics\"      \n[9] \"usa\"             \n\n6845368010048408576 :\n[1] \"skittles\"   \"statistics\" \"education\"  \"fyp\"        \"foryou\"    \n\n6927121729257098240 :\n [1] \"hotguy\"            \"itwasntme\"         \"turbotaxlivepick6\"\n [4] \"doritosflatlife\"   \"foryou\"            \"wap\"              \n [7] \"statistics\"        \"fyp\"               \"foryoupage\"       \n[10] \"wap\"              \n\n7052705912317840384 :\n[1] \"timotheechalamet\" \"fyp\"              \"foryou\"           \"timothee\"        \n[5] \"peach\"            \"callmebyyourname\" \"statistics\"      \n\n6909087873081905152 :\n[1] \"stitch\"      \"statistics\"  \"staticstics\" \"fyp\"         \"foryoupage\" \n[6] \"trending\"   \n\n[ reached max_ndoc ... 935 more documents ]"
+  },
+  {
+    "objectID": "content/07-webscraping-tiktok/slides/index.html#erstellung-einer-document-feature-matrix-dfm",
+    "href": "content/07-webscraping-tiktok/slides/index.html#erstellung-einer-document-feature-matrix-dfm",
+    "title": "Web-Scraping – TikTok",
+    "section": "Erstellung einer Document-Feature-Matrix [DFM]",
+    "text": "Erstellung einer Document-Feature-Matrix [DFM]\nTextverarbeitung mit quanteda (Benoit et al., 2018)\n\ndfm <- tkn %>%  dfm()\ndfm\n\nDocument-feature matrix of: 941 documents, 2,941 features (99.71% sparse) and 22 docvars.\n                     features\ndocs                  fyp love dating romance relationship crush people\n  6813800162259897344   1    1      1       1            1     1      1\n  6832736698938576896   1    0      0       0            0     0      0\n  6845368010048408576   1    0      0       0            0     0      0\n  6927121729257098240   1    0      0       0            0     0      0\n  7052705912317840384   1    0      0       0            0     0      0\n  6909087873081905152   1    0      0       0            0     0      0\n                     features\ndocs                  population world math\n  6813800162259897344          1     1    1\n  6832736698938576896          0     0    0\n  6845368010048408576          0     0    0\n  6927121729257098240          0     0    0\n  7052705912317840384          0     0    0\n  6909087873081905152          0     0    0\n[ reached max_ndoc ... 935 more documents, reached max_nfeat ... 2,931 more features ]"
+  },
+  {
+    "objectID": "content/07-webscraping-tiktok/slides/index.html#welche-hashtags-werden-genutzt",
+    "href": "content/07-webscraping-tiktok/slides/index.html#welche-hashtags-werden-genutzt",
+    "title": "Web-Scraping – TikTok",
+    "section": "Welche Hashtags werden genutzt?",
+    "text": "Welche Hashtags werden genutzt?\nTextvisualisierung mit quanteda.textplots\n\nlibrary(quanteda.textplots)\ndfm %>% textplot_wordcloud(\n  min_size = 1, max_size = 8, max_words = 50,\n  rotation = 0)"
   }
 ]

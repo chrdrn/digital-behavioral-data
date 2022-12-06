@@ -26,6 +26,11 @@ Ths showcase has two different goals:
 1.  Exemplary presentation of the collection of [<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/brands/reddit.svg" width="15" height="15"/>](https://www.reddit.com/) [Reddit](https://www.reddit.com/) data using the [RedditExtractoR](https://github.com/ivan-rivera/RedditExtractor) package
 2.  Importing and analyzing the data collected with the 🐈🐈 [**4CAT**](https://github.com/digitalmethodsinitiative/4cat) 🐈🐈 tool.
 
+You can also open this showcase in other interactive and executable environments:
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/chrdrn/dbd_binder/HEAD)
+[![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chrdrn/dbd_binder/blob/main/session_06-showcase_reddit.ipynb)
+
+
 ## Data collection with `RedditExtractor`
 
 [Reddit Extractor](https://github.com/ivan-rivera/RedditExtractor) is an R package for extracting data out of [Reddit](https://www.reddit.com/). It allows you to:
