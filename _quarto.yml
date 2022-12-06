@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  favicon: "images/logo_fau.svg"
+  favicon: "images/logo_fau_red.svg"
   page-navigation: true
   title: "Digital behavioral data"
   description: "Homepage for Digital behavior data at Friedrich-Alexander-Universtität Erlangen-Nürnberg, Winter semester 2022/23."
@@ -59,6 +59,9 @@ website:
           - "content/06-api_access-reddit/06-slides.qmd"
           - "content/06-api_access-reddit/06-exercise.qmd"
       - section: "Webscraping: TikTok"
+        contents:
+          - "content/07-webscraping-tiktok/07-slides.qmd"
+          - "content/07-webscraping-tiktok/07-exercise.qmd"
 
 format:
   html:
