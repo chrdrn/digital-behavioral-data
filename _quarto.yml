@@ -10,6 +10,7 @@ website:
  
   repo-url: https://github.com/chrdrn/digital-behavioral-data
   repo-actions: [edit, issue]
+
   reader-mode: true
   
   page-footer: 
