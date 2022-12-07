@@ -61,9 +61,54 @@ bibliography: references.bib
 
 # Agenda
 
-1.  **Group Activity**
-2.  **Beispielhafte Anwendungen**
-3.  **Verständnis- und Diskussionsfragen**
+1.  **Organisation & Koordination**
+2.  **Verständnis- und Diskussionsfragen**
+3.  **Group Activity**
+4.  **Beispielhafte Anwendungen**
+
+# Organisation & Koordination {background-color="#E6002E"}
+
+Fragen zur DBD-Analyse mit R
+
+::: notes
+-   Finale Themen: Sentimentanalye & Topic Modeling --\> Hintergrund?
+
+-   Datengrundlage?
+:::
+
+# **Verständnis- und Diskussionsfragen** {background-color="#E6002E" background-image="../../00-images/background_participation.svg"}
+
+Ihre Fragen aus MS Teams
+
+## Vielen Dank für Ihre Fragen! {.scrollable .smaller}
+
+::: {.fragment .semi-fade-out fragment-index="1"}
+> In dem Paper wird darüber berichtet, dass der einzige direkte Weg der Monetarisierung auf **TikTok (und auf Douyin) die virtuelle Währung bzw. die virtuellen Geschenke** sind. In China ist diese Art des Geschäftsmodell bereits eine sehr etablierte Form der Zahlung, bei uns jedoch noch nicht. Ist es denkbar, dass dieser Trend auch bei uns populär wird?
+:::
+
+::: {.fragment .fade-in-then-semi-out fragment-index="1"}
+> In dem Paper wird berichtet, dass TikTok teilweise **transparenter** als andere nicht-asiatischen Plattformen ist. Was genau tut TikTok dafür um diese transparenz zu schaffen?
+:::
+
+::: {.fragment .fade-in-then-semi-out fragment-index="3"}
+> In Indien ist TikTok bereits verboten. Auch die USA und Australien drohen mit Maßnahmen gegen TikTok. Was hätte dies für ByteDance zur Folge?
+:::
+
+::: {.fragment .fade-in-then-semi-out fragment-index="4"}
+> Ist die Walkthrough-Methode eine gängige Methode der Datenerhebung auf TikTok und wie läuft diese genau ab? Gibt es andere Methoden, die vielleicht weniger aufwändig sind?
+:::
+
+## Let's discuss
+
+::: {.fragment .semi-fade-out fragment-index="1"}
+> Durch die Ideologie (platform governance) einer Plattform kann es kritisch sein, wenn einzelne Plattformen besonders groß werden. Gleichzeitig ist die Existenz von mehreren kleineren Plattformen ebenfalls kritisch, da sich Nischengruppen bilden würden, die nur eine einzelne Perspektive betrachten. (Vgl. CCP Propaganda )
+>
+> Was könnte eine Lösung für dieses Problem sein?
+:::
+
+::: {.fragment .fade-in-then-semi-out fragment-index="1"}
+> Laut dem paper wird durch verschiedene video einstellungen von TikTok bereits content "geshaped". Sind biases auf TikTok dadurch stärker als bei anderen Plattformen?
+:::
 
 # Group Activity {background-color="#E6002E" background-image="../../00-images/background_group_activity.svg"}
 
@@ -233,40 +278,6 @@ dfm %>% textplot_wordcloud(
   min_size = 1, max_size = 8, max_words = 50,
   rotation = 0)
 ```
-
-# **Verständnis- und Diskussionsfragen** {background-color="#E6002E" background-image="../../00-images/background_participation.svg"}
-
-Ihre Fragen aus MS Teams
-
-## Vielen Dank für Ihre Fragen! {.scrollable .smaller}
-
-::: {.fragment .semi-fade-out fragment-index="1"}
-> In dem Paper wird darüber berichtet, dass der einzige direkte Weg der Monetarisierung auf **TikTok (und auf Douyin) die virtuelle Währung bzw. die virtuellen Geschenke** sind. In China ist diese Art des Geschäftsmodell bereits eine sehr etablierte Form der Zahlung, bei uns jedoch noch nicht. Ist es denkbar, dass dieser Trend auch bei uns populär wird?
-:::
-
-::: {.fragment .fade-in-then-semi-out fragment-index="1"}
-> In dem Paper wird berichtet, dass TikTok teilweise **transparenter** als andere nicht-asiatischen Plattformen ist. Was genau tut TikTok dafür um diese transparenz zu schaffen?
-:::
-
-::: {.fragment .fade-in-then-semi-out fragment-index="3"}
-> In Indien ist TikTok bereits verboten. Auch die USA und Australien drohen mit Maßnahmen gegen TikTok. Was hätte dies für ByteDance zur Folge?
-:::
-
-::: {.fragment .fade-in-then-semi-out fragment-index="4"}
-> Ist die Walkthrough-Methode eine gängige Methode der Datenerhebung auf TikTok und wie läuft diese genau ab? Gibt es andere Methoden, die vielleicht weniger aufwändig sind?
-:::
-
-## Let's discuss
-
-::: {.fragment .semi-fade-out fragment-index="1"}
-> Durch die Ideologie (platform governance) einer Plattform kann es kritisch sein, wenn einzelne Plattformen besonders groß werden. Gleichzeitig ist die Existenz von mehreren kleineren Plattformen ebenfalls kritisch, da sich Nischengruppen bilden würden, die nur eine einzelne Perspektive betrachten. (Vgl. CCP Propaganda )
->
-> Was könnte eine Lösung für dieses Problem sein?
-:::
-
-::: {.fragment .fade-in-then-semi-out fragment-index="1"}
-> Laut dem paper wird durch verschiedene video einstellungen von TikTok bereits content "geshaped". Sind biases auf TikTok dadurch stärker als bei anderen Plattformen?
-:::
 
 # Time for questions {background-color="#E6002E" background-image="../../00-images/background_questions.svg"}
 
