@@ -1,0 +1,216 @@
+---
+title: "Text as data" 
+title-slide-attributes:
+  data-background-image: ../../00-images/background_title.svg
+  data-background-color: "#04316a"
+subtitle: "Digital behavioral data - Bonus session"
+author: 
+  - name: Christoph Adrian 
+    url: https://twitter.com/chrdrn
+    affiliation: Lehrstuhl für Kommunikationswissenschaft
+    affiliation-url: https://www.kowi.rw.fau.de/person/christoph-adrian/
+date: 14 12 2022
+date-format: "DD.MM.YYYY"
+format:
+  revealjs:
+    theme: ../../slidetheme.scss
+    template-partials:
+      - title-slide.html
+    slide-number: true
+    chalkboard:
+      buttons: false
+    preview-links: auto
+    logo: ../../logo.png
+    footer: "[Digital Behavioral Data](https://chrdrn.github.io/digital-behavioral-data/)"
+highlight-style: atom-one
+comments:
+  hypothesis: 
+    theme: clean
+filters:
+  - roughnotation
+execute:
+  echo: true
+csl: ../../apa.csl
+editor_options: 
+  chunk_output_type: console
+bibliography: references.bib
+---
+
+## Seminarplan {.smaller}
+
+| Sitzung                                                | Datum                                                           | Thema                                                                              | Referent\*Innen                                                       |
+|-----------------|-----------------|---------------------|------------------|
+| [*1*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*26.10.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*Kick-Off Session*]{.rn rn-type="strike-through" rn-color="#E6002E"}              | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
+| [*2*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*02.11.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*DBD: Einführung und Überblick*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
+| [*3*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*09.11.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*DBD: Datenerhebung*]{.rn rn-type="strike-through" rn-color="#E6002E"}            | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
+| [*4*]{.rn rn-type="highlight"}                         | [*16.11.2022*]{.rn rn-type="highlight"}                         | [*API-Access (I): Twitter*]{.rn rn-type="highlight"}                               | [*Falk*]{.rn rn-type="highlight"}                                     |
+| *5*                                                    | *23.11.2022*                                                    | *API-Access (II): YouTube*                                                         | *Denisov*                                                             |
+| 6                                                      | 30.11.2022                                                      | API-Access (II): *Reddit*                                                          | Landauer                                                              |
+| 7                                                      | 07.12.2022                                                      | Webscraping: *TikTok*                                                              | Brand & Kocher                                                        |
+| **8**                                                  | **14.12.2022**                                                  | **Text as data**                                                                   | **Christoph Adrian**                                                  |
+|                                                        |                                                                 | *WEIHNACHTSPAUSE*                                                                  |                                                                       |
+| 9                                                      | 11.01.2023                                                      | ESM: *m-path*                                                                      | Dörr                                                                  |
+| 10                                                     | 18.01.2023                                                      | Data Donations                                                                     | Hofmann & Wierzbicki                                                  |
+| 11                                                     | 25.01.2023                                                      | *PUFFER*                                                                           |                                                                       |
+| 12                                                     | 02.02.2023                                                      | *Guest Lecture: Linking DBD & Survey data*                                         | [Johannes Breuer](https://www.johannesbreuer.com/)                    |
+| 13                                                     | 08.02.2023                                                      | Semesterabschluss & Evaluation                                                     | Christoph Adrian                                                      |
+
+::: notes
+▶️
+:::
+
+# Agenda
+
+1.  **A short introduction**
+2.  **Text processing basics**
+3.  **Sentiment analysis**
+4.  **Topic Modeling**
+
+# A short introduction {background-color="#E6002E"}
+
+## Nicht neu, aber andere Dimension
+
+#### Das Phänomen *Text as data* 
+
+::: columns
+::: {.column width="50%"}
+-   Lange Tradition der Text- und Inhaltsanalyse (besonders in der Kommunikationswissenschaft)
+
+-   Chancen & Herausforderungen durch explosionsartige Vergrößerung des (Text-)Datenaufkommen in den letzten Jahren (Websites, Plattformen & Digitalisierung)
+:::
+
+::: {.column width="50%"}
+[![](images/hilbert_lopez_2011.png){fig-align="center"}](https://www.bitbybitbook.com/en/1st-ed/introduction/digital-age/)
+
+[@salganik2018]
+:::
+:::
+
+## The old ways
+
+#### Definition von (Medien-)Inhaltsanalyse
+
+::: columns
+::: {.column width="50%"}
+**Inhaltsanalyse**
+
+-   Untersuchung und Fragestellung **werkimmanet**
+
+-   **Individuelle Interpretation** einer **einzelnen** medialen **Botschaft**
+
+-   **umfassendes und tief gehendes Verständnis** des jeweiligen medialen Objekts zu erreichen
+:::
+
+::: {.column width="50%"}
+[**Medien**]{.smallcaps}**inhaltsanalyse**
+
+-   Untersuchung einer **großen Zahl von Botschaften** vergleichbarer Natur **auf
+    Muster** und Tendenzen
+
+-   **systematischen Analyse zahlreicher** medialer **Botschaften**
+
+-   aus der Vielfalt der Objekte die **wesentlichen Tendenzen herausdestilliert** und so allgemeine oder verallgemeinerbare Aussagen ermöglicht Komplexitätsreduktion)
+:::
+:::
+
+## Neue Methoden, neue Möglichkeiten
+
+#### dadsfasdf
+
+## Das Korpus im Fokus
+
+#### Korpuslinguistische Grundlagen
+
+# Text processing basics
+
+# Beispielhafte Auswertungen {background-color="#E6002E"}
+
+Im Fokus: {{< fa brands tiktok >}} Hashtag `#statistics`
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/chrdrn/dbd_binder/HEAD) [![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chrdrn/dbd_binder/blob/main/session_07-showcase_tiktok.ipynb) [![RStudio Quarto](https://img.shields.io/badge/RStudio-4285F4?style=for-the-badge&logo=rstudio&logoColor=white)](https://chrdrn.github.io/digital-behavioral-data/content/07-webscraping-tiktok/07-exercise.html)
+
+```{r}
+#| echo: false
+
+# Load packages
+library(knitr)
+library(kableExtra)
+library(tidyverse) # Preparation of the data
+library(quanteda) # Text mining
+library(quanteda.textstats) # Text statistics
+library(quanteda.textplots) # Visualisation of text data
+library(here)
+library(sjmisc)
+library(parameters)
+library(sjPlot)
+library(lubridate)
+library(ggthemes)
+library(ggpubr)
+
+# get data from github
+statistics <- read_csv(
+  here("content/07-webscraping-tiktok/data/tiktok-search-statistics.csv"), 
+  col_types = cols(author_followers = col_number()))
+
+```
+
+## Ein kurzer Überblick
+
+#### Struktur des {{< fa brands tiktok >}} TikTok-Datensatzes
+
+```{r}
+statistics %>% glimpse()
+```
+
+## Erstellung eines Korpus
+
+#### Textverarbeitung mit [`quanteda`](http://quanteda.io/) [@benoit2018]
+
+```{r}
+crp <- corpus(statistics, 
+              docid_field = "id",
+              text_field = "hashtags")
+crp
+```
+
+## Tokenisierung
+
+#### Textverarbeitung mit [`quanteda`](http://quanteda.io/) [@benoit2018]
+
+```{r}
+tkn <- crp %>% 
+  tokens(remove_punct = TRUE,
+         remove_symbols = TRUE,
+         remove_url = TRUE,
+         remove_separators = TRUE)
+tkn
+```
+
+## Erstellung einer Document-Feature-Matrix \[DFM\]
+
+#### Textverarbeitung mit [`quanteda`](http://quanteda.io/) [@benoit2018]
+
+```{r}
+dfm <- tkn %>%  dfm()
+dfm
+```
+
+## Welche Hashtags werden genutzt?
+
+#### Textvisualisierung mit [`quanteda.textplots`](https://github.com/quanteda/quanteda.textplots)
+
+```{r}
+library(quanteda.textplots)
+dfm %>% textplot_wordcloud(
+  min_size = 1, max_size = 8, max_words = 50,
+  rotation = 0)
+```
+
+# Time for questions {background-color="#E6002E" background-image="../../00-images/background_questions.svg"}
+
+# Bis zur nächsten Sitzung! {background-color="#E6002E" background-image="../../00-images/background_end_of_session.svg"}
+
+## Literatur
+
+::: {#refs}
+:::

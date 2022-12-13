@@ -1811,5 +1811,89 @@
     "title": "Web-Scraping – TikTok",
     "section": "Welche Hashtags werden genutzt?",
     "text": "Welche Hashtags werden genutzt?\nTextvisualisierung mit quanteda.textplots\n\nlibrary(quanteda.textplots)\ndfm %>% textplot_wordcloud(\n  min_size = 1, max_size = 8, max_words = 50,\n  rotation = 0)"
+  },
+  {
+    "objectID": "content/08-text_as_data/slides/index.html#seminarplan",
+    "href": "content/08-text_as_data/slides/index.html#seminarplan",
+    "title": "Text as data",
+    "section": "Seminarplan",
+    "text": "Seminarplan\n\n\n\nSitzung\nDatum\nThema\nReferent*Innen\n\n\n\n\n1\n26.10.2022\nKick-Off Session\nChristoph Adrian\n\n\n2\n02.11.2022\nDBD: Einführung und Überblick\nChristoph Adrian\n\n\n3\n09.11.2022\nDBD: Datenerhebung\nChristoph Adrian\n\n\n4\n16.11.2022\nAPI-Access (I): Twitter\nFalk\n\n\n5\n23.11.2022\nAPI-Access (II): YouTube\nDenisov\n\n\n6\n30.11.2022\nAPI-Access (II): Reddit\nLandauer\n\n\n7\n07.12.2022\nWebscraping: TikTok\nBrand & Kocher\n\n\n8\n14.12.2022\nText as data\nChristoph Adrian\n\n\n\n\nWEIHNACHTSPAUSE\n\n\n\n9\n11.01.2023\nESM: m-path\nDörr\n\n\n10\n18.01.2023\nData Donations\nHofmann & Wierzbicki\n\n\n11\n25.01.2023\nPUFFER\n\n\n\n12\n02.02.2023\nGuest Lecture: Linking DBD & Survey data\nJohannes Breuer\n\n\n13\n08.02.2023\nSemesterabschluss & Evaluation\nChristoph Adrian\n\n\n\n\n▶️"
+  },
+  {
+    "objectID": "content/08-text_as_data/slides/index.html#nicht-neu-aber-anders",
+    "href": "content/08-text_as_data/slides/index.html#nicht-neu-aber-anders",
+    "title": "Text as data",
+    "section": "Nicht neu, aber anders",
+    "text": "Nicht neu, aber anders\nDas Phänomen Text as data\n\n\n\nLange Tradition der Text- und Inhaltsanalyse (besonders in der Kommunikationswissenschaft)\nChancen & Herausforderungen durch explosionsartige Vergrößerung des (Text-)Datenaufkommen in den letzten Jahren (Websites, Plattformen & Digitalisierung)\n\n\n\n\n\n\n\n(Salganik, 2018)"
+  },
+  {
+    "objectID": "content/08-text_as_data/slides/index.html#medien-inhaltsanalyse",
+    "href": "content/08-text_as_data/slides/index.html#medien-inhaltsanalyse",
+    "title": "Text as data",
+    "section": "(Medien-)Inhaltsanalyse",
+    "text": "(Medien-)Inhaltsanalyse"
+  },
+  {
+    "objectID": "content/08-text_as_data/slides/index.html#was-ist-ein-korpus",
+    "href": "content/08-text_as_data/slides/index.html#was-ist-ein-korpus",
+    "title": "Text as data",
+    "section": "Was ist ein Korpus",
+    "text": "Was ist ein Korpus"
+  },
+  {
+    "objectID": "content/08-text_as_data/slides/index.html#ein-kurzer-überblick",
+    "href": "content/08-text_as_data/slides/index.html#ein-kurzer-überblick",
+    "title": "Text as data",
+    "section": "Ein kurzer Überblick",
+    "text": "Ein kurzer Überblick\nStruktur des  TikTok-Datensatzes\n\nstatistics %>% glimpse()\n\nRows: 941\nColumns: 24\n$ id               <dbl> 6.813800e+18, 6.832737e+18, 6.845368e+18, 6.927122e+1…\n$ thread_id        <dbl> 6.813800e+18, 6.832737e+18, 6.845368e+18, 6.927122e+1…\n$ author           <chr> \"onlyjayus\", \"onlyjayus\", \"ryguy238\", \"mason.whaley\",…\n$ author_full      <chr> \"actuallyitsbella\", \"actuallyitsbella\", \"ryan p\", \"Ma…\n$ author_id        <dbl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N…\n$ author_followers <dbl> 18500000, 18500000, 28500, 151500, 15700, 319500, 693…\n$ body             <chr> \"You’re sexy. The math proves it #fyp #love #dating #…\n$ timestamp        <dttm> 2020-04-09 19:44:39, 2020-05-30 20:28:05, 2020-07-03…\n$ unix_timestamp   <dbl> 1586461479, 1590870485, 1593811442, 1612846242, 16420…\n$ is_duet          <lgl> FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALS…\n$ music_name       <chr> \"SexyBack\", \"original sound\", \"original sound\", \"orig…\n$ music_id         <dbl> 6.696418e+18, 6.832737e+18, 6.845368e+18, 6.927122e+1…\n$ music_url        <chr> \"https://sf16-ies-music-va.tiktokcdn.com/obj/tos-usea…\n$ video_url        <chr> \"https://v16-webapp.tiktok.com/eac3d9cb4566d4ac017e3f…\n$ tiktok_url       <chr> \"https://tiktok.com/@onlyjayus/video/6813800162259897…\n$ thumbnail_url    <chr> \"https://p16-sign-va.tiktokcdn.com/tos-maliva-p-0068/…\n$ likes            <dbl> 1200000, 910000, 901000, 794300, 740300, 701400, 6490…\n$ comments         <dbl> 7746, 11900, 3020, 36900, 8179, 8150, 34800, 7592, 28…\n$ shares           <dbl> 23000, 16600, 1755, 64000, 6397, 1685, 93800, 51300, …\n$ plays            <dbl> 6700000, 3300000, 5100000, 3800000, 2900000, 2500000,…\n$ hashtags         <chr> \"fyp,love,dating,romance,relationship,crush,people,po…\n$ stickers         <chr> NA, NA, NA, \"that one guy\", \"Ok…but I guess Timmy is …\n$ effects          <chr> NA, NA, NA, NA, \"Greenscreen\", NA, \"Disco\", NA, \"TapT…\n$ warning          <chr> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N…"
+  },
+  {
+    "objectID": "content/08-text_as_data/slides/index.html#erstellung-eines-korpus",
+    "href": "content/08-text_as_data/slides/index.html#erstellung-eines-korpus",
+    "title": "Text as data",
+    "section": "Erstellung eines Korpus",
+    "text": "Erstellung eines Korpus\nTextverarbeitung mit quanteda (benoit2018?)\n\ncrp <- corpus(statistics, \n              docid_field = \"id\",\n              text_field = \"hashtags\")\ncrp\n\nCorpus consisting of 941 documents and 22 docvars.\n6813800162259897344 :\n\"fyp,love,dating,romance,relationship,crush,people,population...\"\n\n6832736698938576896 :\n\"fyp,blacklivesmatter,tiktokpartner,learnontiktok,police,fact...\"\n\n6845368010048408576 :\n\"skittles,statistics,education,fyp,foryou\"\n\n6927121729257098240 :\n\"hotguy,itwasntme,turbotaxlivepick6,doritosflatlife,foryou,wa...\"\n\n7052705912317840384 :\n\"timotheechalamet,fyp,foryou,timothee,peach,callmebyyourname,...\"\n\n6909087873081905152 :\n\"stitch,statistics,staticstics,fyp,foryoupage,trending\"\n\n[ reached max_ndoc ... 935 more documents ]"
+  },
+  {
+    "objectID": "content/08-text_as_data/slides/index.html#tokenisierung",
+    "href": "content/08-text_as_data/slides/index.html#tokenisierung",
+    "title": "Text as data",
+    "section": "Tokenisierung",
+    "text": "Tokenisierung\nTextverarbeitung mit quanteda (benoit2018?)\n\ntkn <- crp %>% \n  tokens(remove_punct = TRUE,\n         remove_symbols = TRUE,\n         remove_url = TRUE,\n         remove_separators = TRUE)\ntkn\n\nTokens consisting of 941 documents and 22 docvars.\n6813800162259897344 :\n [1] \"fyp\"          \"love\"         \"dating\"       \"romance\"      \"relationship\"\n [6] \"crush\"        \"people\"       \"population\"   \"world\"        \"math\"        \n[11] \"stats\"        \"statistics\"  \n\n6832736698938576896 :\n[1] \"fyp\"              \"blacklivesmatter\" \"tiktokpartner\"    \"learnontiktok\"   \n[5] \"police\"           \"facts\"            \"fact\"             \"statistics\"      \n[9] \"usa\"             \n\n6845368010048408576 :\n[1] \"skittles\"   \"statistics\" \"education\"  \"fyp\"        \"foryou\"    \n\n6927121729257098240 :\n [1] \"hotguy\"            \"itwasntme\"         \"turbotaxlivepick6\"\n [4] \"doritosflatlife\"   \"foryou\"            \"wap\"              \n [7] \"statistics\"        \"fyp\"               \"foryoupage\"       \n[10] \"wap\"              \n\n7052705912317840384 :\n[1] \"timotheechalamet\" \"fyp\"              \"foryou\"           \"timothee\"        \n[5] \"peach\"            \"callmebyyourname\" \"statistics\"      \n\n6909087873081905152 :\n[1] \"stitch\"      \"statistics\"  \"staticstics\" \"fyp\"         \"foryoupage\" \n[6] \"trending\"   \n\n[ reached max_ndoc ... 935 more documents ]"
+  },
+  {
+    "objectID": "content/08-text_as_data/slides/index.html#erstellung-einer-document-feature-matrix-dfm",
+    "href": "content/08-text_as_data/slides/index.html#erstellung-einer-document-feature-matrix-dfm",
+    "title": "Text as data",
+    "section": "Erstellung einer Document-Feature-Matrix [DFM]",
+    "text": "Erstellung einer Document-Feature-Matrix [DFM]\nTextverarbeitung mit quanteda (benoit2018?)\n\ndfm <- tkn %>%  dfm()\ndfm\n\nDocument-feature matrix of: 941 documents, 2,941 features (99.71% sparse) and 22 docvars.\n                     features\ndocs                  fyp love dating romance relationship crush people\n  6813800162259897344   1    1      1       1            1     1      1\n  6832736698938576896   1    0      0       0            0     0      0\n  6845368010048408576   1    0      0       0            0     0      0\n  6927121729257098240   1    0      0       0            0     0      0\n  7052705912317840384   1    0      0       0            0     0      0\n  6909087873081905152   1    0      0       0            0     0      0\n                     features\ndocs                  population world math\n  6813800162259897344          1     1    1\n  6832736698938576896          0     0    0\n  6845368010048408576          0     0    0\n  6927121729257098240          0     0    0\n  7052705912317840384          0     0    0\n  6909087873081905152          0     0    0\n[ reached max_ndoc ... 935 more documents, reached max_nfeat ... 2,931 more features ]"
+  },
+  {
+    "objectID": "content/08-text_as_data/slides/index.html#welche-hashtags-werden-genutzt",
+    "href": "content/08-text_as_data/slides/index.html#welche-hashtags-werden-genutzt",
+    "title": "Text as data",
+    "section": "Welche Hashtags werden genutzt?",
+    "text": "Welche Hashtags werden genutzt?\nTextvisualisierung mit quanteda.textplots\n\nlibrary(quanteda.textplots)\ndfm %>% textplot_wordcloud(\n  min_size = 1, max_size = 8, max_words = 50,\n  rotation = 0)"
+  },
+  {
+    "objectID": "content/08-text_as_data/slides/index.html#literatur",
+    "href": "content/08-text_as_data/slides/index.html#literatur",
+    "title": "Text as data",
+    "section": "Literatur",
+    "text": "Literatur\n\n\nSalganik, M. J. (2018). Bit by bit: Social research in the digital age. Princeton University Press.\n\n\n\n\n\nDigital Behavioral Data"
+  },
+  {
+    "objectID": "content/08-text_as_data/slides/index.html#nicht-neu-aber-andere-dimension",
+    "href": "content/08-text_as_data/slides/index.html#nicht-neu-aber-andere-dimension",
+    "title": "Text as data",
+    "section": "Nicht neu, aber andere Dimension",
+    "text": "Nicht neu, aber andere Dimension\nDas Phänomen Text as data\n\n\n\nLange Tradition der Text- und Inhaltsanalyse (besonders in der Kommunikationswissenschaft)\nChancen & Herausforderungen durch explosionsartige Vergrößerung des (Text-)Datenaufkommen in den letzten Jahren (Websites, Plattformen & Digitalisierung)\n\n\n\n\n\n\n\n(Salganik, 2018)"
+  },
+  {
+    "objectID": "content/08-text_as_data/slides/index.html#texts-texts-everywhere",
+    "href": "content/08-text_as_data/slides/index.html#texts-texts-everywhere",
+    "title": "Text as data",
+    "section": "Texts, texts everywhere",
+    "text": "Texts, texts everywhere\nDefinition von (Medien-)Inhaltsanalyse\n\n\nInhaltsanalyse\n\nUntersuchung und Fragestellung werkimmanet\nIndividuelle Interpretation einer einzelnen medialen Botschaft\numfassendes und tief gehendes Verständnis des jeweiligen medialen Objekts zu erreichen\n\n\nMedieninhaltsanalyse\n\nUntersuchung einer großen Zahl von Botschaften vergleichbarer Natur auf Muster und Tendenzen\nsystematischen Analyse zahlreicher medialer Botschaften\naus der Vielfalt der Objekte die wesentlichen Tendenzen herausdestilliert und so allgemeine oder verallgemeinerbare Aussagen ermöglicht Komplexitätsreduktion)"
   }
 ]
