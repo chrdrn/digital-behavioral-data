@@ -3,7 +3,7 @@ title: "Text as data"
 title-slide-attributes:
   data-background-image: ../../00-images/background_title.svg
   data-background-color: "#04316a"
-subtitle: "Digital behavioral data - Bonus session"
+subtitle: "Digital behavioral data - Extra session"
 author: 
   - name: Christoph Adrian 
     url: https://twitter.com/chrdrn
@@ -52,19 +52,21 @@ bibliography: references.bib
 | 9                                                      | 11.01.2023                                                      | ESM: *m-path*                                                                      | Dörr                                                                  |
 | 10                                                     | 18.01.2023                                                      | Data Donations                                                                     | Hofmann & Wierzbicki                                                  |
 | 11                                                     | 25.01.2023                                                      | *PUFFER*                                                                           |                                                                       |
-| 12                                                     | 02.02.2023                                                      | *Guest Lecture: Linking DBD & Survey data*                                         | [Johannes Breuer](https://www.johannesbreuer.com/)                    |
+| **12**                                                 | **02.02.2023**                                                  | ***Guest Lecture: Linking DBD & Survey data***                                     | [**Johannes Breuer**](https://www.johannesbreuer.com/)                |
 | 13                                                     | 08.02.2023                                                      | Semesterabschluss & Evaluation                                                     | Christoph Adrian                                                      |
 
 ::: notes
 ▶️
+
+⚠️Terminkonflikt
 :::
 
 # Agenda
 
 1.  **A short introduction**
 2.  **Case Study: Amazon Reviews**
-3.  **Kursevluation**
-4.  **Sentiment analysis**
+3.  ☕ **Kursevluation**
+4.  **Sentiment Analysis**
 5.  **Topic Modeling**
 
 # A short introduction {background-color="#E6002E"}
@@ -77,9 +79,9 @@ im Fokus: *Text as data*
 
 ::: columns
 ::: {.column width="50%"}
--   Lange Tradition der Text- und Inhaltsanalyse (besonders in der Kommunikationswissenschaft)
+-   Lange **Tradition** der Text- und Inhaltsanalyse (besonders in der Kommunikationswissenschaft)
 
--   Chancen & Herausforderungen durch explosionsartige Vergrößerung des (Text-)Datenaufkommen in den letzten Jahren (Websites, Plattformen & Digitalisierung)
+-   **Neue Chancen & Herausforderungen** durch explosionsartige Vergrößerung des (Text-)Datenaufkommen in den letzten Jahren (Websites, Plattformen & Digitalisierung)
 :::
 
 ::: {.column width="50%"}
@@ -95,17 +97,17 @@ im Fokus: *Text as data*
 
 #### ![](graphs/graph_01.svg)
 
-## Ein riesiges Feld
+## Possibilities over possibilities
 
-#### Überblick über verschiedene Methoden
+#### Überblick über verschiedene Methoden der Textanalyse
 
 ![](images/text_as_data_methods.png){fig-align="center"}
 
-# Case study: Amazon Reviews {background-color="#E6002E"}
+# Case study: {{< fa brands amazon >}} Reviews {background-color="#E6002E"}
 
 🕵️ ⭐⭐⭐⭐⭐
 
-[![Binder](https://mybinder.org/badge_logo.svg){alt="Binder"}](https://mybinder.org/v2/gh/chrdrn/dbd_binder/HEAD) [![Google Colab](https://colab.research.google.com/assets/colab-badge.svg){alt="Google Colab"}](https://colab.research.google.com/github/chrdrn/dbd_binder/blob/main/session_07-showcase_tiktok.ipynb) [![RStudio Quarto](https://img.shields.io/badge/RStudio-4285F4?style=for-the-badge&logo=rstudio&logoColor=white){alt="RStudio Quarto"}](https://chrdrn.github.io/digital-behavioral-data/content/07-webscraping-tiktok/07-exercise.html)
+[![Binder](https://mybinder.org/badge_logo.svg){alt="Binder"}](https://mybinder.org/v2/gh/chrdrn/dbd_binder/HEAD) [![Google Colab](https://colab.research.google.com/assets/colab-badge.svg){alt="Google Colab"}](https://colab.research.google.com/github/chrdrn/dbd_binder/blob/main/session_08-showcase_text_as_data.ipynb) [![RStudio Quarto](https://img.shields.io/badge/RStudio-4285F4?style=for-the-badge&logo=rstudio&logoColor=white){alt="RStudio Quarto"}](https://chrdrn.github.io/digital-behavioral-data/content/08-text_as_data/08-exercise.html)
 
 ::: notes
 But ... why?
@@ -139,11 +141,10 @@ amazon <- readRDS(
 
 ::: columns
 ::: {.column width="50%"}
--   Reviews von fünf Diätpillen automatisch über custom function gescraped
--   Datensatz mit knapp über 2000 Reviews
--   Nächste Schritte:
-    -   Datenaufbereitung
-
+-   **Reviews** von **fünf "Diätpillen"**
+-   Automatisch Scraping via eigener R-Funktion
+-   Datensatz mit **knapp über 2000 Reviews** (ohne Bereinigung)
+-   Exemplarische Darstellung folgender Schritte:
     -   Text-Processing
 
     -   Sentiment-Analyse
@@ -153,7 +154,7 @@ amazon <- readRDS(
 
 ::: {.column width="50%"}
 ::: r-stack
-![](images/amazon_review_01.png){fig-align="center"}
+![](images/amazon_review_01.png){.fragment .semi-fade-out fragment-index="1" fig-align="center"}
 
 ![](images/amazon_review_02.png){.fragment fragment-index="1" fig-align="center"}
 :::
@@ -245,7 +246,7 @@ amazon$data$full %>%
 
 # Explorative Datenanalyse {background-color="#E6002E"}
 
-Im Fokus: Amazon Reviews
+Im Fokus: 🔍 {{< fa brands amazon >}} Reviews
 
 ## Anzahl der Reviews nach Produkt
 
@@ -314,7 +315,7 @@ Bitte nehmen Sie über den QR Code oder folgenden Link an der Evaluation teil:
 
 Kurze Erklärung der Grundbegriffe *Korpus, Token & DFM*
 
-## *Vom* Korpus zum Model
+## Vom Korpus bis zum Model
 
 #### Prozess der Textverarbeitung
 
@@ -368,15 +369,15 @@ Definition POS: *Zuordnung von Wörtern und Satzzeichen eines Textes zu Wortarte
 *Bag-of-Words*-Modell: es zählt lediglich die Worthäufigkeit je Dokument, die syntaktischen und grammatikalischen Zusammenhänge zwischen einzelnen Wörtern werden ignoriert.
 :::
 
-# Sentiment Analyse
+# Sentiment Analyse {background-color="#E6002E"}
 
-👎 & 👍
+👎 & 👍?
 
 ## The good, the bad and the ugly
 
 #### Grundidee & Ziele und der Sentimentanalyse
 
--   Auf Basis von speziellen Wortlisten bzw. Lexika werden bestimmte Begriffe ausgezählt, denen zuvor entweder ein numerischer Wert (Score) oder eine Kategorien (*positiv* oder *negativ)* zugeordnet wurden.
+-   Auf Basis von speziellen **Wortlisten bzw. Lexika** werden bestimmte **Begriffe ausgezählt**, denen zuvor entweder ein numerischer Wert (Score) oder eine Kategorien (*positiv* oder *negativ)* zugeordnet wurden.
 
 -   Ziel ist die Bestimmung der Polarität (positive/negative Emotion) eines Textes
 
@@ -388,9 +389,19 @@ Definition POS: *Zuordnung von Wörtern und Satzzeichen eines Textes zu Wortarte
 
 -   Die Verarbeitung und Analyse der Daten erfolgt mit dem`quanteda` bzw. `quanteda.textstat` Paket und basiert nur auf dem Korpus der deutschen Reviews
 
--   Als Sentiment-Grundlage wird SentiWS genutzt:
+-   Als Sentiment-Grundlage wird SentiWS genutzt
 
-    > Der SentimentWortschatz, oder kurz *SentiWS*, ist eine öffentlich verfügbare deutschsprachige Ressource für die Sentiment Analyse, Opinion Mining und ähnliche Zwecke. Dabei werden für enthaltene Wörter die positive und negative Polarität im Intervall \[-1; 1\] angegeben, sowie deren Wortart und (falls anwendbar) Flexionsvarianten. Die aktuelle Version des SentiWS enthält ungefähr 1.650 positive und 1.800 negative Grundformen, so dass, inklusive der verschiedenen Flexionsformen, insgesamt etwa 16.000 positive und 18.000 negative Wortformen enthalten sind. SentiWS enthält nicht nur Adjektive und Adverbien, sondern auch Nomen und Verben die Träger von Sentiment sind
+    -   öffentlich verfügbare deutschsprachige Ressource für die Sentiment Analyse, Opinion Mining und ähnliche Zwecke
+
+    -   positive und negative Polarität im Intervall \[-1; 1\] für enthaltene Wörter die angegeben, sowie deren Wortart
+
+    -   enthält ungefähr 1.650 positive und 1.800 negative Grundformen
+
+::: notes
+-   und (falls anwendbar) Flexionsvarianten
+
+-   so dass, inklusive der verschiedenen Flexionsformen, insgesamt etwa 16.000 positive und 18.000 negative Wortformen enthalten sind. SentiWS enthält nicht nur Adjektive und Adverbien, sondern auch Nomen und Verben die Träger von Sentiment sind
+:::
 
 ## Erste Ergebnisse
 
@@ -399,7 +410,7 @@ Definition POS: *Zuordnung von Wörtern und Satzzeichen eines Textes zu Wortarte
 ```{r}
 #| output-location: slide
 amazon$data$de_senti %>% 
-  ggplot(aes(x = src, y = polarity)) + 
+  ggplot(aes(x = src, y = valence)) + 
   ggdist::stat_halfeye(
     aes(fill = src),
     adjust = .5, 
@@ -426,6 +437,29 @@ amazon$data$de_senti %>%
   theme_pubr()
 ```
 
+::: notes
+Valence = average valence of document, based on a dictionary whose values have numeric valence scores.
+:::
+
+## Ein großes "... , ABER ... "
+
+#### Kritische Anmerkungen zur Sentimentanalyse
+
+::: columns
+::: {.column width="50%"}
+```{r}
+amazon$data$de_senti %>% 
+  flat_table(rating, val_fct)
+```
+:::
+
+::: {.column width="50%"}
+-   Probleme der "dictionary method" mit **Negationen** ("nicht gut") und "**Verstärkern**" ("sehr gut")
+
+-   Besser: Codierung bzw. **Klassifizierung mit Hilfe von überwachtem maschinellem Lernen**
+:::
+:::
+
 # Topic Modeling {background-color="#E6002E"}
 
 Grundidee und beispielhafter Ablauf
@@ -434,31 +468,31 @@ Grundidee und beispielhafter Ablauf
 
 #### Quick Introduction to Topic Modeling
 
--   Verfahren des *unüberwachten maschinellen Lernens*, das sich daher insbesondere zur Exploration und Deskription großer Textmengen eignet
+-   Verfahren des ***unüberwachten maschinellen Lernens***, das sich daher insbesondere zur Exploration und Deskription großer Textmengen eignet
 
 -   Themen werden strikt auf Basis von Worthäufigkeiten in den einzelnen Dokumenten vermeintlich objektiv berechnet, ganz ohne subjektive Einschätzungen und damit einhergehenden etwaigen Verzerrungen
+
+-   Bekanntesten dieser Verfahren sind ***LDA*** **(Latent Dirichlet Allocation)** sowie die darauf aufbauenden ***CTM*** **(Correlated Topic Models)** und ***STM*** **(Structural Topic Models)**
 
 ## Annahmen {.smaller}
 
 #### Quick Introduction to Topic Modeling
 
--   Ein Textkorpus besteht aus **`D`** Dokumenten und **`V`** Wörtern bzw. Terms
+-   Ein Textkorpus besteht aus **`D` Dokumenten** und **`V` Wörtern bzw. Terms**
 
--   Es wird nun angenommen, dass latente Themen **`K`** zu unterschiedlichen Anteilen in den Dokumenten `D` vorkommen und alle Wörter **`V`** mit unterschiedlicher Wahrscheinlichkeit zu den **`K`** Themen gehören.
+-   Es wird nun angenommen, dass **latente Themen `K`** zu unterschiedlichen **Anteilen in den Dokumenten `D`** vorkommen und **alle Wörter `V`** mit unterschiedlicher **Wahrscheinlichkeit zu den `K` Themen gehören**.
 
 -   Ziel der Verfahren ist die Berechnung zweier Matrizen **`D×K`** und **`V×K`**.
 
-    -   Die erste Matrix **`D×K`** enthält für jedes einzelne Dokument **`d`** und jedes einzelne Thema **`k`** die Wahrscheinlichkeit, dass das Thema in diesem Dokument vorkommt.
+    -   Die erste Matrix **`D×K`** enthält für jedes einzelne Dokument **`d`** und jedes einzelne Thema **`k`** die Wahrscheinlichkeit, dass **das Thema in diesem Dokument vorkommt (𝚹).**
 
-    -   Analog enthält **`V×K`** für jedes einzelne Wort **`w`** und jedes einzelne Thema **`k`** die Wahrscheinlichkeit, dass das jeweilige Wort in diesem Thema vorkommt.
-
--   Mit Hilfe dieser Matrizen können die Themen dann beschrieben und interpretiert werden.
-
-    -    So können aus **`V×K`** die wichtigsten Wörter je Thema (d.h., die Wörter mit der höchsten konditionalen Wahrscheinlichkeit, zu einem bestimmten Thema kk zu gehören) abgelesen werden;
-
-    -   mittels **`D×K`** können Themen Dokumenten und umgekehrt zugeordnet werden, z. B. in dem für jedes Dokument dd das Thema kk mit der höchsten konditionalen Wahrscheinlichkeit identifiziert wird.
+    -   Analog enthält **`V×K`** für jedes einzelne Wort **`w`** und jedes einzelne Thema **`k`** die Wahrscheinlichkeit, dass d**as jeweilige Wort in diesem Thema vorkommt (𝛃).**
 
 ::: notes
+-   Mit Hilfe dieser Matrizen können die Themen dann beschrieben und interpretiert werden.
+    -   So können aus **`V×K`** die wichtigsten Wörter je Thema (d.h., die Wörter mit der höchsten konditionalen Wahrscheinlichkeit, zu einem bestimmten Thema kk zu gehören) abgelesen werden;
+
+    -   mittels **`D×K`** können Themen Dokumenten und umgekehrt zugeordnet werden, z. B. in dem für jedes Dokument dd das Thema kk mit der höchsten konditionalen Wahrscheinlichkeit identifiziert wird.
 -   Zur Berechnung dieser Matrizen wird sozusagen der umgekehrte Weg gegangen und die Erzeugung der Dokumente als statistischer Prozess beschrieben: ein Dokument wird demnach erzeugt, in dem zufällig Themen aus der zum Dokument zugehörigen Themenverteilung und Wörter aus der den Themen zugehörigen Wortverteilungen gezogen werden. Hierzu wird das Topic Model zunächst mit zufälligen Themen- und Wortverteilungen initialisiert und dann in einem iterativen, algorithmischen Verfahren nach und nach adaptiert, bis es möglichst gut zu den Daten (dem Textkorpus) passt (d.h. die gemeinsame Likelihood der Themen- und Wortverteilungen maximiert wird).^[53](https://bookdown.org/joone/ComputationalMethods/topicmodeling.html#fn53)^
 :::
 
@@ -474,6 +508,10 @@ Grundidee und beispielhafter Ablauf
 x = Prevalende Metadata
 
 gamma = Metadata weights
+
+smaller box = N = number of words in a document
+
+bigger box = M = number of documents in a corpus
 :::
 
 ## Welches K?
@@ -544,6 +582,18 @@ amazon$stm$preval$tgt  %>%
   labs(x = NULL, y = expression(gamma)) +
   scale_fill_jama()
 ```
+
+## Validieren, Validieren, Validieren
+
+#### Kritisiche Anmerkungen zum Topic Modeling
+
+> *Automated text analysis methods can substantially reduce the costs and time of analyzing massive collections of political texts. When applied to any one problem, however, the output of the models may be misleading or simply wrong. \[...\] What should be avoided, then, is the blind use of any method without a validation step (Grimmer & Stewart, 2013, S. 5).*
+
+-   Klassifikationsmodell klassifiziert alle Dokumente, ein Diktionär spuckt für jedes Dokument ein Ergebnis aus, ein Topic Model findet immer die vorgegebene Anzahl an Themen.
+
+-   Ob es sich dabei auch um inhaltlich sinnvolle Ergebnisse handelt, **kann und muss durch manuelle Validierungen festgestellt werden.**
+
+-   Moderne Verfahren (z.B. BERT) potentiell besser geeignet für bestimmte Texte
 
 # Time for questions {background-color="#E6002E" background-image="../../00-images/background_questions.svg"}
 

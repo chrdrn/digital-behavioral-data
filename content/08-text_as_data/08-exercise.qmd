@@ -856,7 +856,7 @@ print_output_descriptives(gamma_topics[1])
 print_output_abstracts(gamma_topics[1])
 ```
 
-####### Topic 2
+###### Topic 2
 
 ```{r}
 print_output_descriptives(gamma_topics[2])
