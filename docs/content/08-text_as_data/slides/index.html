@@ -1,461 +1,446 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
-<meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.269">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-<meta name="author" content="Christoph Adrian">
-
-<title>Digital behavioral data - Text as data</title>
-<style>
-code{white-space: pre-wrap;}
-span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
-div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-ul.task-list{list-style: none;}
-ul.task-list li input[type="checkbox"] {
-  width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
-  vertical-align: middle;
-}
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
-</style>
-
-
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../">
+<html lang="en"><head>
 <link href="../../../images/logo_fau_red.svg" rel="icon" type="image/svg+xml">
-<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-html/tabby.min.js"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/quarto-contrib/roughnotation-0.5.1/rough-notation.iife.js"></script>
 <script src="../../../site_libs/quarto-contrib/roughnotation-init-1.0.0/rough.js"></script>
 <link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
-<script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
-  "copy-button": false,
-  "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
-  "limit": 20,
-  "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+<link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.2.269">
+
+  <meta name="author" content="Christoph Adrian">
+  <title>Digital behavioral data - Text as data</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #383a42;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #383a42; } /* Normal */
+    code span.al { color: #95da4c; background-color: #4d1f24; font-weight: bold; } /* Alert */
+    code span.an { color: #50a14f; } /* Annotation */
+    code span.at { color: #a626a4; } /* Attribute */
+    code span.bn { color: #986801; } /* BaseN */
+    code span.bu { color: #a626a4; } /* BuiltIn */
+    code span.cf { color: #a626a4; } /* ControlFlow */
+    code span.ch { color: #50a14f; } /* Char */
+    code span.cn { color: #986801; } /* Constant */
+    code span.co { color: #a0a1a7; font-style: italic; } /* Comment */
+    code span.cv { color: #e45649; font-style: italic; } /* CommentVar */
+    code span.do { color: #e45649; } /* Documentation */
+    code span.dt { color: #a626a4; } /* DataType */
+    code span.dv { color: #986801; } /* DecVal */
+    code span.er { color: #f44747; text-decoration: underline; } /* Error */
+    code span.ex { color: #4078f2; font-weight: bold; } /* Extension */
+    code span.fl { color: #986801; } /* Float */
+    code span.fu { color: #4078f2; } /* Function */
+    code span.im { color: #50a14f; } /* Import */
+    code span.in { color: #c45b00; } /* Information */
+    code span.kw { color: #a626a4; } /* Keyword */
+    code span.op { color: #a626a4; } /* Operator */
+    code span.ot { color: #27ae60; } /* Other */
+    code span.pp { color: #a626a4; } /* Preprocessor */
+    code span.re { color: #2980b9; background-color: #153042; } /* RegionMarker */
+    code span.sc { color: #0184bc; } /* SpecialChar */
+    code span.ss { color: #da4453; } /* SpecialString */
+    code span.st { color: #50a14f; } /* String */
+    code span.va { color: #e45649; } /* Variable */
+    code span.vs { color: #da4453; } /* VerbatimString */
+    code span.wa { color: #da4453; } /* Warning */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }
+  </style>
+  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto.css" id="theme">
+  <link href="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="../../../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="../../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <script type="application/json" class="js-hypothesis-config">
+  {
+    "theme": "clean"
   }
-}</script>
-<script type="application/json" class="js-hypothesis-config">
-{
-  "theme": "clean"
-}
-</script>
-<script async="" src="https://hypothes.is/embed.js"></script>
+  </script>
+  <script async="" src="https://hypothes.is/embed.js"></script>
+  <style type="text/css">
 
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
 
-<link rel="stylesheet" href="../../../styles.css">
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-captioned.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-captioned) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-captioned.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-captioned .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-captioned .callout-caption  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-captioned.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-captioned.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-caption {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-caption {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-caption {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-captioned .callout-body > .callout-content > :last-child {
+    margin-bottom: 0.5rem;
+  }
+
+  .callout.callout-captioned .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-captioned) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-caption {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-caption {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-caption {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-caption {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-caption {
+    background-color: #ffe5d0
+  }
+
+  </style>
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
 </head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
 
-<body class="nav-sidebar floating">
+<section id="title-slide" data-background-color="#04316a" data-background-image="../../00-images/background_title.svg" class="quarto-title-block center">
+  <h1 class="title">Text as data</h1>
+  <p class="subtitle">Digital behavioral data - Extra session</p>
 
-<div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Text as data</h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
-      </button>
-    </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
-<!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="../../../index.html" class="sidebar-logo-link">
-      <img src="../../../images/dbd_hex.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
-      </a>
-      <div class="sidebar-tools-main tools-wide">
-    <a href="https://www.kommunikationswissenschaft.rw.fau.de/lehre/master/digital-behavioral-data/" title="" class="sidebar-tool px-1"><i class="bi bi-globe"></i></a>
-    <a href="https://twitter.com/chrdrn" title="" class="sidebar-tool px-1"><i class="bi bi-twitter"></i></a>
-    <a href="https://github.com/chrdrn/digital-behavioral-data" title="" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
-    <a href="https://github.com/chrdrn/dbd_binder" title="Gitlab Repository for Showcases" class="sidebar-tool px-1"><i class="bi bi-code-square"></i></a>
-    <a href="https://mybinder.org/v2/gh/chrdrn/dbd_binder/HEAD" title="Start Binder" class="sidebar-tool px-1"><i class="bi bi-box-arrow-up-right"></i></a>
-  <a href="" class="quarto-color-scheme-toggle sidebar-tool" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-  <a href="" class="quarto-reader-toggle sidebar-tool" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
-  <div class="quarto-reader-toggle-btn">
-  <i class="bi"></i>
-  </div>
-</a>
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+<a href="https://twitter.com/chrdrn">Christoph Adrian</a> 
 </div>
-      </div>
-      <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-      </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">Kick-Off</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../content/01-kick-off/01-slides.html" class="sidebar-item-text sidebar-link">Slides</a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">Introduction</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../content/02-dbb-introduction_overview/02-slides.html" class="sidebar-item-text sidebar-link">Slides</a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">Data Collection</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../content/03-dbd-data_collection/03-slides.html" class="sidebar-item-text sidebar-link">Slides</a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">API Access: Twitter</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../content/04-api_access-twitter/04-slides.html" class="sidebar-item-text sidebar-link">Slides</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../content/04-api_access-twitter/04-exercise.html" class="sidebar-item-text sidebar-link">Showcase</a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">API Access: YouTube</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../content/05-api_access-youtube/05-slides.html" class="sidebar-item-text sidebar-link">Slides</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../content/05-api_access-youtube/05-exercise.html" class="sidebar-item-text sidebar-link">Showcase</a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false">API Access: Reddit</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../content/06-api_access-reddit/06-slides.html" class="sidebar-item-text sidebar-link">Slides</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../content/06-api_access-reddit/06-exercise.html" class="sidebar-item-text sidebar-link">Showcase</a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false">Webscraping: TikTok</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../content/07-webscraping-tiktok/07-slides.html" class="sidebar-item-text sidebar-link">Slides</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../content/07-webscraping-tiktok/07-exercise.html" class="sidebar-item-text sidebar-link">Showcase</a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false">Text as data</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../content/08-text_as_data/08-slides.html" class="sidebar-item-text sidebar-link">Slides</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../content/08-text_as_data/08-exercise.html" class="sidebar-item-text sidebar-link">Showcase</a>
-  </div>
-</li>
-      </ul>
-  </li>
-    </ul>
-    </div>
-</nav>
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#seminarplan" id="toc-seminarplan" class="nav-link active" data-scroll-target="#seminarplan">Seminarplan</a></li>
-  <li><a href="#agenda" id="toc-agenda" class="nav-link" data-scroll-target="#agenda">Agenda</a></li>
-  <li><a href="#a-short-introduction" id="toc-a-short-introduction" class="nav-link" data-scroll-target="#a-short-introduction">A short introduction</a>
-  <ul class="collapse">
-  <li><a href="#nicht-neu-aber-andere-dimension" id="toc-nicht-neu-aber-andere-dimension" class="nav-link" data-scroll-target="#nicht-neu-aber-andere-dimension">Nicht neu, aber andere Dimension</a></li>
-  <li><a href="#neue-quellen-neue-methoden-neue-möglichkeiten" id="toc-neue-quellen-neue-methoden-neue-möglichkeiten" class="nav-link" data-scroll-target="#neue-quellen-neue-methoden-neue-möglichkeiten">Neue Quellen, Neue Methoden, neue Möglichkeiten</a></li>
-  <li><a href="#possibilities-over-possibilities" id="toc-possibilities-over-possibilities" class="nav-link" data-scroll-target="#possibilities-over-possibilities">Possibilities over possibilities</a></li>
-  </ul></li>
-  <li><a href="#case-study-fa-brands-amazon-reviews" id="toc-case-study-fa-brands-amazon-reviews" class="nav-link" data-scroll-target="#case-study-fa-brands-amazon-reviews">Case study: <i class="fa-brands fa-amazon" aria-label="amazon"></i> Reviews</a>
-  <ul class="collapse">
-  <li><a href="#im-fokus-diätpillen" id="toc-im-fokus-diätpillen" class="nav-link" data-scroll-target="#im-fokus-diätpillen">Im Fokus: 💊 Diätpillen</a></li>
-  <li><a href="#quick-scraping-step-by-step" id="toc-quick-scraping-step-by-step" class="nav-link" data-scroll-target="#quick-scraping-step-by-step">Quick scraping step-by-step</a></li>
-  <li><a href="#quick-scraping-step-by-step-1" id="toc-quick-scraping-step-by-step-1" class="nav-link" data-scroll-target="#quick-scraping-step-by-step-1">Quick scraping step-by-step</a></li>
-  <li><a href="#quick-scraping-step-by-step-2" id="toc-quick-scraping-step-by-step-2" class="nav-link" data-scroll-target="#quick-scraping-step-by-step-2">Quick scraping step-by-step</a></li>
-  <li><a href="#quick-scraping-step-by-step-3" id="toc-quick-scraping-step-by-step-3" class="nav-link" data-scroll-target="#quick-scraping-step-by-step-3">Quick scraping step-by-step</a></li>
-  </ul></li>
-  <li><a href="#explorative-datenanalyse" id="toc-explorative-datenanalyse" class="nav-link" data-scroll-target="#explorative-datenanalyse">Explorative Datenanalyse</a>
-  <ul class="collapse">
-  <li><a href="#anzahl-der-reviews-nach-produkt" id="toc-anzahl-der-reviews-nach-produkt" class="nav-link" data-scroll-target="#anzahl-der-reviews-nach-produkt">Anzahl der Reviews nach Produkt</a></li>
-  <li><a href="#anzahl-der-reviews-nach-produkt-im-zeitverlauf" id="toc-anzahl-der-reviews-nach-produkt-im-zeitverlauf" class="nav-link" data-scroll-target="#anzahl-der-reviews-nach-produkt-im-zeitverlauf">Anzahl der Reviews nach Produkt im Zeitverlauf</a></li>
-  <li><a href="#bewertungen-der-produkte-absolute-zahlen" id="toc-bewertungen-der-produkte-absolute-zahlen" class="nav-link" data-scroll-target="#bewertungen-der-produkte-absolute-zahlen">Bewertungen der Produkte: Absolute Zahlen</a></li>
-  <li><a href="#bewertungen-der-produkte-kummulierte-anteile" id="toc-bewertungen-der-produkte-kummulierte-anteile" class="nav-link" data-scroll-target="#bewertungen-der-produkte-kummulierte-anteile">Bewertungen der Produkte: Kummulierte Anteile</a></li>
-  </ul></li>
-  <li><a href="#kursevaluation" id="toc-kursevaluation" class="nav-link" data-scroll-target="#kursevaluation">☕ Kursevaluation</a></li>
-  <li><a href="#text-processing" id="toc-text-processing" class="nav-link" data-scroll-target="#text-processing">Text processing</a>
-  <ul class="collapse">
-  <li><a href="#vom-korpus-bis-zum-model" id="toc-vom-korpus-bis-zum-model" class="nav-link" data-scroll-target="#vom-korpus-bis-zum-model">Vom Korpus bis zum Model</a></li>
-  <li><a href="#sätze-token-lemma-pos" id="toc-sätze-token-lemma-pos" class="nav-link" data-scroll-target="#sätze-token-lemma-pos">Sätze – Token – Lemma – POS</a></li>
-  <li><a href="#von-bow-zu-dfm" id="toc-von-bow-zu-dfm" class="nav-link" data-scroll-target="#von-bow-zu-dfm">Von BOW zu DFM</a></li>
-  </ul></li>
-  <li><a href="#sentiment-analyse" id="toc-sentiment-analyse" class="nav-link" data-scroll-target="#sentiment-analyse">Sentiment Analyse</a>
-  <ul class="collapse">
-  <li><a href="#the-good-the-bad-and-the-ugly" id="toc-the-good-the-bad-and-the-ugly" class="nav-link" data-scroll-target="#the-good-the-bad-and-the-ugly">The good, the bad and the ugly</a></li>
-  <li><a href="#grundlagen-für-die-analyse" id="toc-grundlagen-für-die-analyse" class="nav-link" data-scroll-target="#grundlagen-für-die-analyse">Grundlagen für die Analyse</a></li>
-  <li><a href="#erste-ergebnisse" id="toc-erste-ergebnisse" class="nav-link" data-scroll-target="#erste-ergebnisse">Erste Ergebnisse</a></li>
-  <li><a href="#ein-großes-aber" id="toc-ein-großes-aber" class="nav-link" data-scroll-target="#ein-großes-aber">Ein großes “… , ABER …”</a></li>
-  </ul></li>
-  <li><a href="#topic-modeling" id="toc-topic-modeling" class="nav-link" data-scroll-target="#topic-modeling">Topic Modeling</a>
-  <ul class="collapse">
-  <li><a href="#grundidee" id="toc-grundidee" class="nav-link" data-scroll-target="#grundidee">Grundidee</a></li>
-  <li><a href="#annahmen" id="toc-annahmen" class="nav-link" data-scroll-target="#annahmen">Annahmen</a></li>
-  <li><a href="#structual-topic-modeling-im-fokus" id="toc-structual-topic-modeling-im-fokus" class="nav-link" data-scroll-target="#structual-topic-modeling-im-fokus">Structual Topic Modeling im Fokus</a></li>
-  <li><a href="#welches-k" id="toc-welches-k" class="nav-link" data-scroll-target="#welches-k">Welches K?</a></li>
-  <li><a href="#kombination-aus-kohärenz-exklusivität" id="toc-kombination-aus-kohärenz-exklusivität" class="nav-link" data-scroll-target="#kombination-aus-kohärenz-exklusivität">Kombination aus Kohärenz &amp; Exklusivität</a></li>
-  <li><a href="#top-features-der-themen" id="toc-top-features-der-themen" class="nav-link" data-scroll-target="#top-features-der-themen">Top Features der Themen</a></li>
-  <li><a href="#prevalence-der-themen" id="toc-prevalence-der-themen" class="nav-link" data-scroll-target="#prevalence-der-themen">Prevalence der Themen</a></li>
-  <li><a href="#validieren-validieren-validieren" id="toc-validieren-validieren-validieren" class="nav-link" data-scroll-target="#validieren-validieren-validieren">Validieren, Validieren, Validieren</a></li>
-  </ul></li>
-  <li><a href="#time-for-questions" id="toc-time-for-questions" class="nav-link" data-scroll-target="#time-for-questions">Time for questions</a></li>
-  <li><a href="#bis-zur-nächsten-sitzung" id="toc-bis-zur-nächsten-sitzung" class="nav-link" data-scroll-target="#bis-zur-nächsten-sitzung">Bis zur nächsten Sitzung!</a>
-  <ul class="collapse">
-  <li><a href="#literatur" id="toc-literatur" class="nav-link" data-scroll-target="#literatur">Literatur</a></li>
-  </ul></li>
-  </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/chrdrn/digital-behavioral-data/edit/main/content/08-text_as_data/slides/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/chrdrn/digital-behavioral-data/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
-    </div>
-<!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title d-none d-lg-block">Text as data</h1>
-<p class="subtitle lead">Digital behavioral data - Extra session</p>
-</div>
-
-
-<div class="quarto-title-meta-author">
-  <div class="quarto-title-meta-heading">Author</div>
-  <div class="quarto-title-meta-heading">Affiliation</div>
-  
-    <div class="quarto-title-meta-contents">
-    <a href="https://twitter.com/chrdrn">Christoph Adrian</a> 
-  </div>
-    <div class="quarto-title-meta-contents">
-        <p class="affiliation">
+        <p class="quarto-title-affiliation">
             <a href="https://www.kowi.rw.fau.de/person/christoph-adrian/">
             Lehrstuhl für Kommunikationswissenschaft
             </a>
           </p>
-      </div>
     </div>
+</div>
 
-<div class="quarto-title-meta">
-
-      
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">14.12.2022</p>
-    </div>
-  </div>
-  
-    
-  </div>
-  
-
-</header>
-
-<section id="seminarplan" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="seminarplan">Seminarplan</h2>
-<table class="table">
+  <p class="date">14.12.2022</p>
+</section>
+<section id="seminarplan" class="slide level2 smaller">
+<h2>Seminarplan</h2>
+<table>
 <thead>
 <tr class="header">
 <th>Sitzung</th>
@@ -551,12 +536,22 @@ div.csl-indent {
 </tr>
 </tbody>
 </table>
-<div class="notes">
+<aside class="notes">
 <p>▶️</p>
 <p>⚠️Terminkonflikt</p>
-</div>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="agenda" class="level1">
+<section id="agenda" class="title-slide slide level1 center">
 <h1>Agenda</h1>
 <ol type="1">
 <li><strong>A short introduction</strong></li>
@@ -566,13 +561,15 @@ div.csl-indent {
 <li><strong>Topic Modeling</strong></li>
 </ol>
 </section>
-<section id="a-short-introduction" class="level1" data-background-color="#E6002E">
-<h1 data-background-color="#E6002E">A short introduction</h1>
+
+<section>
+<section id="a-short-introduction" class="title-slide slide level1 center" data-background-color="#E6002E">
+<h1>A short introduction</h1>
 <p>im Fokus: <em>Text as data</em></p>
-<section id="nicht-neu-aber-andere-dimension" class="level2">
-<h2 class="anchored" data-anchor-id="nicht-neu-aber-andere-dimension">Nicht neu, aber andere Dimension</h2>
-<section id="das-phänomen-text-as-data" class="level4">
-<h4 class="anchored" data-anchor-id="das-phänomen-text-as-data">Das Phänomen <em>Text as data</em></h4>
+</section>
+<section id="nicht-neu-aber-andere-dimension" class="slide level2">
+<h2>Nicht neu, aber andere Dimension</h2>
+<h4 id="das-phänomen-text-as-data">Das Phänomen <em>Text as data</em></h4>
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
@@ -581,50 +578,49 @@ div.csl-indent {
 </ul>
 </div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://www.bitbybitbook.com/en/1st-ed/introduction/digital-age/"><img src="images/hilbert_lopez_2011.png" class="img-fluid figure-img"></a></p>
+<figure>
+<p><a href="https://www.bitbybitbook.com/en/1st-ed/introduction/digital-age/"><img data-src="images/hilbert_lopez_2011.png"></a></p>
 </figure>
 </div>
-<p><span class="citation" data-cites="salganik2018">(<a href="#ref-salganik2018" role="doc-biblioref">Salganik, 2018</a>)</span></p>
+<p><span class="citation" data-cites="salganik2018">(<a href="#/literatur" role="doc-biblioref" onclick="">Salganik, 2018</a>)</span></p>
 </div>
 </div>
 </section>
+<section id="neue-quellen-neue-methoden-neue-möglichkeiten" class="slide level2">
+<h2>Neue Quellen, Neue Methoden, neue Möglichkeiten</h2>
+<h4 id="verschiedene-textgrundlagen-als-beispiel">Verschiedene Textgrundlagen als Beispiel</h4>
+<h4 id="section"><img data-src="graphs/graph_01.svg"></h4>
 </section>
-<section id="neue-quellen-neue-methoden-neue-möglichkeiten" class="level2">
-<h2 class="anchored" data-anchor-id="neue-quellen-neue-methoden-neue-möglichkeiten">Neue Quellen, Neue Methoden, neue Möglichkeiten</h2>
-<section id="verschiedene-textgrundlagen-als-beispiel" class="level4">
-<h4 class="anchored" data-anchor-id="verschiedene-textgrundlagen-als-beispiel">Verschiedene Textgrundlagen als Beispiel</h4>
-</section>
-<section id="section" class="level4">
-<h4 class="anchored" data-anchor-id="section"><img src="graphs/graph_01.svg" class="img-fluid"></h4>
-</section>
-</section>
-<section id="possibilities-over-possibilities" class="level2">
-<h2 class="anchored" data-anchor-id="possibilities-over-possibilities">Possibilities over possibilities</h2>
-<section id="überblick-über-verschiedene-methoden-der-textanalyse" class="level4">
-<h4 class="anchored" data-anchor-id="überblick-über-verschiedene-methoden-der-textanalyse">Überblick über verschiedene Methoden der Textanalyse</h4>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/text_as_data_methods.png" class="img-fluid figure-img"></p>
-</figure>
-</div>
-</section>
-</section>
-</section>
-<section id="case-study-fa-brands-amazon-reviews" class="level1" data-background-color="#E6002E">
-<h1 data-background-color="#E6002E">Case study: <i class="fa-brands fa-amazon" aria-label="amazon"></i> Reviews</h1>
+<section id="possibilities-over-possibilities" class="slide level2">
+<h2>Possibilities over possibilities</h2>
+<h4 id="überblick-über-verschiedene-methoden-der-textanalyse">Überblick über verschiedene Methoden der Textanalyse</h4>
+
+<img data-src="images/text_as_data_methods.png" class="r-stretch quarto-figure-center"></section></section>
+<section>
+<section id="case-study-fa-brands-amazon-reviews" class="title-slide slide level1 center" data-background-color="#E6002E">
+<h1>Case study: <i class="fa-brands fa-amazon" aria-label="amazon"></i> Reviews</h1>
 <p>🕵️ ⭐⭐⭐⭐⭐</p>
-<p><a href="https://mybinder.org/v2/gh/chrdrn/dbd_binder/HEAD"><img src="https://mybinder.org/badge_logo.svg" class="img-fluid" alt="Binder"></a> <a href="https://colab.research.google.com/github/chrdrn/dbd_binder/blob/main/session_08-showcase_text_as_data.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid" alt="Google Colab"></a> <a href="https://chrdrn.github.io/digital-behavioral-data/content/08-text_as_data/08-exercise.html"><img src="https://img.shields.io/badge/RStudio-4285F4?style=for-the-badge&amp;logo=rstudio&amp;logoColor=white.png" class="img-fluid" alt="RStudio Quarto"></a></p>
-<div class="notes">
+<p><a href="https://mybinder.org/v2/gh/chrdrn/dbd_binder/HEAD"><img data-src="https://mybinder.org/badge_logo.svg" alt="Binder"></a> <a href="https://colab.research.google.com/github/chrdrn/dbd_binder/blob/main/session_08-showcase_text_as_data.ipynb"><img data-src="https://colab.research.google.com/assets/colab-badge.svg" alt="Google Colab"></a> <a href="https://chrdrn.github.io/digital-behavioral-data/content/08-text_as_data/08-exercise.html"><img data-src="https://img.shields.io/badge/RStudio-4285F4?style=for-the-badge&amp;logo=rstudio&amp;logoColor=white.png" alt="RStudio Quarto"></a></p>
+<aside class="notes">
 <p>But … why?</p>
-</div>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 <div class="cell">
 
 </div>
-<section id="im-fokus-diätpillen" class="level2">
-<h2 class="anchored" data-anchor-id="im-fokus-diätpillen">Im Fokus: 💊 Diätpillen</h2>
-<section id="hintergrund" class="level4">
-<h4 class="anchored" data-anchor-id="hintergrund">Hintergrund</h4>
+</section>
+<section id="im-fokus-diätpillen" class="slide level2">
+<h2>Im Fokus: 💊 Diätpillen</h2>
+<h4 id="hintergrund">Hintergrund</h4>
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
@@ -641,98 +637,100 @@ div.csl-indent {
 </div><div class="column" style="width:50%;">
 <div class="r-stack">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/amazon_review_01.png" class="fragment semi-fade-out img-fluid figure-img" data-fragment-index="1"></p>
+<figure>
+<p><img data-src="images/amazon_review_01.png" class="fragment semi-fade-out" data-fragment-index="1"></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/amazon_review_02.png" class="fragment img-fluid figure-img" data-fragment-index="1"></p>
+<figure>
+<p><img data-src="images/amazon_review_02.png" class="fragment" data-fragment-index="1"></p>
 </figure>
 </div>
 </div>
 </div>
 </div>
-<div class="notes">
+<aside class="notes">
 <ul>
 <li><p>Ausführliche Schritte im Google Colab &amp; Showcase</p></li>
 <li><p>Hier nur Auszüge</p></li>
 </ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="quick-scraping-step-by-step" class="slide level2">
+<h2>Quick scraping step-by-step</h2>
+<h4 id="custom-function-für-export-der-html-elemente">1️⃣ Custom function für Export der html-Elemente</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>scrape_amazon <span class="ot">&lt;-</span> <span class="cf">function</span>(page_num, review_url) {</span>
+<span id="cb1-2"><a href="#cb1-2"></a>  url_reviews <span class="ot">&lt;-</span> <span class="fu">paste0</span>(review_url, <span class="st">"&amp;pageNumber="</span>, page_num, <span class="st">"&amp;sortBy=recent"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3"></a>  doc <span class="ot">&lt;-</span> <span class="fu">read_html</span>(url_reviews)</span>
+<span id="cb1-4"><a href="#cb1-4"></a>  <span class="fu">map_dfr</span>(doc <span class="sc">%&gt;%</span> <span class="fu">html_elements</span>(<span class="st">"[id^='customer_review']"</span>), <span class="sc">~</span> <span class="fu">data.frame</span>(</span>
+<span id="cb1-5"><a href="#cb1-5"></a>    <span class="at">review_title =</span> .x <span class="sc">%&gt;%</span> <span class="fu">html_element</span>(<span class="st">".review-title"</span>) <span class="sc">%&gt;%</span> <span class="fu">html_text2</span>(),</span>
+<span id="cb1-6"><a href="#cb1-6"></a>    <span class="at">review_text =</span> .x <span class="sc">%&gt;%</span> <span class="fu">html_element</span>(<span class="st">".review-text-content"</span>) <span class="sc">%&gt;%</span> <span class="fu">html_text2</span>(),</span>
+<span id="cb1-7"><a href="#cb1-7"></a>    <span class="at">review_star =</span> .x <span class="sc">%&gt;%</span> <span class="fu">html_element</span>(<span class="st">".review-rating"</span>) <span class="sc">%&gt;%</span> <span class="fu">html_text2</span>(),</span>
+<span id="cb1-8"><a href="#cb1-8"></a>    <span class="at">date =</span> .x <span class="sc">%&gt;%</span> <span class="fu">html_element</span>(<span class="st">".review-date"</span>) <span class="sc">%&gt;%</span> <span class="fu">html_text2</span>() <span class="sc">%&gt;%</span> <span class="fu">gsub</span>(<span class="st">".*vom "</span>, <span class="st">""</span>, .),</span>
+<span id="cb1-9"><a href="#cb1-9"></a>    <span class="at">author =</span> .x <span class="sc">%&gt;%</span> <span class="fu">html_element</span>(<span class="st">".a-profile-name"</span>) <span class="sc">%&gt;%</span> <span class="fu">html_text2</span>(),</span>
+<span id="cb1-10"><a href="#cb1-10"></a>    <span class="at">page =</span> page_num</span>
+<span id="cb1-11"><a href="#cb1-11"></a>  )) <span class="sc">%&gt;%</span></span>
+<span id="cb1-12"><a href="#cb1-12"></a>    as_tibble <span class="sc">%&gt;%</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a>    <span class="fu">return</span>()</span>
+<span id="cb1-14"><a href="#cb1-14"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-</section>
-<section id="quick-scraping-step-by-step" class="level2">
-<h2 class="anchored" data-anchor-id="quick-scraping-step-by-step">Quick scraping step-by-step</h2>
-<section id="custom-function-für-export-der-html-elemente" class="level4">
-<h4 class="anchored" data-anchor-id="custom-function-für-export-der-html-elemente">1️⃣ Custom function für Export der html-Elemente</h4>
+<section id="quick-scraping-step-by-step-1" class="slide level2">
+<h2>Quick scraping step-by-step</h2>
+<h4 id="definition-von-amazon-review-urls">2️⃣ Definition von Amazon Review URLs</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>scrape_amazon <span class="ot">&lt;-</span> <span class="cf">function</span>(page_num, review_url) {</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  url_reviews <span class="ot">&lt;-</span> <span class="fu">paste0</span>(review_url, <span class="st">"&amp;pageNumber="</span>, page_num, <span class="st">"&amp;sortBy=recent"</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  doc <span class="ot">&lt;-</span> <span class="fu">read_html</span>(url_reviews)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">map_dfr</span>(doc <span class="sc">%&gt;%</span> <span class="fu">html_elements</span>(<span class="st">"[id^='customer_review']"</span>), <span class="sc">~</span> <span class="fu">data.frame</span>(</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">review_title =</span> .x <span class="sc">%&gt;%</span> <span class="fu">html_element</span>(<span class="st">".review-title"</span>) <span class="sc">%&gt;%</span> <span class="fu">html_text2</span>(),</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">review_text =</span> .x <span class="sc">%&gt;%</span> <span class="fu">html_element</span>(<span class="st">".review-text-content"</span>) <span class="sc">%&gt;%</span> <span class="fu">html_text2</span>(),</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">review_star =</span> .x <span class="sc">%&gt;%</span> <span class="fu">html_element</span>(<span class="st">".review-rating"</span>) <span class="sc">%&gt;%</span> <span class="fu">html_text2</span>(),</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">date =</span> .x <span class="sc">%&gt;%</span> <span class="fu">html_element</span>(<span class="st">".review-date"</span>) <span class="sc">%&gt;%</span> <span class="fu">html_text2</span>() <span class="sc">%&gt;%</span> <span class="fu">gsub</span>(<span class="st">".*vom "</span>, <span class="st">""</span>, .),</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">author =</span> .x <span class="sc">%&gt;%</span> <span class="fu">html_element</span>(<span class="st">".a-profile-name"</span>) <span class="sc">%&gt;%</span> <span class="fu">html_text2</span>(),</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">page =</span> page_num</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  )) <span class="sc">%&gt;%</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    as_tibble <span class="sc">%&gt;%</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>()</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>url <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb2-2"><a href="#cb2-2"></a>  <span class="at">p01 =</span> <span class="st">"https://www.amazon.de/LINEAVI-Eiwei%C3%9F-Shake-Kombination-Molkeneiwei%C3%9F-laktosefrei/product-reviews/B018IB02AU/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&amp;reviewerType=all_reviews"</span>,</span>
+<span id="cb2-3"><a href="#cb2-3"></a>  <span class="at">p02 =</span> <span class="st">"https://www.amazon.de/Detoxkuren%E2%80%A2-Entw%C3%A4sserung-Entschlackung-Stoffwechsel-entschlacken/product-reviews/B072QW5ZN1/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&amp;reviewerType=all_reviews"</span>,</span>
+<span id="cb2-4"><a href="#cb2-4"></a>  <span class="at">p03 =</span> <span class="st">"https://www.amazon.de/Saint-Nutrition%C2%AE-KETO-BURN-Appetitz%C3%BCgler/product-reviews/B08B67V8G5/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&amp;reviewerType=all_reviews"</span>,</span>
+<span id="cb2-5"><a href="#cb2-5"></a>  <span class="at">p04 =</span> <span class="st">"https://www.amazon.de/Yokebe-vegetarisch-Mahlzeitersatz-Gewichtsabnahme-hochwertigen/product-reviews/B08GYZ8LRB/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&amp;reviewerType=all_reviews"</span>,</span>
+<span id="cb2-6"><a href="#cb2-6"></a>  <span class="at">p05 =</span> <span class="st">"https://www.amazon.de/Vihado-Liquid-chlorophyll-drops-alfalfa/product-reviews/B093XNC8QH/ref=cm_cr_arp_d_paging_btm_next_2?ie=UTF8&amp;reviewerType=all_reviews"</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-</section>
-<section id="quick-scraping-step-by-step-1" class="level2">
-<h2 class="anchored" data-anchor-id="quick-scraping-step-by-step-1">Quick scraping step-by-step</h2>
-<section id="definition-von-amazon-review-urls" class="level4">
-<h4 class="anchored" data-anchor-id="definition-von-amazon-review-urls">2️⃣ Definition von Amazon Review URLs</h4>
+<section id="quick-scraping-step-by-step-2" class="slide level2">
+<h2>Quick scraping step-by-step</h2>
+<h4 id="scrape-with-for-loops">3️⃣ Scrape with for-loops</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>url <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">p01 =</span> <span class="st">"https://www.amazon.de/LINEAVI-Eiwei%C3%9F-Shake-Kombination-Molkeneiwei%C3%9F-laktosefrei/product-reviews/B018IB02AU/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&amp;reviewerType=all_reviews"</span>,</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">p02 =</span> <span class="st">"https://www.amazon.de/Detoxkuren%E2%80%A2-Entw%C3%A4sserung-Entschlackung-Stoffwechsel-entschlacken/product-reviews/B072QW5ZN1/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&amp;reviewerType=all_reviews"</span>,</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">p03 =</span> <span class="st">"https://www.amazon.de/Saint-Nutrition%C2%AE-KETO-BURN-Appetitz%C3%BCgler/product-reviews/B08B67V8G5/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&amp;reviewerType=all_reviews"</span>,</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">p04 =</span> <span class="st">"https://www.amazon.de/Yokebe-vegetarisch-Mahlzeitersatz-Gewichtsabnahme-hochwertigen/product-reviews/B08GYZ8LRB/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&amp;reviewerType=all_reviews"</span>,</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">p05 =</span> <span class="st">"https://www.amazon.de/Vihado-Liquid-chlorophyll-drops-alfalfa/product-reviews/B093XNC8QH/ref=cm_cr_arp_d_paging_btm_next_2?ie=UTF8&amp;reviewerType=all_reviews"</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-</section>
-<section id="quick-scraping-step-by-step-2" class="level2">
-<h2 class="anchored" data-anchor-id="quick-scraping-step-by-step-2">Quick scraping step-by-step</h2>
-<section id="scrape-with-for-loops" class="level4">
-<h4 class="anchored" data-anchor-id="scrape-with-for-loops">3️⃣ Scrape with for-loops</h4>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>amazon <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># p01 </span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">79</span>) {</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  df <span class="ot">&lt;-</span> <span class="fu">scrape_amazon</span>(<span class="at">page_num =</span> i, <span class="at">review_url =</span> url<span class="sc">$</span>p01)</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  amazon<span class="sc">$</span>raw<span class="sc">$</span>p01[[i]] <span class="ot">&lt;-</span> df</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>amazon <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="co"># p01 </span></span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">79</span>) {</span>
+<span id="cb3-4"><a href="#cb3-4"></a>  df <span class="ot">&lt;-</span> <span class="fu">scrape_amazon</span>(<span class="at">page_num =</span> i, <span class="at">review_url =</span> url<span class="sc">$</span>p01)</span>
+<span id="cb3-5"><a href="#cb3-5"></a>  amazon<span class="sc">$</span>raw<span class="sc">$</span>p01[[i]] <span class="ot">&lt;-</span> df</span>
+<span id="cb3-6"><a href="#cb3-6"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><br></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>product <span class="ot">&lt;-</span> <span class="fu">names</span>(url)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co"># bind rows for each product</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> product) {</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  amazon<span class="sc">$</span>data<span class="sc">$</span>raw[[i]] <span class="ot">&lt;-</span> amazon<span class="sc">$</span>raw[[i]] <span class="sc">%&gt;%</span> </span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">bind_rows</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rownames_to_column</span>(<span class="st">"id"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="fu">across</span>(id, as.numeric))</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co"># bind rows of all products</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>amazon<span class="sc">$</span>data<span class="sc">$</span>full <span class="ot">&lt;-</span> amazon<span class="sc">$</span>data<span class="sc">$</span>raw <span class="sc">%&gt;%</span> </span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bind_rows</span>(<span class="at">.id =</span> <span class="st">"src"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>product <span class="ot">&lt;-</span> <span class="fu">names</span>(url)</span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="co"># bind rows for each product</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="cf">for</span> (i <span class="cf">in</span> product) {</span>
+<span id="cb4-4"><a href="#cb4-4"></a>  amazon<span class="sc">$</span>data<span class="sc">$</span>raw[[i]] <span class="ot">&lt;-</span> amazon<span class="sc">$</span>raw[[i]] <span class="sc">%&gt;%</span> </span>
+<span id="cb4-5"><a href="#cb4-5"></a>    <span class="fu">bind_rows</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb4-6"><a href="#cb4-6"></a>    <span class="fu">rownames_to_column</span>(<span class="st">"id"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-7"><a href="#cb4-7"></a>    <span class="fu">mutate</span>(<span class="fu">across</span>(id, as.numeric))</span>
+<span id="cb4-8"><a href="#cb4-8"></a>}</span>
+<span id="cb4-9"><a href="#cb4-9"></a><span class="co"># bind rows of all products</span></span>
+<span id="cb4-10"><a href="#cb4-10"></a>amazon<span class="sc">$</span>data<span class="sc">$</span>full <span class="ot">&lt;-</span> amazon<span class="sc">$</span>data<span class="sc">$</span>raw <span class="sc">%&gt;%</span> </span>
+<span id="cb4-11"><a href="#cb4-11"></a>  <span class="fu">bind_rows</span>(<span class="at">.id =</span> <span class="st">"src"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-</section>
-<section id="quick-scraping-step-by-step-3" class="level2">
-<h2 class="anchored" data-anchor-id="quick-scraping-step-by-step-3">Quick scraping step-by-step</h2>
-<section id="endresultat" class="level4">
-<h4 class="anchored" data-anchor-id="endresultat">4️⃣ Endresultat</h4>
+<section id="quick-scraping-step-by-step-3" class="slide level2">
+<h2>Quick scraping step-by-step</h2>
+<h4 id="endresultat">4️⃣ Endresultat</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>amazon<span class="sc">$</span>data<span class="sc">$</span>full <span class="sc">%&gt;%</span> </span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>amazon<span class="sc">$</span>data<span class="sc">$</span>full <span class="sc">%&gt;%</span> </span>
+<span id="cb5-2"><a href="#cb5-2"></a>  <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 2,142
 Columns: 8
@@ -746,19 +744,18 @@ $ author       &lt;chr&gt; "Rayan Wehbi", "Motte", "V.K", "niw", "Murphy", "Juli
 $ page         &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, …</code></pre>
 </div>
 </div>
-</section>
-</section>
-</section>
-<section id="explorative-datenanalyse" class="level1" data-background-color="#E6002E">
-<h1 data-background-color="#E6002E">Explorative Datenanalyse</h1>
+</section></section>
+<section>
+<section id="explorative-datenanalyse" class="title-slide slide level1 center" data-background-color="#E6002E">
+<h1>Explorative Datenanalyse</h1>
 <p>Im Fokus: 🔍 <i class="fa-brands fa-amazon" aria-label="amazon"></i> Reviews</p>
-<section id="anzahl-der-reviews-nach-produkt" class="level2">
-<h2 class="anchored" data-anchor-id="anzahl-der-reviews-nach-produkt">Anzahl der Reviews nach Produkt</h2>
-<section id="kennenlernen-des-datensatzes" class="level4">
-<h4 class="anchored" data-anchor-id="kennenlernen-des-datensatzes">Kennenlernen des Datensatzes</h4>
+</section>
+<section id="anzahl-der-reviews-nach-produkt" class="slide level2">
+<h2>Anzahl der Reviews nach Produkt</h2>
+<h4 id="kennenlernen-des-datensatzes">Kennenlernen des Datensatzes</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>amazon<span class="sc">$</span>data<span class="sc">$</span>de <span class="sc">%&gt;%</span> </span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">frq</span>(src)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>amazon<span class="sc">$</span>data<span class="sc">$</span>de <span class="sc">%&gt;%</span> </span>
+<span id="cb7-2"><a href="#cb7-2"></a>  <span class="fu">frq</span>(src)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>src &lt;categorical&gt; 
 # total N=1736 valid N=1736 mean=2.88 sd=1.46
@@ -774,60 +771,46 @@ p05   | 390 | 22.47 |   22.47 | 100.00
 </div>
 </div>
 </section>
-</section>
-<section id="anzahl-der-reviews-nach-produkt-im-zeitverlauf" class="level2">
-<h2 class="anchored" data-anchor-id="anzahl-der-reviews-nach-produkt-im-zeitverlauf">Anzahl der Reviews nach Produkt im Zeitverlauf</h2>
-<section id="kennenlernen-des-datensatzes-1" class="level4">
-<h4 class="anchored" data-anchor-id="kennenlernen-des-datensatzes-1">Kennenlernen des Datensatzes</h4>
+<section id="anzahl-der-reviews-nach-produkt-im-zeitverlauf" class="slide level2">
+<h2>Anzahl der Reviews nach Produkt im Zeitverlauf</h2>
+<h4 id="kennenlernen-des-datensatzes-1">Kennenlernen des Datensatzes</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>amazon<span class="sc">$</span>data<span class="sc">$</span>de <span class="sc">%&gt;%</span> </span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(year, <span class="at">fill =</span> src)) <span class="sc">+</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_locuszoom</span>() <span class="sc">+</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_pubr</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>amazon<span class="sc">$</span>data<span class="sc">$</span>de <span class="sc">%&gt;%</span> </span>
+<span id="cb9-2"><a href="#cb9-2"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(year, <span class="at">fill =</span> src)) <span class="sc">+</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
+<span id="cb9-4"><a href="#cb9-4"></a>  <span class="fu">scale_fill_locuszoom</span>() <span class="sc">+</span></span>
+<span id="cb9-5"><a href="#cb9-5"></a>  <span class="fu">theme_pubr</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
 </div>
-</div>
-</section>
-</section>
-<section id="bewertungen-der-produkte-absolute-zahlen" class="level2">
-<h2 class="anchored" data-anchor-id="bewertungen-der-produkte-absolute-zahlen">Bewertungen der Produkte: Absolute Zahlen</h2>
-<section id="kennenlernen-des-datensatzes-2" class="level4">
-<h4 class="anchored" data-anchor-id="kennenlernen-des-datensatzes-2">Kennenlernen des Datensatzes</h4>
+<img data-src="index_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section>
+<section id="bewertungen-der-produkte-absolute-zahlen" class="slide level2">
+<h2>Bewertungen der Produkte: Absolute Zahlen</h2>
+<h4 id="kennenlernen-des-datensatzes-2">Kennenlernen des Datensatzes</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>amazon<span class="sc">$</span>data<span class="sc">$</span>de <span class="sc">%&gt;%</span> </span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(rating, as.factor)) <span class="sc">%&gt;%</span> </span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(src, <span class="at">fill =</span> rating)) <span class="sc">+</span> </span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_brewer</span>(<span class="at">palette =</span> <span class="st">"RdYlGn"</span>) <span class="sc">+</span></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_pubr</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="index_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="672"></p>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>amazon<span class="sc">$</span>data<span class="sc">$</span>de <span class="sc">%&gt;%</span> </span>
+<span id="cb10-2"><a href="#cb10-2"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(rating, as.factor)) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-3"><a href="#cb10-3"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(src, <span class="at">fill =</span> rating)) <span class="sc">+</span> </span>
+<span id="cb10-4"><a href="#cb10-4"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
+<span id="cb10-5"><a href="#cb10-5"></a>  <span class="fu">scale_fill_brewer</span>(<span class="at">palette =</span> <span class="st">"RdYlGn"</span>) <span class="sc">+</span></span>
+<span id="cb10-6"><a href="#cb10-6"></a>  <span class="fu">theme_pubr</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
 </div>
-</div>
-</section>
-</section>
-<section id="bewertungen-der-produkte-kummulierte-anteile" class="level2">
-<h2 class="anchored" data-anchor-id="bewertungen-der-produkte-kummulierte-anteile">Bewertungen der Produkte: Kummulierte Anteile</h2>
-<section id="kennenlernen-des-datensatzes-3" class="level4">
-<h4 class="anchored" data-anchor-id="kennenlernen-des-datensatzes-3">Kennenlernen des Datensatzes</h4>
+<img data-src="index_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section>
+<section id="bewertungen-der-produkte-kummulierte-anteile" class="slide level2">
+<h2>Bewertungen der Produkte: Kummulierte Anteile</h2>
+<h4 id="kennenlernen-des-datensatzes-3">Kennenlernen des Datensatzes</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>amazon<span class="sc">$</span>data<span class="sc">$</span>de <span class="sc">%&gt;%</span> </span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(rating, as.factor)) <span class="sc">%&gt;%</span> </span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(src, <span class="at">fill =</span> rating)) <span class="sc">+</span> </span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"fill"</span>) <span class="sc">+</span></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_brewer</span>(<span class="at">palette =</span> <span class="st">"RdYlGn"</span>) <span class="sc">+</span></span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_pubr</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="index_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid" width="672"></p>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>amazon<span class="sc">$</span>data<span class="sc">$</span>de <span class="sc">%&gt;%</span> </span>
+<span id="cb11-2"><a href="#cb11-2"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(rating, as.factor)) <span class="sc">%&gt;%</span> </span>
+<span id="cb11-3"><a href="#cb11-3"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(src, <span class="at">fill =</span> rating)) <span class="sc">+</span> </span>
+<span id="cb11-4"><a href="#cb11-4"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"fill"</span>) <span class="sc">+</span></span>
+<span id="cb11-5"><a href="#cb11-5"></a>  <span class="fu">scale_fill_brewer</span>(<span class="at">palette =</span> <span class="st">"RdYlGn"</span>) <span class="sc">+</span></span>
+<span id="cb11-6"><a href="#cb11-6"></a>  <span class="fu">theme_pubr</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
 </div>
-</div>
-</section>
-</section>
-</section>
-<section id="kursevaluation" class="level1" data-background-color="#04316a">
-<h1 data-background-color="#04316a">☕ Kursevaluation</h1>
+<img data-src="index_files/figure-revealjs/unnamed-chunk-9-1.png" width="960" class="r-stretch"></section></section>
+<section id="kursevaluation" class="title-slide slide level1 center" data-background-color="#04316a">
+<h1>☕ Kursevaluation</h1>
 <p>Bitte nehmen Sie über den QR Code oder folgenden Link an der Evaluation teil:</p>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -836,119 +819,128 @@ p05   | 390 | 22.47 |   22.47 | 100.00
 <li><p>Losung: <strong>QNWVC</strong></p></li>
 </ul>
 </div><div class="column" style="width:50%;">
-<p><img src="images/paste-52FCC08F.png" class="img-fluid" width="500"></p>
+<p><img data-src="images/paste-52FCC08F.png" width="500"></p>
 </div>
 </div>
 </section>
-<section id="text-processing" class="level1" data-background-color="#E6002E">
-<h1 data-background-color="#E6002E">Text processing</h1>
+
+<section>
+<section id="text-processing" class="title-slide slide level1 center" data-background-color="#E6002E">
+<h1>Text processing</h1>
 <p>Kurze Erklärung der Grundbegriffe <em>Korpus, Token &amp; DFM</em></p>
-<section id="vom-korpus-bis-zum-model" class="level2">
-<h2 class="anchored" data-anchor-id="vom-korpus-bis-zum-model">Vom Korpus bis zum Model</h2>
-<section id="prozess-der-textverarbeitung" class="level4">
-<h4 class="anchored" data-anchor-id="prozess-der-textverarbeitung">Prozess der Textverarbeitung</h4>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://miro.medium.com/max/1400/1*DocMTV7nTAomKxcu3m-tyw.webp" class="img-fluid figure-img"></p>
-</figure>
-</div>
 </section>
-</section>
-<section id="sätze-token-lemma-pos" class="level2">
-<h2 class="anchored" data-anchor-id="sätze-token-lemma-pos">Sätze – Token – Lemma – POS</h2>
-<section id="vorverarbeitungsschritte-für-textanalyse" class="level4">
-<h4 class="anchored" data-anchor-id="vorverarbeitungsschritte-für-textanalyse">Vorverarbeitungsschritte für Textanalyse</h4>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
+<section id="vom-korpus-bis-zum-model" class="slide level2">
+<h2>Vom Korpus bis zum Model</h2>
+<h4 id="prozess-der-textverarbeitung">Prozess der Textverarbeitung</h4>
+
+<img data-src="https://miro.medium.com/max/1400/1*DocMTV7nTAomKxcu3m-tyw.webp" class="r-stretch quarto-figure-center"></section>
+<section id="sätze-token-lemma-pos" class="slide level2">
+<h2>Sätze – Token – Lemma – POS</h2>
+<h4 id="vorverarbeitungsschritte-für-textanalyse">Vorverarbeitungsschritte für Textanalyse</h4>
+<div class="callout callout-note callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
-1. Satzerkennung
+<p><strong>1. Satzerkennung</strong></p>
 </div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-content">
 <p>Was gibt’s in New York zu sehen?</p>
 </div>
 </div>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
+</div>
+<div class="callout callout-note callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
-2. Tokenisierung
+<p><strong>2. Tokenisierung</strong></p>
 </div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-content">
 <p>was; gibt; `s; in; new; york; zu; sehen; ?</p>
 </div>
 </div>
-<div class="callout-important callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
+</div>
+<div class="callout callout-important callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
-3. Lemmatisierung
+<p><strong>3. Lemmatisierung</strong></p>
 </div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-content">
 <p>was; geben; `s; in; new; york; zu; sehen; ?</p>
 </div>
 </div>
-<div class="callout-tip callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
+</div>
+<div class="callout callout-tip callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
-4. Part-Of-Speech (POS) Tagging
+<p><strong>4. Part-Of-Speech (POS) Tagging</strong></p>
 </div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-content">
 <p>&gt;Was<code>/PWS</code> &gt;gibt<code>/VVFIN</code> &gt;’s<code>/PPER</code> &gt;in<code>/APPR</code> &gt;New<code>/NE</code> &gt;York<code>/NE</code> &gt;zu<code>/PTKZU</code> &gt;sehen<code>/VVINF</code></p>
 </div>
 </div>
-<div class="notes">
+</div>
+<aside class="notes">
 <p>Satzerkennung: <em>Auflösung der Satzstruktur; Aber: Probleme mit Datumsangaben, Uhrzeit, Abkürzungen, URLS</em></p>
 <p>Tokenisierung: <em>Zerteilung in kleinste Einheiten, Abtrennung von Satzzeichen; Fragen: Umgang mit Zeichen, Symbolen, Zahlen, N-Gramme …</em></p>
 <p>Definition Lemmatisierung: <em>Grundform eines Worters, als diejenige Form, unter dem an einen Begriff in einem Nachschlagewerk findet / Rückführung auf die „Vollfrom”</em></p>
 <p>Definition POS: <em>Zuordnung von Wörtern und Satzzeichen eines Textes zu Wortarten</em></p>
-</div>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-</section>
-<section id="von-bow-zu-dfm" class="level2">
-<h2 class="anchored" data-anchor-id="von-bow-zu-dfm">Von BOW zu DFM</h2>
-<section id="bag-of-words-bow-und-document-feature-matrix-dfm" class="level4">
-<h4 class="anchored" data-anchor-id="bag-of-words-bow-und-document-feature-matrix-dfm">Bag-of-words (BOW) und Document-Feature-Matrix (DFM)</h4>
-</section>
-<section id="section-1" class="level4">
-<h4 class="anchored" data-anchor-id="section-1"><img src="images/bow_dfm_example.png" class="img-fluid"></h4>
-<div class="notes">
+<section id="von-bow-zu-dfm" class="slide level2">
+<h2>Von BOW zu DFM</h2>
+<h4 id="bag-of-words-bow-und-document-feature-matrix-dfm">Bag-of-words (BOW) und Document-Feature-Matrix (DFM)</h4>
+<h4 id="section-1"><img data-src="images/bow_dfm_example.png"></h4>
+<aside class="notes">
 <p><em>Bag-of-Words</em>-Modell: es zählt lediglich die Worthäufigkeit je Dokument, die syntaktischen und grammatikalischen Zusammenhänge zwischen einzelnen Wörtern werden ignoriert.</p>
-</div>
-</section>
-</section>
-</section>
-<section id="sentiment-analyse" class="level1" data-background-color="#E6002E">
-<h1 data-background-color="#E6002E">Sentiment Analyse</h1>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="sentiment-analyse" class="title-slide slide level1 center" data-background-color="#E6002E">
+<h1>Sentiment Analyse</h1>
 <p>👎 &amp; 👍?</p>
-<section id="the-good-the-bad-and-the-ugly" class="level2">
-<h2 class="anchored" data-anchor-id="the-good-the-bad-and-the-ugly">The good, the bad and the ugly</h2>
-<section id="grundidee-ziele-und-der-sentimentanalyse" class="level4">
-<h4 class="anchored" data-anchor-id="grundidee-ziele-und-der-sentimentanalyse">Grundidee &amp; Ziele und der Sentimentanalyse</h4>
+</section>
+<section id="the-good-the-bad-and-the-ugly" class="slide level2">
+<h2>The good, the bad and the ugly</h2>
+<h4 id="grundidee-ziele-und-der-sentimentanalyse">Grundidee &amp; Ziele und der Sentimentanalyse</h4>
 <ul>
 <li><p>Auf Basis von speziellen <strong>Wortlisten bzw. Lexika</strong> werden bestimmte <strong>Begriffe ausgezählt</strong>, denen zuvor entweder ein numerischer Wert (Score) oder eine Kategorien (<em>positiv</em> oder <em>negativ)</em> zugeordnet wurden.</p></li>
 <li><p>Ziel ist die Bestimmung der Polarität (positive/negative Emotion) eines Textes</p></li>
 <li><p>Aber: Wie gut ist die Klassifizierung?</p></li>
 </ul>
 </section>
-</section>
-<section id="grundlagen-für-die-analyse" class="level2">
-<h2 class="anchored" data-anchor-id="grundlagen-für-die-analyse">Grundlagen für die Analyse</h2>
-<section id="hintergrundinformationen-zum-processing-scoring" class="level4">
-<h4 class="anchored" data-anchor-id="hintergrundinformationen-zum-processing-scoring">Hintergrundinformationen zum Processing &amp; Scoring</h4>
+<section id="grundlagen-für-die-analyse" class="slide level2">
+<h2>Grundlagen für die Analyse</h2>
+<h4 id="hintergrundinformationen-zum-processing-scoring">Hintergrundinformationen zum Processing &amp; Scoring</h4>
 <ul>
 <li><p>Die Verarbeitung und Analyse der Daten erfolgt mit dem<code>quanteda</code> bzw. <code>quanteda.textstat</code> Paket und basiert nur auf dem Korpus der deutschen Reviews</p></li>
 <li><p>Als Sentiment-Grundlage wird SentiWS genutzt</p>
@@ -958,67 +950,81 @@ p05   | 390 | 22.47 |   22.47 | 100.00
 <li><p>enthält ungefähr 1.650 positive und 1.800 negative Grundformen</p></li>
 </ul></li>
 </ul>
-<div class="notes">
+<aside class="notes">
 <ul>
 <li><p>und (falls anwendbar) Flexionsvarianten</p></li>
 <li><p>so dass, inklusive der verschiedenen Flexionsformen, insgesamt etwa 16.000 positive und 18.000 negative Wortformen enthalten sind. SentiWS enthält nicht nur Adjektive und Adverbien, sondern auch Nomen und Verben die Träger von Sentiment sind</p></li>
 </ul>
-</div>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-</section>
-<section id="erste-ergebnisse" class="level2">
-<h2 class="anchored" data-anchor-id="erste-ergebnisse">Erste Ergebnisse</h2>
-<section id="bewertung-der-verschiedenen-diätpillen" class="level4">
-<h4 class="anchored" data-anchor-id="bewertung-der-verschiedenen-diätpillen">Bewertung der verschiedenen Diätpillen</h4>
-<div class="cell" data-output-location="slide">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>amazon<span class="sc">$</span>data<span class="sc">$</span>de_senti <span class="sc">%&gt;%</span> </span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> src, <span class="at">y =</span> valence)) <span class="sc">+</span> </span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  ggdist<span class="sc">::</span><span class="fu">stat_halfeye</span>(</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">fill =</span> src),</span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">adjust =</span> .<span class="dv">5</span>, </span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">width =</span> .<span class="dv">6</span>, </span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">.width =</span> <span class="dv">0</span>, </span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">justification =</span> <span class="sc">-</span>.<span class="dv">3</span>, </span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">point_colour =</span> <span class="cn">NA</span>) <span class="sc">+</span> </span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(</span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">color =</span> src),</span>
-<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">width =</span> .<span class="dv">25</span>, </span>
-<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">outlier.shape =</span> <span class="cn">NA</span></span>
-<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(</span>
-<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">color =</span> src),</span>
-<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">size =</span> <span class="fl">1.3</span>,</span>
-<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">alpha =</span> .<span class="dv">3</span>,</span>
-<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">position =</span> <span class="fu">position_jitter</span>(</span>
-<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>      <span class="at">seed =</span> <span class="dv">1</span>, <span class="at">width =</span> .<span class="dv">1</span></span>
-<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span> </span>
-<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="fl">1.2</span>, <span class="cn">NA</span>), <span class="at">clip =</span> <span class="st">"off"</span>) <span class="sc">+</span></span>
-<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_startrek</span>() <span class="sc">+</span></span>
-<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_startrek</span>() <span class="sc">+</span></span>
-<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_pubr</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Using the `size` aesthietic with geom_segment was deprecated in ggplot2 3.4.0.
-ℹ Please use the `linewidth` aesthetic instead.</code></pre>
+<section id="erste-ergebnisse" class="slide level2">
+<h2>Erste Ergebnisse</h2>
+<h4 id="bewertung-der-verschiedenen-diätpillen">Bewertung der verschiedenen Diätpillen</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>amazon<span class="sc">$</span>data<span class="sc">$</span>de_senti <span class="sc">%&gt;%</span> </span>
+<span id="cb12-2"><a href="#cb12-2"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> src, <span class="at">y =</span> valence)) <span class="sc">+</span> </span>
+<span id="cb12-3"><a href="#cb12-3"></a>  ggdist<span class="sc">::</span><span class="fu">stat_halfeye</span>(</span>
+<span id="cb12-4"><a href="#cb12-4"></a>    <span class="fu">aes</span>(<span class="at">fill =</span> src),</span>
+<span id="cb12-5"><a href="#cb12-5"></a>    <span class="at">adjust =</span> .<span class="dv">5</span>, </span>
+<span id="cb12-6"><a href="#cb12-6"></a>    <span class="at">width =</span> .<span class="dv">6</span>, </span>
+<span id="cb12-7"><a href="#cb12-7"></a>    <span class="at">.width =</span> <span class="dv">0</span>, </span>
+<span id="cb12-8"><a href="#cb12-8"></a>    <span class="at">justification =</span> <span class="sc">-</span>.<span class="dv">3</span>, </span>
+<span id="cb12-9"><a href="#cb12-9"></a>    <span class="at">point_colour =</span> <span class="cn">NA</span>) <span class="sc">+</span> </span>
+<span id="cb12-10"><a href="#cb12-10"></a>  <span class="fu">geom_boxplot</span>(</span>
+<span id="cb12-11"><a href="#cb12-11"></a>    <span class="fu">aes</span>(<span class="at">color =</span> src),</span>
+<span id="cb12-12"><a href="#cb12-12"></a>    <span class="at">width =</span> .<span class="dv">25</span>, </span>
+<span id="cb12-13"><a href="#cb12-13"></a>    <span class="at">outlier.shape =</span> <span class="cn">NA</span></span>
+<span id="cb12-14"><a href="#cb12-14"></a>  ) <span class="sc">+</span></span>
+<span id="cb12-15"><a href="#cb12-15"></a>  <span class="fu">geom_point</span>(</span>
+<span id="cb12-16"><a href="#cb12-16"></a>    <span class="fu">aes</span>(<span class="at">color =</span> src),</span>
+<span id="cb12-17"><a href="#cb12-17"></a>    <span class="at">size =</span> <span class="fl">1.3</span>,</span>
+<span id="cb12-18"><a href="#cb12-18"></a>    <span class="at">alpha =</span> .<span class="dv">3</span>,</span>
+<span id="cb12-19"><a href="#cb12-19"></a>    <span class="at">position =</span> <span class="fu">position_jitter</span>(</span>
+<span id="cb12-20"><a href="#cb12-20"></a>      <span class="at">seed =</span> <span class="dv">1</span>, <span class="at">width =</span> .<span class="dv">1</span></span>
+<span id="cb12-21"><a href="#cb12-21"></a>    )</span>
+<span id="cb12-22"><a href="#cb12-22"></a>  ) <span class="sc">+</span> </span>
+<span id="cb12-23"><a href="#cb12-23"></a>  <span class="fu">coord_cartesian</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="fl">1.2</span>, <span class="cn">NA</span>), <span class="at">clip =</span> <span class="st">"off"</span>) <span class="sc">+</span></span>
+<span id="cb12-24"><a href="#cb12-24"></a>  <span class="fu">scale_color_startrek</span>() <span class="sc">+</span></span>
+<span id="cb12-25"><a href="#cb12-25"></a>  <span class="fu">scale_fill_startrek</span>() <span class="sc">+</span></span>
+<span id="cb12-26"><a href="#cb12-26"></a>  <span class="fu">theme_pubr</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell-output-display">
-<p><img src="index_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-<div class="notes">
+
+<aside class="notes">
 <p>Valence = average valence of document, based on a dictionary whose values have numeric valence scores.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="erste-ergebnisse-output" class="slide level2 output-location-slide"><h2>Erste Ergebnisse</h2><div class="cell output-location-slide">
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-10-1.png" width="960"></p>
 </div>
-</section>
-</section>
-<section id="ein-großes-aber" class="level2">
-<h2 class="anchored" data-anchor-id="ein-großes-aber">Ein großes “… , ABER …”</h2>
-<section id="kritische-anmerkungen-zur-sentimentanalyse" class="level4">
-<h4 class="anchored" data-anchor-id="kritische-anmerkungen-zur-sentimentanalyse">Kritische Anmerkungen zur Sentimentanalyse</h4>
+</div></section><section id="ein-großes-aber" class="slide level2">
+<h2>Ein großes “… , ABER …”</h2>
+<h4 id="kritische-anmerkungen-zur-sentimentanalyse">Kritische Anmerkungen zur Sentimentanalyse</h4>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>amazon<span class="sc">$</span>data<span class="sc">$</span>de_senti <span class="sc">%&gt;%</span> </span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">flat_table</span>(rating, val_fct)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>amazon<span class="sc">$</span>data<span class="sc">$</span>de_senti <span class="sc">%&gt;%</span> </span>
+<span id="cb13-2"><a href="#cb13-2"></a>  <span class="fu">flat_table</span>(rating, val_fct)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>       val_fct negativ neutral positiv
 rating                                
@@ -1036,27 +1042,24 @@ rating
 </ul>
 </div>
 </div>
-</section>
-</section>
-</section>
-<section id="topic-modeling" class="level1" data-background-color="#E6002E">
-<h1 data-background-color="#E6002E">Topic Modeling</h1>
+</section></section>
+<section>
+<section id="topic-modeling" class="title-slide slide level1 center" data-background-color="#E6002E">
+<h1>Topic Modeling</h1>
 <p>Grundidee und beispielhafter Ablauf</p>
-<section id="grundidee" class="level2">
-<h2 class="anchored" data-anchor-id="grundidee">Grundidee</h2>
-<section id="quick-introduction-to-topic-modeling" class="level4">
-<h4 class="anchored" data-anchor-id="quick-introduction-to-topic-modeling">Quick Introduction to Topic Modeling</h4>
+</section>
+<section id="grundidee" class="slide level2">
+<h2>Grundidee</h2>
+<h4 id="quick-introduction-to-topic-modeling">Quick Introduction to Topic Modeling</h4>
 <ul>
 <li><p>Verfahren des <strong><em>unüberwachten maschinellen Lernens</em></strong>, das sich daher insbesondere zur Exploration und Deskription großer Textmengen eignet</p></li>
 <li><p>Themen werden strikt auf Basis von Worthäufigkeiten in den einzelnen Dokumenten vermeintlich objektiv berechnet, ganz ohne subjektive Einschätzungen und damit einhergehenden etwaigen Verzerrungen</p></li>
 <li><p>Bekanntesten dieser Verfahren sind <strong><em>LDA</em></strong> <strong>(Latent Dirichlet Allocation)</strong> sowie die darauf aufbauenden <strong><em>CTM</em></strong> <strong>(Correlated Topic Models)</strong> und <strong><em>STM</em></strong> <strong>(Structural Topic Models)</strong></p></li>
 </ul>
 </section>
-</section>
-<section id="annahmen" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="annahmen">Annahmen</h2>
-<section id="quick-introduction-to-topic-modeling-1" class="level4">
-<h4 class="anchored" data-anchor-id="quick-introduction-to-topic-modeling-1">Quick Introduction to Topic Modeling</h4>
+<section id="annahmen" class="slide level2 smaller">
+<h2>Annahmen</h2>
+<h4 id="quick-introduction-to-topic-modeling-1">Quick Introduction to Topic Modeling</h4>
 <ul>
 <li><p>Ein Textkorpus besteht aus <strong><code>D</code> Dokumenten</strong> und <strong><code>V</code> Wörtern bzw. Terms</strong></p></li>
 <li><p>Es wird nun angenommen, dass <strong>latente Themen <code>K</code></strong> zu unterschiedlichen <strong>Anteilen in den Dokumenten <code>D</code></strong> vorkommen und <strong>alle Wörter <code>V</code></strong> mit unterschiedlicher <strong>Wahrscheinlichkeit zu den <code>K</code> Themen gehören</strong>.</p></li>
@@ -1066,7 +1069,7 @@ rating
 <li><p>Analog enthält <strong><code>V×K</code></strong> für jedes einzelne Wort <strong><code>w</code></strong> und jedes einzelne Thema <strong><code>k</code></strong> die Wahrscheinlichkeit, dass d<strong>as jeweilige Wort in diesem Thema vorkommt (𝛃).</strong></p></li>
 </ul></li>
 </ul>
-<div class="notes">
+<aside class="notes">
 <ul>
 <li>Mit Hilfe dieser Matrizen können die Themen dann beschrieben und interpretiert werden.
 <ul>
@@ -1075,85 +1078,93 @@ rating
 </ul></li>
 <li>Zur Berechnung dieser Matrizen wird sozusagen der umgekehrte Weg gegangen und die Erzeugung der Dokumente als statistischer Prozess beschrieben: ein Dokument wird demnach erzeugt, in dem zufällig Themen aus der zum Dokument zugehörigen Themenverteilung und Wörter aus der den Themen zugehörigen Wortverteilungen gezogen werden. Hierzu wird das Topic Model zunächst mit zufälligen Themen- und Wortverteilungen initialisiert und dann in einem iterativen, algorithmischen Verfahren nach und nach adaptiert, bis es möglichst gut zu den Daten (dem Textkorpus) passt (d.h. die gemeinsame Likelihood der Themen- und Wortverteilungen maximiert wird).<sup><a href="https://bookdown.org/joone/ComputationalMethods/topicmodeling.html#fn53">53</a></sup></li>
 </ul>
-</div>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-</section>
-<section id="structual-topic-modeling-im-fokus" class="level2">
-<h2 class="anchored" data-anchor-id="structual-topic-modeling-im-fokus">Structual Topic Modeling im Fokus</h2>
-<section id="idee-und-hintergrund-von-stm" class="level4">
-<h4 class="anchored" data-anchor-id="idee-und-hintergrund-von-stm">Idee und Hintergrund von STM</h4>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/stm.png" class="img-fluid figure-img"></p>
-</figure>
-</div>
-<div class="notes">
+<section id="structual-topic-modeling-im-fokus" class="slide level2">
+<h2>Structual Topic Modeling im Fokus</h2>
+<h4 id="idee-und-hintergrund-von-stm">Idee und Hintergrund von STM</h4>
+
+<img data-src="images/stm.png" class="r-stretch quarto-figure-center"><aside class="notes">
 <p>𝛴 = Topic covariance</p>
 <p>x = Prevalende Metadata</p>
 <p>gamma = Metadata weights</p>
 <p>smaller box = N = number of words in a document</p>
 <p>bigger box = M = number of documents in a corpus</p>
-</div>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-</section>
-<section id="welches-k" class="level2">
-<h2 class="anchored" data-anchor-id="welches-k">Welches K?</h2>
-<section id="bestimmung-der-optimalen-themenanzahl" class="level4">
-<h4 class="anchored" data-anchor-id="bestimmung-der-optimalen-themenanzahl">Bestimmung der optimalen Themenanzahl</h4>
-<div class="cell" data-output-location="slide">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>amazon<span class="sc">$</span>tpm<span class="sc">$</span>model_scores <span class="sc">%&gt;%</span> </span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    k,</span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Lower bound</span><span class="st">`</span> <span class="ot">=</span> lbound,</span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">Residuals =</span> <span class="fu">map_dbl</span>(residual, <span class="st">"dispersion"</span>),</span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Semantic coherence</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">map_dbl</span>(semantic_coherence, mean),</span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Held-out likelihood</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">map_dbl</span>(eval_heldout, <span class="st">"expected.heldout"</span>)) <span class="sc">%&gt;%</span>   </span>
-<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="sc">-</span>k, <span class="at">names_to =</span> <span class="st">"Metric"</span>, <span class="at">values_to =</span> <span class="st">"Value"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(</span>
-<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(k, Value, <span class="at">color =</span> Metric)) <span class="sc">+</span></span>
-<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">size =</span> <span class="fl">1.5</span>, <span class="at">alpha =</span> <span class="fl">0.7</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>Metric, <span class="at">scales =</span> <span class="st">"free_y"</span>) <span class="sc">+</span></span>
-<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"K (number of topics)"</span>,</span>
-<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="cn">NULL</span>,</span>
-<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">"Model diagnostics by number of topics"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
-ℹ Please use `linewidth` instead.</code></pre>
-</div>
-<div class="cell-output-display">
-<p><img src="index_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-</section>
-</section>
-<section id="kombination-aus-kohärenz-exklusivität" class="level2">
-<h2 class="anchored" data-anchor-id="kombination-aus-kohärenz-exklusivität">Kombination aus Kohärenz &amp; Exklusivität</h2>
-<section id="bestimmung-der-optimalen-themenanzahl-1" class="level4">
-<h4 class="anchored" data-anchor-id="bestimmung-der-optimalen-themenanzahl-1">Bestimmung der optimalen Themenanzahl</h4>
-<div class="cell" data-output-location="slide">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>amazon<span class="sc">$</span>tpm<span class="sc">$</span>model_scores <span class="sc">%&gt;%</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(k, exclusivity, semantic_coherence) <span class="sc">%&gt;%</span></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(k <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">11</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unnest</span>(<span class="at">cols =</span> <span class="fu">c</span>(exclusivity, semantic_coherence)) <span class="sc">%&gt;%</span></span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">k =</span> <span class="fu">as.factor</span>(k)) <span class="sc">%&gt;%</span></span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(semantic_coherence, exclusivity, <span class="at">color =</span> k)) <span class="sc">+</span></span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>, <span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
-<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Semantic coherence"</span>,</span>
-<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Exclusivity"</span>,</span>
-<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">"Comparing exclusivity and semantic coherence"</span>,</span>
-<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">"Models with fewer topics have higher semantic coherence for more topics, but lower exclusivity"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="index_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-</section>
-</section>
-<section id="top-features-der-themen" class="level2">
-<h2 class="anchored" data-anchor-id="top-features-der-themen">Top Features der Themen</h2>
-<section id="interpretation-des-models" class="level4">
-<h4 class="anchored" data-anchor-id="interpretation-des-models">Interpretation des Models</h4>
+<section id="welches-k" class="slide level2">
+<h2>Welches K?</h2>
+<h4 id="bestimmung-der-optimalen-themenanzahl">Bestimmung der optimalen Themenanzahl</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>amazon<span class="sc">$</span>stm<span class="sc">$</span>mdl <span class="sc">%&gt;%</span> <span class="fu">labelTopics</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>amazon<span class="sc">$</span>tpm<span class="sc">$</span>model_scores <span class="sc">%&gt;%</span> </span>
+<span id="cb15-2"><a href="#cb15-2"></a>  <span class="fu">transmute</span>(</span>
+<span id="cb15-3"><a href="#cb15-3"></a>    k,</span>
+<span id="cb15-4"><a href="#cb15-4"></a>    <span class="st">`</span><span class="at">Lower bound</span><span class="st">`</span> <span class="ot">=</span> lbound,</span>
+<span id="cb15-5"><a href="#cb15-5"></a>    <span class="at">Residuals =</span> <span class="fu">map_dbl</span>(residual, <span class="st">"dispersion"</span>),</span>
+<span id="cb15-6"><a href="#cb15-6"></a>    <span class="st">`</span><span class="at">Semantic coherence</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">map_dbl</span>(semantic_coherence, mean),</span>
+<span id="cb15-7"><a href="#cb15-7"></a>    <span class="st">`</span><span class="at">Held-out likelihood</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">map_dbl</span>(eval_heldout, <span class="st">"expected.heldout"</span>)) <span class="sc">%&gt;%</span>   </span>
+<span id="cb15-8"><a href="#cb15-8"></a>  <span class="fu">pivot_longer</span>(<span class="sc">-</span>k, <span class="at">names_to =</span> <span class="st">"Metric"</span>, <span class="at">values_to =</span> <span class="st">"Value"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb15-9"><a href="#cb15-9"></a>  <span class="fu">ggplot</span>(</span>
+<span id="cb15-10"><a href="#cb15-10"></a>    <span class="fu">aes</span>(k, Value, <span class="at">color =</span> Metric)) <span class="sc">+</span></span>
+<span id="cb15-11"><a href="#cb15-11"></a>  <span class="fu">geom_line</span>(<span class="at">size =</span> <span class="fl">1.5</span>, <span class="at">alpha =</span> <span class="fl">0.7</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb15-12"><a href="#cb15-12"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>Metric, <span class="at">scales =</span> <span class="st">"free_y"</span>) <span class="sc">+</span></span>
+<span id="cb15-13"><a href="#cb15-13"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"K (number of topics)"</span>,</span>
+<span id="cb15-14"><a href="#cb15-14"></a>       <span class="at">y =</span> <span class="cn">NULL</span>,</span>
+<span id="cb15-15"><a href="#cb15-15"></a>       <span class="at">title =</span> <span class="st">"Model diagnostics by number of topics"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+</section>
+<section id="welches-k-output" class="slide level2 output-location-slide"><h2>Welches K?</h2><div class="cell output-location-slide">
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-12-1.png" width="960"></p>
+</div>
+</div></section><section id="kombination-aus-kohärenz-exklusivität" class="slide level2">
+<h2>Kombination aus Kohärenz &amp; Exklusivität</h2>
+<h4 id="bestimmung-der-optimalen-themenanzahl-1">Bestimmung der optimalen Themenanzahl</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>amazon<span class="sc">$</span>tpm<span class="sc">$</span>model_scores <span class="sc">%&gt;%</span></span>
+<span id="cb16-2"><a href="#cb16-2"></a>  <span class="fu">select</span>(k, exclusivity, semantic_coherence) <span class="sc">%&gt;%</span></span>
+<span id="cb16-3"><a href="#cb16-3"></a>  <span class="fu">filter</span>(k <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">11</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb16-4"><a href="#cb16-4"></a>  <span class="fu">unnest</span>(<span class="at">cols =</span> <span class="fu">c</span>(exclusivity, semantic_coherence)) <span class="sc">%&gt;%</span></span>
+<span id="cb16-5"><a href="#cb16-5"></a>  <span class="fu">mutate</span>(<span class="at">k =</span> <span class="fu">as.factor</span>(k)) <span class="sc">%&gt;%</span></span>
+<span id="cb16-6"><a href="#cb16-6"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(semantic_coherence, exclusivity, <span class="at">color =</span> k)) <span class="sc">+</span></span>
+<span id="cb16-7"><a href="#cb16-7"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>, <span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb16-8"><a href="#cb16-8"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Semantic coherence"</span>,</span>
+<span id="cb16-9"><a href="#cb16-9"></a>       <span class="at">y =</span> <span class="st">"Exclusivity"</span>,</span>
+<span id="cb16-10"><a href="#cb16-10"></a>       <span class="at">title =</span> <span class="st">"Comparing exclusivity and semantic coherence"</span>,</span>
+<span id="cb16-11"><a href="#cb16-11"></a>       <span class="at">subtitle =</span> <span class="st">"Models with fewer topics have higher semantic coherence for more topics, but lower exclusivity"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+</section>
+<section id="kombination-aus-kohärenz-exklusivität-output" class="slide level2 output-location-slide"><h2>Kombination aus Kohärenz &amp; Exklusivität</h2><div class="cell output-location-slide">
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-13-1.png" width="960"></p>
+</div>
+</div></section><section id="top-features-der-themen" class="slide level2">
+<h2>Top Features der Themen</h2>
+<h4 id="interpretation-des-models">Interpretation des Models</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>amazon<span class="sc">$</span>stm<span class="sc">$</span>mdl <span class="sc">%&gt;%</span> <span class="fu">labelTopics</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Topic 1 Top Words:
      Highest Prob: tropfen, geschmack, chlorophyll, wasser, wirkung, schmeckt, schon 
@@ -1183,34 +1194,32 @@ Topic 5 Top Words:
 </div>
 </div>
 </section>
+<section id="prevalence-der-themen" class="slide level2">
+<h2>Prevalence der Themen</h2>
+<h4 id="interpretation-des-models-1">Interpretation des Models</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a>amazon<span class="sc">$</span>stm<span class="sc">$</span>preval<span class="sc">$</span>tgt  <span class="sc">%&gt;%</span> </span>
+<span id="cb19-2"><a href="#cb19-2"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(topic, gamma, <span class="at">label =</span> terms, <span class="at">fill =</span> topic)) <span class="sc">+</span></span>
+<span id="cb19-3"><a href="#cb19-3"></a>  <span class="fu">geom_col</span>(<span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb19-4"><a href="#cb19-4"></a>  <span class="fu">geom_text</span>(<span class="at">hjust =</span> <span class="fl">1.1</span>, <span class="at">nudge_y =</span> <span class="fl">0.0005</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
+<span id="cb19-5"><a href="#cb19-5"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb19-6"><a href="#cb19-6"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>), <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.35</span>), <span class="at">labels =</span> scales<span class="sc">::</span>percent) <span class="sc">+</span></span>
+<span id="cb19-7"><a href="#cb19-7"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb19-8"><a href="#cb19-8"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb19-9"><a href="#cb19-9"></a>        <span class="at">panel.grid.major =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb19-10"><a href="#cb19-10"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="fu">expression</span>(gamma)) <span class="sc">+</span></span>
+<span id="cb19-11"><a href="#cb19-11"></a>  <span class="fu">scale_fill_jama</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
 </section>
-<section id="prevalence-der-themen" class="level2">
-<h2 class="anchored" data-anchor-id="prevalence-der-themen">Prevalence der Themen</h2>
-<section id="interpretation-des-models-1" class="level4">
-<h4 class="anchored" data-anchor-id="interpretation-des-models-1">Interpretation des Models</h4>
-<div class="cell" data-output-location="slide">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>amazon<span class="sc">$</span>stm<span class="sc">$</span>preval<span class="sc">$</span>tgt  <span class="sc">%&gt;%</span> </span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(topic, gamma, <span class="at">label =</span> terms, <span class="at">fill =</span> topic)) <span class="sc">+</span></span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">hjust =</span> <span class="fl">1.1</span>, <span class="at">nudge_y =</span> <span class="fl">0.0005</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>), <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.35</span>), <span class="at">labels =</span> scales<span class="sc">::</span>percent) <span class="sc">+</span></span>
-<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.major =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
-<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="fu">expression</span>(gamma)) <span class="sc">+</span></span>
-<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_jama</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="prevalence-der-themen-output" class="slide level2 output-location-slide"><h2>Prevalence der Themen</h2><div class="cell output-location-slide">
 <div class="cell-output-display">
-<p><img src="index_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid" width="672"></p>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-15-1.png" width="960"></p>
 </div>
-</div>
-</section>
-</section>
-<section id="validieren-validieren-validieren" class="level2">
-<h2 class="anchored" data-anchor-id="validieren-validieren-validieren">Validieren, Validieren, Validieren</h2>
-<section id="kritisiche-anmerkungen-zum-topic-modeling" class="level4">
-<h4 class="anchored" data-anchor-id="kritisiche-anmerkungen-zum-topic-modeling">Kritisiche Anmerkungen zum Topic Modeling</h4>
-<blockquote class="blockquote">
+</div></section><section id="validieren-validieren-validieren" class="slide level2">
+<h2>Validieren, Validieren, Validieren</h2>
+<h4 id="kritisiche-anmerkungen-zum-topic-modeling">Kritisiche Anmerkungen zum Topic Modeling</h4>
+<blockquote>
 <p><em>Automated text analysis methods can substantially reduce the costs and time of analyzing massive collections of political texts. When applied to any one problem, however, the output of the models may be misleading or simply wrong. […] What should be avoided, then, is the blind use of any method without a validation step (Grimmer &amp; Stewart, 2013, S. 5).</em></p>
 </blockquote>
 <ul>
@@ -1218,16 +1227,19 @@ Topic 5 Top Words:
 <li><p>Ob es sich dabei auch um inhaltlich sinnvolle Ergebnisse handelt, <strong>kann und muss durch manuelle Validierungen festgestellt werden.</strong></p></li>
 <li><p>Moderne Verfahren (z.B. BERT) potentiell besser geeignet für bestimmte Texte</p></li>
 </ul>
+</section></section>
+<section id="time-for-questions" class="title-slide slide level1 center" data-background-color="#E6002E" data-background-image="../../00-images/background_questions.svg">
+<h1>Time for questions</h1>
+
 </section>
+
+<section>
+<section id="bis-zur-nächsten-sitzung" class="title-slide slide level1 center" data-background-color="#E6002E" data-background-image="../../00-images/background_end_of_session.svg">
+<h1>Bis zur nächsten Sitzung!</h1>
+
 </section>
-</section>
-<section id="time-for-questions" class="level1" data-background-color="#E6002E" data-background-image="../../00-images/background_questions.svg">
-<h1 data-background-color="#E6002E" data-background-image="../../00-images/background_questions.svg">Time for questions</h1>
-</section>
-<section id="bis-zur-nächsten-sitzung" class="level1" data-background-color="#E6002E" data-background-image="../../00-images/background_end_of_session.svg">
-<h1 data-background-color="#E6002E" data-background-image="../../00-images/background_end_of_session.svg">Bis zur nächsten Sitzung!</h1>
-<section id="literatur" class="level2">
-<h2 class="anchored" data-anchor-id="literatur">Literatur</h2>
+<section id="literatur" class="slide level2 smaller scrollable">
+<h2>Literatur</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="doc-bibliography">
 <div id="ref-salganik2018" class="csl-entry" role="doc-biblioentry">
 Salganik, M. J. (2018). <em>Bit by bit: Social research in the digital age</em>. Princeton University Press.
@@ -1235,266 +1247,393 @@ Salganik, M. J. (2018). <em>Bit by bit: Social research in the digital age</em>.
 </div>
 
 
-</section>
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
-    }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const disableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'prefetch';
-    }
-  }
-  const enableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'stylesheet';
-    }
-  }
-  const manageTransitions = (selector, allowTransitions) => {
-    const els = window.document.querySelectorAll(selector);
-    for (let i=0; i < els.length; i++) {
-      const el = els[i];
-      if (allowTransitions) {
-        el.classList.remove('notransition');
-      } else {
-        el.classList.add('notransition');
-      }
-    }
-  }
-  const toggleColorMode = (alternate) => {
-    // Switch the stylesheets
-    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-    manageTransitions('#quarto-margin-sidebar .nav-link', false);
-    if (alternate) {
-      enableStylesheet(alternateStylesheets);
-      for (const sheetNode of alternateStylesheets) {
-        if (sheetNode.id === "quarto-bootstrap") {
-          toggleBodyColorMode(sheetNode);
-        }
-      }
-    } else {
-      disableStylesheet(alternateStylesheets);
-      toggleBodyColorPrimary();
-    }
-    manageTransitions('#quarto-margin-sidebar .nav-link', true);
-    // Switch the toggles
-    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-    for (let i=0; i < toggles.length; i++) {
-      const toggle = toggles[i];
-      if (toggle) {
-        if (alternate) {
-          toggle.classList.add("alternate");     
-        } else {
-          toggle.classList.remove("alternate");
-        }
-      }
-    }
-    // Hack to workaround the fact that safari doesn't
-    // properly recolor the scrollbar when toggling (#1455)
-    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-      manageTransitions("body", false);
-      window.scrollTo(0, 1);
-      setTimeout(() => {
-        window.scrollTo(0, 0);
-        manageTransitions("body", true);
-      }, 40);  
-    }
-  }
-  const isFileUrl = () => { 
-    return window.location.protocol === 'file:';
-  }
-  const hasAlternateSentinel = () => {  
-    let styleSentinel = getColorSchemeSentinel();
-    if (styleSentinel !== null) {
-      return styleSentinel === "alternate";
-    } else {
-      return false;
-    }
-  }
-  const setStyleSentinel = (alternate) => {
-    const value = alternate ? "alternate" : "default";
-    if (!isFileUrl()) {
-      window.localStorage.setItem("quarto-color-scheme", value);
-    } else {
-      localAlternateSentinel = value;
-    }
-  }
-  const getColorSchemeSentinel = () => {
-    if (!isFileUrl()) {
-      const storageValue = window.localStorage.getItem("quarto-color-scheme");
-      return storageValue != null ? storageValue : localAlternateSentinel;
-    } else {
-      return localAlternateSentinel;
-    }
-  }
-  let localAlternateSentinel = 'default';
-  // Dark / light mode switch
-  window.quartoToggleColorScheme = () => {
-    // Read the current dark / light value 
-    let toAlternate = !hasAlternateSentinel();
-    toggleColorMode(toAlternate);
-    setStyleSentinel(toAlternate);
-  };
-  // Ensure there is a toggle, if there isn't float one in the top right
-  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-    const a = window.document.createElement('a');
-    a.classList.add('top-right');
-    a.classList.add('quarto-color-scheme-toggle');
-    a.href = "";
-    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-    const i = window.document.createElement("i");
-    i.classList.add('bi');
-    a.appendChild(i);
-    window.document.body.appendChild(a);
-  }
-  // Switch to dark mode if need be
-  if (hasAlternateSentinel()) {
-    toggleColorMode(true);
-  } else {
-    toggleColorMode(false);
-  }
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
-    }
-  });
-  clipboard.on('success', function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
-      }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  });
-  function tippyHover(el, contentFn) {
-    const config = {
-      allowHTML: true,
-      content: contentFn,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start'
-    };
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      return note.innerHTML;
-    });
-  }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
-    }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
-          }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
-      });
-    }
-  }
-});
-</script>
-</div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
-    <div class="nav-footer-left">Copyright 2022, Christoph Adrian</div>   
-    <div class="nav-footer-right">This page is built with <a href="https://quarto.org/">Quarto</a>.</div>
+<img src="../../logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
+<p><a href="https://chrdrn.github.io/digital-behavioral-data/">Digital Behavioral Data</a></p>
+</div>
+</section></section>
+    </div>
   </div>
-</footer>
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../../../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
 
+  <script src="../../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': true,
+'smaller': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":false},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const clipboard = new window.ClipboardJS('.code-copy-button', {
+        target: function(trigger) {
+          return trigger.previousElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      });
+      function tippyHover(el, contentFn) {
+        const config = {
+          allowHTML: true,
+          content: contentFn,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'quarto-reveal',
+          placement: 'bottom-start'
+        };
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          return note.innerHTML;
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
 
 </body></html>

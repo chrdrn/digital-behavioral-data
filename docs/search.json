@@ -1880,14 +1880,14 @@
     "href": "content/08-text_as_data/slides/index.html#literatur",
     "title": "Text as data",
     "section": "Literatur",
-    "text": "Literatur\n\n\nSalganik, M. J. (2018). Bit by bit: Social research in the digital age. Princeton University Press."
+    "text": "Literatur\n\n\nSalganik, M. J. (2018). Bit by bit: Social research in the digital age. Princeton University Press.\n\n\n\n\n\nDigital Behavioral Data"
   },
   {
     "objectID": "content/08-text_as_data/slides/index.html#nicht-neu-aber-andere-dimension",
     "href": "content/08-text_as_data/slides/index.html#nicht-neu-aber-andere-dimension",
     "title": "Text as data",
     "section": "Nicht neu, aber andere Dimension",
-    "text": "Nicht neu, aber andere Dimension\n\nDas Phänomen Text as data\n\n\n\nLange Tradition der Text- und Inhaltsanalyse (besonders in der Kommunikationswissenschaft)\nNeue Chancen & Herausforderungen durch explosionsartige Vergrößerung des (Text-)Datenaufkommen in den letzten Jahren (Websites, Plattformen & Digitalisierung)\n\n\n\n\n\n\n\n(Salganik, 2018)"
+    "text": "Nicht neu, aber andere Dimension\nDas Phänomen Text as data\n\n\n\nLange Tradition der Text- und Inhaltsanalyse (besonders in der Kommunikationswissenschaft)\nNeue Chancen & Herausforderungen durch explosionsartige Vergrößerung des (Text-)Datenaufkommen in den letzten Jahren (Websites, Plattformen & Digitalisierung)\n\n\n\n\n\n\n\n(Salganik, 2018)"
   },
   {
     "objectID": "content/08-text_as_data/slides/index.html#texts-texts-everywhere",
@@ -1908,14 +1908,14 @@
     "href": "content/08-text_as_data/slides/index.html#possibilities-over-possibilities",
     "title": "Text as data",
     "section": "Possibilities over possibilities",
-    "text": "Possibilities over possibilities\n\nÜberblick über verschiedene Methoden der Textanalyse"
+    "text": "Possibilities over possibilities\nÜberblick über verschiedene Methoden der Textanalyse"
   },
   {
     "objectID": "content/08-text_as_data/slides/index.html#im-fokus-diätpillen",
     "href": "content/08-text_as_data/slides/index.html#im-fokus-diätpillen",
     "title": "Text as data",
     "section": "Im Fokus: 💊 Diätpillen",
-    "text": "Im Fokus: 💊 Diätpillen\n\nHintergrund\n\n\n\nReviews von fünf “Diätpillen”\nAutomatisch Scraping via eigener R-Funktion\nDatensatz mit knapp über 2000 Reviews (ohne Bereinigung)\nExemplarische Darstellung folgender Schritte:\n\nText-Processing\nSentiment-Analyse\nTopic Modeling\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAusführliche Schritte im Google Colab & Showcase\nHier nur Auszüge"
+    "text": "Im Fokus: 💊 Diätpillen\nHintergrund\n\n\n\nReviews von fünf “Diätpillen”\nAutomatisch Scraping via eigener R-Funktion\nDatensatz mit knapp über 2000 Reviews (ohne Bereinigung)\nExemplarische Darstellung folgender Schritte:\n\nText-Processing\nSentiment-Analyse\nTopic Modeling\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAusführliche Schritte im Google Colab & Showcase\nHier nur Auszüge"
   },
   {
     "objectID": "content/08-text_as_data/slides/index.html#step-by-step-scraping",
@@ -1950,28 +1950,28 @@
     "href": "content/08-text_as_data/slides/index.html#quick-scraping-step-by-step",
     "title": "Text as data",
     "section": "Quick scraping step-by-step",
-    "text": "Quick scraping step-by-step\n\n1️⃣ Custom function für Export der html-Elemente\n\nscrape_amazon <- function(page_num, review_url) {\n  url_reviews <- paste0(review_url, \"&pageNumber=\", page_num, \"&sortBy=recent\")\n  doc <- read_html(url_reviews)\n  map_dfr(doc %>% html_elements(\"[id^='customer_review']\"), ~ data.frame(\n    review_title = .x %>% html_element(\".review-title\") %>% html_text2(),\n    review_text = .x %>% html_element(\".review-text-content\") %>% html_text2(),\n    review_star = .x %>% html_element(\".review-rating\") %>% html_text2(),\n    date = .x %>% html_element(\".review-date\") %>% html_text2() %>% gsub(\".*vom \", \"\", .),\n    author = .x %>% html_element(\".a-profile-name\") %>% html_text2(),\n    page = page_num\n  )) %>%\n    as_tibble %>%\n    return()\n}"
+    "text": "Quick scraping step-by-step\n1️⃣ Custom function für Export der html-Elemente\n\nscrape_amazon <- function(page_num, review_url) {\n  url_reviews <- paste0(review_url, \"&pageNumber=\", page_num, \"&sortBy=recent\")\n  doc <- read_html(url_reviews)\n  map_dfr(doc %>% html_elements(\"[id^='customer_review']\"), ~ data.frame(\n    review_title = .x %>% html_element(\".review-title\") %>% html_text2(),\n    review_text = .x %>% html_element(\".review-text-content\") %>% html_text2(),\n    review_star = .x %>% html_element(\".review-rating\") %>% html_text2(),\n    date = .x %>% html_element(\".review-date\") %>% html_text2() %>% gsub(\".*vom \", \"\", .),\n    author = .x %>% html_element(\".a-profile-name\") %>% html_text2(),\n    page = page_num\n  )) %>%\n    as_tibble %>%\n    return()\n}"
   },
   {
     "objectID": "content/08-text_as_data/slides/index.html#quick-scraping-step-by-step-1",
     "href": "content/08-text_as_data/slides/index.html#quick-scraping-step-by-step-1",
     "title": "Text as data",
     "section": "Quick scraping step-by-step",
-    "text": "Quick scraping step-by-step\n\n2️⃣ Definition von Amazon Review URLs\n\nurl <- list(\n  p01 = \"https://www.amazon.de/LINEAVI-Eiwei%C3%9F-Shake-Kombination-Molkeneiwei%C3%9F-laktosefrei/product-reviews/B018IB02AU/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews\",\n  p02 = \"https://www.amazon.de/Detoxkuren%E2%80%A2-Entw%C3%A4sserung-Entschlackung-Stoffwechsel-entschlacken/product-reviews/B072QW5ZN1/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews\",\n  p03 = \"https://www.amazon.de/Saint-Nutrition%C2%AE-KETO-BURN-Appetitz%C3%BCgler/product-reviews/B08B67V8G5/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews\",\n  p04 = \"https://www.amazon.de/Yokebe-vegetarisch-Mahlzeitersatz-Gewichtsabnahme-hochwertigen/product-reviews/B08GYZ8LRB/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews\",\n  p05 = \"https://www.amazon.de/Vihado-Liquid-chlorophyll-drops-alfalfa/product-reviews/B093XNC8QH/ref=cm_cr_arp_d_paging_btm_next_2?ie=UTF8&reviewerType=all_reviews\"\n)"
+    "text": "Quick scraping step-by-step\n2️⃣ Definition von Amazon Review URLs\n\nurl <- list(\n  p01 = \"https://www.amazon.de/LINEAVI-Eiwei%C3%9F-Shake-Kombination-Molkeneiwei%C3%9F-laktosefrei/product-reviews/B018IB02AU/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews\",\n  p02 = \"https://www.amazon.de/Detoxkuren%E2%80%A2-Entw%C3%A4sserung-Entschlackung-Stoffwechsel-entschlacken/product-reviews/B072QW5ZN1/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews\",\n  p03 = \"https://www.amazon.de/Saint-Nutrition%C2%AE-KETO-BURN-Appetitz%C3%BCgler/product-reviews/B08B67V8G5/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews\",\n  p04 = \"https://www.amazon.de/Yokebe-vegetarisch-Mahlzeitersatz-Gewichtsabnahme-hochwertigen/product-reviews/B08GYZ8LRB/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews\",\n  p05 = \"https://www.amazon.de/Vihado-Liquid-chlorophyll-drops-alfalfa/product-reviews/B093XNC8QH/ref=cm_cr_arp_d_paging_btm_next_2?ie=UTF8&reviewerType=all_reviews\"\n)"
   },
   {
     "objectID": "content/08-text_as_data/slides/index.html#quick-scraping-step-by-step-2",
     "href": "content/08-text_as_data/slides/index.html#quick-scraping-step-by-step-2",
     "title": "Text as data",
     "section": "Quick scraping step-by-step",
-    "text": "Quick scraping step-by-step\n\n3️⃣ Scrape with for-loops\n\namazon <- list()\n# p01 \nfor (i in 1:79) {\n  df <- scrape_amazon(page_num = i, review_url = url$p01)\n  amazon$raw$p01[[i]] <- df\n}\n\n\n\nproduct <- names(url)\n# bind rows for each product\nfor (i in product) {\n  amazon$data$raw[[i]] <- amazon$raw[[i]] %>% \n    bind_rows() %>% \n    rownames_to_column(\"id\") %>% \n    mutate(across(id, as.numeric))\n}\n# bind rows of all products\namazon$data$full <- amazon$data$raw %>% \n  bind_rows(.id = \"src\")"
+    "text": "Quick scraping step-by-step\n3️⃣ Scrape with for-loops\n\namazon <- list()\n# p01 \nfor (i in 1:79) {\n  df <- scrape_amazon(page_num = i, review_url = url$p01)\n  amazon$raw$p01[[i]] <- df\n}\n\n\n\nproduct <- names(url)\n# bind rows for each product\nfor (i in product) {\n  amazon$data$raw[[i]] <- amazon$raw[[i]] %>% \n    bind_rows() %>% \n    rownames_to_column(\"id\") %>% \n    mutate(across(id, as.numeric))\n}\n# bind rows of all products\namazon$data$full <- amazon$data$raw %>% \n  bind_rows(.id = \"src\")"
   },
   {
     "objectID": "content/08-text_as_data/slides/index.html#quick-scraping-step-by-step-3",
     "href": "content/08-text_as_data/slides/index.html#quick-scraping-step-by-step-3",
     "title": "Text as data",
     "section": "Quick scraping step-by-step",
-    "text": "Quick scraping step-by-step\n\n4️⃣ Endresultat\n\namazon$data$full %>% \n  glimpse()\n\nRows: 2,142\nColumns: 8\n$ src          <chr> \"p01\", \"p01\", \"p01\", \"p01\", \"p01\", \"p01\", \"p01\", \"p01\", \"…\n$ id           <dbl> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17…\n$ review_title <chr> \"Schmeckt wie ein angenehmer Milchshake\", \"Nicht zufriede…\n$ review_text  <chr> \"Wie ich damit abgenommen haben kann ich noch nicht sagen…\n$ review_star  <chr> \"4,0 von 5 Sternen\", \"2,0 von 5 Sternen\", \"5,0 von 5 Ster…\n$ date         <chr> \"Kundenrezension aus Deutschland 🇩🇪 am 26. November 2022\"…\n$ author       <chr> \"Rayan Wehbi\", \"Motte\", \"V.K\", \"niw\", \"Murphy\", \"Julia\", …\n$ page         <int> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, …"
+    "text": "Quick scraping step-by-step\n4️⃣ Endresultat\n\namazon$data$full %>% \n  glimpse()\n\nRows: 2,142\nColumns: 8\n$ src          <chr> \"p01\", \"p01\", \"p01\", \"p01\", \"p01\", \"p01\", \"p01\", \"p01\", \"…\n$ id           <dbl> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17…\n$ review_title <chr> \"Schmeckt wie ein angenehmer Milchshake\", \"Nicht zufriede…\n$ review_text  <chr> \"Wie ich damit abgenommen haben kann ich noch nicht sagen…\n$ review_star  <chr> \"4,0 von 5 Sternen\", \"2,0 von 5 Sternen\", \"5,0 von 5 Ster…\n$ date         <chr> \"Kundenrezension aus Deutschland 🇩🇪 am 26. November 2022\"…\n$ author       <chr> \"Rayan Wehbi\", \"Motte\", \"V.K\", \"niw\", \"Murphy\", \"Julia\", …\n$ page         <int> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, …"
   },
   {
     "objectID": "content/08-text_as_data/slides/index.html#von-der-rohfassung-zum-korpus",
@@ -2027,49 +2027,49 @@
     "href": "content/08-text_as_data/slides/index.html#sätze-token-lemma-pos",
     "title": "Text as data",
     "section": "Sätze – Token – Lemma – POS",
-    "text": "Sätze – Token – Lemma – POS\n\nVorverarbeitungsschritte für Textanalyse\n\n\n\n\n\n\n1. Satzerkennung\n\n\n\nWas gibt’s in New York zu sehen?\n\n\n\n\n\n\n\n\n2. Tokenisierung\n\n\n\nwas; gibt; `s; in; new; york; zu; sehen; ?\n\n\n\n\n\n\n\n\n3. Lemmatisierung\n\n\n\nwas; geben; `s; in; new; york; zu; sehen; ?\n\n\n\n\n\n\n\n\n4. Part-Of-Speech (POS) Tagging\n\n\n\n>Was/PWS >gibt/VVFIN >’s/PPER >in/APPR >New/NE >York/NE >zu/PTKZU >sehen/VVINF\n\n\n\nSatzerkennung: Auflösung der Satzstruktur; Aber: Probleme mit Datumsangaben, Uhrzeit, Abkürzungen, URLS\nTokenisierung: Zerteilung in kleinste Einheiten, Abtrennung von Satzzeichen; Fragen: Umgang mit Zeichen, Symbolen, Zahlen, N-Gramme …\nDefinition Lemmatisierung: Grundform eines Worters, als diejenige Form, unter dem an einen Begriff in einem Nachschlagewerk findet / Rückführung auf die „Vollfrom”\nDefinition POS: Zuordnung von Wörtern und Satzzeichen eines Textes zu Wortarten"
+    "text": "Sätze – Token – Lemma – POS\nVorverarbeitungsschritte für Textanalyse\n\n\n\n\n\n\n1. Satzerkennung\n\n\nWas gibt’s in New York zu sehen?\n\n\n\n\n\n\n\n\n\n2. Tokenisierung\n\n\nwas; gibt; `s; in; new; york; zu; sehen; ?\n\n\n\n\n\n\n\n\n\n3. Lemmatisierung\n\n\nwas; geben; `s; in; new; york; zu; sehen; ?\n\n\n\n\n\n\n\n\n\n4. Part-Of-Speech (POS) Tagging\n\n\n>Was/PWS >gibt/VVFIN >’s/PPER >in/APPR >New/NE >York/NE >zu/PTKZU >sehen/VVINF\n\n\n\n\nSatzerkennung: Auflösung der Satzstruktur; Aber: Probleme mit Datumsangaben, Uhrzeit, Abkürzungen, URLS\nTokenisierung: Zerteilung in kleinste Einheiten, Abtrennung von Satzzeichen; Fragen: Umgang mit Zeichen, Symbolen, Zahlen, N-Gramme …\nDefinition Lemmatisierung: Grundform eines Worters, als diejenige Form, unter dem an einen Begriff in einem Nachschlagewerk findet / Rückführung auf die „Vollfrom”\nDefinition POS: Zuordnung von Wörtern und Satzzeichen eines Textes zu Wortarten"
   },
   {
     "objectID": "content/08-text_as_data/slides/index.html#von-bow-zu-dfm",
     "href": "content/08-text_as_data/slides/index.html#von-bow-zu-dfm",
     "title": "Text as data",
     "section": "Von BOW zu DFM",
-    "text": "Von BOW zu DFM\n\nBag-of-words (BOW) und Document-Feature-Matrix (DFM)\n\n\n\n\nBag-of-Words-Modell: es zählt lediglich die Worthäufigkeit je Dokument, die syntaktischen und grammatikalischen Zusammenhänge zwischen einzelnen Wörtern werden ignoriert."
+    "text": "Von BOW zu DFM\nBag-of-words (BOW) und Document-Feature-Matrix (DFM)\n\n\nBag-of-Words-Modell: es zählt lediglich die Worthäufigkeit je Dokument, die syntaktischen und grammatikalischen Zusammenhänge zwischen einzelnen Wörtern werden ignoriert."
   },
   {
     "objectID": "content/08-text_as_data/slides/index.html#the-good-the-bad-and-the-ugly",
     "href": "content/08-text_as_data/slides/index.html#the-good-the-bad-and-the-ugly",
     "title": "Text as data",
     "section": "The good, the bad and the ugly",
-    "text": "The good, the bad and the ugly\n\nGrundidee & Ziele und der Sentimentanalyse\n\nAuf Basis von speziellen Wortlisten bzw. Lexika werden bestimmte Begriffe ausgezählt, denen zuvor entweder ein numerischer Wert (Score) oder eine Kategorien (positiv oder negativ) zugeordnet wurden.\nZiel ist die Bestimmung der Polarität (positive/negative Emotion) eines Textes\nAber: Wie gut ist die Klassifizierung?"
+    "text": "The good, the bad and the ugly\nGrundidee & Ziele und der Sentimentanalyse\n\nAuf Basis von speziellen Wortlisten bzw. Lexika werden bestimmte Begriffe ausgezählt, denen zuvor entweder ein numerischer Wert (Score) oder eine Kategorien (positiv oder negativ) zugeordnet wurden.\nZiel ist die Bestimmung der Polarität (positive/negative Emotion) eines Textes\nAber: Wie gut ist die Klassifizierung?"
   },
   {
     "objectID": "content/08-text_as_data/slides/index.html#grundlagen-für-die-analyse",
     "href": "content/08-text_as_data/slides/index.html#grundlagen-für-die-analyse",
     "title": "Text as data",
     "section": "Grundlagen für die Analyse",
-    "text": "Grundlagen für die Analyse\n\nHintergrundinformationen zum Processing & Scoring\n\nDie Verarbeitung und Analyse der Daten erfolgt mit demquanteda bzw. quanteda.textstat Paket und basiert nur auf dem Korpus der deutschen Reviews\nAls Sentiment-Grundlage wird SentiWS genutzt\n\nöffentlich verfügbare deutschsprachige Ressource für die Sentiment Analyse, Opinion Mining und ähnliche Zwecke\npositive und negative Polarität im Intervall [-1; 1] für enthaltene Wörter die angegeben, sowie deren Wortart\nenthält ungefähr 1.650 positive und 1.800 negative Grundformen\n\n\n\n\nund (falls anwendbar) Flexionsvarianten\nso dass, inklusive der verschiedenen Flexionsformen, insgesamt etwa 16.000 positive und 18.000 negative Wortformen enthalten sind. SentiWS enthält nicht nur Adjektive und Adverbien, sondern auch Nomen und Verben die Träger von Sentiment sind"
+    "text": "Grundlagen für die Analyse\nHintergrundinformationen zum Processing & Scoring\n\nDie Verarbeitung und Analyse der Daten erfolgt mit demquanteda bzw. quanteda.textstat Paket und basiert nur auf dem Korpus der deutschen Reviews\nAls Sentiment-Grundlage wird SentiWS genutzt\n\nöffentlich verfügbare deutschsprachige Ressource für die Sentiment Analyse, Opinion Mining und ähnliche Zwecke\npositive und negative Polarität im Intervall [-1; 1] für enthaltene Wörter die angegeben, sowie deren Wortart\nenthält ungefähr 1.650 positive und 1.800 negative Grundformen\n\n\n\n\nund (falls anwendbar) Flexionsvarianten\nso dass, inklusive der verschiedenen Flexionsformen, insgesamt etwa 16.000 positive und 18.000 negative Wortformen enthalten sind. SentiWS enthält nicht nur Adjektive und Adverbien, sondern auch Nomen und Verben die Träger von Sentiment sind"
   },
   {
     "objectID": "content/08-text_as_data/slides/index.html#erste-ergebnisse",
     "href": "content/08-text_as_data/slides/index.html#erste-ergebnisse",
     "title": "Text as data",
     "section": "Erste Ergebnisse",
-    "text": "Erste Ergebnisse\n\nBewertung der verschiedenen Diätpillen\n\namazon$data$de_senti %>% \n  ggplot(aes(x = src, y = valence)) + \n  ggdist::stat_halfeye(\n    aes(fill = src),\n    adjust = .5, \n    width = .6, \n    .width = 0, \n    justification = -.3, \n    point_colour = NA) + \n  geom_boxplot(\n    aes(color = src),\n    width = .25, \n    outlier.shape = NA\n  ) +\n  geom_point(\n    aes(color = src),\n    size = 1.3,\n    alpha = .3,\n    position = position_jitter(\n      seed = 1, width = .1\n    )\n  ) + \n  coord_cartesian(xlim = c(1.2, NA), clip = \"off\") +\n  scale_color_startrek() +\n  scale_fill_startrek() +\n  theme_pubr()\n\nWarning: Using the `size` aesthietic with geom_segment was deprecated in ggplot2 3.4.0.\nℹ Please use the `linewidth` aesthetic instead.\n\n\n\n\n\n\nValence = average valence of document, based on a dictionary whose values have numeric valence scores."
+    "text": "Erste Ergebnisse\nBewertung der verschiedenen Diätpillen\n\namazon$data$de_senti %>% \n  ggplot(aes(x = src, y = valence)) + \n  ggdist::stat_halfeye(\n    aes(fill = src),\n    adjust = .5, \n    width = .6, \n    .width = 0, \n    justification = -.3, \n    point_colour = NA) + \n  geom_boxplot(\n    aes(color = src),\n    width = .25, \n    outlier.shape = NA\n  ) +\n  geom_point(\n    aes(color = src),\n    size = 1.3,\n    alpha = .3,\n    position = position_jitter(\n      seed = 1, width = .1\n    )\n  ) + \n  coord_cartesian(xlim = c(1.2, NA), clip = \"off\") +\n  scale_color_startrek() +\n  scale_fill_startrek() +\n  theme_pubr()\n\n\n\nValence = average valence of document, based on a dictionary whose values have numeric valence scores."
   },
   {
     "objectID": "content/08-text_as_data/slides/index.html#anzahl-der-reviews-nach-produkt",
     "href": "content/08-text_as_data/slides/index.html#anzahl-der-reviews-nach-produkt",
     "title": "Text as data",
     "section": "Anzahl der Reviews nach Produkt",
-    "text": "Anzahl der Reviews nach Produkt\n\nKennenlernen des Datensatzes\n\namazon$data$de %>% \n  frq(src)\n\nsrc <categorical> \n# total N=1736 valid N=1736 mean=2.88 sd=1.46\n\nValue |   N | Raw % | Valid % | Cum. %\n--------------------------------------\np01   | 438 | 25.23 |   25.23 |  25.23\np02   | 256 | 14.75 |   14.75 |  39.98\np03   | 509 | 29.32 |   29.32 |  69.30\np04   | 143 |  8.24 |    8.24 |  77.53\np05   | 390 | 22.47 |   22.47 | 100.00\n<NA>  |   0 |  0.00 |    <NA> |   <NA>"
+    "text": "Anzahl der Reviews nach Produkt\nKennenlernen des Datensatzes\n\namazon$data$de %>% \n  frq(src)\n\nsrc <categorical> \n# total N=1736 valid N=1736 mean=2.88 sd=1.46\n\nValue |   N | Raw % | Valid % | Cum. %\n--------------------------------------\np01   | 438 | 25.23 |   25.23 |  25.23\np02   | 256 | 14.75 |   14.75 |  39.98\np03   | 509 | 29.32 |   29.32 |  69.30\np04   | 143 |  8.24 |    8.24 |  77.53\np05   | 390 | 22.47 |   22.47 | 100.00\n<NA>  |   0 |  0.00 |    <NA> |   <NA>"
   },
   {
     "objectID": "content/08-text_as_data/slides/index.html#anzahl-der-reviews-nach-produkt-im-zeitverlauf",
     "href": "content/08-text_as_data/slides/index.html#anzahl-der-reviews-nach-produkt-im-zeitverlauf",
     "title": "Text as data",
     "section": "Anzahl der Reviews nach Produkt im Zeitverlauf",
-    "text": "Anzahl der Reviews nach Produkt im Zeitverlauf\n\nKennenlernen des Datensatzes\n\namazon$data$de %>% \n  ggplot(aes(year, fill = src)) +\n  geom_bar() +\n  scale_fill_locuszoom() +\n  theme_pubr()"
+    "text": "Anzahl der Reviews nach Produkt im Zeitverlauf\nKennenlernen des Datensatzes\n\namazon$data$de %>% \n  ggplot(aes(year, fill = src)) +\n  geom_bar() +\n  scale_fill_locuszoom() +\n  theme_pubr()"
   },
   {
     "objectID": "content/08-text_as_data/slides/index.html#bewertungen-der-produkte",
@@ -2083,14 +2083,14 @@
     "href": "content/08-text_as_data/slides/index.html#bewertungen-der-produkte-absolute-zahlen",
     "title": "Text as data",
     "section": "Bewertungen der Produkte: Absolute Zahlen",
-    "text": "Bewertungen der Produkte: Absolute Zahlen\n\nKennenlernen des Datensatzes\n\namazon$data$de %>% \n  mutate(across(rating, as.factor)) %>% \n  ggplot(aes(src, fill = rating)) + \n  geom_bar() +\n  scale_fill_brewer(palette = \"RdYlGn\") +\n  theme_pubr()"
+    "text": "Bewertungen der Produkte: Absolute Zahlen\nKennenlernen des Datensatzes\n\namazon$data$de %>% \n  mutate(across(rating, as.factor)) %>% \n  ggplot(aes(src, fill = rating)) + \n  geom_bar() +\n  scale_fill_brewer(palette = \"RdYlGn\") +\n  theme_pubr()"
   },
   {
     "objectID": "content/08-text_as_data/slides/index.html#bewertungen-der-produkte-kummulierte-anteile",
     "href": "content/08-text_as_data/slides/index.html#bewertungen-der-produkte-kummulierte-anteile",
     "title": "Text as data",
     "section": "Bewertungen der Produkte: Kummulierte Anteile",
-    "text": "Bewertungen der Produkte: Kummulierte Anteile\n\nKennenlernen des Datensatzes\n\namazon$data$de %>% \n  mutate(across(rating, as.factor)) %>% \n  ggplot(aes(src, fill = rating)) + \n  geom_bar(position = \"fill\") +\n  scale_fill_brewer(palette = \"RdYlGn\") +\n  theme_pubr()"
+    "text": "Bewertungen der Produkte: Kummulierte Anteile\nKennenlernen des Datensatzes\n\namazon$data$de %>% \n  mutate(across(rating, as.factor)) %>% \n  ggplot(aes(src, fill = rating)) + \n  geom_bar(position = \"fill\") +\n  scale_fill_brewer(palette = \"RdYlGn\") +\n  theme_pubr()"
   },
   {
     "objectID": "content/08-text_as_data/slides/index.html#erste-ergebnisse-output",
@@ -2104,7 +2104,7 @@
     "href": "content/08-text_as_data/slides/index.html#neue-quellen-neue-methoden-neue-möglichkeiten",
     "title": "Text as data",
     "section": "Neue Quellen, Neue Methoden, neue Möglichkeiten",
-    "text": "Neue Quellen, Neue Methoden, neue Möglichkeiten\n\nVerschiedene Textgrundlagen als Beispiel"
+    "text": "Neue Quellen, Neue Methoden, neue Möglichkeiten\nVerschiedene Textgrundlagen als Beispiel"
   },
   {
     "objectID": "content/08-text_as_data/slides/index.html#ein-riesiges-feld",
@@ -2118,49 +2118,49 @@
     "href": "content/08-text_as_data/slides/index.html#grundidee",
     "title": "Text as data",
     "section": "Grundidee",
-    "text": "Grundidee\n\nQuick Introduction to Topic Modeling\n\nVerfahren des unüberwachten maschinellen Lernens, das sich daher insbesondere zur Exploration und Deskription großer Textmengen eignet\nThemen werden strikt auf Basis von Worthäufigkeiten in den einzelnen Dokumenten vermeintlich objektiv berechnet, ganz ohne subjektive Einschätzungen und damit einhergehenden etwaigen Verzerrungen\nBekanntesten dieser Verfahren sind LDA (Latent Dirichlet Allocation) sowie die darauf aufbauenden CTM (Correlated Topic Models) und STM (Structural Topic Models)"
+    "text": "Grundidee\nQuick Introduction to Topic Modeling\n\nVerfahren des unüberwachten maschinellen Lernens, das sich daher insbesondere zur Exploration und Deskription großer Textmengen eignet\nThemen werden strikt auf Basis von Worthäufigkeiten in den einzelnen Dokumenten vermeintlich objektiv berechnet, ganz ohne subjektive Einschätzungen und damit einhergehenden etwaigen Verzerrungen\nBekanntesten dieser Verfahren sind LDA (Latent Dirichlet Allocation) sowie die darauf aufbauenden CTM (Correlated Topic Models) und STM (Structural Topic Models)"
   },
   {
     "objectID": "content/08-text_as_data/slides/index.html#annahmen",
     "href": "content/08-text_as_data/slides/index.html#annahmen",
     "title": "Text as data",
     "section": "Annahmen",
-    "text": "Annahmen\n\nQuick Introduction to Topic Modeling\n\nEin Textkorpus besteht aus D Dokumenten und V Wörtern bzw. Terms\nEs wird nun angenommen, dass latente Themen K zu unterschiedlichen Anteilen in den Dokumenten D vorkommen und alle Wörter V mit unterschiedlicher Wahrscheinlichkeit zu den K Themen gehören.\nZiel der Verfahren ist die Berechnung zweier Matrizen D×K und V×K.\n\nDie erste Matrix D×K enthält für jedes einzelne Dokument d und jedes einzelne Thema k die Wahrscheinlichkeit, dass das Thema in diesem Dokument vorkommt (𝚹).\nAnalog enthält V×K für jedes einzelne Wort w und jedes einzelne Thema k die Wahrscheinlichkeit, dass das jeweilige Wort in diesem Thema vorkommt (𝛃).\n\n\n\n\nMit Hilfe dieser Matrizen können die Themen dann beschrieben und interpretiert werden.\n\nSo können aus V×K die wichtigsten Wörter je Thema (d.h., die Wörter mit der höchsten konditionalen Wahrscheinlichkeit, zu einem bestimmten Thema kk zu gehören) abgelesen werden;\nmittels D×K können Themen Dokumenten und umgekehrt zugeordnet werden, z. B. in dem für jedes Dokument dd das Thema kk mit der höchsten konditionalen Wahrscheinlichkeit identifiziert wird.\n\nZur Berechnung dieser Matrizen wird sozusagen der umgekehrte Weg gegangen und die Erzeugung der Dokumente als statistischer Prozess beschrieben: ein Dokument wird demnach erzeugt, in dem zufällig Themen aus der zum Dokument zugehörigen Themenverteilung und Wörter aus der den Themen zugehörigen Wortverteilungen gezogen werden. Hierzu wird das Topic Model zunächst mit zufälligen Themen- und Wortverteilungen initialisiert und dann in einem iterativen, algorithmischen Verfahren nach und nach adaptiert, bis es möglichst gut zu den Daten (dem Textkorpus) passt (d.h. die gemeinsame Likelihood der Themen- und Wortverteilungen maximiert wird).53"
+    "text": "Annahmen\nQuick Introduction to Topic Modeling\n\nEin Textkorpus besteht aus D Dokumenten und V Wörtern bzw. Terms\nEs wird nun angenommen, dass latente Themen K zu unterschiedlichen Anteilen in den Dokumenten D vorkommen und alle Wörter V mit unterschiedlicher Wahrscheinlichkeit zu den K Themen gehören.\nZiel der Verfahren ist die Berechnung zweier Matrizen D×K und V×K.\n\nDie erste Matrix D×K enthält für jedes einzelne Dokument d und jedes einzelne Thema k die Wahrscheinlichkeit, dass das Thema in diesem Dokument vorkommt (𝚹).\nAnalog enthält V×K für jedes einzelne Wort w und jedes einzelne Thema k die Wahrscheinlichkeit, dass das jeweilige Wort in diesem Thema vorkommt (𝛃).\n\n\n\n\nMit Hilfe dieser Matrizen können die Themen dann beschrieben und interpretiert werden.\n\nSo können aus V×K die wichtigsten Wörter je Thema (d.h., die Wörter mit der höchsten konditionalen Wahrscheinlichkeit, zu einem bestimmten Thema kk zu gehören) abgelesen werden;\nmittels D×K können Themen Dokumenten und umgekehrt zugeordnet werden, z. B. in dem für jedes Dokument dd das Thema kk mit der höchsten konditionalen Wahrscheinlichkeit identifiziert wird.\n\nZur Berechnung dieser Matrizen wird sozusagen der umgekehrte Weg gegangen und die Erzeugung der Dokumente als statistischer Prozess beschrieben: ein Dokument wird demnach erzeugt, in dem zufällig Themen aus der zum Dokument zugehörigen Themenverteilung und Wörter aus der den Themen zugehörigen Wortverteilungen gezogen werden. Hierzu wird das Topic Model zunächst mit zufälligen Themen- und Wortverteilungen initialisiert und dann in einem iterativen, algorithmischen Verfahren nach und nach adaptiert, bis es möglichst gut zu den Daten (dem Textkorpus) passt (d.h. die gemeinsame Likelihood der Themen- und Wortverteilungen maximiert wird).53"
   },
   {
     "objectID": "content/08-text_as_data/slides/index.html#structual-topic-modeling-im-fokus",
     "href": "content/08-text_as_data/slides/index.html#structual-topic-modeling-im-fokus",
     "title": "Text as data",
     "section": "Structual Topic Modeling im Fokus",
-    "text": "Structual Topic Modeling im Fokus\n\nIdee und Hintergrund von STM\n\n\n\n\n\n\n𝛴 = Topic covariance\nx = Prevalende Metadata\ngamma = Metadata weights\nsmaller box = N = number of words in a document\nbigger box = M = number of documents in a corpus"
+    "text": "Structual Topic Modeling im Fokus\nIdee und Hintergrund von STM\n\n\n𝛴 = Topic covariance\nx = Prevalende Metadata\ngamma = Metadata weights\nsmaller box = N = number of words in a document\nbigger box = M = number of documents in a corpus"
   },
   {
     "objectID": "content/08-text_as_data/slides/index.html#welches-k",
     "href": "content/08-text_as_data/slides/index.html#welches-k",
     "title": "Text as data",
     "section": "Welches K?",
-    "text": "Welches K?\n\nBestimmung der optimalen Themenanzahl\n\namazon$tpm$model_scores %>% \n  transmute(\n    k,\n    `Lower bound` = lbound,\n    Residuals = map_dbl(residual, \"dispersion\"),\n    `Semantic coherence` = map_dbl(semantic_coherence, mean),\n    `Held-out likelihood` = map_dbl(eval_heldout, \"expected.heldout\")) %>%   \n  pivot_longer(-k, names_to = \"Metric\", values_to = \"Value\") %>% \n  ggplot(\n    aes(k, Value, color = Metric)) +\n  geom_line(size = 1.5, alpha = 0.7, show.legend = FALSE) +\n  facet_wrap(~Metric, scales = \"free_y\") +\n  labs(x = \"K (number of topics)\",\n       y = NULL,\n       title = \"Model diagnostics by number of topics\")\n\nWarning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.\nℹ Please use `linewidth` instead."
+    "text": "Welches K?\nBestimmung der optimalen Themenanzahl\n\namazon$tpm$model_scores %>% \n  transmute(\n    k,\n    `Lower bound` = lbound,\n    Residuals = map_dbl(residual, \"dispersion\"),\n    `Semantic coherence` = map_dbl(semantic_coherence, mean),\n    `Held-out likelihood` = map_dbl(eval_heldout, \"expected.heldout\")) %>%   \n  pivot_longer(-k, names_to = \"Metric\", values_to = \"Value\") %>% \n  ggplot(\n    aes(k, Value, color = Metric)) +\n  geom_line(size = 1.5, alpha = 0.7, show.legend = FALSE) +\n  facet_wrap(~Metric, scales = \"free_y\") +\n  labs(x = \"K (number of topics)\",\n       y = NULL,\n       title = \"Model diagnostics by number of topics\")"
   },
   {
     "objectID": "content/08-text_as_data/slides/index.html#top-features-der-themen",
     "href": "content/08-text_as_data/slides/index.html#top-features-der-themen",
     "title": "Text as data",
     "section": "Top Features der Themen",
-    "text": "Top Features der Themen\n\nInterpretation des Models\n\namazon$stm$mdl %>% labelTopics()\n\nTopic 1 Top Words:\n     Highest Prob: tropfen, geschmack, chlorophyll, wasser, wirkung, schmeckt, schon \n     FREX: tropfen, chlorophyll, glas, grün, farbe, flasche, konnten \n     Lift: alfalfa, dosieren, farbe, frisch, geladen, glas, grüne \n     Score: tropfen, chlorophyll, farbe, grün, geladen, medien, wirkung \nTopic 2 Top Words:\n     Highest Prob: produkt, super, nehme, seit, mehr, sagen, wirklich \n     FREX: nehme, gutes, begeistert, seit, wirkt, hilft, überrascht \n     Lift: begeistert, detox, entgiften, entschlacken, gutes, pfirsich, teste \n     Score: produkt, seit, nehme, weiteren, super, gutes, hilft \nTopic 3 Top Words:\n     Highest Prob: gut, dass, tag, tagen, ganz, finde, besser \n     FREX: ganz, finde, möchte, produkte, tagen, anfang, wenig \n     Lift: anfang, soweit, generell, produkte, komisch, versucht, möchte \n     Score: gut, generell, finde, dass, ganz, tag, tagen \nTopic 4 Top Words:\n     Highest Prob: schmeckt, geschmack, shake, lineavi, shaker, pulver, lecker \n     FREX: shake, lineavi, shaker, pulver, lecker, shakes, almased \n     Lift: anleitung, dosen, ersetzt, aktivkost, almased, classic, diätshake \n     Score: lineavi, shaker, shake, almased, pulver, shakes, milch \nTopic 5 Top Words:\n     Highest Prob: schon, wochen, leider, kapseln, abgenommen, sport, abnehmen \n     FREX: kapseln, abgenommen, tabletten, geld, bringt, sport, schlucken \n     Lift: abgenommen, achten, burn, gebracht, gegenteil, geld, geldverschwendung \n     Score: kapseln, tabletten, keto, burn, abgenommen, sport, kilo"
+    "text": "Top Features der Themen\nInterpretation des Models\n\namazon$stm$mdl %>% labelTopics()\n\nTopic 1 Top Words:\n     Highest Prob: tropfen, geschmack, chlorophyll, wasser, wirkung, schmeckt, schon \n     FREX: tropfen, chlorophyll, glas, grün, farbe, flasche, konnten \n     Lift: alfalfa, dosieren, farbe, frisch, geladen, glas, grüne \n     Score: tropfen, chlorophyll, farbe, grün, geladen, medien, wirkung \nTopic 2 Top Words:\n     Highest Prob: produkt, super, nehme, seit, mehr, sagen, wirklich \n     FREX: nehme, gutes, begeistert, seit, wirkt, hilft, überrascht \n     Lift: begeistert, detox, entgiften, entschlacken, gutes, pfirsich, teste \n     Score: produkt, seit, nehme, weiteren, super, gutes, hilft \nTopic 3 Top Words:\n     Highest Prob: gut, dass, tag, tagen, ganz, finde, besser \n     FREX: ganz, finde, möchte, produkte, tagen, anfang, wenig \n     Lift: anfang, soweit, generell, produkte, komisch, versucht, möchte \n     Score: gut, generell, finde, dass, ganz, tag, tagen \nTopic 4 Top Words:\n     Highest Prob: schmeckt, geschmack, shake, lineavi, shaker, pulver, lecker \n     FREX: shake, lineavi, shaker, pulver, lecker, shakes, almased \n     Lift: anleitung, dosen, ersetzt, aktivkost, almased, classic, diätshake \n     Score: lineavi, shaker, shake, almased, pulver, shakes, milch \nTopic 5 Top Words:\n     Highest Prob: schon, wochen, leider, kapseln, abgenommen, sport, abnehmen \n     FREX: kapseln, abgenommen, tabletten, geld, bringt, sport, schlucken \n     Lift: abgenommen, achten, burn, gebracht, gegenteil, geld, geldverschwendung \n     Score: kapseln, tabletten, keto, burn, abgenommen, sport, kilo"
   },
   {
     "objectID": "content/08-text_as_data/slides/index.html#kombination-aus-kohärenz-exklusivität",
     "href": "content/08-text_as_data/slides/index.html#kombination-aus-kohärenz-exklusivität",
     "title": "Text as data",
     "section": "Kombination aus Kohärenz & Exklusivität",
-    "text": "Kombination aus Kohärenz & Exklusivität\n\nBestimmung der optimalen Themenanzahl\n\namazon$tpm$model_scores %>%\n  select(k, exclusivity, semantic_coherence) %>%\n  filter(k %in% c(5, 7, 11)) %>%\n  unnest(cols = c(exclusivity, semantic_coherence)) %>%\n  mutate(k = as.factor(k)) %>%\n  ggplot(aes(semantic_coherence, exclusivity, color = k)) +\n  geom_point(size = 2, alpha = 0.7) +\n  labs(x = \"Semantic coherence\",\n       y = \"Exclusivity\",\n       title = \"Comparing exclusivity and semantic coherence\",\n       subtitle = \"Models with fewer topics have higher semantic coherence for more topics, but lower exclusivity\")"
+    "text": "Kombination aus Kohärenz & Exklusivität\nBestimmung der optimalen Themenanzahl\n\namazon$tpm$model_scores %>%\n  select(k, exclusivity, semantic_coherence) %>%\n  filter(k %in% c(5, 7, 11)) %>%\n  unnest(cols = c(exclusivity, semantic_coherence)) %>%\n  mutate(k = as.factor(k)) %>%\n  ggplot(aes(semantic_coherence, exclusivity, color = k)) +\n  geom_point(size = 2, alpha = 0.7) +\n  labs(x = \"Semantic coherence\",\n       y = \"Exclusivity\",\n       title = \"Comparing exclusivity and semantic coherence\",\n       subtitle = \"Models with fewer topics have higher semantic coherence for more topics, but lower exclusivity\")"
   },
   {
     "objectID": "content/08-text_as_data/slides/index.html#prevalence-der-themen",
     "href": "content/08-text_as_data/slides/index.html#prevalence-der-themen",
     "title": "Text as data",
     "section": "Prevalence der Themen",
-    "text": "Prevalence der Themen\n\nInterpretation des Models\n\namazon$stm$preval$tgt  %>% \n  ggplot(aes(topic, gamma, label = terms, fill = topic)) +\n  geom_col(show.legend = FALSE) +\n  geom_text(hjust = 1.1, nudge_y = 0.0005, size = 3, color = \"white\") +\n  coord_flip() +\n  scale_y_continuous(expand = c(0, 0), limits = c(0, 0.35), labels = scales::percent) +\n  theme_bw() +\n  theme(panel.grid.minor = element_blank(),\n        panel.grid.major = element_blank()) +\n  labs(x = NULL, y = expression(gamma)) +\n  scale_fill_jama()"
+    "text": "Prevalence der Themen\nInterpretation des Models\n\namazon$stm$preval$tgt  %>% \n  ggplot(aes(topic, gamma, label = terms, fill = topic)) +\n  geom_col(show.legend = FALSE) +\n  geom_text(hjust = 1.1, nudge_y = 0.0005, size = 3, color = \"white\") +\n  coord_flip() +\n  scale_y_continuous(expand = c(0, 0), limits = c(0, 0.35), labels = scales::percent) +\n  theme_bw() +\n  theme(panel.grid.minor = element_blank(),\n        panel.grid.major = element_blank()) +\n  labs(x = NULL, y = expression(gamma)) +\n  scale_fill_jama()"
   },
   {
     "objectID": "content/08-text_as_data/slides/index.html#welches-k-output",
@@ -2251,21 +2251,21 @@
     "href": "content/08-text_as_data/slides/index.html#vom-korpus-bis-zum-model",
     "title": "Text as data",
     "section": "Vom Korpus bis zum Model",
-    "text": "Vom Korpus bis zum Model\n\nProzess der Textverarbeitung"
+    "text": "Vom Korpus bis zum Model\nProzess der Textverarbeitung"
   },
   {
     "objectID": "content/08-text_as_data/slides/index.html#ein-großes-aber",
     "href": "content/08-text_as_data/slides/index.html#ein-großes-aber",
     "title": "Text as data",
     "section": "Ein großes “… , ABER …”",
-    "text": "Ein großes “… , ABER …”\n\nKritische Anmerkungen zur Sentimentanalyse\n\n\n\namazon$data$de_senti %>% \n  flat_table(rating, val_fct)\n\n       val_fct negativ neutral positiv\nrating                                \n1                  167      40     101\n2                   61      11      37\n3                   47      14      48\n4                   34      10     129\n5                  109      16     912\n\n\n\n\nProbleme der “dictionary method” mit Negationen (“nicht gut”) und “Verstärkern” (“sehr gut”)\nBesser: Codierung bzw. Klassifizierung mit Hilfe von überwachtem maschinellem Lernen"
+    "text": "Ein großes “… , ABER …”\nKritische Anmerkungen zur Sentimentanalyse\n\n\n\namazon$data$de_senti %>% \n  flat_table(rating, val_fct)\n\n       val_fct negativ neutral positiv\nrating                                \n1                  167      40     101\n2                   61      11      37\n3                   47      14      48\n4                   34      10     129\n5                  109      16     912\n\n\n\n\nProbleme der “dictionary method” mit Negationen (“nicht gut”) und “Verstärkern” (“sehr gut”)\nBesser: Codierung bzw. Klassifizierung mit Hilfe von überwachtem maschinellem Lernen"
   },
   {
     "objectID": "content/08-text_as_data/slides/index.html#validieren-validieren-validieren",
     "href": "content/08-text_as_data/slides/index.html#validieren-validieren-validieren",
     "title": "Text as data",
     "section": "Validieren, Validieren, Validieren",
-    "text": "Validieren, Validieren, Validieren\n\nKritisiche Anmerkungen zum Topic Modeling\n\nAutomated text analysis methods can substantially reduce the costs and time of analyzing massive collections of political texts. When applied to any one problem, however, the output of the models may be misleading or simply wrong. […] What should be avoided, then, is the blind use of any method without a validation step (Grimmer & Stewart, 2013, S. 5).\n\n\nKlassifikationsmodell klassifiziert alle Dokumente, ein Diktionär spuckt für jedes Dokument ein Ergebnis aus, ein Topic Model findet immer die vorgegebene Anzahl an Themen.\nOb es sich dabei auch um inhaltlich sinnvolle Ergebnisse handelt, kann und muss durch manuelle Validierungen festgestellt werden.\nModerne Verfahren (z.B. BERT) potentiell besser geeignet für bestimmte Texte"
+    "text": "Validieren, Validieren, Validieren\nKritisiche Anmerkungen zum Topic Modeling\n\nAutomated text analysis methods can substantially reduce the costs and time of analyzing massive collections of political texts. When applied to any one problem, however, the output of the models may be misleading or simply wrong. […] What should be avoided, then, is the blind use of any method without a validation step (Grimmer & Stewart, 2013, S. 5).\n\n\nKlassifikationsmodell klassifiziert alle Dokumente, ein Diktionär spuckt für jedes Dokument ein Ergebnis aus, ein Topic Model findet immer die vorgegebene Anzahl an Themen.\nOb es sich dabei auch um inhaltlich sinnvolle Ergebnisse handelt, kann und muss durch manuelle Validierungen festgestellt werden.\nModerne Verfahren (z.B. BERT) potentiell besser geeignet für bestimmte Texte"
   },
   {
     "objectID": "content/08-text_as_data/slides/index.html",
