@@ -65,6 +65,10 @@ website:
         contents:
           - "content/07-webscraping-tiktok/07-slides.qmd"
           - "content/07-webscraping-tiktok/07-exercise.qmd"
+      - section: "Text as data"
+        contents:
+          - "content/08-text_as_data/08-slides.qmd"
+          - "content/08-text_as_data/08-exercise.qmd"
 
 
 
