@@ -39,7 +39,7 @@ bibliography: references.bib
 ## Seminarplan {.smaller}
 
 | Sitzung                                                | Datum                                                           | Thema                                                                              | Referent\*Innen                                                       |
-|-----------------|-----------------|---------------------|------------------|
+|------------------|------------------|-------------------|------------------|
 | [*1*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*26.10.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*Kick-Off Session*]{.rn rn-type="strike-through" rn-color="#E6002E"}              | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
 | [*2*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*02.11.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*DBD: Einführung und Überblick*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
 | [*3*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*09.11.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*DBD: Datenerhebung*]{.rn rn-type="strike-through" rn-color="#E6002E"}            | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
@@ -62,15 +62,18 @@ bibliography: references.bib
 # Agenda
 
 1.  **A short introduction**
-2.  **Text processing basics**
-3.  **Sentiment analysis**
-4.  **Topic Modeling**
+2.  **Case Study: Amazon Reviews**
+3.  **Kursevluation**
+4.  **Sentiment analysis**
+5.  **Topic Modeling**
 
 # A short introduction {background-color="#E6002E"}
 
+im Fokus: *Text as data*
+
 ## Nicht neu, aber andere Dimension
 
-#### Das Phänomen *Text as data* 
+#### Das Phänomen *Text as data*
 
 ::: columns
 ::: {.column width="50%"}
@@ -86,124 +89,460 @@ bibliography: references.bib
 :::
 :::
 
-## The old ways
+## Neue Quellen, Neue Methoden, neue Möglichkeiten
 
-#### Definition von (Medien-)Inhaltsanalyse
+#### Verschiedene Textgrundlagen als Beispiel
+
+#### ![](graphs/graph_01.svg)
+
+## Ein riesiges Feld
+
+#### Überblick über verschiedene Methoden
+
+![](images/text_as_data_methods.png){fig-align="center"}
+
+# Case study: Amazon Reviews {background-color="#E6002E"}
+
+🕵️ ⭐⭐⭐⭐⭐
+
+[![Binder](https://mybinder.org/badge_logo.svg){alt="Binder"}](https://mybinder.org/v2/gh/chrdrn/dbd_binder/HEAD) [![Google Colab](https://colab.research.google.com/assets/colab-badge.svg){alt="Google Colab"}](https://colab.research.google.com/github/chrdrn/dbd_binder/blob/main/session_07-showcase_tiktok.ipynb) [![RStudio Quarto](https://img.shields.io/badge/RStudio-4285F4?style=for-the-badge&logo=rstudio&logoColor=white){alt="RStudio Quarto"}](https://chrdrn.github.io/digital-behavioral-data/content/07-webscraping-tiktok/07-exercise.html)
+
+::: notes
+But ... why?
+:::
+
+```{r preparation}
+#| echo: false
+# define options
+options(scipen = 999)
+# load packages
+pacman::p_load(
+  rmarkdown, kableExtra,
+  here, fs, # file management
+  sjmisc, magrittr, lubridate, janitor, # data processing
+  sjPlot, ggpubr, ggsci, # visual
+  RCurl, XML, rvest, # scraping
+  quanteda, quanteda.textplots, quanteda.textstats, fastText, # text processing
+  stm, tidytext, glue,
+  tictoc,
+  tidyverse  # last to resolve masking issues
+)
+# load data
+amazon <- readRDS(
+  url("https://github.com/chrdrn/dbd_binder/blob/main/data/08-text_as_data/reviews_tpm.RDS?raw=true"), "rb")
+
+```
+
+## Im Fokus: 💊 Diätpillen
+
+#### Hintergrund
 
 ::: columns
 ::: {.column width="50%"}
-**Inhaltsanalyse**
+-   Reviews von fünf Diätpillen automatisch über custom function gescraped
+-   Datensatz mit knapp über 2000 Reviews
+-   Nächste Schritte:
+    -   Datenaufbereitung
 
--   Untersuchung und Fragestellung **werkimmanet**
+    -   Text-Processing
 
--   **Individuelle Interpretation** einer **einzelnen** medialen **Botschaft**
+    -   Sentiment-Analyse
 
--   **umfassendes und tief gehendes Verständnis** des jeweiligen medialen Objekts zu erreichen
+    -   Topic Modeling
 :::
 
 ::: {.column width="50%"}
-[**Medien**]{.smallcaps}**inhaltsanalyse**
+::: r-stack
+![](images/amazon_review_01.png){fig-align="center"}
 
--   Untersuchung einer **großen Zahl von Botschaften** vergleichbarer Natur **auf
-    Muster** und Tendenzen
-
--   **systematischen Analyse zahlreicher** medialer **Botschaften**
-
--   aus der Vielfalt der Objekte die **wesentlichen Tendenzen herausdestilliert** und so allgemeine oder verallgemeinerbare Aussagen ermöglicht Komplexitätsreduktion)
+![](images/amazon_review_02.png){.fragment fragment-index="1" fig-align="center"}
+:::
 :::
 :::
 
-## Neue Methoden, neue Möglichkeiten
+::: notes
+-   Ausführliche Schritte im Google Colab & Showcase
 
-#### dadsfasdf
+-   Hier nur Auszüge
+:::
 
-## Das Korpus im Fokus
+## Quick scraping step-by-step
 
-#### Korpuslinguistische Grundlagen
-
-# Text processing basics
-
-# Beispielhafte Auswertungen {background-color="#E6002E"}
-
-Im Fokus: {{< fa brands tiktok >}} Hashtag `#statistics`
-
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/chrdrn/dbd_binder/HEAD) [![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chrdrn/dbd_binder/blob/main/session_07-showcase_tiktok.ipynb) [![RStudio Quarto](https://img.shields.io/badge/RStudio-4285F4?style=for-the-badge&logo=rstudio&logoColor=white)](https://chrdrn.github.io/digital-behavioral-data/content/07-webscraping-tiktok/07-exercise.html)
+#### 1️⃣ Custom function für Export der html-Elemente
 
 ```{r}
-#| echo: false
-
-# Load packages
-library(knitr)
-library(kableExtra)
-library(tidyverse) # Preparation of the data
-library(quanteda) # Text mining
-library(quanteda.textstats) # Text statistics
-library(quanteda.textplots) # Visualisation of text data
-library(here)
-library(sjmisc)
-library(parameters)
-library(sjPlot)
-library(lubridate)
-library(ggthemes)
-library(ggpubr)
-
-# get data from github
-statistics <- read_csv(
-  here("content/07-webscraping-tiktok/data/tiktok-search-statistics.csv"), 
-  col_types = cols(author_followers = col_number()))
-
+#| eval: false
+scrape_amazon <- function(page_num, review_url) {
+  url_reviews <- paste0(review_url, "&pageNumber=", page_num, "&sortBy=recent")
+  doc <- read_html(url_reviews)
+  map_dfr(doc %>% html_elements("[id^='customer_review']"), ~ data.frame(
+    review_title = .x %>% html_element(".review-title") %>% html_text2(),
+    review_text = .x %>% html_element(".review-text-content") %>% html_text2(),
+    review_star = .x %>% html_element(".review-rating") %>% html_text2(),
+    date = .x %>% html_element(".review-date") %>% html_text2() %>% gsub(".*vom ", "", .),
+    author = .x %>% html_element(".a-profile-name") %>% html_text2(),
+    page = page_num
+  )) %>%
+    as_tibble %>%
+    return()
+}
 ```
 
-## Ein kurzer Überblick
+## Quick scraping step-by-step
 
-#### Struktur des {{< fa brands tiktok >}} TikTok-Datensatzes
+#### 2️⃣ Definition von Amazon Review URLs
 
 ```{r}
-statistics %>% glimpse()
+#| eval: false
+url <- list(
+  p01 = "https://www.amazon.de/LINEAVI-Eiwei%C3%9F-Shake-Kombination-Molkeneiwei%C3%9F-laktosefrei/product-reviews/B018IB02AU/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews",
+  p02 = "https://www.amazon.de/Detoxkuren%E2%80%A2-Entw%C3%A4sserung-Entschlackung-Stoffwechsel-entschlacken/product-reviews/B072QW5ZN1/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews",
+  p03 = "https://www.amazon.de/Saint-Nutrition%C2%AE-KETO-BURN-Appetitz%C3%BCgler/product-reviews/B08B67V8G5/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews",
+  p04 = "https://www.amazon.de/Yokebe-vegetarisch-Mahlzeitersatz-Gewichtsabnahme-hochwertigen/product-reviews/B08GYZ8LRB/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews",
+  p05 = "https://www.amazon.de/Vihado-Liquid-chlorophyll-drops-alfalfa/product-reviews/B093XNC8QH/ref=cm_cr_arp_d_paging_btm_next_2?ie=UTF8&reviewerType=all_reviews"
+)
 ```
 
-## Erstellung eines Korpus
+## Quick scraping step-by-step
 
-#### Textverarbeitung mit [`quanteda`](http://quanteda.io/) [@benoit2018]
+#### 3️⃣ Scrape with for-loops
 
 ```{r}
-crp <- corpus(statistics, 
-              docid_field = "id",
-              text_field = "hashtags")
-crp
+#| eval: false
+amazon <- list()
+# p01 
+for (i in 1:79) {
+  df <- scrape_amazon(page_num = i, review_url = url$p01)
+  amazon$raw$p01[[i]] <- df
+}
 ```
 
-## Tokenisierung
-
-#### Textverarbeitung mit [`quanteda`](http://quanteda.io/) [@benoit2018]
+<br>
 
 ```{r}
-tkn <- crp %>% 
-  tokens(remove_punct = TRUE,
-         remove_symbols = TRUE,
-         remove_url = TRUE,
-         remove_separators = TRUE)
-tkn
+#| eval: false
+product <- names(url)
+# bind rows for each product
+for (i in product) {
+  amazon$data$raw[[i]] <- amazon$raw[[i]] %>% 
+    bind_rows() %>% 
+    rownames_to_column("id") %>% 
+    mutate(across(id, as.numeric))
+}
+# bind rows of all products
+amazon$data$full <- amazon$data$raw %>% 
+  bind_rows(.id = "src")
 ```
 
-## Erstellung einer Document-Feature-Matrix \[DFM\]
+## Quick scraping step-by-step
 
-#### Textverarbeitung mit [`quanteda`](http://quanteda.io/) [@benoit2018]
+#### 4️⃣ Endresultat
 
 ```{r}
-dfm <- tkn %>%  dfm()
-dfm
+amazon$data$full %>% 
+  glimpse()
 ```
 
-## Welche Hashtags werden genutzt?
+# Explorative Datenanalyse {background-color="#E6002E"}
 
-#### Textvisualisierung mit [`quanteda.textplots`](https://github.com/quanteda/quanteda.textplots)
+Im Fokus: Amazon Reviews
+
+## Anzahl der Reviews nach Produkt
+
+#### Kennenlernen des Datensatzes
 
 ```{r}
-library(quanteda.textplots)
-dfm %>% textplot_wordcloud(
-  min_size = 1, max_size = 8, max_words = 50,
-  rotation = 0)
+amazon$data$de %>% 
+  frq(src)
+```
+
+## Anzahl der Reviews nach Produkt im Zeitverlauf
+
+#### Kennenlernen des Datensatzes
+
+```{r}
+amazon$data$de %>% 
+  ggplot(aes(year, fill = src)) +
+  geom_bar() +
+  scale_fill_locuszoom() +
+  theme_pubr()
+```
+
+## Bewertungen der Produkte: Absolute Zahlen
+
+#### Kennenlernen des Datensatzes
+
+```{r}
+amazon$data$de %>% 
+  mutate(across(rating, as.factor)) %>% 
+  ggplot(aes(src, fill = rating)) + 
+  geom_bar() +
+  scale_fill_brewer(palette = "RdYlGn") +
+  theme_pubr()
+```
+
+## Bewertungen der Produkte: Kummulierte Anteile
+
+#### Kennenlernen des Datensatzes
+
+```{r}
+amazon$data$de %>% 
+  mutate(across(rating, as.factor)) %>% 
+  ggplot(aes(src, fill = rating)) + 
+  geom_bar(position = "fill") +
+  scale_fill_brewer(palette = "RdYlGn") +
+  theme_pubr()
+```
+
+# ☕ Kursevaluation {background-color="#04316a"}
+
+Bitte nehmen Sie über den QR Code oder folgenden Link an der Evaluation teil:
+
+::: columns
+::: {.column width="50%"}
+-   <https://www.eva.fau.de>
+
+-   Losung: **QNWVC**
+:::
+
+::: {.column width="50%"}
+![](images/paste-52FCC08F.png){width="500"}
+:::
+:::
+
+# Text processing {background-color="#E6002E"}
+
+Kurze Erklärung der Grundbegriffe *Korpus, Token & DFM*
+
+## *Vom* Korpus zum Model
+
+#### Prozess der Textverarbeitung
+
+![](https://miro.medium.com/max/1400/1*DocMTV7nTAomKxcu3m-tyw.webp){fig-align="center"}
+
+## Sätze -- Token -- Lemma -- POS
+
+#### Vorverarbeitungsschritte für Textanalyse
+
+::: callout-note
+## 1. Satzerkennung
+
+Was gibt's in New York zu sehen?
+:::
+
+::: callout-note
+## 2. Tokenisierung
+
+was; gibt; \`s; in; new; york; zu; sehen; ?
+:::
+
+::: callout-important
+## 3. Lemmatisierung
+
+was; geben; \`s; in; new; york; zu; sehen; ?
+:::
+
+::: callout-tip
+## 4. Part-Of-Speech (POS) Tagging
+
+\>Was`/PWS` \>gibt`/VVFIN` \>'s`/PPER` \>in`/APPR` \>New`/NE` \>York`/NE` \>zu`/PTKZU` \>sehen`/VVINF`
+:::
+
+::: notes
+Satzerkennung: *Auflösung der Satzstruktur; Aber: Probleme mit Datumsangaben, Uhrzeit, Abkürzungen, URLS*
+
+Tokenisierung: *Zerteilung in kleinste Einheiten, Abtrennung von Satzzeichen; Fragen: Umgang mit Zeichen, Symbolen, Zahlen, N-Gramme ...*
+
+Definition Lemmatisierung: *Grundform eines Worters, als diejenige Form, unter dem an einen Begriff in einem Nachschlagewerk findet / Rückführung auf die „Vollfrom"*
+
+Definition POS: *Zuordnung von Wörtern und Satzzeichen eines Textes zu Wortarten*
+:::
+
+## Von BOW zu DFM
+
+#### Bag-of-words (BOW) und Document-Feature-Matrix (DFM)
+
+#### ![](images/bow_dfm_example.png)
+
+::: notes
+*Bag-of-Words*-Modell: es zählt lediglich die Worthäufigkeit je Dokument, die syntaktischen und grammatikalischen Zusammenhänge zwischen einzelnen Wörtern werden ignoriert.
+:::
+
+# Sentiment Analyse
+
+👎 & 👍
+
+## The good, the bad and the ugly
+
+#### Grundidee & Ziele und der Sentimentanalyse
+
+-   Auf Basis von speziellen Wortlisten bzw. Lexika werden bestimmte Begriffe ausgezählt, denen zuvor entweder ein numerischer Wert (Score) oder eine Kategorien (*positiv* oder *negativ)* zugeordnet wurden.
+
+-   Ziel ist die Bestimmung der Polarität (positive/negative Emotion) eines Textes
+
+-   Aber: Wie gut ist die Klassifizierung?
+
+## Grundlagen für die Analyse
+
+#### Hintergrundinformationen zum Processing & Scoring
+
+-   Die Verarbeitung und Analyse der Daten erfolgt mit dem`quanteda` bzw. `quanteda.textstat` Paket und basiert nur auf dem Korpus der deutschen Reviews
+
+-   Als Sentiment-Grundlage wird SentiWS genutzt:
+
+    > Der SentimentWortschatz, oder kurz *SentiWS*, ist eine öffentlich verfügbare deutschsprachige Ressource für die Sentiment Analyse, Opinion Mining und ähnliche Zwecke. Dabei werden für enthaltene Wörter die positive und negative Polarität im Intervall \[-1; 1\] angegeben, sowie deren Wortart und (falls anwendbar) Flexionsvarianten. Die aktuelle Version des SentiWS enthält ungefähr 1.650 positive und 1.800 negative Grundformen, so dass, inklusive der verschiedenen Flexionsformen, insgesamt etwa 16.000 positive und 18.000 negative Wortformen enthalten sind. SentiWS enthält nicht nur Adjektive und Adverbien, sondern auch Nomen und Verben die Träger von Sentiment sind
+
+## Erste Ergebnisse
+
+#### Bewertung der verschiedenen Diätpillen
+
+```{r}
+#| output-location: slide
+amazon$data$de_senti %>% 
+  ggplot(aes(x = src, y = polarity)) + 
+  ggdist::stat_halfeye(
+    aes(fill = src),
+    adjust = .5, 
+    width = .6, 
+    .width = 0, 
+    justification = -.3, 
+    point_colour = NA) + 
+  geom_boxplot(
+    aes(color = src),
+    width = .25, 
+    outlier.shape = NA
+  ) +
+  geom_point(
+    aes(color = src),
+    size = 1.3,
+    alpha = .3,
+    position = position_jitter(
+      seed = 1, width = .1
+    )
+  ) + 
+  coord_cartesian(xlim = c(1.2, NA), clip = "off") +
+  scale_color_startrek() +
+  scale_fill_startrek() +
+  theme_pubr()
+```
+
+# Topic Modeling {background-color="#E6002E"}
+
+Grundidee und beispielhafter Ablauf
+
+## Grundidee
+
+#### Quick Introduction to Topic Modeling
+
+-   Verfahren des *unüberwachten maschinellen Lernens*, das sich daher insbesondere zur Exploration und Deskription großer Textmengen eignet
+
+-   Themen werden strikt auf Basis von Worthäufigkeiten in den einzelnen Dokumenten vermeintlich objektiv berechnet, ganz ohne subjektive Einschätzungen und damit einhergehenden etwaigen Verzerrungen
+
+## Annahmen {.smaller}
+
+#### Quick Introduction to Topic Modeling
+
+-   Ein Textkorpus besteht aus **`D`** Dokumenten und **`V`** Wörtern bzw. Terms
+
+-   Es wird nun angenommen, dass latente Themen **`K`** zu unterschiedlichen Anteilen in den Dokumenten `D` vorkommen und alle Wörter **`V`** mit unterschiedlicher Wahrscheinlichkeit zu den **`K`** Themen gehören.
+
+-   Ziel der Verfahren ist die Berechnung zweier Matrizen **`D×K`** und **`V×K`**.
+
+    -   Die erste Matrix **`D×K`** enthält für jedes einzelne Dokument **`d`** und jedes einzelne Thema **`k`** die Wahrscheinlichkeit, dass das Thema in diesem Dokument vorkommt.
+
+    -   Analog enthält **`V×K`** für jedes einzelne Wort **`w`** und jedes einzelne Thema **`k`** die Wahrscheinlichkeit, dass das jeweilige Wort in diesem Thema vorkommt.
+
+-   Mit Hilfe dieser Matrizen können die Themen dann beschrieben und interpretiert werden.
+
+    -    So können aus **`V×K`** die wichtigsten Wörter je Thema (d.h., die Wörter mit der höchsten konditionalen Wahrscheinlichkeit, zu einem bestimmten Thema kk zu gehören) abgelesen werden;
+
+    -   mittels **`D×K`** können Themen Dokumenten und umgekehrt zugeordnet werden, z. B. in dem für jedes Dokument dd das Thema kk mit der höchsten konditionalen Wahrscheinlichkeit identifiziert wird.
+
+::: notes
+-   Zur Berechnung dieser Matrizen wird sozusagen der umgekehrte Weg gegangen und die Erzeugung der Dokumente als statistischer Prozess beschrieben: ein Dokument wird demnach erzeugt, in dem zufällig Themen aus der zum Dokument zugehörigen Themenverteilung und Wörter aus der den Themen zugehörigen Wortverteilungen gezogen werden. Hierzu wird das Topic Model zunächst mit zufälligen Themen- und Wortverteilungen initialisiert und dann in einem iterativen, algorithmischen Verfahren nach und nach adaptiert, bis es möglichst gut zu den Daten (dem Textkorpus) passt (d.h. die gemeinsame Likelihood der Themen- und Wortverteilungen maximiert wird).^[53](https://bookdown.org/joone/ComputationalMethods/topicmodeling.html#fn53)^
+:::
+
+## Structual Topic Modeling im Fokus
+
+#### Idee und Hintergrund von STM
+
+![](images/stm.png){fig-align="center"}
+
+::: notes
+𝛴 = Topic covariance
+
+x = Prevalende Metadata
+
+gamma = Metadata weights
+:::
+
+## Welches K?
+
+#### Bestimmung der optimalen Themenanzahl
+
+```{r}
+#| output-location: slide
+amazon$tpm$model_scores %>% 
+  transmute(
+    k,
+    `Lower bound` = lbound,
+    Residuals = map_dbl(residual, "dispersion"),
+    `Semantic coherence` = map_dbl(semantic_coherence, mean),
+    `Held-out likelihood` = map_dbl(eval_heldout, "expected.heldout")) %>%   
+  pivot_longer(-k, names_to = "Metric", values_to = "Value") %>% 
+  ggplot(
+    aes(k, Value, color = Metric)) +
+  geom_line(size = 1.5, alpha = 0.7, show.legend = FALSE) +
+  facet_wrap(~Metric, scales = "free_y") +
+  labs(x = "K (number of topics)",
+       y = NULL,
+       title = "Model diagnostics by number of topics")
+```
+
+## Kombination aus Kohärenz & Exklusivität
+
+#### Bestimmung der optimalen Themenanzahl
+
+```{r}
+#| output-location: slide
+amazon$tpm$model_scores %>%
+  select(k, exclusivity, semantic_coherence) %>%
+  filter(k %in% c(5, 7, 11)) %>%
+  unnest(cols = c(exclusivity, semantic_coherence)) %>%
+  mutate(k = as.factor(k)) %>%
+  ggplot(aes(semantic_coherence, exclusivity, color = k)) +
+  geom_point(size = 2, alpha = 0.7) +
+  labs(x = "Semantic coherence",
+       y = "Exclusivity",
+       title = "Comparing exclusivity and semantic coherence",
+       subtitle = "Models with fewer topics have higher semantic coherence for more topics, but lower exclusivity") 
+```
+
+## Top Features der Themen
+
+#### Interpretation des Models
+
+```{r}
+amazon$stm$mdl %>% labelTopics()
+```
+
+## Prevalence der Themen
+
+#### Interpretation des Models
+
+```{r}
+#| output-location: slide
+amazon$stm$preval$tgt  %>% 
+  ggplot(aes(topic, gamma, label = terms, fill = topic)) +
+  geom_col(show.legend = FALSE) +
+  geom_text(hjust = 1.1, nudge_y = 0.0005, size = 3, color = "white") +
+  coord_flip() +
+  scale_y_continuous(expand = c(0, 0), limits = c(0, 0.35), labels = scales::percent) +
+  theme_bw() +
+  theme(panel.grid.minor = element_blank(),
+        panel.grid.major = element_blank()) +
+  labs(x = NULL, y = expression(gamma)) +
+  scale_fill_jama()
 ```
 
 # Time for questions {background-color="#E6002E" background-image="../../00-images/background_questions.svg"}

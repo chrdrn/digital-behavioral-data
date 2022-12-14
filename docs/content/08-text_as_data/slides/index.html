@@ -9,9 +9,7 @@
 <link href="../../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/quarto-contrib/roughnotation-0.5.1/rough-notation.iife.js"></script>
-<script src="../../../site_libs/quarto-contrib/roughnotation-init-1.0.0/rough.js"></script>
-<link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
+<script src="../../../site_libs/quarto-contrib/roughnotation-init-1.0.0/rough.js"></script><meta charset="utf-8">
   <meta name="generator" content="quarto-1.2.269">
 
   <meta name="author" content="Christoph Adrian">
@@ -554,7 +552,8 @@
 <h1>Agenda</h1>
 <ol type="1">
 <li><strong>A short introduction</strong></li>
-<li><strong>Text processing basics</strong></li>
+<li><strong>Case Study: Amazon Reviews</strong></li>
+<li><strong>Kursevluation</strong></li>
 <li><strong>Sentiment analysis</strong></li>
 <li><strong>Topic Modeling</strong></li>
 </ol>
@@ -563,7 +562,7 @@
 <section>
 <section id="a-short-introduction" class="title-slide slide level1 center" data-background-color="#E6002E">
 <h1>A short introduction</h1>
-
+<p>im Fokus: <em>Text as data</em></p>
 </section>
 <section id="nicht-neu-aber-andere-dimension" class="slide level2">
 <h2>Nicht neu, aber andere Dimension</h2>
@@ -584,188 +583,576 @@
 </div>
 </div>
 </section>
-<section id="texts-texts-everywhere" class="slide level2">
-<h2>Texts, texts everywhere</h2>
-<h4 id="definition-von-medien-inhaltsanalyse">Definition von (Medien-)Inhaltsanalyse</h4>
+<section id="neue-quellen-neue-methoden-neue-möglichkeiten" class="slide level2">
+<h2>Neue Quellen, Neue Methoden, neue Möglichkeiten</h2>
+<h4 id="verschiedene-textgrundlagen-als-beispiel">Verschiedene Textgrundlagen als Beispiel</h4>
+<h4 id="section"><img data-src="graphs/graph_01.svg"></h4>
+</section>
+<section id="ein-riesiges-feld" class="slide level2">
+<h2>Ein riesiges Feld</h2>
+<h4 id="überblick-über-verschiedene-methoden">Überblick über verschiedene Methoden</h4>
+
+<img data-src="images/text_as_data_methods.png" class="r-stretch quarto-figure-center"></section></section>
+<section>
+<section id="case-study-amazon-reviews" class="title-slide slide level1 center" data-background-color="#E6002E">
+<h1>Case study: Amazon Reviews</h1>
+<p>🕵️ ⭐⭐⭐⭐⭐</p>
+<p><a href="https://mybinder.org/v2/gh/chrdrn/dbd_binder/HEAD"><img data-src="https://mybinder.org/badge_logo.svg" alt="Binder"></a> <a href="https://colab.research.google.com/github/chrdrn/dbd_binder/blob/main/session_07-showcase_tiktok.ipynb"><img data-src="https://colab.research.google.com/assets/colab-badge.svg" alt="Google Colab"></a> <a href="https://chrdrn.github.io/digital-behavioral-data/content/07-webscraping-tiktok/07-exercise.html"><img data-src="https://img.shields.io/badge/RStudio-4285F4?style=for-the-badge&amp;logo=rstudio&amp;logoColor=white.png" alt="RStudio Quarto"></a></p>
+<aside class="notes">
+<p>But … why?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<div class="cell">
+
+</div>
+</section>
+<section id="im-fokus-diätpillen" class="slide level2">
+<h2>Im Fokus: 💊 Diätpillen</h2>
+<h4 id="hintergrund">Hintergrund</h4>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><strong>Inhaltsanalyse</strong></p>
 <ul>
-<li><p>Untersuchung und Fragestellung <strong>werkimmanet</strong></p></li>
-<li><p><strong>Individuelle Interpretation</strong> einer <strong>einzelnen</strong> medialen <strong>Botschaft</strong></p></li>
-<li><p><strong>umfassendes und tief gehendes Verständnis</strong> des jeweiligen medialen Objekts zu erreichen</p></li>
+<li>Reviews von fünf Diätpillen automatisch über custom function gescraped</li>
+<li>Datensatz mit knapp über 2000 Reviews</li>
+<li>Nächste Schritte:
+<ul>
+<li><p>Datenaufbereitung</p></li>
+<li><p>Text-Processing</p></li>
+<li><p>Sentiment-Analyse</p></li>
+<li><p>Topic Modeling</p></li>
+</ul></li>
 </ul>
 </div><div class="column" style="width:50%;">
-<p><span class="smallcaps"><strong>Medien</strong></span><strong>inhaltsanalyse</strong></p>
-<ul>
-<li><p>Untersuchung einer <strong>großen Zahl von Botschaften</strong> vergleichbarer Natur <strong>auf Muster</strong> und Tendenzen</p></li>
-<li><p><strong>systematischen Analyse zahlreicher</strong> medialer <strong>Botschaften</strong></p></li>
-<li><p>aus der Vielfalt der Objekte die <strong>wesentlichen Tendenzen herausdestilliert</strong> und so allgemeine oder verallgemeinerbare Aussagen ermöglicht Komplexitätsreduktion)</p></li>
-</ul>
+<div class="r-stack">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/amazon_review_01.png"></p>
+</figure>
 </div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/amazon_review_02.png" class="fragment" data-fragment-index="1"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+<ul>
+<li><p>Ausführliche Schritte im Google Colab &amp; Showcase</p></li>
+<li><p>Hier nur Auszüge</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="quick-scraping-step-by-step" class="slide level2">
+<h2>Quick scraping step-by-step</h2>
+<h4 id="custom-function-für-export-der-html-elemente">1️⃣ Custom function für Export der html-Elemente</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>scrape_amazon <span class="ot">&lt;-</span> <span class="cf">function</span>(page_num, review_url) {</span>
+<span id="cb1-2"><a href="#cb1-2"></a>  url_reviews <span class="ot">&lt;-</span> <span class="fu">paste0</span>(review_url, <span class="st">"&amp;pageNumber="</span>, page_num, <span class="st">"&amp;sortBy=recent"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3"></a>  doc <span class="ot">&lt;-</span> <span class="fu">read_html</span>(url_reviews)</span>
+<span id="cb1-4"><a href="#cb1-4"></a>  <span class="fu">map_dfr</span>(doc <span class="sc">%&gt;%</span> <span class="fu">html_elements</span>(<span class="st">"[id^='customer_review']"</span>), <span class="sc">~</span> <span class="fu">data.frame</span>(</span>
+<span id="cb1-5"><a href="#cb1-5"></a>    <span class="at">review_title =</span> .x <span class="sc">%&gt;%</span> <span class="fu">html_element</span>(<span class="st">".review-title"</span>) <span class="sc">%&gt;%</span> <span class="fu">html_text2</span>(),</span>
+<span id="cb1-6"><a href="#cb1-6"></a>    <span class="at">review_text =</span> .x <span class="sc">%&gt;%</span> <span class="fu">html_element</span>(<span class="st">".review-text-content"</span>) <span class="sc">%&gt;%</span> <span class="fu">html_text2</span>(),</span>
+<span id="cb1-7"><a href="#cb1-7"></a>    <span class="at">review_star =</span> .x <span class="sc">%&gt;%</span> <span class="fu">html_element</span>(<span class="st">".review-rating"</span>) <span class="sc">%&gt;%</span> <span class="fu">html_text2</span>(),</span>
+<span id="cb1-8"><a href="#cb1-8"></a>    <span class="at">date =</span> .x <span class="sc">%&gt;%</span> <span class="fu">html_element</span>(<span class="st">".review-date"</span>) <span class="sc">%&gt;%</span> <span class="fu">html_text2</span>() <span class="sc">%&gt;%</span> <span class="fu">gsub</span>(<span class="st">".*vom "</span>, <span class="st">""</span>, .),</span>
+<span id="cb1-9"><a href="#cb1-9"></a>    <span class="at">author =</span> .x <span class="sc">%&gt;%</span> <span class="fu">html_element</span>(<span class="st">".a-profile-name"</span>) <span class="sc">%&gt;%</span> <span class="fu">html_text2</span>(),</span>
+<span id="cb1-10"><a href="#cb1-10"></a>    <span class="at">page =</span> page_num</span>
+<span id="cb1-11"><a href="#cb1-11"></a>  )) <span class="sc">%&gt;%</span></span>
+<span id="cb1-12"><a href="#cb1-12"></a>    as_tibble <span class="sc">%&gt;%</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a>    <span class="fu">return</span>()</span>
+<span id="cb1-14"><a href="#cb1-14"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="section" class="slide level2">
-<h2></h2>
+<section id="quick-scraping-step-by-step-1" class="slide level2">
+<h2>Quick scraping step-by-step</h2>
+<h4 id="definition-von-amazon-review-urls">2️⃣ Definition von Amazon Review URLs</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>url <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb2-2"><a href="#cb2-2"></a>  <span class="at">p01 =</span> <span class="st">"https://www.amazon.de/LINEAVI-Eiwei%C3%9F-Shake-Kombination-Molkeneiwei%C3%9F-laktosefrei/product-reviews/B018IB02AU/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&amp;reviewerType=all_reviews"</span>,</span>
+<span id="cb2-3"><a href="#cb2-3"></a>  <span class="at">p02 =</span> <span class="st">"https://www.amazon.de/Detoxkuren%E2%80%A2-Entw%C3%A4sserung-Entschlackung-Stoffwechsel-entschlacken/product-reviews/B072QW5ZN1/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&amp;reviewerType=all_reviews"</span>,</span>
+<span id="cb2-4"><a href="#cb2-4"></a>  <span class="at">p03 =</span> <span class="st">"https://www.amazon.de/Saint-Nutrition%C2%AE-KETO-BURN-Appetitz%C3%BCgler/product-reviews/B08B67V8G5/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&amp;reviewerType=all_reviews"</span>,</span>
+<span id="cb2-5"><a href="#cb2-5"></a>  <span class="at">p04 =</span> <span class="st">"https://www.amazon.de/Yokebe-vegetarisch-Mahlzeitersatz-Gewichtsabnahme-hochwertigen/product-reviews/B08GYZ8LRB/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&amp;reviewerType=all_reviews"</span>,</span>
+<span id="cb2-6"><a href="#cb2-6"></a>  <span class="at">p05 =</span> <span class="st">"https://www.amazon.de/Vihado-Liquid-chlorophyll-drops-alfalfa/product-reviews/B093XNC8QH/ref=cm_cr_arp_d_paging_btm_next_2?ie=UTF8&amp;reviewerType=all_reviews"</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="quick-scraping-step-by-step-2" class="slide level2">
+<h2>Quick scraping step-by-step</h2>
+<h4 id="scrape-with-for-loops">3️⃣ Scrape with for-loops</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>amazon <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="co"># p01 </span></span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">79</span>) {</span>
+<span id="cb3-4"><a href="#cb3-4"></a>  df <span class="ot">&lt;-</span> <span class="fu">scrape_amazon</span>(<span class="at">page_num =</span> i, <span class="at">review_url =</span> url<span class="sc">$</span>p01)</span>
+<span id="cb3-5"><a href="#cb3-5"></a>  amazon<span class="sc">$</span>raw<span class="sc">$</span>p01[[i]] <span class="ot">&lt;-</span> df</span>
+<span id="cb3-6"><a href="#cb3-6"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>product <span class="ot">&lt;-</span> <span class="fu">names</span>(url)</span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="co"># bind rows for each product</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="cf">for</span> (i <span class="cf">in</span> product) {</span>
+<span id="cb4-4"><a href="#cb4-4"></a>  amazon<span class="sc">$</span>data<span class="sc">$</span>raw[[i]] <span class="ot">&lt;-</span> amazon<span class="sc">$</span>raw[[i]] <span class="sc">%&gt;%</span> </span>
+<span id="cb4-5"><a href="#cb4-5"></a>    <span class="fu">bind_rows</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb4-6"><a href="#cb4-6"></a>    <span class="fu">rownames_to_column</span>(<span class="st">"id"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-7"><a href="#cb4-7"></a>    <span class="fu">mutate</span>(<span class="fu">across</span>(id, as.numeric))</span>
+<span id="cb4-8"><a href="#cb4-8"></a>}</span>
+<span id="cb4-9"><a href="#cb4-9"></a><span class="co"># bind rows of all products</span></span>
+<span id="cb4-10"><a href="#cb4-10"></a>amazon<span class="sc">$</span>data<span class="sc">$</span>full <span class="ot">&lt;-</span> amazon<span class="sc">$</span>data<span class="sc">$</span>raw <span class="sc">%&gt;%</span> </span>
+<span id="cb4-11"><a href="#cb4-11"></a>  <span class="fu">bind_rows</span>(<span class="at">.id =</span> <span class="st">"src"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="quick-scraping-step-by-step-3" class="slide level2">
+<h2>Quick scraping step-by-step</h2>
+<h4 id="endresultat">4️⃣ Endresultat</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>amazon<span class="sc">$</span>data<span class="sc">$</span>full <span class="sc">%&gt;%</span> </span>
+<span id="cb5-2"><a href="#cb5-2"></a>  <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 2,142
+Columns: 8
+$ src          &lt;chr&gt; "p01", "p01", "p01", "p01", "p01", "p01", "p01", "p01", "…
+$ id           &lt;dbl&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17…
+$ review_title &lt;chr&gt; "Schmeckt wie ein angenehmer Milchshake", "Nicht zufriede…
+$ review_text  &lt;chr&gt; "Wie ich damit abgenommen haben kann ich noch nicht sagen…
+$ review_star  &lt;chr&gt; "4,0 von 5 Sternen", "2,0 von 5 Sternen", "5,0 von 5 Ster…
+$ date         &lt;chr&gt; "Kundenrezension aus Deutschland 🇩🇪 am 26. November 2022"…
+$ author       &lt;chr&gt; "Rayan Wehbi", "Motte", "V.K", "niw", "Murphy", "Julia", …
+$ page         &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, …</code></pre>
+</div>
+</div>
 </section></section>
 <section>
-<section id="beispielhafte-auswertungen" class="title-slide slide level1 center" data-background-color="#E6002E">
-<h1>Beispielhafte Auswertungen</h1>
-<p>Im Fokus: <i class="fa-brands fa-tiktok" aria-label="tiktok"></i> Hashtag <code>#statistics</code></p>
-<p><a href="https://mybinder.org/v2/gh/chrdrn/dbd_binder/HEAD"><img data-src="https://mybinder.org/badge_logo.svg" alt="Binder"></a> <a href="https://colab.research.google.com/github/chrdrn/dbd_binder/blob/main/session_07-showcase_tiktok.ipynb"><img data-src="https://colab.research.google.com/assets/colab-badge.svg" alt="Google Colab"></a> <a href="https://chrdrn.github.io/digital-behavioral-data/content/07-webscraping-tiktok/07-exercise.html"><img data-src="https://img.shields.io/badge/RStudio-4285F4?style=for-the-badge&amp;logo=rstudio&amp;logoColor=white.png" alt="RStudio Quarto"></a></p>
-<div class="cell">
-
-</div>
+<section id="explorative-datenanalyse" class="title-slide slide level1 center" data-background-color="#E6002E">
+<h1>Explorative Datenanalyse</h1>
+<p>Im Fokus: Amazon Reviews</p>
 </section>
-<section id="ein-kurzer-überblick" class="slide level2">
-<h2>Ein kurzer Überblick</h2>
-<h4 id="struktur-des-fa-brands-tiktok-tiktok-datensatzes">Struktur des <i class="fa-brands fa-tiktok" aria-label="tiktok"></i> TikTok-Datensatzes</h4>
+<section id="anzahl-der-reviews-nach-produkt" class="slide level2">
+<h2>Anzahl der Reviews nach Produkt</h2>
+<h4 id="kennenlernen-des-datensatzes">Kennenlernen des Datensatzes</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>statistics <span class="sc">%&gt;%</span> <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>amazon<span class="sc">$</span>data<span class="sc">$</span>de <span class="sc">%&gt;%</span> </span>
+<span id="cb7-2"><a href="#cb7-2"></a>  <span class="fu">frq</span>(src)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Rows: 941
-Columns: 24
-$ id               &lt;dbl&gt; 6.813800e+18, 6.832737e+18, 6.845368e+18, 6.927122e+1…
-$ thread_id        &lt;dbl&gt; 6.813800e+18, 6.832737e+18, 6.845368e+18, 6.927122e+1…
-$ author           &lt;chr&gt; "onlyjayus", "onlyjayus", "ryguy238", "mason.whaley",…
-$ author_full      &lt;chr&gt; "actuallyitsbella", "actuallyitsbella", "ryan p", "Ma…
-$ author_id        &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N…
-$ author_followers &lt;dbl&gt; 18500000, 18500000, 28500, 151500, 15700, 319500, 693…
-$ body             &lt;chr&gt; "You’re sexy. The math proves it #fyp #love #dating #…
-$ timestamp        &lt;dttm&gt; 2020-04-09 19:44:39, 2020-05-30 20:28:05, 2020-07-03…
-$ unix_timestamp   &lt;dbl&gt; 1586461479, 1590870485, 1593811442, 1612846242, 16420…
-$ is_duet          &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALS…
-$ music_name       &lt;chr&gt; "SexyBack", "original sound", "original sound", "orig…
-$ music_id         &lt;dbl&gt; 6.696418e+18, 6.832737e+18, 6.845368e+18, 6.927122e+1…
-$ music_url        &lt;chr&gt; "https://sf16-ies-music-va.tiktokcdn.com/obj/tos-usea…
-$ video_url        &lt;chr&gt; "https://v16-webapp.tiktok.com/eac3d9cb4566d4ac017e3f…
-$ tiktok_url       &lt;chr&gt; "https://tiktok.com/@onlyjayus/video/6813800162259897…
-$ thumbnail_url    &lt;chr&gt; "https://p16-sign-va.tiktokcdn.com/tos-maliva-p-0068/…
-$ likes            &lt;dbl&gt; 1200000, 910000, 901000, 794300, 740300, 701400, 6490…
-$ comments         &lt;dbl&gt; 7746, 11900, 3020, 36900, 8179, 8150, 34800, 7592, 28…
-$ shares           &lt;dbl&gt; 23000, 16600, 1755, 64000, 6397, 1685, 93800, 51300, …
-$ plays            &lt;dbl&gt; 6700000, 3300000, 5100000, 3800000, 2900000, 2500000,…
-$ hashtags         &lt;chr&gt; "fyp,love,dating,romance,relationship,crush,people,po…
-$ stickers         &lt;chr&gt; NA, NA, NA, "that one guy", "Ok…but I guess Timmy is …
-$ effects          &lt;chr&gt; NA, NA, NA, NA, "Greenscreen", NA, "Disco", NA, "TapT…
-$ warning          &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N…</code></pre>
+<pre><code>src &lt;categorical&gt; 
+# total N=1736 valid N=1736 mean=2.88 sd=1.46
+
+Value |   N | Raw % | Valid % | Cum. %
+--------------------------------------
+p01   | 438 | 25.23 |   25.23 |  25.23
+p02   | 256 | 14.75 |   14.75 |  39.98
+p03   | 509 | 29.32 |   29.32 |  69.30
+p04   | 143 |  8.24 |    8.24 |  77.53
+p05   | 390 | 22.47 |   22.47 | 100.00
+&lt;NA&gt;  |   0 |  0.00 |    &lt;NA&gt; |   &lt;NA&gt;</code></pre>
 </div>
 </div>
 </section>
-<section id="erstellung-eines-korpus" class="slide level2">
-<h2>Erstellung eines Korpus</h2>
-<h4 id="textverarbeitung-mit-quanteda-benoit2018">Textverarbeitung mit <a href="http://quanteda.io/"><code>quanteda</code></a> <span class="citation" data-cites="benoit2018">(<a href="#/literatur" role="doc-biblioref" onclick=""><strong>benoit2018?</strong></a>)</span></h4>
+<section id="anzahl-der-reviews-nach-produkt-im-zeitverlauf" class="slide level2">
+<h2>Anzahl der Reviews nach Produkt im Zeitverlauf</h2>
+<h4 id="kennenlernen-des-datensatzes-1">Kennenlernen des Datensatzes</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>crp <span class="ot">&lt;-</span> <span class="fu">corpus</span>(statistics, </span>
-<span id="cb3-2"><a href="#cb3-2"></a>              <span class="at">docid_field =</span> <span class="st">"id"</span>,</span>
-<span id="cb3-3"><a href="#cb3-3"></a>              <span class="at">text_field =</span> <span class="st">"hashtags"</span>)</span>
-<span id="cb3-4"><a href="#cb3-4"></a>crp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>amazon<span class="sc">$</span>data<span class="sc">$</span>de <span class="sc">%&gt;%</span> </span>
+<span id="cb9-2"><a href="#cb9-2"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(year, <span class="at">fill =</span> src)) <span class="sc">+</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
+<span id="cb9-4"><a href="#cb9-4"></a>  <span class="fu">scale_fill_locuszoom</span>() <span class="sc">+</span></span>
+<span id="cb9-5"><a href="#cb9-5"></a>  <span class="fu">theme_pubr</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="index_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section>
+<section id="bewertungen-der-produkte-absolute-zahlen" class="slide level2">
+<h2>Bewertungen der Produkte: Absolute Zahlen</h2>
+<h4 id="kennenlernen-des-datensatzes-2">Kennenlernen des Datensatzes</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>amazon<span class="sc">$</span>data<span class="sc">$</span>de <span class="sc">%&gt;%</span> </span>
+<span id="cb10-2"><a href="#cb10-2"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(rating, as.factor)) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-3"><a href="#cb10-3"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(src, <span class="at">fill =</span> rating)) <span class="sc">+</span> </span>
+<span id="cb10-4"><a href="#cb10-4"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
+<span id="cb10-5"><a href="#cb10-5"></a>  <span class="fu">scale_fill_brewer</span>(<span class="at">palette =</span> <span class="st">"RdYlGn"</span>) <span class="sc">+</span></span>
+<span id="cb10-6"><a href="#cb10-6"></a>  <span class="fu">theme_pubr</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="index_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section>
+<section id="bewertungen-der-produkte-kummulierte-anteile" class="slide level2">
+<h2>Bewertungen der Produkte: Kummulierte Anteile</h2>
+<h4 id="kennenlernen-des-datensatzes-3">Kennenlernen des Datensatzes</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>amazon<span class="sc">$</span>data<span class="sc">$</span>de <span class="sc">%&gt;%</span> </span>
+<span id="cb11-2"><a href="#cb11-2"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(rating, as.factor)) <span class="sc">%&gt;%</span> </span>
+<span id="cb11-3"><a href="#cb11-3"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(src, <span class="at">fill =</span> rating)) <span class="sc">+</span> </span>
+<span id="cb11-4"><a href="#cb11-4"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"fill"</span>) <span class="sc">+</span></span>
+<span id="cb11-5"><a href="#cb11-5"></a>  <span class="fu">scale_fill_brewer</span>(<span class="at">palette =</span> <span class="st">"RdYlGn"</span>) <span class="sc">+</span></span>
+<span id="cb11-6"><a href="#cb11-6"></a>  <span class="fu">theme_pubr</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="index_files/figure-revealjs/unnamed-chunk-9-1.png" width="960" class="r-stretch"></section></section>
+<section id="kursevaluation" class="title-slide slide level1 center" data-background-color="#04316a">
+<h1>☕ Kursevaluation</h1>
+<p>Bitte nehmen Sie über den QR Code oder folgenden Link an der Evaluation teil:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><p><a href="https://www.eva.fau.de" class="uri">https://www.eva.fau.de</a></p></li>
+<li><p>Losung: <strong>QNWVC</strong></p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/paste-52FCC08F.png" width="500"></p>
+</div>
+</div>
+</section>
+
+<section>
+<section id="text-processing" class="title-slide slide level1 center" data-background-color="#E6002E">
+<h1>Text processing</h1>
+<p>Kurze Erklärung der Grundbegriffe <em>Korpus, Token &amp; DFM</em></p>
+</section>
+<section id="vom-korpus-zum-model" class="slide level2">
+<h2><em>Vom</em> Korpus zum Model</h2>
+<h4 id="prozess-der-textverarbeitung">Prozess der Textverarbeitung</h4>
+
+<img data-src="https://miro.medium.com/max/1400/1*DocMTV7nTAomKxcu3m-tyw.webp" class="r-stretch quarto-figure-center"></section>
+<section id="sätze-token-lemma-pos" class="slide level2">
+<h2>Sätze – Token – Lemma – POS</h2>
+<h4 id="vorverarbeitungsschritte-für-textanalyse">Vorverarbeitungsschritte für Textanalyse</h4>
+<div class="callout callout-note callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>1. Satzerkennung</strong></p>
+</div>
+<div class="callout-content">
+<p>Was gibt’s in New York zu sehen?</p>
+</div>
+</div>
+</div>
+<div class="callout callout-note callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>2. Tokenisierung</strong></p>
+</div>
+<div class="callout-content">
+<p>was; gibt; `s; in; new; york; zu; sehen; ?</p>
+</div>
+</div>
+</div>
+<div class="callout callout-important callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>3. Lemmatisierung</strong></p>
+</div>
+<div class="callout-content">
+<p>was; geben; `s; in; new; york; zu; sehen; ?</p>
+</div>
+</div>
+</div>
+<div class="callout callout-tip callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>4. Part-Of-Speech (POS) Tagging</strong></p>
+</div>
+<div class="callout-content">
+<p>&gt;Was<code>/PWS</code> &gt;gibt<code>/VVFIN</code> &gt;’s<code>/PPER</code> &gt;in<code>/APPR</code> &gt;New<code>/NE</code> &gt;York<code>/NE</code> &gt;zu<code>/PTKZU</code> &gt;sehen<code>/VVINF</code></p>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>Satzerkennung: <em>Auflösung der Satzstruktur; Aber: Probleme mit Datumsangaben, Uhrzeit, Abkürzungen, URLS</em></p>
+<p>Tokenisierung: <em>Zerteilung in kleinste Einheiten, Abtrennung von Satzzeichen; Fragen: Umgang mit Zeichen, Symbolen, Zahlen, N-Gramme …</em></p>
+<p>Definition Lemmatisierung: <em>Grundform eines Worters, als diejenige Form, unter dem an einen Begriff in einem Nachschlagewerk findet / Rückführung auf die „Vollfrom”</em></p>
+<p>Definition POS: <em>Zuordnung von Wörtern und Satzzeichen eines Textes zu Wortarten</em></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="von-bow-zu-dfm" class="slide level2">
+<h2>Von BOW zu DFM</h2>
+<h4 id="bag-of-words-bow-und-document-feature-matrix-dfm">Bag-of-words (BOW) und Document-Feature-Matrix (DFM)</h4>
+<h4 id="section-1"><img data-src="images/bow_dfm_example.png"></h4>
+<aside class="notes">
+<p><em>Bag-of-Words</em>-Modell: es zählt lediglich die Worthäufigkeit je Dokument, die syntaktischen und grammatikalischen Zusammenhänge zwischen einzelnen Wörtern werden ignoriert.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="sentiment-analyse" class="title-slide slide level1 center">
+<h1>Sentiment Analyse</h1>
+<p>👎 &amp; 👍</p>
+</section>
+<section id="the-good-the-bad-and-the-ugly" class="slide level2">
+<h2>The good, the bad and the ugly</h2>
+<h4 id="grundidee-ziele-und-der-sentimentanalyse">Grundidee &amp; Ziele und der Sentimentanalyse</h4>
+<ul>
+<li><p>Auf Basis von speziellen Wortlisten bzw. Lexika werden bestimmte Begriffe ausgezählt, denen zuvor entweder ein numerischer Wert (Score) oder eine Kategorien (<em>positiv</em> oder <em>negativ)</em> zugeordnet wurden.</p></li>
+<li><p>Ziel ist die Bestimmung der Polarität (positive/negative Emotion) eines Textes</p></li>
+<li><p>Aber: Wie gut ist die Klassifizierung?</p></li>
+</ul>
+</section>
+<section id="grundlagen-für-die-analyse" class="slide level2">
+<h2>Grundlagen für die Analyse</h2>
+<h4 id="hintergrundinformationen-zum-processing-scoring">Hintergrundinformationen zum Processing &amp; Scoring</h4>
+<ul>
+<li><p>Die Verarbeitung und Analyse der Daten erfolgt mit dem<code>quanteda</code> bzw. <code>quanteda.textstat</code> Paket und basiert nur auf dem Korpus der deutschen Reviews</p></li>
+<li><p>Als Sentiment-Grundlage wird SentiWS genutzt:</p>
+<blockquote>
+<p>Der SentimentWortschatz, oder kurz <em>SentiWS</em>, ist eine öffentlich verfügbare deutschsprachige Ressource für die Sentiment Analyse, Opinion Mining und ähnliche Zwecke. Dabei werden für enthaltene Wörter die positive und negative Polarität im Intervall [-1; 1] angegeben, sowie deren Wortart und (falls anwendbar) Flexionsvarianten. Die aktuelle Version des SentiWS enthält ungefähr 1.650 positive und 1.800 negative Grundformen, so dass, inklusive der verschiedenen Flexionsformen, insgesamt etwa 16.000 positive und 18.000 negative Wortformen enthalten sind. SentiWS enthält nicht nur Adjektive und Adverbien, sondern auch Nomen und Verben die Träger von Sentiment sind</p>
+</blockquote></li>
+</ul>
+</section>
+<section id="erste-ergebnisse" class="slide level2">
+<h2>Erste Ergebnisse</h2>
+<h4 id="bewertung-der-verschiedenen-diätpillen">Bewertung der verschiedenen Diätpillen</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>amazon<span class="sc">$</span>data<span class="sc">$</span>de_senti <span class="sc">%&gt;%</span> </span>
+<span id="cb12-2"><a href="#cb12-2"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> src, <span class="at">y =</span> polarity)) <span class="sc">+</span> </span>
+<span id="cb12-3"><a href="#cb12-3"></a>  ggdist<span class="sc">::</span><span class="fu">stat_halfeye</span>(</span>
+<span id="cb12-4"><a href="#cb12-4"></a>    <span class="fu">aes</span>(<span class="at">fill =</span> src),</span>
+<span id="cb12-5"><a href="#cb12-5"></a>    <span class="at">adjust =</span> .<span class="dv">5</span>, </span>
+<span id="cb12-6"><a href="#cb12-6"></a>    <span class="at">width =</span> .<span class="dv">6</span>, </span>
+<span id="cb12-7"><a href="#cb12-7"></a>    <span class="at">.width =</span> <span class="dv">0</span>, </span>
+<span id="cb12-8"><a href="#cb12-8"></a>    <span class="at">justification =</span> <span class="sc">-</span>.<span class="dv">3</span>, </span>
+<span id="cb12-9"><a href="#cb12-9"></a>    <span class="at">point_colour =</span> <span class="cn">NA</span>) <span class="sc">+</span> </span>
+<span id="cb12-10"><a href="#cb12-10"></a>  <span class="fu">geom_boxplot</span>(</span>
+<span id="cb12-11"><a href="#cb12-11"></a>    <span class="fu">aes</span>(<span class="at">color =</span> src),</span>
+<span id="cb12-12"><a href="#cb12-12"></a>    <span class="at">width =</span> .<span class="dv">25</span>, </span>
+<span id="cb12-13"><a href="#cb12-13"></a>    <span class="at">outlier.shape =</span> <span class="cn">NA</span></span>
+<span id="cb12-14"><a href="#cb12-14"></a>  ) <span class="sc">+</span></span>
+<span id="cb12-15"><a href="#cb12-15"></a>  <span class="fu">geom_point</span>(</span>
+<span id="cb12-16"><a href="#cb12-16"></a>    <span class="fu">aes</span>(<span class="at">color =</span> src),</span>
+<span id="cb12-17"><a href="#cb12-17"></a>    <span class="at">size =</span> <span class="fl">1.3</span>,</span>
+<span id="cb12-18"><a href="#cb12-18"></a>    <span class="at">alpha =</span> .<span class="dv">3</span>,</span>
+<span id="cb12-19"><a href="#cb12-19"></a>    <span class="at">position =</span> <span class="fu">position_jitter</span>(</span>
+<span id="cb12-20"><a href="#cb12-20"></a>      <span class="at">seed =</span> <span class="dv">1</span>, <span class="at">width =</span> .<span class="dv">1</span></span>
+<span id="cb12-21"><a href="#cb12-21"></a>    )</span>
+<span id="cb12-22"><a href="#cb12-22"></a>  ) <span class="sc">+</span> </span>
+<span id="cb12-23"><a href="#cb12-23"></a>  <span class="fu">coord_cartesian</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="fl">1.2</span>, <span class="cn">NA</span>), <span class="at">clip =</span> <span class="st">"off"</span>) <span class="sc">+</span></span>
+<span id="cb12-24"><a href="#cb12-24"></a>  <span class="fu">scale_color_startrek</span>() <span class="sc">+</span></span>
+<span id="cb12-25"><a href="#cb12-25"></a>  <span class="fu">scale_fill_startrek</span>() <span class="sc">+</span></span>
+<span id="cb12-26"><a href="#cb12-26"></a>  <span class="fu">theme_pubr</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+</section><section id="erste-ergebnisse-output" class="slide level2 output-location-slide"><h2>Erste Ergebnisse</h2><div class="cell output-location-slide">
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-10-1.png" width="960"></p>
+</div>
+</div></section></section>
+<section>
+<section id="topic-modeling" class="title-slide slide level1 center" data-background-color="#E6002E">
+<h1>Topic Modeling</h1>
+<p>Grundidee und beispielhafter Ablauf</p>
+</section>
+<section id="grundidee" class="slide level2">
+<h2>Grundidee</h2>
+<h4 id="quick-introduction-to-topic-modeling">Quick Introduction to Topic Modeling</h4>
+<ul>
+<li><p>Verfahren des <em>unüberwachten maschinellen Lernens</em>, das sich daher insbesondere zur Exploration und Deskription großer Textmengen eignet</p></li>
+<li><p>Themen werden strikt auf Basis von Worthäufigkeiten in den einzelnen Dokumenten vermeintlich objektiv berechnet, ganz ohne subjektive Einschätzungen und damit einhergehenden etwaigen Verzerrungen</p></li>
+</ul>
+</section>
+<section id="annahmen" class="slide level2 smaller">
+<h2>Annahmen</h2>
+<h4 id="quick-introduction-to-topic-modeling-1">Quick Introduction to Topic Modeling</h4>
+<ul>
+<li><p>Ein Textkorpus besteht aus <strong><code>D</code></strong> Dokumenten und <strong><code>V</code></strong> Wörtern bzw. Terms</p></li>
+<li><p>Es wird nun angenommen, dass latente Themen <strong><code>K</code></strong> zu unterschiedlichen Anteilen in den Dokumenten <code>D</code> vorkommen und alle Wörter <strong><code>V</code></strong> mit unterschiedlicher Wahrscheinlichkeit zu den <strong><code>K</code></strong> Themen gehören.</p></li>
+<li><p>Ziel der Verfahren ist die Berechnung zweier Matrizen <strong><code>D×K</code></strong> und <strong><code>V×K</code></strong>.</p>
+<ul>
+<li><p>Die erste Matrix <strong><code>D×K</code></strong> enthält für jedes einzelne Dokument <strong><code>d</code></strong> und jedes einzelne Thema <strong><code>k</code></strong> die Wahrscheinlichkeit, dass das Thema in diesem Dokument vorkommt.</p></li>
+<li><p>Analog enthält <strong><code>V×K</code></strong> für jedes einzelne Wort <strong><code>w</code></strong> und jedes einzelne Thema <strong><code>k</code></strong> die Wahrscheinlichkeit, dass das jeweilige Wort in diesem Thema vorkommt.</p></li>
+</ul></li>
+<li><p>Mit Hilfe dieser Matrizen können die Themen dann beschrieben und interpretiert werden.</p>
+<ul>
+<li><p>So können aus <strong><code>V×K</code></strong> die wichtigsten Wörter je Thema (d.h., die Wörter mit der höchsten konditionalen Wahrscheinlichkeit, zu einem bestimmten Thema kk zu gehören) abgelesen werden;</p></li>
+<li><p>mittels <strong><code>D×K</code></strong> können Themen Dokumenten und umgekehrt zugeordnet werden, z. B. in dem für jedes Dokument dd das Thema kk mit der höchsten konditionalen Wahrscheinlichkeit identifiziert wird.</p></li>
+</ul></li>
+</ul>
+<aside class="notes">
+<ul>
+<li>Zur Berechnung dieser Matrizen wird sozusagen der umgekehrte Weg gegangen und die Erzeugung der Dokumente als statistischer Prozess beschrieben: ein Dokument wird demnach erzeugt, in dem zufällig Themen aus der zum Dokument zugehörigen Themenverteilung und Wörter aus der den Themen zugehörigen Wortverteilungen gezogen werden. Hierzu wird das Topic Model zunächst mit zufälligen Themen- und Wortverteilungen initialisiert und dann in einem iterativen, algorithmischen Verfahren nach und nach adaptiert, bis es möglichst gut zu den Daten (dem Textkorpus) passt (d.h. die gemeinsame Likelihood der Themen- und Wortverteilungen maximiert wird).<sup><a href="https://bookdown.org/joone/ComputationalMethods/topicmodeling.html#fn53">53</a></sup></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="structual-topic-modeling-im-fokus" class="slide level2">
+<h2>Structual Topic Modeling im Fokus</h2>
+<h4 id="idee-und-hintergrund-von-stm">Idee und Hintergrund von STM</h4>
+
+<img data-src="images/stm.png" class="r-stretch quarto-figure-center"><aside class="notes">
+<p>𝛴 = Topic covariance</p>
+<p>x = Prevalende Metadata</p>
+<p>gamma = Metadata weights</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="welches-k" class="slide level2">
+<h2>Welches K?</h2>
+<h4 id="bestimmung-der-optimalen-themenanzahl">Bestimmung der optimalen Themenanzahl</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>amazon<span class="sc">$</span>tpm<span class="sc">$</span>model_scores <span class="sc">%&gt;%</span> </span>
+<span id="cb13-2"><a href="#cb13-2"></a>  <span class="fu">transmute</span>(</span>
+<span id="cb13-3"><a href="#cb13-3"></a>    k,</span>
+<span id="cb13-4"><a href="#cb13-4"></a>    <span class="st">`</span><span class="at">Lower bound</span><span class="st">`</span> <span class="ot">=</span> lbound,</span>
+<span id="cb13-5"><a href="#cb13-5"></a>    <span class="at">Residuals =</span> <span class="fu">map_dbl</span>(residual, <span class="st">"dispersion"</span>),</span>
+<span id="cb13-6"><a href="#cb13-6"></a>    <span class="st">`</span><span class="at">Semantic coherence</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">map_dbl</span>(semantic_coherence, mean),</span>
+<span id="cb13-7"><a href="#cb13-7"></a>    <span class="st">`</span><span class="at">Held-out likelihood</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">map_dbl</span>(eval_heldout, <span class="st">"expected.heldout"</span>)) <span class="sc">%&gt;%</span>   </span>
+<span id="cb13-8"><a href="#cb13-8"></a>  <span class="fu">pivot_longer</span>(<span class="sc">-</span>k, <span class="at">names_to =</span> <span class="st">"Metric"</span>, <span class="at">values_to =</span> <span class="st">"Value"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb13-9"><a href="#cb13-9"></a>  <span class="fu">ggplot</span>(</span>
+<span id="cb13-10"><a href="#cb13-10"></a>    <span class="fu">aes</span>(k, Value, <span class="at">color =</span> Metric)) <span class="sc">+</span></span>
+<span id="cb13-11"><a href="#cb13-11"></a>  <span class="fu">geom_line</span>(<span class="at">size =</span> <span class="fl">1.5</span>, <span class="at">alpha =</span> <span class="fl">0.7</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb13-12"><a href="#cb13-12"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>Metric, <span class="at">scales =</span> <span class="st">"free_y"</span>) <span class="sc">+</span></span>
+<span id="cb13-13"><a href="#cb13-13"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"K (number of topics)"</span>,</span>
+<span id="cb13-14"><a href="#cb13-14"></a>       <span class="at">y =</span> <span class="cn">NULL</span>,</span>
+<span id="cb13-15"><a href="#cb13-15"></a>       <span class="at">title =</span> <span class="st">"Model diagnostics by number of topics"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+</section>
+<section id="welches-k-output" class="slide level2 output-location-slide"><h2>Welches K?</h2><div class="cell output-location-slide">
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-11-1.png" width="960"></p>
+</div>
+</div></section><section id="kombination-aus-kohärenz-exklusivität" class="slide level2">
+<h2>Kombination aus Kohärenz &amp; Exklusivität</h2>
+<h4 id="bestimmung-der-optimalen-themenanzahl-1">Bestimmung der optimalen Themenanzahl</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>amazon<span class="sc">$</span>tpm<span class="sc">$</span>model_scores <span class="sc">%&gt;%</span></span>
+<span id="cb14-2"><a href="#cb14-2"></a>  <span class="fu">select</span>(k, exclusivity, semantic_coherence) <span class="sc">%&gt;%</span></span>
+<span id="cb14-3"><a href="#cb14-3"></a>  <span class="fu">filter</span>(k <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">11</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb14-4"><a href="#cb14-4"></a>  <span class="fu">unnest</span>(<span class="at">cols =</span> <span class="fu">c</span>(exclusivity, semantic_coherence)) <span class="sc">%&gt;%</span></span>
+<span id="cb14-5"><a href="#cb14-5"></a>  <span class="fu">mutate</span>(<span class="at">k =</span> <span class="fu">as.factor</span>(k)) <span class="sc">%&gt;%</span></span>
+<span id="cb14-6"><a href="#cb14-6"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(semantic_coherence, exclusivity, <span class="at">color =</span> k)) <span class="sc">+</span></span>
+<span id="cb14-7"><a href="#cb14-7"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>, <span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb14-8"><a href="#cb14-8"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Semantic coherence"</span>,</span>
+<span id="cb14-9"><a href="#cb14-9"></a>       <span class="at">y =</span> <span class="st">"Exclusivity"</span>,</span>
+<span id="cb14-10"><a href="#cb14-10"></a>       <span class="at">title =</span> <span class="st">"Comparing exclusivity and semantic coherence"</span>,</span>
+<span id="cb14-11"><a href="#cb14-11"></a>       <span class="at">subtitle =</span> <span class="st">"Models with fewer topics have higher semantic coherence for more topics, but lower exclusivity"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+</section>
+<section id="kombination-aus-kohärenz-exklusivität-output" class="slide level2 output-location-slide"><h2>Kombination aus Kohärenz &amp; Exklusivität</h2><div class="cell output-location-slide">
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-12-1.png" width="960"></p>
+</div>
+</div></section><section id="top-features-der-themen" class="slide level2">
+<h2>Top Features der Themen</h2>
+<h4 id="interpretation-des-models">Interpretation des Models</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>amazon<span class="sc">$</span>stm<span class="sc">$</span>mdl <span class="sc">%&gt;%</span> <span class="fu">labelTopics</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Corpus consisting of 941 documents and 22 docvars.
-6813800162259897344 :
-"fyp,love,dating,romance,relationship,crush,people,population..."
-
-6832736698938576896 :
-"fyp,blacklivesmatter,tiktokpartner,learnontiktok,police,fact..."
-
-6845368010048408576 :
-"skittles,statistics,education,fyp,foryou"
-
-6927121729257098240 :
-"hotguy,itwasntme,turbotaxlivepick6,doritosflatlife,foryou,wa..."
-
-7052705912317840384 :
-"timotheechalamet,fyp,foryou,timothee,peach,callmebyyourname,..."
-
-6909087873081905152 :
-"stitch,statistics,staticstics,fyp,foryoupage,trending"
-
-[ reached max_ndoc ... 935 more documents ]</code></pre>
+<pre><code>Topic 1 Top Words:
+     Highest Prob: tropfen, geschmack, chlorophyll, wasser, wirkung, schmeckt, schon 
+     FREX: tropfen, chlorophyll, glas, grün, farbe, flasche, konnten 
+     Lift: alfalfa, dosieren, farbe, frisch, geladen, glas, grüne 
+     Score: tropfen, chlorophyll, farbe, grün, geladen, medien, wirkung 
+Topic 2 Top Words:
+     Highest Prob: produkt, super, nehme, seit, mehr, sagen, wirklich 
+     FREX: nehme, gutes, begeistert, seit, wirkt, hilft, überrascht 
+     Lift: begeistert, detox, entgiften, entschlacken, gutes, pfirsich, teste 
+     Score: produkt, seit, nehme, weiteren, super, gutes, hilft 
+Topic 3 Top Words:
+     Highest Prob: gut, dass, tag, tagen, ganz, finde, besser 
+     FREX: ganz, finde, möchte, produkte, tagen, anfang, wenig 
+     Lift: anfang, soweit, generell, produkte, komisch, versucht, möchte 
+     Score: gut, generell, finde, dass, ganz, tag, tagen 
+Topic 4 Top Words:
+     Highest Prob: schmeckt, geschmack, shake, lineavi, shaker, pulver, lecker 
+     FREX: shake, lineavi, shaker, pulver, lecker, shakes, almased 
+     Lift: anleitung, dosen, ersetzt, aktivkost, almased, classic, diätshake 
+     Score: lineavi, shaker, shake, almased, pulver, shakes, milch 
+Topic 5 Top Words:
+     Highest Prob: schon, wochen, leider, kapseln, abgenommen, sport, abnehmen 
+     FREX: kapseln, abgenommen, tabletten, geld, bringt, sport, schlucken 
+     Lift: abgenommen, achten, burn, gebracht, gegenteil, geld, geldverschwendung 
+     Score: kapseln, tabletten, keto, burn, abgenommen, sport, kilo </code></pre>
 </div>
 </div>
 </section>
-<section id="tokenisierung" class="slide level2">
-<h2>Tokenisierung</h2>
-<h4 id="textverarbeitung-mit-quanteda-benoit2018-1">Textverarbeitung mit <a href="http://quanteda.io/"><code>quanteda</code></a> <span class="citation" data-cites="benoit2018">(<a href="#/literatur" role="doc-biblioref" onclick=""><strong>benoit2018?</strong></a>)</span></h4>
+<section id="prevalence-der-themen" class="slide level2">
+<h2>Prevalence der Themen</h2>
+<h4 id="interpretation-des-models-1">Interpretation des Models</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>tkn <span class="ot">&lt;-</span> crp <span class="sc">%&gt;%</span> </span>
-<span id="cb5-2"><a href="#cb5-2"></a>  <span class="fu">tokens</span>(<span class="at">remove_punct =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb5-3"><a href="#cb5-3"></a>         <span class="at">remove_symbols =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb5-4"><a href="#cb5-4"></a>         <span class="at">remove_url =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb5-5"><a href="#cb5-5"></a>         <span class="at">remove_separators =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb5-6"><a href="#cb5-6"></a>tkn</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Tokens consisting of 941 documents and 22 docvars.
-6813800162259897344 :
- [1] "fyp"          "love"         "dating"       "romance"      "relationship"
- [6] "crush"        "people"       "population"   "world"        "math"        
-[11] "stats"        "statistics"  
-
-6832736698938576896 :
-[1] "fyp"              "blacklivesmatter" "tiktokpartner"    "learnontiktok"   
-[5] "police"           "facts"            "fact"             "statistics"      
-[9] "usa"             
-
-6845368010048408576 :
-[1] "skittles"   "statistics" "education"  "fyp"        "foryou"    
-
-6927121729257098240 :
- [1] "hotguy"            "itwasntme"         "turbotaxlivepick6"
- [4] "doritosflatlife"   "foryou"            "wap"              
- [7] "statistics"        "fyp"               "foryoupage"       
-[10] "wap"              
-
-7052705912317840384 :
-[1] "timotheechalamet" "fyp"              "foryou"           "timothee"        
-[5] "peach"            "callmebyyourname" "statistics"      
-
-6909087873081905152 :
-[1] "stitch"      "statistics"  "staticstics" "fyp"         "foryoupage" 
-[6] "trending"   
-
-[ reached max_ndoc ... 935 more documents ]</code></pre>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>amazon<span class="sc">$</span>stm<span class="sc">$</span>preval<span class="sc">$</span>tgt  <span class="sc">%&gt;%</span> </span>
+<span id="cb17-2"><a href="#cb17-2"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(topic, gamma, <span class="at">label =</span> terms, <span class="at">fill =</span> topic)) <span class="sc">+</span></span>
+<span id="cb17-3"><a href="#cb17-3"></a>  <span class="fu">geom_col</span>(<span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb17-4"><a href="#cb17-4"></a>  <span class="fu">geom_text</span>(<span class="at">hjust =</span> <span class="fl">1.1</span>, <span class="at">nudge_y =</span> <span class="fl">0.0005</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
+<span id="cb17-5"><a href="#cb17-5"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb17-6"><a href="#cb17-6"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>), <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.35</span>), <span class="at">labels =</span> scales<span class="sc">::</span>percent) <span class="sc">+</span></span>
+<span id="cb17-7"><a href="#cb17-7"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb17-8"><a href="#cb17-8"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb17-9"><a href="#cb17-9"></a>        <span class="at">panel.grid.major =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb17-10"><a href="#cb17-10"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="fu">expression</span>(gamma)) <span class="sc">+</span></span>
+<span id="cb17-11"><a href="#cb17-11"></a>  <span class="fu">scale_fill_jama</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-</section>
-<section id="erstellung-einer-document-feature-matrix-dfm" class="slide level2">
-<h2>Erstellung einer Document-Feature-Matrix [DFM]</h2>
-<h4 id="textverarbeitung-mit-quanteda-benoit2018-2">Textverarbeitung mit <a href="http://quanteda.io/"><code>quanteda</code></a> <span class="citation" data-cites="benoit2018">(<a href="#/literatur" role="doc-biblioref" onclick=""><strong>benoit2018?</strong></a>)</span></h4>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>dfm <span class="ot">&lt;-</span> tkn <span class="sc">%&gt;%</span>  <span class="fu">dfm</span>()</span>
-<span id="cb7-2"><a href="#cb7-2"></a>dfm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Document-feature matrix of: 941 documents, 2,941 features (99.71% sparse) and 22 docvars.
-                     features
-docs                  fyp love dating romance relationship crush people
-  6813800162259897344   1    1      1       1            1     1      1
-  6832736698938576896   1    0      0       0            0     0      0
-  6845368010048408576   1    0      0       0            0     0      0
-  6927121729257098240   1    0      0       0            0     0      0
-  7052705912317840384   1    0      0       0            0     0      0
-  6909087873081905152   1    0      0       0            0     0      0
-                     features
-docs                  population world math
-  6813800162259897344          1     1    1
-  6832736698938576896          0     0    0
-  6845368010048408576          0     0    0
-  6927121729257098240          0     0    0
-  7052705912317840384          0     0    0
-  6909087873081905152          0     0    0
-[ reached max_ndoc ... 935 more documents, reached max_nfeat ... 2,931 more features ]</code></pre>
-</div>
-</div>
-</section>
-<section id="welche-hashtags-werden-genutzt" class="slide level2">
-<h2>Welche Hashtags werden genutzt?</h2>
-<h4 id="textvisualisierung-mit-quanteda.textplots">Textvisualisierung mit <a href="https://github.com/quanteda/quanteda.textplots"><code>quanteda.textplots</code></a></h4>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">library</span>(quanteda.textplots)</span>
-<span id="cb9-2"><a href="#cb9-2"></a>dfm <span class="sc">%&gt;%</span> <span class="fu">textplot_wordcloud</span>(</span>
-<span id="cb9-3"><a href="#cb9-3"></a>  <span class="at">min_size =</span> <span class="dv">1</span>, <span class="at">max_size =</span> <span class="dv">8</span>, <span class="at">max_words =</span> <span class="dv">50</span>,</span>
-<span id="cb9-4"><a href="#cb9-4"></a>  <span class="at">rotation =</span> <span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
+</section><section id="prevalence-der-themen-output" class="slide level2 output-location-slide"><h2>Prevalence der Themen</h2><div class="cell output-location-slide">
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-14-1.png" width="960"></p>
 </div>
-<img data-src="index_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section></section>
+</div></section></section>
 <section id="time-for-questions" class="title-slide slide level1 center" data-background-color="#E6002E" data-background-image="../../00-images/background_questions.svg">
 <h1>Time for questions</h1>
 
