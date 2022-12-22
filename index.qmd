@@ -49,12 +49,12 @@ Below is the scheudle for the current semester.
 | 5               | 23.11.2022               | API-Access (II): *YouTube*                      |
 | 6               | 30.11.2022               | API-Access (III): *Reddit*                      |
 | 7               | 07.12.2022               | Webscraping: *TikTok*                           |
-| 8               | 14.12.2022               | ESM: *m-path*                                   |
+| 8               | 14.12.2022               | Extra: Text as data                             |
 | \-              | \-                       | *CHRISTMAS BREAK*                               |
-| 9               | 11.01.2023               | Data Donations                                  |
-| 10              | 18.01.2023               | Mock-Up-Virtual Environments                    |
-| 11              | 25.01.2023               | Open Science                                    |
-| 12              | 02.02.2023               | ***Guest Lecture: Linking DBD & Survey data***  |
+| 9               | 11.01.2023               | ESM: *m-path*                                   |
+| 10              | 18.01.2023               | Data Donations                                  |
+| 11              | 25.01.2023               | ***Guest Lecture: Linking DBD & Survey data***  |
+| 12              | 02.02.2023               | **B**ring **Y**our **O**wn **R**esearch (**P**roject) |
 | 13              | 08.02.2023               | Closing Session: Recap, Evaluation & Discussion |
 
 ## Copyright
