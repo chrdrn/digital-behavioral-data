@@ -1440,5 +1440,75 @@
     "title": "Digital Behavioral Data",
     "section": "Copyright",
     "text": "Copyright\nThis content is licensed under a GPL-3.0 License."
+  },
+  {
+    "objectID": "content/09-esm-m_path/slides/index.html#seminarplan",
+    "href": "content/09-esm-m_path/slides/index.html#seminarplan",
+    "title": "Experience Sampling Method",
+    "section": "Seminarplan",
+    "text": "Seminarplan\n\n\n\nSitzung\nDatum\nThema\nReferent*Innen\n\n\n\n\n1\n26.10.2022\nKick-Off Session\nChristoph Adrian\n\n\n2\n02.11.2022\nDBD: Einführung und Überblick\nChristoph Adrian\n\n\n3\n09.11.2022\nDBD: Datenerhebung\nChristoph Adrian\n\n\n4\n16.11.2022\nAPI-Access (I): Twitter\nFalk\n\n\n5\n23.11.2022\nAPI-Access (II): YouTube\nDenisov\n\n\n6\n30.11.2022\nAPI-Access (II): Reddit\nLandauer\n\n\n7\n07.12.2022\nWebscraping: TikTok\nBrand & Kocher\n\n\n8\n14.12.2022\nText as data\nChristoph Adrian\n\n\n\n\nWEIHNACHTSPAUSE\n\n\n\n9\n11.01.2023\nESM: m-path\nDörr\n\n\n10\n18.01.2023\nData Donations\nHofmann & Wierzbicki\n\n\n11\n25.01.2023\nGuest Lecture: Linking DBD & Survey data\nJohannes Breuer\n\n\n12\n02.02.2023\nBring Your Own Research (Project)\nChristoph Adrian\n\n\n13\n08.02.2023\nSemesterabschluss & Evaluation\nChristoph Adrian\n\n\n\n\n▶️"
+  },
+  {
+    "objectID": "content/09-esm-m_path/slides/index.html#neuer-termin-aktualisertes-thema",
+    "href": "content/09-esm-m_path/slides/index.html#neuer-termin-aktualisertes-thema",
+    "title": "Experience Sampling Method",
+    "section": "Neuer Termin & “aktualisertes” Thema",
+    "text": "Neuer Termin & “aktualisertes” Thema\nGastvortrag von Johannes Breuer zum Thema survey linking\n\n\nVerknüpfung von digitalen Spurdaten & Umfragen – Wieso, wie und was ist möglich?” (Digital via Zoom)\nZur Person:\n\nsenior researcher in the team Survey Data Augmentation at GESIS - Leibniz Institute for the Social Sciences (Department Survey Data Curation) in Cologne, Germany\n(co-)lead the team Research Data & Methods at the Center for Advanced Internet Studies (CAIS) in Bochum, Germany.\n\n\n\n\n\n\n\n\n\n\n\nAdd socials"
+  },
+  {
+    "objectID": "content/09-esm-m_path/slides/index.html#literatur",
+    "href": "content/09-esm-m_path/slides/index.html#literatur",
+    "title": "Experience Sampling Method",
+    "section": "Literatur",
+    "text": "Literatur\n\n\nBolger, N., & Laurenceau, J.-P. (2013). Intensive longitudinal methods: An introduction to diary and experience sampling research. Guilford Press.\n\n\nMasur, P. K. (2019). Capturing situational dynamics: Strength and pitfalls of the experience sampling method (P. Müller, S. Geiß, T. K. Naab, & C. Peter, Eds.; Vol. 15). Herbert von Halem Verlag. https://doi.org/10.31219/osf.io/vx5ha\n\n\n\n\n\nDigital Behavioral Data"
+  },
+  {
+    "objectID": "content/09-esm-m_path/slides/index.html#bring-your-own-research-project",
+    "href": "content/09-esm-m_path/slides/index.html#bring-your-own-research-project",
+    "title": "Experience Sampling Method",
+    "section": "Bring Your Own Research (Project)",
+    "text": "Bring Your Own Research (Project)\nSitzung für offene Fragen & Anliegen\n\nGibt es ein Thema, eine Methode, eine Sitzung oder ein Showcase, zu dem Sie noch Fragen haben bzw. das Sie gerne noch vertiefen würden?\n\n\nHinweis auf Hausarbeit"
+  },
+  {
+    "objectID": "content/09-esm-m_path/slides/index.html#design-your-own-research",
+    "href": "content/09-esm-m_path/slides/index.html#design-your-own-research",
+    "title": "Experience Sampling Method",
+    "section": "Design your own research",
+    "text": "Design your own research\nGruppenarbeit (ca 30 Min.) & Ergebnisvorstellung (ca. 20 Min)\n\nTeilen Sie sich in zwei bis drei Gruppen auf\nBearbeiten Sie folgende Aufgaben (ca. 30 Min).:\n\nFormulieren Sie drei unterschiedliche Forschungsfragen, die mit drei unterschiedlichen Kurzzeit-Längsschnittdesigns (siehe Systematik von Masur) beantwortbar sind\nDie Fragen können gerne einen thematischen Bezug zum Marketing haben\nMindestens eine Frage auf Personenebene & mindestens eine Frage auf Situationsebene\nHalten Sie Ihre Fragen & Designideen auf einer PP-Folie fest\n\nErgebnisvorstellung (ca. 20 Min): Präsentation der Fragen & dazugehörigem Design"
+  },
+  {
+    "objectID": "content/09-esm-m_path/slides/index.html#intensive-longitudinal-design-ild-im-fokus",
+    "href": "content/09-esm-m_path/slides/index.html#intensive-longitudinal-design-ild-im-fokus",
+    "title": "Experience Sampling Method",
+    "section": "Intensive Longitudinal Design (ILD) im Fokus",
+    "text": "Intensive Longitudinal Design (ILD) im Fokus\nQuick reminder\n\n“an intensive longitudinal design involves sequential measurements on five or more occasions during which a change process is expected to unfold within each subject (e.g., person or other sampling)”\n\n(Bolger & Laurenceau, 2013)"
+  },
+  {
+    "objectID": "content/09-esm-m_path/slides/index.html#messwiederholung-in-kurzen-abständen",
+    "href": "content/09-esm-m_path/slides/index.html#messwiederholung-in-kurzen-abständen",
+    "title": "Experience Sampling Method",
+    "section": "Messwiederholung in kurzen Abständen",
+    "text": "Messwiederholung in kurzen Abständen\nDefinitorischer Kern von ILD\n\n\nWie groß oder klein die zeitlichen Abstände Intervalle ) zwischen den Messungen sind , folgt heoretischen Annahmen über Phänomenfrequenz und Veränderungsprozesse"
+  },
+  {
+    "objectID": "content/09-esm-m_path/slides/index.html#ebenen-über-ebenen",
+    "href": "content/09-esm-m_path/slides/index.html#ebenen-über-ebenen",
+    "title": "Experience Sampling Method",
+    "section": "Ebenen über Ebenen",
+    "text": "Ebenen über Ebenen\nILD: Sampling auf zwei geschalteten Ebenen"
+  },
+  {
+    "objectID": "content/09-esm-m_path/slides/index.html#verschiedene-varianten-des-situationssamplings",
+    "href": "content/09-esm-m_path/slides/index.html#verschiedene-varianten-des-situationssamplings",
+    "title": "Experience Sampling Method",
+    "section": "Verschiedene Varianten des Situationssamplings",
+    "text": "Verschiedene Varianten des Situationssamplings\nSystematisierung nach (Masur, 2019)"
+  },
+  {
+    "objectID": "content/09-esm-m_path/slides/index.html#personen--undoder-situationsebene",
+    "href": "content/09-esm-m_path/slides/index.html#personen--undoder-situationsebene",
+    "title": "Experience Sampling Method",
+    "section": "Personen- und/oder Situationsebene?",
+    "text": "Personen- und/oder Situationsebene?\nArten von Forschungsfragen & Beispiele\n\nFragen auf Personenebene (between-subject): Daten über Messzeitpunkte aggregiert\n\nPersonenmittelwert: Wie ist das durchschnittliche Wohlbefinden (Y) in der Personenstichprobe?\nVarianz der Personenmittelwerte: Welche Unterschiede im durchschnittlichen Wohlbefinden (Y) gibt es zwischen Personen?\nKorrelation auf Personenebene: Hängen Unterschiede im Wohlbefinden (Y) mit Unterschieden in der durchschnittlichen sozialen Interaktion (X) zusammen?\nKausalzusammenhang: Erklärt eine experimentelle Manipulation der sozialen Interaktion (X) die Unterschiede im Wohlbefinden (Y)?\n\nFragen auf Situationsebene (within-subject): Daten mehrerer Messzeitpunkte einer Person\n\nVarianz der Situationswerte: Wie stark weicht das situative Wohlbefinden (Y) vom Durchschnitt einer Person ab?\nKorrelation auf Situationsebene: Hängen diese Abweichungen im situativen Wohlbefinden (Y) mit situativen Unterschieden in der sozialen Interaktion (X) einer Person zusammen?\nGranger Kausalzusammenhang: Erklärt die soziale Interaktion einer Person in der Mitte des Tages (X) die Unterschiede im Wohlbefinden dieser Person am Ende des Tages (Y)?"
   }
 ]

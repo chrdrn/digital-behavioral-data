@@ -1,0 +1,183 @@
+---
+title: "Experience Sampling Method" 
+title-slide-attributes:
+  data-background-image: ../../00-images/background_title.svg
+  data-background-color: "#04316a"
+subtitle: "Digital behavioral data - Session 09"
+author: 
+  - name: Christoph Adrian 
+    url: https://twitter.com/chrdrn
+    affiliation: Lehrstuhl für Kommunikationswissenschaft
+    affiliation-url: https://www.kowi.rw.fau.de/person/christoph-adrian/
+date: 11 01 2023
+date-format: "DD.MM.YYYY"
+format:
+  revealjs:
+    theme: ../../slidetheme.scss
+    template-partials:
+      - title-slide.html
+    slide-number: true
+    chalkboard:
+      buttons: false
+    preview-links: auto
+    logo: ../../logo.png
+    footer: "[Digital Behavioral Data](https://chrdrn.github.io/digital-behavioral-data/)"
+highlight-style: atom-one
+filters:
+  - roughnotation
+execute:
+  echo: true
+csl: ../../apa.csl
+editor_options: 
+  chunk_output_type: console
+bibliography: references.bib
+---
+
+## Seminarplan {.smaller}
+
+| Sitzung                                                | Datum                                                           | Thema                                                                              | Referent\*Innen                                                       |
+|------------------|------------------|-------------------|------------------|
+| [*1*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*26.10.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*Kick-Off Session*]{.rn rn-type="strike-through" rn-color="#E6002E"}              | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
+| [*2*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*02.11.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*DBD: Einführung und Überblick*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
+| [*3*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*09.11.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*DBD: Datenerhebung*]{.rn rn-type="strike-through" rn-color="#E6002E"}            | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
+| [*4*]{.rn rn-type="highlight"}                         | [*16.11.2022*]{.rn rn-type="highlight"}                         | [*API-Access (I): Twitter*]{.rn rn-type="highlight"}                               | [*Falk*]{.rn rn-type="highlight"}                                     |
+| *5*                                                    | *23.11.2022*                                                    | *API-Access (II): YouTube*                                                         | *Denisov*                                                             |
+| 6                                                      | 30.11.2022                                                      | API-Access (II): *Reddit*                                                          | Landauer                                                              |
+| 7                                                      | 07.12.2022                                                      | Webscraping: *TikTok*                                                              | Brand & Kocher                                                        |
+| 8                                                      | 14.12.2022                                                      | Text as data                                                                       | Christoph Adrian                                                      |
+|                                                        |                                                                 | *WEIHNACHTSPAUSE*                                                                  |                                                                       |
+| **9**                                                  | **11.01.2023**                                                  | **ESM: *m-path***                                                                  | **Dörr**                                                              |
+| 10                                                     | 18.01.2023                                                      | Data Donations                                                                     | Hofmann & Wierzbicki                                                  |
+| *11*                                                   | *25.01.2023*                                                    | ***Guest Lecture: Linking DBD & Survey data***                                     | [Johannes Breuer](https://www.johannesbreuer.com/)                    |
+| ***12***                                               | *02.02.2023*                                                    | ***B**ring **Y**our **O**wn **R**esearch (**P**roject)*                            | Christoph Adrian                                                      |
+| 13                                                     | 08.02.2023                                                      | Semesterabschluss & Evaluation                                                     | Christoph Adrian                                                      |
+
+::: notes
+▶️
+:::
+
+# Agenda
+
+1.  **📢 Organisation & Koordination**
+2.  **Group Activity**
+
+# 📢️ Organisation & Koordination {background-color="#E6002E"}
+
+im Fokus: Gastvortrag & BYORP
+
+## Neuer Termin & "aktualisertes" Thema
+
+#### Gastvortrag von Johannes Breuer zum Thema *survey linking*
+
+::: columns
+::: {.column width="70%"}
+**Verknüpfung von digitalen Spurdaten & Umfragen -- Wieso, wie und was ist möglich?" (**Digital via Zoom)
+
+Zur Person:
+
+-   senior researcher in the team *Survey Data Augmentation* at [*GESIS - Leibniz Institute for the Social Sciences*](https://www.gesis.org/en/home) ([Department *Survey Data Curation*](https://www.gesis.org/en/institute/departments/survey-data-curation)) in Cologne, Germany
+
+-   (co-)lead the team *Research Data & Methods* at the [*Center for Advanced Internet Studies* (CAIS)](https://www.cais-research.de/) in Bochum, Germany.
+:::
+
+::: {.column width="30%"}
+<br>
+
+![](https://www.johannesbreuer.com/img/photo_JBreuer_Mar21.jpg){fig-align="center" width="200"}
+:::
+:::
+
+::: notes
+Add socials
+:::
+
+## [B]{.underline}ring [Y]{.underline}our [O]{.underline}wn [R]{.underline}esearch ([P]{.underline}roject)
+
+#### Sitzung für offene Fragen & Anliegen
+
+-   Gibt es ein **Thema**, eine **Methode**, eine **Sitzung** oder ein **Showcase**, zu dem Sie noch **Fragen haben** bzw. das Sie gerne **noch vertiefen** würden?
+
+::: notes
+Hinweis auf Hausarbeit
+:::
+
+# Group Activity {background-color="#E6002E" background-image="../../00-images/background_group_activity.svg"}
+
+Gruppenarbeit zum Konzept ESM
+
+## Intensive Longitudinal Design (ILD) im Fokus
+
+Quick reminder
+
+> "an intensive longitudinal design involves sequential measurements on five or more occasions during which a change process is expected to unfold within each subject (e.g., person or other sampling)"
+
+[@bolger2013]
+
+## Messwiederholung in kurzen Abständen
+
+**Definitorischer Kern von ILD**
+
+![](images/esm_multilevel.png){fig-align="center"}
+
+-   Wie groß oder klein die zeitlichen Abstände Intervalle ) zwischen den Messungen sind , folgt heoretischen Annahmen über Phänomenfrequenz und Veränderungsprozesse
+
+## Ebenen über Ebenen
+
+#### ILD: Sampling auf zwei geschalteten Ebenen
+
+![](images/esm_sampling.png){fig-align="center"}
+
+## Verschiedene Varianten des Situationssamplings
+
+Systematisierung nach [@masur2019]
+
+![](images/masur_complete.png){fig-align="center"}
+
+## Personen- und/oder Situationsebene? {.smaller}
+
+#### Arten von Forschungsfragen & Beispiele
+
+1.  **Fragen auf [Personenebene]{.underline} (*between*-subject):** Daten über Messzeitpunkte aggregiert
+
+    -   **Personenmittelwert**: Wie ist das durchschnittliche Wohlbefinden (Y) in der Personenstichprobe?
+
+    -   **Varianz der Personenmittelwerte:** Welche Unterschiede im durchschnittlichen Wohlbefinden (Y) gibt es zwischen Personen?
+
+    -   **Korrelation auf Personenebene:** Hängen Unterschiede im Wohlbefinden (Y) mit Unterschieden in der durchschnittlichen sozialen Interaktion (X) zusammen?
+
+    -   **Kausalzusammenhang**: Erklärt eine experimentelle Manipulation der sozialen Interaktion (X) die Unterschiede im Wohlbefinden (Y)?
+
+2.  **Fragen auf [Situationsebene]{.underline} (*within*-subject):** Daten mehrerer Messzeitpunkte einer Person
+
+    -   **Varianz der Situationswerte**: Wie stark weicht das situative Wohlbefinden (Y) vom Durchschnitt einer Person ab?
+
+    -   **Korrelation auf Situationsebene**: Hängen diese Abweichungen im situativen Wohlbefinden (Y) mit situativen Unterschieden in der sozialen Interaktion (X) einer Person zusammen?
+
+    -   **Granger Kausalzusammenhang:** Erklärt die soziale Interaktion einer Person in der Mitte des Tages (X) die Unterschiede im Wohlbefinden dieser Person am Ende des Tages (Y)?
+
+## Design your own research
+
+#### Gruppenarbeit (ca 30 Min.) & Ergebnisvorstellung (ca. 20 Min)
+
+-   Teilen Sie sich in **zwei bis** **drei Gruppen auf**
+
+-   Bearbeiten Sie **folgende Aufgaben (ca. 30 Min).:**
+
+    1.  Formulieren Sie [drei unterschiedliche Forschungsfragen]{.underline}, die mit [drei unterschiedlichen Kurzzeit-Längsschnittdesigns]{.underline} (siehe Systematik von Masur) beantwortbar sind
+
+    2.  Die Fragen können gerne einen thematischen Bezug zum Marketing haben
+
+    3.  Mindestens eine Frage auf Personenebene & mindestens eine Frage auf Situationsebene
+
+    4.  Halten Sie Ihre Fragen & Designideen auf einer PP-Folie fest
+
+-   **Ergebnisvorstellung (ca. 20 Min):** Präsentation der Fragen & dazugehörigem Design
+
+# Time for questions {background-color="#E6002E" background-image="../../00-images/background_questions.svg"}
+
+# Bis zur nächsten Sitzung! {background-color="#E6002E" background-image="../../00-images/background_end_of_session.svg"}
+
+## Literatur
+
+::: {#refs}
+:::
