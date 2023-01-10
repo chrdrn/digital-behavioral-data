@@ -69,9 +69,10 @@ website:
         contents:
           - "content/08-text_as_data/08-slides.qmd"
           - "content/08-text_as_data/08-exercise.qmd"
-
-
-
+      - section: "ESM: m-Path"
+        contents:
+          - "content/09-esm-m_path/09-slides.qmd"
+          
 format:
   html:
     theme:

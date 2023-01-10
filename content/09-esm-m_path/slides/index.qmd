@@ -36,7 +36,7 @@ bibliography: references.bib
 ## Seminarplan {.smaller}
 
 | Sitzung                                                | Datum                                                           | Thema                                                                              | Referent\*Innen                                                       |
-|------------------|------------------|-------------------|------------------|
+|--------------------------------------------------------|-----------------------------------------------------------------|------------------------------------------------------------------------------------|-----------------------------------------------------------------------|
 | [*1*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*26.10.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*Kick-Off Session*]{.rn rn-type="strike-through" rn-color="#E6002E"}              | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
 | [*2*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*02.11.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*DBD: Einführung und Überblick*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
 | [*3*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*09.11.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*DBD: Datenerhebung*]{.rn rn-type="strike-through" rn-color="#E6002E"}            | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
@@ -58,8 +58,43 @@ bibliography: references.bib
 
 # Agenda
 
-1.  **📢 Organisation & Koordination**
-2.  **Group Activity**
+1.  **Verständnis- und Diskussionsfragen**
+2.  **📢 Organisation & Koordination**
+3.  **Group Activity**
+
+# **Verständnis- und Diskussionsfragen** {background-color="#E6002E" background-image="../../00-images/background_participation.svg"}
+
+Ihre Fragen aus MS Teams
+
+## Vielen Dank für Ihre Fragen! {.scrollable .smaller}
+
+::: {.fragment .semi-fade-out fragment-index="1"}
+> Ich bin nicht sicher, ob ich es richtig verstanden habe, aber ESM ist ja gerade deswegen so besonders, weil es ermöglicht die Teilnehmer in verschiedensten Situationen zu erreichen. Wie wird das sichergestellt? Wenn man nämlich beispielsweise gerade in der U-Bahn ist und eine Frage auf dem Handy erhält (allerdings nicht antworten kann/möchte, weil man gleich aussteigen muss), könnte man sich die Frage ja einfach aufsparen und sie in einem ruhigen Moment Zuhause beantworten, wenn man etwas darüber nachgedacht hat. Das würde allerdings die Vorteile und den Sinn hinter ESM reduzieren, oder?
+:::
+
+::: {.fragment .fade-in-then-semi-out fragment-index="1"}
+> Was ist mit der älteren Generation, die teilweise keine Handys besitzen oder regelmäßig nutzen wenn eine Untersuchung durch ESM gestützt werden soll, die Informationen älterer und jüngerer Generationen benötigt?
+:::
+
+::: {.fragment .fade-in-then-semi-out fragment-index="3"}
+> In dem Paper wird berichtet, dass die Methode gut für Kommunikationswissenschaftliche Forschung geeignet ist. Warum wird sie hier dann noch so selten eingesetzt?
+:::
+
+## Let's discuss {.scrollable .smaller}
+
+::: {.fragment .semi-fade-out fragment-index="1"}
+> Durch die regelmäßige Befragung beim experience sampling kann sich das Verhalten der Probanden verändern/ anpassen (z.B. Befragung zum Medienkonsum \> Proband stellt hohen Medienkonsum fest \> beginnt Konsum zu reduzieren). In welchen Fällen wäre experience sampling und in welchen Fällen wären reguläre Befragungen besser geeignet? (Diskussionsfrage)
+:::
+
+::: {.fragment .fade-in-then-semi-out fragment-index="1"}
+> Wie kann bei der täglichen Strichprobe der ESM sichergestellt werden, dass sich durch die außergewöhnlich hohe Auseinandersetzung mit persönlichen Faktoren, wie bspw. Gefühlen, keine beeinflussten Ergebnisse entstehen.
+
+> Die Reaktivität der Teilnehmer vor allem beim zeitbasierten experience sampling führt zur Verzerrung der Ergebnisse. Wie kann dieses Problem gelöst werden?
+:::
+
+::: {.fragment .fade-in-then-semi-out fragment-index="3"}
+> Laut Paper erfordern ESM-Studien die Teilnahme über einen längeren Zeitraum (1-2 Wochen) und senken dadurch die Bereitschaft der Teilnahme an solchen Studien. Wie könnte dieses Problem umgangen werden?
+:::
 
 # 📢️ Organisation & Koordination {background-color="#E6002E"}
 
@@ -95,7 +130,23 @@ Add socials
 
 #### Sitzung für offene Fragen & Anliegen
 
--   Gibt es ein **Thema**, eine **Methode**, eine **Sitzung** oder ein **Showcase**, zu dem Sie noch **Fragen haben** bzw. das Sie gerne **noch vertiefen** würden?
+::: columns
+::: {.column width="50%"}
+Gibt es **Fragen** oder den Wunsch nach weiterer **Vertiefung** zu
+
+-   einem **Thema**,
+
+-   einer **Methode**,
+
+-   einer **Sitzung** oder
+
+-   einem **Showcase**?
+:::
+
+::: {.column width="50%"}
+![](https://imgflip.com/s/meme/Chemistry-Cat.jpg)
+:::
+:::
 
 ::: notes
 Hinweis auf Hausarbeit
@@ -157,7 +208,7 @@ Systematisierung nach [@masur2019]
 
 ## Design your own research
 
-#### Gruppenarbeit (ca 30 Min.) & Ergebnisvorstellung (ca. 20 Min)
+#### Gruppenarbeit (ca 25 Min.) & Ergebnisvorstellung (ca. 15 Min)
 
 -   Teilen Sie sich in **zwei bis** **drei Gruppen auf**
 
