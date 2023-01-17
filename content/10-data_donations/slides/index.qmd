@@ -206,7 +206,7 @@ Grants data subjects the right to
 
 #### Gruppenarbeit (ca 25 Min.) & Ergebnisvorstellung (ca. 15 Min)
 
--   Teilen Sie sich in **zwei bis** **drei Gruppen auf**
+-   Teilen Sie sich in **zwei Gruppen auf**
 
 -   Bearbeiten Sie **folgende Aufgaben (ca. 30 Min).:**
 
@@ -218,6 +218,26 @@ Grants data subjects the right to
 
 -   **Ergebnisvorstellung (ca. 20 Min):** Präsentation der Fragen & dazugehörigem Design
 
+## Google Slides Vorlagen
+
+#### Bitte nutzen Sie die Präsentationsvorlagen
+
+<br>
+
+::: columns
+::: {.column width="50%" style="text-align: center"}
+![](images/qr_code_group_A.png){fig-align="center"}
+
+[[Gruppe A]{.smallcaps}](https://docs.google.com/presentation/d/1ItimA7n47TRH4iqq2ImLZMyVafQPaRmfiPV0pwFkEi4/edit?usp=sharing)
+:::
+
+::: {.column width="50%" style="text-align: center"}
+![](images/qr_code_group_B.png){fig-align="center"}
+
+[[Gruppe B]{.smallcaps}](https://docs.google.com/presentation/d/13seIhPmpEpiKZBjK6SUb-o3wsAiTx8t1YwXtLypGHMY/edit?usp=sharing)
+:::
+:::
+
 # Time for questions {background-color="#E6002E" background-image="../../00-images/background_questions.svg"}
 
 # Bis zur nächsten Sitzung! {background-color="#E6002E" background-image="../../00-images/background_end_of_session.svg"}
@@ -226,3 +246,4 @@ Grants data subjects the right to
 
 ::: {#refs}
 :::
+

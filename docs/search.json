@@ -1607,7 +1607,7 @@
     "href": "content/10-data_donations/slides/index.html#design-your-own-research",
     "title": "Data Donations",
     "section": "Design your own research",
-    "text": "Design your own research\nGruppenarbeit (ca 25 Min.) & Ergebnisvorstellung (ca. 15 Min)\n\nTeilen Sie sich in zwei bis drei Gruppen auf\nBearbeiten Sie folgende Aufgaben (ca. 30 Min).:\n\nFormulieren Sie eine Forschungsfragen, die Sie mit Hilfe von Datenspenden (DDPS etc.) beantworten möchten.\nBeschreiben Sie die Mechanismen, mit denen Sie eine hohe Compliance sicherstellen würden. Das können sowohl gezielte Maßnahmen (Hinweise bzw. “Aufklärung”) oder größere Konzepte (Data Donation Platform etc) sein.\nHalten Sie Ihre Fragen & Designideen auf einer PP-Folie fest\n\nErgebnisvorstellung (ca. 20 Min): Präsentation der Fragen & dazugehörigem Design"
+    "text": "Design your own research\nGruppenarbeit (ca 25 Min.) & Ergebnisvorstellung (ca. 15 Min)\n\nTeilen Sie sich in zwei Gruppen auf\nBearbeiten Sie folgende Aufgaben (ca. 30 Min).:\n\nFormulieren Sie eine Forschungsfragen, die Sie mit Hilfe von Datenspenden (DDPS etc.) beantworten möchten.\nBeschreiben Sie die Mechanismen, mit denen Sie eine hohe Compliance sicherstellen würden. Das können sowohl gezielte Maßnahmen (Hinweise bzw. “Aufklärung”) oder größere Konzepte (Data Donation Platform etc) sein.\nHalten Sie Ihre Fragen & Designideen auf einer PP-Folie fest\n\nErgebnisvorstellung (ca. 20 Min): Präsentation der Fragen & dazugehörigem Design"
   },
   {
     "objectID": "content/10-data_donations/slides/index.html#literatur",
@@ -1636,5 +1636,26 @@
     "title": "Data Donations",
     "section": "Verfügbarkeit durch veränderte Rahmenbedingungen",
     "text": "Verfügbarkeit durch veränderte Rahmenbedingungen\nGeneral Data Protection Regulation (GDPR)\n\n\n\n\n\n\nArticel 15 - Right of data access\n\n\n\n\n\n\nRight to obtain from a data controller:\n\nConfirmation whether personal data are being processed\nAccess to the personal data\nAccess to information regarding data recipients\nand sources and data derived from your personal data\n\n\n\n\n\n\n\n\n\n\n\n\nArticel 20 - Right of data portability\n\n\n\n\n\n\nGrants data subjects the right to\n\nreceive the personal data in a structured, commonly used and machine-readable format (“Data Download Package”)\ntransmit those data to another data controller"
+  },
+  {
+    "objectID": "content/10-data_donations/slides/index.html#group-1",
+    "href": "content/10-data_donations/slides/index.html#group-1",
+    "title": "Data Donations",
+    "section": "Group 1",
+    "text": "Group 1"
+  },
+  {
+    "objectID": "content/10-data_donations/slides/index.html#entwürfe-group-presntations",
+    "href": "content/10-data_donations/slides/index.html#entwürfe-group-presntations",
+    "title": "Data Donations",
+    "section": "Entwürfe Group Presntations",
+    "text": "Entwürfe Group Presntations\nGoogle Sheets Vorlagen\n\n\n\n\n\n\n\n\n\n\nBitte nutzen Sie zur Bearbeitung Link zur Präsentation der Gruppe 1"
+  },
+  {
+    "objectID": "content/10-data_donations/slides/index.html#google-slides-vorlagen",
+    "href": "content/10-data_donations/slides/index.html#google-slides-vorlagen",
+    "title": "Data Donations",
+    "section": "Google Slides Vorlagen",
+    "text": "Google Slides Vorlagen\nBitte nutzen Sie die Präsentationsvorlagen\n\n\n\n\n\n\n\n\nGruppe A\n\n\n\n\n\n\nGruppe B"
   }
 ]
