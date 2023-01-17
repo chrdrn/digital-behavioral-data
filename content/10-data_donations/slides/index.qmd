@@ -1,0 +1,228 @@
+---
+title: "Data Donations" 
+title-slide-attributes:
+  data-background-image: ../../00-images/background_title.svg
+  data-background-color: "#04316a"
+subtitle: "Digital behavioral data - Session 10"
+author: 
+  - name: Christoph Adrian 
+    url: https://twitter.com/chrdrn
+    affiliation: Lehrstuhl für Kommunikationswissenschaft
+    affiliation-url: https://www.kowi.rw.fau.de/person/christoph-adrian/
+date: 18 01 2023
+date-format: "DD.MM.YYYY"
+format:
+  revealjs:
+    theme: ../../slidetheme.scss
+    template-partials:
+      - title-slide.html
+    slide-number: true
+    chalkboard:
+      buttons: false
+    preview-links: auto
+    logo: ../../logo.png
+    footer: "[Digital Behavioral Data](https://chrdrn.github.io/digital-behavioral-data/)"
+highlight-style: atom-one
+filters:
+  - roughnotation
+execute:
+  echo: true
+csl: ../../apa.csl
+editor_options: 
+  chunk_output_type: console
+bibliography: references.bib
+---
+
+## Seminarplan {.smaller}
+
+| Sitzung                                                | Datum                                                           | Thema                                                                              | Referent\*Innen                                                       |
+|------------------|------------------|-------------------|------------------|
+| [*1*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*26.10.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*Kick-Off Session*]{.rn rn-type="strike-through" rn-color="#E6002E"}              | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
+| [*2*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*02.11.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*DBD: Einführung und Überblick*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
+| [*3*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*09.11.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*DBD: Datenerhebung*]{.rn rn-type="strike-through" rn-color="#E6002E"}            | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
+| [*4*]{.rn rn-type="highlight"}                         | [*16.11.2022*]{.rn rn-type="highlight"}                         | [*API-Access (I): Twitter*]{.rn rn-type="highlight"}                               | [*Falk*]{.rn rn-type="highlight"}                                     |
+| *5*                                                    | *23.11.2022*                                                    | *API-Access (II): YouTube*                                                         | *Denisov*                                                             |
+| 6                                                      | 30.11.2022                                                      | API-Access (II): *Reddit*                                                          | Landauer                                                              |
+| 7                                                      | 07.12.2022                                                      | Webscraping: *TikTok*                                                              | Brand & Kocher                                                        |
+| 8                                                      | 14.12.2022                                                      | Text as data                                                                       | Christoph Adrian                                                      |
+|                                                        |                                                                 | *WEIHNACHTSPAUSE*                                                                  |                                                                       |
+| 9                                                      | 11.01.2023                                                      | ESM: *m-path*                                                                      | Dörr                                                                  |
+| **10**                                                 | **18.01.2023**                                                  | **Data Donations**                                                                 | **Hofmann & Wierzbicki**                                              |
+| *11*                                                   | *25.01.2023*                                                    | ***Guest Lecture: Linking DBD & Survey data***                                     | [Johannes Breuer](https://www.johannesbreuer.com/)                    |
+| ***12***                                               | *02.02.2023*                                                    | ***B**ring **Y**our **O**wn **R**esearch (**P**roject)*                            | Christoph Adrian                                                      |
+| 13                                                     | 08.02.2023                                                      | Semesterabschluss & Evaluation                                                     | Christoph Adrian                                                      |
+
+::: notes
+▶️
+:::
+
+# Agenda
+
+1.  **Verständnis- und Diskussionsfragen**
+2.  **📢 Organisation & Koordination**
+3.  **Group Activity**
+
+# **Verständnis- und Diskussionsfragen** {background-color="#E6002E" background-image="../../00-images/background_participation.svg"}
+
+Ihre Fragen aus MS Teams
+
+## Vielen Dank für Ihre Fragen! {.scrollable .smaller}
+
+::: {.fragment .semi-fade-out fragment-index="1"}
+> XXX
+:::
+
+::: {.fragment .fade-in-then-semi-out fragment-index="1"}
+> XXX
+:::
+
+::: {.fragment .fade-in-then-semi-out fragment-index="3"}
+> XXX
+:::
+
+## Let's discuss {.scrollable .smaller}
+
+::: {.fragment .semi-fade-out fragment-index="1"}
+> XXX
+:::
+
+::: {.fragment .fade-in-then-semi-out fragment-index="1"}
+> XXX
+:::
+
+::: {.fragment .fade-in-then-semi-out fragment-index="3"}
+> XXX
+:::
+
+# 📢️ Organisation & Koordination {background-color="#E6002E"}
+
+Seminararbeit & BYOR(P)
+
+## Seminararbeit
+
+#### TODO Sub-Header
+
+TODO Insert Text here
+
+## [B]{.underline}ring [Y]{.underline}our [O]{.underline}wn [R]{.underline}esearch ([P]{.underline}roject)
+
+#### TODO Sub-Header
+
+::: columns
+::: {.column width="50%"}
+Gibt es **Fragen** oder den Wunsch nach weiterer **Vertiefung** zu
+
+-   einem **Thema**,
+
+-   einer **Methode**,
+
+-   einer **Sitzung** oder
+
+-   einem **Showcase**?
+:::
+
+::: {.column width="50%"}
+![](https://imgflip.com/s/meme/Chemistry-Cat.jpg)
+:::
+:::
+
+::: notes
+Hinweis auf Hausarbeit
+:::
+
+# Group Activity {background-color="#E6002E" background-image="../../00-images/background_group_activity.svg"}
+
+Gruppenarbeit zu Data Donations
+
+## Nicht neu, sondern anders
+
+#### Data donation of digital traces
+
+::: columns
+::: {.column width="65%"}
+::: {.callout-note appearance="minimal"}
+## Data donation
+
+"the act of an individual [actively consenting]{.underline} to donate their personal data for research" [@skatova2019]
+:::
+
+::: {.callout-important appearance="minimal"}
+## Digital traces
+
+"One's unique set of digital activities, actions, and communications that leave a data trace on the internet or on a computer or other digital device and can identify the particular user or device." [@boeschoten2022]
+:::
+:::
+
+::: {.column width="35%"}
+[![©️ https://myshadow.org/tracking-data-traces](images/spaceman-1c8d23158c7cf5af8e54683b23b57d48e2559ac133ff36be4f2d00c3c99a9262.png)](https://myshadow.org/tracking-data-traces)
+:::
+:::
+
+::: notes
+"Data donation" keine Neuheit --\> Vorher Umfragen oder Dokument
+:::
+
+## Verfügbarkeit durch veränderte Rahmenbedingungen
+
+#### **General Data Protection Regulation ([GDPR](https://gdpr.eu/what-is-gdpr/))**
+
+::: {.callout-tip appearance="simple"}
+## Articel 15 - Right of data access
+
+::: columns
+::: {.column width="20%"}
+![](https://edps.europa.eu/sites/default/files/picture/gdpr2.png){width="250"}
+:::
+
+::: {.column width="80%"}
+Right to obtain from a data controller:
+
+-   Confirmation whether personal data are being processed
+-   Access to the personal data
+-   Access to information regarding data recipients
+-   and sources and data derived from your personal data
+:::
+:::
+:::
+
+::: {.callout-tip appearance="simple"}
+## Articel 20 - Right of data portability
+
+::: columns
+::: {.column width="20%"}
+![](images/box-seam.svg){style="color: red" width="100"}
+:::
+
+::: {.column width="80%"}
+Grants data subjects the right to
+
+-   receive the personal data in a structured, commonly used and machine-readable format ("Data Download Package")
+-   transmit those data to another data controller
+:::
+:::
+:::
+
+## Design your own research
+
+#### Gruppenarbeit (ca 25 Min.) & Ergebnisvorstellung (ca. 15 Min)
+
+-   Teilen Sie sich in **zwei bis** **drei Gruppen auf**
+
+-   Bearbeiten Sie **folgende Aufgaben (ca. 30 Min).:**
+
+    1.  Formulieren Sie [eine Forschungsfragen]{.underline}, die Sie mit Hilfe von Datenspenden (DDPS etc.) beantworten möchten.
+
+    2.  Beschreiben Sie die Mechanismen, mit denen Sie eine hohe Compliance sicherstellen würden. Das können sowohl gezielte Maßnahmen (Hinweise bzw. "Aufklärung") oder größere Konzepte (Data Donation Platform etc) sein.
+
+    3.  Halten Sie Ihre Fragen & Designideen auf einer PP-Folie fest
+
+-   **Ergebnisvorstellung (ca. 20 Min):** Präsentation der Fragen & dazugehörigem Design
+
+# Time for questions {background-color="#E6002E" background-image="../../00-images/background_questions.svg"}
+
+# Bis zur nächsten Sitzung! {background-color="#E6002E" background-image="../../00-images/background_end_of_session.svg"}
+
+## Literatur
+
+::: {#refs}
+:::
