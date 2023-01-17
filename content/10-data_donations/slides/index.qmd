@@ -186,6 +186,13 @@ Grants data subjects the right to
 
 -   **Ergebnisvorstellung (ca. 20 Min):** Präsentation der Fragen & dazugehörigem Design
 
+::: notes
+Data Donations von Instagram DDP's gibt detaillierteren Einblick in die Social-Media-Nutzung mehrerer Individuen, ist aber hinsichtlich der Analyse sehr komplex.
+Welche weiteren Anwendungsfälle gibt es für Data Donations noch? In welchem Rahmen lassen sich Data Donations skalieren?
+ 
+Ich denke dabei beispielsweise an Teilen von Daten einer Smartwatch oder Aufzeichnung von Daten über den Fahrstil für Versicherungen.
+:::
+
 ## Google Slides Vorlagen
 
 #### Bitte nutzen Sie die Präsentationsvorlagen
