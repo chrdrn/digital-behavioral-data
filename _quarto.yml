@@ -72,6 +72,9 @@ website:
       - section: "ESM: m-Path"
         contents:
           - "content/09-esm-m_path/09-slides.qmd"
+      - section: "Data Donations"
+        contents:
+          - "content/10-data_donations/10-slides.qmd"
           
 format:
   html:

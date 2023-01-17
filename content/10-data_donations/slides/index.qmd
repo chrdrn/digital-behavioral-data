@@ -59,8 +59,7 @@ bibliography: references.bib
 # Agenda
 
 1.  **Verständnis- und Diskussionsfragen**
-2.  **📢 Organisation & Koordination**
-3.  **Group Activity**
+2.  **Group Activity**
 
 # **Verständnis- und Diskussionsfragen** {background-color="#E6002E" background-image="../../00-images/background_participation.svg"}
 
@@ -69,65 +68,34 @@ Ihre Fragen aus MS Teams
 ## Vielen Dank für Ihre Fragen! {.scrollable .smaller}
 
 ::: {.fragment .semi-fade-out fragment-index="1"}
-> XXX
+> Was kann unter dem Screenomics Ansatz verstanden werden und wie findet er aktuell Anwendung in der Forschung/Praxis?
 :::
 
 ::: {.fragment .fade-in-then-semi-out fragment-index="1"}
-> XXX
+> Bei Data Donations steht die aktive Zustimmung zum Teilen persönlicher Daten im Vordergrund, was die Forschung in diesem Zusammenhang stark erschwert. Wie relevant und häufig ist Forschung mit Data Donations demnach tatsächlich in der Praxis?
+:::
+
+::: {.fragment .fade-in-then-semi-out fragment-index="2"}
+> Im Paper wird darüber gesprochen, dass bei den DDP’s der Prozess des Teiles vereinfacht werden sollte. Was wäre ein möglicher Weg, wie man dieses Problem lösen könnte?
 :::
 
 ::: {.fragment .fade-in-then-semi-out fragment-index="3"}
-> XXX
-:::
+> In welcher Form könnten Data Donations mit anderen Datenerhebungsmethoden kombiniert werden, um noch bessere und aussagekräftigere Ergebnisse zu erlangen?
+::: 
 
 ## Let's discuss {.scrollable .smaller}
 
 ::: {.fragment .semi-fade-out fragment-index="1"}
-> XXX
-:::
+> Data Donations findet zeitlich vor der Analyse der Daten und über einen längeren Zeitraum statt. Ebenfalls ändern sich die Trends und auch die Apps oft sehr schnell. Besteht hier die Gefahr, dass die Daten bis zur Analyse "veralten"? 
+::: 
 
 ::: {.fragment .fade-in-then-semi-out fragment-index="1"}
-> XXX
+> Ist der Anonymisierungsprozess der Daten, hier auch als De-Identifizierung bezeichnet die "perfekte" Lösung zur Gewährleistung des Datenschutzes? Welche Lücken gibt es?
 :::
 
-::: {.fragment .fade-in-then-semi-out fragment-index="3"}
-> XXX
-:::
-
-# 📢️ Organisation & Koordination {background-color="#E6002E"}
-
-Seminararbeit & BYOR(P)
-
-## Seminararbeit
-
-#### TODO Sub-Header
-
-TODO Insert Text here
-
-## [B]{.underline}ring [Y]{.underline}our [O]{.underline}wn [R]{.underline}esearch ([P]{.underline}roject)
-
-#### TODO Sub-Header
-
-::: columns
-::: {.column width="50%"}
-Gibt es **Fragen** oder den Wunsch nach weiterer **Vertiefung** zu
-
--   einem **Thema**,
-
--   einer **Methode**,
-
--   einer **Sitzung** oder
-
--   einem **Showcase**?
-:::
-
-::: {.column width="50%"}
-![](https://imgflip.com/s/meme/Chemistry-Cat.jpg)
-:::
-:::
-
-::: notes
-Hinweis auf Hausarbeit
+::: {.fragment .fade-in-then-semi-out fragment-index="2"}
+>  Durch die große Menge an freigegebenen Daten (gesamte SM Aktivität) im Vergleich zu z.B. einer Umfrage, müsste der Bias durch die Selbstselektion der Teilnehmer doch sehr groß sein?
+Die Belohnung für die Data Donation in der Studie waren 5 Euro. Für welche Belohnung wärt ihr bereit eure gesamten Social-Media-Aktivitäten zur Verfügung zu stellen?
 :::
 
 # Group Activity {background-color="#E6002E" background-image="../../00-images/background_group_activity.svg"}
@@ -239,6 +207,12 @@ Grants data subjects the right to
 :::
 
 # Time for questions {background-color="#E6002E" background-image="../../00-images/background_questions.svg"}
+
+::: notes
+- Seminararbeit?
+- Bring Your Own Research (Project)?
+:::
+
 
 # Bis zur nächsten Sitzung! {background-color="#E6002E" background-image="../../00-images/background_end_of_session.svg"}
 

@@ -1498,6 +1498,69 @@
     "text": "Literatur\n\n\nBolger, N., & Laurenceau, J.-P. (2013). Intensive longitudinal methods: An introduction to diary and experience sampling research. Guilford Press.\n\n\nMasur, P. K. (2019). Capturing situational dynamics: Strength and pitfalls of the experience sampling method (P. Müller, S. Geiß, T. K. Naab, & C. Peter, Eds.; Vol. 15). Herbert von Halem Verlag. https://doi.org/10.31219/osf.io/vx5ha\n\n\n\n\n\nDigital Behavioral Data"
   },
   {
+    "objectID": "content/10-data_donations/10-slides.html",
+    "href": "content/10-data_donations/10-slides.html",
+    "title": "Slides",
+    "section": "",
+    "text": "Below you find the slides for the tenth session:\n\n\n\nIf you want to see the slides in full screen, you can click here. To download them as PDFs, hit the ‘e’ button when you got the presentation open and then Ctrl+P print to PDF. This will work best in Chrome."
+  },
+  {
+    "objectID": "content/10-data_donations/slides/index.html#seminarplan",
+    "href": "content/10-data_donations/slides/index.html#seminarplan",
+    "title": "Data Donations",
+    "section": "Seminarplan",
+    "text": "Seminarplan\n\n\n\nSitzung\nDatum\nThema\nReferent*Innen\n\n\n\n\n1\n26.10.2022\nKick-Off Session\nChristoph Adrian\n\n\n2\n02.11.2022\nDBD: Einführung und Überblick\nChristoph Adrian\n\n\n3\n09.11.2022\nDBD: Datenerhebung\nChristoph Adrian\n\n\n4\n16.11.2022\nAPI-Access (I): Twitter\nFalk\n\n\n5\n23.11.2022\nAPI-Access (II): YouTube\nDenisov\n\n\n6\n30.11.2022\nAPI-Access (II): Reddit\nLandauer\n\n\n7\n07.12.2022\nWebscraping: TikTok\nBrand & Kocher\n\n\n8\n14.12.2022\nText as data\nChristoph Adrian\n\n\n\n\nWEIHNACHTSPAUSE\n\n\n\n9\n11.01.2023\nESM: m-path\nDörr\n\n\n10\n18.01.2023\nData Donations\nHofmann & Wierzbicki\n\n\n11\n25.01.2023\nGuest Lecture: Linking DBD & Survey data\nJohannes Breuer\n\n\n12\n02.02.2023\nBring Your Own Research (Project)\nChristoph Adrian\n\n\n13\n08.02.2023\nSemesterabschluss & Evaluation\nChristoph Adrian\n\n\n\n\n▶️"
+  },
+  {
+    "objectID": "content/10-data_donations/slides/index.html#vielen-dank-für-ihre-fragen",
+    "href": "content/10-data_donations/slides/index.html#vielen-dank-für-ihre-fragen",
+    "title": "Data Donations",
+    "section": "Vielen Dank für Ihre Fragen!",
+    "text": "Vielen Dank für Ihre Fragen!\n\n\nWas kann unter dem Screenomics Ansatz verstanden werden und wie findet er aktuell Anwendung in der Forschung/Praxis?\n\n\n\n\nBei Data Donations steht die aktive Zustimmung zum Teilen persönlicher Daten im Vordergrund, was die Forschung in diesem Zusammenhang stark erschwert. Wie relevant und häufig ist Forschung mit Data Donations demnach tatsächlich in der Praxis?\n\n\n\n\nIm Paper wird darüber gesprochen, dass bei den DDP’s der Prozess des Teiles vereinfacht werden sollte. Was wäre ein möglicher Weg, wie man dieses Problem lösen könnte?\n\n\n\n\nIn welcher Form könnten Data Donations mit anderen Datenerhebungsmethoden kombiniert werden, um noch bessere und aussagekräftigere Ergebnisse zu erlangen?"
+  },
+  {
+    "objectID": "content/10-data_donations/slides/index.html#lets-discuss",
+    "href": "content/10-data_donations/slides/index.html#lets-discuss",
+    "title": "Data Donations",
+    "section": "Let’s discuss",
+    "text": "Let’s discuss\n\n\nData Donations findet zeitlich vor der Analyse der Daten und über einen längeren Zeitraum statt. Ebenfalls ändern sich die Trends und auch die Apps oft sehr schnell. Besteht hier die Gefahr, dass die Daten bis zur Analyse “veralten”?\n\n\n\n\nIst der Anonymisierungsprozess der Daten, hier auch als De-Identifizierung bezeichnet die “perfekte” Lösung zur Gewährleistung des Datenschutzes? Welche Lücken gibt es?\n\n\n\n\nDurch die große Menge an freigegebenen Daten (gesamte SM Aktivität) im Vergleich zu z.B. einer Umfrage, müsste der Bias durch die Selbstselektion der Teilnehmer doch sehr groß sein? Die Belohnung für die Data Donation in der Studie waren 5 Euro. Für welche Belohnung wärt ihr bereit eure gesamten Social-Media-Aktivitäten zur Verfügung zu stellen?"
+  },
+  {
+    "objectID": "content/10-data_donations/slides/index.html#nicht-neu-sondern-anders",
+    "href": "content/10-data_donations/slides/index.html#nicht-neu-sondern-anders",
+    "title": "Data Donations",
+    "section": "Nicht neu, sondern anders",
+    "text": "Nicht neu, sondern anders\nData donation of digital traces\n\n\n\n\n\nData donation\n\n\n“the act of an individual actively consenting to donate their personal data for research” (Skatova & Goulding, 2019)\n\n\n\n\n\n\nDigital traces\n\n\n“One’s unique set of digital activities, actions, and communications that leave a data trace on the internet or on a computer or other digital device and can identify the particular user or device.” (Boeschoten, 2022)\n\n\n\n\n\n\n\n©️ https://myshadow.org/tracking-data-traces\n\n\n\n\n\n“Data donation” keine Neuheit –> Vorher Umfragen oder Dokument"
+  },
+  {
+    "objectID": "content/10-data_donations/slides/index.html#verfügbarkeit-durch-veränderte-rahmenbedingungen",
+    "href": "content/10-data_donations/slides/index.html#verfügbarkeit-durch-veränderte-rahmenbedingungen",
+    "title": "Data Donations",
+    "section": "Verfügbarkeit durch veränderte Rahmenbedingungen",
+    "text": "Verfügbarkeit durch veränderte Rahmenbedingungen\nGeneral Data Protection Regulation (GDPR)\n\n\n\n\n\n\nArticel 15 - Right of data access\n\n\n\n\n\n\nRight to obtain from a data controller:\n\nConfirmation whether personal data are being processed\nAccess to the personal data\nAccess to information regarding data recipients\nand sources and data derived from your personal data\n\n\n\n\n\n\n\n\n\n\n\n\nArticel 20 - Right of data portability\n\n\n\n\n\n\nGrants data subjects the right to\n\nreceive the personal data in a structured, commonly used and machine-readable format (“Data Download Package”)\ntransmit those data to another data controller"
+  },
+  {
+    "objectID": "content/10-data_donations/slides/index.html#design-your-own-research",
+    "href": "content/10-data_donations/slides/index.html#design-your-own-research",
+    "title": "Data Donations",
+    "section": "Design your own research",
+    "text": "Design your own research\nGruppenarbeit (ca 25 Min.) & Ergebnisvorstellung (ca. 15 Min)\n\nTeilen Sie sich in zwei Gruppen auf\nBearbeiten Sie folgende Aufgaben (ca. 30 Min).:\n\nFormulieren Sie eine Forschungsfragen, die Sie mit Hilfe von Datenspenden (DDPS etc.) beantworten möchten.\nBeschreiben Sie die Mechanismen, mit denen Sie eine hohe Compliance sicherstellen würden. Das können sowohl gezielte Maßnahmen (Hinweise bzw. “Aufklärung”) oder größere Konzepte (Data Donation Platform etc) sein.\nHalten Sie Ihre Fragen & Designideen auf einer PP-Folie fest\n\nErgebnisvorstellung (ca. 20 Min): Präsentation der Fragen & dazugehörigem Design"
+  },
+  {
+    "objectID": "content/10-data_donations/slides/index.html#google-slides-vorlagen",
+    "href": "content/10-data_donations/slides/index.html#google-slides-vorlagen",
+    "title": "Data Donations",
+    "section": "Google Slides Vorlagen",
+    "text": "Google Slides Vorlagen\nBitte nutzen Sie die Präsentationsvorlagen\n\n\n\n\n\n\n\n\nGruppe A\n\n\n\n\n\n\nGruppe B"
+  },
+  {
+    "objectID": "content/10-data_donations/slides/index.html#literatur",
+    "href": "content/10-data_donations/slides/index.html#literatur",
+    "title": "Data Donations",
+    "section": "Literatur",
+    "text": "Literatur\n\n\nBoeschoten, L. (2022). Data donation: What is it and why is it important? https://hds.sites.uu.nl/2022/01/15/data-donation-day/\n\n\nSkatova, A., & Goulding, J. (2019). Psychology of personal data donation. PLOS ONE, 14(11), e0224240. https://doi.org/10.1371/journal.pone.0224240\n\n\n\n\n\nDigital Behavioral Data"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Digital Behavioral Data",
@@ -1531,131 +1594,5 @@
     "title": "Digital Behavioral Data",
     "section": "Copyright",
     "text": "Copyright\nThis content is licensed under a GPL-3.0 License."
-  },
-  {
-    "objectID": "content/10-data_donations/slides/index.html#seminarplan",
-    "href": "content/10-data_donations/slides/index.html#seminarplan",
-    "title": "Data Donations",
-    "section": "Seminarplan",
-    "text": "Seminarplan\n\n\n\nSitzung\nDatum\nThema\nReferent*Innen\n\n\n\n\n1\n26.10.2022\nKick-Off Session\nChristoph Adrian\n\n\n2\n02.11.2022\nDBD: Einführung und Überblick\nChristoph Adrian\n\n\n3\n09.11.2022\nDBD: Datenerhebung\nChristoph Adrian\n\n\n4\n16.11.2022\nAPI-Access (I): Twitter\nFalk\n\n\n5\n23.11.2022\nAPI-Access (II): YouTube\nDenisov\n\n\n6\n30.11.2022\nAPI-Access (II): Reddit\nLandauer\n\n\n7\n07.12.2022\nWebscraping: TikTok\nBrand & Kocher\n\n\n8\n14.12.2022\nText as data\nChristoph Adrian\n\n\n\n\nWEIHNACHTSPAUSE\n\n\n\n9\n11.01.2023\nESM: m-path\nDörr\n\n\n10\n18.01.2023\nData Donations\nHofmann & Wierzbicki\n\n\n11\n25.01.2023\nGuest Lecture: Linking DBD & Survey data\nJohannes Breuer\n\n\n12\n02.02.2023\nBring Your Own Research (Project)\nChristoph Adrian\n\n\n13\n08.02.2023\nSemesterabschluss & Evaluation\nChristoph Adrian\n\n\n\n\n▶️"
-  },
-  {
-    "objectID": "content/10-data_donations/slides/index.html#vielen-dank-für-ihre-fragen",
-    "href": "content/10-data_donations/slides/index.html#vielen-dank-für-ihre-fragen",
-    "title": "Data Donations",
-    "section": "Vielen Dank für Ihre Fragen!",
-    "text": "Vielen Dank für Ihre Fragen!\n\n\nXXX\n\n\n\n\nXXX\n\n\n\n\nXXX"
-  },
-  {
-    "objectID": "content/10-data_donations/slides/index.html#lets-discuss",
-    "href": "content/10-data_donations/slides/index.html#lets-discuss",
-    "title": "Data Donations",
-    "section": "Let’s discuss",
-    "text": "Let’s discuss\n\n\nXXX\n\n\n\n\nXXX\n\n\n\n\nXXX"
-  },
-  {
-    "objectID": "content/10-data_donations/slides/index.html#seminararbeit",
-    "href": "content/10-data_donations/slides/index.html#seminararbeit",
-    "title": "Data Donations",
-    "section": "Seminararbeit",
-    "text": "Seminararbeit\nTODO Sub-Header\nTODO Insert Text here"
-  },
-  {
-    "objectID": "content/10-data_donations/slides/index.html#bring-your-own-research-project",
-    "href": "content/10-data_donations/slides/index.html#bring-your-own-research-project",
-    "title": "Data Donations",
-    "section": "Bring Your Own Research (Project)",
-    "text": "Bring Your Own Research (Project)\nTODO Sub-Header\n\n\nGibt es Fragen oder den Wunsch nach weiterer Vertiefung zu\n\neinem Thema,\neiner Methode,\neiner Sitzung oder\neinem Showcase?\n\n\n\n\n\n\nHinweis auf Hausarbeit"
-  },
-  {
-    "objectID": "content/10-data_donations/slides/index.html#a-diffrent-kind-of-data",
-    "href": "content/10-data_donations/slides/index.html#a-diffrent-kind-of-data",
-    "title": "Data Donations",
-    "section": "A diffrent kind of data",
-    "text": "A diffrent kind of data\nData donation of digital traces\n\n\n\n\n\nData donation\n\n\n“the act of an individual actively consenting to donate their personal data for research” (Skatova & Goulding, 2019)\n\n\n\n\n\n\nDigital traces\n\n\n“One’s unique set of digital activities, actions, and communications that leave a data trace on the internet or on a computer or other digital device and can identify the particular user or device.” (Boeschoten, 2022)\n\n\n\n\n\n\n\n©️: https://myshadow.org/tracking-data-traces"
-  },
-  {
-    "objectID": "content/10-data_donations/slides/index.html#messwiederholung-in-kurzen-abständen",
-    "href": "content/10-data_donations/slides/index.html#messwiederholung-in-kurzen-abständen",
-    "title": "Data Donations",
-    "section": "Messwiederholung in kurzen Abständen",
-    "text": "Messwiederholung in kurzen Abständen\nDefinitorischer Kern von ILD\n\n\nWie groß oder klein die zeitlichen Abstände Intervalle ) zwischen den Messungen sind , folgt heoretischen Annahmen über Phänomenfrequenz und Veränderungsprozesse"
-  },
-  {
-    "objectID": "content/10-data_donations/slides/index.html#ebenen-über-ebenen",
-    "href": "content/10-data_donations/slides/index.html#ebenen-über-ebenen",
-    "title": "Data Donations",
-    "section": "Ebenen über Ebenen",
-    "text": "Ebenen über Ebenen\nILD: Sampling auf zwei geschalteten Ebenen"
-  },
-  {
-    "objectID": "content/10-data_donations/slides/index.html#verschiedene-varianten-des-situationssamplings",
-    "href": "content/10-data_donations/slides/index.html#verschiedene-varianten-des-situationssamplings",
-    "title": "Data Donations",
-    "section": "Verschiedene Varianten des Situationssamplings",
-    "text": "Verschiedene Varianten des Situationssamplings\nSystematisierung nach (masur2019?)"
-  },
-  {
-    "objectID": "content/10-data_donations/slides/index.html#personen--undoder-situationsebene",
-    "href": "content/10-data_donations/slides/index.html#personen--undoder-situationsebene",
-    "title": "Data Donations",
-    "section": "Personen- und/oder Situationsebene?",
-    "text": "Personen- und/oder Situationsebene?\nArten von Forschungsfragen & Beispiele\n\nFragen auf Personenebene (between-subject): Daten über Messzeitpunkte aggregiert\n\nPersonenmittelwert: Wie ist das durchschnittliche Wohlbefinden (Y) in der Personenstichprobe?\nVarianz der Personenmittelwerte: Welche Unterschiede im durchschnittlichen Wohlbefinden (Y) gibt es zwischen Personen?\nKorrelation auf Personenebene: Hängen Unterschiede im Wohlbefinden (Y) mit Unterschieden in der durchschnittlichen sozialen Interaktion (X) zusammen?\nKausalzusammenhang: Erklärt eine experimentelle Manipulation der sozialen Interaktion (X) die Unterschiede im Wohlbefinden (Y)?\n\nFragen auf Situationsebene (within-subject): Daten mehrerer Messzeitpunkte einer Person\n\nVarianz der Situationswerte: Wie stark weicht das situative Wohlbefinden (Y) vom Durchschnitt einer Person ab?\nKorrelation auf Situationsebene: Hängen diese Abweichungen im situativen Wohlbefinden (Y) mit situativen Unterschieden in der sozialen Interaktion (X) einer Person zusammen?\nGranger Kausalzusammenhang: Erklärt die soziale Interaktion einer Person in der Mitte des Tages (X) die Unterschiede im Wohlbefinden dieser Person am Ende des Tages (Y)?"
-  },
-  {
-    "objectID": "content/10-data_donations/slides/index.html#design-your-own-research",
-    "href": "content/10-data_donations/slides/index.html#design-your-own-research",
-    "title": "Data Donations",
-    "section": "Design your own research",
-    "text": "Design your own research\nGruppenarbeit (ca 25 Min.) & Ergebnisvorstellung (ca. 15 Min)\n\nTeilen Sie sich in zwei Gruppen auf\nBearbeiten Sie folgende Aufgaben (ca. 30 Min).:\n\nFormulieren Sie eine Forschungsfragen, die Sie mit Hilfe von Datenspenden (DDPS etc.) beantworten möchten.\nBeschreiben Sie die Mechanismen, mit denen Sie eine hohe Compliance sicherstellen würden. Das können sowohl gezielte Maßnahmen (Hinweise bzw. “Aufklärung”) oder größere Konzepte (Data Donation Platform etc) sein.\nHalten Sie Ihre Fragen & Designideen auf einer PP-Folie fest\n\nErgebnisvorstellung (ca. 20 Min): Präsentation der Fragen & dazugehörigem Design"
-  },
-  {
-    "objectID": "content/10-data_donations/slides/index.html#literatur",
-    "href": "content/10-data_donations/slides/index.html#literatur",
-    "title": "Data Donations",
-    "section": "Literatur",
-    "text": "Literatur\n\n\nBoeschoten, L. (2022). Data donation: What is it and why is it important? https://hds.sites.uu.nl/2022/01/15/data-donation-day/\n\n\nSkatova, A., & Goulding, J. (2019). Psychology of personal data donation. PLOS ONE, 14(11), e0224240. https://doi.org/10.1371/journal.pone.0224240\n\n\n\n\n\nDigital Behavioral Data"
-  },
-  {
-    "objectID": "content/10-data_donations/slides/index.html#data-donation---nicht-neu-sondern-anders",
-    "href": "content/10-data_donations/slides/index.html#data-donation---nicht-neu-sondern-anders",
-    "title": "Data Donations",
-    "section": "Data donation - Nicht neu, sondern anders",
-    "text": "Data donation - Nicht neu, sondern anders\nData donation of digital traces\n\n\n\n\n\nData donation\n\n\n“the act of an individual actively consenting to donate their personal data for research” (Skatova & Goulding, 2019)\n\n\n\n\n\n\nDigital traces\n\n\n“One’s unique set of digital activities, actions, and communications that leave a data trace on the internet or on a computer or other digital device and can identify the particular user or device.” (Boeschoten, 2022)\n\n\n\n\n\n\n\n©️: https://myshadow.org/tracking-data-traces\n\n\n\n\n\n“Data donation” keine Neuheit –> Vorher Umfragen oder Dokument"
-  },
-  {
-    "objectID": "content/10-data_donations/slides/index.html#nicht-neu-sondern-anders",
-    "href": "content/10-data_donations/slides/index.html#nicht-neu-sondern-anders",
-    "title": "Data Donations",
-    "section": "Nicht neu, sondern anders",
-    "text": "Nicht neu, sondern anders\nData donation of digital traces\n\n\n\n\n\nData donation\n\n\n“the act of an individual actively consenting to donate their personal data for research” (Skatova & Goulding, 2019)\n\n\n\n\n\n\nDigital traces\n\n\n“One’s unique set of digital activities, actions, and communications that leave a data trace on the internet or on a computer or other digital device and can identify the particular user or device.” (Boeschoten, 2022)\n\n\n\n\n\n\n\n©️ https://myshadow.org/tracking-data-traces\n\n\n\n\n\n“Data donation” keine Neuheit –> Vorher Umfragen oder Dokument"
-  },
-  {
-    "objectID": "content/10-data_donations/slides/index.html#verfügbarkeit-durch-veränderte-rahmenbedingungen",
-    "href": "content/10-data_donations/slides/index.html#verfügbarkeit-durch-veränderte-rahmenbedingungen",
-    "title": "Data Donations",
-    "section": "Verfügbarkeit durch veränderte Rahmenbedingungen",
-    "text": "Verfügbarkeit durch veränderte Rahmenbedingungen\nGeneral Data Protection Regulation (GDPR)\n\n\n\n\n\n\nArticel 15 - Right of data access\n\n\n\n\n\n\nRight to obtain from a data controller:\n\nConfirmation whether personal data are being processed\nAccess to the personal data\nAccess to information regarding data recipients\nand sources and data derived from your personal data\n\n\n\n\n\n\n\n\n\n\n\n\nArticel 20 - Right of data portability\n\n\n\n\n\n\nGrants data subjects the right to\n\nreceive the personal data in a structured, commonly used and machine-readable format (“Data Download Package”)\ntransmit those data to another data controller"
-  },
-  {
-    "objectID": "content/10-data_donations/slides/index.html#group-1",
-    "href": "content/10-data_donations/slides/index.html#group-1",
-    "title": "Data Donations",
-    "section": "Group 1",
-    "text": "Group 1"
-  },
-  {
-    "objectID": "content/10-data_donations/slides/index.html#entwürfe-group-presntations",
-    "href": "content/10-data_donations/slides/index.html#entwürfe-group-presntations",
-    "title": "Data Donations",
-    "section": "Entwürfe Group Presntations",
-    "text": "Entwürfe Group Presntations\nGoogle Sheets Vorlagen\n\n\n\n\n\n\n\n\n\n\nBitte nutzen Sie zur Bearbeitung Link zur Präsentation der Gruppe 1"
-  },
-  {
-    "objectID": "content/10-data_donations/slides/index.html#google-slides-vorlagen",
-    "href": "content/10-data_donations/slides/index.html#google-slides-vorlagen",
-    "title": "Data Donations",
-    "section": "Google Slides Vorlagen",
-    "text": "Google Slides Vorlagen\nBitte nutzen Sie die Präsentationsvorlagen\n\n\n\n\n\n\n\n\nGruppe A\n\n\n\n\n\n\nGruppe B"
   }
 ]
