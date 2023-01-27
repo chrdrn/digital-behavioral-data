@@ -59,13 +59,13 @@ editor_options:
 ▶️
 :::
 
-# Agenda {.bg_agenda}
+# Agenda {background-image='../../../img/background_agenda.png'}
 
 1.  [Verständnis- & Diskussionsfragen]
 2.  [Group Activity]
 2.  [Beispielhafte Auswertungen]
 
-# Verständnis- & Diskussionsfragen {.bg_participation}
+# Verständnis- & Diskussionsfragen {background-image='../../../img/background_participation.png'}
 
 Ihre Fragen aus MS Teams
 
@@ -109,7 +109,7 @@ Ihre Fragen aus MS Teams
 :::
 
 
-# Group Activity {.bg_group_activity}
+# Group Activity {background-image='../../../img/background_group_activity.png'}
 
 ## Suchanfrage erstellen & Daten sammeln
 
@@ -317,9 +317,9 @@ tweets_karneval %>%
 :::
 :::
 
-# Time for questions {.bg_questions}
+# Time for questions {background-image='../../../img/background_questions.png'}
 
-# Bis zur nächsten Sitzung! {.bg_end_session .unlisted}
+# Bis zur nächsten Sitzung! {background-image='../../../img/background_end_of_session.png' .unlisted}
 
 ## Literatur
 

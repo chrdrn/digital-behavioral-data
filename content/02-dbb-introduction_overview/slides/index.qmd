@@ -56,7 +56,7 @@ csl: ../../apa.csl
 ▶️
 :::
 
-# Agenda {.bg_agenda}
+# Agenda {background-image='../../../img/background_agenda.png'}
 
 1.  [Organisation & Koordination](#orga)
 
@@ -800,7 +800,7 @@ Beispiel 1: Einige prominente Beispiele sind die Datenpanne bei Ashley Madison i
     Schließlich gibt es angesichts der Komplexität der inhärent kontextabhängigen, anwendungs- und bereichsabhängigen Verzerrungen und Probleme in sozialen Daten und Analysepipelines, die in diesem Papier behandelt werden, keine Einheitslösungen - bei der Bewertung und Bekämpfung von Verzerrungen ist Nuancierung entscheidend.
     :::
 
-# Group Activity {.bg_group_activity}
+# Group Activity {background-image='../../../img/background_group_activity.png'}
 
 Offene Fragen und Diskussion
 

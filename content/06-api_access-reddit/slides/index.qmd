@@ -59,14 +59,14 @@ bibliography: references.bib
 ▶️
 :::
 
-# Agenda {.bg_agenda}
+# Agenda {background-image='../../../img/background_agenda.png'}
 
 1.  [Group Activity]
 2.  [Beispielhafte Auswertungen]
 3.  [Verständnis- & Diskussionsfragen]
  
 
-# Group Activity {.bg_group_activity}
+# Group Activity {background-image='../../../img/background_group_activity.png'}
 
 Gruppenarbeit zu `4CAT: Capture and Analysis Toolkit`
 
@@ -333,7 +333,7 @@ musk %>%
   labs(subtitle = "Between 14-11 and 26-11-2022")
 ```
 
-# Verständnis- & Diskussionsfragen {.bg_participation}
+# Verständnis- & Diskussionsfragen {background-image='../../../img/background_participation.png'}
 
 Ihre Fragen aus MS Teams
 
@@ -367,9 +367,9 @@ Ihre Fragen aus MS Teams
 > Wie stark sind **Reddit-Date**n (evtl. auch im Vergleich zu Twitter) **generalisierbar**, wenn die Struktur von Reddit doch Diskussionen und Gespräche in gewisser Weise leitet (z.B. durch Sichtbarkeit von Themen)?
 :::
 
-# Time for questions {.bg_questions}
+# Time for questions {background-image='../../../img/background_questions.png'}
 
-# Bis zur nächsten Sitzung! {.bg_end_session .unlisted}
+# Bis zur nächsten Sitzung! {background-image='../../../img/background_end_of_session.png' .unlisted}
 
 ## Literatur
 

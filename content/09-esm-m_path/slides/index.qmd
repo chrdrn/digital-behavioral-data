@@ -56,13 +56,13 @@ bibliography: references.bib
 ▶️
 :::
 
-# Agenda {.bg_agenda}
+# Agenda {background-image='../../../img/background_agenda.png'}
 
 1.  [Verständnis- & Diskussionsfragen]
 2.  [📢️ Organisation & Koordination]
 3.  [Group Activity]
 
-# Verständnis- & Diskussionsfragen {.bg_participation}
+# Verständnis- & Diskussionsfragen {background-image='../../../img/background_participation.png'}
 
 Ihre Fragen aus MS Teams
 
@@ -152,7 +152,7 @@ Gibt es **Fragen** oder den Wunsch nach weiterer **Vertiefung** zu
 Hinweis auf Hausarbeit
 :::
 
-# Group Activity {.bg_group_activity}
+# Group Activity {background-image='../../../img/background_group_activity.png'}
 
 Gruppenarbeit zum Konzept ESM
 
@@ -224,8 +224,8 @@ Systematisierung nach [@masur2019]
 
 -   **Ergebnisvorstellung (ca. 20 Min):** Präsentation der Fragen & dazugehörigem Design
 
-# Time for questions {.bg_questions}
-# Bis zur nächsten Sitzung! {.bg_end_session .unlisted}
+# Time for questions {background-image='../../../img/background_questions.png'}
+# Bis zur nächsten Sitzung! {background-image='../../../img/background_end_of_session.png' .unlisted}
 
 ## Literatur
 

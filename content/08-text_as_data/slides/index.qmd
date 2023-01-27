@@ -61,7 +61,7 @@ bibliography: references.bib
 ⚠️Terminkonflikt
 :::
 
-# Agenda {.bg_agenda}
+# Agenda {background-image='../../../img/background_agenda.png'}
 
 1.  [A short introduction]
 2.  [Case Study: Amazon Reviews](#sec2)

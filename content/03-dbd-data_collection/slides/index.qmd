@@ -56,7 +56,7 @@ bibliography: references.bib
 ▶️
 :::
 
-# Agenda {.bg_agenda}
+# Agenda {background-image='../../../img/background_agenda.png'}
 
 1.  [Organisation & Koordination](#orga)
 2.  [Warum Digital Behavioral Data?](#sec2)
@@ -680,7 +680,7 @@ Disclaimers und Reproduzierbarkeit
 ▶️
 :::
 
-# Group Activity  {.bg_group_activity}
+# Group Activity  {background-image='../../../img/background_group_activity.png'}
 
 5 Minuten Pause, Ihre Fragen und eine Gruppenarbeit
 

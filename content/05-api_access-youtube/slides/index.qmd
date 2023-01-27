@@ -59,13 +59,13 @@ bibliography: references.bib
 ▶️
 :::
 
-# Agenda {.bg_agenda}
+# Agenda {background-image='../../../img/background_agenda.png'}
 
 1.  [Group Activity]
 2.  [Beispielhafte Auswertungen]
 3.  [Verständnis- & Diskussionsfragen]
 
-# Group Activity {.bg_group_activity}
+# Group Activity {background-image='../../../img/background_group_activity.png'}
 
 Gruppenarbeit zu `YouTube Data Tools`
 
@@ -229,7 +229,7 @@ Verschiedene Möglichkeiten, um den Code bzw. das heutige Beispiel ("live") zu r
 3.  [[Google Colab]{.smallcaps}](https://colab.research.google.com/): gehosteter Jupyter-Notebook-Dienst, der keine EInrichtung erfordertund gleichzeitig kostenlosen Zugang zu Rechenressourcen einschließlich GPUs bietet\
     [![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chrdrn/dbd_binder/blob/main/session_05-showcase_youtube.ipynb)
 
-# Verständnis- & Diskussionsfragen {.bg_participation}
+# Verständnis- & Diskussionsfragen {background-image='../../../img/background_participation.png'}
 
 Ihre Fragen aus MS Teams
 
@@ -265,9 +265,9 @@ Ihre Fragen aus MS Teams
 > YouTube besteht als Social Media Platform länger als die meisten anderen Plattformen (Twitter, Instagram, TikTok, etc.) und besitzt so gut wie weltweite Bekanntheit. Warum ist die Forschung in Richtung YouTube trotzdem so gering?
 :::
 
-# Time for questions {.bg_questions}
+# Time for questions {background-image='../../../img/background_questions.png'}
 
-# Bis zur nächsten Sitzung! {.bg_end_session .unlisted}
+# Bis zur nächsten Sitzung! {background-image='../../../img/background_end_of_session.png' .unlisted}
 
 ## Literatur
 

@@ -23,6 +23,7 @@ format:
     preview-links: auto
     logo: ../../../img/logo.png
     footer: "[Digital Behavioral Data](https://chrdrn.github.io/digital-behavioral-data/)"
+
 highlight-style: atom-one
 filters:
   - roughnotation
@@ -37,7 +38,7 @@ bibliography: references.bib
 ## Seminarplan {.smaller}
 
 | Sitzung                                                | Datum                                                           | Thema                                                                              | Referent\*Innen                                                       |
-|--------------------------------------------------------|-----------------------------------------------------------------|------------------------------------------------------------------------------------|-----------------------------------------------------------------------|
+|-----------------|-----------------|---------------------|------------------|
 | [*1*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*26.10.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*Kick-Off Session*]{.rn rn-type="strike-through" rn-color="#E6002E"}              | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
 | [*2*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*02.11.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*DBD: Einführung und Überblick*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
 | [*3*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*09.11.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*DBD: Datenerhebung*]{.rn rn-type="strike-through" rn-color="#E6002E"}            | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
@@ -57,13 +58,13 @@ bibliography: references.bib
 ▶️
 :::
 
-# Agenda {.bg_agenda}
+# Agenda {background-image="../../../img/background_agenda.png"}
 
 1.  [Verständnis- & Diskussionsfragen](#verständnis--diskussionsfragen)
 2.  [Group Activity]
 3.  [Time for questions]
 
-# Verständnis- & Diskussionsfragen {#verständnis--diskussionsfragen .bg_participation}
+# Verständnis- & Diskussionsfragen {#verständnis--diskussionsfragen background-image="../../../img/background_participation.png"}
 
 Ihre Fragen aus MS Teams
 
@@ -99,7 +100,7 @@ Ihre Fragen aus MS Teams
 > Durch die große Menge an freigegebenen Daten (gesamte SM Aktivität) im Vergleich zu z.B. einer Umfrage, müsste der Bias durch die Selbstselektion der Teilnehmer doch sehr groß sein? Die Belohnung für die Data Donation in der Studie waren 5 Euro. Für welche Belohnung wärt ihr bereit eure gesamten Social-Media-Aktivitäten zur Verfügung zu stellen?
 :::
 
-# Group Activity {.bg_group_activity}
+# Group Activity {background-image="../../../img/background_group_activity.png"}
 
 Gruppenarbeit zu Data Donations
 
@@ -213,14 +214,14 @@ Ich denke dabei beispielsweise an Teilen von Daten einer Smartwatch oder Aufzeic
 :::
 :::
 
-# Time for questions {.bg_questions}
+# Time for questions {background-image="../../../img/background_questions.png"}
 
 ::: notes
 -   Seminararbeit?
 -   Bring Your Own Research (Project)?
 :::
 
-# Bis zur nächsten Sitzung! {.bg_end_session .unlisted}
+# Bis zur nächsten Sitzung! {.unlisted background-image="../../../img/background_end_of_session.png"}
 
 ## Literatur
 

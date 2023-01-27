@@ -342,7 +342,7 @@ Bitte scannen Sie den **QR-Cod**e oder nutzen Sie folgenden **Link** und wählen
 
 -   [**Ihre Fragen?**]{.smallcaps}
 
-# Bis zur nächsten Sitzung! {.bg_end_session .unlisted}
+# Bis zur nächsten Sitzung! {background-image='../../../img/background_end_of_session.png' .unlisted}
 
 ## Literatur
 

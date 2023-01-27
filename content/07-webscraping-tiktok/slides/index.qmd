@@ -77,7 +77,7 @@ Fragen zur DBD-Analyse mit R
 -   Datengrundlage?
 :::
 
-# Verständnis- & Diskussionsfragen {.bg_participation}
+# Verständnis- & Diskussionsfragen {background-image='../../../img/background_participation.png'}
 
 Ihre Fragen aus MS Teams
 
@@ -111,7 +111,7 @@ Ihre Fragen aus MS Teams
 > Laut dem paper wird durch verschiedene video einstellungen von TikTok bereits content "geshaped". Sind biases auf TikTok dadurch stärker als bei anderen Plattformen?
 :::
 
-# Group Activity {.bg_group_activity}
+# Group Activity {background-image='../../../img/background_group_activity.png'}
 
 Gruppenarbeit zu `Zeeschuimer`
 
@@ -280,9 +280,9 @@ dfm %>% textplot_wordcloud(
   rotation = 0)
 ```
 
-# Time for questions {.bg_questions}
+# Time for questions {background-image='../../../img/background_questions.png'}
 
-# Bis zur nächsten Sitzung! {.bg_end_session .unlisted}
+# Bis zur nächsten Sitzung! {background-image='../../../img/background_end_of_session.png' .unlisted}
 
 ## Literatur
 
