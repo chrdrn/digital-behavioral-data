@@ -1,7 +1,7 @@
 ---
 title: "Kick-Off"
 title-slide-attributes:
-  data-background-image: ../../00-img/background_title.png
+  data-background-image: ../../../img/background_title.png
   data-background-color: "#04316a"
 subtitle: "Digital behavioral data"
 author: 
@@ -20,7 +20,7 @@ format:
     chalkboard:
       buttons: false
     preview-links: auto
-    logo: ../../img/logo.png
+    logo: ../../../img/logo.png
     footer: "[Digital Behavioral Data](https://chrdrn.github.io/digital-behavioral-data/)"
 comments:
   hypothesis: 
