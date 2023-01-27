@@ -1,7 +1,7 @@
 ---
 title: "Web-Scraping – TikTok" 
 title-slide-attributes:
-  data-background-image: ../../00-images/background_title.svg
+  data-background-image: ../../../img/background_title.png
   data-background-color: "#04316a"
 subtitle: "Digital behavioral data - Session 07"
 author: 
@@ -20,7 +20,7 @@ format:
     chalkboard:
       buttons: false
     preview-links: auto
-    logo: ../../logo.png
+    logo: ../../../img/logo.png
     footer: "[Digital Behavioral Data](https://chrdrn.github.io/digital-behavioral-data/)"
 highlight-style: atom-one
 comments:
@@ -61,12 +61,13 @@ bibliography: references.bib
 
 # Agenda
 
-1.  **Organisation & Koordination**
-2.  **Verständnis- und Diskussionsfragen**
-3.  **Group Activity**
-4.  **Beispielhafte Anwendungen**
+1.  [📢️ Organisation & Koordination]
+2.  [Verständnis- & Diskussionsfragen]
+3.  [Group Activity]
+4.  [Beispielhafte Auswertungen]
+5.  [Time for questions]
 
-# Organisation & Koordination {background-color="#E6002E"}
+# 📢️ Organisation & Koordination {.bg_orga}
 
 Fragen zur DBD-Analyse mit R
 
@@ -76,7 +77,7 @@ Fragen zur DBD-Analyse mit R
 -   Datengrundlage?
 :::
 
-# **Verständnis- und Diskussionsfragen** {background-color="#E6002E" background-image="../../00-images/background_participation.svg"}
+# Verständnis- & Diskussionsfragen {.bg_participation}
 
 Ihre Fragen aus MS Teams
 
@@ -110,7 +111,7 @@ Ihre Fragen aus MS Teams
 > Laut dem paper wird durch verschiedene video einstellungen von TikTok bereits content "geshaped". Sind biases auf TikTok dadurch stärker als bei anderen Plattformen?
 :::
 
-# Group Activity {background-color="#E6002E" background-image="../../00-images/background_group_activity.svg"}
+# Group Activity {.bg_group_activity}
 
 Gruppenarbeit zu `Zeeschuimer`
 
@@ -196,7 +197,7 @@ Die Erweiterung stört Sie nicht beim normalen Surfen und lädt niemals automati
 -   *Wie hoch ist die Übereinstimmung (ungefähr)?*
 :::
 
-# Beispielhafte Auswertungen {background-color="#E6002E"}
+# Beispielhafte Auswertungen {.bg_example}
 
 Im Fokus: {{< fa brands tiktok >}} Hashtag `#statistics`
 
@@ -279,9 +280,9 @@ dfm %>% textplot_wordcloud(
   rotation = 0)
 ```
 
-# Time for questions {background-color="#E6002E" background-image="../../00-images/background_questions.svg"}
+# Time for questions {.bg_questions}
 
-# Bis zur nächsten Sitzung! {background-color="#E6002E" background-image="../../00-images/background_end_of_session.svg"}
+# Bis zur nächsten Sitzung! {.bg_end_session .unlisted}
 
 ## Literatur
 

@@ -1,7 +1,7 @@
 ---
 title: "API-Access – Twitter " 
 title-slide-attributes:
-  data-background-image: ../../00-images/background_title.svg
+  data-background-image: ../../../img/background_title.png
   data-background-color: "#04316a"
 subtitle: "Digital behavioral data - Session 04"
 author: 
@@ -20,7 +20,7 @@ format:
     chalkboard:
       buttons: false
     preview-links: auto
-    logo: ../../logo.png
+    logo: ../../../img/logo.png
     footer: "[Digital Behavioral Data](https://chrdrn.github.io/digital-behavioral-data/)"
 highlight-style: atom-one
 comments:
@@ -59,14 +59,16 @@ editor_options:
 ▶️
 :::
 
-# Agenda
+# Agenda {.bg_agenda}
 
-1.  **Group Activity**
-2.  **Beispielhafte Anwendungen**
+1.  [Verständnis- & Diskussionsfragen]
+2.  [Group Activity]
+2.  [Beispielhafte Auswertungen]
 
-# Group Activity {background-color="#E6002E" background-image="../../00-images/background_group_activity.svg"}
+# Verständnis- & Diskussionsfragen {.bg_participation}
 
-Fragen & Gruppenarbeit
+Ihre Fragen aus MS Teams
+
 
 ## Vielen Dank für Ihre Fragen! {.scrollable .smaller}
 
@@ -107,6 +109,8 @@ Fragen & Gruppenarbeit
 :::
 
 
+# Group Activity {.bg_group_activity}
+
 ## Suchanfrage erstellen & Daten sammeln
 
 #### Twitter case study - Teil 1: Suchen & Sammeln
@@ -139,7 +143,7 @@ Wäheln Sie eine der folgenden Szenarien aus und erstellen Sie eine Suchanfrage 
 
     -   Welche potentielle Fragestellungen könnten Sie spontan entwickeln?
 
-# Beispielhafte Auswertungen {background-color="#E6002E"}
+# Beispielhafte Auswertungen {.bg_example}
 
 Im Fokus: `#Karneval`
 
@@ -313,9 +317,9 @@ tweets_karneval %>%
 :::
 :::
 
-# Time for questions {background-color="#E6002E" background-image="../../00-images/background_questions.svg"}
+# Time for questions {.bg_questions}
 
-# Bis zur nächsten Sitzung! {background-color="#E6002E" background-image="../../00-images/background_end_of_session.svg"}
+# Bis zur nächsten Sitzung! {.bg_end_session .unlisted}
 
 ## Literatur
 

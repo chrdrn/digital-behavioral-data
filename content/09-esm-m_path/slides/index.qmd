@@ -1,7 +1,7 @@
 ---
 title: "Experience Sampling Method" 
 title-slide-attributes:
-  data-background-image: ../../00-images/background_title.svg
+  data-background-image: ../../../img/background_title.png
   data-background-color: "#04316a"
 subtitle: "Digital behavioral data - Session 09"
 author: 
@@ -20,7 +20,7 @@ format:
     chalkboard:
       buttons: false
     preview-links: auto
-    logo: ../../logo.png
+    logo: ../../../img/logo.png
     footer: "[Digital Behavioral Data](https://chrdrn.github.io/digital-behavioral-data/)"
 highlight-style: atom-one
 filters:
@@ -56,13 +56,13 @@ bibliography: references.bib
 ▶️
 :::
 
-# Agenda
+# Agenda {.bg_agenda}
 
-1.  **Verständnis- und Diskussionsfragen**
-2.  **📢 Organisation & Koordination**
-3.  **Group Activity**
+1.  [Verständnis- & Diskussionsfragen]
+2.  [📢️ Organisation & Koordination]
+3.  [Group Activity]
 
-# **Verständnis- und Diskussionsfragen** {background-color="#E6002E" background-image="../../00-images/background_participation.svg"}
+# Verständnis- & Diskussionsfragen {.bg_participation}
 
 Ihre Fragen aus MS Teams
 
@@ -96,7 +96,7 @@ Ihre Fragen aus MS Teams
 > Laut Paper erfordern ESM-Studien die Teilnahme über einen längeren Zeitraum (1-2 Wochen) und senken dadurch die Bereitschaft der Teilnahme an solchen Studien. Wie könnte dieses Problem umgangen werden?
 :::
 
-# 📢️ Organisation & Koordination {background-color="#E6002E"}
+# 📢️ Organisation & Koordination {.bg_orga}
 
 im Fokus: Gastvortrag & BYORP
 
@@ -152,7 +152,7 @@ Gibt es **Fragen** oder den Wunsch nach weiterer **Vertiefung** zu
 Hinweis auf Hausarbeit
 :::
 
-# Group Activity {background-color="#E6002E" background-image="../../00-images/background_group_activity.svg"}
+# Group Activity {.bg_group_activity}
 
 Gruppenarbeit zum Konzept ESM
 
@@ -224,9 +224,8 @@ Systematisierung nach [@masur2019]
 
 -   **Ergebnisvorstellung (ca. 20 Min):** Präsentation der Fragen & dazugehörigem Design
 
-# Time for questions {background-color="#E6002E" background-image="../../00-images/background_questions.svg"}
-
-# Bis zur nächsten Sitzung! {background-color="#E6002E" background-image="../../00-images/background_end_of_session.svg"}
+# Time for questions {.bg_questions}
+# Bis zur nächsten Sitzung! {.bg_end_session .unlisted}
 
 ## Literatur
 

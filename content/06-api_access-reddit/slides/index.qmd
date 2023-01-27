@@ -1,7 +1,7 @@
 ---
 title: "API-Access – Reddit" 
 title-slide-attributes:
-  data-background-image: ../../00-images/background_title.svg
+  data-background-image: ../../../img/background_title.png
   data-background-color: "#04316a"
 subtitle: "Digital behavioral data - Session 06"
 author: 
@@ -20,7 +20,7 @@ format:
     chalkboard:
       buttons: false
     preview-links: auto
-    logo: ../../logo.png
+    logo: ../../../img/logo.png
     footer: "[Digital Behavioral Data](https://chrdrn.github.io/digital-behavioral-data/)"
 highlight-style: atom-one
 comments:
@@ -59,13 +59,14 @@ bibliography: references.bib
 ▶️
 :::
 
-# Agenda
+# Agenda {.bg_agenda}
 
-1.  **Group Activity**
-2.  **Beispielhafte Anwendungen**
-3.  **Verständnis- und Diskussionsfragen**
+1.  [Group Activity]
+2.  [Beispielhafte Auswertungen]
+3.  [Verständnis- & Diskussionsfragen]
+ 
 
-# Group Activity {background-color="#E6002E" background-image="../../00-images/background_group_activity.svg"}
+# Group Activity {.bg_group_activity}
 
 Gruppenarbeit zu `4CAT: Capture and Analysis Toolkit`
 
@@ -166,7 +167,7 @@ Durchsuchen Sie die Subreddits `r/news` und `r/worldnews` nach Posts zu einem be
 :::
 :::
 
-# Beispielhafte Auswertungen {background-color="#E6002E"}
+# Beispielhafte Auswertungen {.bg_example}
 
 Im Fokus: News über 🤡Elon Musk
 
@@ -332,7 +333,7 @@ musk %>%
   labs(subtitle = "Between 14-11 and 26-11-2022")
 ```
 
-# **Verständnis- und Diskussionsfragen** {background-color="#E6002E" background-image="../../00-images/background_participation.svg"}
+# Verständnis- & Diskussionsfragen {.bg_participation}
 
 Ihre Fragen aus MS Teams
 
@@ -366,9 +367,9 @@ Ihre Fragen aus MS Teams
 > Wie stark sind **Reddit-Date**n (evtl. auch im Vergleich zu Twitter) **generalisierbar**, wenn die Struktur von Reddit doch Diskussionen und Gespräche in gewisser Weise leitet (z.B. durch Sichtbarkeit von Themen)?
 :::
 
-# Time for questions {background-color="#E6002E" background-image="../../00-images/background_questions.svg"}
+# Time for questions {.bg_questions}
 
-# Bis zur nächsten Sitzung! {background-color="#E6002E" background-image="../../00-images/background_end_of_session.svg"}
+# Bis zur nächsten Sitzung! {.bg_end_session .unlisted}
 
 ## Literatur
 

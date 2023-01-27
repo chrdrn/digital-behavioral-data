@@ -1,7 +1,7 @@
 ---
 title: "API-Access – YouTube" 
 title-slide-attributes:
-  data-background-image: ../../00-images/background_title.svg
+  data-background-image: ../../../img/background_title.png
   data-background-color: "#04316a"
 subtitle: "Digital behavioral data - Session 05"
 author: 
@@ -20,7 +20,7 @@ format:
     chalkboard:
       buttons: false
     preview-links: auto
-    logo: ../../logo.png
+    logo: ../../../img/logo.png
     footer: "[Digital Behavioral Data](https://chrdrn.github.io/digital-behavioral-data/)"
 highlight-style: atom-one
 comments:
@@ -59,13 +59,13 @@ bibliography: references.bib
 ▶️
 :::
 
-# Agenda
+# Agenda {.bg_agenda}
 
-1.  **Group Activity**
-2.  **Beispielhafte Anwendungen**
-3.  **Verständnis- und Diskussionsfragen**
+1.  [Group Activity]
+2.  [Beispielhafte Auswertungen]
+3.  [Verständnis- & Diskussionsfragen]
 
-# Group Activity {background-color="#E6002E" background-image="../../00-images/background_group_activity.svg"}
+# Group Activity {.bg_group_activity}
 
 Gruppenarbeit zu `YouTube Data Tools`
 
@@ -93,7 +93,7 @@ Gruppenarbeit zu `YouTube Data Tools`
 
 5.  *Downloaden Sie die Kommentare des Videos mit Hilfe der [`Video Info`](https://tools.digitalmethods.net/netvizz/youtube/mod_video_info.php) des [YTDT](https://tools.digitalmethods.net/netvizz/youtube/index.php).*
 
-# Beispielhafte Auswertungen {background-color="#E6002E"}
+# Beispielhafte Auswertungen {.bg_example}
 
 Im Fokus: [{{< fa brands youtube >}} maiLab](https://www.youtube.com/c/maiLab)
 
@@ -229,7 +229,7 @@ Verschiedene Möglichkeiten, um den Code bzw. das heutige Beispiel ("live") zu r
 3.  [[Google Colab]{.smallcaps}](https://colab.research.google.com/): gehosteter Jupyter-Notebook-Dienst, der keine EInrichtung erfordertund gleichzeitig kostenlosen Zugang zu Rechenressourcen einschließlich GPUs bietet\
     [![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chrdrn/dbd_binder/blob/main/session_05-showcase_youtube.ipynb)
 
-# **Verständnis- und Diskussionsfragen** {background-color="#E6002E" background-image="../../00-images/background_participation.svg"}
+# Verständnis- & Diskussionsfragen {.bg_participation}
 
 Ihre Fragen aus MS Teams
 
@@ -265,9 +265,9 @@ Ihre Fragen aus MS Teams
 > YouTube besteht als Social Media Platform länger als die meisten anderen Plattformen (Twitter, Instagram, TikTok, etc.) und besitzt so gut wie weltweite Bekanntheit. Warum ist die Forschung in Richtung YouTube trotzdem so gering?
 :::
 
-# Time for questions {background-color="#E6002E" background-image="../../00-images/background_questions.svg"}
+# Time for questions {.bg_questions}
 
-# Bis zur nächsten Sitzung! {background-color="#E6002E" background-image="../../00-images/background_end_of_session.svg"}
+# Bis zur nächsten Sitzung! {.bg_end_session .unlisted}
 
 ## Literatur
 

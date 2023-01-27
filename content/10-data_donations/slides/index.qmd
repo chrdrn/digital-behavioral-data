@@ -1,7 +1,7 @@
 ---
 title: "Data Donations" 
 title-slide-attributes:
-  data-background-image: ../../00-images/background_title.svg
+  data-background-image: ../../../img/background_title.png
   data-background-color: "#04316a"
 subtitle: "Digital behavioral data - Session 10"
 author: 
@@ -11,6 +11,7 @@ author:
     affiliation-url: https://www.kowi.rw.fau.de/person/christoph-adrian/
 date: 18 01 2023
 date-format: "DD.MM.YYYY"
+
 format:
   revealjs:
     theme: ../../slidetheme.scss
@@ -20,7 +21,7 @@ format:
     chalkboard:
       buttons: false
     preview-links: auto
-    logo: ../../logo.png
+    logo: ../../../img/logo.png
     footer: "[Digital Behavioral Data](https://chrdrn.github.io/digital-behavioral-data/)"
 highlight-style: atom-one
 filters:
@@ -36,7 +37,7 @@ bibliography: references.bib
 ## Seminarplan {.smaller}
 
 | Sitzung                                                | Datum                                                           | Thema                                                                              | Referent\*Innen                                                       |
-|------------------|------------------|-------------------|------------------|
+|--------------------------------------------------------|-----------------------------------------------------------------|------------------------------------------------------------------------------------|-----------------------------------------------------------------------|
 | [*1*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*26.10.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*Kick-Off Session*]{.rn rn-type="strike-through" rn-color="#E6002E"}              | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
 | [*2*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*02.11.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*DBD: Einführung und Überblick*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
 | [*3*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*09.11.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*DBD: Datenerhebung*]{.rn rn-type="strike-through" rn-color="#E6002E"}            | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
@@ -56,12 +57,13 @@ bibliography: references.bib
 ▶️
 :::
 
-# Agenda
+# Agenda {.bg_agenda}
 
-1.  **Verständnis- und Diskussionsfragen**
-2.  **Group Activity**
+1.  [Verständnis- & Diskussionsfragen](#verständnis--diskussionsfragen)
+2.  [Group Activity]
+3.  [Time for questions]
 
-# **Verständnis- und Diskussionsfragen** {background-color="#E6002E" background-image="../../00-images/background_participation.svg"}
+# Verständnis- & Diskussionsfragen {#verständnis--diskussionsfragen .bg_participation}
 
 Ihre Fragen aus MS Teams
 
@@ -76,29 +78,28 @@ Ihre Fragen aus MS Teams
 :::
 
 ::: {.fragment .fade-in-then-semi-out fragment-index="2"}
-> Im Paper wird darüber gesprochen, dass bei den DDP’s der Prozess des Teiles vereinfacht werden sollte. Was wäre ein möglicher Weg, wie man dieses Problem lösen könnte?
+> Im Paper wird darüber gesprochen, dass bei den DDP's der Prozess des Teiles vereinfacht werden sollte. Was wäre ein möglicher Weg, wie man dieses Problem lösen könnte?
 :::
 
 ::: {.fragment .fade-in-then-semi-out fragment-index="3"}
 > In welcher Form könnten Data Donations mit anderen Datenerhebungsmethoden kombiniert werden, um noch bessere und aussagekräftigere Ergebnisse zu erlangen?
-::: 
+:::
 
 ## Let's discuss {.scrollable .smaller}
 
 ::: {.fragment .semi-fade-out fragment-index="1"}
-> Data Donations findet zeitlich vor der Analyse der Daten und über einen längeren Zeitraum statt. Ebenfalls ändern sich die Trends und auch die Apps oft sehr schnell. Besteht hier die Gefahr, dass die Daten bis zur Analyse "veralten"? 
-::: 
+> Data Donations findet zeitlich vor der Analyse der Daten und über einen längeren Zeitraum statt. Ebenfalls ändern sich die Trends und auch die Apps oft sehr schnell. Besteht hier die Gefahr, dass die Daten bis zur Analyse "veralten"?
+:::
 
 ::: {.fragment .fade-in-then-semi-out fragment-index="1"}
 > Ist der Anonymisierungsprozess der Daten, hier auch als De-Identifizierung bezeichnet die "perfekte" Lösung zur Gewährleistung des Datenschutzes? Welche Lücken gibt es?
 :::
 
 ::: {.fragment .fade-in-then-semi-out fragment-index="2"}
->  Durch die große Menge an freigegebenen Daten (gesamte SM Aktivität) im Vergleich zu z.B. einer Umfrage, müsste der Bias durch die Selbstselektion der Teilnehmer doch sehr groß sein?
-Die Belohnung für die Data Donation in der Studie waren 5 Euro. Für welche Belohnung wärt ihr bereit eure gesamten Social-Media-Aktivitäten zur Verfügung zu stellen?
+> Durch die große Menge an freigegebenen Daten (gesamte SM Aktivität) im Vergleich zu z.B. einer Umfrage, müsste der Bias durch die Selbstselektion der Teilnehmer doch sehr groß sein? Die Belohnung für die Data Donation in der Studie waren 5 Euro. Für welche Belohnung wärt ihr bereit eure gesamten Social-Media-Aktivitäten zur Verfügung zu stellen?
 :::
 
-# Group Activity {background-color="#E6002E" background-image="../../00-images/background_group_activity.svg"}
+# Group Activity {.bg_group_activity}
 
 Gruppenarbeit zu Data Donations
 
@@ -187,9 +188,8 @@ Grants data subjects the right to
 -   **Ergebnisvorstellung (ca. 20 Min):** Präsentation der Fragen & dazugehörigem Design
 
 ::: notes
-Data Donations von Instagram DDP's gibt detaillierteren Einblick in die Social-Media-Nutzung mehrerer Individuen, ist aber hinsichtlich der Analyse sehr komplex.
-Welche weiteren Anwendungsfälle gibt es für Data Donations noch? In welchem Rahmen lassen sich Data Donations skalieren?
- 
+Data Donations von Instagram DDP's gibt detaillierteren Einblick in die Social-Media-Nutzung mehrerer Individuen, ist aber hinsichtlich der Analyse sehr komplex. Welche weiteren Anwendungsfälle gibt es für Data Donations noch? In welchem Rahmen lassen sich Data Donations skalieren?
+
 Ich denke dabei beispielsweise an Teilen von Daten einer Smartwatch oder Aufzeichnung von Daten über den Fahrstil für Versicherungen.
 :::
 
@@ -213,18 +213,16 @@ Ich denke dabei beispielsweise an Teilen von Daten einer Smartwatch oder Aufzeic
 :::
 :::
 
-# Time for questions {background-color="#E6002E" background-image="../../00-images/background_questions.svg"}
+# Time for questions {.bg_questions}
 
 ::: notes
-- Seminararbeit?
-- Bring Your Own Research (Project)?
+-   Seminararbeit?
+-   Bring Your Own Research (Project)?
 :::
 
-
-# Bis zur nächsten Sitzung! {background-color="#E6002E" background-image="../../00-images/background_end_of_session.svg"}
+# Bis zur nächsten Sitzung! {.bg_end_session .unlisted}
 
 ## Literatur
 
 ::: {#refs}
 :::
-

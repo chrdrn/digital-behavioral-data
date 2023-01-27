@@ -1,7 +1,7 @@
 ---
 title: "Einführung & Überblick"
 title-slide-attributes:
-  data-background-image: ../../00-images/background_title.svg
+  data-background-image: ../../../img/background_title.png
   data-background-color: "#04316a"
 subtitle: "Digital behavioral data – Session 02"
 author: 
@@ -20,7 +20,7 @@ format:
     chalkboard:
       buttons: false
     preview-links: auto
-    logo: ../../logo.png
+    logo: ../../../img/logo.png
     footer: "[Digital Behavioral Data](https://chrdrn.github.io/digital-behavioral-data/)"
 comments:
   hypothesis: 
@@ -36,7 +36,7 @@ csl: ../../apa.csl
 ## Seminarplan {.smaller}
 
 | Sitzung                                              | Datum                                                         | Thema                                                               | Referent\*Innen                                                     |
-|------------------------------------------------------|---------------------------------------------------------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
+|------------------|------------------|------------------|------------------|
 | [1]{.rn rn-type="strike-through" rn-color="#E6002E"} | [26.10.2022]{.rn rn-type="strike-through" rn-color="#E6002E"} | [Kick-Off Session]{.rn rn-type="strike-through" rn-color="#E6002E"} | [Christoph Adrian]{.rn rn-type="strike-through" rn-color="#E6002E"} |
 | [**2**]{.rn rn-type="highlight"}                     | [**02.11.2022**]{.rn rn-type="highlight"}                     | [**DBD: Einführung und Überblick**]{.rn rn-type="highlight"}        | [**Christoph Adrian**]{.rn rn-type="highlight"}                     |
 | 3                                                    | 09.11.2022                                                    | DBD: Datenerhebung                                                  | Christoph Adrian                                                    |
@@ -56,17 +56,17 @@ csl: ../../apa.csl
 ▶️
 :::
 
-# Agenda
+# Agenda {.bg_agenda}
 
-1.  **Organisation und Koordination**
+1.  [Organisation & Koordination](#orga)
 
-2.  **A short (re-)introduction to DBD**
+2.  [A short (re-)introduction to DBD](#sec2)
 
-3.  **Herausforderungen von DBD**
+3.  [Herausforderungen von DBD](#sec3)
 
-4.  **Wichtige Rahmenbedingungen von DBD**
+4.  [Wichtige Rahmenbedingungen von DBD](#sec4)
 
-5.  **Group Activity**
+5.  [Group Activity]
 
 ::: notes
 -   Basistext als Einführung, zusätzliche Inhalte im Seminar
@@ -76,7 +76,7 @@ csl: ../../apa.csl
 -   Feedback zu Fragen in Group Activity
 :::
 
-# Organisation & Koordination {background-color="#E6002E"}
+# Organisation & Koordination {#orga .bg_orga}
 
 Fragen, MS Teams & alternativer Seminarplan
 
@@ -95,7 +95,7 @@ Fragen, MS Teams & alternativer Seminarplan
 ## Vorschlag: Alternativer Seminarplan {.smaller}
 
 | Sitzung         | Datum                                                     | Thema                                                                | Referent\*Innen                                     |
-|-----------------|-----------------------------------------------------------|----------------------------------------------------------------------|-----------------------------------------------------|
+|------------------|------------------|--------------------|------------------|
 | 1               | 26.10.2022                                                | Kick-Off Session                                                     | Christoph Adrian                                    |
 | [2]{.smallcaps} | [02.11.2022]{.smallcaps}                                  | [DBD: Einführung und Überblick]{.smallcaps}                          | [Christoph Adrian]{.smallcaps}                      |
 | 3               | 09.11.2022                                                | DBD: Datenerhebung                                                   | Christoph Adrian                                    |
@@ -115,7 +115,7 @@ Fragen, MS Teams & alternativer Seminarplan
 ▶️
 :::
 
-# A short (re-)introduction {background-color="#E6002E"}
+# A short (re-)introduction {#sec2 background-color="#E6002E"}
 
 Was sind *digital behavior data*?
 
@@ -244,7 +244,7 @@ Zur erfolgreichen Nutzung müssen [Forschungsziele & verfügbare Daten in Einkla
 ▶️
 :::
 
-# Herausforderungen von DBD {background-color="#E6002E"}
+# Herausforderungen von DBD {#sec3 background-color="#E6002E"}
 
 Der Umgang mit Biases, methodischen Tücken und ethischen Einschränkungen
 
@@ -621,7 +621,7 @@ Probleme:
 
 <!--# Obere Box markieren/hervorheben! -->
 
-# Wichtige Rahmenbedingungen von DBD {background-color="#E6002E"}
+# Wichtige Rahmenbedingungen von DBD {#sec4 background-color="#E6002E"}
 
 Ethik & Recht im Fokus
 
@@ -800,7 +800,7 @@ Beispiel 1: Einige prominente Beispiele sind die Datenpanne bei Ashley Madison i
     Schließlich gibt es angesichts der Komplexität der inhärent kontextabhängigen, anwendungs- und bereichsabhängigen Verzerrungen und Probleme in sozialen Daten und Analysepipelines, die in diesem Papier behandelt werden, keine Einheitslösungen - bei der Bewertung und Bekämpfung von Verzerrungen ist Nuancierung entscheidend.
     :::
 
-# Group Activity  {background-color="#E6002E" background-image="../../00-images/background_group_activity.svg"}
+# Group Activity {.bg_group_activity}
 
 Offene Fragen und Diskussion
 

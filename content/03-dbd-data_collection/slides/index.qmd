@@ -1,7 +1,7 @@
 ---
 title: "Datenerhebung im Fokus" 
 title-slide-attributes:
-  data-background-image: ../../00-images/background_title.svg
+  data-background-image: ../../../img/background_title.png
   data-background-color: "#04316a"
 subtitle: "Digital behavioral data - Session 03"
 author: 
@@ -20,7 +20,7 @@ format:
     chalkboard:
       buttons: false
     preview-links: auto
-    logo: ../../logo.png
+    logo: ../../../img/logo.png
     footer: "[Digital Behavioral Data](https://chrdrn.github.io/digital-behavioral-data/)"
 comments:
   hypothesis: 
@@ -56,15 +56,15 @@ bibliography: references.bib
 ▶️
 :::
 
-# Agenda
+# Agenda {.bg_agenda}
 
-1.  **Organisation & Koordination**
-2.  **Warum Digital Behavioral Data?**
-3.  **Wie kommen wir an DBD?**
-4.  **Mehr Daten, mehr Probleme**
-5.  **Group Activity**
+1.  [Organisation & Koordination](#orga)
+2.  [Warum Digital Behavioral Data?](#sec2)
+3.  [Wie kommen wir an DBD?](#sec3 )
+4.  [Mehr Daten, mehr Probleme](#sec4)
+5.  [Group Activity]
 
-# Organisation & Koordination {background-color="#E6002E"}
+# Organisation & Koordination {#orga .bg_orga}
 
 Hinweis zu den Präsentationen
 
@@ -108,7 +108,7 @@ Kriterien:
 -   Extra: Bezug zur Kommunikationswissenschaft
 :::
 
-# Warum Digital Behavior Data? {background-color="#E6002E"}
+# Warum Digital Behavior Data? {#sec2 background-color="#E6002E"}
 
 Beispielhafte Nutzungsszenarien
 
@@ -181,7 +181,7 @@ Beachten Sie die der [Art und Weise]{.rn rn-type="highlight"}, wie Sie die Daten
 ▶️
 :::
 
-# Wie kommen wir an DBD? {background-color="#E6002E"}
+# Wie kommen wir an DBD? {#sec3 background-color="#E6002E"}
 
 Web Scraping & Web APIs
 
@@ -460,7 +460,7 @@ Immer häufiger auch für die gezielte [Bereitstellung von Daten]{.rn rn-type="h
 Der Zweck von APIs ist die Kommunikation zwischen Programmen zu koordinieren, nicht die Bereitstellung von Daten für Wissenschaft.
 :::
 
-# Mehr Daten, mehr Probleme {background-color="#E6002E"}
+# Mehr Daten, mehr Probleme {#sec4 background-color="#E6002E"}
 
 Daten, Datenquellen und Erhebungsdesigns als Quelle von Bias
 
@@ -680,7 +680,7 @@ Disclaimers und Reproduzierbarkeit
 ▶️
 :::
 
-# Group Activity  {background-color="#E6002E" background-image="../../00-images/background_group_activity.svg"}
+# Group Activity  {.bg_group_activity}
 
 5 Minuten Pause, Ihre Fragen und eine Gruppenarbeit
 

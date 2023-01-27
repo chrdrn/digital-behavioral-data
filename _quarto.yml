@@ -6,7 +6,7 @@ render:
   - index.qmd
 
 website:
-  favicon: "images/logo_fau_red.svg"
+  favicon: "img/logo_fau_red.svg"
   page-navigation: true
   title: "Digital behavioral data"
   description: "Homepage for Digital behavior data at Friedrich-Alexander-Universtität Erlangen-Nürnberg, Winter semester 2022/23."
@@ -21,7 +21,7 @@ website:
    right: "This page is built with [Quarto](https://quarto.org/)."
   
   sidebar:
-    logo: "images/dbd_hex.png"
+    logo: "img/dbd_hex.png"
     tools: 
     - icon: globe
       href: https://www.kommunikationswissenschaft.rw.fau.de/lehre/master/digital-behavioral-data/
@@ -75,6 +75,9 @@ website:
       - section: "Data Donations"
         contents:
           - "content/10-data_donations/10-slides.qmd"
+      - section: "Guest Lecture"
+        contents:
+          - "content/11-guest_lecture/11-slides.qmd"
           
 format:
   html:

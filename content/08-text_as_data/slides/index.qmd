@@ -1,7 +1,7 @@
 ---
 title: "Text as data" 
 title-slide-attributes:
-  data-background-image: ../../00-images/background_title.svg
+  data-background-image: ../../../img/background_title.png
   data-background-color: "#04316a"
 subtitle: "Digital behavioral data - Extra session"
 author: 
@@ -20,7 +20,7 @@ format:
     chalkboard:
       buttons: false
     preview-links: auto
-    logo: ../../logo.png
+    logo: ../../../img/logo.png
     footer: "[Digital Behavioral Data](https://chrdrn.github.io/digital-behavioral-data/)"
 highlight-style: atom-one
 comments:
@@ -39,7 +39,7 @@ bibliography: references.bib
 ## Seminarplan {.smaller}
 
 | Sitzung                                                | Datum                                                           | Thema                                                                              | Referent\*Innen                                                       |
-|------------------|------------------|-------------------|------------------|
+|--------------------------------------------------------|-----------------------------------------------------------------|------------------------------------------------------------------------------------|-----------------------------------------------------------------------|
 | [*1*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*26.10.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*Kick-Off Session*]{.rn rn-type="strike-through" rn-color="#E6002E"}              | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
 | [*2*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*02.11.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*DBD: Einführung und Überblick*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
 | [*3*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*09.11.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*DBD: Datenerhebung*]{.rn rn-type="strike-through" rn-color="#E6002E"}            | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
@@ -61,13 +61,14 @@ bibliography: references.bib
 ⚠️Terminkonflikt
 :::
 
-# Agenda
+# Agenda {.bg_agenda}
 
-1.  **A short introduction**
-2.  **Case Study: Amazon Reviews**
-3.  ☕ **Kursevluation**
-4.  **Sentiment Analysis**
-5.  **Topic Modeling**
+1.  [A short introduction]
+2.  [Case Study: Amazon Reviews](#sec2)
+3.  [☕ Kursevluation]
+4.  [Text processing]
+5.  [Sentiment Analyse]
+6.  [Topic Modeling]
 
 # A short introduction {background-color="#E6002E"}
 
@@ -103,7 +104,7 @@ im Fokus: *Text as data*
 
 ![](images/text_as_data_methods.png){fig-align="center"}
 
-# Case study: {{< fa brands amazon >}} Reviews {background-color="#E6002E"}
+# Case study: {{< fa brands amazon >}} Reviews {#sec2 background-color="#E6002E"}
 
 🕵️ ⭐⭐⭐⭐⭐
 
@@ -441,7 +442,7 @@ amazon$data$de_senti %>%
 Valence = average valence of document, based on a dictionary whose values have numeric valence scores.
 :::
 
-## Ein großes "... , ABER ... "
+## Ein großes "... , ABER ..."
 
 #### Kritische Anmerkungen zur Sentimentanalyse
 
