@@ -1,0 +1,126 @@
+---
+title: "Bring Your Own Research (Project)" 
+title-slide-attributes:
+  data-background-image: ../../../img/background_title.png
+  data-background-color: "#04316a"
+subtitle: "Digital behavioral data - Session 12"
+author: 
+  - name: Christoph Adrian 
+    url: https://twitter.com/chrdrn
+    affiliation: Lehrstuhl für Kommunikationswissenschaft
+    affiliation-url: https://www.kowi.rw.fau.de/person/christoph-adrian/
+date: 01 02 2023
+date-format: "DD.MM.YYYY"
+format:
+  revealjs:
+    theme: ../../slidetheme.scss
+    template-partials:
+      - title-slide.html
+    slide-number: true
+    chalkboard:
+      buttons: false
+    preview-links: auto
+    logo: ../../../img/logo.png
+    footer: "[Digital Behavioral Data](https://chrdrn.github.io/digital-behavioral-data/)"
+highlight-style: atom-one
+filters:
+  - roughnotation
+execute:
+  echo: true
+csl: ../../apa.csl
+editor_options: 
+  chunk_output_type: console
+---
+
+## Seminarplan {.smaller}
+
+| Sitzung                                                | Datum                                                           | Thema                                                                                                           | Referent\*Innen                                                       |
+|------------------|------------------|--------------------|------------------|
+| [*1*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*26.10.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*Kick-Off Session*]{.rn rn-type="strike-through" rn-color="#E6002E"}                                           | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
+| [*2*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*02.11.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*DBD: Einführung und Überblick*]{.rn rn-type="strike-through" rn-color="#E6002E"}                              | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
+| [*3*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*09.11.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*DBD: Datenerhebung*]{.rn rn-type="strike-through" rn-color="#E6002E"}                                         | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
+| [*4*]{.rn rn-type="highlight"}                         | [*16.11.2022*]{.rn rn-type="highlight"}                         | [*API-Access (I): Twitter*]{.rn rn-type="highlight"}                                                            | [*Falk*]{.rn rn-type="highlight"}                                     |
+| *5*                                                    | *23.11.2022*                                                    | *API-Access (II): YouTube*                                                                                      | *Denisov*                                                             |
+| 6                                                      | 30.11.2022                                                      | API-Access (II): *Reddit*                                                                                       | Landauer                                                              |
+| 7                                                      | 07.12.2022                                                      | Webscraping: *TikTok*                                                                                           | Brand & Kocher                                                        |
+| 8                                                      | 14.12.2022                                                      | Text as data                                                                                                    | Christoph Adrian                                                      |
+|                                                        |                                                                 | *WEIHNACHTSPAUSE*                                                                                               |                                                                       |
+| 9                                                      | 11.01.2023                                                      | ESM: *m-path*                                                                                                   | Dörr                                                                  |
+| 10                                                     | 18.01.2023                                                      | Data Donations                                                                                                  | Hofmann & Wierzbicki                                                  |
+| 11                                                     | 25.01.2023                                                      | Guest Lecture: Linking DBD & Survey data                                                                        | [Johannes Breuer](https://www.johannesbreuer.com/)                    |
+| **12**                                                 | **02.02.2023**                                                  | [**B**]{.underline}**ring [Y]{.underline}our [O]{.underline}wn [R]{.underline}esearch ([P]{.underline}roject)** | **Christoph Adrian**                                                  |
+| 13                                                     | 08.02.2023                                                      | Semesterabschluss & Evaluation                                                                                  | Christoph Adrian                                                      |
+
+::: notes
+▶️
+:::
+
+# Agenda {background-image="../../../img/background_agenda.png"}
+
+1.  [Group Activity]
+2.  [Time for questions]
+
+# Group Activity {background-image="../../../img/background_group_activity.png"}
+
+Let's have a look at your research ideas
+
+## What are you planning to do?
+
+#### Präsentationserstellung (ca. 15 Min.) & Elaborated Elevator Pitch (ca. 5 Min) 
+
+-   **Erstellen Sie eine kurze Präsentation (max. 4 Slides) Ihrer Idee (ca 15 Min.):**
+
+    -   Orientieren Sie sich an den **Hinweisen** aus dem **Syllabus:**
+
+        -   "Titel" bzw. kurze Zusammenfassung Ihrer Forschungs-/Projektidee.
+
+        -   Was ist der Hintergrund Ihres Projektes? Warum ist es relevant?
+
+        -   (Optional) Wie ist der aktuelle Forschungsstand? Was ist die theoretische Basis?
+
+        -   Wie planen Sie (methodisch) vorzugehen?
+
+-   **Ergebnisvorstellung (ca. 5 Min):**
+
+    -   Kurze Präsentation mit anschließendem Feedback & Diskussion
+
+## Google Slides Vorlagen
+
+#### Bitte nutzen Sie die Präsentationsvorlagen
+
+::: columns
+::: {.column width="30%"}
+![](img/google_slides.svg){width="200"}
+:::
+
+::: {.column width="70%"}
+Bitte wählen Sie die Ihnen zugewiesene Gruppe aus:
+
+-   [Projekt A](https://docs.google.com/presentation/d/1hI-XfLxWw2CskZg5xVQXsv8lC9mhUEMu5vMKy0v7UvE/edit?usp=sharing)
+
+-   [Projekt B](https://docs.google.com/presentation/d/1DiS5TXKQLJS0VhdFuL4zDiFRGHtp67Roi3ZW4RiFWEo/edit?usp=sharing)
+
+-   [Projekt C](https://docs.google.com/presentation/d/1dXZUdiHYo1OroSWUEp6li7C2zN95n8VICck1F5dNxDQ/edit?usp=sharing)
+
+-   [Projekt D](https://docs.google.com/presentation/d/1R-pNipBrlt0za_S4HlrltEYb8q_NdAWBuJftLA0X0nE/edit?usp=sharing)
+
+-   [Projekt E](https://docs.google.com/presentation/d/1J4idjvbRrT71djRNdE61rJauOqyS6Zs8PXl0mRWG8TY/edit?usp=sharing)
+
+-   [Projekt F](https://docs.google.com/presentation/d/1H1UwVbDZQS3x-okW5t3K7V9CpCmNkMOIcLjGuv9a8bo/edit?usp=sharing)
+
+-   [Projekt G](https://docs.google.com/presentation/d/1Od4yH1v0NpJlzghv8tP5V-AKtXGVnG9plEQlLOTChPY/edit?usp=sharing)
+
+-   [Projekt H](https://docs.google.com/presentation/d/1BR9nYNhOoE1aJksxOqXS3cdsTmR1_Zr1HgwaO97vMME/edit?usp=sharing)
+:::
+:::
+
+# Time for questions {background-image="../../../img/background_questions.png"}
+
+::: notes
+-   Seminararbeit?
+-   Bring Your Own Research (Project)?
+:::
+
+# Bis zur nächsten Sitzung! {.unlisted background-image="../../../img/background_end_of_session.png"}
+
+## 

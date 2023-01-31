@@ -78,6 +78,9 @@ website:
       - section: "Guest Lecture"
         contents:
           - "content/11-guest_lecture/11-slides.qmd"
+      - section: "B.Y.O.R.P."
+        contents:
+          - "content/12-byorp/12-slides.qmd"
           
 format:
   html:
