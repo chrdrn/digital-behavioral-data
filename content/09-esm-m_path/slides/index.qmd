@@ -96,7 +96,7 @@ Ihre Fragen aus MS Teams
 > Laut Paper erfordern ESM-Studien die Teilnahme über einen längeren Zeitraum (1-2 Wochen) und senken dadurch die Bereitschaft der Teilnahme an solchen Studien. Wie könnte dieses Problem umgangen werden?
 :::
 
-# 📢️ Organisation & Koordination {.bg_orga}
+# 📢️ Organisation & Koordination {background-image='../../../img/background_orga.png'}
 
 im Fokus: Gastvortrag & BYORP
 

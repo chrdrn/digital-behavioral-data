@@ -76,7 +76,7 @@ csl: ../../apa.csl
 -   Feedback zu Fragen in Group Activity
 :::
 
-# Organisation & Koordination {#orga .bg_orga}
+# Organisation & Koordination {#orga background-image='../../../img/background_orga.png'}
 
 Fragen, MS Teams & alternativer Seminarplan
 

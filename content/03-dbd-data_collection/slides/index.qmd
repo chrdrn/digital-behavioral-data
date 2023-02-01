@@ -64,7 +64,7 @@ bibliography: references.bib
 4.  [Mehr Daten, mehr Probleme](#sec4)
 5.  [Group Activity]
 
-# Organisation & Koordination {#orga .bg_orga}
+# Organisation & Koordination {#orga background-image='../../../img/background_orga.png'}
 
 Hinweis zu den Präsentationen
 

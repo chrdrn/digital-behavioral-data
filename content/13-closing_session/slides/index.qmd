@@ -1,0 +1,107 @@
+---
+title: "Bring Your Own Research (Project)" 
+title-slide-attributes:
+  data-background-image: ../../../img/background_title.png
+  data-background-color: "#04316a"
+subtitle: "Digital behavioral data - Session 12"
+author: 
+  - name: Christoph Adrian 
+    url: https://twitter.com/chrdrn
+    affiliation: Lehrstuhl für Kommunikationswissenschaft
+    affiliation-url: https://www.kowi.rw.fau.de/person/christoph-adrian/
+date: 01 02 2023
+date-format: "DD.MM.YYYY"
+format:
+  revealjs:
+    theme: ../../slidetheme.scss
+    template-partials:
+      - title-slide.html
+    slide-number: true
+    chalkboard:
+      buttons: false
+    preview-links: auto
+    logo: ../../../img/logo.png
+    footer: "[Digital Behavioral Data](https://chrdrn.github.io/digital-behavioral-data/)"
+highlight-style: atom-one
+filters:
+  - roughnotation
+execute:
+  echo: true
+csl: ../../apa.csl
+editor_options: 
+  chunk_output_type: console
+---
+
+## Seminarplan {.smaller}
+
+| Sitzung                                                | Datum                                                           | Thema                                                                                                   | Referent\*Innen                                                       |
+|------------------|------------------|-------------------|------------------|
+| [*1*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*26.10.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*Kick-Off Session*]{.rn rn-type="strike-through" rn-color="#E6002E"}                                   | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
+| [*2*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*02.11.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*DBD: Einführung und Überblick*]{.rn rn-type="strike-through" rn-color="#E6002E"}                      | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
+| [*3*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*09.11.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*DBD: Datenerhebung*]{.rn rn-type="strike-through" rn-color="#E6002E"}                                 | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
+| [*4*]{.rn rn-type="highlight"}                         | [*16.11.2022*]{.rn rn-type="highlight"}                         | [*API-Access (I): Twitter*]{.rn rn-type="highlight"}                                                    | [*Falk*]{.rn rn-type="highlight"}                                     |
+| *5*                                                    | *23.11.2022*                                                    | *API-Access (II): YouTube*                                                                              | *Denisov*                                                             |
+| 6                                                      | 30.11.2022                                                      | API-Access (II): *Reddit*                                                                               | Landauer                                                              |
+| 7                                                      | 07.12.2022                                                      | Webscraping: *TikTok*                                                                                   | Brand & Kocher                                                        |
+| 8                                                      | 14.12.2022                                                      | Text as data                                                                                            | Christoph Adrian                                                      |
+|                                                        |                                                                 | *WEIHNACHTSPAUSE*                                                                                       |                                                                       |
+| 9                                                      | 11.01.2023                                                      | ESM: *m-path*                                                                                           | Dörr                                                                  |
+| 10                                                     | 18.01.2023                                                      | Data Donations                                                                                          | Hofmann & Wierzbicki                                                  |
+| 11                                                     | 25.01.2023                                                      | Guest Lecture: Linking DBD & Survey data                                                                | [Johannes Breuer](https://www.johannesbreuer.com/)                    |
+| 12                                                     | 02.02.2023                                                      | [B]{.underline}ring [Y]{.underline}our [O]{.underline}wn [R]{.underline}esearch ([P]{.underline}roject) | Christoph Adrian                                                      |
+| **13**                                                 | **08.02.2023**                                                  | **Semesterabschluss & Evaluation**                                                                      | **Christoph Adrian**                                                  |
+
+::: notes
+▶️
+:::
+
+# Agenda {background-image="../../../img/background_agenda.png"}
+
+1.  Evaluation (👍\|👎)
+2.   \[📢️ Organisation & Koordination\]
+3.  [(Last) Time for questions]
+
+# Evaluation (👍\|👎)
+
+Ergebnisse & offene Fragen
+
+## Betreuung und Veranstaltungskonzept
+
+#### FAU Lehrevaluation 1️⃣ \| 5️⃣
+
+![](img/eval_01.png)
+
+-   Wie beurteilen Sie die (hauptsächliche) Bereitstellung der Sitzungsinhalte über die Github-Page?
+
+-   Wie fanden Sie das Konzept der **Showcases**? Wie war deren Schwierigkeit? Welche Plattform würden Sie für die Zukunft empfehlen?
+
+::: notes
+-   Betreuung (besonders Feedback) wird gelobt
+
+-   Bereitstellung der Materialen über Teams
+
+TODO: Inkrementelle Einblendung der Fragen
+:::
+
+## Interaktivität und Lernstandsüberprüfung
+
+#### FAU Lehrevaluation 2️⃣ \| 5️⃣
+
+![](img/eval_02.png)
+
+# 📢️ Organisation & Koordination {background-image="../../../img/background_group_activity.png"}
+
+Seminararbeit
+
+## 
+
+# (Last) Time for questions {background-image="../../../img/background_questions.png"}
+
+::: notes
+-   Seminararbeit?
+-   Bring Your Own Research (Project)?
+:::
+
+# Bis zur nächsten Sitzung! {.unlisted background-image="../../../img/background_end_of_session.png"}
+
+## 

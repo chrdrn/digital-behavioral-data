@@ -67,7 +67,7 @@ bibliography: references.bib
 4.  [Beispielhafte Auswertungen]
 5.  [Time for questions]
 
-# 📢️ Organisation & Koordination {.bg_orga}
+# 📢️ Organisation & Koordination {background-image='../../../img/background_orga.png'}
 
 Fragen zur DBD-Analyse mit R
 
