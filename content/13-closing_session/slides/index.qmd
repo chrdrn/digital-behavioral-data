@@ -58,7 +58,7 @@ editor_options:
 # Agenda {background-image="../../../img/background_agenda.png"}
 
 1.  Evaluation (👍\|👎)
-2.   \[📢️ Organisation & Koordination\]
+2.  \[📢️ Organisation & Koordination\]
 3.  [(Last) Time for questions]
 
 # Evaluation (👍\|👎)
@@ -73,8 +73,6 @@ Ergebnisse & offene Fragen
 
 -   Wie beurteilen Sie die (hauptsächliche) Bereitstellung der Sitzungsinhalte über die Github-Page?
 
--   Wie fanden Sie das Konzept der **Showcases**? Wie war deren Schwierigkeit? Welche Plattform würden Sie für die Zukunft empfehlen?
-
 ::: notes
 -   Betreuung (besonders Feedback) wird gelobt
 
@@ -88,6 +86,46 @@ TODO: Inkrementelle Einblendung der Fragen
 #### FAU Lehrevaluation 2️⃣ \| 5️⃣
 
 ![](img/eval_02.png)
+
+-   Warum wenig Interaktivität?
+
+-   Nützlichkeit der Basistexte?
+
+::: notes
+wenig Interaktivität, weil: zu dominant? zu wenig interessant?
+:::
+
+## Forschungs- und Praxisbezug
+
+#### FAU Lehrevaluation 3️⃣ \| 5️⃣
+
+![](img/eval_03.png)
+
+-   Wie fanden Sie das Konzept der **Showcases**? Wie war deren Schwierigkeit? Welche Plattform würden Sie für die Zukunft empfehlen?
+
+-   Wie fanden Sie den Gastvortrag?
+
+::: notes
+TODO: Inkrementelle Einblendung der Fragen
+:::
+
+## Schwierigkeit und Umfang
+
+#### FAU Lehrevaluation 4️⃣ \| 5️⃣
+
+![](img/eval_04.png)
+
+-   Welche Hinweise (mit Blick auf das Vorwissen) wären hilfreich gewesen?
+
+::: notes
+1.  Empirisches Arbeiten? Coding? ...
+:::
+
+## Globale Veranstaltungsbeurteilung
+
+#### FAU Lehrevaluation 5️⃣ \| 5️⃣
+
+![](img/eval_05_edit.png)
 
 # 📢️ Organisation & Koordination {background-image="../../../img/background_group_activity.png"}
 
