@@ -58,8 +58,8 @@ editor_options:
 # Agenda {background-image="../../../img/background_agenda.png"}
 
 1.  [Zusammenfassung]
-2.  [Evaluation (👍\|👎)]
-3.  [📢️ Organisation & Koordination]
+2.  [Evaluation (👍\|👎)](#evaluation)
+3.  [📢️ Organisation & Koordination](#organisation-koordination)
 4.  [(Last) Time for questions]
 
 # Zusammenfassung
@@ -104,7 +104,7 @@ Verschiedene Arten von Verhaltensdaten, mit Hilfe verschiedener Tools für versc
 -   Offene Fragen & Anmerkungen?
 :::
 
-# Evaluation (👍\|👎) {background-image="../../../img/background_evaluation.png"}
+# Evaluation (👍\|👎) {#evaluation background-image="../../../img/background_evaluation.png"}
 
 Ergebnisse & offene Fragen
 
@@ -174,7 +174,7 @@ TODO: Inkrementelle Einblendung der Fragen
 Danke für Feedback, danke für die Diskussionen (wenn auch eher im kleinen als in der Runde)
 :::
 
-# 📢️ Organisation & Koordination {background-image="../../../img/background_group_activity.png"}
+# 📢️ Organisation & Koordination {#organisation-koordination background-image="../../../img/background_group_activity.png"}
 
 Seminararbeit
 
@@ -194,7 +194,7 @@ Seminararbeit
 
 -   **Vorlage** wird zur Verfügung gestellt
 
--   Abgabe über Teams -- **Deadline: 03.03.2023, 23:59**
+-   Abgabe via Mail an <a href="mailto:christoph.adrian@fau.de?subject=Term paper submission">christoph.adrian\@fau.de</a> -- **Deadline: 03.03.2023, 23:59**
 
 # (Last) Time for questions {background-image="../../../img/background_questions.png"}
 
