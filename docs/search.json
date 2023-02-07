@@ -1612,28 +1612,70 @@
   {
     "objectID": "content/13-closing_session/slides/index.html#seminarplan",
     "href": "content/13-closing_session/slides/index.html#seminarplan",
-    "title": "Bring Your Own Research (Project)",
+    "title": "Semesterabschluss & Evaluation",
     "section": "Seminarplan",
     "text": "Seminarplan\n\n\n\nSitzung\nDatum\nThema\nReferent*Innen\n\n\n\n\n1\n26.10.2022\nKick-Off Session\nChristoph Adrian\n\n\n2\n02.11.2022\nDBD: Einführung und Überblick\nChristoph Adrian\n\n\n3\n09.11.2022\nDBD: Datenerhebung\nChristoph Adrian\n\n\n4\n16.11.2022\nAPI-Access (I): Twitter\nFalk\n\n\n5\n23.11.2022\nAPI-Access (II): YouTube\nDenisov\n\n\n6\n30.11.2022\nAPI-Access (II): Reddit\nLandauer\n\n\n7\n07.12.2022\nWebscraping: TikTok\nBrand & Kocher\n\n\n8\n14.12.2022\nText as data\nChristoph Adrian\n\n\n\n\nWEIHNACHTSPAUSE\n\n\n\n9\n11.01.2023\nESM: m-path\nDörr\n\n\n10\n18.01.2023\nData Donations\nHofmann & Wierzbicki\n\n\n11\n25.01.2023\nGuest Lecture: Linking DBD & Survey data\nJohannes Breuer\n\n\n12\n02.02.2023\nBring Your Own Research (Project)\nChristoph Adrian\n\n\n13\n08.02.2023\nSemesterabschluss & Evaluation\nChristoph Adrian\n\n\n\n\n▶️"
   },
   {
+    "objectID": "content/13-closing_session/slides/index.html#what-why-and-how",
+    "href": "content/13-closing_session/slides/index.html#what-why-and-how",
+    "title": "Semesterabschluss & Evaluation",
+    "section": "What, why and how?",
+    "text": "What, why and how?\nDigitale Verhaltensdaten im Fokus\n\n\n\n\n\n\n\n\nVerschiedene Arten von Verhaltensdaten, mit Hilfe verschiedener Tools für verschiedene Zwecke"
+  },
+  {
+    "objectID": "content/13-closing_session/slides/index.html#students-will",
+    "href": "content/13-closing_session/slides/index.html#students-will",
+    "title": "Semesterabschluss & Evaluation",
+    "section": "“Students will …”",
+    "text": "“Students will …”\nLernziele des Kurses\n\noverview and understand central opportunities of DBD and accompanying challenges for data collection and preprocessing\nevaluate the strengths and weaknesses of different ways of collecting DBD\nget to know and understand central requirements for data protection, research ethics, and data quality\nget to know and overview key computational social science methods to analyze DBD\npractice and apply knowledge on DBD, statistics, and data analysis in small projects of their own\n\n\n\nBewertung?\nOffene Fragen & Anmerkungen?"
+  },
+  {
     "objectID": "content/13-closing_session/slides/index.html#betreuung-und-veranstaltungskonzept",
     "href": "content/13-closing_session/slides/index.html#betreuung-und-veranstaltungskonzept",
-    "title": "Bring Your Own Research (Project)",
+    "title": "Semesterabschluss & Evaluation",
     "section": "Betreuung und Veranstaltungskonzept",
-    "text": "Betreuung und Veranstaltungskonzept\nFAU Lehrevaluation 1️⃣ | 5️⃣\n\n\nWie beurteilen Sie die (hauptsächliche) Bereitstellung der Sitzungsinhalte über die Github-Page?\nWie fanden Sie das Konzept der Showcases? Wie war deren Schwierigkeit? Welche Plattform würden Sie für die Zukunft empfehlen?\n\n\n\nBetreuung (besonders Feedback) wird gelobt\nBereitstellung der Materialen über Teams\n\nTODO: Inkrementelle Einblendung der Fragen"
+    "text": "Betreuung und Veranstaltungskonzept\nFAU Lehrevaluation 1️⃣ | 5️⃣\n\n\nWie beurteilen Sie die (hauptsächliche) Bereitstellung der Sitzungsinhalte über eine Github-Page?\n\n\n\nBetreuung (besonders Feedback) wird gelobt\nBereitstellung der Materialen über Teams\n\nTODO: Inkrementelle Einblendung der Fragen"
   },
   {
     "objectID": "content/13-closing_session/slides/index.html#interaktivität-und-lernstandsüberprüfung",
     "href": "content/13-closing_session/slides/index.html#interaktivität-und-lernstandsüberprüfung",
-    "title": "Bring Your Own Research (Project)",
+    "title": "Semesterabschluss & Evaluation",
     "section": "Interaktivität und Lernstandsüberprüfung",
-    "text": "Interaktivität und Lernstandsüberprüfung\nFAU Lehrevaluation 2️⃣ | 5️⃣"
+    "text": "Interaktivität und Lernstandsüberprüfung\nFAU Lehrevaluation 2️⃣ | 5️⃣\n\n\nWarum wenig Interaktivität?\nNützlichkeit der Basistexte?\n\n\nwenig Interaktivität, weil: zu dominant? zu wenig interessant?"
   },
   {
-    "objectID": "content/13-closing_session/slides/index.html#section-1",
-    "href": "content/13-closing_session/slides/index.html#section-1",
-    "title": "Bring Your Own Research (Project)",
+    "objectID": "content/13-closing_session/slides/index.html#forschungs--und-praxisbezug",
+    "href": "content/13-closing_session/slides/index.html#forschungs--und-praxisbezug",
+    "title": "Semesterabschluss & Evaluation",
+    "section": "Forschungs- und Praxisbezug",
+    "text": "Forschungs- und Praxisbezug\nFAU Lehrevaluation 3️⃣ | 5️⃣\n\n\nWie fanden Sie das Konzept der Showcases? Wie war deren Schwierigkeit? Welche Plattform würden Sie für die Zukunft empfehlen?\nWie fanden Sie den Gastvortrag?\n\n\nTODO: Inkrementelle Einblendung der Fragen"
+  },
+  {
+    "objectID": "content/13-closing_session/slides/index.html#schwierigkeit-und-umfang",
+    "href": "content/13-closing_session/slides/index.html#schwierigkeit-und-umfang",
+    "title": "Semesterabschluss & Evaluation",
+    "section": "Schwierigkeit und Umfang",
+    "text": "Schwierigkeit und Umfang\nFAU Lehrevaluation 4️⃣ | 5️⃣\n\n\nWelche Hinweise (mit Blick auf das Vorwissen) wären hilfreich gewesen?\n\n\n\nEmpirisches Arbeiten? Coding? …"
+  },
+  {
+    "objectID": "content/13-closing_session/slides/index.html#globale-veranstaltungsbeurteilung",
+    "href": "content/13-closing_session/slides/index.html#globale-veranstaltungsbeurteilung",
+    "title": "Semesterabschluss & Evaluation",
+    "section": "Globale Veranstaltungsbeurteilung",
+    "text": "Globale Veranstaltungsbeurteilung\nFAU Lehrevaluation 5️⃣ | 5️⃣\n\n\nDanke für Feedback, danke für die Diskussionen (wenn auch eher im kleinen als in der Runde)"
+  },
+  {
+    "objectID": "content/13-closing_session/slides/index.html#write-a-scientific-research-project-proposal",
+    "href": "content/13-closing_session/slides/index.html#write-a-scientific-research-project-proposal",
+    "title": "Semesterabschluss & Evaluation",
+    "section": "“Write a scientific research project proposal”",
+    "text": "“Write a scientific research project proposal”\nTerm paper im Fokus\n\nWichtigkeit (des Übens) von wissenschaftlichem Schreiben; (Forschungs-)Projektskizze als praxisnahes Anwendungsbeispiel\n“Erweiterung” des eigenen Vortrag\nTipps und Informationen verfügbar im Syllabus oder hier\n\nFormalia\n\n3500 - 4000 Wörter (inklusive Abstract, aber ohne Titel, Literaturverzeichnis etc.)\nVorlage wird zur Verfügung gestellt\nAbgabe über Teams – Deadline: 03.03.2023, 23:59"
+  },
+  {
+    "objectID": "content/13-closing_session/slides/index.html#section",
+    "href": "content/13-closing_session/slides/index.html#section",
+    "title": "Semesterabschluss & Evaluation",
     "section": "",
     "text": "Digital Behavioral Data"
   },

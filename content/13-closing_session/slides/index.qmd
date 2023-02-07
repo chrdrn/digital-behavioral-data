@@ -1,15 +1,15 @@
 ---
-title: "Bring Your Own Research (Project)" 
+title: "Semesterabschluss & Evaluation" 
 title-slide-attributes:
   data-background-image: ../../../img/background_title.png
   data-background-color: "#04316a"
-subtitle: "Digital behavioral data - Session 12"
+subtitle: "Digital behavioral data - Session 13"
 author: 
   - name: Christoph Adrian 
     url: https://twitter.com/chrdrn
     affiliation: Lehrstuhl für Kommunikationswissenschaft
     affiliation-url: https://www.kowi.rw.fau.de/person/christoph-adrian/
-date: 01 02 2023
+date: 08 02 2023
 date-format: "DD.MM.YYYY"
 format:
   revealjs:
@@ -57,11 +57,54 @@ editor_options:
 
 # Agenda {background-image="../../../img/background_agenda.png"}
 
-1.  Evaluation (👍\|👎)
-2.  \[📢️ Organisation & Koordination\]
-3.  [(Last) Time for questions]
+1.  [Zusammenfassung]
+2.  [Evaluation (👍\|👎)]
+3.  [📢️ Organisation & Koordination]
+4.  [(Last) Time for questions]
 
-# Evaluation (👍\|👎)
+# Zusammenfassung
+
+Rückblick & Abgleich
+
+## What, why and how?
+
+#### Digitale Verhaltensdaten im Fokus
+
+::: columns
+::: {.column width="50%"}
+![](/content/01-kick-off/slides/images/dbd_graph/dbd_pillars_3.png)
+:::
+
+::: {.column width="50%"}
+![](/content/01-kick-off/slides/images/dbd_graph/Slide1.PNG)
+:::
+:::
+
+::: notes
+Verschiedene Arten von Verhaltensdaten, mit Hilfe verschiedener Tools für verschiedene Zwecke
+:::
+
+## "Students will ..."
+
+### Lernziele des Kurses
+
+-   overview and understand central opportunities of DBD and accompanying challenges for data collection and preprocessing
+
+-   evaluate the strengths and weaknesses of different ways of collecting DBD
+
+-   get to know and understand central requirements for data protection, research ethics, and data quality
+
+-   get to know and overview key computational social science methods to analyze DBD
+
+-   practice and apply knowledge on DBD, statistics, and data analysis in small projects of their own
+
+::: notes
+-   Bewertung?
+
+-   Offene Fragen & Anmerkungen?
+:::
+
+# Evaluation (👍\|👎) {background-image="../../../img/background_evaluation.png"}
 
 Ergebnisse & offene Fragen
 
@@ -71,7 +114,7 @@ Ergebnisse & offene Fragen
 
 ![](img/eval_01.png)
 
--   Wie beurteilen Sie die (hauptsächliche) Bereitstellung der Sitzungsinhalte über die Github-Page?
+-   Wie beurteilen Sie die (hauptsächliche) Bereitstellung der Sitzungsinhalte über eine Github-Page?
 
 ::: notes
 -   Betreuung (besonders Feedback) wird gelobt
@@ -127,11 +170,31 @@ TODO: Inkrementelle Einblendung der Fragen
 
 ![](img/eval_05_edit.png)
 
+::: notes
+Danke für Feedback, danke für die Diskussionen (wenn auch eher im kleinen als in der Runde)
+:::
+
 # 📢️ Organisation & Koordination {background-image="../../../img/background_group_activity.png"}
 
 Seminararbeit
 
-## 
+## "Write a scientific research project proposal"
+
+#### Term paper im Fokus
+
+-   **Wichtigkeit** (des Übens) von **wissenschaftlichem Schreiben**; (Forschungs-)Projektskizze als **praxisnahes Anwendungsbeispiel**
+
+-   "**Erweiterung**" des eigenen Vortrag
+
+-   **Tipps** und Informationen verfügbar im **Syllabus** oder [**hier**](https://scientific-publishing.webshop.elsevier.com/research-process/writing-scientific-research-project-proposal/)
+
+##### Formalia
+
+-   **3500 - 4000 Wörter** (inklusive Abstract, aber ohne Titel, Literaturverzeichnis etc.)
+
+-   **Vorlage** wird zur Verfügung gestellt
+
+-   Abgabe über Teams -- **Deadline: 03.03.2023, 23:59**
 
 # (Last) Time for questions {background-image="../../../img/background_questions.png"}
 
@@ -140,6 +203,6 @@ Seminararbeit
 -   Bring Your Own Research (Project)?
 :::
 
-# Bis zur nächsten Sitzung! {.unlisted background-image="../../../img/background_end_of_session.png"}
+# Vielen Dank für Ihre Teilnahme! {.unlisted background-image="../../../img/background_end_of_semester.png"}
 
 ## 
