@@ -151,7 +151,7 @@ Bitte scannen Sie den **QR-Cod**e oder nutzen Sie folgenden **Link** für die Te
 :::
 :::
 
-# Überblick & Organisation {background-color="#E6002E"}
+# 📢️ Organisation & Koordination {#organisation-koordination background-image="../../../img/background_group_activity.png"}
 
 Seminarplan, Themen, Prüfungsleistungen
 
@@ -342,7 +342,7 @@ Bitte scannen Sie den **QR-Cod**e oder nutzen Sie folgenden **Link** und wählen
 
 -   [**Ihre Fragen?**]{.smallcaps}
 
-# Bis zur nächsten Sitzung! {background-image='../../../img/background_end_of_session.png' .unlisted}
+# Bis zur nächsten Sitzung! {.unlisted background-image="../../../img/background_end_of_session.png"}
 
 ## Literatur
 

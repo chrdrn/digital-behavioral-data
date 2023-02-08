@@ -56,7 +56,7 @@ csl: ../../apa.csl
 ▶️
 :::
 
-# Agenda {background-image='../../../img/background_agenda.png'}
+# Agenda {background-image="../../../img/background_agenda.png"}
 
 1.  [Organisation & Koordination](#orga)
 
@@ -66,7 +66,7 @@ csl: ../../apa.csl
 
 4.  [Wichtige Rahmenbedingungen von DBD](#sec4)
 
-5.  [Group Activity]
+5.  [Verständnis- & Diskussionsfragen]
 
 ::: notes
 -   Basistext als Einführung, zusätzliche Inhalte im Seminar
@@ -76,7 +76,7 @@ csl: ../../apa.csl
 -   Feedback zu Fragen in Group Activity
 :::
 
-# Organisation & Koordination {#orga background-image='../../../img/background_orga.png'}
+# Organisation & Koordination {#orga background-image="../../../img/background_orga.png"}
 
 Fragen, MS Teams & alternativer Seminarplan
 
@@ -95,7 +95,7 @@ Fragen, MS Teams & alternativer Seminarplan
 ## Vorschlag: Alternativer Seminarplan {.smaller}
 
 | Sitzung         | Datum                                                     | Thema                                                                | Referent\*Innen                                     |
-|------------------|------------------|--------------------|------------------|
+|------------------|------------------|-------------------|------------------|
 | 1               | 26.10.2022                                                | Kick-Off Session                                                     | Christoph Adrian                                    |
 | [2]{.smallcaps} | [02.11.2022]{.smallcaps}                                  | [DBD: Einführung und Überblick]{.smallcaps}                          | [Christoph Adrian]{.smallcaps}                      |
 | 3               | 09.11.2022                                                | DBD: Datenerhebung                                                   | Christoph Adrian                                    |
@@ -800,9 +800,9 @@ Beispiel 1: Einige prominente Beispiele sind die Datenpanne bei Ashley Madison i
     Schließlich gibt es angesichts der Komplexität der inhärent kontextabhängigen, anwendungs- und bereichsabhängigen Verzerrungen und Probleme in sozialen Daten und Analysepipelines, die in diesem Papier behandelt werden, keine Einheitslösungen - bei der Bewertung und Bekämpfung von Verzerrungen ist Nuancierung entscheidend.
     :::
 
-# Group Activity {background-image='../../../img/background_group_activity.png'}
+# Verständnis- & Diskussionsfragen {background-image="../../../img/background_participation.png"}
 
-Offene Fragen und Diskussion
+Ihre Fragen aus MS Teams
 
 ## Vielen Dank für Ihre Fragen!
 
@@ -850,9 +850,9 @@ We consider a privacy-utility trade-off **encountered by users who wish to discl
 
 -   Wie könnten/sollte ein potentielles Bezahlungssystem aussehen?
 
-# Time for questions {background-color="#E6002E" background-image="../../00-images/background_questions.svg"}
+# Time for questions {background-image="../../../img/background_questions.png"}
 
-# Bis zur nächsten Sitzung! {background-color="#E6002E" background-image="../../00-images/background_end_of_session.svg"}
+# Bis zur nächsten Sitzung! {.unlisted background-image="../../../img/background_end_of_session.png"}
 
 ## Literatur
 

@@ -122,12 +122,6 @@
   <link href="../../../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
   <link href="../../../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
   <link href="../../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
-  <script type="application/json" class="js-hypothesis-config">
-  {
-    "theme": "clean"
-  }
-  </script>
-  <script async="" src="https://hypothes.is/embed.js"></script>
   <style type="text/css">
 
   .callout {
@@ -591,7 +585,7 @@
 </div>
 <div class="fragment fade-in-then-semi-out" data-fragment-index="5">
 <blockquote>
-<p>Twitter wird unter anderem für „Opinion Mining“ verwendet. Jedoch kann es gerade bei polarisierenden Themen vorkommen, dass sich vor allem Personen mit extremer Meinung äußern und die Personen mittig im Spektrum zurückhalten. Wie kann man einen solchen Bias ausgleichen?</p>
+<p>Twitter wird unter anderem für „Opinion Mining” verwendet. Jedoch kann es gerade bei polarisierenden Themen vorkommen, dass sich vor allem Personen mit extremer Meinung äußern und die Personen mittig im Spektrum zurückhalten. Wie kann man einen solchen Bias ausgleichen?</p>
 </blockquote>
 </div>
 <div class="fragment fade-in-then-semi-out" data-fragment-index="6">
@@ -654,7 +648,7 @@
 </ol>
 </section></section>
 <section>
-<section id="beispielhafte-auswertungen" class="title-slide slide level1 bg_example center">
+<section id="beispielhafte-auswertungen" class="title-slide slide level1 center" data-background-image="../../../img/background_example.png">
 <h1>Beispielhafte Auswertungen</h1>
 <p>Im Fokus: <code>#Karneval</code></p>
 <div class="cell">
@@ -839,135 +833,7 @@ n &lt; 10   | 2510 | 95.18 |   95.18 | 100.00
 </div>
 </div>
 </section>
-<section id="ein-blick-auf-die-senderinnen" class="slide level2">
-<h2>Ein Blick auf die Sender:Innen</h2>
-<h4 id="karneval-im-fokus-user-mit-den-meisten-tweets"><code>#Karneval</code> im Fokus: User mit den meisten Tweets</h4>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>tweets_karneval<span class="sc">$</span>user_username <span class="sc">%&gt;%</span> </span>
-<span id="cb11-2"><a href="#cb11-2"></a>  <span class="fu">frq</span>(<span class="at">sort.frq =</span> <span class="st">"desc"</span>, </span>
-<span id="cb11-3"><a href="#cb11-3"></a>      <span class="at">min.frq =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>x &lt;character&gt; 
-# total N=2637 valid N=2637 mean=976.88 sd=562.18
-
-Value           |    N | Raw % | Valid % | Cum. %
--------------------------------------------------
-Gun17170309     |   65 |  2.46 |    2.46 |   2.46
-berlinaffaires  |   28 |  1.06 |    1.06 |   3.53
-Beratungszimmer |   19 |  0.72 |    0.72 |   4.25
-bartl_katrin    |   16 |  0.61 |    0.61 |   4.85
-rammwars        |   15 |  0.57 |    0.57 |   5.42
-free_cart9      |   12 |  0.46 |    0.46 |   5.88
-ploetschkoepp   |   12 |  0.46 |    0.46 |   6.33
-KespelHelau     |   11 |  0.42 |    0.42 |   6.75
-kryptomania84   |   10 |  0.38 |    0.38 |   7.13
-neussentweetet  |   10 |  0.38 |    0.38 |   7.51
-Raissoussama1   |   10 |  0.38 |    0.38 |   7.89
-n &lt; 10          | 2429 | 92.11 |   92.11 | 100.00
-&lt;NA&gt;            |    0 |  0.00 |    &lt;NA&gt; |   &lt;NA&gt;</code></pre>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="r-stack">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>tweets_karneval <span class="sc">%&gt;%</span> </span>
-<span id="cb13-2"><a href="#cb13-2"></a>  <span class="fu">filter</span>(user_username <span class="sc">==</span> <span class="st">"Gun17170309"</span>) <span class="sc">%$%</span> </span>
-<span id="cb13-3"><a href="#cb13-3"></a>  glue<span class="sc">::</span><span class="fu">glue</span>(</span>
-<span id="cb13-4"><a href="#cb13-4"></a>    <span class="st">"Tweet-ID: {tweet_id} </span></span>
-<span id="cb13-5"><a href="#cb13-5"></a><span class="st">    Inhalt:</span></span>
-<span id="cb13-6"><a href="#cb13-6"></a><span class="st">    {text}</span><span class="sc">\n\n</span><span class="st">"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb13-7"><a href="#cb13-7"></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Tweet-ID: 1591125966809878528 
-Inhalt:
-#FünfteJahreszeit #Fasching #Faschingsbeginn #fastnacht #Karneval  
-💙💚💛🧡❤️🤎💜💙
-https://t.co/peg7JWAKdN
-Karnevals-Klassiker: Rheinische Krapfen🤡 https://t.co/Am7A84C4Dj
-
-Tweet-ID: 1591120408102961153 
-Inhalt:
-RT @Gun17170309: #FünfteJahreszeit #Fasching #Faschingsbeginn #fastnacht #Karneval  
-💙💚💛🧡❤️🤎💜💙
-https://t.co/vZxzhaeUNY
-Fasching Berliner😋 h…
-
-Tweet-ID: 1591120391904587777 
-Inhalt:
-RT @Gun17170309: #FünfteJahreszeit #Fasching #Faschingsbeginn #fastnacht #Karneval  
-💙💚💛🧡❤️🤎💜💙
-https://t.co/6XKwts10gk
-Tätä-Tätä – Das Karn…
-
-Tweet-ID: 1591120367321419776 
-Inhalt:
-RT @Gun17170309: #FünfteJahreszeit #Fasching #Faschingsbeginn #fastnacht #Karneval  
-💙💚💛🧡❤️🤎💜💙
-So schnell gehen Berliner, Kreppel, Krapfenr…
-
-Tweet-ID: 1591120292436643840 
-Inhalt:
-#FünfteJahreszeit #Fasching #Faschingsbeginn #fastnacht #Karneval  
-💙💚💛🧡❤️🤎💜💙
-So schnell gehen Berliner, Kreppel, Krapfenräppel, Pfannkuchen, Krapfen,
-in Frankreich: „Boule de Berlin“
-in England „Jelly Doughnut“
-. . . einfach selber backen, lecker!
-https://t.co/mw3W1iynuL https://t.co/WQ45iMavLn
-
-Tweet-ID: 1591119195928166400 
-Inhalt:
-RT @Gun17170309: https://t.co/mw3W1igegD 
-#FünfteJahreszeit #Fasching #Faschingsbeginn #fastnacht #Karneval  
-💙💚💛🧡❤️🤎💜💙</code></pre>
-</div>
-</div>
-<div class="fragment" data-fragment-index="1">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>tweets_karneval <span class="sc">%&gt;%</span> </span>
-<span id="cb15-2"><a href="#cb15-2"></a>  <span class="fu">filter</span>(user_username <span class="sc">==</span> <span class="st">"berlinaffaires"</span>) <span class="sc">%$%</span> </span>
-<span id="cb15-3"><a href="#cb15-3"></a>  glue<span class="sc">::</span><span class="fu">glue</span>(</span>
-<span id="cb15-4"><a href="#cb15-4"></a>    <span class="st">"Tweet-ID: {tweet_id} </span></span>
-<span id="cb15-5"><a href="#cb15-5"></a><span class="st">    Inhalt:</span></span>
-<span id="cb15-6"><a href="#cb15-6"></a><span class="st">    {text}</span><span class="sc">\n\n</span><span class="st">"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb15-7"><a href="#cb15-7"></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Tweet-ID: 1591076515110060033 
-Inhalt:
-RT @berlinaffaires: #HauptstadtStudio #SanktMartin #Karneval #Fastnacht #Fasching #ElfteElfte der Himmel über Berlin
-Luftrettung Christoph…
-
-Tweet-ID: 1591076479663624192 
-Inhalt:
-#HauptstadtStudio #SanktMartin #Karneval #Fastnacht #Fasching #ElfteElfte der Himmel über Berlin
-Luftrettung Christoph Callsign fliegt immer noch hin und her #DHXCA #CHX31 #H135 #MASH #HelicopterSpotting https://t.co/OETymAoOL1
-
-Tweet-ID: 1591055201598701568 
-Inhalt:
-RT @berlinaffaires: #HauptstadtStudio #SanktMartin #Karneval #Fastnacht #Fasching #ElfteElfte der Himmel über Berlin
-Luftrettung Christoph…
-
-Tweet-ID: 1591055143579004928 
-Inhalt:
-#HauptstadtStudio #SanktMartin #Karneval #Fastnacht #Fasching #ElfteElfte der Himmel über Berlin
-Luftrettung Christoph Callsign #DHXCA #CHX31 #H135 #MASH #HelicopterSpotting #Funkturm https://t.co/jv22RwAgS9
-
-Tweet-ID: 1591043114181218306 
-Inhalt:
-RT @DresdenNews: #Karneval im #PieschenerRathaus: Am 11.11 übernehmen um 11:11 Uhr die #Närrinnen und #Narren der Initiative Karneval in #P…
-
-Tweet-ID: 1591042750408929280 
-Inhalt:
-RT @bernhardboeth: @hessenschau Was haben wir den ganzen Vormittag auf diesen Moment hingefiebert #Fasching #Fastnacht #Karneval https://t.…</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section></section>
+</section>
 <section id="time-for-questions" class="title-slide slide level1 center" data-background-image="../../../img/background_questions.png">
 <h1>Time for questions</h1>
 

@@ -22,9 +22,6 @@ format:
     preview-links: auto
     logo: ../../../img/logo.png
     footer: "[Digital Behavioral Data](https://chrdrn.github.io/digital-behavioral-data/)"
-comments:
-  hypothesis: 
-    theme: clean
 filters:
   - roughnotation
 execute:
@@ -36,7 +33,7 @@ bibliography: references.bib
 ## Seminarplan {.smaller}
 
 | Sitzung                                              | Datum                                                         | Thema                                                                            | Referent\*Innen                                                     |
-|------------------------------------------------------|---------------------------------------------------------------|----------------------------------------------------------------------------------|---------------------------------------------------------------------|
+|------------------|------------------|--------------------|------------------|
 | [1]{.rn rn-type="strike-through" rn-color="#E6002E"} | [26.10.2022]{.rn rn-type="strike-through" rn-color="#E6002E"} | [Kick-Off Session]{.rn rn-type="strike-through" rn-color="#E6002E"}              | [Christoph Adrian]{.rn rn-type="strike-through" rn-color="#E6002E"} |
 | [2]{.rn rn-type="strike-through" rn-color="#E6002E"} | [02.11.2022]{.rn rn-type="strike-through" rn-color="#E6002E"} | [DBD: Einführung und Überblick]{.rn rn-type="strike-through" rn-color="#E6002E"} | [Christoph Adrian]{.rn rn-type="strike-through" rn-color="#E6002E"} |
 | [**3**]{.rn rn-type="highlight"}                     | [**09.11.2022**]{.rn rn-type="highlight"}                     | [**DBD: Datenerhebung**]{.rn rn-type="highlight"}                                | [**Christoph Adrian**]{.rn rn-type="highlight"}                     |
@@ -56,15 +53,16 @@ bibliography: references.bib
 ▶️
 :::
 
-# Agenda {background-image='../../../img/background_agenda.png'}
+# Agenda {background-image="../../../img/background_agenda.png"}
 
-1.  [Organisation & Koordination](#orga)
+1.  [📢️ Organisation & Koordination](#organisation-koordination)
 2.  [Warum Digital Behavioral Data?](#sec2)
-3.  [Wie kommen wir an DBD?](#sec3 )
+3.  [Wie kommen wir an DBD?](#sec3)
 4.  [Mehr Daten, mehr Probleme](#sec4)
-5.  [Group Activity]
+5.  [Verständnis- & Diskussionsfragen]
+6.  [Group Activity]
 
-# Organisation & Koordination {#orga background-image='../../../img/background_orga.png'}
+# 📢 Organisation & Koordination {#orga background-image="../../../img/background_orga.png"}
 
 Hinweis zu den Präsentationen
 
@@ -680,9 +678,9 @@ Disclaimers und Reproduzierbarkeit
 ▶️
 :::
 
-# Group Activity  {background-image='../../../img/background_group_activity.png'}
+# Verständnis- & Diskussionsfragen {#verständnis--diskussionsfragen background-image="../../../img/background_participation.png"}
 
-5 Minuten Pause, Ihre Fragen und eine Gruppenarbeit
+Ihre Fragen aus MS Teams
 
 ## Vielen Dank für Ihre Fragen! {.smaller}
 
@@ -701,6 +699,10 @@ Disclaimers und Reproduzierbarkeit
 ::: {.fragment .fade-in fragment-index="3"}
 > Web-APIs erfordern grundlegende Programmierkenntnisse, um den Zugang zu ermöglichen. Leider gibt es bislang keine effizienten Alternativen. **Gibt es potentielle Ansätze, um diese Hürde auf eine andere Art und Weise zu überwinden.**
 :::
+
+# Group Activity {data-link="Group Activity" background-image="../../../img/background_group_activity.png"}
+
+Gruppenarbeit zu [`WikiWho`](https://www.wikiwho.net/) & [`WhoColor API`](https://api.wikiwho.net/#whocolor_api)
 
 ## Mehr als eine Enzyklopädie {.smaller}
 
@@ -830,9 +832,9 @@ Beispiel:
 
 -   ...
 
-# Time for questions {background-color="#E6002E" background-image="../../00-images/background_questions.svg"}
+# Time for questions {background-image="../../../img/background_questions.png"}
 
-# Bis zur nächsten Sitzung! {background-color="#E6002E" background-image="../../00-images/background_end_of_session.svg"}
+# Bis zur nächsten Sitzung! {.unlisted background-image="../../../img/background_end_of_session.png"}
 
 ## Literatur
 

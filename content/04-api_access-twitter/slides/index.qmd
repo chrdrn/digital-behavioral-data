@@ -23,9 +23,6 @@ format:
     logo: ../../../img/logo.png
     footer: "[Digital Behavioral Data](https://chrdrn.github.io/digital-behavioral-data/)"
 highlight-style: atom-one
-comments:
-  hypothesis: 
-    theme: clean
 filters:
   - roughnotation
 execute:
@@ -39,7 +36,7 @@ editor_options:
 ## Seminarplan {.smaller}
 
 | Sitzung                                              | Datum                                                         | Thema                                                                            | Referent\*Innen                                                     |
-|-----------------|-----------------|---------------------|------------------|
+|------------------|------------------|--------------------|------------------|
 | [1]{.rn rn-type="strike-through" rn-color="#E6002E"} | [26.10.2022]{.rn rn-type="strike-through" rn-color="#E6002E"} | [Kick-Off Session]{.rn rn-type="strike-through" rn-color="#E6002E"}              | [Christoph Adrian]{.rn rn-type="strike-through" rn-color="#E6002E"} |
 | [2]{.rn rn-type="strike-through" rn-color="#E6002E"} | [02.11.2022]{.rn rn-type="strike-through" rn-color="#E6002E"} | [DBD: Einführung und Überblick]{.rn rn-type="strike-through" rn-color="#E6002E"} | [Christoph Adrian]{.rn rn-type="strike-through" rn-color="#E6002E"} |
 | [3]{.rn rn-type="strike-through" rn-color="#E6002E"} | [09.11.2022]{.rn rn-type="strike-through" rn-color="#E6002E"} | [DBD: Datenerhebung]{.rn rn-type="strike-through" rn-color="#E6002E"}            | [Christoph Adrian]{.rn rn-type="strike-through" rn-color="#E6002E"} |
@@ -59,16 +56,15 @@ editor_options:
 ▶️
 :::
 
-# Agenda {background-image='../../../img/background_agenda.png'}
+# Agenda {background-image="../../../img/background_agenda.png"}
 
-1.  [Verständnis- & Diskussionsfragen]
+1.  [Verständnis- & Diskussionsfragen](#verständnis--diskussionsfragen)
 2.  [Group Activity]
-2.  [Beispielhafte Auswertungen]
+3.  [Beispielhafte Auswertungen]
 
-# Verständnis- & Diskussionsfragen {background-image='../../../img/background_participation.png'}
+# Verständnis- & Diskussionsfragen {#verständnis--diskussionsfragen background-image="../../../img/background_participation.png"}
 
 Ihre Fragen aus MS Teams
-
 
 ## Vielen Dank für Ihre Fragen! {.scrollable .smaller}
 
@@ -93,7 +89,7 @@ Ihre Fragen aus MS Teams
 :::
 
 ::: {.fragment .fade-in-then-semi-out fragment-index="5"}
-> Twitter wird unter anderem für „Opinion Mining“ verwendet. Jedoch kann es gerade bei polarisierenden Themen vorkommen, dass sich vor allem Personen mit extremer Meinung äußern und die Personen mittig im Spektrum zurückhalten. Wie kann man einen solchen Bias ausgleichen?
+> Twitter wird unter anderem für „Opinion Mining" verwendet. Jedoch kann es gerade bei polarisierenden Themen vorkommen, dass sich vor allem Personen mit extremer Meinung äußern und die Personen mittig im Spektrum zurückhalten. Wie kann man einen solchen Bias ausgleichen?
 :::
 
 ::: {.fragment .fade-in-then-semi-out fragment-index="6"}
@@ -108,8 +104,7 @@ Ihre Fragen aus MS Teams
 > Was sind die Gründe für den Rückgang der Forschung mit Twitter-Daten rund um das Thema Marketing?
 :::
 
-
-# Group Activity {background-image='../../../img/background_group_activity.png'}
+# Group Activity {background-image="../../../img/background_group_activity.png"}
 
 ## Suchanfrage erstellen & Daten sammeln
 
@@ -143,7 +138,7 @@ Wäheln Sie eine der folgenden Szenarien aus und erstellen Sie eine Suchanfrage 
 
     -   Welche potentielle Fragestellungen könnten Sie spontan entwickeln?
 
-# Beispielhafte Auswertungen {.bg_example}
+# Beispielhafte Auswertungen {background-image="../../../img/background_example.png"}
 
 Im Fokus: `#Karneval`
 
@@ -271,7 +266,7 @@ tweets_karneval %>%
       min.frq = 10)
 ```
 
-## Ein Blick auf die Sender:Innen
+## Ein Blick auf die Sender:Innen {visibility="hidden"}
 
 #### `#Karneval` im Fokus: User mit den meisten Tweets
 
@@ -317,9 +312,9 @@ tweets_karneval %>%
 :::
 :::
 
-# Time for questions {background-image='../../../img/background_questions.png'}
+# Time for questions {background-image="../../../img/background_questions.png"}
 
-# Bis zur nächsten Sitzung! {background-image='../../../img/background_end_of_session.png' .unlisted}
+# Bis zur nächsten Sitzung! {.unlisted background-image="../../../img/background_end_of_session.png"}
 
 ## Literatur
 
