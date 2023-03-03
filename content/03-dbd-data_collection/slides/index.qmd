@@ -1,32 +1,8 @@
 ---
 title: "Datenerhebung im Fokus" 
-title-slide-attributes:
-  data-background-image: ../../../img/background_title.png
-  data-background-color: "#04316a"
 subtitle: "Digital behavioral data - Session 03"
-author: 
-  - name: Christoph Adrian 
-    url: https://twitter.com/chrdrn
-    affiliation: Lehrstuhl für Kommunikationswissenschaft
-    affiliation-url: https://www.kowi.rw.fau.de/person/christoph-adrian/
 date: 09 11 2022
 date-format: "DD.MM.YYYY"
-format:
-  revealjs:
-    theme: ../../slidetheme.scss
-    template-partials:
-      - title-slide.html
-    slide-number: true
-    chalkboard:
-      buttons: false
-    preview-links: auto
-    logo: ../../../img/logo.png
-    footer: "[Digital Behavioral Data](https://chrdrn.github.io/digital-behavioral-data/)"
-filters:
-  - roughnotation
-execute:
-  echo: true
-csl: ../../apa.csl
 bibliography: references.bib
 ---
 

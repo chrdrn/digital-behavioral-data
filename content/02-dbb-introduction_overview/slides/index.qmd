@@ -1,36 +1,9 @@
 ---
 title: "Einführung & Überblick"
-title-slide-attributes:
-  data-background-image: ../../../img/background_title.png
-  data-background-color: "#04316a"
-subtitle: "Digital behavioral data – Session 02"
-author: 
-  - name: Christoph Adrian 
-    url: https://twitter.com/chrdrn
-    affiliation: Lehrstuhl für Kommunikationswissenschaft
-    affiliation-url: https://www.kowi.rw.fau.de/person/christoph-adrian/
+subtitle: "Digital behavioral data - Session 02"
 date: 02 11 2022
 date-format: "DD.MM.YYYY"
-format:
-  revealjs:
-    theme: ../../slidetheme.scss
-    template-partials:
-      - title-slide.html
-    slide-number: true
-    chalkboard:
-      buttons: false
-    preview-links: auto
-    logo: ../../../img/logo.png
-    footer: "[Digital Behavioral Data](https://chrdrn.github.io/digital-behavioral-data/)"
-comments:
-  hypothesis: 
-    theme: clean
-filters:
-  - roughnotation
-execute:
-  echo: true
 bibliography: references.bib
-csl: ../../apa.csl
 ---
 
 ## Seminarplan {.smaller}
@@ -58,7 +31,7 @@ csl: ../../apa.csl
 
 # Agenda {background-image="../../../img/background_agenda.png"}
 
-1.  [Organisation & Koordination](#orga)
+1.  [📢️ Organisation & Koordination](#orga)
 
 2.  [A short (re-)introduction to DBD](#sec2)
 
@@ -76,7 +49,7 @@ csl: ../../apa.csl
 -   Feedback zu Fragen in Group Activity
 :::
 
-# Organisation & Koordination {#orga background-image="../../../img/background_orga.png"}
+# 📢️ Organisation & Koordination {#orga background-image="../../../img/background_orga.png"}
 
 Fragen, MS Teams & alternativer Seminarplan
 

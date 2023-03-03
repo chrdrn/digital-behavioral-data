@@ -1,36 +1,9 @@
 ---
 title: "API-Access – Twitter " 
-title-slide-attributes:
-  data-background-image: ../../../img/background_title.png
-  data-background-color: "#04316a"
 subtitle: "Digital behavioral data - Session 04"
-author: 
-  - name: Christoph Adrian 
-    url: https://twitter.com/chrdrn
-    affiliation: Lehrstuhl für Kommunikationswissenschaft
-    affiliation-url: https://www.kowi.rw.fau.de/person/christoph-adrian/
 date: 16 11 2022
 date-format: "DD.MM.YYYY"
-format:
-  revealjs:
-    theme: ../../slidetheme.scss
-    template-partials:
-      - title-slide.html
-    slide-number: true
-    chalkboard:
-      buttons: false
-    preview-links: auto
-    logo: ../../../img/logo.png
-    footer: "[Digital Behavioral Data](https://chrdrn.github.io/digital-behavioral-data/)"
-highlight-style: atom-one
-filters:
-  - roughnotation
-execute:
-  echo: true
-csl: ../../apa.csl
 bibliography: references.bib
-editor_options: 
-  chunk_output_type: console
 ---
 
 ## Seminarplan {.smaller}
@@ -143,8 +116,6 @@ Wäheln Sie eine der folgenden Szenarien aus und erstellen Sie eine Suchanfrage 
 Im Fokus: `#Karneval`
 
 ```{r}
-#| echo: false
-
 # Load packages
 library(academictwitteR) # Collecting the data
 library(tidyverse) # Preparation of the data
@@ -159,7 +130,7 @@ library(ggpubr)
 
 # Load data 
 tweets_karneval <- bind_tweets(
-  data_path = here("content/04-api_access-twitter/data/raw_karneval"),
+  data_path = here("content/04-api_access-twitter/data.local/raw_karneval"),
   # data_path = "data/raw_karneval",
   output_format = "tidy") %>% 
     mutate(
@@ -170,7 +141,6 @@ tweets_karneval <- bind_tweets(
     hms  = hms::as_hms(datetime),
     hm   = hms::parse_hm(hms)
   )
-  
 ```
 
 ## Setup und Datensammlung mit R
@@ -208,12 +178,10 @@ get_all_tweets(
 :::
 
 ## Kurzer Blick in die Daten
-
 #### `#Karneval` im Fokus: Datenübersicht
 
 ```{r}
 tweets_karneval %>% glimpse()
-
 ```
 
 ## Deutsch, Hashtags, Englisch ...
