@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.269">
+<meta name="generator" content="quarto-1.2.335">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -83,6 +83,25 @@ code span.st { color: #4070a0; } /* String */
 code span.va { color: #19177c; } /* Variable */
 code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -107,6 +126,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -402,7 +423,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#preparation" id="toc-preparation" class="nav-link active" data-scroll-target="#preparation">Preparation</a>
+  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
+  <li><a href="#preparation" id="toc-preparation" class="nav-link" data-scroll-target="#preparation">Preparation</a>
   <ul>
   <li><a href="#load-necessary-packages" id="toc-load-necessary-packages" class="nav-link" data-scroll-target="#load-necessary-packages">Load necessary packages</a></li>
   </ul></li>
@@ -420,7 +442,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#tweets-over-time" id="toc-tweets-over-time" class="nav-link" data-scroll-target="#tweets-over-time">Tweets over time</a></li>
   <li><a href="#most-frequent-time-hhmm-of-sending-tweets" id="toc-most-frequent-time-hhmm-of-sending-tweets" class="nav-link" data-scroll-target="#most-frequent-time-hhmm-of-sending-tweets">Most frequent time (HH:MM) of sending tweets</a></li>
   <li><a href="#user-with-the-most-tweets" id="toc-user-with-the-most-tweets" class="nav-link" data-scroll-target="#user-with-the-most-tweets">User with the most tweets</a></li>
-  <li><a href="#display-tweets-from-most-freuquent-users" id="toc-display-tweets-from-most-freuquent-users" class="nav-link" data-scroll-target="#display-tweets-from-most-freuquent-users">Display tweets from most freuquent users</a></li>
   </ul></li>
   </ul></li>
   <li><a href="#mining-tweets-profiles" id="toc-mining-tweets-profiles" class="nav-link" data-scroll-target="#mining-tweets-profiles">Mining tweets: profile(s)</a>
@@ -475,21 +496,56 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
+<div class="cell" data-hash="04-exercise_cache/html/Setup local OSF environment_a67def7b6620c900d1fe1412e98958a5">
+
+</div>
+<div class="callout-tip callout callout-style-simple">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Open this showcase in other interactive and executable environments:</p>
+<p><a href="https://mybinder.org/v2/gh/chrdrn/dbd_binder/HEAD"><img src="https://mybinder.org/badge_logo.svg" class="img-fluid" alt="Binder"></a> <a href="https://colab.research.google.com/github/chrdrn/dbd_binder/blob/main/session_05-showcase_youtube.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid" alt="Google Colab"></a></p>
+</div>
+</div>
+</div>
+<section id="background" class="level2">
+<h2 class="anchored" data-anchor-id="background">Background</h2>
+<p>Practical application of the <em>Twitter Academic Research Product Track v2 API endpoint</em> with the help of the <a href="https://github.com/cjbarrie/academictwitteR">academictwitteR</a> <span class="citation" data-cites="barrie2021">(<a href="#ref-barrie2021" role="doc-biblioref">Barrie &amp; Ho, 2021</a>)</span> package. Visit the <a href="https://github.com/cjbarrie/academictwitteR"><i class="fa-brands fa-github" aria-label="github"></i> repository</a> of the package for further information.</p>
+<p>This version of the Twitter API allows researchers to access larger volumes of Twitter data. For more information on the the Twitter API, including how to apply for access to the Academic Research Product Track, see the <a href="https://developer.twitter.com/en/use-cases/do-research/academic-research">Twitter Developer platform.</a></p>
+<div class="callout-note callout callout-style-simple callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Disclaimer
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This session was created before Twitter announced changes to its API access:</p>
+<p></p><div id="tweet-36473"></div><script>tweet={"url":"https:\/\/twitter.com\/TwitterDev\/status\/1621026986784337922","author_name":"Twitter Dev","author_url":"https:\/\/twitter.com\/TwitterDev","html":"\u003Cblockquote class=\"twitter-tweet\" align=\"center\"\u003E\u003Cp lang=\"en\" dir=\"ltr\"\u003EStarting February 9, we will no longer support free access to the Twitter API, both v2 and v1.1. A paid basic tier will be available instead \uD83E\uDDF5\u003C\/p\u003E&mdash; Twitter Dev (@TwitterDev) \u003Ca href=\"https:\/\/twitter.com\/TwitterDev\/status\/1621026986784337922?ref_src=twsrc%5Etfw\"\u003EFebruary 2, 2023\u003C\/a\u003E\u003C\/blockquote\u003E\n\u003Cscript async src=\"https:\/\/platform.twitter.com\/widgets.js\" charset=\"utf-8\"\u003E\u003C\/script\u003E\n","width":550,"height":null,"type":"rich","cache_age":"3153600000","provider_name":"Twitter","provider_url":"https:\/\/twitter.com","version":"1.0"};document.getElementById("tweet-36473").innerHTML = tweet["html"];</script><p></p>
+<p>As things stand (28.02.2023), there will no longer be free academic research.</p>
+</div>
+</div>
+<p>This showcase contains two exemplary uses of the API: Analysis of specific hashtags (e.g.&nbsp;<a href="https://twitter.com/search?q=%23karneval&amp;src=typed_query">#Karneval</a>) and/or specific accounts (e.g.&nbsp;<a href="https://twitter.com/elonmusk">@elonmusk</a>)</p>
+</section>
 <section id="preparation" class="level2">
 <h2 class="anchored" data-anchor-id="preparation">Preparation</h2>
 <section id="load-necessary-packages" class="level3">
 <h3 class="anchored" data-anchor-id="load-necessary-packages">Load necessary packages</h3>
-<div class="cell" data-hash="04-exercise_cache/html/load packages_8d251bfb176954acec7f6951b0bd41e3">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(academictwitteR) <span class="co"># Collecting the data</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse) <span class="co"># Preparation of the data</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(quanteda) <span class="co"># Text mining</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(quanteda.textstats) <span class="co"># Text statistics</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(quanteda.textplots) <span class="co"># Visualisation of text data</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sjmisc)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggthemes)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggpubr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="04-exercise_cache/html/load packages_405104188eab5bb90e289430d3db4df8">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here) <span class="co"># Easy file path construction</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(academictwitteR) <span class="co"># Collecting the data</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate) <span class="co"># Work with date-times and time-spans</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sjmisc) <span class="co"># Collection of miscellaneous utility functions</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse) <span class="co"># Preparation of the data</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(quanteda) <span class="co"># Text mining</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(quanteda.textstats) <span class="co"># Text statistics</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(quanteda.textplots) <span class="co"># Visualisation of text data</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggthemes) <span class="co"># Custom ggplot themes</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggpubr) <span class="co"># Convenience functions for 'ggplot2'-plots</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 </section>
@@ -503,22 +559,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2 class="anchored" data-anchor-id="mining-tweets-hashtags">Mining tweets: hashtag(s)</h2>
 <section id="data-collection" class="level3">
 <h3 class="anchored" data-anchor-id="data-collection">Data collection</h3>
-<div class="cell" data-hash="04-exercise_cache/html/mine tweets hashtag_3f60c741ee3061868dacc95120c717bf">
+<div class="cell" data-hash="04-exercise_cache/html/mine tweets hashtag_78ffca1cf5a54176b8ab0fe85dd1c6fe">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">get_all_tweets</span>(</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">query =</span> <span class="st">"#Karneval"</span>, </span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">start_tweets =</span> <span class="st">"2022-11-11T00:00:00Z"</span>,</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">end_tweets =</span> <span class="st">"2022-11-13T12:00:00Z"</span>,</span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">file =</span> <span class="st">"karneval"</span>,</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">data_path =</span> <span class="st">"data/raw_karneval/"</span>,</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">data_path =</span> <span class="st">"data.local/raw_karneval/"</span>,</span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">n =</span> <span class="dv">100000</span>,</span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="co">#bearer_token = personal_bearer_token</span></span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="read-data-from-disc" class="level4">
 <h4 class="anchored" data-anchor-id="read-data-from-disc">Read data from disc</h4>
-<div class="cell" data-hash="04-exercise_cache/html/read tweets hashtag_ebadf54b20278df2b1b2c9b43bc7e2e7">
+<div class="cell" data-hash="04-exercise_cache/html/read tweets hashtag_7b426e9f6117d363a18f15b8fe2a2878">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>tweets_karneval <span class="ot">&lt;-</span> <span class="fu">bind_tweets</span>(</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">data_path =</span> <span class="fu">here</span>(<span class="st">"content/04-api_access-twitter/data/raw_karneval"</span>),</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">data_path =</span> <span class="fu">here</span>(<span class="st">"content/04-api_access-twitter/data.local/raw_karneval"</span>),</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">output_format =</span> <span class="st">"tidy"</span>) <span class="sc">%&gt;%</span> </span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(</span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">datetime =</span> <span class="fu">ymd_hms</span>(created_at),</span>
@@ -710,99 +766,13 @@ n &lt; 5           | 2265 | 85.89 |   85.89 | 100.00
 &lt;NA&gt;            |    0 |  0.00 |    &lt;NA&gt; |   &lt;NA&gt;</code></pre>
 </div>
 </div>
-</section>
-<section id="display-tweets-from-most-freuquent-users" class="level4">
-<h4 class="anchored" data-anchor-id="display-tweets-from-most-freuquent-users">Display tweets from most freuquent users</h4>
-<div class="cell" data-hash="04-exercise_cache/html/hashtag analysis user example 1_84808fa6976fa95c9d69206f9e225576">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>tweets_karneval <span class="sc">%&gt;%</span> </span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(user_username <span class="sc">==</span> <span class="st">"Gun17170309"</span>) <span class="sc">%$%</span> </span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  glue<span class="sc">::</span><span class="fu">glue</span>(</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Tweet-ID: {tweet_id} </span></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="st">    Inhalt:</span></span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="st">    {text}</span><span class="sc">\n\n</span><span class="st">"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Tweet-ID: 1591125966809878528 
-Inhalt:
-#FünfteJahreszeit #Fasching #Faschingsbeginn #fastnacht #Karneval  
-💙💚💛🧡❤️🤎💜💙
-https://t.co/peg7JWAKdN
-Karnevals-Klassiker: Rheinische Krapfen🤡 https://t.co/Am7A84C4Dj
+<!--#  The following section is hidden due to DSGVO -->
+<!--#  #### Display tweets from most freuquent users -->
+<div class="cell" data-hash="04-exercise_cache/html/hashtag analysis user example 1_be83c6aacabf52e73e05d935f11e458b">
 
-Tweet-ID: 1591120408102961153 
-Inhalt:
-RT @Gun17170309: #FünfteJahreszeit #Fasching #Faschingsbeginn #fastnacht #Karneval  
-💙💚💛🧡❤️🤎💜💙
-https://t.co/vZxzhaeUNY
-Fasching Berliner😋 h…
-
-Tweet-ID: 1591120391904587777 
-Inhalt:
-RT @Gun17170309: #FünfteJahreszeit #Fasching #Faschingsbeginn #fastnacht #Karneval  
-💙💚💛🧡❤️🤎💜💙
-https://t.co/6XKwts10gk
-Tätä-Tätä – Das Karn…
-
-Tweet-ID: 1591120367321419776 
-Inhalt:
-RT @Gun17170309: #FünfteJahreszeit #Fasching #Faschingsbeginn #fastnacht #Karneval  
-💙💚💛🧡❤️🤎💜💙
-So schnell gehen Berliner, Kreppel, Krapfenr…
-
-Tweet-ID: 1591120292436643840 
-Inhalt:
-#FünfteJahreszeit #Fasching #Faschingsbeginn #fastnacht #Karneval  
-💙💚💛🧡❤️🤎💜💙
-So schnell gehen Berliner, Kreppel, Krapfenräppel, Pfannkuchen, Krapfen,
-in Frankreich: „Boule de Berlin“
-in England „Jelly Doughnut“
-. . . einfach selber backen, lecker!
-https://t.co/mw3W1iynuL https://t.co/WQ45iMavLn
-
-Tweet-ID: 1591119195928166400 
-Inhalt:
-RT @Gun17170309: https://t.co/mw3W1igegD 
-#FünfteJahreszeit #Fasching #Faschingsbeginn #fastnacht #Karneval  
-💙💚💛🧡❤️🤎💜💙</code></pre>
 </div>
-</div>
-<div class="cell" data-hash="04-exercise_cache/html/hashtag analysis user example 2_b15895ae519257351e817a0eb14dea67">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>tweets_karneval <span class="sc">%&gt;%</span> </span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(user_username <span class="sc">==</span> <span class="st">"berlinaffaires"</span>) <span class="sc">%$%</span> </span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  glue<span class="sc">::</span><span class="fu">glue</span>(</span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Tweet-ID: {tweet_id} </span></span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="st">    Inhalt:</span></span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="st">    {text}</span><span class="sc">\n\n</span><span class="st">"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Tweet-ID: 1591076515110060033 
-Inhalt:
-RT @berlinaffaires: #HauptstadtStudio #SanktMartin #Karneval #Fastnacht #Fasching #ElfteElfte der Himmel über Berlin
-Luftrettung Christoph…
+<div class="cell" data-hash="04-exercise_cache/html/hashtag analysis user example 2_e19ae275ec2b4bc1853b77462c9767ea">
 
-Tweet-ID: 1591076479663624192 
-Inhalt:
-#HauptstadtStudio #SanktMartin #Karneval #Fastnacht #Fasching #ElfteElfte der Himmel über Berlin
-Luftrettung Christoph Callsign fliegt immer noch hin und her #DHXCA #CHX31 #H135 #MASH #HelicopterSpotting https://t.co/OETymAoOL1
-
-Tweet-ID: 1591055201598701568 
-Inhalt:
-RT @berlinaffaires: #HauptstadtStudio #SanktMartin #Karneval #Fastnacht #Fasching #ElfteElfte der Himmel über Berlin
-Luftrettung Christoph…
-
-Tweet-ID: 1591055143579004928 
-Inhalt:
-#HauptstadtStudio #SanktMartin #Karneval #Fastnacht #Fasching #ElfteElfte der Himmel über Berlin
-Luftrettung Christoph Callsign #DHXCA #CHX31 #H135 #MASH #HelicopterSpotting #Funkturm https://t.co/jv22RwAgS9
-
-Tweet-ID: 1591043114181218306 
-Inhalt:
-RT @DresdenNews: #Karneval im #PieschenerRathaus: Am 11.11 übernehmen um 11:11 Uhr die #Närrinnen und #Narren der Initiative Karneval in #P…
-
-Tweet-ID: 1591042750408929280 
-Inhalt:
-RT @bernhardboeth: @hessenschau Was haben wir den ganzen Vormittag auf diesen Moment hingefiebert #Fasching #Fastnacht #Karneval https://t.…</code></pre>
-</div>
 </div>
 </section>
 </section>
@@ -811,32 +781,32 @@ RT @bernhardboeth: @hessenschau Was haben wir den ganzen Vormittag auf diesen Mo
 <h2 class="anchored" data-anchor-id="mining-tweets-profiles">Mining tweets: profile(s)</h2>
 <section id="data-collection-1" class="level3">
 <h3 class="anchored" data-anchor-id="data-collection-1">Data collection</h3>
-<div class="cell" data-hash="04-exercise_cache/html/mine tweets profile_5a61d57ac9f642ff36a279c6609a5cb1">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">get_all_tweets</span>(</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">users =</span> <span class="fu">c</span>(<span class="st">"elonmusk"</span>),</span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">start_tweets =</span> <span class="st">"2020-11-11T00:00:00Z"</span>,</span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">end_tweets =</span> <span class="st">"2022-11-13T12:00:00Z"</span>,</span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">file =</span> <span class="st">"elonmusk"</span>,</span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">data_path =</span> <span class="fu">here</span>(<span class="st">"content/04-api_access-twitter/data/raw_elonmusk/"</span>),</span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">n =</span> <span class="dv">100000</span>,</span>
-<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">bearer_token =</span> personal_bearer_token</span>
-<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="04-exercise_cache/html/mine tweets profile_5262bfbafffe5f71893246aa96985a27">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">get_all_tweets</span>(</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">users =</span> <span class="fu">c</span>(<span class="st">"elonmusk"</span>),</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">start_tweets =</span> <span class="st">"2020-11-11T00:00:00Z"</span>,</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">end_tweets =</span> <span class="st">"2022-11-13T12:00:00Z"</span>,</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">file =</span> <span class="st">"elonmusk"</span>,</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">data_path =</span> <span class="fu">here</span>(<span class="st">"content/04-api_access-twitter/data.local/raw_elonmusk/"</span>),</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">n =</span> <span class="dv">100000</span>,</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">bearer_token =</span> personal_bearer_token</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="read-data-from-disc-1" class="level4">
 <h4 class="anchored" data-anchor-id="read-data-from-disc-1">Read data from disc</h4>
-<div class="cell" data-hash="04-exercise_cache/html/read tweets profile_b477d3a7ad7d7f5fb9943f24d5a34fac">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>tweets_musk <span class="ot">&lt;-</span> <span class="fu">bind_tweets</span>(</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">data_path =</span> <span class="fu">here</span>(<span class="st">"content/04-api_access-twitter/data/raw_elonmusk"</span>),</span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># data_path = "data/raw_karneval",</span></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">output_format =</span> <span class="st">"tidy"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(</span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">datetime =</span> <span class="fu">ymd_hms</span>(created_at),</span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">date =</span> <span class="fu">date</span>(datetime),</span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">hour =</span> <span class="fu">hour</span>(datetime),</span>
-<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">min  =</span> <span class="fu">minute</span>(datetime),</span>
-<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">hms  =</span> hms<span class="sc">::</span><span class="fu">as_hms</span>(datetime),</span>
-<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">hm   =</span> hms<span class="sc">::</span><span class="fu">parse_hm</span>(hms)</span>
-<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="04-exercise_cache/html/read tweets profile_78c5134f02bc1de9ece677c3a2ad149e">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>tweets_musk <span class="ot">&lt;-</span> <span class="fu">bind_tweets</span>(</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">data_path =</span> <span class="fu">here</span>(<span class="st">"content/04-api_access-twitter/data.local/raw_elonmusk"</span>),</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># data_path = "data/raw_karneval",</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">output_format =</span> <span class="st">"tidy"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">datetime =</span> <span class="fu">ymd_hms</span>(created_at),</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">date =</span> <span class="fu">date</span>(datetime),</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">hour =</span> <span class="fu">hour</span>(datetime),</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">min  =</span> <span class="fu">minute</span>(datetime),</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">hms  =</span> hms<span class="sc">::</span><span class="fu">as_hms</span>(datetime),</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">hm   =</span> hms<span class="sc">::</span><span class="fu">parse_hm</span>(hms)</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 </section>
@@ -845,7 +815,7 @@ RT @bernhardboeth: @hessenschau Was haben wir den ganzen Vormittag auf diesen Mo
 <section id="overview-of-dataset-1" class="level4">
 <h4 class="anchored" data-anchor-id="overview-of-dataset-1">Overview of dataset</h4>
 <div class="cell" data-hash="04-exercise_cache/html/profile analysis overview_a55c0fbe8cafbdd8d42ac9b900bf7380">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>tweets_musk <span class="sc">%&gt;%</span> glimpse</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>tweets_musk <span class="sc">%&gt;%</span> glimpse</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 7,255
 Columns: 37
@@ -892,10 +862,10 @@ $ hm                     &lt;time&gt; 23:07:00, 23:02:00, 18:13:00, 18:05:00, 16
 <section id="tweets-over-time-1" class="level4">
 <h4 class="anchored" data-anchor-id="tweets-over-time-1">Tweets over time</h4>
 <div class="cell" data-hash="04-exercise_cache/html/profile analysis time_432ef03ad20777d785ff7ef75b785a26">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>tweets_musk <span class="sc">%&gt;%</span> </span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(date)) <span class="sc">+</span></span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_pubr</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>tweets_musk <span class="sc">%&gt;%</span> </span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(date)) <span class="sc">+</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_pubr</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="04-exercise_files/figure-html/profile analysis time-1.png" class="img-fluid" width="672"></p>
 </div>
@@ -904,11 +874,11 @@ $ hm                     &lt;time&gt; 23:07:00, 23:02:00, 18:13:00, 18:05:00, 16
 <section id="tweets-with-the-most-likes" class="level4">
 <h4 class="anchored" data-anchor-id="tweets-with-the-most-likes">Tweets with the most likes</h4>
 <div class="cell" data-hash="04-exercise_cache/html/profile analysis most likes_2ddaddf6d5ccc1d1f04522646c20f225">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>tweets_musk <span class="sc">%&gt;%</span> </span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">is.na</span>(sourcetweet_type)) <span class="sc">%&gt;%</span> </span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="sc">-</span>like_count) <span class="sc">%&gt;%</span> </span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(text, created_at, like_count) <span class="sc">%&gt;%</span> </span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>tweets_musk <span class="sc">%&gt;%</span> </span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">is.na</span>(sourcetweet_type)) <span class="sc">%&gt;%</span> </span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="sc">-</span>like_count) <span class="sc">%&gt;%</span> </span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(text, created_at, like_count) <span class="sc">%&gt;%</span> </span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 10 × 3
    text                                                          creat…¹ like_…²
@@ -930,11 +900,11 @@ $ hm                     &lt;time&gt; 23:07:00, 23:02:00, 18:13:00, 18:05:00, 16
 <section id="tweets-with-the-most-retweets" class="level4">
 <h4 class="anchored" data-anchor-id="tweets-with-the-most-retweets">Tweets with the most retweets</h4>
 <div class="cell" data-hash="04-exercise_cache/html/profile analysis most retweets_d2ba515a1aaa63b6f1c94b0098605485">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>tweets_musk <span class="sc">%&gt;%</span> </span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">is.na</span>(sourcetweet_type)) <span class="sc">%&gt;%</span> </span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="sc">-</span>retweet_count) <span class="sc">%&gt;%</span> </span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(text, created_at, retweet_count) <span class="sc">%&gt;%</span> </span>
-<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>tweets_musk <span class="sc">%&gt;%</span> </span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">is.na</span>(sourcetweet_type)) <span class="sc">%&gt;%</span> </span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="sc">-</span>retweet_count) <span class="sc">%&gt;%</span> </span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(text, created_at, retweet_count) <span class="sc">%&gt;%</span> </span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 10 × 3
    text                                                          creat…¹ retwe…²
@@ -956,8 +926,8 @@ $ hm                     &lt;time&gt; 23:07:00, 23:02:00, 18:13:00, 18:05:00, 16
 <section id="proportion-of-tweets" class="level4">
 <h4 class="anchored" data-anchor-id="proportion-of-tweets">Proportion of tweets</h4>
 <div class="cell" data-hash="04-exercise_cache/html/profile analysis tweet type_e08c50b38a3fb089b36767b0b5ef8d72">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>tweets_musk <span class="sc">%&gt;%</span> </span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">frq</span>(sourcetweet_type)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>tweets_musk <span class="sc">%&gt;%</span> </span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">frq</span>(sourcetweet_type)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>sourcetweet_type &lt;character&gt; 
 # total N=7255 valid N=489 mean=1.74 sd=0.44
@@ -973,8 +943,8 @@ retweeted |  364 |  5.02 |   74.44 | 100.00
 <section id="languate-of-tweets" class="level4">
 <h4 class="anchored" data-anchor-id="languate-of-tweets">Languate of tweets</h4>
 <div class="cell" data-hash="04-exercise_cache/html/profile analysis language_1699cddc93719e90c63866a498d4e040">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>tweets_musk <span class="sc">%&gt;%</span> </span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">frq</span>(lang)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>tweets_musk <span class="sc">%&gt;%</span> </span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">frq</span>(lang)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>lang &lt;character&gt; 
 # total N=7255 valid N=7255 mean=14.37 sd=9.86
@@ -1032,31 +1002,31 @@ zxx   |  169 |  2.33 |    2.33 | 100.00
 <section id="preprocessing" class="level3">
 <h3 class="anchored" data-anchor-id="preprocessing">Preprocessing</h3>
 <div class="cell" data-hash="04-exercise_cache/html/text mining preprocessing_d80fb82202c5857bbc28db711e7deb34">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>remove_html <span class="ot">&lt;-</span> <span class="st">"&amp;amp;|&amp;lt;|&amp;gt;"</span></span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>tweets_en <span class="ot">&lt;-</span> tweets_musk <span class="sc">%&gt;%</span> </span>
-<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(lang <span class="sc">==</span> <span class="st">"en"</span>,</span>
-<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>         <span class="fu">is.na</span>(sourcetweet_type)) <span class="sc">%&gt;%</span> </span>
-<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(tweet_id, text, user_username) <span class="sc">%&gt;%</span> </span>
-<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">text =</span> <span class="fu">str_remove_all</span>(text, remove_html))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>remove_html <span class="ot">&lt;-</span> <span class="st">"&amp;amp;|&amp;lt;|&amp;gt;"</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>tweets_en <span class="ot">&lt;-</span> tweets_musk <span class="sc">%&gt;%</span> </span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(lang <span class="sc">==</span> <span class="st">"en"</span>,</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>         <span class="fu">is.na</span>(sourcetweet_type)) <span class="sc">%&gt;%</span> </span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(tweet_id, text, user_username) <span class="sc">%&gt;%</span> </span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">text =</span> <span class="fu">str_remove_all</span>(text, remove_html))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-hash="04-exercise_cache/html/text mining corpus creation_1bb52cefd063182e46a75c047bdf56a9">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>tweets_en_corpus <span class="ot">&lt;-</span> <span class="fu">corpus</span>(tweets_en,</span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>                           <span class="at">docid_field =</span> <span class="st">"tweet_id"</span>,</span>
-<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>                           <span class="at">text_field =</span> <span class="st">"text"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>tweets_en_corpus <span class="ot">&lt;-</span> <span class="fu">corpus</span>(tweets_en,</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>                           <span class="at">docid_field =</span> <span class="st">"tweet_id"</span>,</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>                           <span class="at">text_field =</span> <span class="st">"text"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-hash="04-exercise_cache/html/text mining tokenization_50a0a0525ddce60d60bdf63c6d50a870">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>tweets_en_tokens <span class="ot">&lt;-</span> </span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tokens</span>(tweets_en_corpus,</span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">remove_punct =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">remove_numbers =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">remove_symbols =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>         <span class="at">remove_url =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tokens_tolower</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tokens_remove</span>(<span class="fu">stopwords</span>(<span class="st">"english"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>tweets_en_tokens <span class="ot">&lt;-</span> </span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tokens</span>(tweets_en_corpus,</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">remove_punct =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">remove_numbers =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">remove_symbols =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>         <span class="at">remove_url =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tokens_tolower</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tokens_remove</span>(<span class="fu">stopwords</span>(<span class="st">"english"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-hash="04-exercise_cache/html/text mining dfm creation_bdbfb7985743308b94b0c858d2179e53">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>tweets_en_dfm <span class="ot">&lt;-</span> <span class="fu">dfm</span>(tweets_en_tokens)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>tweets_en_dfm <span class="ot">&lt;-</span> <span class="fu">dfm</span>(tweets_en_tokens)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="analysis" class="level3">
@@ -1064,9 +1034,9 @@ zxx   |  169 |  2.33 |    2.33 | 100.00
 <section id="top-hashtags" class="level4">
 <h4 class="anchored" data-anchor-id="top-hashtags">Top Hashtags</h4>
 <div class="cell" data-hash="04-exercise_cache/html/corpus analysis top hashtags_d471ecae1236aed4e380a6bde62ebc8d">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>tag_dfm <span class="ot">&lt;-</span> <span class="fu">dfm_select</span>(tweets_en_dfm, <span class="at">pattern =</span> <span class="st">"#*"</span>)</span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>toptag <span class="ot">&lt;-</span> <span class="fu">names</span>(<span class="fu">topfeatures</span>(tag_dfm, <span class="dv">50</span>))</span>
-<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(toptag, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>tag_dfm <span class="ot">&lt;-</span> <span class="fu">dfm_select</span>(tweets_en_dfm, <span class="at">pattern =</span> <span class="st">"#*"</span>)</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>toptag <span class="ot">&lt;-</span> <span class="fu">names</span>(<span class="fu">topfeatures</span>(tag_dfm, <span class="dv">50</span>))</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(toptag, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "#2"                  "#mars"               "#resistanceisfutile"
 [4] "#1"                  "#freespeech"        </code></pre>
@@ -1076,9 +1046,9 @@ zxx   |  169 |  2.33 |    2.33 | 100.00
 <section id="top-mentions" class="level4">
 <h4 class="anchored" data-anchor-id="top-mentions">Top Mentions</h4>
 <div class="cell" data-hash="04-exercise_cache/html/corpus analysis top metions_b6f2f8c146b2e872aaad4535fb613745">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>user_dfm <span class="ot">&lt;-</span> <span class="fu">dfm_select</span>(tweets_en_dfm, <span class="at">pattern =</span> <span class="st">"@*"</span>)</span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>topuser <span class="ot">&lt;-</span> <span class="fu">names</span>(<span class="fu">topfeatures</span>(user_dfm, <span class="dv">50</span>))</span>
-<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(topuser, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>user_dfm <span class="ot">&lt;-</span> <span class="fu">dfm_select</span>(tweets_en_dfm, <span class="at">pattern =</span> <span class="st">"@*"</span>)</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>topuser <span class="ot">&lt;-</span> <span class="fu">names</span>(<span class="fu">topfeatures</span>(user_dfm, <span class="dv">50</span>))</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(topuser, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "@wholemarsblog"  "@spacex"         "@teslaownerssv"  "@ppathole"      
  [5] "@tesla"          "@erdayastronaut" "@billym2k"       "@teslarati"     
@@ -1089,16 +1059,16 @@ zxx   |  169 |  2.33 |    2.33 | 100.00
 <section id="exclude-hashtags-metions" class="level4">
 <h4 class="anchored" data-anchor-id="exclude-hashtags-metions">Exclude Hashtags &amp; Metions</h4>
 <div class="cell" data-hash="04-exercise_cache/html/corpus analysis dfm processing_de7a65b31bc8ed4d24a6450d417c9cc4">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>tweets_en_clean <span class="ot">&lt;-</span> tweets_en_dfm <span class="sc">%&gt;%</span> </span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">dfm_remove</span>(<span class="at">pattern =</span> <span class="st">"@*"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">dfm_remove</span>(<span class="at">pattern =</span> <span class="st">"#*"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>tweets_en_clean <span class="ot">&lt;-</span> tweets_en_dfm <span class="sc">%&gt;%</span> </span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">dfm_remove</span>(<span class="at">pattern =</span> <span class="st">"@*"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">dfm_remove</span>(<span class="at">pattern =</span> <span class="st">"#*"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="top-10-features" class="level4">
 <h4 class="anchored" data-anchor-id="top-10-features">Top 10 features</h4>
 <div class="cell" data-hash="04-exercise_cache/html/corpus analysis top features_418f9c8e5a54bb19d71b0219500ad730">
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>term_freq_en <span class="ot">&lt;-</span> <span class="fu">textstat_frequency</span>(tweets_en_clean)</span>
-<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(term_freq_en, <span class="at">n =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>term_freq_en <span class="ot">&lt;-</span> <span class="fu">textstat_frequency</span>(tweets_en_clean)</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(term_freq_en, <span class="at">n =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   feature frequency rank docfreq group
 1    tesla       354    1     328   all
@@ -1117,18 +1087,23 @@ zxx   |  169 |  2.33 |    2.33 | 100.00
 <section id="wordcloud-with-top-50-features" class="level4">
 <h4 class="anchored" data-anchor-id="wordcloud-with-top-50-features">Wordcloud with Top 50 features</h4>
 <div class="cell" data-hash="04-exercise_cache/html/corpus analysis top features wordcloud_3dc094594881bbc6b5929f87e56e3c92">
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">textplot_wordcloud</span>(tweets_en_clean, <span class="at">max_words =</span> <span class="dv">50</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">textplot_wordcloud</span>(tweets_en_clean, <span class="at">max_words =</span> <span class="dv">50</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="04-exercise_files/figure-html/corpus analysis top features wordcloud-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 
 
+
 </section>
 </section>
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="doc-bibliography">
+<div id="ref-barrie2021" class="csl-entry" role="doc-biblioentry">
+Barrie, C., &amp; Ho, J. (2021). academictwitteR: An r package to access the twitter academic research product track v2 API endpoint. <em>Journal of Open Source Software</em>, <em>6</em>(62), 3272. <a href="https://doi.org/10.21105/joss.03272">https://doi.org/10.21105/joss.03272</a>
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -1399,4 +1374,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
+<script src="https://platform.twitter.com/widgets.js"></script>
 </body></html>

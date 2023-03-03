@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.269">
+<meta name="generator" content="quarto-1.2.335">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -83,6 +83,25 @@ code span.st { color: #4070a0; } /* String */
 code span.va { color: #19177c; } /* Variable */
 code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -107,8 +126,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -412,7 +429,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </ul></li>
   <li><a href="#analysis-of-collected-4cat-data" id="toc-analysis-of-collected-4cat-data" class="nav-link" data-scroll-target="#analysis-of-collected-4cat-data">Analysis of collected 🐈🐈 4CAT 🐈🐈 data</a>
   <ul>
-  <li><a href="#data-import-from-fa-brands-github" id="toc-data-import-from-fa-brands-github" class="nav-link" data-scroll-target="#data-import-from-fa-brands-github">Data import from <i class="fa-brands fa-github" aria-label="github"></i></a></li>
+  <li><a href="#load-data-into-local-environment" id="toc-load-data-into-local-environment" class="nav-link" data-scroll-target="#load-data-into-local-environment">Load data into local environment</a></li>
   <li><a href="#messages-including-musk-over-time" id="toc-messages-including-musk-over-time" class="nav-link" data-scroll-target="#messages-including-musk-over-time">Messages including ‘musk’ over time</a>
   <ul class="collapse">
   <li><a href="#total" id="toc-total" class="nav-link" data-scroll-target="#total">Total</a></li>
@@ -443,17 +460,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<div class="cell" data-hash="06-exercise_cache/html/unnamed-chunk-1_d3c2ab2aa4ed68dc64b5d9039b9a42f3">
+<div class="cell" data-hash="06-exercise_cache/html/Setup local OSF environment_05c95d3f0606cd47117587d99a8d1421">
 
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Open this showcase in other interactive and executable environments:</p>
+<p><a href="https://mybinder.org/v2/gh/chrdrn/dbd_binder/HEAD"><img src="https://mybinder.org/badge_logo.svg" class="img-fluid" alt="Binder"></a> <a href="https://colab.research.google.com/github/chrdrn/dbd_binder/blob/main/session_06-showcase_reddit.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid" alt="Google Colab"></a></p>
+</div>
 </div>
 <section id="background" class="level2">
 <h2 class="anchored" data-anchor-id="background">Background</h2>
 <p>Ths showcase has two different goals:</p>
 <ol type="1">
 <li>Exemplary presentation of the collection of <a href="https://www.reddit.com/"><img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/brands/reddit.svg" width="15" height="15"></a> <a href="https://www.reddit.com/">Reddit</a> data using the <a href="https://github.com/ivan-rivera/RedditExtractor">RedditExtractoR</a> package</li>
-<li>Importing and analyzing the data collected with the 🐈🐈 <a href="https://github.com/digitalmethodsinitiative/4cat"><strong>4CAT</strong></a> 🐈🐈 tool.</li>
+<li>Importing and analyzing the data collected with the 🐈🐈 <a href="https://github.com/digitalmethodsinitiative/4cat"><strong>4CAT</strong></a> 🐈🐈 <span class="citation" data-cites="peeters2022">(<a href="#ref-peeters2022" role="doc-biblioref">Peeters &amp; Hagen, 2022</a>)</span> tool.</li>
 </ol>
-<p>You can also open this showcase in other interactive and executable environments: <a href="https://mybinder.org/v2/gh/chrdrn/dbd_binder/HEAD"><img src="https://mybinder.org/badge_logo.svg" class="img-fluid" alt="Binder"></a> <a href="https://colab.research.google.com/github/chrdrn/dbd_binder/blob/main/session_06-showcase_reddit.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid" alt="Google Colab"></a></p>
 </section>
 <section id="data-collection-with-redditextractor" class="level2">
 <h2 class="anchored" data-anchor-id="data-collection-with-redditextractor">Data collection with <code>RedditExtractor</code></h2>
@@ -473,14 +503,14 @@ Disclaimer
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Unfortunately, the functions of the <code>RedditExtractoR</code> package can NOT be executed during the Markdown creation process and must be reproduced “live”.</p>
+<p>Unfortunately, the functions of the <code>RedditExtractoR</code> package can <strong>NOT</strong> be executed during the Markdown creation process and must be reproduced “live”.</p>
 <p>Therefore, there will be no output for the next two paragraphs.</p>
 </div>
 </div>
 <section id="example-find-subreddits" class="level3">
 <h3 class="anchored" data-anchor-id="example-find-subreddits">Example: Find subreddits</h3>
 <p>Similar to the example from the seminar, the function <code>find_subreddits</code> identifies all subreddits that contain the keyword news either in their name or in their attributes.</p>
-<div class="cell" data-hash="06-exercise_cache/html/unnamed-chunk-2_d98c9c08bdee5c89003158320f368af8">
+<div class="cell" data-hash="06-exercise_cache/html/unnamed-chunk-1_8fb473db6c2c0ba558bba4977e045738">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RedditExtractoR)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -498,7 +528,7 @@ Disclaimer
 </section>
 <section id="example-find-thread-urls" class="level3">
 <h3 class="anchored" data-anchor-id="example-find-thread-urls">Example: Find thread URLs</h3>
-<div class="cell" data-hash="06-exercise_cache/html/unnamed-chunk-3_03a70ac6abab98eda69ada4cbe65edff">
+<div class="cell" data-hash="06-exercise_cache/html/unnamed-chunk-2_b732d4b5ed99cd8c71e640a67fba30d7">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get list of top thread urls</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>news_top_urls <span class="ot">&lt;-</span> <span class="fu">find_thread_urls</span>(</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">subreddit =</span> <span class="st">"news"</span>, </span>
@@ -514,21 +544,26 @@ Disclaimer
 </section>
 <section id="analysis-of-collected-4cat-data" class="level2">
 <h2 class="anchored" data-anchor-id="analysis-of-collected-4cat-data">Analysis of collected 🐈🐈 4CAT 🐈🐈 data</h2>
-<section id="data-import-from-fa-brands-github" class="level3">
-<h3 class="anchored" data-anchor-id="data-import-from-fa-brands-github">Data import from <i class="fa-brands fa-github" aria-label="github"></i></h3>
-<div class="cell" data-hash="06-exercise_cache/html/unnamed-chunk-4_b9285153fe8d7bd0a2693b7a337509fe">
+<p>A detailed description about the collection of the data (in the form of a concrete application example) can be found in the slides of the associated session.</p>
+<div class="cell" data-hash="06-exercise_cache/html/fix dependencies_a250d68cac53bed4f052e5cce7329ba3">
+
+</div>
+<section id="load-data-into-local-environment" class="level3">
+<h3 class="anchored" data-anchor-id="load-data-into-local-environment">Load data into local environment</h3>
+<div class="cell" data-hash="06-exercise_cache/html/unnamed-chunk-3_440fe3d2e34faf3fab2508d2b459f655">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load packages</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># get data from github</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>musk <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"https://raw.githubusercontent.com/chrdrn/dbd_binder/main/data/06-reddit/4cat-reddit_news-musk_complete.csv"</span>)</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>musk_entities <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="st">"https://raw.githubusercontent.com/chrdrn/dbd_binder/main/data/06-reddit/4cat-reddit_news-musk-named_entities.csv"</span>)</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co"># quick preview</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>musk <span class="sc">%&gt;%</span> <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># get data from github</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>musk <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">here</span>(<span class="st">"content/06-api_access-reddit/data.local/4cat-reddit_news-musk_complete.csv"</span>))</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>musk_entities <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">here</span>(<span class="st">"content/06-api_access-reddit/data.local/4cat-reddit_news-musk-named_entities.csv"</span>))</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co"># quick preview</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>musk <span class="sc">%&gt;%</span> <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 4,838
 Columns: 16
@@ -576,7 +611,7 @@ Tip
 </div>
 <section id="total" class="level4">
 <h4 class="anchored" data-anchor-id="total">Total</h4>
-<div class="cell" data-hash="06-exercise_cache/html/unnamed-chunk-5_d209ffeab2decb3b74c01f71778cf58e">
+<div class="cell" data-hash="06-exercise_cache/html/unnamed-chunk-4_f51ae6082b54efdf8d42b1fa8c89fcd1">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sjPlot)</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -588,13 +623,13 @@ Tip
 <span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Post including 'musk' on Reddit"</span>) <span class="sc">+</span></span>
 <span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">subtitle =</span> <span class="st">"Subreddits 'news' &amp; 'worldnews' between 14-11 and 26-11-2022"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="06-exercise_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="1536"></p>
+<p><img src="06-exercise_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="1536"></p>
 </div>
 </div>
 </section>
 <section id="by-subreddit" class="level4">
 <h4 class="anchored" data-anchor-id="by-subreddit">By subreddit</h4>
-<div class="cell" data-hash="06-exercise_cache/html/unnamed-chunk-6_7e9534d8df11ecbedd6ca54c54f79c0a">
+<div class="cell" data-hash="06-exercise_cache/html/unnamed-chunk-5_63ead2d9704d19d097a99fa6baeea79f">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(magrittr)</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>musk <span class="sc">%&gt;%</span> </span>
@@ -608,16 +643,21 @@ Tip
 <span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Post including 'musk' on Reddit"</span>) <span class="sc">+</span></span>
 <span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">subtitle =</span> <span class="st">"Between 14-11 and 26-11-2022"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="06-exercise_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="1536"></p>
+<p><img src="06-exercise_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="1536"></p>
 </div>
 </div>
 
 
+
 </section>
 </section>
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="doc-bibliography">
+<div id="ref-peeters2022" class="csl-entry" role="doc-biblioentry">
+Peeters, S., &amp; Hagen, S. (2022). The 4CAT Capture and Analysis Toolkit: A Modular Tool for Transparent and Traceable Social Media Research. <em>Computational Communication Research</em>, <em>4</em>(2), 571–589. <a href="https://doi.org/10.5117/ccr2022.2.007.hage">https://doi.org/10.5117/ccr2022.2.007.hage</a>
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

@@ -1,38 +1,8 @@
 ---
 title: "API-Access – YouTube" 
-title-slide-attributes:
-  data-background-image: ../../../img/background_title.png
-  data-background-color: "#04316a"
 subtitle: "Digital behavioral data - Session 05"
-author: 
-  - name: Christoph Adrian 
-    url: https://twitter.com/chrdrn
-    affiliation: Lehrstuhl für Kommunikationswissenschaft
-    affiliation-url: https://www.kowi.rw.fau.de/person/christoph-adrian/
 date: 23 11 2022
 date-format: "DD.MM.YYYY"
-format:
-  revealjs:
-    theme: ../../slidetheme.scss
-    template-partials:
-      - title-slide.html
-    slide-number: true
-    chalkboard:
-      buttons: false
-    preview-links: auto
-    logo: ../../../img/logo.png
-    footer: "[Digital Behavioral Data](https://chrdrn.github.io/digital-behavioral-data/)"
-highlight-style: atom-one
-comments:
-  hypothesis: 
-    theme: clean
-filters:
-  - roughnotation
-execute:
-  echo: true
-csl: ../../apa.csl
-editor_options: 
-  chunk_output_type: console
 bibliography: references.bib
 ---
 
@@ -99,20 +69,19 @@ Im Fokus: [{{< fa brands youtube >}} maiLab](https://www.youtube.com/c/maiLab)
 
 ```{r}
 #| echo: false
+#| message: false
 
 # Load packages
-library(knitr)
-library(kableExtra)
+library(here) # Easy file path construction
+library(academictwitteR) # Collecting the data
+library(lubridate) # Work with date-times and time-spans
+library(sjmisc) # Collection of miscellaneous utility functions
 library(tidyverse) # Preparation of the data
 library(quanteda) # Text mining
 library(quanteda.textstats) # Text statistics
 library(quanteda.textplots) # Visualisation of text data
-library(here)
-library(sjmisc)
-library(sjPlot)
-library(lubridate)
-library(ggthemes)
-library(ggpubr)
+library(ggthemes) # Custom ggplot themes
+library(ggpubr) # Convenience functions for 'ggplot2'-plots
 ```
 
 ## Wissenschaftsjournalismus auf YouTube
@@ -136,13 +105,16 @@ HIntergrund zu [{{< fa brands youtube >}} maiLab](https://www.youtube.com/c/maiL
 #### [{{< fa brands youtube >}} maiLab](https://www.youtube.com/c/maiLab) im Fokus: Datenimport mit R (1)
 
 ```{r}
+#| message: false
+
 # Load packages
 library(readr)
 library(tidyverse)
 
 # Import data
 channel_list <- read_csv(
-  "https://raw.githubusercontent.com/chrdrn/dbd_binder/main/data/05-youtube/channelsearch_channels50_2022_11_17-09_54_22.csv")
+  here("content/05-api_access-youtube/data.local/channelsearch_channels50_2022_11_17-09_54_22.csv")
+  )
 
 # Preview data 
 channel_list %>% glimpse()
@@ -153,10 +125,12 @@ channel_list %>% glimpse()
 #### [{{< fa brands youtube >}} maiLab](https://www.youtube.com/c/maiLab) im Fokus: Datenimport mit R (2)
 
 ```{r}
+#| message: false
+
 # Import data: video list
 video_list <- read_csv(
-  "https://raw.githubusercontent.com/chrdrn/dbd_binder/main/data/05-youtube/videolist_channel186_2022_11_17-10_20_11.csv"
-)
+  here("content/05-api_access-youtube/data.local/videolist_channel186_2022_11_17-10_20_11.csv")
+  )
 
 # Preview data 
 video_list %>% glimpse()
@@ -182,6 +156,8 @@ video_list %>%
 #### [{{< fa brands youtube >}} maiLab](https://www.youtube.com/c/maiLab) im Fokus: Datenauswertung mit R (2)
 
 ```{r}
+#| message: false
+
 # Load additional packages
 library(sjPlot) 
 

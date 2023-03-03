@@ -1,6 +1,6 @@
 ---
 title: "Showcase"
-subtitle: "Text as data"
+subtitle: "Focus on 'Text as data'"
 format: 
   html:
     toc: true
@@ -13,6 +13,31 @@ execute:
   warning: false
 highlight-style: atom-one
 ---
+```{r Setup local OSF environment}
+#| echo: false
+#| eval: false
+#| message: false
+
+# Load packages
+pacman::p_load(
+  pacman,
+  here, osfr, fs, 
+  tidyverse)
+
+# Get custom functions
+source(here("functions/osf_dependencies.R"))
+
+# Get custom paths
+dirs <- osf_dependencies("08-text_as_data")
+
+# Get data
+osf_download(
+  dirs$osf_data_path,
+  path = here(dirs$local_data_path),
+  recurse = TRUE,
+  progress = TRUE
+)
+```
 
 ```{r preparation}
 #| echo: false
@@ -31,14 +56,20 @@ pacman::p_load(
   tidyverse  # last to resolve masking issues
 )
 # load data
-amazon <- readRDS(
-  url("https://github.com/chrdrn/dbd_binder/blob/main/data/08-text_as_data/reviews_tpm.RDS?raw=true"), "rb")
+amazon <- readRDS(here("content/08-text_as_data/data.local/reviews_tpm.RDS"))
 ```
+
+::: callout-tip
+Open this showcase in other interactive and executable environments:
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/chrdrn/dbd_binder/HEAD)
+[![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chrdrn/dbd_binder/blob/main/session_08-showcase_text_as_data.ipynb)
+:::
 
 
 ## Background
 
--   Scraping Amazon Reviewss in R
+-   Scraping Amazon Reviews with R
 
 
 ## Scraping

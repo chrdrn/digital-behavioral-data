@@ -1,4 +1,8 @@
+here
 academictwitteR
+timechange
+lubridate
+sjmisc
 tidyverse
 ggplot2
 tibble
@@ -11,9 +15,5 @@ forcats
 quanteda
 quanteda.textstats
 quanteda.textplots
-here
-sjmisc
-timechange
-lubridate
 ggthemes
 ggpubr

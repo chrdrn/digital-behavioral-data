@@ -15,31 +15,96 @@ execute:
 highlight-style: atom-one
 editor_options: 
   chunk_output_type: console
+bibliography: references.bib
+csl: ../apa.csl
 ---
 
+```{r Setup local OSF environment}
+#| echo: false
+#| eval: false
+#| message: false
+
+# Load packages
+pacman::p_load(
+  pacman,
+  here, osfr, fs, 
+  tidyverse)
+
+# Get custom functions
+source(here("functions/osf_dependencies.R"))
+
+# Get custom paths
+dirs <- osf_dependencies("04-api_access-twitter")
+
+# Get data
+osf_download(
+  dirs$osf_data_path,
+  path = here(dirs$local_data_path),
+  recurse = TRUE,
+  progress = TRUE
+)
+
+# Unzip files
+zipfiles <- list.files(
+  here(setup$local_data_path),
+  pattern = "*.zip",
+  full.names = TRUE
+)
+
+map(zipfiles, unzip, exdir = setup$local_data_path)
+```
+
+::: callout-tip
+Open this showcase in other interactive and executable environments:
+
+[![Binder](https://mybinder.org/badge_logo.svg){alt="Binder"}](https://mybinder.org/v2/gh/chrdrn/dbd_binder/HEAD) [![Google Colab](https://colab.research.google.com/assets/colab-badge.svg){alt="Google Colab"}](https://colab.research.google.com/github/chrdrn/dbd_binder/blob/main/session_05-showcase_youtube.ipynb)
+:::
+
+## Background
+
+Practical application of the *Twitter Academic Research Product Track v2 API endpoint* with the help of the [academictwitteR](https://github.com/cjbarrie/academictwitteR) [@barrie2021] package. Visit the [{{< fa brands github >}} repository](https://github.com/cjbarrie/academictwitteR) of the package for further information.
+
+This version of the Twitter API allows researchers to access larger volumes of Twitter data. For more information on the the Twitter API, including how to apply for access to the Academic Research Product Track, see the [Twitter Developer platform.](https://developer.twitter.com/en/use-cases/do-research/academic-research)
+
+::: callout-note
+## Disclaimer
+
+This session was created before Twitter announced changes to its API access:
+
+{{< tweet user=TwitterDev id=1621026986784337922 >}}
+
+As things stand (28.02.2023), there will no longer be free academic research.
+:::
+
+This showcase contains two exemplary uses of the API: Analysis of specific hashtags (e.g. [#Karneval](https://twitter.com/search?q=%23karneval&src=typed_query)) and/or specific accounts (e.g. [\@elonmusk](https://twitter.com/elonmusk))
+
 ## Preparation
+
 ### Load necessary packages
+
 ```{r load packages}
+library(here) # Easy file path construction
 library(academictwitteR) # Collecting the data
+library(lubridate) # Work with date-times and time-spans
+library(sjmisc) # Collection of miscellaneous utility functions
 library(tidyverse) # Preparation of the data
 library(quanteda) # Text mining
 library(quanteda.textstats) # Text statistics
 library(quanteda.textplots) # Visualisation of text data
-library(here)
-library(sjmisc)
-library(lubridate)
-library(ggthemes)
-library(ggpubr)
+library(ggthemes) # Custom ggplot themes
+library(ggpubr) # Convenience functions for 'ggplot2'-plots
 ```
 
 ## Set personal bearer token
+
 ```{r set bearer}
 personal_bearer_token <- "INSERT BEARER TOKEN HERE"
 ```
 
-
 ## Mining tweets: hashtag(s)
+
 ### Data collection
+
 ```{r mine tweets hashtag}
 #| eval: false
 
@@ -48,16 +113,17 @@ get_all_tweets(
     start_tweets = "2022-11-11T00:00:00Z",
     end_tweets = "2022-11-13T12:00:00Z",
     file = "karneval",
-    data_path = "data/raw_karneval/",
+    data_path = "data.local/raw_karneval/",
     n = 100000,
     #bearer_token = personal_bearer_token
   )
 ```
 
 #### Read data from disc
+
 ```{r read tweets hashtag}
 tweets_karneval <- bind_tweets(
-  data_path = here("content/04-api_access-twitter/data/raw_karneval"),
+  data_path = here("content/04-api_access-twitter/data.local/raw_karneval"),
   output_format = "tidy") %>% 
     mutate(
     datetime = ymd_hms(created_at),
@@ -70,17 +136,21 @@ tweets_karneval <- bind_tweets(
 ```
 
 ### Data analysis
+
 #### Overview of dataset
+
 ```{r hashtag analysis overview}
 tweets_karneval %>% glimpse
 ```
 
 #### Language of tweets
+
 ```{r hashtag analysis language}
 frq(tweets_karneval$lang, sort.frq = "desc")
 ```
 
 #### Tweets over time
+
 ```{r hashtag analysis time}
 tweets_karneval %>% 
   ggplot(aes(hour)) +
@@ -90,6 +160,7 @@ tweets_karneval %>%
 ```
 
 #### Most frequent time (HH:MM) of sending tweets
+
 ```{r hashtag analysis time peaks}
 tweets_karneval %>%
   frq(hm,
@@ -98,6 +169,7 @@ tweets_karneval %>%
 ```
 
 #### User with the most tweets
+
 ```{r hashtag analysis frequent users}
 tweets_karneval %>% 
   frq(user_username,
@@ -105,8 +177,14 @@ tweets_karneval %>%
       min.frq = 5)
 ```
 
-#### Display tweets from most freuquent users
+<!--#  The following section is hidden due to DSGVO -->
+
+<!--#  #### Display tweets from most freuquent users -->
+
 ```{r hashtag analysis user example 1}
+#| echo: false
+#| eval: false
+
 tweets_karneval %>% 
   filter(user_username == "Gun17170309") %$% 
   glue::glue(
@@ -117,6 +195,9 @@ tweets_karneval %>%
 ```
 
 ```{r hashtag analysis user example 2}
+#| echo: false
+#| eval: false
+
 tweets_karneval %>% 
   filter(user_username == "berlinaffaires") %$% 
   glue::glue(
@@ -126,9 +207,10 @@ tweets_karneval %>%
   head()
 ```
 
-
 ## Mining tweets: profile(s)
+
 ### Data collection
+
 ```{r mine tweets profile}
 #| eval: false
 
@@ -137,16 +219,17 @@ get_all_tweets(
     start_tweets = "2020-11-11T00:00:00Z",
     end_tweets = "2022-11-13T12:00:00Z",
     file = "elonmusk",
-    data_path = here("content/04-api_access-twitter/data/raw_elonmusk/"),
+    data_path = here("content/04-api_access-twitter/data.local/raw_elonmusk/"),
     n = 100000,
     bearer_token = personal_bearer_token
   )
 ```
 
 #### Read data from disc
+
 ```{r read tweets profile}
 tweets_musk <- bind_tweets(
-  data_path = here("content/04-api_access-twitter/data/raw_elonmusk"),
+  data_path = here("content/04-api_access-twitter/data.local/raw_elonmusk"),
   # data_path = "data/raw_karneval",
   output_format = "tidy") %>% 
     mutate(
@@ -160,12 +243,15 @@ tweets_musk <- bind_tweets(
 ```
 
 ### Data analysis
+
 #### Overview of dataset
+
 ```{r profile analysis overview}
 tweets_musk %>% glimpse
 ```
 
 #### Tweets over time
+
 ```{r profile analysis time}
 tweets_musk %>% 
   ggplot(aes(date)) +
@@ -174,6 +260,7 @@ tweets_musk %>%
 ```
 
 #### Tweets with the most likes
+
 ```{r profile analysis most likes}
 tweets_musk %>% 
   filter(is.na(sourcetweet_type)) %>% 
@@ -183,6 +270,7 @@ tweets_musk %>%
 ```
 
 #### Tweets with the most retweets
+
 ```{r profile analysis most retweets}
 tweets_musk %>% 
   filter(is.na(sourcetweet_type)) %>% 
@@ -192,20 +280,23 @@ tweets_musk %>%
 ```
 
 #### Proportion of tweets
+
 ```{r profile analysis tweet type}
 tweets_musk %>% 
   frq(sourcetweet_type)
 ```
 
 #### Languate of tweets
+
 ```{r profile analysis language}
 tweets_musk %>% 
   frq(lang)
 ```
 
-
 ## Text mining
+
 ### Preprocessing
+
 ```{r text mining preprocessing}
 remove_html <- "&amp;|&lt;|&gt;"
 
@@ -238,7 +329,9 @@ tweets_en_dfm <- dfm(tweets_en_tokens)
 ```
 
 ### Analysis
+
 #### Top Hashtags
+
 ```{r corpus analysis top hashtags}
 tag_dfm <- dfm_select(tweets_en_dfm, pattern = "#*")
 toptag <- names(topfeatures(tag_dfm, 50))
@@ -246,6 +339,7 @@ head(toptag, 10)
 ```
 
 #### Top Mentions
+
 ```{r corpus analysis top metions}
 user_dfm <- dfm_select(tweets_en_dfm, pattern = "@*")
 topuser <- names(topfeatures(user_dfm, 50))
@@ -253,6 +347,7 @@ head(topuser, 10)
 ```
 
 #### Exclude Hashtags & Metions
+
 ```{r corpus analysis dfm processing}
 tweets_en_clean <- tweets_en_dfm %>% 
   dfm_remove(pattern = "@*") %>% 
@@ -260,16 +355,14 @@ tweets_en_clean <- tweets_en_dfm %>%
 ```
 
 #### Top 10 features
+
 ```{r corpus analysis top features}
 term_freq_en <- textstat_frequency(tweets_en_clean)
 head(term_freq_en, n = 10)
 ```
 
 #### Wordcloud with Top 50 features
+
 ```{r corpus analysis top features wordcloud}
 textplot_wordcloud(tweets_en_clean, max_words = 50)
 ```
-
-
-
-

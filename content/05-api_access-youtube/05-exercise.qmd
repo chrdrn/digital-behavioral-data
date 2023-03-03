@@ -17,18 +17,41 @@ editor_options:
   chunk_output_type: console
 ---
 
-```{r}
+```{r Setup local OSF environment}
 #| echo: false
-library(here)
+#| eval: false
+#| message: false
+
+# Load packages
+pacman::p_load(
+  pacman,
+  here, osfr, fs, 
+  tidyverse)
+
+# Get custom functions
+source(here("functions/osf_dependencies.R"))
+
+# Get custom paths
+dirs <- osf_dependencies("05-api_access-youtube")
+
+# Get data
+osf_download(
+  dirs$osf_data_path,
+  path = here(dirs$local_data_path),
+  recurse = TRUE,
+  progress = TRUE
+)
 ```
+
+::: callout-tip
+Open this showcase in other interactive and executable environments:
+
+[![Binder](https://mybinder.org/badge_logo.svg){alt="Binder"}](https://mybinder.org/v2/gh/chrdrn/dbd_binder/HEAD) [![Google Colab](https://colab.research.google.com/assets/colab-badge.svg){alt="Google Colab"}](https://colab.research.google.com/github/chrdrn/dbd_binder/blob/main/session_05-showcase_youtube.ipynb)
+:::
 
 ## Background
 
-Practical application of the YouTube Data Tool (YTDT) using the example of Mai Thi Nguyen-Kim ( [{{< fa brands twitter >}}](https://twitter.com/maithi_nk) \| [{{< fa brands instagram >}}](https://www.instagram.com/maithink/) ) and her [{{< fa brands youtube >}}](https://www.youtube.com/c/maiLab)-Channel [maiLab](https://www.youtube.com/c/maiLab).
-
-You can also open this showcase in other interactive and executable environments:
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/chrdrn/dbd_binder/HEAD)
-[![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chrdrn/dbd_binder/blob/main/session_05-showcase_youtube.ipynb)
+Practical application of the [YouTube Data Tool (YTDT)](https://tools.digitalmethods.net/netvizz/youtube/) using the example of Mai Thi Nguyen-Kim ( [{{< fa brands twitter >}}](https://twitter.com/maithi_nk) \| [{{< fa brands instagram >}}](https://www.instagram.com/maithink/) ) and her [{{< fa brands youtube >}}](https://www.youtube.com/c/maiLab)-Channel [maiLab](https://www.youtube.com/c/maiLab).
 
 ## Exercise 1
 
@@ -39,12 +62,13 @@ You can also open this showcase in other interactive and executable environments
 
 ```{r}
 # Load packages
+library(here)
 library(readr)
 library(tidyverse)
 
 # Import data
 channel_list <- read_csv(
-  here("content/05-api_access-youtube/data/channelsearch_channels50_2022_11_17-09_54_22.csv"))
+  here("content/05-api_access-youtube/data.local/channelsearch_channels50_2022_11_17-09_54_22.csv"))
 
 # Preview data 
 channel_list %>% glimpse()
@@ -66,7 +90,7 @@ channel_list %>%
 ```{r}
 # Import data: video list
 video_list <- read_csv(
-  here("content/05-api_access-youtube/data/videolist_channel186_2022_11_17-10_20_11.csv"))
+  here("content/05-api_access-youtube/data.local/videolist_channel186_2022_11_17-10_20_11.csv"))
 
 # Preview data 
 video_list %>% glimpse()
@@ -92,6 +116,10 @@ video_list %>%
 ### More detailed distribution for each variable
 
 ```{r}
+# Load additional packages
+library(sjPlot) 
+
+# Show distributions for selected variables
 video_list %>% 
   plot_frq(durationSec, viewCount, likeCount, commentCount, type = "density")
 ```

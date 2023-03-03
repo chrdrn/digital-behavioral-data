@@ -1,45 +1,15 @@
 ---
 title: "Web-Scraping – TikTok" 
-title-slide-attributes:
-  data-background-image: ../../../img/background_title.png
-  data-background-color: "#04316a"
 subtitle: "Digital behavioral data - Session 07"
-author: 
-  - name: Christoph Adrian 
-    url: https://twitter.com/chrdrn
-    affiliation: Lehrstuhl für Kommunikationswissenschaft
-    affiliation-url: https://www.kowi.rw.fau.de/person/christoph-adrian/
 date: 07 12 2022
 date-format: "DD.MM.YYYY"
-format:
-  revealjs:
-    theme: ../../slidetheme.scss
-    template-partials:
-      - title-slide.html
-    slide-number: true
-    chalkboard:
-      buttons: false
-    preview-links: auto
-    logo: ../../../img/logo.png
-    footer: "[Digital Behavioral Data](https://chrdrn.github.io/digital-behavioral-data/)"
-highlight-style: atom-one
-comments:
-  hypothesis: 
-    theme: clean
-filters:
-  - roughnotation
-execute:
-  echo: true
-csl: ../../apa.csl
-editor_options: 
-  chunk_output_type: console
 bibliography: references.bib
 ---
 
 ## Seminarplan {.smaller}
 
 | Sitzung                                                | Datum                                                           | Thema                                                                              | Referent\*Innen                                                       |
-|--------------------------------------------------------|-----------------------------------------------------------------|------------------------------------------------------------------------------------|-----------------------------------------------------------------------|
+|-----------------|-----------------|---------------------|------------------|
 | [*1*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*26.10.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*Kick-Off Session*]{.rn rn-type="strike-through" rn-color="#E6002E"}              | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
 | [*2*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*02.11.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*DBD: Einführung und Überblick*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
 | [*3*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*09.11.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*DBD: Datenerhebung*]{.rn rn-type="strike-through" rn-color="#E6002E"}            | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
@@ -61,13 +31,13 @@ bibliography: references.bib
 
 # Agenda
 
-1.  [📢️ Organisation & Koordination]
-2.  [Verständnis- & Diskussionsfragen]
+1.  [📢️ Organisation & Koordination](#organisation-koordination)
+2.  [Verständnis- & Diskussionsfragen](#verständnis--diskussionsfragen)
 3.  [Group Activity]
 4.  [Beispielhafte Auswertungen]
 5.  [Time for questions]
 
-# 📢️ Organisation & Koordination {background-image='../../../img/background_orga.png'}
+# 📢️ Organisation & Koordination {#organisation-koordination background-image="../../../img/background_orga.png"}
 
 Fragen zur DBD-Analyse mit R
 
@@ -77,7 +47,7 @@ Fragen zur DBD-Analyse mit R
 -   Datengrundlage?
 :::
 
-# Verständnis- & Diskussionsfragen {background-image='../../../img/background_participation.png'}
+# Verständnis- & Diskussionsfragen {#verständnis--diskussionsfragen background-image="../../../img/background_participation.png"}
 
 Ihre Fragen aus MS Teams
 
@@ -111,7 +81,7 @@ Ihre Fragen aus MS Teams
 > Laut dem paper wird durch verschiedene video einstellungen von TikTok bereits content "geshaped". Sind biases auf TikTok dadurch stärker als bei anderen Plattformen?
 :::
 
-# Group Activity {background-image='../../../img/background_group_activity.png'}
+# Group Activity {background-image="../../../img/background_group_activity.png"}
 
 Gruppenarbeit zu `Zeeschuimer`
 
@@ -223,7 +193,7 @@ library(ggpubr)
 
 # get data from github
 statistics <- read_csv(
-  here("content/07-webscraping-tiktok/data/tiktok-search-statistics.csv"), 
+  here("content/07-webscraping-tiktok/data.local/tiktok-search-statistics.csv"), 
   col_types = cols(author_followers = col_number()))
 
 ```
@@ -280,9 +250,9 @@ dfm %>% textplot_wordcloud(
   rotation = 0)
 ```
 
-# Time for questions {background-image='../../../img/background_questions.png'}
+# Time for questions {background-image="../../../img/background_questions.png"}
 
-# Bis zur nächsten Sitzung! {background-image='../../../img/background_end_of_session.png' .unlisted}
+# Bis zur nächsten Sitzung! {.unlisted background-image="../../../img/background_end_of_session.png"}
 
 ## Literatur
 

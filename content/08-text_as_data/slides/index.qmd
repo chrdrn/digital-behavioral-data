@@ -1,45 +1,15 @@
 ---
 title: "Text as data" 
-title-slide-attributes:
-  data-background-image: ../../../img/background_title.png
-  data-background-color: "#04316a"
 subtitle: "Digital behavioral data - Extra session"
-author: 
-  - name: Christoph Adrian 
-    url: https://twitter.com/chrdrn
-    affiliation: Lehrstuhl für Kommunikationswissenschaft
-    affiliation-url: https://www.kowi.rw.fau.de/person/christoph-adrian/
 date: 14 12 2022
 date-format: "DD.MM.YYYY"
-format:
-  revealjs:
-    theme: ../../slidetheme.scss
-    template-partials:
-      - title-slide.html
-    slide-number: true
-    chalkboard:
-      buttons: false
-    preview-links: auto
-    logo: ../../../img/logo.png
-    footer: "[Digital Behavioral Data](https://chrdrn.github.io/digital-behavioral-data/)"
-highlight-style: atom-one
-comments:
-  hypothesis: 
-    theme: clean
-filters:
-  - roughnotation
-execute:
-  echo: true
-csl: ../../apa.csl
-editor_options: 
-  chunk_output_type: console
 bibliography: references.bib
 ---
 
 ## Seminarplan {.smaller}
 
 | Sitzung                                                | Datum                                                           | Thema                                                                              | Referent\*Innen                                                       |
-|--------------------------------------------------------|-----------------------------------------------------------------|------------------------------------------------------------------------------------|-----------------------------------------------------------------------|
+|-----------------|-----------------|---------------------|------------------|
 | [*1*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*26.10.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*Kick-Off Session*]{.rn rn-type="strike-through" rn-color="#E6002E"}              | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
 | [*2*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*02.11.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*DBD: Einführung und Überblick*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
 | [*3*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*09.11.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*DBD: Datenerhebung*]{.rn rn-type="strike-through" rn-color="#E6002E"}            | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
@@ -61,11 +31,11 @@ bibliography: references.bib
 ⚠️Terminkonflikt
 :::
 
-# Agenda {background-image='../../../img/background_agenda.png'}
+# Agenda {background-image="../../../img/background_agenda.png"}
 
 1.  [A short introduction]
 2.  [Case Study: Amazon Reviews](#sec2)
-3.  [☕ Kursevluation]
+3.  \[☕ Kursevluation\]
 4.  [Text processing]
 5.  [Sentiment Analyse]
 6.  [Topic Modeling]
@@ -131,8 +101,7 @@ pacman::p_load(
   tidyverse  # last to resolve masking issues
 )
 # load data
-amazon <- readRDS(
-  url("https://github.com/chrdrn/dbd_binder/blob/main/data/08-text_as_data/reviews_tpm.RDS?raw=true"), "rb")
+amazon <- readRDS(here("content/08-text_as_data/data.local/reviews_tpm.RDS"))
 
 ```
 

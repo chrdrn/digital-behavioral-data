@@ -13,27 +13,43 @@ execute:
   warning: false
 highlight-style: atom-one
 ---
-
-```{r}
+```{r Setup local OSF environment}
 #| echo: false
-options(scipen = 999)
+#| eval: false
+#| message: false
 
+# Load packages
 pacman::p_load(
-  here, fs, # file management
-  sjmisc, magrittr, lubridate, janitor, # data processing
-  sjPlot, # analysis
-  quanteda, quanteda.textplots, # text processing
-  tidyverse  # last to resolve masking issues
+  pacman,
+  here, osfr, fs, 
+  tidyverse)
+
+# Get custom functions
+source(here("functions/osf_dependencies.R"))
+
+# Get custom paths
+dirs <- osf_dependencies("07-webscraping-tiktok")
+
+# Get data
+osf_download(
+  dirs$osf_data_path,
+  path = here(dirs$local_data_path),
+  recurse = TRUE,
+  progress = TRUE
 )
 ```
+
+::: callout-tip
+Open this showcase in other interactive and executable environments:
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/chrdrn/dbd_binder/HEAD)
+[![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chrdrn/dbd_binder/blob/main/session_07-showcase_tiktok.ipynb)
+:::
 
 ## Background
 
 This showcase is intended to illustrate different analysis possibilities of {{< fa brands tiktok >}} TikTok data downloaded with the [`Zeeschuimer`](https://github.com/digitalmethodsinitiative/zeeschuimer) browser extension.
 
-You can also open this showcase in other interactive and executable environments:
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/chrdrn/dbd_binder/HEAD)
-[![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chrdrn/dbd_binder/blob/main/session_07-showcase_tiktok.ipynb)
 
 ## Data analysis
 
@@ -45,10 +61,12 @@ You can also open this showcase in other interactive and executable environments
 
 ```{r}
 # load packages
+library(here)
+library(tidyverse)
 library(readr)
 
 statistics <- read_csv(
-  here("content/07-webscraping-tiktok/data/tiktok-search-statistics.csv"), 
+  here("content/07-webscraping-tiktok/data.local/tiktok-search-statistics.csv"), 
   col_types = cols(author_followers = col_number()))
 
 # quick preview
@@ -84,6 +102,8 @@ statistics %>%
 #### Location parameters of different statistics
 
 ```{r}
+library(sjmisc)
+
 statistics %>% 
   select(likes:plays) %>% 
   descr()
@@ -99,8 +119,6 @@ statistics %>%
 #### Warning messages displayed
 
 ```{r}
-library(sjmisc)
-
 statistics %>% 
   frq(warning)
 ```
@@ -110,6 +128,9 @@ statistics %>%
 #### Corpus creation
 
 ```{r}
+# Load packages
+library(quanteda)
+
 # Create corpus based on variable hashtags
 crp <- corpus(
   statistics, 
@@ -149,6 +170,8 @@ dfm
 #### Wordcloud
 
 ```{r}
+library(quanteda.textplots)
+
 dfm %>% 
   textplot_wordcloud(
     min_size = 1,

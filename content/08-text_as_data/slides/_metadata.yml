@@ -1,0 +1,35 @@
+title-slide-attributes:
+  data-background-image: ../../../img/background_title.png
+  data-background-color: "#04316a"
+
+author: 
+  - name: Christoph Adrian
+    url: https://twitter.com/chrdrn
+    affiliation: Lehrstuhl für Kommunikationswissenschaft
+    affiliation-url: https://www.kowi.rw.fau.de/person/christoph-adrian/
+  
+format:
+  revealjs:
+    theme: ../../slidetheme.scss
+    logo: ../../../img/logo_plus_right.png
+    footer: "[Home](https://chrdrn.github.io/digital-behavioral-data/)"
+    slide-number: true
+    preview-links: auto
+    template-partials:
+      - title-slide.html
+    chalkboard:
+      buttons: false
+
+highlight-style: atom-one
+
+filters:
+  - roughnotation
+
+
+execute:
+  echo: true
+
+csl: ../../apa.csl
+
+editor_options: 
+  chunk_output_type: console

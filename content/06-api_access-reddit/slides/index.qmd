@@ -1,45 +1,15 @@
 ---
 title: "API-Access – Reddit" 
-title-slide-attributes:
-  data-background-image: ../../../img/background_title.png
-  data-background-color: "#04316a"
 subtitle: "Digital behavioral data - Session 06"
-author: 
-  - name: Christoph Adrian 
-    url: https://twitter.com/chrdrn
-    affiliation: Lehrstuhl für Kommunikationswissenschaft
-    affiliation-url: https://www.kowi.rw.fau.de/person/christoph-adrian/
 date: 30 11 2022
 date-format: "DD.MM.YYYY"
-format:
-  revealjs:
-    theme: ../../slidetheme.scss
-    template-partials:
-      - title-slide.html
-    slide-number: true
-    chalkboard:
-      buttons: false
-    preview-links: auto
-    logo: ../../../img/logo.png
-    footer: "[Digital Behavioral Data](https://chrdrn.github.io/digital-behavioral-data/)"
-highlight-style: atom-one
-comments:
-  hypothesis: 
-    theme: clean
-filters:
-  - roughnotation
-execute:
-  echo: true
-csl: ../../apa.csl
-editor_options: 
-  chunk_output_type: console
 bibliography: references.bib
 ---
 
 ## Seminarplan {.smaller}
 
 | Sitzung                                                | Datum                                                           | Thema                                                                              | Referent\*Innen                                                       |
-|------------------|------------------|-------------------|------------------|
+|--------------------------------------------------------|-----------------------------------------------------------------|------------------------------------------------------------------------------------|-----------------------------------------------------------------------|
 | [*1*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*26.10.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*Kick-Off Session*]{.rn rn-type="strike-through" rn-color="#E6002E"}              | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
 | [*2*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*02.11.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*DBD: Einführung und Überblick*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
 | [*3*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*09.11.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*DBD: Datenerhebung*]{.rn rn-type="strike-through" rn-color="#E6002E"}            | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
@@ -59,14 +29,13 @@ bibliography: references.bib
 ▶️
 :::
 
-# Agenda {background-image='../../../img/background_agenda.png'}
+# Agenda {background-image="../../../img/background_agenda.png"}
 
 1.  [Group Activity]
 2.  [Beispielhafte Auswertungen]
-3.  [Verständnis- & Diskussionsfragen]
- 
+3.  [Verständnis- & Diskussionsfragen](#verständnis--diskussionsfragen)
 
-# Group Activity {background-image='../../../img/background_group_activity.png'}
+# Group Activity {background-image="../../../img/background_group_activity.png"}
 
 Gruppenarbeit zu `4CAT: Capture and Analysis Toolkit`
 
@@ -171,10 +140,11 @@ Durchsuchen Sie die Subreddits `r/news` und `r/worldnews` nach Posts zu einem be
 
 Im Fokus: News über 🤡Elon Musk
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/chrdrn/dbd_binder/HEAD) [![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chrdrn/dbd_binder/blob/main/session_06-showcase_reddit.ipynb) [![RStudio Quarto](https://img.shields.io/badge/RStudio-4285F4?style=for-the-badge&logo=rstudio&logoColor=white)](https://chrdrn.github.io/digital-behavioral-data/content/06-api_access-reddit/06-exercise.html)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/chrdrn/dbd_binder/HEAD) [![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chrdrn/dbd_binder/blob/main/session_06-showcase_reddit.ipynb) [![RStudio Quarto](https://img.shields.io/badge/RStudio-4285F4?style=for-the-badge&logo=rstudio&logoColor=white){width="75"}](https://chrdrn.github.io/digital-behavioral-data/content/06-api_access-reddit/06-exercise.html)
 
 ```{r}
 #| echo: false
+#| message: false
 
 # Load packages
 library(knitr)
@@ -193,10 +163,10 @@ library(ggpubr)
 
 # get data from github
 musk <- read_csv(
-  "https://raw.githubusercontent.com/chrdrn/dbd_binder/main/data/06-reddit/4cat-reddit_news-musk_complete.csv")
+    here("content/06-api_access-reddit/data.local/4cat-reddit_news-musk_complete.csv"))
 
 musk_entities <- read_csv(
-  "https://raw.githubusercontent.com/chrdrn/dbd_binder/main/data/06-reddit/4cat-reddit_news-musk-named_entities.csv")
+  here("content/06-api_access-reddit/data.local/4cat-reddit_news-musk-named_entities.csv"))
 
 ```
 
@@ -333,7 +303,7 @@ musk %>%
   labs(subtitle = "Between 14-11 and 26-11-2022")
 ```
 
-# Verständnis- & Diskussionsfragen {background-image='../../../img/background_participation.png'}
+# Verständnis- & Diskussionsfragen {#verständnis--diskussionsfragen background-image="../../../img/background_participation.png"}
 
 Ihre Fragen aus MS Teams
 
@@ -367,9 +337,9 @@ Ihre Fragen aus MS Teams
 > Wie stark sind **Reddit-Date**n (evtl. auch im Vergleich zu Twitter) **generalisierbar**, wenn die Struktur von Reddit doch Diskussionen und Gespräche in gewisser Weise leitet (z.B. durch Sichtbarkeit von Themen)?
 :::
 
-# Time for questions {background-image='../../../img/background_questions.png'}
+# Time for questions {background-image="../../../img/background_questions.png"}
 
-# Bis zur nächsten Sitzung! {background-image='../../../img/background_end_of_session.png' .unlisted}
+# Bis zur nächsten Sitzung! {.unlisted background-image="../../../img/background_end_of_session.png"}
 
 ## Literatur
 

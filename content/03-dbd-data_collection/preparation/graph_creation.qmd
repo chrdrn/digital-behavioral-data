@@ -1,0 +1,925 @@
+---
+title: "graph_creation"
+editor: visual
+---
+
+# Session Setup
+
+## Load packages
+
+```{r}
+#| message: false
+
+library(tidyverse)
+library(svgtools)
+library(here)
+```
+
+# Graphics
+
+## DBD Research design
+
+### Get base graphic
+
+```{r}
+graph_base_dbd <- svgtools::read_svg(
+  here("content/03-dbd-data_collection/slides/graphs/graph_dbd-01_base.svg")) 
+```
+
+### graph_dbd_01
+
+```{r}
+# Create graph
+graph_dbd_01 <- graph_base_dbd %>% 
+  toString() %>%
+  #### GROUP: Population
+   # Circles
+  stringr::str_replace_all('"#00B050"', '"#04316A"') %>% # change color
+   # Label
+  stringr::str_replace("symbol1label", "Population") %>% # change label
+  #### GROUP: Construct
+    # Shape
+  stringr::str_replace_all('"#FFFF00"', '"#FFFF0000"') %>% # hide symbol
+    # Label
+  stringr::str_replace('symbol2label', '') %>% # hide label
+  #### GROUP: Text bubbles (Population and Construct)
+    # Shape
+  stringr::str_replace_all('"#7F6000"', '"#7F600000"') %>% # hide bubble
+    # Text
+  stringr::str_replace("bubble1label1", "") %>% # hide text
+  stringr::str_replace("bubble1label2", "") %>% # hide text
+  stringr::str_replace("bubble2label1", "") %>% # hide text
+  stringr::str_replace("bubble2label2", "") %>% # hide text
+  #### GROUP: Survey
+    # Symbol
+  stringr::str_replace_all('"#70AD47"', '"#70AD4700"') %>% # hide symbol
+    # Label
+  stringr::str_replace_all('label_box_3', '') %>% # hide label
+  #### GROUP: Free Text(Survey)
+    # Bulletpoints
+  stringr::str_replace_all(
+    'style="fill:#ff8080"',
+    'style="fill:#ff808000"') %>% # hide bulletpoints 
+    # Text
+  stringr::str_replace("surveylabel1", "") %>% # hide text
+  stringr::str_replace("surveylabel2", "") %>% # hide text
+  stringr::str_replace("surveylabel3", "") %>% # hide text
+  #### GROUP: SNS Twitter
+    # Box & Symbol
+  stringr::str_replace_all('"#00B0F0"', '"#00B0F000"') %>% # hide filling
+    # Cirles
+  stringr::str_replace_all('"#0066FF"', '"#0066FF00"') %>% # hide filling  
+  stringr::str_replace_all('"#FF0000"', '"#FF000000"') %>% # hide strokes
+    # Label
+  stringr::str_replace_all('User', '') %>% # hide label
+  #### GROUP: SNS Populations
+    # Boxes & Symbols
+  stringr::str_replace_all('"#C55A11"', '"#C55A1100"') %>% # hide stroke
+    # Cirles
+  stringr::str_replace_all('"#800000"', '"#80000000"') %>% # hide filling  
+  stringr::str_replace_all('"#9900FF"', '"#9900FF00"') %>% # hide strokes
+  #### GROUP: Links
+  stringr::str_replace_all('"#7F7F7F"', '"#7F7F7F00"') %>% # hide stroke
+  #### GROUP: SNS Population Textboxes
+    # Shape
+  stringr::str_replace_all('"#7030A0"', '"#7030A000"') %>% # hide boxes 
+    # Bulletpoints
+  stringr::str_replace_all(
+    'style="fill:#ff00ff"',
+    'style="fill:#ff00ff00"') %>% # hide bulletpoints 
+    # Text
+    ## Box 1
+  stringr::str_replace_all('box1h1', '') %>% # hide text
+  stringr::str_replace_all('box1text1', '') %>% # hide text
+  stringr::str_replace_all('box1text2', '') %>% # hide text
+  stringr::str_replace_all('box1text3', '') %>% # hide text
+  stringr::str_replace_all('box1text4', '') %>% # hide text
+    ## Box 2 
+  stringr::str_replace_all('box2h1', '') %>% # hide text
+  stringr::str_replace_all('box2text1', '') %>% # hide text
+  stringr::str_replace_all('box2text2', '') %>% # hide text
+  stringr::str_replace_all('box2text3', '') %>% # hide text
+ #### Convert back to .svg
+  svgtools::read_svg(.) 
+  
+# Save output
+svgtools::write_svg(
+  graph_dbd_01, 
+  here("content/03-dbd-data_collection/slides/graphs/graph_dbd_01.svg"))
+```
+
+### graph_dbd_02
+
+```{r}
+# Create graph
+graph_dbd_02 <- graph_base_dbd %>% 
+  toString() %>%
+  #### GROUP: Population
+   # Circles
+  stringr::str_replace_all('"#00B050"', '"#04316A"') %>% 
+   # Label
+  stringr::str_replace("symbol1label", "Population") %>%
+  #### GROUP: Construct
+    # Shape
+  stringr::str_replace_all('"#FFFF00"', '"#E6002E"') %>% # CHANGE color 
+    # Label
+  stringr::str_replace('symbol2label', 'Konstrukt') %>% # CHANGE text
+  #### GROUP: Text bubbles (Population and Construct)
+    # Shape
+  stringr::str_replace_all('"#7F6000"', '"#7F600000"') %>%
+    # Text
+  stringr::str_replace("bubble1label1", "") %>% 
+  stringr::str_replace("bubble1label2", "") %>% 
+  stringr::str_replace("bubble2label1", "") %>% 
+  stringr::str_replace("bubble2label2", "") %>% 
+  #### GROUP: Survey
+    # Symbol
+  stringr::str_replace_all('"#70AD47"', '"#70AD4700"') %>% 
+    # Label
+  stringr::str_replace_all('label_box_3', '') %>% 
+  #### GROUP: Free Text(Survey)
+    # Bulletpoints
+  stringr::str_replace_all(
+    'style="fill:#ff8080"',
+    'style="fill:#ff808000"') %>%  
+    # Text
+  stringr::str_replace("surveylabel1", "") %>% 
+  stringr::str_replace("surveylabel2", "") %>% 
+  stringr::str_replace("surveylabel3", "") %>% 
+  #### GROUP: SNS Twitter
+    # Box & Symbol
+  stringr::str_replace_all('"#00B0F0"', '"#00B0F000"') %>%
+    # Cirles
+  stringr::str_replace_all('"#0066FF"', '"#0066FF00"') %>%   
+  stringr::str_replace_all('"#FF0000"', '"#FF000000"') %>% 
+    # Label
+  stringr::str_replace_all('User', '') %>% 
+  #### GROUP: SNS Populations
+    # Boxes & Symbols
+  stringr::str_replace_all('"#C55A11"', '"#C55A1100"') %>% 
+    # Cirles
+  stringr::str_replace_all('"#800000"', '"#80000000"') %>%   
+  stringr::str_replace_all('"#9900FF"', '"#9900FF00"') %>% 
+  #### GROUP: Links
+  stringr::str_replace_all('"#7F7F7F"', '"#7F7F7F00"') %>% 
+  #### GROUP: SNS Population Textboxes
+    # Shape
+  stringr::str_replace_all('"#7030A0"', '"#7030A000"') %>%  
+    # Bulletpoints
+  stringr::str_replace_all(
+    'style="fill:#ff00ff"',
+    'style="fill:#ff00ff00"') %>%
+    # Text
+    ## Box 1
+  stringr::str_replace_all('box1h1', '') %>% 
+  stringr::str_replace_all('box1text1', '') %>% 
+  stringr::str_replace_all('box1text2', '') %>%
+  stringr::str_replace_all('box1text3', '') %>%
+  stringr::str_replace_all('box1text4', '') %>% 
+    ## Box 2 
+  stringr::str_replace_all('box2h1', '') %>% 
+  stringr::str_replace_all('box2text1', '') %>% 
+  stringr::str_replace_all('box2text2', '') %>% 
+  stringr::str_replace_all('box2text3', '') %>% 
+ #### Convert back to .svg
+  svgtools::read_svg(.) 
+  
+# Save output
+svgtools::write_svg(
+  graph_dbd_02, 
+  here("content/03-dbd-data_collection/slides/graphs/graph_dbd_02.svg"))
+```
+
+### graph_dbd_03
+
+```{r}
+# Create graph
+graph_dbd_03 <- graph_base_dbd %>% 
+  toString() %>%
+  #### GROUP: Population
+   # Circles
+  stringr::str_replace_all('"#00B050"', '"#04316A"') %>% 
+   # Label
+  stringr::str_replace("symbol1label", "Population") %>%
+  #### GROUP: Construct
+    # Shape
+  stringr::str_replace_all('"#FFFF00"', '"#04316A"') %>% # CHANGE color 
+    # Label
+  stringr::str_replace('symbol2label', 'Konstrukt') %>% # CHANGE text
+ #### Group: Symbol text bubbles
+    # Shape
+  stringr::str_replace_all('stroke="#7F6000"','stroke="#e6002e"') %>% # CHANGE stroke
+  stringr::str_replace_all('fill="#7F6000"', 'fill="#ffffff"') %>% # CHANGE fill
+    # Text
+  stringr::str_replace("bubble1label1", "Alle Erwachsenen") %>% # CHANGE text
+  stringr::str_replace("bubble1label2", "in Deutschland") %>% # CHANGE text
+  stringr::str_replace("bubble2label1", "Unterstützung der") %>% # CHANGE text
+  stringr::str_replace("bubble2label2", "COVID19-Maßnamen") %>% # CHANGE text
+  #### GROUP: Survey
+    # Symbol
+  stringr::str_replace_all('"#70AD47"', '"#70AD4700"') %>% 
+    # Label
+  stringr::str_replace_all('label_box_3', '') %>% 
+  #### GROUP: Free Text(Survey)
+    # Bulletpoints
+  stringr::str_replace_all(
+    'style="fill:#ff8080"',
+    'style="fill:#ff808000"') %>%  
+    # Text
+  stringr::str_replace("surveylabel1", "") %>% 
+  stringr::str_replace("surveylabel2", "") %>% 
+  stringr::str_replace("surveylabel3", "") %>% 
+  #### GROUP: SNS Twitter
+    # Box & Symbol
+  stringr::str_replace_all('"#00B0F0"', '"#00B0F000"') %>%
+    # Cirles
+  stringr::str_replace_all('"#0066FF"', '"#0066FF00"') %>%   
+  stringr::str_replace_all('"#FF0000"', '"#FF000000"') %>% 
+    # Label
+  stringr::str_replace_all('User', '') %>% 
+  #### GROUP: SNS Populations
+    # Boxes & Symbols
+  stringr::str_replace_all('"#C55A11"', '"#C55A1100"') %>% 
+    # Cirles
+  stringr::str_replace_all('"#800000"', '"#80000000"') %>%   
+  stringr::str_replace_all('"#9900FF"', '"#9900FF00"') %>% 
+  #### GROUP: Links
+  stringr::str_replace_all('"#7F7F7F"', '"#7F7F7F00"') %>% 
+  #### GROUP: SNS Population Textboxes
+    # Shape
+  stringr::str_replace_all('"#7030A0"', '"#7030A000"') %>%  
+    # Bulletpoints
+  stringr::str_replace_all(
+    'style="fill:#ff00ff"',
+    'style="fill:#ff00ff00"') %>%
+    # Text
+    ## Box 1
+  stringr::str_replace_all('box1h1', '') %>% 
+  stringr::str_replace_all('box1text1', '') %>% 
+  stringr::str_replace_all('box1text2', '') %>%
+  stringr::str_replace_all('box1text3', '') %>%
+  stringr::str_replace_all('box1text4', '') %>% 
+    ## Box 2 
+  stringr::str_replace_all('box2h1', '') %>% 
+  stringr::str_replace_all('box2text1', '') %>% 
+  stringr::str_replace_all('box2text2', '') %>% 
+  stringr::str_replace_all('box2text3', '') %>% 
+ #### Convert back to .svg
+  svgtools::read_svg(.) 
+  
+# Save output
+svgtools::write_svg(
+  graph_dbd_03, 
+  here("content/03-dbd-data_collection/slides/graphs/graph_dbd_03.svg"))
+```
+
+### graph_dbd_04
+
+```{r}
+# Create graph
+graph_dbd_04 <- graph_base_dbd %>% 
+  toString() %>%
+  #### GROUP: Population
+   # Circles
+  stringr::str_replace_all('"#00B050"', '"#04316A"') %>% 
+   # Label
+  stringr::str_replace("symbol1label", "Population") %>%
+  #### GROUP: Construct
+    # Shape
+  stringr::str_replace_all('"#FFFF00"', '"#04316A"') %>% 
+    # Label
+  stringr::str_replace('symbol2label', 'Konstrukt') %>% 
+  #### GROUP: Text bubbles (Population and Construct)
+    # Shape
+  stringr::str_replace_all('"#7F6000"', '"#7F600000"') %>%  # HIDE boxes
+    # Text
+  stringr::str_replace("bubble1label1", "") %>% # HIDE text
+  stringr::str_replace("bubble1label2", "") %>% # HIDE text
+  stringr::str_replace("bubble2label1", "") %>% # HIDE text
+  stringr::str_replace("bubble2label2", "") %>% # HIDE text
+  #### GROUP: Survey
+    # Symbol
+  stringr::str_replace_all('"#70AD47"', '"#E6002E"') %>% # CHANGE color
+    # Label
+  stringr::str_replace_all('label_box_3', 'Survey') %>% # CHANGE label
+  #### GROUP: Free Text(Survey)
+    # Bulletpoints
+  stringr::str_replace_all('style="fill:#ff8080"','style="fill:#E6002E"') %>% # CHANGE color
+    # Text
+  stringr::str_replace("surveylabel1", "Teuer") %>% # CHANGE text
+  stringr::str_replace("surveylabel2", "Zeitverzörgert") %>% # CHANGE text
+  stringr::str_replace("surveylabel3", '"Kleine" Samples') %>% # CHANGE text 
+  #### GROUP: SNS Twitter
+    # Box & Symbol
+  stringr::str_replace_all('"#00B0F0"', '"#00B0F000"') %>%
+    # Cirles
+  stringr::str_replace_all('"#0066FF"', '"#0066FF00"') %>%   
+  stringr::str_replace_all('"#FF0000"', '"#FF000000"') %>% 
+    # Label
+  stringr::str_replace_all('User', '') %>% 
+  #### GROUP: SNS Populations
+    # Boxes & Symbols
+  stringr::str_replace_all('"#C55A11"', '"#C55A1100"') %>% 
+    # Cirles
+  stringr::str_replace_all('"#800000"', '"#80000000"') %>%   
+  stringr::str_replace_all('"#9900FF"', '"#9900FF00"') %>% 
+  #### GROUP: Links
+  stringr::str_replace_all('"#7F7F7F"', '"#7F7F7F00"') %>% 
+  #### GROUP: SNS Population Textboxes
+    # Shape
+  stringr::str_replace_all('"#7030A0"', '"#7030A000"') %>%  
+    # Bulletpoints
+  stringr::str_replace_all(
+    'style="fill:#ff00ff"',
+    'style="fill:#ff00ff00"') %>%
+    # Text
+    ## Box 1
+  stringr::str_replace_all('box1h1', '') %>% 
+  stringr::str_replace_all('box1text1', '') %>% 
+  stringr::str_replace_all('box1text2', '') %>%
+  stringr::str_replace_all('box1text3', '') %>%
+  stringr::str_replace_all('box1text4', '') %>% 
+    ## Box 2 
+  stringr::str_replace_all('box2h1', '') %>% 
+  stringr::str_replace_all('box2text1', '') %>% 
+  stringr::str_replace_all('box2text2', '') %>% 
+  stringr::str_replace_all('box2text3', '') %>% 
+ #### Convert back to .svg
+  svgtools::read_svg(.) 
+  
+# Save output
+svgtools::write_svg(
+  graph_dbd_04, 
+  here("content/03-dbd-data_collection/slides/graphs/graph_dbd_04.svg"))
+```
+
+### graph_dbd_05
+
+```{r}
+# Create graph
+graph_dbd_05 <- graph_base_dbd %>% 
+  toString() %>%
+  #### GROUP: Population
+   # Circles
+  stringr::str_replace_all('"#00B050"', '"#04316A"') %>% 
+   # Label
+  stringr::str_replace("symbol1label", "Population") %>%
+  #### GROUP: Construct
+    # Shape
+  stringr::str_replace_all('"#FFFF00"', '"#04316A"') %>% 
+    # Label
+  stringr::str_replace('symbol2label', 'Konstrukt') %>% 
+  #### GROUP: Text bubbles (Population and Construct)
+    # Shape
+  stringr::str_replace_all('"#7F6000"', '"#7F600000"') %>%  
+    # Text
+  stringr::str_replace("bubble1label1", "") %>% 
+  stringr::str_replace("bubble1label2", "") %>%  
+  stringr::str_replace("bubble2label1", "") %>% 
+  stringr::str_replace("bubble2label2", "") %>% 
+  #### GROUP: Survey
+    # Symbol
+  stringr::str_replace_all('"#70AD47"', '"#04316A"') %>% # CHANGE color
+    # Label
+  stringr::str_replace_all('label_box_3', 'Survey') %>% # CHANGE label
+  #### GROUP: Free Text(Survey)
+    # Bulletpoints
+  stringr::str_replace_all(
+    'style="fill:#ff8080"',
+    'style="fill:#ff808000"') %>%  
+    # Text
+  stringr::str_replace("surveylabel1", "") %>% # HIDE text
+  stringr::str_replace("surveylabel2", "") %>% # HIDE text
+  stringr::str_replace("surveylabel3", "") %>% # HIDE text 
+  #### GROUP: Links (moved to avoid replacement of color)
+  stringr::str_replace_all('"#7F7F7F"', '"#7F7F7F00"') %>% 
+  #### GROUP: SNS Twitter
+    # Box & Symbol
+  stringr::str_replace_all('"#00B0F0"', '"#E6002E"') %>% # CHANGE color
+    # Cirles
+  stringr::str_replace_all('"#0066FF"', '"#7F7F7F"') %>% # CHANGE color  
+  stringr::str_replace_all('"#FF0000"', '"#04316A"') %>% # CHANGE color
+    # Label
+  stringr::str_replace_all('User', '') %>% 
+  #### GROUP: SNS Populations
+    # Boxes & Symbols
+  stringr::str_replace_all('"#C55A11"', '"#E6002E"') %>% # CHANGE color
+    # Cirles
+  stringr::str_replace_all('"#800000"', '"#7F7F7F"') %>% # CHANGE color  
+  stringr::str_replace_all('"#9900FF"', '"#04316A"') %>% # CHANGE color
+  #### GROUP: SNS Population Textboxes
+    # Shape
+  stringr::str_replace_all('"#7030A0"', '"#7030A000"') %>%  
+    # Bulletpoints
+  stringr::str_replace_all(
+    'style="fill:#ff00ff"',
+    'style="fill:#ff00ff00"') %>%
+    # Text
+    ## Box 1
+  stringr::str_replace_all('box1h1', '') %>% 
+  stringr::str_replace_all('box1text1', '') %>% 
+  stringr::str_replace_all('box1text2', '') %>%
+  stringr::str_replace_all('box1text3', '') %>%
+  stringr::str_replace_all('box1text4', '') %>% 
+    ## Box 2 
+  stringr::str_replace_all('box2h1', '') %>% 
+  stringr::str_replace_all('box2text1', '') %>% 
+  stringr::str_replace_all('box2text2', '') %>% 
+  stringr::str_replace_all('box2text3', '') %>% 
+ #### Convert back to .svg
+  svgtools::read_svg(.) 
+  
+# Save output
+svgtools::write_svg(
+  graph_dbd_05, 
+  here("content/03-dbd-data_collection/slides/graphs/graph_dbd_05.svg"))
+```
+
+### graph_dbd_06
+
+```{r}
+# Create graph
+graph_dbd_06 <- graph_base_dbd %>% 
+  toString() %>%
+  #### GROUP: Population
+   # Circles
+  stringr::str_replace_all('"#00B050"', '"#04316A"') %>% 
+   # Label
+  stringr::str_replace("symbol1label", "Population") %>%
+  #### GROUP: Construct
+    # Shape
+  stringr::str_replace_all('"#FFFF00"', '"#04316A"') %>% 
+    # Label
+  stringr::str_replace('symbol2label', 'Konstrukt') %>% 
+  #### GROUP: Text bubbles (Population and Construct)
+    # Shape
+  stringr::str_replace_all('"#7F6000"', '"#7F600000"') %>%  
+    # Text
+  stringr::str_replace("bubble1label1", "") %>% 
+  stringr::str_replace("bubble1label2", "") %>%  
+  stringr::str_replace("bubble2label1", "") %>% 
+  stringr::str_replace("bubble2label2", "") %>% 
+  #### GROUP: Survey
+    # Symbol
+  stringr::str_replace_all('"#70AD47"', '"#04316A"') %>%  
+    # Label
+  stringr::str_replace_all('label_box_3', 'Survey') %>% 
+  #### GROUP: Free Text(Survey)
+    # Bulletpoints
+  stringr::str_replace_all(
+    'style="fill:#ff8080"',
+    'style="fill:#ff808000"') %>%  
+    # Text
+  stringr::str_replace("surveylabel1", "") %>% 
+  stringr::str_replace("surveylabel2", "") %>% 
+  stringr::str_replace("surveylabel3", "") %>% 
+  #### GROUP: Links (moved to avoid replacement of color)
+  stringr::str_replace_all('"#7F7F7F"', '"#E6002E"') %>% # CHANGE color
+  #### GROUP: SNS Twitter
+    # Box & Symbol
+  stringr::str_replace_all('"#00B0F0"', '"#04316A"') %>% # CHANGE color
+    # Cirles
+  stringr::str_replace_all('"#0066FF"', '"#7F7F7F"') %>% #   
+  stringr::str_replace_all('"#FF0000"', '"#04316A"') %>% # 
+    # Label
+  stringr::str_replace_all('User', '') %>% 
+  #### GROUP: SNS Populations
+    # Boxes & Symbols
+  stringr::str_replace_all('"#C55A11"', '"#04316A"') %>% # CHANGE color
+    # Cirles
+  stringr::str_replace_all('"#800000"', '"#7F7F7F"') %>% #   
+  stringr::str_replace_all('"#9900FF"', '"#04316A"') %>% # 
+  #### GROUP: SNS Population Textboxes
+    # Shape
+  stringr::str_replace_all('"#7030A0"', '"#7030A000"') %>%  
+    # Bulletpoints
+  stringr::str_replace_all(
+    'style="fill:#ff00ff"',
+    'style="fill:#ff00ff00"') %>%
+    # Text
+    ## Box 1
+  stringr::str_replace_all('box1h1', '') %>% 
+  stringr::str_replace_all('box1text1', '') %>% 
+  stringr::str_replace_all('box1text2', '') %>%
+  stringr::str_replace_all('box1text3', '') %>%
+  stringr::str_replace_all('box1text4', '') %>% 
+    ## Box 2 
+  stringr::str_replace_all('box2h1', '') %>% 
+  stringr::str_replace_all('box2text1', '') %>% 
+  stringr::str_replace_all('box2text2', '') %>% 
+  stringr::str_replace_all('box2text3', '') %>% 
+ #### Convert back to .svg
+  svgtools::read_svg(.) 
+  
+# Save output
+svgtools::write_svg(
+  graph_dbd_06, 
+  here("content/03-dbd-data_collection/slides/graphs/graph_dbd_06.svg"))
+```
+
+### graph_dbd_07
+
+```{r}
+# Create graph
+graph_dbd_07 <- graph_base_dbd %>% 
+  toString() %>%
+  #### GROUP: Population
+   # Circles
+  stringr::str_replace_all('"#00B050"', '"#04316A"') %>% 
+   # Label
+  stringr::str_replace("symbol1label", "Population") %>%
+  #### GROUP: Construct
+    # Shape
+  stringr::str_replace_all('"#FFFF00"', '"#04316A"') %>% 
+    # Label
+  stringr::str_replace('symbol2label', 'Konstrukt') %>% 
+  #### GROUP: Text bubbles (Population and Construct)
+    # Shape
+  stringr::str_replace_all('"#7F6000"', '"#7F600000"') %>%  
+    # Text
+  stringr::str_replace("bubble1label1", "") %>% 
+  stringr::str_replace("bubble1label2", "") %>%  
+  stringr::str_replace("bubble2label1", "") %>% 
+  stringr::str_replace("bubble2label2", "") %>% 
+  #### GROUP: Survey
+    # Symbol
+  stringr::str_replace_all('"#70AD47"', '"#04316A"') %>%  
+    # Label
+  stringr::str_replace_all('label_box_3', 'Survey') %>% 
+  #### GROUP: Free Text(Survey)
+    # Bulletpoints
+  stringr::str_replace_all(
+    'style="fill:#ff8080"',
+    'style="fill:#ff808000"') %>%  
+    # Text
+  stringr::str_replace("surveylabel1", "") %>% 
+  stringr::str_replace("surveylabel2", "") %>% 
+  stringr::str_replace("surveylabel3", "") %>% 
+  #### GROUP: Links (moved to avoid replacement of color)
+  # stringr::str_replace_all('"#7F7F7F"', '"#7F7F7F"') %>% # CHANGE color
+  #### GROUP: SNS Twitter
+    # Box & Symbol
+  stringr::str_replace_all('"#00B0F0"', '"#04316A"') %>% # 
+    # Cirles
+  stringr::str_replace_all('"#0066FF"', '"#7F7F7F"') %>% #   
+  stringr::str_replace_all('"#FF0000"', '"#04316A"') %>% # 
+    # Label
+  stringr::str_replace_all('User', '') %>% 
+  #### GROUP: SNS Populations
+    # Boxes & Symbols
+  stringr::str_replace_all('"#C55A11"', '"#04316A"') %>% # 
+    # Cirles
+  stringr::str_replace_all('"#800000"', '"#7F7F7F"') %>% #   
+  stringr::str_replace_all('"#9900FF"', '"#04316A"') %>% # 
+  #### GROUP: SNS Population Textboxes
+    # Shape
+  stringr::str_replace_all('stroke="#7030A0"','stroke="#E6002E"') %>% # CHANGE stroke
+  stringr::str_replace_all('fill="#7030A0"','fill="#FFFFFF"') %>% # CHANGE fill
+    # Bulletpoints
+  stringr::str_replace_all('style="fill:#ff00ff"','style="fill:#E6002E"') %>% # CHANGE color
+    # Text
+    ## Box 1
+  stringr::str_replace_all('box1h1', 'Traces') %>% # CHANGE text
+  stringr::str_replace_all('box1text1', 'Tweet') %>% # CHANGE text
+  stringr::str_replace_all('box1text2', 'Retweet') %>% # CHANGE text
+  stringr::str_replace_all('box1text3', 'Like') %>% # CHANGE text
+  stringr::str_replace_all('box1text4', 'Reply') %>% # CHANGE text 
+    ## Box 2 
+  stringr::str_replace_all('box2h1', 'Traces') %>% # CHANGE text
+  stringr::str_replace_all('box2text1', 'Queries') %>% # CHANGE text
+  stringr::str_replace_all('box2text2', 'Visits') %>% # CHANGE text
+  stringr::str_replace_all('box2text3', 'Standort') %>% # CHANGE text
+ #### Convert back to .svg
+  svgtools::read_svg(.) 
+  
+# Save output
+svgtools::write_svg(
+  graph_dbd_07, 
+  here("content/03-dbd-data_collection/slides/graphs/graph_dbd_07.svg"))
+```
+
+### graph_dbd_08
+
+```{r}
+# Create graph
+graph_dbd_08 <- graph_base_dbd %>% 
+  toString() %>%
+  #### GROUP: Population
+   # Circles
+  stringr::str_replace_all('"#00B050"', '"#04316A"') %>% 
+   # Label
+  stringr::str_replace("symbol1label", "Population") %>%
+  #### GROUP: Construct
+    # Shape
+  stringr::str_replace_all('"#FFFF00"', '"#04316A"') %>% 
+    # Label
+  stringr::str_replace('symbol2label', 'Konstrukt') %>% 
+  #### GROUP: Text bubbles (Population and Construct)
+    # Shape
+  stringr::str_replace_all('"#7F6000"', '"#7F600000"') %>%  
+    # Text
+  stringr::str_replace("bubble1label1", "") %>% 
+  stringr::str_replace("bubble1label2", "") %>%  
+  stringr::str_replace("bubble2label1", "") %>% 
+  stringr::str_replace("bubble2label2", "") %>% 
+  #### GROUP: Survey
+    # Symbol
+  stringr::str_replace_all('"#70AD47"', '"#70AD4700"') %>% # HIDE symbol
+    # Label
+  stringr::str_replace_all('label_box_3', '') %>% # HIDE label
+  #### GROUP: Free Text(Survey)
+    # Bulletpoints
+  stringr::str_replace_all(
+    'style="fill:#ff8080"',
+    'style="fill:#ff808000"') %>%  
+    # Text
+  stringr::str_replace("surveylabel1", "") %>% 
+  stringr::str_replace("surveylabel2", "") %>% 
+  stringr::str_replace("surveylabel3", "") %>% 
+  #### GROUP: Links (moved to avoid replacement of color)
+  stringr::str_replace_all('"#7F7F7F"', '"#7F7F7F00"') %>% # HIDE links
+  #### GROUP: SNS Twitter
+    # Box & Symbol
+  stringr::str_replace_all('"#00B0F0"', '"#04316A"') %>% # 
+    # Cirles
+  stringr::str_replace_all('"#0066FF"', '"#7F7F7F"') %>% #   
+  stringr::str_replace_all('"#FF0000"', '"#04316A"') %>% # 
+    # Label
+  stringr::str_replace_all('User', '') %>% 
+  #### GROUP: SNS Populations
+    # Boxes & Symbols
+  stringr::str_replace_all('"#C55A11"', '"#04316A"') %>% # 
+    # Cirles
+  stringr::str_replace_all('"#800000"', '"#7F7F7F"') %>% #   
+  stringr::str_replace_all('"#9900FF"', '"#04316A"') %>% # 
+  #### GROUP: SNS Population Textboxes
+    # Shape
+  stringr::str_replace_all('"#7030A0"', '"#7030A000"') %>% # Hide shape
+    # Bulletpoints
+  stringr::str_replace_all('style="fill:#ff00ff"', 'style="fill:#ff00ff00"') %>% # Hide color
+    # Text
+    ## Box 1
+  stringr::str_replace_all('box1h1', '') %>% # Hide text
+  stringr::str_replace_all('box1text1', '') %>% # Hide text
+  stringr::str_replace_all('box1text2', '') %>% # Hide text
+  stringr::str_replace_all('box1text3', '') %>% # Hide text
+  stringr::str_replace_all('box1text4', '') %>% # Hide text
+    ## Box 2 
+  stringr::str_replace_all('box2h1', '') %>% # Hide text
+  stringr::str_replace_all('box2text1', '') %>% # Hide text
+  stringr::str_replace_all('box2text2', '') %>% # Hide text
+  stringr::str_replace_all('box2text3', '') %>% # Hide text
+ #### Convert back to .svg
+  svgtools::read_svg(.) 
+  
+# Save output
+svgtools::write_svg(
+  graph_dbd_08, 
+  here("content/03-dbd-data_collection/slides/graphs/graph_dbd_08.svg"))
+```
+
+### graph_dbd_09
+
+```{r}
+# Create graph
+graph_dbd_09 <- graph_base_dbd %>% 
+  toString() %>%
+  #### GROUP: Population
+   # Circles
+  stringr::str_replace_all('"#00B050"', '"#04316A20"') %>% # APLHA circles
+   # Label
+  stringr::str_replace("symbol1label", "Population") %>%
+  #### GROUP: Construct
+    # Shape
+  stringr::str_replace_all('"#FFFF00"', '"#04316A"') %>% 
+    # Label
+  stringr::str_replace('symbol2label', 'Konstrukt') %>% 
+  #### GROUP: Text bubbles (Population and Construct)
+    # Shape
+  stringr::str_replace_all('stroke="#7F6000"','stroke="#E6002E"') %>% # CHANGE stroke
+  stringr::str_replace_all('fill="#7F6000"', 'fill="#ffffff"') %>% # CHANGE fill
+    # Text
+  stringr::str_replace("bubble1label1", "Alle deutschsprachigen") %>% # CHANGE text
+  stringr::str_replace("bubble1label2", "Twitter-Nutzer*Innen") %>% # CHANGE text 
+  stringr::str_replace("bubble2label1", "Empfänglichkeit") %>% # CHANGE text
+  stringr::str_replace("bubble2label2", "für Fake News") %>% # CHANGE text 
+  #### GROUP: Survey
+    # Symbol
+  stringr::str_replace_all('"#70AD47"', '"#70AD4700"') %>% 
+    # Label
+  stringr::str_replace_all('label_box_3', '') %>%
+  #### GROUP: Free Text(Survey)
+    # Bulletpoints
+  stringr::str_replace_all(
+    'style="fill:#ff8080"',
+    'style="fill:#ff808000"') %>%  
+    # Text
+  stringr::str_replace("surveylabel1", "") %>% 
+  stringr::str_replace("surveylabel2", "") %>% 
+  stringr::str_replace("surveylabel3", "") %>% 
+  #### GROUP: Links (moved to avoid replacement of color)
+  stringr::str_replace_all('"#7F7F7F"', '"#7F7F7F00"') %>% 
+  #### GROUP: SNS Twitter
+    # Box & Symbol
+  # stringr::str_replace_all('"#00B0F0"', '"#04316A"') %>% # 
+    # Cirles
+  stringr::str_replace_all('"#0066FF"', '"#E6002E"') %>% #   
+  stringr::str_replace_all('"#FF0000"', '"#0066FF"') %>% # 
+    # Label
+  stringr::str_replace_all('User', '') %>% 
+  #### GROUP: SNS Populations
+    # Boxes & Symbols
+  stringr::str_replace_all('"#C55A11"', '"#04316A"') %>% # 
+    # Cirles
+  stringr::str_replace_all('"#800000"', '"#7F7F7F"') %>% #   
+  stringr::str_replace_all('"#9900FF"', '"#04316A"') %>% # 
+  #### GROUP: SNS Population Textboxes
+    # Shape
+  stringr::str_replace_all('"#7030A0"', '"#7030A000"') %>% 
+    # Bulletpoints
+  stringr::str_replace_all('style="fill:#ff00ff"', 'style="fill:#ff00ff00"') %>% 
+    # Text
+    ## Box 1
+  stringr::str_replace_all('box1h1', '') %>% 
+  stringr::str_replace_all('box1text1', '') %>% 
+  stringr::str_replace_all('box1text2', '') %>% 
+  stringr::str_replace_all('box1text3', '') %>% 
+  stringr::str_replace_all('box1text4', '') %>% 
+    ## Box 2 
+  stringr::str_replace_all('box2h1', '') %>% 
+  stringr::str_replace_all('box2text1', '') %>% 
+  stringr::str_replace_all('box2text2', '') %>% 
+  stringr::str_replace_all('box2text3', '') %>% 
+ #### Convert back to .svg
+  svgtools::read_svg(.) 
+  
+# Save output
+svgtools::write_svg(
+  graph_dbd_09, 
+  here("content/03-dbd-data_collection/slides/graphs/graph_dbd_09.svg"))
+```
+
+## API
+
+### Get base graphic
+
+```{r}
+graph_base_api <- svgtools::read_svg(
+  here("content/03-dbd-data_collection/slides/graphs/graph_api-01_base.svg")) 
+```
+
+### graph_api_01
+
+```{r}
+graph_api_01 <- graph_base_api %>% 
+  toString() %>%
+  #### GROUP 1: programmer
+  stringr::str_replace_all('"#FF0000"', '"#E6002E"') %>% # CHANGE color
+  #### GROUP 2: server
+  stringr::str_replace_all('"#FFC000"', '"#FFC00000"') %>% # CHANGE color
+  #### GROUP 3: reference
+  stringr::str_replace_all('"#92D050"', '"#92D05000"') %>% # CHANGE color
+  #### GROUP 4: developer
+  stringr::str_replace_all('"#00B050"', '"#00B05000"') %>% # CHANGE color 
+  #### GROUP 5: client
+  stringr::str_replace_all('"#00B0F0"', '"#00B0F000"') %>% # CHANGE color
+  #### GROUP 6: cloud
+  stringr::str_replace_all('"#0070C0"', '"#0070C000"') %>% # CHANGE color
+  #### Convert back to .svg
+  svgtools::read_svg(.) 
+
+# Save output
+svgtools::write_svg(
+  graph_api_01, 
+  here("content/03-dbd-data_collection/slides/graphs/graph_api_01.svg"))
+```
+
+### graph_api_02
+
+```{r}
+graph_api_02 <- graph_base_api %>% 
+  toString() %>%
+  #### GROUP 1: programmer
+  stringr::str_replace_all('"#FF0000"', '"#04316A"') %>% # CHANGE color
+  #### GROUP 2: server
+  stringr::str_replace_all('"#FFC000"', '"#E6002E"') %>% # CHANGE color
+  #### GROUP 3: reference
+  stringr::str_replace_all('"#92D050"', '"#92D05000"') %>% # CHANGE color
+  #### GROUP 4: developer
+  stringr::str_replace_all('"#00B050"', '"#00B05000"') %>% # CHANGE color 
+  #### GROUP 5: client
+  stringr::str_replace_all('"#00B0F0"', '"#00B0F000"') %>% # CHANGE color
+  #### GROUP 6: cloud
+  stringr::str_replace_all('"#0070C0"', '"#0070C000"') %>% # CHANGE color
+  #### Convert back to .svg
+  svgtools::read_svg(.) 
+
+# Save output
+svgtools::write_svg(
+  graph_api_02, 
+  here("content/03-dbd-data_collection/slides/graphs/graph_api_02.svg"))
+```
+
+### graph_api_03
+
+```{r}
+graph_api_03 <- graph_base_api %>% 
+  toString() %>%
+  #### GROUP 1: programmer
+  stringr::str_replace_all('"#FF0000"', '"#04316A"') %>% # CHANGE color
+  #### GROUP 2: server
+  stringr::str_replace_all('"#FFC000"', '"#04316A"') %>% # CHANGE color
+  #### GROUP 3: reference
+  stringr::str_replace_all('"#92D050"', '"#E6002E"') %>% # CHANGE color
+  #### GROUP 4: developer
+  stringr::str_replace_all('"#00B050"', '"#00B05000"') %>% # CHANGE color 
+  #### GROUP 5: client
+  stringr::str_replace_all('"#00B0F0"', '"#00B0F000"') %>% # CHANGE color
+  #### GROUP 6: cloud
+  stringr::str_replace_all('"#0070C0"', '"#0070C000"') %>% # CHANGE color
+  #### Convert back to .svg
+  svgtools::read_svg(.) 
+
+# Save output
+svgtools::write_svg(
+  graph_api_03, 
+  here("content/03-dbd-data_collection/slides/graphs/graph_api_03.svg"))
+```
+
+### graph_api_04
+
+```{r}
+graph_api_04 <- graph_base_api %>% 
+  toString() %>%
+  #### GROUP 1: programmer
+  stringr::str_replace_all('"#FF0000"', '"#04316A"') %>% # CHANGE color
+  #### GROUP 2: server
+  stringr::str_replace_all('"#FFC000"', '"#04316A"') %>% # CHANGE color
+  #### GROUP 3: reference
+  stringr::str_replace_all('"#92D050"', '"#04316A"') %>% # CHANGE color
+  #### GROUP 4: developer
+  stringr::str_replace_all('"#00B050"', '"#E6002E"') %>% # CHANGE color 
+  #### GROUP 5: client
+  stringr::str_replace_all('"#00B0F0"', '"#00B0F000"') %>% # CHANGE color
+  #### GROUP 6: cloud
+  stringr::str_replace_all('"#0070C0"', '"#0070C000"') %>% # CHANGE color
+  #### Convert back to .svg
+  svgtools::read_svg(.) 
+
+# Save output
+svgtools::write_svg(
+  graph_api_04, 
+  here("content/03-dbd-data_collection/slides/graphs/graph_api_04.svg"))
+```
+
+### graph_api_05
+
+```{r}
+graph_api_05 <- graph_base_api %>% 
+  toString() %>%
+  #### GROUP 1: programmer
+  stringr::str_replace_all('"#FF0000"', '"#04316A"') %>% # CHANGE color
+  #### GROUP 2: server
+  stringr::str_replace_all('"#FFC000"', '"#04316A"') %>% # CHANGE color
+  #### GROUP 3: reference
+  stringr::str_replace_all('"#92D050"', '"#04316A"') %>% # CHANGE color
+  #### GROUP 4: developer
+  stringr::str_replace_all('"#00B050"', '"#04316A"') %>% # CHANGE color 
+  #### GROUP 5: client
+  stringr::str_replace_all('"#00B0F0"', '"#E6002E"') %>% # CHANGE color
+  #### GROUP 6: cloud
+  stringr::str_replace_all('"#0070C0"', '"#0070C000"') %>% # CHANGE color
+  #### Convert back to .svg
+  svgtools::read_svg(.) 
+
+# Save output
+svgtools::write_svg(
+  graph_api_05, 
+  here("content/03-dbd-data_collection/slides/graphs/graph_api_05.svg"))
+```
+
+### graph_api_06
+
+```{r}
+graph_api_06 <- graph_base_api %>% 
+  toString() %>%
+  #### GROUP 1: programmer
+  stringr::str_replace_all('"#FF0000"', '"#04316A"') %>% # CHANGE color
+  #### GROUP 2: server
+  stringr::str_replace_all('"#FFC000"', '"#04316A"') %>% # CHANGE color
+  #### GROUP 3: reference
+  stringr::str_replace_all('"#92D050"', '"#04316A"') %>% # CHANGE color
+  #### GROUP 4: developer
+  stringr::str_replace_all('"#00B050"', '"#04316A"') %>% # CHANGE color 
+  #### GROUP 5: client
+  stringr::str_replace_all('"#00B0F0"', '"#04316A"') %>% # CHANGE color
+  #### GROUP 6: cloud
+  stringr::str_replace_all('"#0070C0"', '"#E6002E"') %>% # CHANGE color
+  #### Convert back to .svg
+  svgtools::read_svg(.) 
+
+# Save output
+svgtools::write_svg(
+  graph_api_06, 
+  here("content/03-dbd-data_collection/slides/graphs/graph_api_06.svg"))
+```

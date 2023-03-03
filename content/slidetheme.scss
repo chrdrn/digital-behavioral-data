@@ -31,7 +31,7 @@ $presentation-heading-font: News Cycle, sans-serif !default;
   top: 0 !important;
   right: 10px !important;
   max-height: 15% !important;
-  height: 5% !important;
+  height: 10% !important;
   width: auto !important;
   color: $body-color !important;
 }
@@ -52,3 +52,13 @@ $presentation-heading-font: News Cycle, sans-serif !default;
   background-color: #e6002e;
 }
 
+.reveal .header-logo {
+  display: block !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 1px !important;
+  max-height: 15% !important;
+  height: 5% !important;
+  width: auto !important;
+  color: $body-color !important;
+}

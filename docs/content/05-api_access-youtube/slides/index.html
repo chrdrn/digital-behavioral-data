@@ -12,7 +12,7 @@
 <script src="../../../site_libs/quarto-contrib/roughnotation-init-1.0.0/rough.js"></script>
 <link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.2.269">
+  <meta name="generator" content="quarto-1.2.335">
 
   <meta name="author" content="Christoph Adrian">
   <title>Digital behavioral data - API-Access – YouTube</title>
@@ -124,12 +124,6 @@
   <link href="../../../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
   <link href="../../../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
   <link href="../../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
-  <script type="application/json" class="js-hypothesis-config">
-  {
-    "theme": "clean"
-  }
-  </script>
-  <script async="" src="https://hypothes.is/embed.js"></script>
   <style type="text/css">
 
   .callout {
@@ -624,10 +618,11 @@
 <span id="cb1-4"><a href="#cb1-4"></a></span>
 <span id="cb1-5"><a href="#cb1-5"></a><span class="co"># Import data</span></span>
 <span id="cb1-6"><a href="#cb1-6"></a>channel_list <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
-<span id="cb1-7"><a href="#cb1-7"></a>  <span class="st">"https://raw.githubusercontent.com/chrdrn/dbd_binder/main/data/05-youtube/channelsearch_channels50_2022_11_17-09_54_22.csv"</span>)</span>
-<span id="cb1-8"><a href="#cb1-8"></a></span>
-<span id="cb1-9"><a href="#cb1-9"></a><span class="co"># Preview data </span></span>
-<span id="cb1-10"><a href="#cb1-10"></a>channel_list <span class="sc">%&gt;%</span> <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-7"><a href="#cb1-7"></a>  <span class="fu">here</span>(<span class="st">"content/05-api_access-youtube/data.local/channelsearch_channels50_2022_11_17-09_54_22.csv"</span>)</span>
+<span id="cb1-8"><a href="#cb1-8"></a>  )</span>
+<span id="cb1-9"><a href="#cb1-9"></a></span>
+<span id="cb1-10"><a href="#cb1-10"></a><span class="co"># Preview data </span></span>
+<span id="cb1-11"><a href="#cb1-11"></a>channel_list <span class="sc">%&gt;%</span> <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 50
 Columns: 10
@@ -650,8 +645,8 @@ $ videoCount      &lt;dbl&gt; 186, 45, 9, 104, 3, 1, 1, 24, 12, 51, 1, 6, 31, 1,
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># Import data: video list</span></span>
 <span id="cb3-2"><a href="#cb3-2"></a>video_list <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
-<span id="cb3-3"><a href="#cb3-3"></a>  <span class="st">"https://raw.githubusercontent.com/chrdrn/dbd_binder/main/data/05-youtube/videolist_channel186_2022_11_17-10_20_11.csv"</span></span>
-<span id="cb3-4"><a href="#cb3-4"></a>)</span>
+<span id="cb3-3"><a href="#cb3-3"></a>  <span class="fu">here</span>(<span class="st">"content/05-api_access-youtube/data.local/videolist_channel186_2022_11_17-10_20_11.csv"</span>)</span>
+<span id="cb3-4"><a href="#cb3-4"></a>  )</span>
 <span id="cb3-5"><a href="#cb3-5"></a></span>
 <span id="cb3-6"><a href="#cb3-6"></a><span class="co"># Preview data </span></span>
 <span id="cb3-7"><a href="#cb3-7"></a>video_list <span class="sc">%&gt;%</span> <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -852,8 +847,8 @@ Rieder, B. (2015). <em>YouTube data tools</em>. <a href="https://tools.digitalme
 </div>
 
 
-<img src="../../../img/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
-<p><a href="https://chrdrn.github.io/digital-behavioral-data/">Digital Behavioral Data</a></p>
+<img src="../../../img/logo_plus_right.png" class="slide-logo r-stretch"><div class="footer footer-default">
+<p><a href="https://chrdrn.github.io/digital-behavioral-data/">Home</a></p>
 </div>
 </section></section>
     </div>

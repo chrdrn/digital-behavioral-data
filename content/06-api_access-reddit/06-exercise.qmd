@@ -12,24 +12,48 @@ execute:
   message: false
   warning: false
 highlight-style: atom-one
+bibliography: references.bib
+csl: ../apa.csl
 ---
 
-```{r}
+```{r Setup local OSF environment}
 #| echo: false
-library(tidyverse)
+#| eval: false
+#| message: false
+
+# Load packages
+pacman::p_load(
+  pacman,
+  here, osfr, fs, 
+  tidyverse)
+
+# Get custom functions
+source(here("functions/osf_dependencies.R"))
+
+# Get custom paths
+dirs <- osf_dependencies("06-api_access-reddit")
+
+# Get data
+osf_download(
+  dirs$osf_data_path,
+  path = here(dirs$local_data_path),
+  recurse = TRUE,
+  progress = TRUE
+)
 ```
+
+::: callout-tip
+Open this showcase in other interactive and executable environments:
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/chrdrn/dbd_binder/HEAD) [![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chrdrn/dbd_binder/blob/main/session_06-showcase_reddit.ipynb)
+:::
 
 ## Background
 
 Ths showcase has two different goals:
 
 1.  Exemplary presentation of the collection of [<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/brands/reddit.svg" width="15" height="15"/>](https://www.reddit.com/) [Reddit](https://www.reddit.com/) data using the [RedditExtractoR](https://github.com/ivan-rivera/RedditExtractor) package
-2.  Importing and analyzing the data collected with the 🐈🐈 [**4CAT**](https://github.com/digitalmethodsinitiative/4cat) 🐈🐈 tool.
-
-You can also open this showcase in other interactive and executable environments:
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/chrdrn/dbd_binder/HEAD)
-[![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chrdrn/dbd_binder/blob/main/session_06-showcase_reddit.ipynb)
-
+2.  Importing and analyzing the data collected with the 🐈🐈 [**4CAT**](https://github.com/digitalmethodsinitiative/4cat) 🐈🐈 [@peeters2022] tool.
 
 ## Data collection with `RedditExtractor`
 
@@ -39,10 +63,10 @@ You can also open this showcase in other interactive and executable environments
 -   find a user and their Reddit history
 -   find URLs to threads of interest and retrieve comments out of these threads
 
-::: {.callout-important}
+::: callout-important
 ## Disclaimer
 
-Unfortunately, the functions of the `RedditExtractoR` package can NOT be executed during the Markdown creation process and must be reproduced "live".
+Unfortunately, the functions of the `RedditExtractoR` package can **NOT** be executed during the Markdown creation process and must be reproduced "live".
 
 Therefore, there will be no output for the next two paragraphs.
 :::
@@ -74,7 +98,6 @@ news %>%
 ```{r}
 #| eval: false
 
-
 # Get list of top thread urls
 news_top_urls <- find_thread_urls(
   subreddit = "news", 
@@ -89,18 +112,29 @@ news_top_urls %>% tibble()
 
 ## Analysis of collected 🐈🐈 4CAT 🐈🐈 data
 
-### Data import from {{< fa brands github >}}
+A detailed description about the collection of the data (in the form of a concrete application example) can be found in the slides of the associated session.
+
+```{r fix dependencies}
+#| echo: false
+
+pacman::p_load(
+  here, 
+  tidyverse)
+```
+
+### Load data into local environment
 
 ```{r}
 # load packages
 library(readr)
+library(here)
 
 # get data from github
 musk <- read_csv(
-  "https://raw.githubusercontent.com/chrdrn/dbd_binder/main/data/06-reddit/4cat-reddit_news-musk_complete.csv")
+    here("content/06-api_access-reddit/data.local/4cat-reddit_news-musk_complete.csv"))
 
 musk_entities <- read_csv(
-  "https://raw.githubusercontent.com/chrdrn/dbd_binder/main/data/06-reddit/4cat-reddit_news-musk-named_entities.csv")
+  here("content/06-api_access-reddit/data.local/4cat-reddit_news-musk-named_entities.csv"))
 
 # quick preview
 musk %>% glimpse()
