@@ -9,7 +9,7 @@ bibliography: references.bib
 ## Seminarplan {.smaller}
 
 | Sitzung                                                | Datum                                                           | Thema                                                                              | Referent\*Innen                                                       |
-|-----------------|-----------------|---------------------|------------------|
+|------------------|------------------|--------------------|------------------|
 | [*1*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*26.10.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*Kick-Off Session*]{.rn rn-type="strike-through" rn-color="#E6002E"}              | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
 | [*2*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*02.11.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*DBD: Einführung und Überblick*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
 | [*3*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*09.11.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*DBD: Datenerhebung*]{.rn rn-type="strike-through" rn-color="#E6002E"}            | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
@@ -29,13 +29,12 @@ bibliography: references.bib
 ▶️
 :::
 
-# Agenda
+# Agenda {background-image="../../../img/background_agenda.png"}
 
 1.  [📢️ Organisation & Koordination](#organisation-koordination)
 2.  [Verständnis- & Diskussionsfragen](#verständnis--diskussionsfragen)
-3.  [Group Activity]
+3.  [👥 Group Activity]
 4.  [Beispielhafte Auswertungen]
-5.  [Time for questions]
 
 # 📢️ Organisation & Koordination {#organisation-koordination background-image="../../../img/background_orga.png"}
 
@@ -81,7 +80,7 @@ Ihre Fragen aus MS Teams
 > Laut dem paper wird durch verschiedene video einstellungen von TikTok bereits content "geshaped". Sind biases auf TikTok dadurch stärker als bei anderen Plattformen?
 :::
 
-# Group Activity {background-image="../../../img/background_group_activity.png"}
+# 👥 Group Activity {background-image="../../../img/background_group_activity.png"}
 
 Gruppenarbeit zu `Zeeschuimer`
 
@@ -128,7 +127,7 @@ Die Erweiterung stört Sie nicht beim normalen Surfen und lädt niemals automati
 ::: {.callout-note appearance="minimal"}
 ## Ziel der Group Activity
 
--   Führen Sie in **Zweiergruppen** eine **kleine Case Study** durch
+-   Führen Sie in **zwei Gruppen** eine **kleine Case Study** durch
 
 -   Überlegen Sie sich eine **Fragestellung**, für die Sie mit Hilfe von [`Zeeschuimer`](https://github.com/digitalmethodsinitiative/zeeschuimer)`-`Daten erheben und (potentiell) auswerten können
 
@@ -167,11 +166,31 @@ Die Erweiterung stört Sie nicht beim normalen Surfen und lädt niemals automati
 -   *Wie hoch ist die Übereinstimmung (ungefähr)?*
 :::
 
-# Beispielhafte Auswertungen {.bg_example}
+## Google Slides Vorlagen
+
+#### Bitte nutzen Sie die Präsentationsvorlagen
+
+::: columns
+::: {.column width="30%"}
+![](img/google_slides.svg){width="200"}
+:::
+
+::: {.column width="70%"}
+Bitte wählen Sie die Ihnen zugewiesene Gruppe aus:
+
+-   [Gruppe A](https://docs.google.com/presentation/d/1Ddsc2ip9BuKGfXGuJDQ_Y77HTABfLtxN5Spsw8g0fNM/edit?usp=sharing)
+
+-   [Gruppe B](https://docs.google.com/presentation/d/1r-JLzsAncUyRxVNjOetc-TMWFJwifXYqEcxWqLwFr58/edit?usp=sharing)
+:::
+:::
+
+
+
+# Beispielhafte Auswertungen {background-image="../../../img/background_example.png"}
 
 Im Fokus: {{< fa brands tiktok >}} Hashtag `#statistics`
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/chrdrn/dbd_binder/HEAD) [![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chrdrn/dbd_binder/blob/main/session_07-showcase_tiktok.ipynb) [![RStudio Quarto](https://img.shields.io/badge/RStudio-4285F4?style=for-the-badge&logo=rstudio&logoColor=white)](https://chrdrn.github.io/digital-behavioral-data/content/07-webscraping-tiktok/07-exercise.html)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/chrdrn/dbd_binder/HEAD) [![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chrdrn/dbd_binder/blob/main/session_07-showcase_tiktok.ipynb) [![RStudio Quarto](https://img.shields.io/badge/RStudio-4285F4?style=for-the-badge&logo=rstudio&logoColor=white){width="75"}](https://chrdrn.github.io/digital-behavioral-data/content/07-webscraping-tiktok/07-exercise.html)
 
 ```{r}
 #| echo: false

@@ -33,7 +33,7 @@ bibliography: references.bib
 
 1.  [Verständnis- & Diskussionsfragen]
 2.  [📢️ Organisation & Koordination]
-3.  [Group Activity]
+3.  [👥 Group Activity]
 
 # Verständnis- & Diskussionsfragen {background-image='../../../img/background_participation.png'}
 
@@ -125,7 +125,7 @@ Gibt es **Fragen** oder den Wunsch nach weiterer **Vertiefung** zu
 Hinweis auf Hausarbeit
 :::
 
-# Group Activity {background-image='../../../img/background_group_activity.png'}
+# 👥 Group Activity {background-image='../../../img/background_group_activity.png'}
 
 Gruppenarbeit zum Konzept ESM
 
@@ -196,6 +196,25 @@ Systematisierung nach [@masur2019]
     4.  Halten Sie Ihre Fragen & Designideen auf einer PP-Folie fest
 
 -   **Ergebnisvorstellung (ca. 20 Min):** Präsentation der Fragen & dazugehörigem Design
+
+## Google Slides Vorlagen
+
+#### Bitte nutzen Sie die Präsentationsvorlagen
+
+::: columns
+::: {.column width="30%"}
+![](images/google_slides.svg){width="200"}
+:::
+
+::: {.column width="70%"}
+Bitte wählen Sie die Ihnen zugewiesene Gruppe aus:
+
+-   [Gruppe A](https://docs.google.com/presentation/d/1przqw6-eHLSVYqy08GdqfugrwZqL8PzQPibMvuhwIqY/edit?usp=sharing)
+
+-   [Gruppe B](https://docs.google.com/presentation/d/1PbGrCjeWBkoSZxgL3klq1QIOtHYWsjzlxm-XrXTwHSw/edit?usp=sharing)
+:::
+:::
+
 
 # Time for questions {background-image='../../../img/background_questions.png'}
 # Bis zur nächsten Sitzung! {background-image='../../../img/background_end_of_session.png' .unlisted}

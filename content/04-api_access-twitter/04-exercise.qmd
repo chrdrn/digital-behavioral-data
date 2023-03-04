@@ -46,12 +46,12 @@ osf_download(
 
 # Unzip files
 zipfiles <- list.files(
-  here(setup$local_data_path),
+  here(dirs$local_data_path),
   pattern = "*.zip",
   full.names = TRUE
 )
 
-map(zipfiles, unzip, exdir = setup$local_data_path)
+map(zipfiles, unzip, exdir = dirs$local_data_path)
 ```
 
 ::: callout-tip

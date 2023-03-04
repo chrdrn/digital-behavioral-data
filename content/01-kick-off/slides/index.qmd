@@ -126,7 +126,7 @@ Bitte scannen Sie den **QR-Cod**e oder nutzen Sie folgenden **Link** für die Te
 :::
 :::
 
-# 📢️ Organisation & Koordination {#organisation-koordination background-image="../../../img/background_group_activity.png"}
+# 📢️ Organisation & Koordination {background-image="../../../img/background_orga.png"}
 
 Seminarplan, Themen, Prüfungsleistungen
 

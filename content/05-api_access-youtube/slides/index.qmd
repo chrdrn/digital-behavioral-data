@@ -31,11 +31,11 @@ bibliography: references.bib
 
 # Agenda {background-image='../../../img/background_agenda.png'}
 
-1.  [Group Activity]
+1.  [👥 Group Activity]
 2.  [Beispielhafte Auswertungen]
 3.  [Verständnis- & Diskussionsfragen]
 
-# Group Activity {background-image='../../../img/background_group_activity.png'}
+# 👥 Group Activity {background-image='../../../img/background_group_activity.png'}
 
 Gruppenarbeit zu `YouTube Data Tools`
 
@@ -63,7 +63,7 @@ Gruppenarbeit zu `YouTube Data Tools`
 
 5.  *Downloaden Sie die Kommentare des Videos mit Hilfe der [`Video Info`](https://tools.digitalmethods.net/netvizz/youtube/mod_video_info.php) des [YTDT](https://tools.digitalmethods.net/netvizz/youtube/index.php).*
 
-# Beispielhafte Auswertungen {.bg_example}
+# Beispielhafte Auswertungen {background-image="../../../img/background_example.png"}
 
 Im Fokus: [{{< fa brands youtube >}} maiLab](https://www.youtube.com/c/maiLab)
 

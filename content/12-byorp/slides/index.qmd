@@ -30,10 +30,9 @@ date-format: "DD.MM.YYYY"
 
 # Agenda {background-image="../../../img/background_agenda.png"}
 
-1.  [Group Activity]
-2.  [Time for questions]
+1.  [👥 Group Activity]
 
-# Group Activity {background-image="../../../img/background_group_activity.png"}
+# 👥 Group Activity {background-image="../../../img/background_group_activity.png"}
 
 Let's have a look at your research ideas
 

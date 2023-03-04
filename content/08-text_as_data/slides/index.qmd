@@ -9,7 +9,7 @@ bibliography: references.bib
 ## Seminarplan {.smaller}
 
 | Sitzung                                                | Datum                                                           | Thema                                                                              | Referent\*Innen                                                       |
-|-----------------|-----------------|---------------------|------------------|
+|------------------|------------------|-------------------|------------------|
 | [*1*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*26.10.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*Kick-Off Session*]{.rn rn-type="strike-through" rn-color="#E6002E"}              | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
 | [*2*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*02.11.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*DBD: Einführung und Überblick*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
 | [*3*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*09.11.2022*]{.rn rn-type="strike-through" rn-color="#E6002E"} | [*DBD: Datenerhebung*]{.rn rn-type="strike-through" rn-color="#E6002E"}            | [*Christoph Adrian*]{.rn rn-type="strike-through" rn-color="#E6002E"} |
@@ -34,10 +34,15 @@ bibliography: references.bib
 # Agenda {background-image="../../../img/background_agenda.png"}
 
 1.  [A short introduction]
+
 2.  [Case Study: Amazon Reviews](#sec2)
-3.  \[☕ Kursevluation\]
+
+3.  [☕ Kursevaluation]
+
 4.  [Text processing]
+
 5.  [Sentiment Analyse]
+
 6.  [Topic Modeling]
 
 # A short introduction {background-color="#E6002E"}
@@ -74,11 +79,11 @@ im Fokus: *Text as data*
 
 ![](images/text_as_data_methods.png){fig-align="center"}
 
-# Case study: {{< fa brands amazon >}} Reviews {#sec2 background-color="#E6002E"}
+# Case study: {{< fa brands amazon >}} Reviews {#sec2 background-image="../../../img/background_example.png"}
 
 🕵️ ⭐⭐⭐⭐⭐
 
-[![Binder](https://mybinder.org/badge_logo.svg){alt="Binder"}](https://mybinder.org/v2/gh/chrdrn/dbd_binder/HEAD) [![Google Colab](https://colab.research.google.com/assets/colab-badge.svg){alt="Google Colab"}](https://colab.research.google.com/github/chrdrn/dbd_binder/blob/main/session_08-showcase_text_as_data.ipynb) [![RStudio Quarto](https://img.shields.io/badge/RStudio-4285F4?style=for-the-badge&logo=rstudio&logoColor=white){alt="RStudio Quarto"}](https://chrdrn.github.io/digital-behavioral-data/content/08-text_as_data/08-exercise.html)
+[![Binder](https://mybinder.org/badge_logo.svg){alt="Binder"}](https://mybinder.org/v2/gh/chrdrn/dbd_binder/HEAD) [![Google Colab](https://colab.research.google.com/assets/colab-badge.svg){alt="Google Colab"}](https://colab.research.google.com/github/chrdrn/dbd_binder/blob/main/session_08-showcase_text_as_data.ipynb) [![RStudio Quarto](https://img.shields.io/badge/RStudio-4285F4?style=for-the-badge&logo=rstudio&logoColor=white){alt="RStudio Quarto" width="75"}](https://chrdrn.github.io/digital-behavioral-data/content/08-text_as_data/08-exercise.html)
 
 ::: notes
 But ... why?
@@ -565,9 +570,9 @@ amazon$stm$preval$tgt  %>%
 
 -   Moderne Verfahren (z.B. BERT) potentiell besser geeignet für bestimmte Texte
 
-# Time for questions {background-color="#E6002E" background-image="../../00-images/background_questions.svg"}
+# Time for questions {background-image="../../../img/background_questions.png"}
 
-# Bis zur nächsten Sitzung! {background-color="#E6002E" background-image="../../00-images/background_end_of_session.svg"}
+# Bis zur nächsten Sitzung! {.unlisted background-image="../../../img/background_end_of_session.png"}
 
 ## Literatur
 

@@ -31,11 +31,11 @@ bibliography: references.bib
 
 # Agenda {background-image="../../../img/background_agenda.png"}
 
-1.  [Group Activity]
+1.  [👥 Group Activity]
 2.  [Beispielhafte Auswertungen]
 3.  [Verständnis- & Diskussionsfragen](#verständnis--diskussionsfragen)
 
-# Group Activity {background-image="../../../img/background_group_activity.png"}
+# 👥 Group Activity {background-image="../../../img/background_group_activity.png"}
 
 Gruppenarbeit zu `4CAT: Capture and Analysis Toolkit`
 
@@ -136,7 +136,7 @@ Durchsuchen Sie die Subreddits `r/news` und `r/worldnews` nach Posts zu einem be
 :::
 :::
 
-# Beispielhafte Auswertungen {.bg_example}
+# Beispielhafte Auswertungen {background-image="../../../img/background_example.png"}
 
 Im Fokus: News über 🤡Elon Musk
 

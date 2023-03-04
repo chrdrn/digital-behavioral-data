@@ -546,7 +546,7 @@
 <h1>Agenda</h1>
 <ol type="1">
 <li><a href="#/verständnis--diskussionsfragen">Verständnis- &amp; Diskussionsfragen</a></li>
-<li><a href="#/group-activity">Group Activity</a></li>
+<li><a href="#/group-activity">👥 Group Activity</a></li>
 <li><a href="#/beispielhafte-auswertungen">Beispielhafte Auswertungen</a></li>
 </ol>
 </section>
@@ -606,8 +606,8 @@
 </section></section>
 <section>
 <section id="group-activity" class="title-slide slide level1 center" data-background-image="../../../img/background_group_activity.png">
-<h1>Group Activity</h1>
-
+<h1>👥 Group Activity</h1>
+<p>Gruppenarbeit zur Nutzung der Twitter API (Tools)</p>
 </section>
 <section id="suchanfrage-erstellen-daten-sammeln" class="slide level2">
 <h2>Suchanfrage erstellen &amp; Daten sammeln</h2>
@@ -652,31 +652,7 @@
 <h1>Beispielhafte Auswertungen</h1>
 <p>Im Fokus: <code>#Karneval</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Load packages</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(academictwitteR) <span class="co"># Collecting the data</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">library</span>(tidyverse) <span class="co"># Preparation of the data</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="fu">library</span>(quanteda) <span class="co"># Text mining</span></span>
-<span id="cb1-5"><a href="#cb1-5"></a><span class="fu">library</span>(quanteda.textstats) <span class="co"># Text statistics</span></span>
-<span id="cb1-6"><a href="#cb1-6"></a><span class="fu">library</span>(quanteda.textplots) <span class="co"># Visualisation of text data</span></span>
-<span id="cb1-7"><a href="#cb1-7"></a><span class="fu">library</span>(here)</span>
-<span id="cb1-8"><a href="#cb1-8"></a><span class="fu">library</span>(sjmisc)</span>
-<span id="cb1-9"><a href="#cb1-9"></a><span class="fu">library</span>(lubridate)</span>
-<span id="cb1-10"><a href="#cb1-10"></a><span class="fu">library</span>(ggthemes)</span>
-<span id="cb1-11"><a href="#cb1-11"></a><span class="fu">library</span>(ggpubr)</span>
-<span id="cb1-12"><a href="#cb1-12"></a></span>
-<span id="cb1-13"><a href="#cb1-13"></a><span class="co"># Load data </span></span>
-<span id="cb1-14"><a href="#cb1-14"></a>tweets_karneval <span class="ot">&lt;-</span> <span class="fu">bind_tweets</span>(</span>
-<span id="cb1-15"><a href="#cb1-15"></a>  <span class="at">data_path =</span> <span class="fu">here</span>(<span class="st">"content/04-api_access-twitter/data.local/raw_karneval"</span>),</span>
-<span id="cb1-16"><a href="#cb1-16"></a>  <span class="co"># data_path = "data/raw_karneval",</span></span>
-<span id="cb1-17"><a href="#cb1-17"></a>  <span class="at">output_format =</span> <span class="st">"tidy"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb1-18"><a href="#cb1-18"></a>    <span class="fu">mutate</span>(</span>
-<span id="cb1-19"><a href="#cb1-19"></a>    <span class="at">datetime =</span> <span class="fu">ymd_hms</span>(created_at),</span>
-<span id="cb1-20"><a href="#cb1-20"></a>    <span class="at">date =</span> <span class="fu">date</span>(datetime),</span>
-<span id="cb1-21"><a href="#cb1-21"></a>    <span class="at">hour =</span> <span class="fu">hour</span>(datetime),</span>
-<span id="cb1-22"><a href="#cb1-22"></a>    <span class="at">min  =</span> <span class="fu">minute</span>(datetime),</span>
-<span id="cb1-23"><a href="#cb1-23"></a>    <span class="at">hms  =</span> hms<span class="sc">::</span><span class="fu">as_hms</span>(datetime),</span>
-<span id="cb1-24"><a href="#cb1-24"></a>    <span class="at">hm   =</span> hms<span class="sc">::</span><span class="fu">parse_hm</span>(hms)</span>
-<span id="cb1-25"><a href="#cb1-25"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
 </div>
 </section>
 <section id="setup-und-datensammlung-mit-r" class="slide level2">
@@ -693,14 +669,14 @@
 </div><div class="column" style="width:50%;">
 <p>Sammlung der Daten mit <code>academictwitteR</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2" data-code-line-numbers="|2|3|4|7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">get_all_tweets</span>(</span>
-<span id="cb2-2"><a href="#cb2-2"></a>  <span class="at">query =</span> <span class="st">"#Karneval"</span>, </span>
-<span id="cb2-3"><a href="#cb2-3"></a>  <span class="at">start_tweets =</span> <span class="st">"2022-11-11T00:00:00Z"</span>,</span>
-<span id="cb2-4"><a href="#cb2-4"></a>  <span class="at">end_tweets =</span> <span class="st">"2022-11-13T12:00:00Z"</span>,</span>
-<span id="cb2-5"><a href="#cb2-5"></a>  <span class="at">file =</span> <span class="st">"karneval"</span>,</span>
-<span id="cb2-6"><a href="#cb2-6"></a>  <span class="at">data_path =</span> <span class="st">"data/raw_karneval/"</span>,</span>
-<span id="cb2-7"><a href="#cb2-7"></a>  <span class="at">n =</span> <span class="dv">100000</span></span>
-<span id="cb2-8"><a href="#cb2-8"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1" data-code-line-numbers="|2|3|4|7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">get_all_tweets</span>(</span>
+<span id="cb1-2"><a href="#cb1-2"></a>  <span class="at">query =</span> <span class="st">"#Karneval"</span>, </span>
+<span id="cb1-3"><a href="#cb1-3"></a>  <span class="at">start_tweets =</span> <span class="st">"2022-11-11T00:00:00Z"</span>,</span>
+<span id="cb1-4"><a href="#cb1-4"></a>  <span class="at">end_tweets =</span> <span class="st">"2022-11-13T12:00:00Z"</span>,</span>
+<span id="cb1-5"><a href="#cb1-5"></a>  <span class="at">file =</span> <span class="st">"karneval"</span>,</span>
+<span id="cb1-6"><a href="#cb1-6"></a>  <span class="at">data_path =</span> <span class="st">"data/raw_karneval/"</span>,</span>
+<span id="cb1-7"><a href="#cb1-7"></a>  <span class="at">n =</span> <span class="dv">100000</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -709,7 +685,7 @@
 <h2>Kurzer Blick in die Daten</h2>
 <h4 id="karneval-im-fokus-datenübersicht"><code>#Karneval</code> im Fokus: Datenübersicht</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>tweets_karneval <span class="sc">%&gt;%</span> <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>tweets_karneval <span class="sc">%&gt;%</span> <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 2,637
 Columns: 37
@@ -759,7 +735,7 @@ $ hm                     &lt;time&gt; 08:15:00, 08:14:00, 08:14:00, 08:14:00, 08
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">table</span>(tweets_karneval<span class="sc">$</span>lang)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">table</span>(tweets_karneval<span class="sc">$</span>lang)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
   ca   cs   cy   da   de   en   es   et   eu   fi   fr   in   is   ja   lt   nl 
@@ -770,7 +746,7 @@ $ hm                     &lt;time&gt; 08:15:00, 08:14:00, 08:14:00, 08:14:00, 08
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">frq</span>(tweets_karneval<span class="sc">$</span>lang, <span class="at">sort.frq =</span> <span class="st">"desc"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">frq</span>(tweets_karneval<span class="sc">$</span>lang, <span class="at">sort.frq =</span> <span class="st">"desc"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>x &lt;character&gt; 
 # total N=2637 valid N=2637 mean=6.85 sd=5.06
@@ -823,11 +799,11 @@ is    |    1 |  0.04 |    0.04 | 100.00
 <h2>Am 11.11. um 10:11?</h2>
 <h4 id="karneval-im-fokus-tweets-im-zeitverlauf"><code>#Karneval</code> im Fokus: Tweets im Zeitverlauf</h4>
 <div class="cell" data-layout-align="center" data-fig.dpi="600">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>tweets_karneval <span class="sc">%&gt;%</span> </span>
-<span id="cb9-2"><a href="#cb9-2"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(hour)) <span class="sc">+</span></span>
-<span id="cb9-3"><a href="#cb9-3"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
-<span id="cb9-4"><a href="#cb9-4"></a>  <span class="fu">facet_grid</span>(<span class="at">cols =</span> <span class="fu">vars</span>(date)) <span class="sc">+</span></span>
-<span id="cb9-5"><a href="#cb9-5"></a>  <span class="fu">theme_pubr</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>tweets_karneval <span class="sc">%&gt;%</span> </span>
+<span id="cb8-2"><a href="#cb8-2"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(hour)) <span class="sc">+</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
+<span id="cb8-4"><a href="#cb8-4"></a>  <span class="fu">facet_grid</span>(<span class="at">cols =</span> <span class="fu">vars</span>(date)) <span class="sc">+</span></span>
+<span id="cb8-5"><a href="#cb8-5"></a>  <span class="fu">theme_pubr</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="index_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch quarto-figure-center"></section>
@@ -835,10 +811,10 @@ is    |    1 |  0.04 |    0.04 | 100.00
 <h2>UTC statt UTC+1</h2>
 <h4 id="karneval-im-fokus-stärkste-konzentration-von-tweets"><code>#Karneval</code> im Fokus: Stärkste Konzentration von Tweets</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>tweets_karneval <span class="sc">%&gt;%</span></span>
-<span id="cb10-2"><a href="#cb10-2"></a>  <span class="fu">frq</span>(hm,</span>
-<span id="cb10-3"><a href="#cb10-3"></a>      <span class="at">sort.frq =</span> <span class="st">"desc"</span>, </span>
-<span id="cb10-4"><a href="#cb10-4"></a>      <span class="at">min.frq =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>tweets_karneval <span class="sc">%&gt;%</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a>  <span class="fu">frq</span>(hm,</span>
+<span id="cb9-3"><a href="#cb9-3"></a>      <span class="at">sort.frq =</span> <span class="st">"desc"</span>, </span>
+<span id="cb9-4"><a href="#cb9-4"></a>      <span class="at">min.frq =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>hm &lt;numeric&gt; 
 # total N=2637 valid N=2637 mean=48463.12 sd=16629.59

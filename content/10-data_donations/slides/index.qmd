@@ -32,8 +32,8 @@ bibliography: references.bib
 # Agenda {background-image="../../../img/background_agenda.png"}
 
 1.  [Verständnis- & Diskussionsfragen](#verständnis--diskussionsfragen)
-2.  [Group Activity]
-3.  [Time for questions]
+2.  [👥 Group Activity]
+
 
 # Verständnis- & Diskussionsfragen {#verständnis--diskussionsfragen background-image="../../../img/background_participation.png"}
 
@@ -71,7 +71,7 @@ Ihre Fragen aus MS Teams
 > Durch die große Menge an freigegebenen Daten (gesamte SM Aktivität) im Vergleich zu z.B. einer Umfrage, müsste der Bias durch die Selbstselektion der Teilnehmer doch sehr groß sein? Die Belohnung für die Data Donation in der Studie waren 5 Euro. Für welche Belohnung wärt ihr bereit eure gesamten Social-Media-Aktivitäten zur Verfügung zu stellen?
 :::
 
-# Group Activity {background-image="../../../img/background_group_activity.png"}
+# 👥 Group Activity {background-image="../../../img/background_group_activity.png"}
 
 Gruppenarbeit zu Data Donations
 
