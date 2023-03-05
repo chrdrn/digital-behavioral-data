@@ -117,9 +117,9 @@ Wäheln Sie eine der folgenden Szenarien aus und erstellen Sie eine Suchanfrage 
 
 Im Fokus: `#Karneval`
 
-[![Quarto Document](https://raw.githubusercontent.com/chrdrn/digital-behavioral-data/main/img/badge-quarto_document.svg)](https://chrdrn.github.io/digital-behavioral-data/content/04-api_access-twitter/04-exercise.html)
-[![Binder RStudio](https://raw.githubusercontent.com/chrdrn/digital-behavioral-data/main/img/badge_binder-rstudio.svg)](https://mybinder.org/v2/gh/chrdrn/digital-behavior-data-binder/HEAD?urlpath=rstudio)
-[![Binder Jupyter](https://raw.githubusercontent.com/chrdrn/digital-behavioral-data/main/img/badge-binder_jupyter.svg){alt="Binder"}](https://mybinder.org/v2/gh/chrdrn/digital-behavior-data-binder/HEAD)
+[![Quarto Document](/img/badge-quarto_document.svg)](https://chrdrn.github.io/digital-behavioral-data/content/04-api_access-twitter/04-exercise.html)
+[![Binder RStudio](/img/badge-binder_rstudio.svg)](https://mybinder.org/v2/gh/chrdrn/digital-behavior-data-binder/HEAD?urlpath=rstudio)
+[![Binder Jupyter](/img/badge-binder_jupyter.svg){alt="Binder"}](https://mybinder.org/v2/gh/chrdrn/digital-behavior-data-binder/HEAD)
 [![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chrdrn/digital-behavior-data-binder/blob/main/session_04-showcase_twitter.ipynb)
 
 

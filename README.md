@@ -1,6 +1,6 @@
 # Digital Behavioral Data
-[![Binder RStudio](https://raw.githubusercontent.com/chrdrn/digital-behavioral-data/main/img/badge_binder-rstudio.svg)](https://mybinder.org/v2/gh/chrdrn/digital-behavior-data-binder/HEAD?urlpath=rstudio)
-[![Binder Jupyter](https://raw.githubusercontent.com/chrdrn/digital-behavioral-data/main/img/badge-binder_jupyter.svg)](https://mybinder.org/v2/gh/chrdrn/digital-behavior-data-binder/HEAD)
+[![Binder RStudio](img/badge-binder_rstudio.svg)](https://mybinder.org/v2/gh/chrdrn/digital-behavior-data-binder/HEAD?urlpath=rstudio)
+[![Binder Jupyter](img/badge-binder_jupyter.svg)](https://mybinder.org/v2/gh/chrdrn/digital-behavior-data-binder/HEAD)
 
 ## Links
 

@@ -83,7 +83,7 @@ website:
       - section: "B.Y.O.R.P."
         contents:
           - "content/12-byorp/12-slides.qmd"
-      - section: "Semesterabschluss"
+      - section: "Closing Session"
         contents:
           - "content/13-closing_session/13-slides.qmd"
           
