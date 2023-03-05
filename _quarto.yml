@@ -29,12 +29,14 @@ website:
       href: https://twitter.com/chrdrn
     - icon: github
       href: https://github.com/chrdrn/digital-behavioral-data
-    - icon: code-square
-      href: https://github.com/chrdrn/dbd_binder
-      text: Gitlab Repository for Showcases
+      text: Course repository
     - icon: box-arrow-up-right
-      href: https://mybinder.org/v2/gh/chrdrn/dbd_binder/HEAD
+      href: https://mybinder.org/v2/gh/chrdrn/digital-behavior-data-binder/HEAD
       text: Start Binder
+    - icon: github
+      href: https://github.com/chrdrn/digital-behavior-data-binder
+      text: Binder repository
+
     
     style: floating
     search: true

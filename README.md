@@ -1,12 +1,17 @@
 # Digital Behavioral Data
+[![Binder RStudio](https://raw.githubusercontent.com/chrdrn/digital-behavioral-data/main/img/badge_binder-rstudio.svg)](https://mybinder.org/v2/gh/chrdrn/digital-behavior-data-binder/HEAD?urlpath=rstudio)
+[![Binder Jupyter](https://raw.githubusercontent.com/chrdrn/digital-behavioral-data/main/img/badge-binder_jupyter.svg){alt="Binder"}](https://mybinder.org/v2/gh/chrdrn/digital-behavior-data-binder/HEAD)
 
 ## Links
 
 🔗 to github-page of the course: [https://chrdrn.github.io/digital-behavioral-data/](https://chrdrn.github.io/digital-behavioral-data/) 
 
+🔗 to Binder github-respository of the course: [https://github.com/chrdrn/digital-behavior-data-binder](https://github.com/chrdrn/digital-behavior-data-binder) 
+
 🔗 to [Assistant Professorship for Communication Science](https://www.communicationscience.rw.fau.de/) [english]
 
 🔗 to [Chair of Communication Science](https://www.kowi.rw.fau.de/) [german]
+
 
 
 ## Contents
@@ -39,7 +44,7 @@ Below is the scheudle for the current semester.
 
 | Session         | Datum                    | Topic                                           |
 |-----------------|--------------------------|-------------------------------------------------|
-| [1]{.smallcaps} | [26.10.2022]{.smallcaps} | [Kick-Off Session]{.smallcaps}                  |
+| 1 | 26.10.2022 | Kick-Off Session                  |
 | 2               | 02.11.2022               | DBD: Introduction & Overview                    |
 | 3               | 09.11.2022               | DBD: Data collection process in focus           |
 | 4               | 16.11.2022               | API-Access (I): *Twitter*                       |

@@ -190,7 +190,11 @@ Bitte wählen Sie die Ihnen zugewiesene Gruppe aus:
 
 Im Fokus: {{< fa brands tiktok >}} Hashtag `#statistics`
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/chrdrn/dbd_binder/HEAD) [![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chrdrn/dbd_binder/blob/main/session_07-showcase_tiktok.ipynb) [![RStudio Quarto](https://img.shields.io/badge/RStudio-4285F4?style=for-the-badge&logo=rstudio&logoColor=white){width="75"}](https://chrdrn.github.io/digital-behavioral-data/content/07-webscraping-tiktok/07-exercise.html)
+[![Quarto Document](https://raw.githubusercontent.com/chrdrn/digital-behavioral-data/main/img/badge-quarto_document.svg)](https://chrdrn.github.io/digital-behavioral-data/content/07-webscraping-tiktok/07-exercise.html)
+[![Binder RStudio](https://raw.githubusercontent.com/chrdrn/digital-behavioral-data/main/img/badge_binder-rstudio.svg)](https://mybinder.org/v2/gh/chrdrn/digital-behavior-data-binder/HEAD?urlpath=rstudio)
+[![Binder Jupyter](https://raw.githubusercontent.com/chrdrn/digital-behavioral-data/main/img/badge-binder_jupyter.svg){alt="Binder"}](https://mybinder.org/v2/gh/chrdrn/digital-behavior-data-binder/HEAD)
+[![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chrdrn/digital-behavior-data-binder/blob/main/session_07-showcase_tiktok.ipynb)
+
 
 ```{r}
 #| echo: false

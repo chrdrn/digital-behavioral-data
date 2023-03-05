@@ -57,7 +57,10 @@ map(zipfiles, unzip, exdir = dirs$local_data_path)
 ::: callout-tip
 Open this showcase in other interactive and executable environments:
 
-[![Binder](https://mybinder.org/badge_logo.svg){alt="Binder"}](https://mybinder.org/v2/gh/chrdrn/dbd_binder/HEAD) [![Google Colab](https://colab.research.google.com/assets/colab-badge.svg){alt="Google Colab"}](https://colab.research.google.com/github/chrdrn/dbd_binder/blob/main/session_05-showcase_youtube.ipynb)
+[![Binder RStudio](https://raw.githubusercontent.com/chrdrn/digital-behavioral-data/main/img/badge_binder-rstudio.svg)](https://mybinder.org/v2/gh/chrdrn/digital-behavior-data-binder/HEAD?urlpath=rstudio)
+[![Binder Jupyter](https://raw.githubusercontent.com/chrdrn/digital-behavioral-data/main/img/badge-binder_jupyter.svg){alt="Binder"}](https://mybinder.org/v2/gh/chrdrn/digital-behavior-data-binder/HEAD)
+[![Google Colab](https://colab.research.google.com/assets/colab-badge.svg){alt="Google Colab"}](https://colab.research.google.com/github/chrdrn/digital-behavior-data-binder/blob/main/session_04-showcase_twitter.ipynb)
+
 :::
 
 ## Background
