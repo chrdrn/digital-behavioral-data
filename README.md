@@ -1,18 +1,20 @@
-# Digital Behavioral Data
-[![Binder RStudio](img/badge-binder_rstudio.svg)](https://mybinder.org/v2/gh/chrdrn/digital-behavior-data-binder/HEAD?urlpath=rstudio)
-[![Binder Jupyter](img/badge-binder_jupyter.svg)](https://mybinder.org/v2/gh/chrdrn/digital-behavior-data-binder/HEAD)
+# Digital behavioral data <a href="https://chrdrn.github.io/digital-behavioral-data"><img src="img/dbd_hex.png" align="right" height="150"/></a>
+
+<!-- badges: start -->
+
+[![Binder RStudio](img/badge-binder_rstudio.svg)](https://mybinder.org/v2/gh/chrdrn/digital-behavior-data-binder/HEAD?urlpath=rstudio) [![Binder Jupyter](img/badge-binder_jupyter.svg)](https://mybinder.org/v2/gh/chrdrn/digital-behavior-data-binder/HEAD)
+
+<!-- badges: end -->
 
 ## Links
 
-🔗 to github-page of the course: [https://chrdrn.github.io/digital-behavioral-data/](https://chrdrn.github.io/digital-behavioral-data/) 
+🔗 to github-page of the course: <https://chrdrn.github.io/digital-behavioral-data/>
 
-🔗 to Binder github-respository of the course: [https://github.com/chrdrn/digital-behavior-data-binder](https://github.com/chrdrn/digital-behavior-data-binder) 
+🔗 to Binder github-respository of the course: <https://github.com/chrdrn/digital-behavior-data-binder>
 
-🔗 to [Assistant Professorship for Communication Science](https://www.communicationscience.rw.fau.de/) [english]
+🔗 to [Assistant Professorship for Communication Science](https://www.communicationscience.rw.fau.de/) \[english\]
 
-🔗 to [Chair of Communication Science](https://www.kowi.rw.fau.de/) [german]
-
-
+🔗 to [Chair of Communication Science](https://www.kowi.rw.fau.de/) \[german\]
 
 ## Contents
 
@@ -42,21 +44,19 @@ In this seminar, students will be introduced to working with digital behavioral 
 
 Below is the scheudle for the current semester.
 
-| Session         | Datum                    | Topic                                           |
-|-----------------|--------------------------|-------------------------------------------------|
-| 1 | 26.10.2022 | Kick-Off Session                  |
-| 2               | 02.11.2022               | DBD: Introduction & Overview                    |
-| 3               | 09.11.2022               | DBD: Data collection process in focus           |
-| 4               | 16.11.2022               | API-Access (I): *Twitter*                       |
-| 5               | 23.11.2022               | API-Access (II): *YouTube*                      |
-| 6               | 30.11.2022               | API-Access (III): *Reddit*                      |
-| 7               | 07.12.2022               | Webscraping: *TikTok*                           |
-| 8               | 14.12.2022               | Extra: Text as data                             |
-| \-              | \-                       | *CHRISTMAS BREAK*                               |
-| 9               | 11.01.2023               | ESM: *m-path*                                   |
-| 10              | 18.01.2023               | Data Donations                                  |
-| 11              | 25.01.2023               | ***Guest Lecture: Linking DBD & Survey data***  |
-| 12              | 02.02.2023               | **B**ring **Y**our **O**wn **R**esearch (**P**roject) |
-| 13              | 08.02.2023               | Closing Session: Recap, Evaluation & Discussion |
-
-
+| Session | Datum      | Topic                                                 |
+|------------------|-------------------|-----------------------------------|
+| 1       | 26.10.2022 | Kick-Off Session                                      |
+| 2       | 02.11.2022 | DBD: Introduction & Overview                          |
+| 3       | 09.11.2022 | DBD: Data collection process in focus                 |
+| 4       | 16.11.2022 | API-Access (I): *Twitter*                             |
+| 5       | 23.11.2022 | API-Access (II): *YouTube*                            |
+| 6       | 30.11.2022 | API-Access (III): *Reddit*                            |
+| 7       | 07.12.2022 | Webscraping: *TikTok*                                 |
+| 8       | 14.12.2022 | Extra: Text as data                                   |
+| \-      | \-         | *CHRISTMAS BREAK*                                     |
+| 9       | 11.01.2023 | ESM: *m-path*                                         |
+| 10      | 18.01.2023 | Data Donations                                        |
+| 11      | 25.01.2023 | ***Guest Lecture: Linking DBD & Survey data***        |
+| 12      | 02.02.2023 | **B**ring **Y**our **O**wn **R**esearch (**P**roject) |
+| 13      | 08.02.2023 | Closing Session: Recap, Evaluation & Discussion       |

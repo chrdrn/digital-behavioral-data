@@ -68,9 +68,9 @@ Gruppenarbeit zu `YouTube Data Tools`
 Im Fokus: [{{< fa brands youtube >}} maiLab](https://www.youtube.com/c/maiLab)
 
 [![Quarto Document](/img/badge-quarto_document.svg)](https://chrdrn.github.io/digital-behavioral-data/content/05-api_access-youtube/05-exercise.html)
-[![Binder RStudio](/img/badge-binder_rstudio.svg)](https://mybinder.org/v2/gh/chrdrn/digital-behavior-data-binder/HEAD?urlpath=rstudio)
-[![Binder Jupyter](/img/badge-binder_jupyter.svg){alt="Binder"}](https://mybinder.org/v2/gh/chrdrn/digital-behavior-data-binder/HEAD)
-[![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chrdrn/dbd_binder/blob/main/session_05-showcase_youtube.ipynb)
+[![Binder RStudio](/img/badge-binder_rstudio.svg)](https://mybinder.org/v2/gh/chrdrn/digital-behavioral-data-binder/HEAD?urlpath=rstudio)
+[![Binder Jupyter](/img/badge-binder_jupyter.svg){alt="Binder"}](https://mybinder.org/v2/gh/chrdrn/digital-behavioral-data-binder/HEAD)
+[![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chrdrn/digital-behavioral-data/blob/main/session_05-showcase_youtube.ipynb)
 
 ```{r}
 #| echo: false
@@ -205,10 +205,10 @@ Verschiedene Möglichkeiten, um den Code bzw. das heutige Beispiel ("live") zu r
 1.  [Quarto-Dokument](https://chrdrn.github.io/digital-behavioral-data/content/05-api_access-youtube/05-exercise.html) auf [Kurs-Homepage](https://chrdrn.github.io/digital-behavioral-data/)
 
 2.  [[Binder]{.smallcaps}](https://mybinder.org/): Repositories mit Jupyter-Notebooks in ausführbaren Umgebungen öffnen und bearbeiten\
-    [![Binder](https://mybinder.org/badge_logo.svg){alt="Binder"}](https://mybinder.org/v2/gh/chrdrn/digital-behavior-data-binder/HEAD)
+    [![Binder](https://mybinder.org/badge_logo.svg){alt="Binder"}](https://mybinder.org/v2/gh/chrdrn/digital-behavioral-data-binder/HEAD)
 
 3.  [[Google Colab]{.smallcaps}](https://colab.research.google.com/): gehosteter Jupyter-Notebook-Dienst, der keine EInrichtung erfordertund gleichzeitig kostenlosen Zugang zu Rechenressourcen einschließlich GPUs bietet\
-    [![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chrdrn/digital-behavior-data-binder/blob/main/session_05-showcase_youtube.ipynb)
+    [![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chrdrn/digital-behavioral-data-binder/blob/main/session_05-showcase_youtube.ipynb)
 
 # Verständnis- & Diskussionsfragen {background-image='../../../img/background_participation.png'}
 
