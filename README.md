@@ -10,7 +10,7 @@
 
 🔗 to github-page of the course: <https://chrdrn.github.io/digital-behavioral-data/>
 
-🔗 to Binder github-respository of the course: <https://github.com/chrdrn/digital-behavior-data-binder>
+🔗 to Binder github-respository of the course: <https://github.com/chrdrn/digital-behavioral-data-binder>
 
 🔗 to [Assistant Professorship for Communication Science](https://www.communicationscience.rw.fau.de/) \[english\]
 
