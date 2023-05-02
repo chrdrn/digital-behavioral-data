@@ -460,7 +460,7 @@ div.csl-indent {
 
 </header>
 
-<div class="cell" data-hash="06-exercise_cache/html/Setup local OSF environment_05c95d3f0606cd47117587d99a8d1421">
+<div class="cell" data-hash="06-exercise_cache/html/Setup local OSF environment_801b3d7c15246d81458a1143eab0382d">
 
 </div>
 <div class="callout-tip callout callout-style-default callout-captioned">
@@ -545,12 +545,12 @@ Disclaimer
 <section id="analysis-of-collected-4cat-data" class="level2">
 <h2 class="anchored" data-anchor-id="analysis-of-collected-4cat-data">Analysis of collected 🐈🐈 4CAT 🐈🐈 data</h2>
 <p>A detailed description about the collection of the data (in the form of a concrete application example) can be found in the slides of the associated session.</p>
-<div class="cell" data-hash="06-exercise_cache/html/fix dependencies_a250d68cac53bed4f052e5cce7329ba3">
+<div class="cell" data-hash="06-exercise_cache/html/fix dependencies_48caa90668d75540ea50ec8c1ae7e039">
 
 </div>
 <section id="load-data-into-local-environment" class="level3">
 <h3 class="anchored" data-anchor-id="load-data-into-local-environment">Load data into local environment</h3>
-<div class="cell" data-hash="06-exercise_cache/html/unnamed-chunk-3_440fe3d2e34faf3fab2508d2b459f655">
+<div class="cell" data-hash="06-exercise_cache/html/unnamed-chunk-3_881b598a7499851db33fddd9d831f44c">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load packages</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
@@ -562,25 +562,34 @@ Disclaimer
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>musk_entities <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">here</span>(<span class="st">"content/06-api_access-reddit/data.local/4cat-reddit_news-musk-named_entities.csv"</span>))</span>
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co"># quick preview</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>musk <span class="sc">%&gt;%</span> <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Anonymization of potentially sensitive information</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>musk_hash <span class="ot">&lt;-</span> musk <span class="sc">%&gt;%</span> </span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>     <span class="fu">across</span>(<span class="fu">c</span>(</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>       thread_id<span class="sc">:</span>id,</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>       body, author<span class="sc">:</span>post_flair,</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>       parent), </span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>       <span class="sc">~</span> <span class="fu">v_digest</span>(.)))</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="co"># quick preview</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>musk_hash <span class="sc">%&gt;%</span> <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 4,838
 Columns: 16
-$ thread_id      &lt;chr&gt; "yugsz0", "yt59ku", "yulq2v", "yulq2v", "yulq2v", "yulq…
-$ id             &lt;chr&gt; "iw9mhr7", "iw9tzrz", "iwa0egr", "iwa10h3", "iwa1gry", …
+$ thread_id      &lt;chr&gt; "fa3188370daf15e630f9121ab7e1ff76", "e00fff6599660fbfd7…
+$ id             &lt;chr&gt; "0427331b4ed6b36be917779e839c732f", "9465790a781133af6b…
 $ timestamp      &lt;dttm&gt; 2022-11-14 00:13:59, 2022-11-14 01:11:53, 2022-11-14 0…
-$ body           &lt;chr&gt; "Nick Cannon and Elon Musk need to put a damn condom on…
+$ body           &lt;chr&gt; "a82402045c5afcce8e1e20c9d3d7978a", "f07ff47103d975865a…
 $ subject        &lt;lgl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-$ author         &lt;chr&gt; "fbe0d753750a9f008871e6e829b727bf26cc2bdcdc71f340", "89…
-$ author_flair   &lt;chr&gt; "aadb59c4da75af6c9fb8d5cb4c310ce59888aab7f96ffc15", "aa…
-$ post_flair     &lt;lgl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
+$ author         &lt;chr&gt; "736bbd33d9055a81d41f1f0aa12859c2", "89a6bdaaa7351e189a…
+$ author_flair   &lt;chr&gt; "9c63023a4dad721af7dc04902c9ddecb", "9c63023a4dad721af7…
+$ post_flair     &lt;chr&gt; "9b09f05e8ca418b2b85266625985528b", "9b09f05e8ca418b2b8…
 $ domain         &lt;lgl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
 $ url            &lt;lgl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
 $ image_file     &lt;lgl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
 $ image_md5      &lt;lgl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
 $ subreddit      &lt;chr&gt; "worldnews", "news", "news", "news", "news", "news", "n…
-$ parent         &lt;chr&gt; "t3_yugsz0", "t1_iw4y0aj", "t3_yulq2v", "t3_yulq2v", "t…
+$ parent         &lt;chr&gt; "e1ef5b33cbd8891c1a005cf5521d1408", "e342d97798ff809247…
 $ score          &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1…
 $ unix_timestamp &lt;dbl&gt; 1668384839, 1668388313, 1668391383, 1668391676, 1668391…</code></pre>
 </div>

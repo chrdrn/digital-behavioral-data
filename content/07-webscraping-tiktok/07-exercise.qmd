@@ -60,6 +60,11 @@ This showcase is intended to illustrate different analysis possibilities of {{< 
 -   collected via [`Zeeschuimer`](https://github.com/digitalmethodsinitiative/zeeschuimer) with .csv export via 🐈🐈 [**4CAT**](https://github.com/digitalmethodsinitiative/4cat)  🐈🐈
 
 ### Data import from {{< fa brands github >}}
+```{r}
+#| echo: false
+pacman::p_load(digest)
+v_digest <- Vectorize(digest::digest)
+```
 
 ```{r}
 # load packages
@@ -71,8 +76,16 @@ statistics <- read_csv(
   here("content/07-webscraping-tiktok/data.local/tiktok-search-statistics.csv"), 
   col_types = cols(author_followers = col_number()))
 
+# Anonymization of potentially sensitive information
+statistics_hash <- statistics %>% 
+  mutate(
+     across(c(
+       id:body,
+       video_url:thumbnail_url), 
+       ~ v_digest(.)))
+
 # quick preview
-statistics %>% glimpse()
+statistics_hash %>% glimpse()
 ```
 
 ### Exploration
@@ -135,7 +148,7 @@ library(quanteda)
 
 # Create corpus based on variable hashtags
 crp <- corpus(
-  statistics, 
+  statistics_hash, 
   docid_field = "id",
   text_field = "hashtags")
 

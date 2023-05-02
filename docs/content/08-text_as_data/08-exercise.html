@@ -512,7 +512,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="cell" data-hash="08-exercise_cache/html/Setup local OSF environment_04569d5d9edbbda8fe739d518d43c948">
 
 </div>
-<div class="cell" data-hash="08-exercise_cache/html/preparation_4c08ea042735c4d58a30cc369406e16f">
+<div class="cell" data-hash="08-exercise_cache/html/preparation_e3f580f14c3513b2f563ac85e65c24fb">
 
 </div>
 <div class="callout-tip callout callout-style-default callout-captioned">
@@ -1568,7 +1568,7 @@ top_topic
 <span id="cb51-32"><a href="#cb51-32" aria-hidden="true" tabindex="-1"></a>       <span class="fu">descr</span>(<span class="at">show =</span> <span class="fu">c</span>(<span class="st">"label"</span>, <span class="st">"n"</span>, <span class="st">"NA.prc"</span>, <span class="st">"mean"</span>, <span class="st">"sd"</span>, <span class="st">"se"</span>, <span class="st">"md"</span>, <span class="st">"range"</span>))</span>
 <span id="cb51-33"><a href="#cb51-33" aria-hidden="true" tabindex="-1"></a> }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-hash="08-exercise_cache/html/unnamed-chunk-45_1838b350f0d3e36230cb08b4341bd76e">
+<div class="cell" data-hash="08-exercise_cache/html/unnamed-chunk-45_84764cf0c8da437b4273089bd72b1f63">
 <div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>print_output_descriptives <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
 <span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Loop</span></span>
 <span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> x) {</span>
@@ -1594,18 +1594,17 @@ top_topic
 <span id="cb52-23"><a href="#cb52-23" aria-hidden="true" tabindex="-1"></a><span class="st">           ***************************************************</span></span>
 <span id="cb52-24"><a href="#cb52-24" aria-hidden="true" tabindex="-1"></a><span class="st">           </span></span>
 <span id="cb52-25"><a href="#cb52-25" aria-hidden="true" tabindex="-1"></a><span class="st">           ID: {output[[i]]$data$id[[j]]} </span><span class="sc">\n</span></span>
-<span id="cb52-26"><a href="#cb52-26" aria-hidden="true" tabindex="-1"></a><span class="st">           Date: {output[[i]]$data$date[[j]]} </span><span class="sc">\n</span></span>
-<span id="cb52-27"><a href="#cb52-27" aria-hidden="true" tabindex="-1"></a><span class="st">           Title: {output[[i]]$data$review_title[[j]]} </span><span class="sc">\n</span></span>
-<span id="cb52-28"><a href="#cb52-28" aria-hidden="true" tabindex="-1"></a><span class="st">           Gamma: {round(output[[i]]$data$gamma[[j]],3)} </span><span class="sc">\n</span></span>
-<span id="cb52-29"><a href="#cb52-29" aria-hidden="true" tabindex="-1"></a><span class="st">           Review: </span><span class="sc">\r</span></span>
-<span id="cb52-30"><a href="#cb52-30" aria-hidden="true" tabindex="-1"></a><span class="st">           {output[[i]]$data$review_text[[j]]} </span><span class="sc">\n</span></span>
-<span id="cb52-31"><a href="#cb52-31" aria-hidden="true" tabindex="-1"></a><span class="st">           Rating: {output[[i]]$data$review_star[[j]]} </span><span class="sc">\n</span></span>
-<span id="cb52-32"><a href="#cb52-32" aria-hidden="true" tabindex="-1"></a><span class="st">           Valence: {output[[i]]$data$val_fct[[j]]} ({round(output[[i]]$data$valence[[j]],3)}) </span><span class="sc">\n</span></span>
-<span id="cb52-33"><a href="#cb52-33" aria-hidden="true" tabindex="-1"></a><span class="st">           Polarity: {output[[i]]$data$pol_fct[[j]]} ({round(output[[i]]$data$polarity[[j]],3)}) </span></span>
-<span id="cb52-34"><a href="#cb52-34" aria-hidden="true" tabindex="-1"></a><span class="st">           </span><span class="sc">\n\n</span><span class="st">"</span>) <span class="sc">|&gt;</span> <span class="fu">print</span>() </span>
-<span id="cb52-35"><a href="#cb52-35" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb52-36"><a href="#cb52-36" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb52-37"><a href="#cb52-37" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb52-26"><a href="#cb52-26" aria-hidden="true" tabindex="-1"></a><span class="st">           Title: {output[[i]]$data$review_title[[j]]} </span><span class="sc">\n</span></span>
+<span id="cb52-27"><a href="#cb52-27" aria-hidden="true" tabindex="-1"></a><span class="st">           Gamma: {round(output[[i]]$data$gamma[[j]],3)} </span><span class="sc">\n</span></span>
+<span id="cb52-28"><a href="#cb52-28" aria-hidden="true" tabindex="-1"></a><span class="st">           Review: </span><span class="sc">\r</span></span>
+<span id="cb52-29"><a href="#cb52-29" aria-hidden="true" tabindex="-1"></a><span class="st">           {output[[i]]$data$review_text[[j]]} </span><span class="sc">\n</span></span>
+<span id="cb52-30"><a href="#cb52-30" aria-hidden="true" tabindex="-1"></a><span class="st">           Rating: {output[[i]]$data$review_star[[j]]} </span><span class="sc">\n</span></span>
+<span id="cb52-31"><a href="#cb52-31" aria-hidden="true" tabindex="-1"></a><span class="st">           Valence: {output[[i]]$data$val_fct[[j]]} ({round(output[[i]]$data$valence[[j]],3)}) </span><span class="sc">\n</span></span>
+<span id="cb52-32"><a href="#cb52-32" aria-hidden="true" tabindex="-1"></a><span class="st">           Polarity: {output[[i]]$data$pol_fct[[j]]} ({round(output[[i]]$data$polarity[[j]],3)}) </span></span>
+<span id="cb52-33"><a href="#cb52-33" aria-hidden="true" tabindex="-1"></a><span class="st">           </span><span class="sc">\n\n</span><span class="st">"</span>) <span class="sc">|&gt;</span> <span class="fu">print</span>() </span>
+<span id="cb52-34"><a href="#cb52-34" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb52-35"><a href="#cb52-35" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb52-36"><a href="#cb52-36" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="output-by-topics" class="level5">

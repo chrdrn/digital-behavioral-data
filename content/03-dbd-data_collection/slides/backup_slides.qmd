@@ -1,0 +1,132 @@
+---
+title: "Untitled"
+format: revealjs
+---
+
+## Bias at the source (Detailed) {.smaller visibility="hidden"}
+
+#### Potentielle Probleme mit der Datenquelle oder -herkunft
+
+::: columns
+::: {.column width="30%"}
+1.  [**Functional**]{.rn rn-type="highlight"}
+
+2.  Normative
+
+3.  External
+
+4.  Non-individuals
+:::
+
+::: {.column width="70%"}
+Biases, die auf das **Design und die Möglichkeiten der Plattformen zurückzuführen** sind
+
+-   Plattformspezifisches **Design und Funktionen** prägen das Nutzerverhalten.[^1][^2]
+-   **Algorithmen**, die für die **Organisation und das Ranking von Inhalten** verwendet werden, beeinflussen das Nutzerverhalten.
+-   Die **Präsentation von Inhalten** beeinflusst das Nutzerverhalten.
+:::
+:::
+
+[^1]: Introduction of emojis on Twitter lead to a decrease in the usage of emoticons (Pavalanathan and Eisenstein, 2016)
+
+[^2]: Newell et al. (2016a) studied the differences between the book retailer Amazon and the social network for book readers Goodreads. Both platforms allow book reviewing and rating, yet differ in the content of the reviews, the ratings, and how reviews get promoted.
+
+## Bias at the source (Detailed) {.smaller visibility="hidden"}
+
+#### Potentielle Probleme mit der Datenquelle oder -herkunft
+
+::: columns
+::: {.column width="30%"}
+1.  *Functional*
+
+2.  [**Normative**]{.rn rn-type="highlight"}
+
+3.  External
+
+4.  Non-individuals
+:::
+
+::: {.column width="70%"}
+**Verhaltensnormen**, die auf den **einzelnen Plattformen** bestehen oder sich herausbilden
+
+-   Normen werden durch die Einstellungen und Verhaltensweisen von Online-Gemeinschaften geprägt, die kontextabhängig sein können.
+-   Das Bewusstsein, von anderen beobachtet zu werden, wirkt sich auf das Nutzerverhalten aus.
+-   Soziale Konformität und "Herdentrieb" finden auf sozialen Plattformen statt, und solche Verhaltensmerkmale prägen das Nutzerverhalten.
+:::
+:::
+
+## Bias at the source (Detailed) {.smaller visibility="hidden"}
+
+#### Potentielle Probleme mit der Datenquelle oder -herkunft
+
+::: columns
+::: {.column width="30%"}
+1.  *Functional*
+
+2.  *Normative*
+
+3.  [**External**]{.rn rn-type="highlight"}
+
+4.  Non-individuals
+:::
+
+::: {.column width="70%"}
+Faktoren, die **außerhalb der sozialen Plattformen** liegen, aber das Nutzerverhalten beeinflussen können
+
+-   Kulturelle Elemente und soziale Kontexte spiegeln sich in sozialen Datensätzen wider.
+-   Wie andere Medien enthalten auch die sozialen Medien Fehlinformationen und Desinformationen.
+-   Inhalte zu verschiedenen Themen werden unterschiedlich behandelt.
+-   Ereignisse von großer Tragweite werden in den sozialen Medien widergespiegelt, unabhängig davon, ob sie vorhergesehen wurden oder nicht.
+:::
+:::
+
+## Bias at the source (Detailed) {.smaller visibility="hidden"}
+
+#### Potentielle Probleme mit der Datenquelle oder -herkunft
+
+::: columns
+::: {.column width="30%"}
+1.  *Functional*
+
+2.  *Normative*
+
+3.  *External*
+
+4.  [**Non-individuals**]{.rn rn-type="highlight"}
+:::
+
+::: {.column width="70%"}
+Vorhandensein von **nicht-individuellen Konten** ein *(non-individuals*).
+
+-   Konten von Organisationen
+-   Bots
+:::
+:::
+
+## APIs aus wissenschaftlicher Perspektive {visibility="hidden"}
+
+#### Ökologie der Daten und die Formen der APIs \[CITATION HERE\]
+
+::: r-stack
+![](images/image_api_00.png){fig-align="center"}
+
+![](images/image_api_01.png){.fragment fragment-index="1" fig-align="center"}
+
+![](images/image_api_02.png){.fragment fragment-index="2" fig-align="center"}
+:::
+
+::: notes
+1.  Grundannahmen der **Medienökologie** =Technologie prägt Verhalten von Akteueren und gestaltet die daraus resultierenden Kommunikationsartefakte (Altheide, 1994, S. 670).
+
+    1.  Diese Artefakte wiederum beeinflussen die nachfolgenden Aktivitäten, beispielsweise wenn Nutzer mit den von der Plattform bereitgestellten Mitteln die Kommentare anderer Nutzer kommentieren.
+
+    2.  Dies führt zu einem zirkulären Prozess, in dem Nutzer und Plattformbetreiber an der Koproduktion von Daten arbeiten (Vis, 2013). Wissenschaftler können als eine besondere Art von Nutzern betrachtet werden, die Daten analysieren, die durch die Plattformen vermittelt werden
+
+2.  Verschiedene Organisationsprinzipien von APIs
+
+Hintergrund:
+
+-   Medie ecology: the study of media, technology, and communication and how they affect human environments
+-   Plattformanbieter sind Datenvermittler, die ihre Geschäftsmodelle auf der Datafizierung des Nutzerverhaltens aufbauen (Dorfer, 2016; Cukier & Mayer-Schoenberger, 2013). Daher sind Organisationen wie Facebook, Twitter und Google in eine Ökologie von Akteuren, Erwartungen und Diskursen eingebettet.
+-   Solche "Ökologien der Kommunikation" wurden aus der Perspektive der Medienlogik (Altheide, 2013; van Dijck & Poell, 2013; Klinger & Svensson, 2014), der Mediatisierung (Couldry & Hepp, 2013) und der Mediation (Livingstone, 2009) analysiert
+:::

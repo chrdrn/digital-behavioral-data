@@ -741,26 +741,26 @@ Sie können z. B. TikTok durchsuchen und später eine Liste aller Beiträge in d
 <h2>Ein kurzer Überblick</h2>
 <h4 id="struktur-des-fa-brands-tiktok-tiktok-datensatzes">Struktur des <i class="fa-brands fa-tiktok" aria-label="tiktok"></i> TikTok-Datensatzes</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>statistics <span class="sc">%&gt;%</span> <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>statistics_hash <span class="sc">%&gt;%</span> <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 941
 Columns: 24
-$ id               &lt;dbl&gt; 6.813800e+18, 6.832737e+18, 6.845368e+18, 6.927122e+1…
-$ thread_id        &lt;dbl&gt; 6.813800e+18, 6.832737e+18, 6.845368e+18, 6.927122e+1…
-$ author           &lt;chr&gt; "onlyjayus", "onlyjayus", "ryguy238", "mason.whaley",…
-$ author_full      &lt;chr&gt; "actuallyitsbella", "actuallyitsbella", "ryan p", "Ma…
-$ author_id        &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N…
-$ author_followers &lt;dbl&gt; 18500000, 18500000, 28500, 151500, 15700, 319500, 693…
-$ body             &lt;chr&gt; "You’re sexy. The math proves it #fyp #love #dating #…
+$ id               &lt;chr&gt; "c158c50de9203a700525c2273c722f55", "5794a6967c21834c…
+$ thread_id        &lt;chr&gt; "c158c50de9203a700525c2273c722f55", "5794a6967c21834c…
+$ author           &lt;chr&gt; "1e25edc01a1eff924105786baa35cb88", "1e25edc01a1eff92…
+$ author_full      &lt;chr&gt; "867f5f0cf9b63e68eebb58854d8f779d", "867f5f0cf9b63e68…
+$ author_id        &lt;chr&gt; "1b94ef47779439aedbf89a519ccb0ac3", "1b94ef47779439ae…
+$ author_followers &lt;chr&gt; "34f5624a9f54d961f205fa9ccf2c2816", "34f5624a9f54d961…
+$ body             &lt;chr&gt; "565707abc618ca27d9f5c9bd718488f0", "63cdbef44fbf560a…
 $ timestamp        &lt;dttm&gt; 2020-04-09 19:44:39, 2020-05-30 20:28:05, 2020-07-03…
 $ unix_timestamp   &lt;dbl&gt; 1586461479, 1590870485, 1593811442, 1612846242, 16420…
 $ is_duet          &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALS…
 $ music_name       &lt;chr&gt; "SexyBack", "original sound", "original sound", "orig…
 $ music_id         &lt;dbl&gt; 6.696418e+18, 6.832737e+18, 6.845368e+18, 6.927122e+1…
 $ music_url        &lt;chr&gt; "https://sf16-ies-music-va.tiktokcdn.com/obj/tos-usea…
-$ video_url        &lt;chr&gt; "https://v16-webapp.tiktok.com/eac3d9cb4566d4ac017e3f…
-$ tiktok_url       &lt;chr&gt; "https://tiktok.com/@onlyjayus/video/6813800162259897…
-$ thumbnail_url    &lt;chr&gt; "https://p16-sign-va.tiktokcdn.com/tos-maliva-p-0068/…
+$ video_url        &lt;chr&gt; "1504eb84f490bc0b7a7245feb5b2e58f", "79c191b9dcea9193…
+$ tiktok_url       &lt;chr&gt; "6aaa20d1f42837af425dd2656b2d87a7", "d53c488f26b5db40…
+$ thumbnail_url    &lt;chr&gt; "dd1e26c4dd3b8a8f2d8fa595e7f7af7e", "b99c1df931f7ff61…
 $ likes            &lt;dbl&gt; 1200000, 910000, 901000, 794300, 740300, 701400, 6490…
 $ comments         &lt;dbl&gt; 7746, 11900, 3020, 36900, 8179, 8150, 34800, 7592, 28…
 $ shares           &lt;dbl&gt; 23000, 16600, 1755, 64000, 6397, 1685, 93800, 51300, …
@@ -776,28 +776,28 @@ $ warning          &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N
 <h2>Erstellung eines Korpus</h2>
 <h4 id="textverarbeitung-mit-quanteda-benoit2018">Textverarbeitung mit <a href="http://quanteda.io/"><code>quanteda</code></a> <span class="citation" data-cites="benoit2018">(<a href="#/literatur" role="doc-biblioref" onclick="">Benoit et al., 2018</a>)</span></h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>crp <span class="ot">&lt;-</span> <span class="fu">corpus</span>(statistics, </span>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>crp <span class="ot">&lt;-</span> <span class="fu">corpus</span>(statistics_hash, </span>
 <span id="cb3-2"><a href="#cb3-2"></a>              <span class="at">docid_field =</span> <span class="st">"id"</span>,</span>
 <span id="cb3-3"><a href="#cb3-3"></a>              <span class="at">text_field =</span> <span class="st">"hashtags"</span>)</span>
 <span id="cb3-4"><a href="#cb3-4"></a>crp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Corpus consisting of 941 documents and 22 docvars.
-6813800162259897344 :
+c158c50de9203a700525c2273c722f55 :
 "fyp,love,dating,romance,relationship,crush,people,population..."
 
-6832736698938576896 :
+5794a6967c21834c4808d8ad0bc13e05 :
 "fyp,blacklivesmatter,tiktokpartner,learnontiktok,police,fact..."
 
-6845368010048408576 :
+abb283c2d6d427232ad29eb35ebf944e :
 "skittles,statistics,education,fyp,foryou"
 
-6927121729257098240 :
+97b1104022105b411a2f9c54ce5740f7 :
 "hotguy,itwasntme,turbotaxlivepick6,doritosflatlife,foryou,wa..."
 
-7052705912317840384 :
+01f2b8936aea8ccc94ac1c8c3a1e7970 :
 "timotheechalamet,fyp,foryou,timothee,peach,callmebyyourname,..."
 
-6909087873081905152 :
+c25da2e0796117dcedb418291a8bdd10 :
 "stitch,statistics,staticstics,fyp,foryoupage,trending"
 
 [ reached max_ndoc ... 935 more documents ]</code></pre>
@@ -816,30 +816,30 @@ $ warning          &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N
 <span id="cb5-6"><a href="#cb5-6"></a>tkn</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Tokens consisting of 941 documents and 22 docvars.
-6813800162259897344 :
+c158c50de9203a700525c2273c722f55 :
  [1] "fyp"          "love"         "dating"       "romance"      "relationship"
  [6] "crush"        "people"       "population"   "world"        "math"        
 [11] "stats"        "statistics"  
 
-6832736698938576896 :
+5794a6967c21834c4808d8ad0bc13e05 :
 [1] "fyp"              "blacklivesmatter" "tiktokpartner"    "learnontiktok"   
 [5] "police"           "facts"            "fact"             "statistics"      
 [9] "usa"             
 
-6845368010048408576 :
+abb283c2d6d427232ad29eb35ebf944e :
 [1] "skittles"   "statistics" "education"  "fyp"        "foryou"    
 
-6927121729257098240 :
+97b1104022105b411a2f9c54ce5740f7 :
  [1] "hotguy"            "itwasntme"         "turbotaxlivepick6"
  [4] "doritosflatlife"   "foryou"            "wap"              
  [7] "statistics"        "fyp"               "foryoupage"       
 [10] "wap"              
 
-7052705912317840384 :
+01f2b8936aea8ccc94ac1c8c3a1e7970 :
 [1] "timotheechalamet" "fyp"              "foryou"           "timothee"        
 [5] "peach"            "callmebyyourname" "statistics"      
 
-6909087873081905152 :
+c25da2e0796117dcedb418291a8bdd10 :
 [1] "stitch"      "statistics"  "staticstics" "fyp"         "foryoupage" 
 [6] "trending"   
 
@@ -854,24 +854,24 @@ $ warning          &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>dfm <span class="ot">&lt;-</span> tkn <span class="sc">%&gt;%</span>  <span class="fu">dfm</span>()</span>
 <span id="cb7-2"><a href="#cb7-2"></a>dfm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Document-feature matrix of: 941 documents, 2,941 features (99.71% sparse) and 22 docvars.
-                     features
-docs                  fyp love dating romance relationship crush people
-  6813800162259897344   1    1      1       1            1     1      1
-  6832736698938576896   1    0      0       0            0     0      0
-  6845368010048408576   1    0      0       0            0     0      0
-  6927121729257098240   1    0      0       0            0     0      0
-  7052705912317840384   1    0      0       0            0     0      0
-  6909087873081905152   1    0      0       0            0     0      0
-                     features
-docs                  population world math
-  6813800162259897344          1     1    1
-  6832736698938576896          0     0    0
-  6845368010048408576          0     0    0
-  6927121729257098240          0     0    0
-  7052705912317840384          0     0    0
-  6909087873081905152          0     0    0
-[ reached max_ndoc ... 935 more documents, reached max_nfeat ... 2,931 more features ]</code></pre>
+<pre><code>Document-feature matrix of: 941 documents, 2,940 features (99.71% sparse) and 22 docvars.
+                                  features
+docs                               fyp love dating romance relationship crush
+  c158c50de9203a700525c2273c722f55   1    1      1       1            1     1
+  5794a6967c21834c4808d8ad0bc13e05   1    0      0       0            0     0
+  abb283c2d6d427232ad29eb35ebf944e   1    0      0       0            0     0
+  97b1104022105b411a2f9c54ce5740f7   1    0      0       0            0     0
+  01f2b8936aea8ccc94ac1c8c3a1e7970   1    0      0       0            0     0
+  c25da2e0796117dcedb418291a8bdd10   1    0      0       0            0     0
+                                  features
+docs                               people population world math
+  c158c50de9203a700525c2273c722f55      1          1     1    1
+  5794a6967c21834c4808d8ad0bc13e05      0          0     0    0
+  abb283c2d6d427232ad29eb35ebf944e      0          0     0    0
+  97b1104022105b411a2f9c54ce5740f7      0          0     0    0
+  01f2b8936aea8ccc94ac1c8c3a1e7970      0          0     0    0
+  c25da2e0796117dcedb418291a8bdd10      0          0     0    0
+[ reached max_ndoc ... 935 more documents, reached max_nfeat ... 2,930 more features ]</code></pre>
 </div>
 </div>
 </section>
@@ -886,13 +886,13 @@ docs                  population world math
 
 </div>
 <img data-src="index_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section></section>
-<section id="time-for-questions" class="title-slide slide level1 center" data-background-image="../../../img/background_questions.png">
+<section id="time-for-questions" class="title-slide slide level1 center" data-background-color="#E6002E" data-background-image="../../00-images/background_questions.svg">
 <h1>Time for questions</h1>
 
 </section>
 
 <section>
-<section id="bis-zur-nächsten-sitzung" class="title-slide slide level1 unlisted center" data-background-image="../../../img/background_end_of_session.png">
+<section id="bis-zur-nächsten-sitzung" class="title-slide slide level1 center" data-background-color="#E6002E" data-background-image="../../00-images/background_end_of_session.svg">
 <h1>Bis zur nächsten Sitzung!</h1>
 
 </section>

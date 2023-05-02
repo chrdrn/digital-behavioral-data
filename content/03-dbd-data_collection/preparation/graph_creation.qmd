@@ -9,10 +9,9 @@ editor: visual
 
 ```{r}
 #| message: false
-
-library(tidyverse)
-library(svgtools)
-library(here)
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(
+  here, svgtools, tidyverse)
 ```
 
 # Graphics

@@ -164,6 +164,10 @@ library(sjPlot)
 library(lubridate)
 library(ggthemes)
 library(ggpubr)
+library(digest)
+
+# Custom function
+v_digest <- Vectorize(digest::digest)
 
 # get data from github
 musk <- read_csv(
@@ -171,6 +175,15 @@ musk <- read_csv(
 
 musk_entities <- read_csv(
   here("content/06-api_access-reddit/data.local/4cat-reddit_news-musk-named_entities.csv"))
+
+# Anonymization of potentially sensitive information
+musk_hash <- musk %>% 
+  mutate(
+     across(c(
+       thread_id:id,
+       body, author:post_flair,
+       parent), 
+       ~ v_digest(.)))
 
 ```
 
@@ -267,7 +280,7 @@ Zwei (einfache) Szenarien:
 #### Kurzer Überblick über die eingelesenen Datensätze
 
 ```{r}
-musk %>% glimpse()
+musk_hash %>% glimpse()
 musk_entities %>% glimpse()
 ```
 

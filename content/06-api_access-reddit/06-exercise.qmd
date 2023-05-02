@@ -24,11 +24,13 @@ csl: ../apa.csl
 # Load packages
 pacman::p_load(
   pacman,
+  digest
   here, osfr, fs, 
   tidyverse)
 
 # Get custom functions
 source(here("functions/osf_dependencies.R"))
+
 
 # Get custom paths
 dirs <- osf_dependencies("06-api_access-reddit")
@@ -45,12 +47,8 @@ osf_download(
 ::: callout-tip
 Open this showcase in other interactive and executable environments:
 
-[![Binder RStudio](/img/badge-binder_rstudio.svg)](https://mybinder.org/v2/gh/chrdrn/digital-behavioral-data-binder/HEAD?urlpath=rstudio)
-[![Binder Jupyter](/img/badge-binder_jupyter.svg){alt="Binder"}](https://mybinder.org/v2/gh/chrdrn/digital-behavioral-data-binder/HEAD)
-[![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chrdrn/digital-behavioral-data-binder/blob/main/session_06-showcase_reddit.ipynb) 
-
+[![Binder RStudio](/img/badge-binder_rstudio.svg)](https://mybinder.org/v2/gh/chrdrn/digital-behavioral-data-binder/HEAD?urlpath=rstudio) [![Binder Jupyter](/img/badge-binder_jupyter.svg){alt="Binder"}](https://mybinder.org/v2/gh/chrdrn/digital-behavioral-data-binder/HEAD) [![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chrdrn/digital-behavioral-data-binder/blob/main/session_06-showcase_reddit.ipynb)
 :::
-
 
 ## Background
 
@@ -122,8 +120,10 @@ A detailed description about the collection of the data (in the form of a concre
 #| echo: false
 
 pacman::p_load(
-  here, 
+  here, digest,
   tidyverse)
+
+v_digest <- Vectorize(digest::digest)
 ```
 
 ### Load data into local environment
@@ -140,8 +140,17 @@ musk <- read_csv(
 musk_entities <- read_csv(
   here("content/06-api_access-reddit/data.local/4cat-reddit_news-musk-named_entities.csv"))
 
+# Anonymization of potentially sensitive information
+musk_hash <- musk %>% 
+  mutate(
+     across(c(
+       thread_id:id,
+       body, author:post_flair,
+       parent), 
+       ~ v_digest(.)))
+
 # quick preview
-musk %>% glimpse()
+musk_hash %>% glimpse()
 musk_entities %>% glimpse()
 ```
 

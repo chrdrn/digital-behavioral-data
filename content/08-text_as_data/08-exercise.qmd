@@ -52,7 +52,7 @@ pacman::p_load(
   RCurl, XML, rvest, # scraping
   quanteda, quanteda.textplots, quanteda.textstats, fastText, # text processing
   stm, tidytext, glue,
-  tictoc,
+  tictoc, digest,
   tidyverse  # last to resolve masking issues
 )
 # load data
@@ -861,7 +861,6 @@ print_output_abstracts <- function(x) {
            ***************************************************
            
            ID: {output[[i]]$data$id[[j]]} \n
-           Date: {output[[i]]$data$date[[j]]} \n
            Title: {output[[i]]$data$review_title[[j]]} \n
            Gamma: {round(output[[i]]$data$gamma[[j]],3)} \n
            Review: \r

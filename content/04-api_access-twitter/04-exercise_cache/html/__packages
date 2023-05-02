@@ -17,3 +17,4 @@ quanteda.textstats
 quanteda.textplots
 ggthemes
 ggpubr
+digest

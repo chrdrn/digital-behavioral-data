@@ -35,7 +35,7 @@ bibliography: references.bib
 
 1.  [A short introduction]
 2.  [Case Study: Amazon Reviews](#sec2)
-3.  \[☕ Kursevluation\]
+3.  [☕ Kursevluation\]
 4.  [Text processing]
 5.  [Sentiment Analyse]
 6.  [Topic Modeling]

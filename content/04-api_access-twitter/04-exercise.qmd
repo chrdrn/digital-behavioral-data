@@ -27,11 +27,13 @@ csl: ../apa.csl
 # Load packages
 pacman::p_load(
   pacman,
+  digest,
   here, osfr, fs, 
   tidyverse)
 
 # Get custom functions
 source(here("functions/osf_dependencies.R"))
+v_digest <- Vectorize(digest::digest)
 
 # Get custom paths
 dirs <- osf_dependencies("04-api_access-twitter")
@@ -57,10 +59,7 @@ map(zipfiles, unzip, exdir = dirs$local_data_path)
 ::: callout-tip
 Open this showcase in other interactive and executable environments:
 
-[![Binder RStudio](/img/badge-binder_rstudio.svg)](https://mybinder.org/v2/gh/chrdrn/digital-behavioral-data-binder/HEAD?urlpath=rstudio)
-[![Binder Jupyter](/img/badge-binder_jupyter.svg){alt="Binder"}](https://mybinder.org/v2/gh/chrdrn/digital-behavioral-data-binder/HEAD)
-[![Google Colab](https://colab.research.google.com/assets/colab-badge.svg){alt="Google Colab"}](https://colab.research.google.com/github/chrdrn/digital-behavioral-data-binder/blob/main/session_04-showcase_twitter.ipynb)
-
+[![Binder RStudio](/img/badge-binder_rstudio.svg)](https://mybinder.org/v2/gh/chrdrn/digital-behavioral-data-binder/HEAD?urlpath=rstudio) [![Binder Jupyter](/img/badge-binder_jupyter.svg){alt="Binder"}](https://mybinder.org/v2/gh/chrdrn/digital-behavioral-data-binder/HEAD) [![Google Colab](https://colab.research.google.com/assets/colab-badge.svg){alt="Google Colab"}](https://colab.research.google.com/github/chrdrn/digital-behavioral-data-binder/blob/main/session_04-showcase_twitter.ipynb)
 :::
 
 ## Background
@@ -96,6 +95,12 @@ library(quanteda.textstats) # Text statistics
 library(quanteda.textplots) # Visualisation of text data
 library(ggthemes) # Custom ggplot themes
 library(ggpubr) # Convenience functions for 'ggplot2'-plots
+```
+
+```{r}
+#| echo: false
+library(digest)
+v_digest <- Vectorize(digest::digest)
 ```
 
 ## Set personal bearer token
@@ -135,7 +140,17 @@ tweets_karneval <- bind_tweets(
     min  = minute(datetime),
     hms  = hms::as_hms(datetime),
     hm   = hms::parse_hm(hms)
-  )
+  ) 
+
+# Anonymization of potentially sensitive information
+tweets_karneval_hash <- tweets_karneval %>% 
+  mutate(
+     across(c(
+       tweet_id:text,
+       author_id, conversation_id, in_reply_to_user_id,
+       starts_with("user_"),
+       starts_with("sourcetweet_")), 
+       ~ v_digest(.)))
 ```
 
 ### Data analysis
@@ -143,7 +158,8 @@ tweets_karneval <- bind_tweets(
 #### Overview of dataset
 
 ```{r hashtag analysis overview}
-tweets_karneval %>% glimpse
+tweets_karneval_hash %>% 
+       glimpse()
 ```
 
 #### Language of tweets
@@ -174,7 +190,7 @@ tweets_karneval %>%
 #### User with the most tweets
 
 ```{r hashtag analysis frequent users}
-tweets_karneval %>% 
+tweets_karneval_hash %>% 
   frq(user_username,
       sort.frq = "desc", 
       min.frq = 5)

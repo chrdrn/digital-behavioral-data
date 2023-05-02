@@ -138,6 +138,10 @@ library(sjmisc)
 library(lubridate)
 library(ggthemes)
 library(ggpubr)
+library(digest)
+
+# Custom function:
+v_digest <- Vectorize(digest::digest)
 
 # Load data 
 tweets_karneval <- bind_tweets(
@@ -152,6 +156,16 @@ tweets_karneval <- bind_tweets(
     hms  = hms::as_hms(datetime),
     hm   = hms::parse_hm(hms)
   )
+
+# Anonymization of potentially sensitive information
+tweets_karneval_hash <- tweets_karneval %>% 
+  mutate(
+     across(c(
+       tweet_id:text,
+       author_id, conversation_id, in_reply_to_user_id,
+       starts_with("user_"),
+       starts_with("sourcetweet_")), 
+       ~ v_digest(.)))
 ```
 
 ## Setup und Datensammlung mit R
@@ -193,7 +207,7 @@ get_all_tweets(
 #### `#Karneval` im Fokus: Datenübersicht
 
 ```{r}
-tweets_karneval %>% glimpse()
+tweets_karneval_hash %>% glimpse()
 ```
 
 ## Deutsch, Hashtags, Englisch ...

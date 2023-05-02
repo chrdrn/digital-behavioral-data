@@ -133,7 +133,7 @@ Seminarplan, Themen, Prüfungsleistungen
 ## Seminarplan {.smaller}
 
 | Sitzung             | Datum                        | Thema                                          | Referent\*Innen                                    |
-|----------------|----------------|--------------------|----------------------|
+|---------------------|------------------------------|------------------------------------------------|----------------------------------------------------|
 | [**1**]{.smallcaps} | [**26.10.2022**]{.smallcaps} | [**Kick-Off Session**]{.smallcaps}             | Christoph Adrian                                   |
 | 2                   | 02.11.2022                   | DBD: Einführung und Überblick                  | Christoph Adrian                                   |
 | 3                   | 09.11.2022                   | DBD: Datenerhebung                             | Christoph Adrian                                   |

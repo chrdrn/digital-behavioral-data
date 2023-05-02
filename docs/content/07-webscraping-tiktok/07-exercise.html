@@ -476,7 +476,10 @@ Tip
 </ul>
 <section id="data-import-from-fa-brands-github" class="level3">
 <h3 class="anchored" data-anchor-id="data-import-from-fa-brands-github">Data import from <i class="fa-brands fa-github" aria-label="github"></i></h3>
-<div class="cell" data-hash="07-exercise_cache/html/unnamed-chunk-1_13992719c60b03729bc032066b232de7">
+<div class="cell" data-hash="07-exercise_cache/html/unnamed-chunk-1_a277315b98fd764217406c7be1da4cd2">
+
+</div>
+<div class="cell" data-hash="07-exercise_cache/html/unnamed-chunk-2_9b258d31cc26a8a9040bdff204da24f3">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load packages</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
@@ -486,27 +489,35 @@ Tip
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">here</span>(<span class="st">"content/07-webscraping-tiktok/data.local/tiktok-search-statistics.csv"</span>), </span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">col_types =</span> <span class="fu">cols</span>(<span class="at">author_followers =</span> <span class="fu">col_number</span>()))</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># quick preview</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>statistics <span class="sc">%&gt;%</span> <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Anonymization of potentially sensitive information</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>statistics_hash <span class="ot">&lt;-</span> statistics <span class="sc">%&gt;%</span> </span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>     <span class="fu">across</span>(<span class="fu">c</span>(</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>       id<span class="sc">:</span>body,</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>       video_url<span class="sc">:</span>thumbnail_url), </span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>       <span class="sc">~</span> <span class="fu">v_digest</span>(.)))</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co"># quick preview</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>statistics_hash <span class="sc">%&gt;%</span> <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 941
 Columns: 24
-$ id               &lt;dbl&gt; 6.813800e+18, 6.832737e+18, 6.845368e+18, 6.927122e+1…
-$ thread_id        &lt;dbl&gt; 6.813800e+18, 6.832737e+18, 6.845368e+18, 6.927122e+1…
-$ author           &lt;chr&gt; "onlyjayus", "onlyjayus", "ryguy238", "mason.whaley",…
-$ author_full      &lt;chr&gt; "actuallyitsbella", "actuallyitsbella", "ryan p", "Ma…
-$ author_id        &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N…
-$ author_followers &lt;dbl&gt; 18500000, 18500000, 28500, 151500, 15700, 319500, 693…
-$ body             &lt;chr&gt; "You’re sexy. The math proves it #fyp #love #dating #…
+$ id               &lt;chr&gt; "c158c50de9203a700525c2273c722f55", "5794a6967c21834c…
+$ thread_id        &lt;chr&gt; "c158c50de9203a700525c2273c722f55", "5794a6967c21834c…
+$ author           &lt;chr&gt; "1e25edc01a1eff924105786baa35cb88", "1e25edc01a1eff92…
+$ author_full      &lt;chr&gt; "867f5f0cf9b63e68eebb58854d8f779d", "867f5f0cf9b63e68…
+$ author_id        &lt;chr&gt; "1b94ef47779439aedbf89a519ccb0ac3", "1b94ef47779439ae…
+$ author_followers &lt;chr&gt; "34f5624a9f54d961f205fa9ccf2c2816", "34f5624a9f54d961…
+$ body             &lt;chr&gt; "565707abc618ca27d9f5c9bd718488f0", "63cdbef44fbf560a…
 $ timestamp        &lt;dttm&gt; 2020-04-09 19:44:39, 2020-05-30 20:28:05, 2020-07-03…
 $ unix_timestamp   &lt;dbl&gt; 1586461479, 1590870485, 1593811442, 1612846242, 16420…
 $ is_duet          &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALS…
 $ music_name       &lt;chr&gt; "SexyBack", "original sound", "original sound", "orig…
 $ music_id         &lt;dbl&gt; 6.696418e+18, 6.832737e+18, 6.845368e+18, 6.927122e+1…
 $ music_url        &lt;chr&gt; "https://sf16-ies-music-va.tiktokcdn.com/obj/tos-usea…
-$ video_url        &lt;chr&gt; "https://v16-webapp.tiktok.com/eac3d9cb4566d4ac017e3f…
-$ tiktok_url       &lt;chr&gt; "https://tiktok.com/@onlyjayus/video/6813800162259897…
-$ thumbnail_url    &lt;chr&gt; "https://p16-sign-va.tiktokcdn.com/tos-maliva-p-0068/…
+$ video_url        &lt;chr&gt; "1504eb84f490bc0b7a7245feb5b2e58f", "79c191b9dcea9193…
+$ tiktok_url       &lt;chr&gt; "6aaa20d1f42837af425dd2656b2d87a7", "d53c488f26b5db40…
+$ thumbnail_url    &lt;chr&gt; "dd1e26c4dd3b8a8f2d8fa595e7f7af7e", "b99c1df931f7ff61…
 $ likes            &lt;dbl&gt; 1200000, 910000, 901000, 794300, 740300, 701400, 6490…
 $ comments         &lt;dbl&gt; 7746, 11900, 3020, 36900, 8179, 8150, 34800, 7592, 28…
 $ shares           &lt;dbl&gt; 23000, 16600, 1755, 64000, 6397, 1685, 93800, 51300, …
@@ -535,7 +546,7 @@ Tip
 </div>
 <section id="periode-in-which-the-tiktoks-were-posted" class="level4">
 <h4 class="anchored" data-anchor-id="periode-in-which-the-tiktoks-were-posted">Periode in which the TikToks were posted</h4>
-<div class="cell" data-hash="07-exercise_cache/html/unnamed-chunk-2_7c8f6604d7104346a1529cde928e33d6">
+<div class="cell" data-hash="07-exercise_cache/html/unnamed-chunk-3_9702b9f5d0d9ccaf7676020cb9bf4a73">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load packages</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sjPlot)</span>
@@ -547,13 +558,13 @@ Tip
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot_frq</span>(date) <span class="sc">+</span></span>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_pubr</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="07-exercise_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="1536"></p>
+<p><img src="07-exercise_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="1536"></p>
 </div>
 </div>
 </section>
 <section id="location-parameters-of-different-statistics" class="level4">
 <h4 class="anchored" data-anchor-id="location-parameters-of-different-statistics">Location parameters of different statistics</h4>
-<div class="cell" data-hash="07-exercise_cache/html/unnamed-chunk-3_5196be77c2c98b75e9ed5b66e47f05d4">
+<div class="cell" data-hash="07-exercise_cache/html/unnamed-chunk-4_58d65a78297e07d88cefdb3cd56cb972">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sjmisc)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>statistics <span class="sc">%&gt;%</span> </span>
@@ -578,17 +589,17 @@ Tip
 </section>
 <section id="distribution-of-likes" class="level4">
 <h4 class="anchored" data-anchor-id="distribution-of-likes">Distribution of likes</h4>
-<div class="cell" data-hash="07-exercise_cache/html/unnamed-chunk-4_8328deece944dff3a3521eab2f10789b">
+<div class="cell" data-hash="07-exercise_cache/html/unnamed-chunk-5_57d5679d5906071a9ea715a5adf2df38">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>statistics <span class="sc">%&gt;%</span> </span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot_frq</span>(likes, <span class="at">type =</span> <span class="st">"density"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="07-exercise_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+<p><img src="07-exercise_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section>
 <section id="warning-messages-displayed" class="level4">
 <h4 class="anchored" data-anchor-id="warning-messages-displayed">Warning messages displayed</h4>
-<div class="cell" data-hash="07-exercise_cache/html/unnamed-chunk-5_6bcc64ebcbc0aa87617952fb2bea9971">
+<div class="cell" data-hash="07-exercise_cache/html/unnamed-chunk-6_670a82843b8251034ddb1632150c3431">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>statistics <span class="sc">%&gt;%</span> </span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">frq</span>(warning)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -609,13 +620,13 @@ The actions in this video are performed by professionals or supervised by profes
 <h3 class="anchored" data-anchor-id="text-analysis">Text analysis</h3>
 <section id="corpus-creation" class="level4">
 <h4 class="anchored" data-anchor-id="corpus-creation">Corpus creation</h4>
-<div class="cell" data-hash="07-exercise_cache/html/unnamed-chunk-6_5c8e795451d0913dcc7f4fac00a9ce5a">
+<div class="cell" data-hash="07-exercise_cache/html/unnamed-chunk-7_f7aadf2a2035e241ecf52bff5a2d261a">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load packages</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(quanteda)</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create corpus based on variable hashtags</span></span>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>crp <span class="ot">&lt;-</span> <span class="fu">corpus</span>(</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  statistics, </span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  statistics_hash, </span>
 <span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">docid_field =</span> <span class="st">"id"</span>,</span>
 <span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">text_field =</span> <span class="st">"hashtags"</span>)</span>
 <span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
@@ -623,22 +634,22 @@ The actions in this video are performed by professionals or supervised by profes
 <span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>crp </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Corpus consisting of 941 documents and 22 docvars.
-6813800162259897344 :
+c158c50de9203a700525c2273c722f55 :
 "fyp,love,dating,romance,relationship,crush,people,population..."
 
-6832736698938576896 :
+5794a6967c21834c4808d8ad0bc13e05 :
 "fyp,blacklivesmatter,tiktokpartner,learnontiktok,police,fact..."
 
-6845368010048408576 :
+abb283c2d6d427232ad29eb35ebf944e :
 "skittles,statistics,education,fyp,foryou"
 
-6927121729257098240 :
+97b1104022105b411a2f9c54ce5740f7 :
 "hotguy,itwasntme,turbotaxlivepick6,doritosflatlife,foryou,wa..."
 
-7052705912317840384 :
+01f2b8936aea8ccc94ac1c8c3a1e7970 :
 "timotheechalamet,fyp,foryou,timothee,peach,callmebyyourname,..."
 
-6909087873081905152 :
+c25da2e0796117dcedb418291a8bdd10 :
 "stitch,statistics,staticstics,fyp,foryoupage,trending"
 
 [ reached max_ndoc ... 935 more documents ]</code></pre>
@@ -647,7 +658,7 @@ The actions in this video are performed by professionals or supervised by profes
 </section>
 <section id="tokenization" class="level4">
 <h4 class="anchored" data-anchor-id="tokenization">Tokenization</h4>
-<div class="cell" data-hash="07-exercise_cache/html/unnamed-chunk-7_f33cf8ae27a067ed929c9ad6a6caf916">
+<div class="cell" data-hash="07-exercise_cache/html/unnamed-chunk-8_23d0f535608120f8842c21a9e5f8d2e9">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create tokens based on corpus</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>tkn <span class="ot">&lt;-</span> crp <span class="sc">%&gt;%</span> </span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tokens</span>(</span>
@@ -660,30 +671,30 @@ The actions in this video are performed by professionals or supervised by profes
 <span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>tkn</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Tokens consisting of 941 documents and 22 docvars.
-6813800162259897344 :
+c158c50de9203a700525c2273c722f55 :
  [1] "fyp"          "love"         "dating"       "romance"      "relationship"
  [6] "crush"        "people"       "population"   "world"        "math"        
 [11] "stats"        "statistics"  
 
-6832736698938576896 :
+5794a6967c21834c4808d8ad0bc13e05 :
 [1] "fyp"              "blacklivesmatter" "tiktokpartner"    "learnontiktok"   
 [5] "police"           "facts"            "fact"             "statistics"      
 [9] "usa"             
 
-6845368010048408576 :
+abb283c2d6d427232ad29eb35ebf944e :
 [1] "skittles"   "statistics" "education"  "fyp"        "foryou"    
 
-6927121729257098240 :
+97b1104022105b411a2f9c54ce5740f7 :
  [1] "hotguy"            "itwasntme"         "turbotaxlivepick6"
  [4] "doritosflatlife"   "foryou"            "wap"              
  [7] "statistics"        "fyp"               "foryoupage"       
 [10] "wap"              
 
-7052705912317840384 :
+01f2b8936aea8ccc94ac1c8c3a1e7970 :
 [1] "timotheechalamet" "fyp"              "foryou"           "timothee"        
 [5] "peach"            "callmebyyourname" "statistics"      
 
-6909087873081905152 :
+c25da2e0796117dcedb418291a8bdd10 :
 [1] "stitch"      "statistics"  "staticstics" "fyp"         "foryoupage" 
 [6] "trending"   
 
@@ -693,7 +704,7 @@ The actions in this video are performed by professionals or supervised by profes
 </section>
 <section id="create-document-feature-matrix-dfm" class="level4">
 <h4 class="anchored" data-anchor-id="create-document-feature-matrix-dfm">Create Document-Feature-Matrix (DFM)</h4>
-<div class="cell" data-hash="07-exercise_cache/html/unnamed-chunk-8_00ba7ba816b4b4ad980854581d936778">
+<div class="cell" data-hash="07-exercise_cache/html/unnamed-chunk-9_209367455b46b3cdf51400eddba06bc8">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create dfm based on tokens</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>dfm <span class="ot">&lt;-</span> tkn <span class="sc">%&gt;%</span> </span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">dfm</span>()</span>
@@ -701,30 +712,30 @@ The actions in this video are performed by professionals or supervised by profes
 <span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Display</span></span>
 <span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>dfm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Document-feature matrix of: 941 documents, 2,941 features (99.71% sparse) and 22 docvars.
-                     features
-docs                  fyp love dating romance relationship crush people
-  6813800162259897344   1    1      1       1            1     1      1
-  6832736698938576896   1    0      0       0            0     0      0
-  6845368010048408576   1    0      0       0            0     0      0
-  6927121729257098240   1    0      0       0            0     0      0
-  7052705912317840384   1    0      0       0            0     0      0
-  6909087873081905152   1    0      0       0            0     0      0
-                     features
-docs                  population world math
-  6813800162259897344          1     1    1
-  6832736698938576896          0     0    0
-  6845368010048408576          0     0    0
-  6927121729257098240          0     0    0
-  7052705912317840384          0     0    0
-  6909087873081905152          0     0    0
-[ reached max_ndoc ... 935 more documents, reached max_nfeat ... 2,931 more features ]</code></pre>
+<pre><code>Document-feature matrix of: 941 documents, 2,940 features (99.71% sparse) and 22 docvars.
+                                  features
+docs                               fyp love dating romance relationship crush
+  c158c50de9203a700525c2273c722f55   1    1      1       1            1     1
+  5794a6967c21834c4808d8ad0bc13e05   1    0      0       0            0     0
+  abb283c2d6d427232ad29eb35ebf944e   1    0      0       0            0     0
+  97b1104022105b411a2f9c54ce5740f7   1    0      0       0            0     0
+  01f2b8936aea8ccc94ac1c8c3a1e7970   1    0      0       0            0     0
+  c25da2e0796117dcedb418291a8bdd10   1    0      0       0            0     0
+                                  features
+docs                               people population world math
+  c158c50de9203a700525c2273c722f55      1          1     1    1
+  5794a6967c21834c4808d8ad0bc13e05      0          0     0    0
+  abb283c2d6d427232ad29eb35ebf944e      0          0     0    0
+  97b1104022105b411a2f9c54ce5740f7      0          0     0    0
+  01f2b8936aea8ccc94ac1c8c3a1e7970      0          0     0    0
+  c25da2e0796117dcedb418291a8bdd10      0          0     0    0
+[ reached max_ndoc ... 935 more documents, reached max_nfeat ... 2,930 more features ]</code></pre>
 </div>
 </div>
 </section>
 <section id="wordcloud" class="level4">
 <h4 class="anchored" data-anchor-id="wordcloud">Wordcloud</h4>
-<div class="cell" data-hash="07-exercise_cache/html/unnamed-chunk-9_41629240e1c81dc052c4c1599efcd0ad">
+<div class="cell" data-hash="07-exercise_cache/html/unnamed-chunk-10_38bd5eaab2a10fced29f1c38776efe79">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(quanteda.textplots)</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>dfm <span class="sc">%&gt;%</span> </span>
@@ -735,12 +746,12 @@ docs                  population world math
 <span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">rotation =</span> <span class="dv">0</span></span>
 <span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="07-exercise_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid" width="672"></p>
+<p><img src="07-exercise_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <section id="without-the-searchterm-statistics" class="level5">
 <h5 class="anchored" data-anchor-id="without-the-searchterm-statistics">without the searchterm <code>statistics</code></h5>
-<div class="cell" data-hash="07-exercise_cache/html/unnamed-chunk-10_e54c5b3e950f6f81249710a8be967d43">
+<div class="cell" data-hash="07-exercise_cache/html/unnamed-chunk-11_791447f9cd0f9a5bfde9178100275817">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>dfm <span class="sc">%&gt;%</span> </span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">dfm_remove</span>(<span class="at">pattern =</span> <span class="st">"statistics"</span>) <span class="sc">%&gt;%</span> </span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">textplot_wordcloud</span>(</span>
@@ -751,7 +762,7 @@ docs                  population world math
 <span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"dodgerblue3"</span></span>
 <span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="07-exercise_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid" width="672"></p>
+<p><img src="07-exercise_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 

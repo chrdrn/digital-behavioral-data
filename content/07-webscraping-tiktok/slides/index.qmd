@@ -190,12 +190,23 @@ library(sjPlot)
 library(lubridate)
 library(ggthemes)
 library(ggpubr)
+library(digest)
 
-# get data from github
+# Custom function
+v_digest <- Vectorize(digest::digest)
+
+# get data from local
 statistics <- read_csv(
   here("content/07-webscraping-tiktok/data.local/tiktok-search-statistics.csv"), 
   col_types = cols(author_followers = col_number()))
 
+# Anonymization of potentially sensitive information
+statistics_hash <- statistics %>% 
+  mutate(
+     across(c(
+       id:body,
+       video_url:thumbnail_url), 
+       ~ v_digest(.)))
 ```
 
 ## Ein kurzer Überblick
@@ -203,7 +214,7 @@ statistics <- read_csv(
 #### Struktur des {{< fa brands tiktok >}} TikTok-Datensatzes
 
 ```{r}
-statistics %>% glimpse()
+statistics_hash %>% glimpse()
 ```
 
 ## Erstellung eines Korpus
@@ -211,7 +222,7 @@ statistics %>% glimpse()
 #### Textverarbeitung mit [`quanteda`](http://quanteda.io/) [@benoit2018]
 
 ```{r}
-crp <- corpus(statistics, 
+crp <- corpus(statistics_hash, 
               docid_field = "id",
               text_field = "hashtags")
 crp
@@ -250,9 +261,9 @@ dfm %>% textplot_wordcloud(
   rotation = 0)
 ```
 
-# Time for questions {background-image="../../../img/background_questions.png"}
+# Time for questions {background-color="#E6002E" background-image="../../00-images/background_questions.svg"}
 
-# Bis zur nächsten Sitzung! {.unlisted background-image="../../../img/background_end_of_session.png"}
+# Bis zur nächsten Sitzung! {background-color="#E6002E" background-image="../../00-images/background_end_of_session.svg"}
 
 ## Literatur
 

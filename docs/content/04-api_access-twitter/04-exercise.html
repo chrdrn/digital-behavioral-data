@@ -496,7 +496,7 @@ div.csl-indent {
 
 </header>
 
-<div class="cell" data-hash="04-exercise_cache/html/Setup local OSF environment_4bdcdb821ae158e268adff4cb307083a">
+<div class="cell" data-hash="04-exercise_cache/html/Setup local OSF environment_0c7ff64b16e552be4ad978b42070eac9">
 
 </div>
 <div class="callout-tip callout callout-style-simple">
@@ -525,7 +525,7 @@ Disclaimer
 </div>
 <div class="callout-body-container callout-body">
 <p>This session was created before Twitter announced changes to its API access:</p>
-<p></p><div id="tweet-33419"></div><script>tweet={"url":"https:\/\/twitter.com\/TwitterDev\/status\/1621026986784337922","author_name":"Twitter Dev","author_url":"https:\/\/twitter.com\/TwitterDev","html":"\u003Cblockquote class=\"twitter-tweet\" align=\"center\"\u003E\u003Cp lang=\"en\" dir=\"ltr\"\u003EStarting February 9, we will no longer support free access to the Twitter API, both v2 and v1.1. A paid basic tier will be available instead \uD83E\uDDF5\u003C\/p\u003E&mdash; Twitter Dev (@TwitterDev) \u003Ca href=\"https:\/\/twitter.com\/TwitterDev\/status\/1621026986784337922?ref_src=twsrc%5Etfw\"\u003EFebruary 2, 2023\u003C\/a\u003E\u003C\/blockquote\u003E\n\u003Cscript async src=\"https:\/\/platform.twitter.com\/widgets.js\" charset=\"utf-8\"\u003E\u003C\/script\u003E\n","width":550,"height":null,"type":"rich","cache_age":"3153600000","provider_name":"Twitter","provider_url":"https:\/\/twitter.com","version":"1.0"};document.getElementById("tweet-33419").innerHTML = tweet["html"];</script><p></p>
+<p></p><div id="tweet-53002"></div><script>tweet={"url":"https:\/\/twitter.com\/TwitterDev\/status\/1621026986784337922","author_name":"Twitter Dev","author_url":"https:\/\/twitter.com\/TwitterDev","html":"\u003Cblockquote class=\"twitter-tweet\" align=\"center\"\u003E\u003Cp lang=\"en\" dir=\"ltr\"\u003EStarting February 9, we will no longer support free access to the Twitter API, both v2 and v1.1. A paid basic tier will be available instead \uD83E\uDDF5\u003C\/p\u003E&mdash; Twitter Dev (@TwitterDev) \u003Ca href=\"https:\/\/twitter.com\/TwitterDev\/status\/1621026986784337922?ref_src=twsrc%5Etfw\"\u003EFebruary 2, 2023\u003C\/a\u003E\u003C\/blockquote\u003E\n\u003Cscript async src=\"https:\/\/platform.twitter.com\/widgets.js\" charset=\"utf-8\"\u003E\u003C\/script\u003E\n","width":550,"height":null,"type":"rich","cache_age":"3153600000","provider_name":"Twitter","provider_url":"https:\/\/twitter.com","version":"1.0"};document.getElementById("tweet-53002").innerHTML = tweet["html"];</script><p></p>
 <p>As things stand (28.02.2023), there will no longer be free academic research.</p>
 </div>
 </div>
@@ -546,6 +546,9 @@ Disclaimer
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(quanteda.textplots) <span class="co"># Visualisation of text data</span></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggthemes) <span class="co"># Custom ggplot themes</span></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggpubr) <span class="co"># Convenience functions for 'ggplot2'-plots</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-hash="04-exercise_cache/html/unnamed-chunk-1_4c719782d293f3e4e1f94bde49c1f710">
+
 </div>
 </section>
 </section>
@@ -572,7 +575,7 @@ Disclaimer
 </div>
 <section id="read-data-from-disc" class="level4">
 <h4 class="anchored" data-anchor-id="read-data-from-disc">Read data from disc</h4>
-<div class="cell" data-hash="04-exercise_cache/html/read tweets hashtag_7b426e9f6117d363a18f15b8fe2a2878">
+<div class="cell" data-hash="04-exercise_cache/html/read tweets hashtag_1db2d216242cd2da193020d8cc33a317">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>tweets_karneval <span class="ot">&lt;-</span> <span class="fu">bind_tweets</span>(</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">data_path =</span> <span class="fu">here</span>(<span class="st">"content/04-api_access-twitter/data.local/raw_karneval"</span>),</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">output_format =</span> <span class="st">"tidy"</span>) <span class="sc">%&gt;%</span> </span>
@@ -583,7 +586,17 @@ Disclaimer
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">min  =</span> <span class="fu">minute</span>(datetime),</span>
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">hms  =</span> hms<span class="sc">::</span><span class="fu">as_hms</span>(datetime),</span>
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">hm   =</span> hms<span class="sc">::</span><span class="fu">parse_hm</span>(hms)</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  ) </span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Anonymization of potentially sensitive information</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>tweets_karneval_hash <span class="ot">&lt;-</span> tweets_karneval <span class="sc">%&gt;%</span> </span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>     <span class="fu">across</span>(<span class="fu">c</span>(</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>       tweet_id<span class="sc">:</span>text,</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>       author_id, conversation_id, in_reply_to_user_id,</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>       <span class="fu">starts_with</span>(<span class="st">"user_"</span>),</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>       <span class="fu">starts_with</span>(<span class="st">"sourcetweet_"</span>)), </span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>       <span class="sc">~</span> <span class="fu">v_digest</span>(.)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 </section>
@@ -591,42 +604,43 @@ Disclaimer
 <h3 class="anchored" data-anchor-id="data-analysis">Data analysis</h3>
 <section id="overview-of-dataset" class="level4">
 <h4 class="anchored" data-anchor-id="overview-of-dataset">Overview of dataset</h4>
-<div class="cell" data-hash="04-exercise_cache/html/hashtag analysis overview_2ea6788cc3411184d858e50d22f944ad">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>tweets_karneval <span class="sc">%&gt;%</span> glimpse</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="04-exercise_cache/html/hashtag analysis overview_1018abc33601ecdc1608934d34445bb0">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>tweets_karneval_hash <span class="sc">%&gt;%</span> </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 2,637
 Columns: 37
-$ tweet_id               &lt;chr&gt; "1590981439457464321", "1590981390123892740", "…
-$ user_username          &lt;chr&gt; "truthonearth3", "Auno94", "HaiAriane", "ElCobr…
-$ text                   &lt;chr&gt; "RT @faqyoutoo: Ab heute 11:11 h dürfen wir uns…
+$ tweet_id               &lt;chr&gt; "6748786565d7973caa87d2323915aa88", "54d163369a…
+$ user_username          &lt;chr&gt; "378ed57a6433a1b3b40cb09889737b6c", "b3311d2c36…
+$ text                   &lt;chr&gt; "082080d7671a3e96771128abe2d4d97a", "50a5d056f6…
 $ created_at             &lt;chr&gt; "2022-11-11T08:15:08.000Z", "2022-11-11T08:14:5…
 $ lang                   &lt;chr&gt; "de", "de", "de", "und", "und", "und", "und", "…
 $ possibly_sensitive     &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, TRUE,…
-$ author_id              &lt;chr&gt; "1486309822832287746", "2745840416", "995739344…
+$ author_id              &lt;chr&gt; "53c03c88c563bbe0c846ec72fbb009de", "455d0e5e38…
 $ source                 &lt;chr&gt; "Twitter for Android", "Twitter for Android", "…
-$ conversation_id        &lt;chr&gt; "1590981439457464321", "1590981390123892740", "…
-$ in_reply_to_user_id    &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
-$ user_protected         &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE…
-$ user_description       &lt;chr&gt; "I♥️Trump\nAnd Trump ♥️US.", "Zertifizierter Alma…
-$ user_profile_image_url &lt;chr&gt; "https://pbs.twimg.com/profile_images/158736121…
-$ user_pinned_tweet_id   &lt;chr&gt; "1591132482271080448", "1346065459297267712", N…
-$ user_verified          &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE…
-$ user_name              &lt;chr&gt; "truthonearth", "Auno", "Pirschelbär", "Michael…
-$ user_created_at        &lt;chr&gt; "2022-01-26T12:07:54.000Z", "2014-08-19T17:42:0…
-$ user_location          &lt;chr&gt; NA, "Köln, Deutschland", NA, "Bonn, Germany", N…
-$ user_url               &lt;chr&gt; NA, "https://t.co/lodH0xUg0C", NA, NA, NA, NA, …
+$ conversation_id        &lt;chr&gt; "6748786565d7973caa87d2323915aa88", "54d163369a…
+$ in_reply_to_user_id    &lt;chr&gt; "55611e71b358a30158c61810ad802435", "55611e71b3…
+$ user_protected         &lt;chr&gt; "72f531d1a36ddd6b5cbc433c29147817", "72f531d1a3…
+$ user_description       &lt;chr&gt; "bafdc8d3fd80275db42115ae8e29b4b5", "9a7ef75623…
+$ user_profile_image_url &lt;chr&gt; "f081768e89c22cd6541e544249f8bce0", "3abb25c65c…
+$ user_pinned_tweet_id   &lt;chr&gt; "717229259056b4b0bc0ff08c60026525", "a70a399cbc…
+$ user_verified          &lt;chr&gt; "72f531d1a36ddd6b5cbc433c29147817", "72f531d1a3…
+$ user_name              &lt;chr&gt; "77e487e1cca06b726ed5d9dd402c7e3f", "4f1c874adf…
+$ user_created_at        &lt;chr&gt; "963fa1ac02702aff4beae1184d6dc4e9", "4d26ba5d1b…
+$ user_location          &lt;chr&gt; "55611e71b358a30158c61810ad802435", "27ce7d3e06…
+$ user_url               &lt;chr&gt; "55611e71b358a30158c61810ad802435", "a71a2cbce2…
 $ retweet_count          &lt;int&gt; 2, 0, 0, 178, 178, 178, 178, 178, 178, 178, 178…
 $ like_count             &lt;int&gt; 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
 $ quote_count            &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
-$ user_tweet_count       &lt;int&gt; 840, 5851, 495, 110593, 5045, 1351, 932, 29967,…
-$ user_list_count        &lt;int&gt; 0, 0, 0, 77, 0, 1, 1, 0, 0, 1, 1, 5, 3, 73, 18,…
-$ user_followers_count   &lt;int&gt; 268, 197, 18, 1260, 54, 109, 71, 372, 126, 145,…
-$ user_following_count   &lt;int&gt; 1102, 1124, 118, 476, 436, 403, 411, 748, 1339,…
-$ sourcetweet_type       &lt;chr&gt; "retweeted", NA, NA, "retweeted", "retweeted", …
-$ sourcetweet_id         &lt;chr&gt; "1590967777762086912", NA, NA, "159097615399271…
-$ sourcetweet_text       &lt;chr&gt; "Ab heute 11:11 h dürfen wir uns wieder verklei…
-$ sourcetweet_lang       &lt;chr&gt; "de", NA, NA, "und", "und", "und", "und", "und"…
-$ sourcetweet_author_id  &lt;chr&gt; "946619921454247937", NA, NA, "529561909", "529…
+$ user_tweet_count       &lt;chr&gt; "6491b568f945b160a838429d9e1ac780", "5741da7b11…
+$ user_list_count        &lt;chr&gt; "1473d70e5646a26de3c52aa1abd85b1f", "1473d70e56…
+$ user_followers_count   &lt;chr&gt; "635d85ebc32e43cadb00fe448947d969", "28a5de8169…
+$ user_following_count   &lt;chr&gt; "77bd932347d1b80af13380a630d5fdad", "dc1a545561…
+$ sourcetweet_type       &lt;chr&gt; "1598fc1c239906e1e10709bc12e5f0f3", "55611e71b3…
+$ sourcetweet_id         &lt;chr&gt; "549605b6493750e7a3bd445969dd53e4", "55611e71b3…
+$ sourcetweet_text       &lt;chr&gt; "261331dce22c0a8cfe03d52e17966a92", "55611e71b3…
+$ sourcetweet_lang       &lt;chr&gt; "8310e591706d1e38cdbfd4e26f17a274", "55611e71b3…
+$ sourcetweet_author_id  &lt;chr&gt; "b7b3a7c1d81f9f456dd6f2a707c44e65", "55611e71b3…
 $ datetime               &lt;dttm&gt; 2022-11-11 08:15:08, 2022-11-11 08:14:57, 2022…
 $ date                   &lt;date&gt; 2022-11-11, 2022-11-11, 2022-11-11, 2022-11-11…
 $ hour                   &lt;int&gt; 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,…
@@ -712,58 +726,58 @@ n &lt; 10   | 2510 | 95.18 |   95.18 | 100.00
 </section>
 <section id="user-with-the-most-tweets" class="level4">
 <h4 class="anchored" data-anchor-id="user-with-the-most-tweets">User with the most tweets</h4>
-<div class="cell" data-hash="04-exercise_cache/html/hashtag analysis frequent users_f0d0def2f91239399321e5963a497515">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>tweets_karneval <span class="sc">%&gt;%</span> </span>
+<div class="cell" data-hash="04-exercise_cache/html/hashtag analysis frequent users_5dfec2805a0c26c575806dede5a17801">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>tweets_karneval_hash <span class="sc">%&gt;%</span> </span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">frq</span>(user_username,</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>      <span class="at">sort.frq =</span> <span class="st">"desc"</span>, </span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>      <span class="at">min.frq =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>user_username &lt;character&gt; 
-# total N=2637 valid N=2637 mean=976.88 sd=562.18
+# total N=2637 valid N=2637 mean=996.15 sd=563.80
 
-Value           |    N | Raw % | Valid % | Cum. %
--------------------------------------------------
-Gun17170309     |   65 |  2.46 |    2.46 |   2.46
-berlinaffaires  |   28 |  1.06 |    1.06 |   3.53
-Beratungszimmer |   19 |  0.72 |    0.72 |   4.25
-bartl_katrin    |   16 |  0.61 |    0.61 |   4.85
-rammwars        |   15 |  0.57 |    0.57 |   5.42
-free_cart9      |   12 |  0.46 |    0.46 |   5.88
-ploetschkoepp   |   12 |  0.46 |    0.46 |   6.33
-KespelHelau     |   11 |  0.42 |    0.42 |   6.75
-kryptomania84   |   10 |  0.38 |    0.38 |   7.13
-neussentweetet  |   10 |  0.38 |    0.38 |   7.51
-Raissoussama1   |   10 |  0.38 |    0.38 |   7.89
-RaissRaiss2     |    9 |  0.34 |    0.34 |   8.23
-express24       |    8 |  0.30 |    0.30 |   8.53
-polizei_nrw_k   |    8 |  0.30 |    0.30 |   8.84
-hedonist_redux  |    7 |  0.27 |    0.27 |   9.10
-Pfantomaus      |    7 |  0.27 |    0.27 |   9.37
-rudibruns       |    7 |  0.27 |    0.27 |   9.63
-WDRaktuell      |    7 |  0.27 |    0.27 |   9.90
-GermanAtPompey  |    6 |  0.23 |    0.23 |  10.13
-IamIllgner      |    6 |  0.23 |    0.23 |  10.35
-MadameK_tweetet |    6 |  0.23 |    0.23 |  10.58
-StreamDESupport |    6 |  0.23 |    0.23 |  10.81
-tonight_news    |    6 |  0.23 |    0.23 |  11.04
-Trendsanalysed  |    6 |  0.23 |    0.23 |  11.26
-arnohb112       |    5 |  0.19 |    0.19 |  11.45
-carsten_fiedler |    5 |  0.19 |    0.19 |  11.64
-dieBasisKoeln   |    5 |  0.19 |    0.19 |  11.83
-DieFRAKTIONKoln |    5 |  0.19 |    0.19 |  12.02
-Heike_T_        |    5 |  0.19 |    0.19 |  12.21
-Howie591        |    5 |  0.19 |    0.19 |  12.40
-joergprante     |    5 |  0.19 |    0.19 |  12.59
-Joker_6278      |    5 |  0.19 |    0.19 |  12.78
-KSTA            |    5 |  0.19 |    0.19 |  12.97
-libertaeredeju  |    5 |  0.19 |    0.19 |  13.16
-Marktzyniker    |    5 |  0.19 |    0.19 |  13.35
-MieterV         |    5 |  0.19 |    0.19 |  13.54
-muesztaerrieh   |    5 |  0.19 |    0.19 |  13.73
-TrixiMaus502    |    5 |  0.19 |    0.19 |  13.92
-wieichfm        |    5 |  0.19 |    0.19 |  14.11
-n &lt; 5           | 2265 | 85.89 |   85.89 | 100.00
-&lt;NA&gt;            |    0 |  0.00 |    &lt;NA&gt; |   &lt;NA&gt;</code></pre>
+Value                            |    N | Raw % | Valid % | Cum. %
+------------------------------------------------------------------
+93b5f1c7a40ccc0c2acab3c32ba64e17 |   65 |  2.46 |    2.46 |   2.46
+882fb98901749d154801b72be73612cd |   28 |  1.06 |    1.06 |   3.53
+d2d15939aa0af671652046a62c7033dd |   19 |  0.72 |    0.72 |   4.25
+43577471f043fc5a1deee9c789576df1 |   16 |  0.61 |    0.61 |   4.85
+dbc086d9f5424d290ab7f028e7079434 |   15 |  0.57 |    0.57 |   5.42
+460279057116f1c75027e3e0577b823a |   12 |  0.46 |    0.46 |   5.88
+fb5b9a76332c82bae2edb40fa6ce45a2 |   12 |  0.46 |    0.46 |   6.33
+798e8ead31e9ef06e637ba6753230b47 |   11 |  0.42 |    0.42 |   6.75
+7cc9af9b177dc7dbb28261fe354f03dc |   10 |  0.38 |    0.38 |   7.13
+ad63ff146a7453e17d3c0f641fb90668 |   10 |  0.38 |    0.38 |   7.51
+dd4f7411a4e96c329645e17b8b86bde7 |   10 |  0.38 |    0.38 |   7.89
+b98e9e94b335b813869e7e4f42b0e246 |    9 |  0.34 |    0.34 |   8.23
+b906c56c87dd80721038f968fcae1f1c |    8 |  0.30 |    0.30 |   8.53
+fc47c905f214127da9143747496b2791 |    8 |  0.30 |    0.30 |   8.84
+19aeeeb4704c67bdfd12488918b187a8 |    7 |  0.27 |    0.27 |   9.10
+5260a68437fcfa5933651c3bb9c476de |    7 |  0.27 |    0.27 |   9.37
+d32b6bf0f04cf5761a33600491a03cb9 |    7 |  0.27 |    0.27 |   9.63
+e88e062047d6361724e6eadea5c27196 |    7 |  0.27 |    0.27 |   9.90
+1766755c40d730188cd4c2fd9a0c6f65 |    6 |  0.23 |    0.23 |  10.13
+1db7e0f86b14b72290263bc41eb999c4 |    6 |  0.23 |    0.23 |  10.35
+247af3b7f0f6e5e0b58f9538c3978fc5 |    6 |  0.23 |    0.23 |  10.58
+55c6c438bf1805c480bf02e536b63e80 |    6 |  0.23 |    0.23 |  10.81
+d2d1d7e6b418711e32ef22f254a6f6c1 |    6 |  0.23 |    0.23 |  11.04
+fcd07c70c381d20d37c66581d641e021 |    6 |  0.23 |    0.23 |  11.26
+002787d3db7ede7f2ccfc8abfbeba161 |    5 |  0.19 |    0.19 |  11.45
+068f142dfe72218fcd7029cadd4cd63c |    5 |  0.19 |    0.19 |  11.64
+2d03819b8f55f013cb3529cae30d2029 |    5 |  0.19 |    0.19 |  11.83
+3dd3b0415552699e12542daa9aa6577b |    5 |  0.19 |    0.19 |  12.02
+4547aade2457615177a54672cc0f252b |    5 |  0.19 |    0.19 |  12.21
+5ba4609449eec6d1a421075fc5baf6bc |    5 |  0.19 |    0.19 |  12.40
+6a06d4ca4502695e841f9b034a496ca2 |    5 |  0.19 |    0.19 |  12.59
+82d63eca49c243b9756f84ee4bf979b4 |    5 |  0.19 |    0.19 |  12.78
+a3a1feb9af68caa20b741e158f6c473a |    5 |  0.19 |    0.19 |  12.97
+b0f0f6ba8eeb4d82e0626a0c77d8693c |    5 |  0.19 |    0.19 |  13.16
+b15bb13a3e7aaf7e9dc435efe2e0e7cb |    5 |  0.19 |    0.19 |  13.35
+b2d05eb93c4e8a0567155cd745c46e5a |    5 |  0.19 |    0.19 |  13.54
+b558085daf9d04948ac6e367a3e4ccbf |    5 |  0.19 |    0.19 |  13.73
+d7bab7e2527bdc614da0192db7b787c0 |    5 |  0.19 |    0.19 |  13.92
+ec9644f848fe71ceb4a0b12fd5ed669f |    5 |  0.19 |    0.19 |  14.11
+n &lt; 5                            | 2265 | 85.89 |   85.89 | 100.00
+&lt;NA&gt;                             |    0 |  0.00 |    &lt;NA&gt; |   &lt;NA&gt;</code></pre>
 </div>
 </div>
 <!--#  The following section is hidden due to DSGVO -->
